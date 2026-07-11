@@ -1,0 +1,849 @@
+{
+  "deck_name": "gb-yawgmoth-proliferate-counters",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-10T17:15:28Z",
+  "format": "40-card",
+  "strategy": "GB +1/+1 Counters / Yawgmoth proliferate engine",
+  "colors": "BG",
+  "identity": "Black-Green midrange built around Yawgmoth's proliferate ability feeding Forgotten Ancient and Triskelion, with cheap sacrifice fodder keeping Yawgmoth's outlet fed.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "max_rare_mythic_total": 5
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "avg_cmc": 3.12,
+    "pip_demand": {
+      "B": 14,
+      "G": 12
+    },
+    "land_color_production": {
+      "B": 9,
+      "G": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 53.8,
+        "prod_pct": 56.2,
+        "gap": -2.4,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 46.2,
+        "prod_pct": 56.2,
+        "gap": -10.0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Yawgmoth, Thran Physician",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4.0,
+      "type_line": "Legendary Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Protection from Humans\nPay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card.\n{B}{B}, Discard a card: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "tags": [],
+      "role": "Payoff/Engine - proliferate + sac outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forgotten Ancient",
+      "mana_cost": "{3}{G}",
+      "cmc": 4.0,
+      "type_line": "Creature — Elemental",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever a player casts a spell, you may put a +1/+1 counter on this creature.\nAt the beginning of your upkeep, you may move any number of +1/+1 counters from this creature onto other creatures.",
+      "tags": [],
+      "role": "Payoff/Engine - counter accumulation + redistribution",
+      "board": "mainboard"
+    },
+    {
+      "name": "Triskelion",
+      "mana_cost": "{6}",
+      "cmc": 6.0,
+      "type_line": "Artifact Creature — Construct",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "rare",
+      "oracle_text": "This creature enters with three +1/+1 counters on it.\nRemove a +1/+1 counter from this creature: It deals 1 damage to any target.",
+      "tags": [],
+      "role": "Payoff - finisher/pinger, ETB 3 counters",
+      "board": "mainboard"
+    },
+    {
+      "name": "Phyrexian Scuta",
+      "mana_cost": "{3}{B}",
+      "cmc": 4.0,
+      "type_line": "Creature — Phyrexian Zombie",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker—Pay 3 life. (You may pay 3 life in addition to any other costs as you cast this spell.)\nIf this creature was kicked, it enters with two +1/+1 counters on it.",
+      "tags": [],
+      "role": "Threat - kicker scaling counters body",
+      "board": "mainboard"
+    },
+    {
+      "name": "Phyrexian Scuta",
+      "mana_cost": "{3}{B}",
+      "cmc": 4.0,
+      "type_line": "Creature — Phyrexian Zombie",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker—Pay 3 life. (You may pay 3 life in addition to any other costs as you cast this spell.)\nIf this creature was kicked, it enters with two +1/+1 counters on it.",
+      "tags": [],
+      "role": "Threat - kicker scaling counters body",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kavu Primarch",
+      "mana_cost": "{3}{G}",
+      "cmc": 4.0,
+      "type_line": "Creature — Kavu",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nIf this creature was kicked, it enters with four +1/+1 counters on it.",
+      "tags": [],
+      "role": "Threat - kicker scaling counters body",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kavu Primarch",
+      "mana_cost": "{3}{G}",
+      "cmc": 4.0,
+      "type_line": "Creature — Kavu",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nIf this creature was kicked, it enters with four +1/+1 counters on it.",
+      "tags": [],
+      "role": "Threat - kicker scaling counters body",
+      "board": "mainboard"
+    },
+    {
+      "name": "Invigorating Boon",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "type_line": "Enchantment",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever a player cycles a card, you may put a +1/+1 counter on target creature.",
+      "tags": [],
+      "role": "Engine - counter distribution via cycling (Ichor Slick/Street Wraith enable it in-deck)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Invigorating Boon",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "type_line": "Enchantment",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever a player cycles a card, you may put a +1/+1 counter on target creature.",
+      "tags": [],
+      "role": "Engine - counter distribution via cycling (Ichor Slick/Street Wraith enable it in-deck)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dragon Blood",
+      "mana_cost": "{3}",
+      "cmc": 3.0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{3}, {T}: Put a +1/+1 counter on target creature.",
+      "tags": [],
+      "role": "Engine - repeatable counter generator",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dragon Blood",
+      "mana_cost": "{3}",
+      "cmc": 3.0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{3}, {T}: Put a +1/+1 counter on target creature.",
+      "tags": [],
+      "role": "Engine - repeatable counter generator",
+      "board": "mainboard"
+    },
+    {
+      "name": "Spiritmonger",
+      "mana_cost": "{3}{B}{G}",
+      "cmc": 5.0,
+      "type_line": "Creature — Beast",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever this creature deals damage to a creature, put a +1/+1 counter on this creature.\n{B}: Regenerate this creature.\n{G}: This creature becomes the color of your choice until end of turn.",
+      "tags": [],
+      "role": "Threat - grows via combat, hard to kill",
+      "board": "mainboard"
+    },
+    {
+      "name": "Festering Goblin",
+      "mana_cost": "{B}",
+      "cmc": 1.0,
+      "type_line": "Creature — Zombie Goblin",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature dies, target creature gets -1/-1 until end of turn.",
+      "tags": [],
+      "role": "Fodder - Yawgmoth sac target with death value",
+      "board": "mainboard"
+    },
+    {
+      "name": "Festering Goblin",
+      "mana_cost": "{B}",
+      "cmc": 1.0,
+      "type_line": "Creature — Zombie Goblin",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature dies, target creature gets -1/-1 until end of turn.",
+      "tags": [],
+      "role": "Fodder - Yawgmoth sac target with death value",
+      "board": "mainboard"
+    },
+    {
+      "name": "Call of the Herd",
+      "mana_cost": "{2}{G}",
+      "cmc": 3.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create a 3/3 green Elephant creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [],
+      "role": "Fodder - 2-for-1 token generator",
+      "board": "mainboard"
+    },
+    {
+      "name": "Call of the Herd",
+      "mana_cost": "{2}{G}",
+      "cmc": 3.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create a 3/3 green Elephant creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [],
+      "role": "Fodder - 2-for-1 token generator",
+      "board": "mainboard"
+    },
+    {
+      "name": "Squirrel Nest",
+      "mana_cost": "{1}{G}{G}",
+      "cmc": 3.0,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant land\nEnchanted land has \"{T}: Create a 1/1 green Squirrel creature token.\"",
+      "tags": [],
+      "role": "Fodder engine - repeatable token generator",
+      "board": "mainboard"
+    },
+    {
+      "name": "Terror",
+      "mana_cost": "{1}{B}",
+      "cmc": 2.0,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.",
+      "tags": [],
+      "role": "Interaction - removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Terror",
+      "mana_cost": "{1}{B}",
+      "cmc": 2.0,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.",
+      "tags": [],
+      "role": "Interaction - removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ichor Slick",
+      "mana_cost": "{2}{B}",
+      "cmc": 3.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets -3/-3 until end of turn.\nCycling {2} ({2}, Discard this card: Draw a card.)\nMadness {3}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "tags": [],
+      "role": "Interaction - unconditional -3/-3 removal (hits black/artifact creatures Terror can't); cycles to feed Invigorating Boon",
+      "board": "mainboard"
+    },
+    {
+      "name": "Faceless Butcher",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4.0,
+      "type_line": "Creature — Nightmare Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "tags": [],
+      "role": "Interaction - removal on a body (CAUTION: never sac this to Yawgmoth while its exile matters, or the exiled threat returns)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Birds of Paradise",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "type_line": "Creature — Bird",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\n{T}: Add one mana of any color.",
+      "tags": [],
+      "role": "Ramp/Fixing",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nature's Lore",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Search your library for a Forest card, put that card onto the battlefield, then shuffle.",
+      "tags": [],
+      "role": "Ramp/Fixing",
+      "board": "mainboard"
+    },
+    {
+      "name": "Street Wraith",
+      "mana_cost": "{3}{B}{B}",
+      "cmc": 5.0,
+      "type_line": "Creature — Wraith",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nCycling—Pay 2 life. (Pay 2 life, Discard this card: Draw a card.)",
+      "tags": [],
+      "role": "Free cycler - feeds Invigorating Boon, card selection, evasive beater vs Swamp decks",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {B}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {B}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {B}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {B}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {B}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {B}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {B}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Woodland Cemetery",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "This land enters tapped unless you control a Swamp or a Forest.\n{T}: Add {B} or {G}.",
+      "tags": [],
+      "role": "Dual land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunted Mire",
+      "mana_cost": null,
+      "cmc": 0.0,
+      "type_line": "Land — Swamp Forest",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "tags": [],
+      "role": "Dual land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "mana_cost": "{0}",
+      "cmc": 0.0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "tags": [],
+      "role": "vs Graveyard/Reanimator decks (15.5% of cube)",
+      "board": "sideboard"
+    },
+    {
+      "name": "Duress",
+      "mana_cost": "{B}",
+      "cmc": 1.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
+      "tags": [],
+      "role": "vs Control/Combo - strip key noncreature spell",
+      "board": "sideboard"
+    },
+    {
+      "name": "Chainer's Edict",
+      "mana_cost": "{1}{B}",
+      "cmc": 2.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target player sacrifices a creature of their choice.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [],
+      "role": "vs hexproof/indestructible threats - edict removal (no longer redundant with a mainboard copy)",
+      "board": "sideboard"
+    },
+    {
+      "name": "Icy Manipulator",
+      "mana_cost": "{4}",
+      "cmc": 4.0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+      "tags": [],
+      "role": "vs Aggro - repeatable tempo tap",
+      "board": "sideboard"
+    },
+    {
+      "name": "Wall of Junk",
+      "mana_cost": "{2}",
+      "cmc": 2.0,
+      "type_line": "Artifact Creature — Wall",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "Defender (This creature can't attack.)\nWhen this creature blocks, return it to its owner's hand at end of combat. (Return it only if it's on the battlefield.)",
+      "tags": [],
+      "role": "vs Aggro - cheap recurring blocker",
+      "board": "sideboard"
+    },
+    {
+      "name": "Break Asunder",
+      "mana_cost": "{2}{G}{G}",
+      "cmc": 4.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or enchantment.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "tags": [],
+      "role": "vs Artifacts/Enchantments, cycles when dead",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cackling Fiend",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4.0,
+      "type_line": "Creature — Zombie",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, each opponent discards a card.",
+      "tags": [],
+      "role": "vs Control/Combo - proactive discard",
+      "board": "sideboard"
+    },
+    {
+      "name": "Zombie Infestation",
+      "mana_cost": "{1}{B}",
+      "cmc": 2.0,
+      "type_line": "Enchantment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Discard two cards: Create a 2/2 black Zombie creature token.",
+      "tags": [],
+      "role": "vs Removal-heavy - resilient token engine",
+      "board": "sideboard"
+    },
+    {
+      "name": "Jalum Tome",
+      "mana_cost": "{3}",
+      "cmc": 3.0,
+      "type_line": "Artifact — Book",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "{2}, {T}: Draw a card, then discard a card.",
+      "tags": [],
+      "role": "vs grindy matchups - card filtering",
+      "board": "sideboard"
+    },
+    {
+      "name": "Damping Sphere",
+      "mana_cost": "{2}",
+      "cmc": 2.0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "If a land is tapped for two or more mana, it produces {C} instead of any other type and amount.\nEach spell a player casts costs {1} more to cast for each other spell that player has cast this turn.",
+      "tags": [],
+      "role": "vs Storm/UR combo archetype in this cube",
+      "board": "sideboard"
+    }
+  ]
+}

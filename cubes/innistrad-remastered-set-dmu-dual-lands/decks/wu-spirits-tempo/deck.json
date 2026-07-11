@@ -1,0 +1,791 @@
+{
+  "deck_name": "spirits-wu-tempo",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-07-08T03:38:33Z",
+  "format": "40-card",
+  "strategy": "WU Spirits flash-tempo/disruption",
+  "colors": "WU",
+  "identity": "WU Spirit-tribal tempo: flash flying Spirits (Mausoleum Wanderer, Spell Queller, Nebelgast Herald) disrupt while clocking in the air; a lifegain-into-counters sub-loop (Lunarch Veteran/Apothecary Geist -> Voice of the Blessed) and blink redundancy (Restoration Angel/Essence Flux) add resilience and a growing finisher.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "custom": {
+      "max_rare_mythic_total": 5,
+      "scope": "mainboard + sideboard combined"
+    }
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "avg_cmc": 2.08,
+    "pip_demand": {
+      "U": 12,
+      "W": 13
+    },
+    "land_color_production": {
+      "W": 9,
+      "U": 8
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 48.0,
+        "prod_pct": 50.0,
+        "gap": -2.0,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 52.0,
+        "prod_pct": 56.2,
+        "gap": -4.2,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Mausoleum Wanderer",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "type_line": "Creature — Spirit",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\nWhenever another Spirit you control enters, this creature gets +1/+1 until end of turn.\nSacrifice this creature: Counter target instant or sorcery spell unless its controller pays {X}, where X is this creature's power.",
+      "role": "Keystone disruption — 1cmc flying Spirit; +1/+1 until EOT on Spirit ETB; sac to soft-counter (tax) an instant/sorcery",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lantern Bearer // Lanterns' Lift",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "type_line": "Creature — Spirit",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nDisturb {2}{U} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nEnchant creature\nEnchanted creature gets +1/+1 and has flying.\nIf Lanterns' Lift would be put into a graveyard from anywhere, exile it instead.",
+      "role": "Resilient 1-drop flyer — disturb aura backup keeps a body/effect on board after removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lantern Bearer // Lanterns' Lift",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "type_line": "Creature — Spirit",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nDisturb {2}{U} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nEnchant creature\nEnchanted creature gets +1/+1 and has flying.\nIf Lanterns' Lift would be put into a graveyard from anywhere, exile it instead.",
+      "role": "Resilient 1-drop flyer — disturb aura backup keeps a body/effect on board after removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lunarch Veteran // Luminous Phantom",
+      "mana_cost": "{W}",
+      "cmc": 1.0,
+      "type_line": "Creature — Human Cleric",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Whenever another creature you control enters, you gain 1 life.\nDisturb {1}{W} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nFlying\nWhenever another creature you control leaves the battlefield, you gain 1 life.\nIf Luminous Phantom would be put into a graveyard from anywhere, exile it instead.",
+      "role": "Lifegain engine — triggers off every creature ETB (front) or LTB (disturbed back), fuels Voice of the Blessed counters",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lunarch Veteran // Luminous Phantom",
+      "mana_cost": "{W}",
+      "cmc": 1.0,
+      "type_line": "Creature — Human Cleric",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Whenever another creature you control enters, you gain 1 life.\nDisturb {1}{W} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nFlying\nWhenever another creature you control leaves the battlefield, you gain 1 life.\nIf Luminous Phantom would be put into a graveyard from anywhere, exile it instead.",
+      "role": "Lifegain engine — triggers off every creature ETB (front) or LTB (disturbed back), fuels Voice of the Blessed counters",
+      "board": "mainboard"
+    },
+    {
+      "name": "Twinblade Geist // Twinblade Invocation",
+      "mana_cost": "{1}{W}",
+      "cmc": 2.0,
+      "type_line": "Creature — Spirit Warrior",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Double strike\nDisturb {2}{W} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nEnchant creature\nEnchanted creature has double strike.\nIf Twinblade Invocation would be put into a graveyard from anywhere, exile it instead.",
+      "role": "Resilient threat — double strike clock with disturb aura backup",
+      "board": "mainboard"
+    },
+    {
+      "name": "Twinblade Geist // Twinblade Invocation",
+      "mana_cost": "{1}{W}",
+      "cmc": 2.0,
+      "type_line": "Creature — Spirit Warrior",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Double strike\nDisturb {2}{W} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nEnchant creature\nEnchanted creature has double strike.\nIf Twinblade Invocation would be put into a graveyard from anywhere, exile it instead.",
+      "role": "Resilient threat — double strike clock with disturb aura backup",
+      "board": "mainboard"
+    },
+    {
+      "name": "Voice of the Blessed",
+      "mana_cost": "{W}{W}",
+      "cmc": 2.0,
+      "type_line": "Creature — Spirit Cleric",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever you gain life, put a +1/+1 counter on this creature.\nAs long as this creature has four or more +1/+1 counters on it, it has flying and vigilance.\nAs long as this creature has ten or more +1/+1 counters on it, it has indestructible.",
+      "role": "Payoff/finisher — converts lifegain into +1/+1 counters, eventually flying+vigilance+indestructible",
+      "board": "mainboard"
+    },
+    {
+      "name": "Metallic Mimic",
+      "mana_cost": "{2}",
+      "cmc": 2.0,
+      "type_line": "Artifact Creature — Shapeshifter",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "rare",
+      "oracle_text": "As this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nEach other creature you control of the chosen type enters with an additional +1/+1 counter on it.",
+      "role": "Tribal enabler — becomes a Spirit on ETB, grants +1/+1 counters to other Spirits entering, itself triggers Mausoleum Wanderer/Nebelgast Herald",
+      "board": "mainboard"
+    },
+    {
+      "name": "Spell Queller",
+      "mana_cost": "{1}{W}{U}",
+      "cmc": 3.0,
+      "type_line": "Creature — Spirit",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, exile target spell with mana value 4 or less.\nWhen this creature leaves the battlefield, the exiled card's owner may cast that card without paying its mana cost.",
+      "role": "Keystone disruption — flash flying, exiles a spell MV<=4 on ETB",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nebelgast Herald",
+      "mana_cost": "{2}{U}",
+      "cmc": 3.0,
+      "type_line": "Creature — Spirit",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flash\nFlying\nWhenever this creature or another Spirit you control enters, tap target creature an opponent controls.",
+      "role": "Keystone disruption — flash flying, repeatable tap-down on Spirit ETB",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nebelgast Herald",
+      "mana_cost": "{2}{U}",
+      "cmc": 3.0,
+      "type_line": "Creature — Spirit",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flash\nFlying\nWhenever this creature or another Spirit you control enters, tap target creature an opponent controls.",
+      "role": "Keystone disruption — flash flying, repeatable tap-down on Spirit ETB",
+      "board": "mainboard"
+    },
+    {
+      "name": "Spectral Shepherd",
+      "mana_cost": "{2}{W}",
+      "cmc": 3.0,
+      "type_line": "Creature — Spirit",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\n{1}{U}: Return target Spirit you control to its owner's hand.",
+      "role": "Engine/Outlet — flying body; {1}{U} bounce a Spirit to protect from removal or re-trigger ETBs",
+      "board": "mainboard"
+    },
+    {
+      "name": "Spectral Shepherd",
+      "mana_cost": "{2}{W}",
+      "cmc": 3.0,
+      "type_line": "Creature — Spirit",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\n{1}{U}: Return target Spirit you control to its owner's hand.",
+      "role": "Engine/Outlet — flying body; {1}{U} bounce a Spirit to protect from removal or re-trigger ETBs",
+      "board": "mainboard"
+    },
+    {
+      "name": "Apothecary Geist",
+      "mana_cost": "{3}{W}",
+      "cmc": 4.0,
+      "type_line": "Creature — Spirit",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nWhen this creature enters, if you control another Spirit, you gain 3 life.",
+      "role": "Payoff — flying, gains 3 life if you control another Spirit (fuels Voice of the Blessed)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Apothecary Geist",
+      "mana_cost": "{3}{W}",
+      "cmc": 4.0,
+      "type_line": "Creature — Spirit",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nWhen this creature enters, if you control another Spirit, you gain 3 life.",
+      "role": "Payoff — flying, gains 3 life if you control another Spirit (fuels Voice of the Blessed)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Restoration Angel",
+      "mana_cost": "{3}{W}",
+      "cmc": 4.0,
+      "type_line": "Creature — Angel",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, you may exile target non-Angel creature you control, then return that card to the battlefield under your control.",
+      "role": "Value/threat — flash flying 3/4; blinks a non-Angel creature to re-trigger ETB (Apothecary Geist, Nebelgast Herald, Metallic Mimic)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Essence Flux",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under its owner's control. If it's a Spirit, put a +1/+1 counter on it.",
+      "role": "Enabler — blinks own creature to re-trigger ETB / dodge removal; +1/+1 counter if it's a Spirit",
+      "board": "mainboard"
+    },
+    {
+      "name": "Essence Flux",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under its owner's control. If it's a Spirit, put a +1/+1 counter on it.",
+      "role": "Enabler — blinks own creature to re-trigger ETB / dodge removal; +1/+1 counter if it's a Spirit",
+      "board": "mainboard"
+    },
+    {
+      "name": "Syncopate",
+      "mana_cost": "{X}{U}",
+      "cmc": 1.0,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target spell unless its controller pays {X}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+      "role": "Interaction — scalable soft/tax counterspell (payable by opponent) that exiles if it resolves as a counter",
+      "board": "mainboard"
+    },
+    {
+      "name": "Syncopate",
+      "mana_cost": "{X}{U}",
+      "cmc": 1.0,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target spell unless its controller pays {X}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+      "role": "Interaction — scalable soft/tax counterspell (payable by opponent) that exiles if it resolves as a counter",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geistlight Snare",
+      "mana_cost": "{2}{U}",
+      "cmc": 3.0,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "This spell costs {1} less to cast if you control a Spirit. It also costs {1} less to cast if you control an enchantment.\nCounter target spell unless its controller pays {3}.",
+      "role": "Interaction — cheap soft/tax counterspell (discount for controlling a Spirit or enchantment)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Silent Departure",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Return target creature to its owner's hand.\nFlashback {4}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "role": "Interaction — tempo bounce with flashback for a second use",
+      "board": "mainboard"
+    },
+    {
+      "name": "Valorous Stance",
+      "mana_cost": "{1}{W}",
+      "cmc": 2.0,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "role": "Flexible interaction — protect a key Spirit or kill a toughness>=4 blocker",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "role": "Mana base",
+      "board": "mainboard"
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "type_line": "Land — Plains Island",
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "role": "",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Soul-Guide Gryff",
+      "mana_cost": "{4}{W}",
+      "cmc": 5.0,
+      "type_line": "Creature — Hippogriff Spirit",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "role": "SB: graveyard hate flyer — exile a card from any graveyard on ETB; board in vs flashback/reanimator/self-mill",
+      "board": "sideboard"
+    },
+    {
+      "name": "Geistlight Snare",
+      "mana_cost": "{2}{U}",
+      "cmc": 3.0,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "This spell costs {1} less to cast if you control a Spirit. It also costs {1} less to cast if you control an enchantment.\nCounter target spell unless its controller pays {3}.",
+      "role": "Interaction — cheap soft/tax counterspell (discount for controlling a Spirit or enchantment)",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cathar Commando",
+      "mana_cost": "{1}{W}",
+      "cmc": 2.0,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "role": "SB: flash artifact/enchantment removal on a 3/1 body; board in vs equipment/aura/artifact decks",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cathar Commando",
+      "mana_cost": "{1}{W}",
+      "cmc": 2.0,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "role": "SB: flash artifact/enchantment removal on a 3/1 body; board in vs equipment/aura/artifact decks",
+      "board": "sideboard"
+    },
+    {
+      "name": "Angelic Purge",
+      "mana_cost": "{2}{W}",
+      "cmc": 3.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "role": "SB: flexible exile removal (sac a permanent as cost); board in vs must-answer recursive/indestructible threats",
+      "board": "sideboard"
+    },
+    {
+      "name": "Imprisoned in the Moon",
+      "mana_cost": "{2}{U}",
+      "cmc": 3.0,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature, land, or planeswalker\nEnchanted permanent is a colorless land with \"{T}: Add {C}\" and loses all other card types and abilities.",
+      "role": "SB: turns any permanent into a colorless land; board in vs planeswalkers or other problematic permanents Valorous Stance can't hit (does NOT answer hexproof — it's a targeted Aura)",
+      "board": "sideboard"
+    },
+    {
+      "name": "Avacynian Priest",
+      "mana_cost": "{1}{W}",
+      "cmc": 2.0,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "{1}, {T}: Tap target non-Human creature.",
+      "role": "SB: repeatable tapper vs non-Human creatures specifically; board in vs Zombie/Vampire/Spirit-mirror swarms (cannot tap Humans)",
+      "board": "sideboard"
+    },
+    {
+      "name": "Boarded Window",
+      "mana_cost": "{3}",
+      "cmc": 3.0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "Creatures attacking you get -1/-0.\nAt the beginning of each end step, if you were dealt 4 or more damage this turn, exile this artifact.",
+      "role": "SB: -1/-0 to all attackers vs you, tribe-agnostic; board in vs wide aggro decks (incl. Humans swarms, which Avacynian Priest can't answer)",
+      "board": "sideboard"
+    },
+    {
+      "name": "Fiend Hunter",
+      "mana_cost": "{1}{W}{W}",
+      "cmc": 3.0,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, you may exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "role": "SB: conditional exile removal for a big threat (reversible if this creature dies/is bounced); board in vs midrange/big creature decks",
+      "board": "sideboard"
+    },
+    {
+      "name": "Mist Raven",
+      "mana_cost": "{2}{U}{U}",
+      "cmc": 4.0,
+      "type_line": "Creature — Bird",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nWhen this creature enters, return target creature to its owner's hand.",
+      "role": "SB: flying tempo bounce; board in vs slower control matchups for extra tempo swings",
+      "board": "sideboard"
+    }
+  ]
+}

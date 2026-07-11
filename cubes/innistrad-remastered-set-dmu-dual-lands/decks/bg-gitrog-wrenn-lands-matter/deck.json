@@ -1,0 +1,937 @@
+{
+  "deck_name": "gitrog-wrenn-lands-matter",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-07-09T02:13:45Z",
+  "format": "40-card",
+  "strategy": "BG lands-matter self-mill/graveyard value grind",
+  "colors": "BG",
+  "identity": "Black-Green midrange grind built around The Gitrog Monster and Wrenn and Seven — self-mill and recur lands to fuel repeated card draw, landfall value, and graveyard-scaling threats.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "only_from": {},
+    "excluded": [],
+    "custom_max_rares_mythics_total": 5
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "avg_cmc": 2.96,
+    "pip_demand": {
+      "G": 19,
+      "B": 8
+    },
+    "land_color_production": {
+      "G": 11,
+      "B": 5
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 29.6,
+        "prod_pct": 31.2,
+        "gap": -1.6,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 70.4,
+        "prod_pct": 68.8,
+        "gap": 1.6,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Groundskeeper",
+      "CMC": 1.0,
+      "type_line": "Creature — Human Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "{1}{G}: Return target basic land card from your graveyard to your hand.",
+      "mana_cost": "{G}",
+      "rarity": "uncommon",
+      "set": "eoc",
+      "collector_number": "97",
+      "tags": "Lands-Matter;Graveyard;Infrastructure/Consistency;Land Fetch;Graveyard Recursion",
+      "role": "Land recursion engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Young Wolf",
+      "CMC": 1.0,
+      "type_line": "Creature — Wolf",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "mana_cost": "{G}",
+      "rarity": "common",
+      "set": "inr",
+      "collector_number": "227",
+      "tags": "Aristocrats/Sacrifice;Counters (+1/+1);Enabler/Fodder;Recursive Threat",
+      "role": "Resilient 1-drop / fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Scorned Villager // Moonscarred Werewolf",
+      "CMC": 2.0,
+      "type_line": "Creature — Human Werewolf",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "{T}: Add {G}.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nVigilance\n{T}: Add {G}{G}.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "inr",
+      "collector_number": "212",
+      "tags": "Tribal/Kindred;Infrastructure/Consistency;Mana Dork",
+      "role": "Mono-G mana dork",
+      "board": "mainboard"
+    },
+    {
+      "name": "Noose Constrictor",
+      "CMC": 2.0,
+      "type_line": "Creature — Snake",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Reach\nDiscard a card: This creature gets +1/+1 until end of turn.",
+      "mana_cost": "{1}{G}",
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "210",
+      "tags": "Graveyard;Wheels;Enabler/Fodder;Standalone Threat;Looting;Combat Buff",
+      "role": "Looting / GY fuel, reach blocker",
+      "board": "mainboard"
+    },
+    {
+      "name": "Grapple with the Past",
+      "CMC": 2.0,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Mill three cards, then you may return a creature or land card from your graveyard to your hand. (To mill three cards, put the top three cards of your library into your graveyard.)",
+      "mana_cost": "{1}{G}",
+      "rarity": "common",
+      "set": "tdc",
+      "collector_number": "257",
+      "tags": "Self-Mill;Graveyard;Infrastructure/Consistency;Self-Mill;Graveyard Recursion",
+      "role": "Self-mill + recursion",
+      "board": "mainboard"
+    },
+    {
+      "name": "Duskwatch Recruiter // Krallenhorde Howler",
+      "CMC": 2.0,
+      "type_line": "Creature — Human Warrior Werewolf",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "{2}{G}: Look at the top three cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nCreature spells you cast cost {1} less to cast.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": null,
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "193",
+      "tags": "Tribal/Kindred;Infrastructure/Consistency;Engine/Outlet;Card Selection;Cost Reduction",
+      "role": "Creature tutor engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Splinterfright",
+      "CMC": 3.0,
+      "type_line": "Creature — Elemental",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Trample\nSplinterfright's power and toughness are each equal to the number of creature cards in your graveyard.\nAt the beginning of your upkeep, mill two cards. (Put the top two cards of your library into your graveyard.)",
+      "mana_cost": "{2}{G}",
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "217",
+      "tags": "Graveyard;Self-Mill;Delirium;Payload/Payoff;Enabler/Fodder;Self-Mill",
+      "role": "GY-creature-count payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eccentric Farmer",
+      "CMC": 3.0,
+      "type_line": "Creature — Human Peasant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "When this creature enters, mill three cards, then you may return a land card from your graveyard to your hand. (To mill three cards, put the top three cards of your library into your graveyard.)",
+      "mana_cost": "{2}{G}",
+      "rarity": "common",
+      "set": "inr",
+      "collector_number": "194",
+      "tags": "Self-Mill;Lands-Matter;Graveyard;Delirium;Infrastructure/Consistency;Self-Mill;Land Fetch;Graveyard Recursion",
+      "role": "Self-mill + land recursion",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tireless Tracker",
+      "CMC": 3.0,
+      "type_line": "Creature — Human Scout",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Landfall — Whenever a land you control enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{G}",
+      "rarity": "rare",
+      "set": "eoc",
+      "collector_number": "110",
+      "tags": "Landfall;Artifacts;Counters (+1/+1);Engine/Outlet;Payload/Payoff;Standalone Threat;Token Generation;Card Draw;Counter Accumulation",
+      "role": "Landfall card-advantage engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Somberwald Sage",
+      "CMC": 3.0,
+      "type_line": "Creature — Human Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "{T}: Add three mana of any one color. Spend this mana only to cast creature spells.",
+      "mana_cost": "{2}{G}",
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "215",
+      "tags": "Infrastructure/Consistency;Enabler/Fodder;Mana Dork",
+      "role": "Ritual mana (creatures only)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Grizzly Ghoul",
+      "CMC": 4.0,
+      "type_line": "Creature — Zombie Bear",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Trample\nThis creature enters with a +1/+1 counter on it for each creature that died this turn.",
+      "mana_cost": "{2}{B}{G}",
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "240",
+      "tags": "Aristocrats/Sacrifice;Counters (+1/+1);Tribal/Kindred;Payload/Payoff;Enters with Counters",
+      "role": "Counters payoff / value body",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lumberknot",
+      "CMC": 4.0,
+      "type_line": "Creature — Treefolk",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)\nWhenever a creature dies, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{G}{G}",
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "206",
+      "tags": "Counters (+1/+1);Aristocrats/Sacrifice;Payload/Payoff;Standalone Threat;Counter Accumulation",
+      "role": "GY-scaling hexproof beater",
+      "board": "mainboard"
+    },
+    {
+      "name": "The Gitrog Monster",
+      "CMC": 5.0,
+      "type_line": "Legendary Creature — Frog Horror",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Deathtouch\nAt the beginning of your upkeep, sacrifice The Gitrog Monster unless you sacrifice a land.\nYou may play an additional land on each of your turns.\nWhenever one or more land cards are put into your graveyard from anywhere, draw a card.",
+      "mana_cost": "{3}{B}{G}",
+      "rarity": "mythic",
+      "set": "eoc",
+      "collector_number": "117",
+      "tags": "Lands-Matter;Graveyard;Self-Mill;Engine/Outlet;Payload/Payoff;Standalone Threat;Card Draw;Land Fetch;Extra Land Drop",
+      "role": "Keystone: land drops + draw",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wrenn and Seven",
+      "CMC": 5.0,
+      "type_line": "Legendary Planeswalker — Wrenn",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "+1: Reveal the top four cards of your library. Put all land cards revealed this way into your hand and the rest into your graveyard.\n0: Put any number of land cards from your hand onto the battlefield tapped.\n−3: Create a green Treefolk creature token with reach and \"This token's power and toughness are each equal to the number of lands you control.\"\n−8: Return all permanent cards from your graveyard to your hand. You get an emblem with \"You have no maximum hand size.\"",
+      "mana_cost": "{3}{G}{G}",
+      "rarity": "mythic",
+      "set": "inr",
+      "collector_number": "226",
+      "tags": "Lands-Matter;Graveyard;Engine/Outlet;Payload/Payoff;Standalone Threat;Card Draw;Land Fetch;Token Generation;Graveyard Recursion",
+      "role": "Keystone: land recursion PW",
+      "board": "mainboard"
+    },
+    {
+      "name": "Moldgraf Millipede",
+      "CMC": 5.0,
+      "type_line": "Creature — Insect Horror",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "When this creature enters, mill three cards, then put a +1/+1 counter on this creature for each creature card in your graveyard. (To mill three cards, put the top three cards of your library into your graveyard.)",
+      "mana_cost": "{4}{G}",
+      "rarity": "common",
+      "set": "inr",
+      "collector_number": "208",
+      "tags": "Self-Mill;Graveyard;Counters (+1/+1);Payload/Payoff;Self-Mill;Enters with Counters",
+      "role": "Self-mill beater w/ counters",
+      "board": "mainboard"
+    },
+    {
+      "name": "Spider Spawning",
+      "CMC": 5.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Create a 1/2 green Spider creature token with reach for each creature card in your graveyard.\nFlashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{4}{G}",
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "216",
+      "tags": "Tokens;Flashback/GY-Cast;Graveyard;Payload/Payoff;Token Generation",
+      "role": "Token payoff / flashback",
+      "board": "mainboard"
+    },
+    {
+      "name": "Traverse the Ulvenwald",
+      "CMC": 1.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Search your library for a basic land card, reveal it, put it into your hand, then shuffle.\nDelirium — If there are four or more card types among cards in your graveyard, instead search your library for a creature or land card, reveal it, put it into your hand, then shuffle.",
+      "mana_cost": "{G}",
+      "rarity": "rare",
+      "set": "inr",
+      "collector_number": "221",
+      "tags": "Delirium;Lands-Matter;Infrastructure/Consistency;Tutor;Land Fetch",
+      "role": "Land/creature tutor",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ghoultree",
+      "CMC": 8.0,
+      "type_line": "Creature — Zombie Treefolk",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "This spell costs {1} less to cast for each creature card in your graveyard.",
+      "mana_cost": "{7}{G}",
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "198",
+      "tags": "Graveyard;Tribal/Kindred;Standalone Threat;Cost Reduction",
+      "role": "Cost-reduced top-end beater",
+      "board": "mainboard"
+    },
+    {
+      "name": "Morbid Opportunist",
+      "CMC": 3.0,
+      "type_line": "Creature — Human Rogue",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Whenever one or more other creatures die, draw a card. This ability triggers only once each turn.",
+      "mana_cost": "{2}{B}",
+      "rarity": "uncommon",
+      "set": "soc",
+      "collector_number": "219",
+      "tags": "Aristocrats/Sacrifice;Graveyard;Payload/Payoff;Engine/Outlet;Card Draw",
+      "role": "Attrition-to-cards engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Slip",
+      "CMC": 1.0,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.",
+      "mana_cost": "{B}",
+      "rarity": "common",
+      "set": "inr",
+      "collector_number": "134",
+      "tags": "Aristocrats/Sacrifice;Interaction/Disruption;Targeted Removal",
+      "role": "Cheap removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eaten Alive",
+      "CMC": 1.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature or pay {3}{B}.\nExile target creature or planeswalker.",
+      "mana_cost": "{B}",
+      "rarity": "common",
+      "set": "inr",
+      "collector_number": "106",
+      "tags": "Aristocrats/Sacrifice;Interaction/Disruption;Targeted Removal;Sacrifice Outlet",
+      "role": "Sac-cost exile removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Infernal Grasp",
+      "CMC": 2.0,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target creature. You lose 2 life.",
+      "mana_cost": "{1}{B}",
+      "rarity": "uncommon",
+      "set": "soc",
+      "collector_number": "216",
+      "tags": "Interaction/Disruption;Targeted Removal",
+      "role": "Unconditional removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Murderous Compulsion",
+      "CMC": 2.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target tapped creature.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{1}{B}",
+      "rarity": "common",
+      "set": "inr",
+      "collector_number": "126",
+      "tags": "Flashback/GY-Cast;Interaction/Disruption;Targeted Removal",
+      "role": "Conditional removal + madness",
+      "board": "mainboard"
+    },
+    {
+      "name": "Maelstrom Pulse",
+      "CMC": 3.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Destroy target nonland permanent and all other permanents with the same name as that permanent.",
+      "mana_cost": "{1}{B}{G}",
+      "rarity": "rare",
+      "set": "inr",
+      "collector_number": "244",
+      "tags": "Interaction/Disruption;Targeted Removal;Sweeper/Board Wipe",
+      "role": "Universal removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (G)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (G)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (G)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (G)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (G)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (G)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (G)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (G)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (G)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (G)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (B)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (B)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (B)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "CMC": 0.0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": null,
+      "rarity": "common",
+      "set": "",
+      "collector_number": "",
+      "tags": "",
+      "role": "Colored source (B)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunted Mire",
+      "CMC": 0.0,
+      "type_line": "Land — Swamp Forest",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "rarity": "common",
+      "set": "soc",
+      "collector_number": "379",
+      "tags": "Domain;Infrastructure/Consistency;Mana Ramp",
+      "role": "BG dual fixing",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "CMC": 0.0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "rarity": "common",
+      "set": "tmc",
+      "collector_number": "65",
+      "tags": "Landfall;Infrastructure/Consistency;Land Fetch;Mana Ramp",
+      "role": "Basic fixing / 2nd land-drop event",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Killing Wave",
+      "CMC": 1.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "For each creature, its controller sacrifices it unless they pay X life.",
+      "mana_cost": "{X}{B}",
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "121",
+      "tags": "Aristocrats/Sacrifice;Interaction/Disruption;Sweeper/Board Wipe;Life Drain",
+      "role": "vs. go-wide token/tribal aggro",
+      "board": "sideboard"
+    },
+    {
+      "name": "Sever the Bloodline",
+      "CMC": 4.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Exile target creature and all other creatures with the same name as that creature.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{3}{B}",
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "130",
+      "tags": "Flashback/GY-Cast;Interaction/Disruption;Targeted Removal;Mass Exile",
+      "role": "vs. tribal lords/legendary threats",
+      "board": "sideboard"
+    },
+    {
+      "name": "Geistcatcher's Rig",
+      "CMC": 6.0,
+      "type_line": "Artifact Creature — Construct",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "When this creature enters, you may have it deal 4 damage to target creature with flying.",
+      "mana_cost": "{6}",
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "264",
+      "tags": "Artifacts;Interaction/Disruption;Standalone Threat;Targeted Removal",
+      "role": "vs. flier-heavy decks",
+      "board": "sideboard"
+    },
+    {
+      "name": "Boarded Window",
+      "CMC": 3.0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "Creatures attacking you get -1/-0.\nAt the beginning of each end step, if you were dealt 4 or more damage this turn, exile this artifact.",
+      "mana_cost": "{3}",
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "255",
+      "tags": "Interaction/Disruption;Damage Prevention Override",
+      "role": "vs. fast aggro",
+      "board": "sideboard"
+    },
+    {
+      "name": "Duel for Dominance",
+      "CMC": 2.0,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Coven — Choose target creature you control and target creature you don't control. If you control three or more creatures with different powers, put a +1/+1 counter on the chosen creature you control. Then the chosen creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "mana_cost": "{1}{G}",
+      "rarity": "common",
+      "set": "inr",
+      "collector_number": "192",
+      "tags": "Counters (+1/+1);Interaction/Disruption;Targeted Removal;Fight Effect;+1/+1 Counter Placement",
+      "role": "vs. hexproof/indestructible threats",
+      "board": "sideboard"
+    },
+    {
+      "name": "Festerhide Boar",
+      "CMC": 4.0,
+      "type_line": "Creature — Boar",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Trample\nMorbid — This creature enters with two +1/+1 counters on it if a creature died this turn.",
+      "mana_cost": "{3}{G}",
+      "rarity": "common",
+      "set": "inr",
+      "collector_number": "196",
+      "tags": "Counters (+1/+1);Aristocrats/Sacrifice;Standalone Threat;Enters With Counters",
+      "role": "vs. aggro (big morbid blocker)",
+      "board": "sideboard"
+    },
+    {
+      "name": "Bramble Wurm",
+      "CMC": 7.0,
+      "type_line": "Creature — Wurm",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Reach, trample\nWhen this creature enters, you gain 5 life.\n{2}{G}, Exile this card from your graveyard: You gain 5 life.",
+      "mana_cost": "{6}{G}",
+      "rarity": "common",
+      "set": "inr",
+      "collector_number": "187",
+      "tags": "Lifegain;Graveyard;Standalone Threat;Life Gain;Graveyard Activation",
+      "role": "vs. fliers/aggro (reach + lifegain)",
+      "board": "sideboard"
+    },
+    {
+      "name": "Deadly Allure",
+      "CMC": 1.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Target creature gains deathtouch until end of turn and must be blocked this turn if able.\nFlashback {G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{B}",
+      "rarity": "uncommon",
+      "set": "inr",
+      "collector_number": "103",
+      "tags": "Flashback/GY-Cast;Interaction/Disruption;Combat Trick;Combat Trick;Targeted Removal",
+      "role": "vs. a single problem threat",
+      "board": "sideboard"
+    },
+    {
+      "name": "Tragic Slip",
+      "CMC": 1.0,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.",
+      "mana_cost": "{B}",
+      "rarity": "common",
+      "set": "inr",
+      "collector_number": "134",
+      "tags": "Aristocrats/Sacrifice;Interaction/Disruption;Targeted Removal",
+      "role": "Cheap removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cobbled Wings",
+      "CMC": 2.0,
+      "type_line": "Artifact — Equipment",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "Equipped creature has flying.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{2}",
+      "rarity": "common",
+      "set": "inr",
+      "collector_number": "258",
+      "tags": "Voltron/Equipment;Artifacts;Enabler/Fodder;Evasion Granting",
+      "role": "vs. ground stalls (evasion finisher)",
+      "board": "sideboard"
+    }
+  ]
+}

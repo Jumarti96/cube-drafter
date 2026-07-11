@@ -1,0 +1,58 @@
+:root {
+  --bg: #0d0d0f;
+  --bg-card: #16161a;
+  --bg-hover: #1e1e24;
+  --border: #2a2a35;
+  --text: #e4e4e8;
+  --text-muted: #8b8b9e;
+  --text-dim: #5a5a6e;
+  --accent: #d4a843;
+  --accent-glow: rgba(212, 168, 67, 0.25);
+  --w: #f9f5e3;
+  --u: #4a90d9;
+  --b: #1a1a1a;
+  --r: #d94a3a;
+  --g: #4a8c4a;
+  --gold-gradient: linear-gradient(135deg, #d4a843 0%, #b8860b 50%, #d4a843 100%);
+  --mythic: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  --rare: linear-gradient(135deg, #f1c40f 0%, #d4a017 100%);
+  --uncommon: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+  --common: linear-gradient(135deg, #2c2c30 0%, #1a1a1e 100%);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(212, 168, 67, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(74, 144, 217, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(217, 74, 58, 0.03) 0%, transparent 50%);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 700;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }

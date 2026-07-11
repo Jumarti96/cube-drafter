@@ -1,0 +1,777 @@
+{
+  "deck_name": "wbr-meld-midrange",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-07-09T17:50:14Z",
+  "format": "40-card",
+  "strategy": "Mardu (W/B/R) meld midrange with a reanimator-lite subtheme",
+  "colors": "WBR",
+  "identity": "All three Innistrad meld pairs (Brisela, Hanweir the Writhing Township, Chittering Host) built as pure upside on top of a removal-and-recursion Mardu midrange shell; Through the Breach cheats Griselbrand in early, and its own sacrifice clause sets up a permanent Edgar's Awakening reanimation later.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "only_from": {},
+    "excluded": [],
+    "max_total_rare_mythic": 6,
+    "max_total_rare_mythic_note": "Relaxed from default 5 to 6, per explicit user approval, to fit the full meld package (3 pairs) plus both named keystones (Griselbrand, Through the Breach)."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "avg_cmc": 3.17,
+    "pip_demand": {
+      "B": 18,
+      "R": 6,
+      "W": 9
+    },
+    "land_color_production": {
+      "W": 5,
+      "B": 9,
+      "R": 5
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 54.5,
+        "prod_pct": 56.2,
+        "gap": -1.7,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 18.2,
+        "prod_pct": 31.2,
+        "gap": -13.0,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 27.3,
+        "prod_pct": 31.2,
+        "gap": -3.9,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Griselbrand",
+      "cmc": 8.0,
+      "type_line": "Legendary Creature — Demon",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "Flying, lifelink\nPay 7 life: Draw seven cards.",
+      "rarity": "mythic",
+      "mana_cost": "{4}{B}{B}{B}{B}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Through the Breach",
+      "cmc": 5.0,
+      "type_line": "Instant — Arcane",
+      "color_identity": [
+        "R"
+      ],
+      "colors": [
+        "R"
+      ],
+      "oracle_text": "You may put a creature card from your hand onto the battlefield. That creature gains haste. Sacrifice that creature at the beginning of the next end step.\nSplice onto Arcane {2}{R}{R} (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)",
+      "rarity": "mythic",
+      "mana_cost": "{4}{R}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bruna, the Fading Light",
+      "cmc": 7.0,
+      "type_line": "Legendary Creature — Angel Horror",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "When you cast this spell, you may return target Angel or Human creature card from your graveyard to the battlefield.\nFlying, vigilance\n(Melds with Gisela, the Broken Blade.)",
+      "rarity": "rare",
+      "mana_cost": "{5}{W}{W}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gisela, the Broken Blade",
+      "cmc": 4.0,
+      "type_line": "Legendary Creature — Angel Horror",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "Flying, first strike, lifelink\nAt the beginning of your end step, if you both own and control Gisela and a creature named Bruna, the Fading Light, exile them, then meld them into Brisela, Voice of Nightmares.",
+      "rarity": "mythic",
+      "mana_cost": "{2}{W}{W}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hanweir Garrison",
+      "cmc": 3.0,
+      "type_line": "Creature — Human Soldier",
+      "color_identity": [
+        "R"
+      ],
+      "colors": [
+        "R"
+      ],
+      "oracle_text": "Whenever this creature attacks, create two 1/1 red Human creature tokens that are tapped and attacking.\n(Melds with Hanweir Battlements.)",
+      "rarity": "rare",
+      "mana_cost": "{2}{R}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Graf Rats",
+      "cmc": 2.0,
+      "type_line": "Creature — Rat",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "At the beginning of combat on your turn, if you both own and control this creature and a creature named Midnight Scavengers, exile them, then meld them into Chittering Host.",
+      "rarity": "uncommon",
+      "mana_cost": "{1}{B}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Graf Rats",
+      "cmc": 2.0,
+      "type_line": "Creature — Rat",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "At the beginning of combat on your turn, if you both own and control this creature and a creature named Midnight Scavengers, exile them, then meld them into Chittering Host.",
+      "rarity": "uncommon",
+      "mana_cost": "{1}{B}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Midnight Scavengers",
+      "cmc": 5.0,
+      "type_line": "Creature — Human Rogue",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "When this creature enters, you may return target creature card with mana value 3 or less from your graveyard to your hand.\n(Melds with Graf Rats.)",
+      "rarity": "common",
+      "mana_cost": "{4}{B}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Midnight Scavengers",
+      "cmc": 5.0,
+      "type_line": "Creature — Human Rogue",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "When this creature enters, you may return target creature card with mana value 3 or less from your graveyard to your hand.\n(Melds with Graf Rats.)",
+      "rarity": "common",
+      "mana_cost": "{4}{B}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Edgar's Awakening",
+      "cmc": 5.0,
+      "type_line": "Sorcery",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "Return target creature card from your graveyard to the battlefield.\nWhen you discard this card, you may pay {B}. When you do, return target creature card from your graveyard to your hand.",
+      "rarity": "uncommon",
+      "mana_cost": "{3}{B}{B}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Edgar's Awakening",
+      "cmc": 5.0,
+      "type_line": "Sorcery",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "Return target creature card from your graveyard to the battlefield.\nWhen you discard this card, you may pay {B}. When you do, return target creature card from your graveyard to your hand.",
+      "rarity": "uncommon",
+      "mana_cost": "{3}{B}{B}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Slip",
+      "cmc": 1.0,
+      "type_line": "Instant",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.",
+      "rarity": "common",
+      "mana_cost": "{B}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Slip",
+      "cmc": 1.0,
+      "type_line": "Instant",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.",
+      "rarity": "common",
+      "mana_cost": "{B}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Infernal Grasp",
+      "cmc": 2.0,
+      "type_line": "Instant",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "Destroy target creature. You lose 2 life.",
+      "rarity": "uncommon",
+      "mana_cost": "{1}{B}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Infernal Grasp",
+      "cmc": 2.0,
+      "type_line": "Instant",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "Destroy target creature. You lose 2 life.",
+      "rarity": "uncommon",
+      "mana_cost": "{1}{B}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Abrade",
+      "cmc": 2.0,
+      "type_line": "Instant",
+      "color_identity": [
+        "R"
+      ],
+      "colors": [
+        "R"
+      ],
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "rarity": "uncommon",
+      "mana_cost": "{1}{R}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Abrade",
+      "cmc": 2.0,
+      "type_line": "Instant",
+      "color_identity": [
+        "R"
+      ],
+      "colors": [
+        "R"
+      ],
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "rarity": "uncommon",
+      "mana_cost": "{1}{R}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bloodtithe Harvester",
+      "cmc": 2.0,
+      "type_line": "Creature — Vampire",
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "colors": [
+        "B",
+        "R"
+      ],
+      "oracle_text": "When this creature enters, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\n{T}, Sacrifice this creature: Target creature gets -X/-X until end of turn, where X is twice the number of Blood tokens you control. Activate only as a sorcery.",
+      "rarity": "uncommon",
+      "mana_cost": "{B}{R}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bloodtithe Harvester",
+      "cmc": 2.0,
+      "type_line": "Creature — Vampire",
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "colors": [
+        "B",
+        "R"
+      ],
+      "oracle_text": "When this creature enters, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\n{T}, Sacrifice this creature: Target creature gets -X/-X until end of turn, where X is twice the number of Blood tokens you control. Activate only as a sorcery.",
+      "rarity": "uncommon",
+      "mana_cost": "{B}{R}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Thraben Inspector",
+      "cmc": 1.0,
+      "type_line": "Creature — Human Soldier",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "rarity": "common",
+      "mana_cost": "{W}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gather the Townsfolk",
+      "cmc": 2.0,
+      "type_line": "Sorcery",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "rarity": "common",
+      "mana_cost": "{1}{W}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gather the Townsfolk",
+      "cmc": 2.0,
+      "type_line": "Sorcery",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "rarity": "common",
+      "mana_cost": "{1}{W}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lingering Souls",
+      "cmc": 3.0,
+      "type_line": "Sorcery",
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "rarity": "uncommon",
+      "mana_cost": "{2}{W}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lingering Souls",
+      "cmc": 3.0,
+      "type_line": "Sorcery",
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "rarity": "uncommon",
+      "mana_cost": "{2}{W}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hanweir Battlements",
+      "cmc": 0.0,
+      "type_line": "Land",
+      "color_identity": [
+        "R"
+      ],
+      "colors": [],
+      "oracle_text": "{T}: Add {C}.\n{R}, {T}: Target creature gains haste until end of turn.\n{3}{R}{R}, {T}: If you both own and control this land and a creature named Hanweir Garrison, exile them, then meld them into Hanweir, the Writhing Township.",
+      "rarity": "rare",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "cmc": 0.0,
+      "type_line": "Land — Plains Swamp",
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "colors": [],
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "cmc": 0.0,
+      "type_line": "Land — Plains Swamp",
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "colors": [],
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geothermal Bog",
+      "cmc": 0.0,
+      "type_line": "Land — Swamp Mountain",
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "colors": [],
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geothermal Bog",
+      "cmc": 0.0,
+      "type_line": "Land — Swamp Mountain",
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "colors": [],
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sacred Peaks",
+      "cmc": 0.0,
+      "type_line": "Land — Mountain Plains",
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "colors": [],
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sacred Peaks",
+      "cmc": 0.0,
+      "type_line": "Land — Mountain Plains",
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "colors": [],
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "cmc": 0.0,
+      "type_line": "Land",
+      "color_identity": [],
+      "colors": [],
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "cmc": 0.0,
+      "type_line": "Land",
+      "color_identity": [],
+      "colors": [],
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "color_identity": [],
+      "colors": [],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "color_identity": [],
+      "colors": [],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "color_identity": [],
+      "colors": [],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "color_identity": [],
+      "colors": [],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "color_identity": [],
+      "colors": [],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "color_identity": [],
+      "colors": [],
+      "oracle_text": "({T}: Add {W}.)",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "color_identity": [],
+      "colors": [],
+      "oracle_text": "({T}: Add {R}.)",
+      "rarity": "common",
+      "mana_cost": "",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Soul-Guide Gryff",
+      "cmc": 5.0,
+      "type_line": "Creature — Hippogriff Spirit",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "rarity": "common",
+      "mana_cost": "{4}{W}",
+      "board": "sideboard"
+    },
+    {
+      "name": "Soul-Guide Gryff",
+      "cmc": 5.0,
+      "type_line": "Creature — Hippogriff Spirit",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "rarity": "common",
+      "mana_cost": "{4}{W}",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cathar Commando",
+      "cmc": 2.0,
+      "type_line": "Creature — Human Soldier",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "rarity": "common",
+      "mana_cost": "{1}{W}",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cathar Commando",
+      "cmc": 2.0,
+      "type_line": "Creature — Human Soldier",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "rarity": "common",
+      "mana_cost": "{1}{W}",
+      "board": "sideboard"
+    },
+    {
+      "name": "Valorous Stance",
+      "cmc": 2.0,
+      "type_line": "Instant",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "rarity": "uncommon",
+      "mana_cost": "{1}{W}",
+      "board": "sideboard"
+    },
+    {
+      "name": "Valorous Stance",
+      "cmc": 2.0,
+      "type_line": "Instant",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "rarity": "uncommon",
+      "mana_cost": "{1}{W}",
+      "board": "sideboard"
+    },
+    {
+      "name": "Killing Wave",
+      "cmc": 1.0,
+      "type_line": "Sorcery",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "For each creature, its controller sacrifices it unless they pay X life.",
+      "rarity": "uncommon",
+      "mana_cost": "{X}{B}",
+      "board": "sideboard"
+    },
+    {
+      "name": "Killing Wave",
+      "cmc": 1.0,
+      "type_line": "Sorcery",
+      "color_identity": [
+        "B"
+      ],
+      "colors": [
+        "B"
+      ],
+      "oracle_text": "For each creature, its controller sacrifices it unless they pay X life.",
+      "rarity": "uncommon",
+      "mana_cost": "{X}{B}",
+      "board": "sideboard"
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "cmc": 4.0,
+      "type_line": "Creature — Human Soldier",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "rarity": "uncommon",
+      "mana_cost": "{3}{W}",
+      "board": "sideboard"
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "cmc": 4.0,
+      "type_line": "Creature — Human Soldier",
+      "color_identity": [
+        "W"
+      ],
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "rarity": "uncommon",
+      "mana_cost": "{3}{W}",
+      "board": "sideboard"
+    }
+  ]
+}

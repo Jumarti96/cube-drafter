@@ -1,0 +1,824 @@
+{
+  "deck_name": "g-counters-midrange",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-10T17:16:31Z",
+  "format": "40-card",
+  "strategy": "Mono-Green +1/+1 Counters midrange (safest mana)",
+  "colors": "G",
+  "identity": "Mono-Green midrange with zero fixing risk; Forgotten Ancient/Triskelion/Kavu Primarch/Invigorating Boon/Dragon Blood counters package backed by generic ramp, card advantage, and curve threats.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "max_rare_mythic_total": 5
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 3,
+    "avg_cmc": 3.0,
+    "pip_demand": {
+      "G": 20
+    },
+    "land_color_production": {
+      "G": 15
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 100.0,
+        "prod_pct": 93.8,
+        "gap": 6.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Forgotten Ancient",
+      "mana_cost": "{3}{G}",
+      "cmc": 4.0,
+      "type_line": "Creature — Elemental",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever a player casts a spell, you may put a +1/+1 counter on this creature.\nAt the beginning of your upkeep, you may move any number of +1/+1 counters from this creature onto other creatures.",
+      "tags": [],
+      "role": "Keystone engine - counter accumulation + redistribution",
+      "board": "mainboard"
+    },
+    {
+      "name": "Triskelion",
+      "mana_cost": "{6}",
+      "cmc": 6.0,
+      "type_line": "Artifact Creature — Construct",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "rare",
+      "oracle_text": "This creature enters with three +1/+1 counters on it.\nRemove a +1/+1 counter from this creature: It deals 1 damage to any target.",
+      "tags": [],
+      "role": "Payoff - finisher/pinger, ETB 3 counters",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kavu Primarch",
+      "mana_cost": "{3}{G}",
+      "cmc": 4.0,
+      "type_line": "Creature — Kavu",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nIf this creature was kicked, it enters with four +1/+1 counters on it.",
+      "tags": [],
+      "role": "Threat - kicker scaling counters body (3/3 base, 7/7 if kicked)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kavu Primarch",
+      "mana_cost": "{3}{G}",
+      "cmc": 4.0,
+      "type_line": "Creature — Kavu",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nIf this creature was kicked, it enters with four +1/+1 counters on it.",
+      "tags": [],
+      "role": "Threat - kicker scaling counters body (3/3 base, 7/7 if kicked)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Invigorating Boon",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "type_line": "Enchantment",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever a player cycles a card, you may put a +1/+1 counter on target creature.",
+      "tags": [],
+      "role": "Engine - counter distribution via cycling (Primal Boost/Lull/Break Asunder now provide 3 in-deck triggers)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Invigorating Boon",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "type_line": "Enchantment",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever a player cycles a card, you may put a +1/+1 counter on target creature.",
+      "tags": [],
+      "role": "Engine - counter distribution via cycling (Primal Boost/Lull/Break Asunder now provide 3 in-deck triggers)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dragon Blood",
+      "mana_cost": "{3}",
+      "cmc": 3.0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{3}, {T}: Put a +1/+1 counter on target creature.",
+      "tags": [],
+      "role": "Engine - repeatable manual counter adder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dragon Blood",
+      "mana_cost": "{3}",
+      "cmc": 3.0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{3}, {T}: Put a +1/+1 counter on target creature.",
+      "tags": [],
+      "role": "Engine - repeatable manual counter adder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Birds of Paradise",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "type_line": "Creature — Bird",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\n{T}: Add one mana of any color.",
+      "tags": [],
+      "role": "Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wild Growth",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional {G}.",
+      "tags": [],
+      "role": "Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nature's Lore",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Search your library for a Forest card, put that card onto the battlefield, then shuffle.",
+      "tags": [],
+      "role": "Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sylvan Library",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "type_line": "Enchantment",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "At the beginning of your draw step, you may draw two additional cards. If you do, choose two cards in your hand drawn this turn. For each of those cards, pay 4 life or put the card on top of your library.",
+      "tags": [],
+      "role": "Card advantage engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Emerald Charm",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Untap target permanent.\n• Destroy target non-Aura enchantment.\n• Target creature loses flying until end of turn.",
+      "tags": [],
+      "role": "Flexible utility (untap/enchantment hate/anti-flying) - NOT creature removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sandstorm",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Sandstorm deals 1 damage to each attacking creature.",
+      "tags": [],
+      "role": "Anti-aggro pinger (attacking creatures only) - NOT general removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Break Asunder",
+      "mana_cost": "{2}{G}{G}",
+      "cmc": 4.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or enchantment.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "tags": [],
+      "role": "Artifact/enchantment removal + cycling (feeds Invigorating Boon)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Icy Manipulator",
+      "mana_cost": "{4}",
+      "cmc": 4.0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+      "tags": [],
+      "role": "Tempo lock tool (not removal)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Giant Spider",
+      "mana_cost": "{3}{G}",
+      "cmc": 4.0,
+      "type_line": "Creature — Spider",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "tags": [],
+      "role": "Defensive body (reach blocker)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Primal Boost",
+      "mana_cost": "{2}{G}",
+      "cmc": 3.0,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets +4/+4 until end of turn.\nCycling {2}{G} ({2}{G}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have target creature get +1/+1 until end of turn.",
+      "tags": [],
+      "role": "Combat trick + cycling (feeds Invigorating Boon)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lull",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Prevent all combat damage that would be dealt this turn.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "tags": [],
+      "role": "Fog vs alpha strikes + cycling (feeds Invigorating Boon)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dragon Engine",
+      "mana_cost": "{3}",
+      "cmc": 3.0,
+      "type_line": "Artifact Creature — Construct",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "{2}: This creature gets +1/+0 until end of turn.",
+      "tags": [],
+      "role": "Cheap body with pump mana sink",
+      "board": "mainboard"
+    },
+    {
+      "name": "Juggernaut",
+      "mana_cost": "{4}",
+      "cmc": 4.0,
+      "type_line": "Artifact Creature — Juggernaut",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "This creature attacks each combat if able.\nThis creature can't be blocked by Walls.",
+      "tags": [],
+      "role": "Efficient generic beater",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kamahl, Fist of Krosa",
+      "mana_cost": "{4}{G}{G}",
+      "cmc": 6.0,
+      "type_line": "Legendary Creature — Human Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "{G}: Target land becomes a 1/1 creature until end of turn. It's still a land.\n{2}{G}{G}{G}: Creatures you control get +3/+3 and gain trample until end of turn.",
+      "tags": [],
+      "role": "Top-end bomb - land animation + anthem (no counters interaction, generic finisher)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Call of the Herd",
+      "mana_cost": "{2}{G}",
+      "cmc": 3.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create a 3/3 green Elephant creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [],
+      "role": "2-for-1 token generator / board presence (no counters interaction, generic value)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Call of the Herd",
+      "mana_cost": "{2}{G}",
+      "cmc": 3.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create a 3/3 green Elephant creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [],
+      "role": "2-for-1 token generator / board presence (no counters interaction, generic value)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "basic",
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mishra's Factory",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}: Add {C}.\n{1}: This land becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
+      "tags": [],
+      "role": "Manland - extra threat density, colorless",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Wall of Junk",
+      "mana_cost": "{2}",
+      "cmc": 2.0,
+      "type_line": "Artifact Creature — Wall",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "Defender (This creature can't attack.)\nWhen this creature blocks, return it to its owner's hand at end of combat. (Return it only if it's on the battlefield.)",
+      "tags": [],
+      "role": "vs Aggro - cheap recurring blocker",
+      "board": "sideboard"
+    },
+    {
+      "name": "Damping Sphere",
+      "mana_cost": "{2}",
+      "cmc": 2.0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "If a land is tapped for two or more mana, it produces {C} instead of any other type and amount.\nEach spell a player casts costs {1} more to cast for each other spell that player has cast this turn.",
+      "tags": [],
+      "role": "vs Storm/UR combo archetype in this cube",
+      "board": "sideboard"
+    },
+    {
+      "name": "Tormod's Crypt",
+      "mana_cost": "{0}",
+      "cmc": 0.0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "tags": [],
+      "role": "vs Graveyard/Reanimator decks (15.5% of cube)",
+      "board": "sideboard"
+    },
+    {
+      "name": "Lull",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Prevent all combat damage that would be dealt this turn.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "tags": [],
+      "role": "vs Aggro alpha strikes - fog, cycles when dead",
+      "board": "sideboard"
+    },
+    {
+      "name": "Jalum Tome",
+      "mana_cost": "{3}",
+      "cmc": 3.0,
+      "type_line": "Artifact — Book",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "{2}, {T}: Draw a card, then discard a card.",
+      "tags": [],
+      "role": "vs grindy matchups - card filtering",
+      "board": "sideboard"
+    },
+    {
+      "name": "Fa'adiyah Seer",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "type_line": "Creature — Human Shaman",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{T}: Draw a card and reveal it. If it isn't a land card, discard it.",
+      "tags": [],
+      "role": "Card selection/self-mill filter (mandatory discard of nonlands - marginal, best vs flood not vs control)",
+      "board": "sideboard"
+    },
+    {
+      "name": "Emerald Charm",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Untap target permanent.\n• Destroy target non-Aura enchantment.\n• Target creature loses flying until end of turn.",
+      "tags": [],
+      "role": "2nd copy - flexible answer vs flyers/enchantments",
+      "board": "sideboard"
+    },
+    {
+      "name": "Sandstorm",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Sandstorm deals 1 damage to each attacking creature.",
+      "tags": [],
+      "role": "2nd copy - extra anti-aggro sweeper",
+      "board": "sideboard"
+    },
+    {
+      "name": "Break Asunder",
+      "mana_cost": "{2}{G}{G}",
+      "cmc": 4.0,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or enchantment.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "tags": [],
+      "role": "2nd copy - extra artifact/enchantment hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Krosan Restorer",
+      "mana_cost": "{2}{G}",
+      "cmc": 3.0,
+      "type_line": "Creature — Human Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{T}: Untap target land.\nThreshold — {T}: Untap up to three target lands. Activate only if there are seven or more cards in your graveyard.",
+      "tags": [],
+      "role": "vs Control - untap for burst mana plays",
+      "board": "sideboard"
+    }
+  ]
+}
