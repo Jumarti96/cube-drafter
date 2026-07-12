@@ -39,6 +39,7 @@ export default function App() {
   const [modalCard, setModalCard] = useState(null)
   const [draftComplete, setDraftComplete] = useState(false)
   const [deckLoadError, setDeckLoadError] = useState(null)
+  const [archetypeRollKey, setArchetypeRollKey] = useState(0)
   const deckLoadSeq = useRef(0)
 
   const handleSetup = useCallback(async (cfg) => {
@@ -58,6 +59,7 @@ export default function App() {
       setPlayerPicks({})
       setPhase('select')
       setDraftComplete(false)
+      setArchetypeRollKey(k => k + 1)
     } catch (e) {
       setError('app.loadCubeError')
       console.error(e)
@@ -76,7 +78,7 @@ export default function App() {
     if (phase === 'select' && !draftComplete) {
       pickRandom()
     }
-  }, [phase, draftComplete, pickRandom])
+  }, [archetypeRollKey, draftComplete, pickRandom])
 
   const handleSelectArchetype = (archetype) => {
     setSelectedArchetype(archetype)
@@ -93,6 +95,7 @@ export default function App() {
       setSelectedDeck(null)
       setDeckData(null)
       setPhase('select')
+      setArchetypeRollKey(k => k + 1)
     }
   }, [currentPlayer, config])
 
@@ -158,6 +161,7 @@ export default function App() {
     setSelectedDeck(null)
     setDeckData(null)
     setPhase('select')
+    setArchetypeRollKey(k => k + 1)
   }, [playerPicks, config, t])
 
   const handleBack = () => {
