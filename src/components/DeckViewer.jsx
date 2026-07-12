@@ -5,6 +5,7 @@ import { ManaCost } from './ManaSymbols.jsx'
 import { getCardImageLookup, isLandCard, getColorCardCounts, getNonLandMainboardCount } from '../lib/cubeData.js'
 import { getDeckExportOptions, localizeExportOption, runDeckExport } from '../lib/deckExport.js'
 import { useI18n } from '../i18n/useT.js'
+import { pickLocalized } from '../i18n/localized.js'
 
 function resolveImageUrl(card) {
   let url = card.image_url || ''
@@ -60,7 +61,7 @@ function hasPowerToughness(card) {
 }
 
 export default function DeckViewer({ deckData, deckName, onCardClick, onConfirm, playerNumber }) {
-  const { t, tp } = useI18n()
+  const { t, tp, locale } = useI18n()
   const [pdfLoading, setPdfLoading] = useState(false)
 
   if (!deckData) return null
@@ -117,8 +118,10 @@ export default function DeckViewer({ deckData, deckName, onCardClick, onConfirm,
           <span className="deck-cmc">{t('deck.avgCmc', { cmc: (deckData.mana_audit?.avg_cmc || 0).toFixed(2) })}</span>
           <span className="deck-land-count">{t('deck.landsCount', { count: deckData.mana_audit?.land_count || '?' })}</span>
         </div>
-        {deckData.identity && (
-          <p className="deck-identity">{deckData.identity}</p>
+        {pickLocalized({ en: deckData.identity, es: deckData.identity_es }, locale) && (
+          <p className="deck-identity">
+            {pickLocalized({ en: deckData.identity, es: deckData.identity_es }, locale)}
+          </p>
         )}
       </div>
 

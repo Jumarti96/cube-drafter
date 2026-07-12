@@ -2,9 +2,10 @@ import CardImage from './CardImage'
 import { ColorPips, colorToHex } from './ColorPips'
 import { parseManaColors } from '../lib/cubeData.js'
 import { useI18n } from '../i18n/useT.js'
+import { pickLocalized } from '../i18n/localized.js'
 
 export default function ArchetypeGrid({ archetypes, deckSummaries, onSelect, onCardClick, playerNumber = 1 }) {
-  const { t, tp } = useI18n()
+  const { t, tp, locale } = useI18n()
 
   if (archetypes.length === 0) return null
 
@@ -72,11 +73,11 @@ export default function ArchetypeGrid({ archetypes, deckSummaries, onSelect, onC
                 <ColorPips colors={archetype.colors} className="archetype-pips" />
               </div>
 
-              <p className="archetype-desc">{archetype.description}</p>
+              <p className="archetype-desc">{pickLocalized(archetype.description, locale)}</p>
 
-              {archetype.theme && (
+              {pickLocalized(archetype.theme, locale) && (
                 <div className="archetype-themes">
-                  {archetype.theme.split(';').slice(0, 4).map(theme => (
+                  {pickLocalized(archetype.theme, locale).split(';').slice(0, 4).map(theme => (
                     <span key={theme.trim()} className="theme-tag">{theme.trim()}</span>
                   ))}
                 </div>

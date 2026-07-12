@@ -246,7 +246,8 @@ async function buildDeckSummary(deckDirHandle, deckName, enriched) {
   }
 
   const analysisText = await readTextFile(deckDirHandle, 'analysis.md')
-  const pitch = extractPitchFromAnalysis(analysisText)
+  const pitchEn = (deckData.pitch || '').trim() || extractPitchFromAnalysis(analysisText)
+  const pitchEs = (deckData.pitch_es || '').trim()
 
   const mainboard = deckData.mainboard || []
   const mainDeck = mainboard.filter(c => !c.board || c.board === 'mainboard')
@@ -317,10 +318,19 @@ async function buildDeckSummary(deckDirHandle, deckName, enriched) {
     name: deckName,
     display_name: deckName.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
     colors: deckData.colors || '',
-    strategy: deckData.strategy || '',
-    identity: deckData.identity || '',
+    strategy: {
+      en: (deckData.strategy || '').trim(),
+      es: (deckData.strategy_es || '').trim(),
+    },
+    identity: {
+      en: (deckData.identity || '').trim(),
+      es: (deckData.identity_es || '').trim(),
+    },
     format: deckData.format || '40-card',
-    pitch,
+    pitch: {
+      en: pitchEn,
+      es: pitchEs,
+    },
     mana_audit: {
       avg_cmc: deckData.mana_audit?.avg_cmc ?? 0,
       land_count: deckData.mana_audit?.land_count ?? 0,
@@ -396,29 +406,45 @@ export function buildArchetypes(csvRows, deckSummaries) {
       ? MANA_COLOR_ORDER.filter(c => colorSet.has(c)).join('')
       : formatManaColors(displayColors)
 
-    const pitch = (row.pitch || '').trim()
-    const rationale = row.rationale || ''
-    const themes = row.key_themes || ''
+    const pitchEn = (row.pitch || '').trim()
+    const pitchEs = (row.pitch_es || '').trim()
+    const rationaleEn = (row.rationale || '').trim()
+    const rationaleEs = (row.rationale_es || '').trim()
+    const themesEn = (row.key_themes || '').trim()
+    const themesEs = (row.key_themes_es || '').trim()
     const keystones = row.keystones || ''
 
-    let desc = pitch
-    if (!desc) {
+    function buildDesc(pitch, rationale, themes, keyCardsPrefix) {
+      if (pitch) return pitch
       const parts = []
       if (rationale) parts.push(rationale)
       if (keystones) {
         const ks = keystones.split(';').map(k => k.trim()).filter(Boolean).slice(0, 4)
-        if (ks.length) parts.push(`Key cards: ${ks.join(', ')}.`)
+        if (ks.length) parts.push(`${keyCardsPrefix} ${ks.join(', ')}.`)
       }
-      desc = parts.join(' ') || themes
+      return parts.join(' ') || themes
     }
+
+    // Only set ES description when real Spanish prose exists. A keystones-only
+    // "Cartas clave: ..." string would otherwise block fallback to the EN pitch.
+    const descEn = buildDesc(pitchEn, rationaleEn, themesEn, 'Key cards:')
+    const descEs = (pitchEs || rationaleEs)
+      ? buildDesc(pitchEs, rationaleEs, themesEs, 'Cartas clave:')
+      : ''
 
     archetypes.push({
       id: name.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and'),
       name: `${name} (${resolvedColors})`,
       key: name,
       colors: resolvedColors,
-      description: desc,
-      theme: themes,
+      description: {
+        en: descEn,
+        es: descEs,
+      },
+      theme: {
+        en: themesEn,
+        es: themesEs,
+      },
       deck_count: valid.length,
       decks: [...valid].sort(),
       sample_cards: [],

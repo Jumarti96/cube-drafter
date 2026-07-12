@@ -3,6 +3,7 @@ import CardCarousel from './CardCarousel'
 import { ColorPips, colorToHex } from './ColorPips'
 import { parseManaColors } from '../lib/cubeData.js'
 import { useI18n } from '../i18n/useT.js'
+import { pickLocalized } from '../i18n/localized.js'
 
 function PitchText({ text }) {
   const { t } = useI18n()
@@ -28,7 +29,7 @@ function PitchText({ text }) {
 }
 
 export default function DeckVariations({ archetype, deckSummaries, onSelect, onCardClick }) {
-  const { t, tp } = useI18n()
+  const { t, tp, locale } = useI18n()
   const deckNames = archetype.decks || []
 
   function handleSelect(deckName) {
@@ -96,11 +97,11 @@ export default function DeckVariations({ archetype, deckSummaries, onSelect, onC
                 <ColorPips colors={deck.colors} className="variation-pips" />
               </div>
 
-              {deck.strategy && (
-                <p className="variation-strategy">{deck.strategy}</p>
+              {pickLocalized(deck.strategy, locale) && (
+                <p className="variation-strategy">{pickLocalized(deck.strategy, locale)}</p>
               )}
 
-              <PitchText text={deck.pitch} />
+              <PitchText text={pickLocalized(deck.pitch, locale)} />
 
               <div className="variation-stats">
                 <div className="variation-stat">

@@ -10,6 +10,7 @@ import { loadCubeData, getDeck, parseManaColors, isValidDeckData } from './lib/c
 import { ColorPips, colorToHex } from './components/ColorPips'
 import { getAvailableArchetypes } from './lib/deckConflicts.js'
 import { useI18n } from './i18n/useT.js'
+import { pickLocalized } from './i18n/localized.js'
 import './App.css'
 
 function shuffleArray(arr) {
@@ -381,7 +382,7 @@ export default function App() {
 }
 
 function DraftResults({ config, playerPicks, deckSummaries, onViewDeck, onChangePick, onRestart }) {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const [exportTarget, setExportTarget] = useState(null)
 
   return (
@@ -421,8 +422,8 @@ function DraftResults({ config, playerPicks, deckSummaries, onViewDeck, onChange
                   <div className="result-card-body">
                     <p className="result-archetype">{pick.archetypeKey}</p>
                     <h3 className="result-deck-name">{deck.display_name}</h3>
-                    {deck.strategy && (
-                      <p className="result-strategy">{deck.strategy}</p>
+                    {pickLocalized(deck.strategy, locale) && (
+                      <p className="result-strategy">{pickLocalized(deck.strategy, locale)}</p>
                     )}
                   </div>
 
