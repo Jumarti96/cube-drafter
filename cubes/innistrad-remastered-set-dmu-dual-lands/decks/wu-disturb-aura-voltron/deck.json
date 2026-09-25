@@ -1,0 +1,655 @@
+{
+  "deck_name": "wu-disturb-aura-voltron",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-28T02:40:58Z",
+  "format": "40-card",
+  "strategy": "tempo voltron",
+  "colors": "WU",
+  "identity": "A WU tempo Voltron deck whose threats and whose attachments are largely the same cards. Lantern Bearer and Twinblade Geist are creatures that come back from the graveyard as Auras via Disturb, and both read 'If [it] would be put into a graveyard from anywhere, exile it instead' -- so a removal spell answers them once rather than two-for-one'ing the way Voltron normally loses. Around that core sit 10 bodies of which 5 fly, six attachments, and a five-card stack-interaction suite whose job is not board control but keeping the suited flier alive through the one turn it needs to connect. Thalia, Heretic Cathar taxes the opponent's development so that turn arrives first.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": []
+  },
+  "max_rares_mythics": 5,
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 2,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -1,
+      "raw_target": 16,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2,
+    "pip_demand": {
+      "U": 9,
+      "W": 15
+    },
+    "land_color_production": {
+      "W": 10,
+      "U": 8
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 37.5,
+        "prod_pct": 50,
+        "gap": -12.5,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 62.5,
+        "prod_pct": 62.5,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Lantern Bearer // Lanterns' Lift",
+      "qty": 2,
+      "role": "payoff-disturb-host",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Creature — Spirit",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nDisturb {2}{U} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nEnchant creature\nEnchanted creature gets +1/+1 and has flying.\nIf Lanterns' Lift would be put into a graveyard from anywhere, exile it instead.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "72"
+    },
+    {
+      "name": "Twinblade Geist // Twinblade Invocation",
+      "qty": 2,
+      "role": "payoff-disturb-host",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Creature — Spirit Warrior",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Double strike\nDisturb {2}{W} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nEnchant creature\nEnchanted creature has double strike.\nIf Twinblade Invocation would be put into a graveyard from anywhere, exile it instead.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "47"
+    },
+    {
+      "name": "Thraben Inspector",
+      "qty": 2,
+      "role": "threat-host",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Creature — Human Soldier",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "power": "1",
+      "toughness": "2",
+      "set": "inr",
+      "collector_number": "45"
+    },
+    {
+      "name": "Niblis of the Urn",
+      "qty": 1,
+      "role": "threat-evasive-host",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Creature — Spirit",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nWhenever this creature attacks, you may tap target creature.",
+      "power": "1",
+      "toughness": "1",
+      "set": "inr",
+      "collector_number": "35"
+    },
+    {
+      "name": "Nebelgast Herald",
+      "qty": 1,
+      "role": "interaction-tempo",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Creature — Spirit",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flash\nFlying\nWhenever this creature or another Spirit you control enters, tap target creature an opponent controls.",
+      "power": "2",
+      "toughness": "1",
+      "set": "inr",
+      "collector_number": "78"
+    },
+    {
+      "name": "Spell Queller",
+      "qty": 1,
+      "role": "interaction-protection",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Creature — Spirit",
+      "mana_cost": "{1}{W}{U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, exile target spell with mana value 4 or less.\nWhen this creature leaves the battlefield, the exiled card's owner may cast that card without paying its mana cost.",
+      "power": "2",
+      "toughness": "3",
+      "set": "inr",
+      "collector_number": "248"
+    },
+    {
+      "name": "Thalia, Heretic Cathar",
+      "qty": 1,
+      "role": "threat-tempo-tax",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Soldier",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "First strike\nCreatures and nonbasic lands your opponents control enter tapped.",
+      "power": "3",
+      "toughness": "2",
+      "set": "inr",
+      "collector_number": "44"
+    },
+    {
+      "name": "Gryff's Boon",
+      "qty": 2,
+      "role": "engine-attachment",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +1/+0 and has flying.\n{3}{W}: Return this card from your graveyard to the battlefield attached to target creature. Activate only as a sorcery.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "25"
+    },
+    {
+      "name": "Lunarch Mantle",
+      "qty": 1,
+      "role": "engine-attachment",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2 and has \"{1}, Sacrifice a permanent: This creature gains flying until end of turn.\"",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "31"
+    },
+    {
+      "name": "Cathar's Call",
+      "qty": 2,
+      "role": "engine-attachment",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant creature\nEnchanted creature has vigilance and \"At the beginning of your end step, create a 1/1 white Human creature token.\"",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "16"
+    },
+    {
+      "name": "Stitcher's Graft",
+      "qty": 1,
+      "role": "engine-attachment",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Artifact — Equipment",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "rare",
+      "oracle_text": "Equipped creature gets +3/+3.\nWhenever equipped creature attacks, it doesn't untap during its controller's next untap step.\nWhenever this Equipment becomes unattached from a permanent, sacrifice that permanent.\nEquip {2}",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "271"
+    },
+    {
+      "name": "Wedding Announcement // Wedding Festivity",
+      "qty": 1,
+      "role": "engine-card-flow",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "At the beginning of your end step, put an invitation counter on this enchantment. If you attacked with two or more creatures this turn, draw a card. Otherwise, create a 1/1 white Human creature token. Then if this enchantment has three or more invitation counters on it, transform it.\n//\nCreatures you control get +1/+1.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "51"
+    },
+    {
+      "name": "Syncopate",
+      "qty": 2,
+      "role": "interaction-counter",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{X}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target spell unless its controller pays {X}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+      "power": null,
+      "toughness": null,
+      "set": "fin",
+      "collector_number": "80"
+    },
+    {
+      "name": "Geistlight Snare",
+      "qty": 2,
+      "role": "interaction-counter",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "This spell costs {1} less to cast if you control a Spirit. It also costs {1} less to cast if you control an enchantment.\nCounter target spell unless its controller pays {3}.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "66"
+    },
+    {
+      "name": "Valorous Stance",
+      "qty": 1,
+      "role": "interaction-protection",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "48"
+    },
+    {
+      "name": "Faith Unbroken",
+      "qty": 1,
+      "role": "interaction-removal",
+      "board": "mainboard",
+      "cmc": 4,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield.\nEnchanted creature gets +2/+2.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "21"
+    },
+    {
+      "name": "Silent Departure",
+      "qty": 1,
+      "role": "interaction-tempo",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Return target creature to its owner's hand.\nFlashback {4}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "84"
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "qty": 2,
+      "role": "land-dual",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "249"
+    },
+    {
+      "name": "Plains",
+      "qty": 8,
+      "role": "land-basic",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "set": null,
+      "collector_number": null
+    },
+    {
+      "name": "Island",
+      "qty": 6,
+      "role": "land-basic",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "set": null,
+      "collector_number": null
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Soul-Guide Gryff",
+      "qty": 1,
+      "role": "hate-graveyard",
+      "board": "sideboard",
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "mana_cost": "{4}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "power": "3",
+      "toughness": "4",
+      "set": "inr",
+      "collector_number": "40"
+    },
+    {
+      "name": "Cathar Commando",
+      "qty": 2,
+      "role": "hate-artifact-enchantment",
+      "board": "sideboard",
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "power": "3",
+      "toughness": "1",
+      "set": "inr",
+      "collector_number": "15"
+    },
+    {
+      "name": "Imprisoned in the Moon",
+      "qty": 1,
+      "role": "hate-single-large-threat",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature, land, or planeswalker\nEnchanted permanent is a colorless land with \"{T}: Add {C}\" and loses all other card types and abilities.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "69"
+    },
+    {
+      "name": "Bound by Moonsilver",
+      "qty": 1,
+      "role": "hate-single-large-threat",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack, block, or transform.\nSacrifice another permanent: Attach this Aura to target creature. Activate only as a sorcery and only once each turn.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "13"
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "qty": 1,
+      "role": "hate-tribal-creatures",
+      "board": "sideboard",
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "power": "3",
+      "toughness": "2",
+      "set": "inr",
+      "collector_number": "39"
+    },
+    {
+      "name": "Subjugator Angel",
+      "qty": 1,
+      "role": "hate-wide-boards",
+      "board": "sideboard",
+      "cmc": 6,
+      "type_line": "Creature — Angel",
+      "mana_cost": "{4}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nWhen this creature enters, tap all creatures your opponents control.",
+      "power": "4",
+      "toughness": "3",
+      "set": "inr",
+      "collector_number": "43"
+    },
+    {
+      "name": "Mist Raven",
+      "qty": 2,
+      "role": "flex-tempo-evasion",
+      "board": "sideboard",
+      "cmc": 4,
+      "type_line": "Creature — Bird",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nWhen this creature enters, return target creature to its owner's hand.",
+      "power": "2",
+      "toughness": "2",
+      "set": "inr",
+      "collector_number": "76"
+    },
+    {
+      "name": "Angelic Purge",
+      "qty": 1,
+      "role": "hate-noncreature-permanent",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "9"
+    }
+  ],
+  "pitch": "A WU tempo Voltron deck whose threats and whose attachments are largely the same cards. Lantern Bearer and Twinblade Geist are creatures that come back from the graveyard as Auras via Disturb, and both read 'If [it] would be put into a graveyard from anywhere, exile it instead' -- so a removal spell answers them once rather than two-for-one'ing the way Voltron normally loses. Around that core sit 10 bodies of which 5 fly, six attachments, and a five-card stack-interaction suite whose job is not board control but keeping the suited flier alive through the one turn it needs to connect. Thalia, Heretic Cathar taxes the opponent's development so that turn arrives first.",
+  "strategy_es": "voltron de tempo",
+  "identity_es": "Un Voltron de tempo WU cuyas amenazas y cuyos anexos son en gran medida las mismas cartas. Lantern Bearer y Twinblade Geist son criaturas que vuelven del cementerio como auras vía Disturb, y ambas dicen 'If [it] would be put into a graveyard from anywhere, exile it instead', así que un hechizo de eliminación les responde una vez en lugar de hacer el dos por uno con el que normalmente pierde el Voltron. Alrededor de ese núcleo hay 10 cuerpos de los cuales 5 vuelan, seis anexos, y un paquete de cinco cartas de interacción en la pila cuyo trabajo no es controlar el tablero sino mantener vivo al volador equipado durante el único turno que necesita para conectar. Thalia, Heretic Cathar cobra impuesto al desarrollo del rival para que ese turno llegue primero.",
+  "pitch_es": "Un Voltron de tempo WU cuyas amenazas y cuyos anexos son en gran medida las mismas cartas. Lantern Bearer y Twinblade Geist son criaturas que vuelven del cementerio como auras vía Disturb, y ambas dicen 'If [it] would be put into a graveyard from anywhere, exile it instead', así que un hechizo de eliminación les responde una vez en lugar de hacer el dos por uno con el que normalmente pierde el Voltron. Alrededor de ese núcleo hay 10 cuerpos de los cuales 5 vuelan, seis anexos, y un paquete de cinco cartas de interacción en la pila cuyo trabajo no es controlar el tablero sino mantener vivo al volador equipado durante el único turno que necesita para conectar. Thalia, Heretic Cathar cobra impuesto al desarrollo del rival para que ese turno llegue primero."
+}

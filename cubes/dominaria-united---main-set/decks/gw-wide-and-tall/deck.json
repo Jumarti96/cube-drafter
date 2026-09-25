@@ -1,0 +1,991 @@
+{
+  "deck_name": "gw-wide-and-tall",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-14T03:25:08Z",
+  "format": "40-card",
+  "strategy": "green-white go-wide token aggro",
+  "colors": "GW",
+  "identity": "Green-white go-wide aggro built on the lowest curve the pool supports. Queen Allenal of Ruadach is the multiplier: her replacement effect adds a 1/1 white Soldier to every token event, so Captain's Call makes four bodies, Resolute Reinforcements and Argivian Cavalier make three each, and kicked Scout the Wilderness makes three. Two stacking anthems (King Darien XLVIII on all creatures, Valiant Veteran on Soldiers) plus a kicked Strength of the Coalition, which puts a permanent +1/+1 counter on every creature, turn that width into a board the opponent cannot block profitably. Average mana value is 2.30 with fourteen cards at two mana or less, so the board is assembled by turn four and the alpha strike lands on turn five or six.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "max 5 rare/mythic cards total across mainboard + sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.35,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.533,
+      "raw_target": 16.467,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.35,
+    "pip_demand": {
+      "G": 11,
+      "W": 17
+    },
+    "land_color_production": {
+      "W": 11,
+      "G": 8
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 39.3,
+        "prod_pct": 47.1,
+        "gap": -7.8,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 60.7,
+        "prod_pct": 64.7,
+        "gap": -4,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Llanowar Stalker",
+      "oracle_text": "Whenever another creature you control enters, this creature gets +1/+0 until end of turn.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tokens",
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Elf Warrior",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "Payoff - +1/+0 for each creature that enters",
+      "qty": 1
+    },
+    {
+      "name": "Strength of the Coalition",
+      "oracle_text": "Kicker {2}{W} (You may pay an additional {2}{W} as you cast this spell.)\nTarget creature you control gets +2/+2 until end of turn. If this spell was kicked, put a +1/+1 counter on each creature you control.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Tokens",
+        "Kicker/Scaling",
+        "Payload/Payoff",
+        "Combat Trick",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Tokens",
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Payoff - kicked, a +1/+1 counter on each creature",
+      "qty": 2
+    },
+    {
+      "name": "Resolute Reinforcements",
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "Enabler - flash, two Soldier bodies",
+      "qty": 2
+    },
+    {
+      "name": "Juniper Order Rootweaver",
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nWhen this creature enters, if it was kicked, put a +1/+1 counter on target creature you control.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Kicker/Scaling",
+        "Payload/Payoff",
+        "Combat Trick",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Druid",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Payoff - 2/2, kicked for a +1/+1 counter",
+      "qty": 2
+    },
+    {
+      "name": "Valiant Veteran",
+      "oracle_text": "Other Soldiers you control get +1/+1.\n{3}{W}{W}, Exile this card from your graveyard: Put a +1/+1 counter on each Soldier you control.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Flashback/GY-Cast",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Counters (+1/+1)",
+          "Flashback/GY-Cast"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Kor Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Payoff - second anthem, on the Soldier tokens",
+      "qty": 1
+    },
+    {
+      "name": "Quirion Beastcaller",
+      "oracle_text": "Whenever you cast a creature spell, put a +1/+1 counter on this creature.\nWhen this creature dies, distribute X +1/+1 counters among any number of target creatures you control, where X is the number of +1/+1 counters on this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Dryad Warrior",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Payoff - grows per creature cast, redistributes on death",
+      "qty": 1
+    },
+    {
+      "name": "Nishoba Brawler",
+      "oracle_text": "Trample\nDomain — Nishoba Brawler's power is equal to the number of basic land types among lands you control.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Domain",
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Domain"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Cat Warrior",
+      "rarity": "uncommon",
+      "power": "*",
+      "toughness": "3",
+      "board": "mainboard",
+      "role": "Threat - 2/3 trample for two mana at Domain 2",
+      "qty": 2
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Interaction - the fat blocker that walls a token swarm",
+      "qty": 2
+    },
+    {
+      "name": "Artillery Blast",
+      "oracle_text": "Domain — Artillery Blast deals X damage to target tapped creature, where X is 1 plus the number of basic land types among lands you control.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Domain",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Domain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Interaction - 3 damage to a tapped creature at Domain 2",
+      "qty": 1
+    },
+    {
+      "name": "Queen Allenal of Ruadach",
+      "oracle_text": "Queen Allenal of Ruadach's power and toughness are each equal to the number of creatures you control.\nIf one or more creature tokens would be created under your control, those tokens plus a 1/1 white Soldier creature token are created instead.",
+      "mana_cost": "{G}{W}{W}",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Payload/Payoff",
+        "Standalone Threat",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Creature — Elf Noble",
+      "rarity": "uncommon",
+      "power": "*",
+      "toughness": "*",
+      "board": "mainboard",
+      "role": "Payoff - extra Soldier on every token event; P/T = creature count",
+      "qty": 2
+    },
+    {
+      "name": "King Darien XLVIII",
+      "oracle_text": "Other creatures you control get +1/+1.\n{3}{G}{W}: Put a +1/+1 counter on King Darien and create a 1/1 white Soldier creature token.\nSacrifice King Darien: Creature tokens you control gain hexproof and indestructible until end of turn.",
+      "mana_cost": "{1}{G}{W}",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Counters (+1/+1)",
+        "Aristocrats/Sacrifice",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Token Generation",
+        "Protection",
+        "Sacrifice Outlet"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Counters (+1/+1)",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Protection",
+          "Sacrifice Outlet"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "role": "Payoff/engine - anthem, token maker, token protection",
+      "qty": 1
+    },
+    {
+      "name": "Argivian Cavalier",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Enlist Matters",
+        "Tokens",
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Enlist Matters",
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Orc Knight",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Enabler - Soldier token on ETB, enlist",
+      "qty": 2
+    },
+    {
+      "name": "Scout the Wilderness",
+      "oracle_text": "Kicker {1}{W} (You may pay an additional {1}{W} as you cast this spell.)\nSearch your library for a basic land card, put it onto the battlefield tapped, then shuffle. If this spell was kicked, create two 1/1 white Soldier creature tokens.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Kicker/Scaling",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Land Fetch",
+        "Mana Ramp",
+        "Token Generation",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Kicker/Scaling",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Land Fetch",
+          "Mana Ramp",
+          "Token Generation",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Enabler/infra - fixes the mana, kicked for two Soldiers",
+      "qty": 2
+    },
+    {
+      "name": "Captain's Call",
+      "oracle_text": "Create three 1/1 white Soldier creature tokens.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Enabler - three Soldier tokens (four with Allenal)",
+      "qty": 2
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Basic - white source",
+      "qty": 9
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Basic - green source",
+      "qty": 6
+    },
+    {
+      "name": "Radiant Grove",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "GW dual, enters tapped - the only non-rare GW fixing in the pool",
+      "qty": 2
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Flash exile any nonland permanent",
+      "qty": 2,
+      "when_to_board": "vs artifact/enchantment decks and single-bomb decks"
+    },
+    {
+      "name": "Broken Wings",
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Destroy artifact, enchantment, or creature with flying",
+      "qty": 2,
+      "when_to_board": "vs the cube's 51-card evasion class and artifact/enchantment decks"
+    },
+    {
+      "name": "Leyline Binding",
+      "oracle_text": "Flash\nDomain — This spell costs {1} less to cast for each basic land type among lands you control.\nWhen this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{5}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Domain",
+        "Lands-Matter",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cost Reduction"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Domain",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Cost Reduction"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Flash exile any nonland permanent, {3}{W} at Domain 2",
+      "qty": 1,
+      "when_to_board": "vs decks whose single best permanent must be answered at instant speed"
+    },
+    {
+      "name": "Citizen's Arrest",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Unconditional exile of a creature or planeswalker",
+      "qty": 2,
+      "when_to_board": "vs single-large-threat and planeswalker decks"
+    },
+    {
+      "name": "Griffin Protector",
+      "oracle_text": "Flying\nWhenever another creature you control enters, this creature gets +1/+1 until end of turn.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Griffin",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "board": "sideboard",
+      "role": "Evasive body that grows on each ETB",
+      "qty": 2,
+      "when_to_board": "vs ground stalls where the swarm cannot attack profitably"
+    },
+    {
+      "name": "Serra Redeemer",
+      "oracle_text": "Flying\nWhenever another creature you control with power 2 or less enters, put two +1/+1 counters on that creature.",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Angel Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "4",
+      "board": "sideboard",
+      "role": "Two +1/+1 counters on every small creature that enters",
+      "qty": 1,
+      "when_to_board": "vs grindy decks where the game goes long enough to cast a five-drop"
+    }
+  ],
+  "pitch": "Green-white go-wide aggro built on the lowest curve the pool supports. Queen Allenal of Ruadach is the multiplier: her replacement effect adds a 1/1 white Soldier to every token event, so Captain's Call makes four bodies, Resolute Reinforcements and Argivian Cavalier make three each, and kicked Scout the Wilderness makes three. Two stacking anthems (King Darien XLVIII on all creatures, Valiant Veteran on Soldiers) plus a kicked Strength of the Coalition, which puts a permanent +1/+1 counter on every creature, turn that width into a board the opponent cannot block profitably. Average mana value is 2.30 with fourteen cards at two mana or less, so the board is assembled by turn four and the alpha strike lands on turn five or six.",
+  "strategy_es": "agro de fichas a lo ancho verde-blanco",
+  "identity_es": "Agro verde-blanco a lo ancho construido sobre la curva más baja que admite el pool. Queen Allenal of Ruadach es el multiplicador: su efecto de reemplazo añade un Soldado blanco 1/1 a cada evento de fichas, así que Captain's Call hace cuatro cuerpos, Resolute Reinforcements y Argivian Cavalier hacen tres cada una, y Scout the Wilderness kickeada hace tres. Dos anthems acumulables (King Darien XLVIII sobre todas las criaturas, Valiant Veteran sobre los Soldados) más una Strength of the Coalition kickeada, que pone un contador +1/+1 permanente en cada criatura, convierten esa anchura en un tablero que el rival no puede bloquear con provecho. El valor de maná medio es 2,30 con catorce cartas de dos manás o menos, así que el tablero se ensambla para el turno cuatro y el golpe alfa aterriza en el turno cinco o seis.",
+  "pitch_es": "Agro verde-blanco a lo ancho construido sobre la curva más baja que admite el pool. Queen Allenal of Ruadach es el multiplicador: su efecto de reemplazo añade un Soldado blanco 1/1 a cada evento de fichas, así que Captain's Call hace cuatro cuerpos, Resolute Reinforcements y Argivian Cavalier hacen tres cada una, y Scout the Wilderness kickeada hace tres. Dos anthems acumulables (King Darien XLVIII sobre todas las criaturas, Valiant Veteran sobre los Soldados) más una Strength of the Coalition kickeada, que pone un contador +1/+1 permanente en cada criatura, convierten esa anchura en un tablero que el rival no puede bloquear con provecho. El valor de maná medio es 2,30 con catorce cartas de dos manás o menos, así que el tablero se ensambla para el turno cuatro y el golpe alfa aterriza en el turno cinco o seis."
+}

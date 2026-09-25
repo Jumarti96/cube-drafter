@@ -1,0 +1,719 @@
+{
+  "deck_name": "gw-human-counters-equipment",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-26T20:10:15Z",
+  "format": "40-card",
+  "strategy": "midrange -- Humans counters + equipment (go-tall)",
+  "colors": "GW",
+  "identity": "A GW Humans go-tall build. Rather than flooding the board, it deploys three to five Human bodies and makes each of them enormous with PERMANENT +1/+1 counters -- Cathars' Crusade counters every creature each time any creature enters, Metallic Mimic pre-loads a counter onto every Human, Travel Preparations adds four counters across two castings, and training on Torens and its tokens grows them from combat itself. It then makes that oversized creature unanswerable in combat with Human-specific equipment (Butcher's Cleaver grants lifelink, Harvest Hand's Scrounged Scythe grants menace) and, crucially, with Odric, Lunarch Marshal, which copies any keyword one creature has onto the entire team -- so Twinblade Geist's double strike or Gisela's flying/first strike/lifelink becomes a team-wide property. The toolbox lens shows in Duskwatch Recruiter digging for the right body and six interaction slots covering whatever the matchup presents.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2,
+        "rare": 1,
+        "mythic": 1
+      },
+      "only_from": {},
+      "excluded": [],
+      "user_deck_constraint": "MAXIMUM 5 rares/mythics total across mainboard + sideboard"
+    },
+    "checklist": {
+      "commons_uncommons_max_2": "PASS -- Phase 5C check 3 against cube_search.get_max_copies with per_rarity {common:2, uncommon:2, rare:1, mythic:1}. Max copy count of any nonbasic is 2.",
+      "rares_mythics_max_1_each": "PASS -- all five appear once.",
+      "rares_mythics_max_5_total": "PASS -- exactly 5 across mainboard + sideboard: Cathars' Crusade, Torens Fist of the Angels, Metallic Mimic, Odric Lunarch Marshal, Gisela the Broken Blade. The sideboard is entirely commons and uncommons.",
+      "all_cards_from_cube": "PASS -- Phase 5C check 2, exact-name match against the working pool cache.",
+      "basics_unlimited": "Plains x10 and Forest x5 are exempt from the copy caps."
+    }
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 2,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.61,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.187,
+      "raw_target": 16.813,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.61,
+    "pip_demand": {
+      "W": 17,
+      "G": 7
+    },
+    "land_color_production": {
+      "W": 12,
+      "G": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 29.2,
+        "prod_pct": 41.2,
+        "gap": -12,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 70.8,
+        "prod_pct": 70.6,
+        "gap": 0.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Thraben Inspector",
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 2,
+      "role": "threat/infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Twinblade Geist // Twinblade Invocation",
+      "oracle_text": "Double strike\nDisturb {2}{W} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nEnchant creature\nEnchanted creature has double strike.\nIf Twinblade Invocation would be put into a graveyard from anywhere, exile it instead.",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Spirit Warrior",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Flashback/GY-Cast",
+        "Voltron/Equipment",
+        "Graveyard",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Aura Buff"
+      ],
+      "qty": 2,
+      "role": "payoff/keyword source",
+      "board": "mainboard"
+    },
+    {
+      "name": "Duskwatch Recruiter // Krallenhorde Howler",
+      "oracle_text": "{2}{G}: Look at the top three cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nCreature spells you cast cost {1} less to cast.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Warrior Werewolf",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Werewolf Matters",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cost Reduction"
+      ],
+      "qty": 2,
+      "role": "engine/toolbox tutor",
+      "board": "mainboard"
+    },
+    {
+      "name": "Metallic Mimic",
+      "oracle_text": "As this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nEach other creature you control of the chosen type enters with an additional +1/+1 counter on it.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact Creature — Shapeshifter",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Travel Preparations",
+      "oracle_text": "Put a +1/+1 counter on each of up to two target creatures.\nFlashback {1}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Flashback/GY-Cast",
+        "Payload/Payoff",
+        "Counter Placement",
+        "Flashback"
+      ],
+      "qty": 2,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Valorous Stance",
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Crusader of Odric",
+      "oracle_text": "Crusader of Odric's power and toughness are each equal to the number of creatures you control.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "*",
+      "toughness": "*",
+      "tags": [
+        "Tokens",
+        "Payload/Payoff"
+      ],
+      "qty": 2,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Torens, Fist of the Angels",
+      "oracle_text": "Training (Whenever this creature attacks with another creature with greater power, put a +1/+1 counter on this creature.)\nWhenever you cast a creature spell, create a 1/1 green and white Human Soldier creature token with training.",
+      "mana_cost": "{1}{G}{W}",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Cleric",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Counters (+1/+1)",
+        "Tokens",
+        "Training Matters",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "payoff/engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Fiend Hunter",
+      "oracle_text": "When this creature enters, you may exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Blink/ETB",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Butcher's Cleaver",
+      "oracle_text": "Equipped creature gets +3/+0.\nAs long as equipped creature is a Human, it has lifelink.\nEquip {3}",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact — Equipment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Tribal/Kindred",
+        "Lifegain",
+        "Payload/Payoff",
+        "Pump"
+      ],
+      "qty": 1,
+      "role": "payoff/equipment",
+      "board": "mainboard"
+    },
+    {
+      "name": "Harvest Hand // Scrounged Scythe",
+      "oracle_text": "When this creature dies, return it to the battlefield transformed under your control.\n//\nEquipped creature gets +1/+1.\nAs long as equipped creature is a Human, it has menace. (It can't be blocked except by two or more creatures.)\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact Creature — Scarecrow",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Graveyard",
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Pump"
+      ],
+      "qty": 1,
+      "role": "payoff/equipment",
+      "board": "mainboard"
+    },
+    {
+      "name": "Clear Shot",
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Angelic Purge",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Odric, Lunarch Marshal",
+      "oracle_text": "At the beginning of each combat, creatures you control gain first strike until end of turn if a creature you control has first strike. The same is true for flying, deathtouch, double strike, haste, hexproof, indestructible, lifelink, menace, reach, skulk, trample, and vigilance.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Keyword Matters",
+        "Payload/Payoff",
+        "Keyword Granting"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gisela, the Broken Blade",
+      "oracle_text": "Flying, first strike, lifelink\nAt the beginning of your end step, if you both own and control Gisela and a creature named Bruna, the Fading Light, exile them, then meld them into Brisela, Voice of Nightmares.",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Creature — Angel Horror",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Lifegain",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Meld"
+      ],
+      "qty": 1,
+      "role": "payoff/keyword source",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cathars' Crusade",
+      "oracle_text": "Whenever a creature you control enters, put a +1/+1 counter on each creature you control.",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Team Buff"
+      ],
+      "qty": 1,
+      "role": "payoff/engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 10,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 5,
+      "role": "land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Slayer of the Wicked",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs Vampire/Werewolf/Zombie decks: 51 of the cube's creatures carry one of those three types, and it arrives on a Human body that carries equipment"
+    },
+    {
+      "name": "Cathar Commando",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs the cube's 24 artifacts / 25 enchantments: '{1}, Sacrifice this creature: Destroy target artifact or enchantment', at flash speed"
+    },
+    {
+      "name": "Cobbled Wings",
+      "oracle_text": "Equipped creature has flying.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact — Equipment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Artifacts",
+        "Enabler/Fodder",
+        "Evasion Enabler"
+      ],
+      "qty": 1,
+      "role": "payoff/equipment",
+      "board": "sideboard",
+      "when_to_board": "vs ground stalls: 'Equipped creature has flying. Equip {1}' -- and with Odric out, flying spreads to the whole team"
+    },
+    {
+      "name": "Gryff's Boon",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +1/+0 and has flying.\n{3}{W}: Return this card from your graveyard to the battlefield attached to target creature. Activate only as a sorcery.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Graveyard",
+        "Payload/Payoff",
+        "Evasion Granting"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "sideboard",
+      "when_to_board": "vs ground stalls and removal-heavy decks: grants flying and returns from the graveyard for {3}{W}, so it survives its carrier dying"
+    },
+    {
+      "name": "Faith Unbroken",
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield.\nEnchanted creature gets +2/+2.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs a single dominant creature: exiles it for as long as the Aura remains, and gives +2/+2 to a counter-laden Human"
+    },
+    {
+      "name": "Bound by Moonsilver",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack, block, or transform.\nSacrifice another permanent: Attach this Aura to target creature. Activate only as a sorcery and only once each turn.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs a large blocker: 'Enchanted creature can't attack, block, or transform' -- also answers the cube's many transform creatures"
+    },
+    {
+      "name": "Soul-Guide Gryff",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "mana_cost": "{4}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs graveyard decks: at 75 cards / 27.1% density this is the single largest threat class in the cube, so it gets two copies -- 'exile up to one target card from a graveyard' on a flying body that also gives Odric a flying keyword to spread"
+    }
+  ],
+  "pitch": "A GW Humans go-tall build. Rather than flooding the board, it deploys three to five Human bodies and makes each of them enormous with PERMANENT +1/+1 counters -- Cathars' Crusade counters every creature each time any creature enters, Metallic Mimic pre-loads a counter onto every Human, Travel Preparations adds four counters across two castings, and training on Torens and its tokens grows them from combat itself. It then makes that oversized creature unanswerable in combat with Human-specific equipment (Butcher's Cleaver grants lifelink, Harvest Hand's Scrounged Scythe grants menace) and, crucially, with Odric, Lunarch Marshal, which copies any keyword one creature has onto the entire team -- so Twinblade Geist's double strike or Gisela's flying/first strike/lifelink becomes a team-wide property. The toolbox lens shows in Duskwatch Recruiter digging for the right body and six interaction slots covering whatever the matchup presents.",
+  "strategy_es": "midrange — Humanos con contadores + equipo (a lo alto)",
+  "identity_es": "Una construcción de Humanos GW que va a lo alto. En lugar de inundar el tablero, despliega de tres a cinco cuerpos Humanos y hace enorme a cada uno con contadores +1/+1 PERMANENTES: Cathars' Crusade pone un contador en cada criatura cada vez que entra cualquier criatura, Metallic Mimic precarga un contador en cada Humano, Travel Preparations añade cuatro contadores repartidos en dos lanzamientos, y el training de Torens y sus fichas los hace crecer desde el propio combate. Luego vuelve inabordable en combate a esa criatura descomunal con equipo específico de Humanos (Butcher's Cleaver otorga vínculo vital, la Scrounged Scythe de Harvest Hand otorga amenaza) y, sobre todo, con Odric, Lunarch Marshal, que copia cualquier palabra clave que tenga una criatura a todo el equipo: así el doble golpe de Twinblade Geist o el volar/dañar primero/vínculo vital de Gisela se vuelven una propiedad de todo el equipo. La lente de caja de herramientas se ve en Duskwatch Recruiter cavando a por el cuerpo adecuado y en seis huecos de interacción que cubren lo que sea que presente el emparejamiento.",
+  "pitch_es": "Una construcción de Humanos GW que va a lo alto. En lugar de inundar el tablero, despliega de tres a cinco cuerpos Humanos y hace enorme a cada uno con contadores +1/+1 PERMANENTES: Cathars' Crusade pone un contador en cada criatura cada vez que entra cualquier criatura, Metallic Mimic precarga un contador en cada Humano, Travel Preparations añade cuatro contadores repartidos en dos lanzamientos, y el training de Torens y sus fichas los hace crecer desde el propio combate. Luego vuelve inabordable en combate a esa criatura descomunal con equipo específico de Humanos (Butcher's Cleaver otorga vínculo vital, la Scrounged Scythe de Harvest Hand otorga amenaza) y, sobre todo, con Odric, Lunarch Marshal, que copia cualquier palabra clave que tenga una criatura a todo el equipo: así el doble golpe de Twinblade Geist o el volar/dañar primero/vínculo vital de Gisela se vuelven una propiedad de todo el equipo. La lente de caja de herramientas se ve en Duskwatch Recruiter cavando a por el cuerpo adecuado y en seis huecos de interacción que cubren lo que sea que presente el emparejamiento."
+}

@@ -1,0 +1,466 @@
+{
+  "deck_name": "bg-gitrog-selfmill",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-28T02:15:00Z",
+  "format": "40-card",
+  "strategy": "graveyard midrange (lands-matter self-mill)",
+  "colors": "BG",
+  "identity": "BG Gitrog self-mill. The Gitrog Monster converts every land that reaches the graveyard into a card - its own upkeep sacrifice, both Evolving Wilds, every land the mill turns up, and every land discarded to Noose Constrictor - while Groundskeeper rebuys the basics it eats so the loop keeps paying. The mill is not incidental: it is the same action that sizes the win condition, because Splinterfright, Ghoultree and Spider Spawning all read creature cards in the graveyard. The deck kills with a 10/10 Ghoultree cast for three or four mana, or with a Spider Spawning board, behind five pieces of unconditional removal.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "rare_mythic_cap": "5 across mainboard + sideboard",
+    "excluded": []
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.05,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.733,
+      "raw_target": 17.733,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.05,
+    "pip_demand": {
+      "G": 18,
+      "B": 6
+    },
+    "land_color_production": {
+      "G": 12,
+      "B": 6
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 25,
+        "prod_pct": 33.3,
+        "gap": -8.3,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 75,
+        "prod_pct": 66.7,
+        "gap": 8.3,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Splinterfright",
+      "qty": 2,
+      "role": "Graveyard-scaling beater + self-mill",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elemental",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Trample\nSplinterfright's power and toughness are each equal to the number of creature cards in your graveyard.\nAt the beginning of your upkeep, mill two cards. (Put the top two cards of your library into your graveyard.)"
+    },
+    {
+      "name": "Ghoultree",
+      "qty": 2,
+      "role": "Discounted finisher",
+      "board": "mainboard",
+      "cmc": 8,
+      "mana_cost": "{7}{G}",
+      "type_line": "Creature — Zombie Treefolk",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "This spell costs {1} less to cast for each creature card in your graveyard."
+    },
+    {
+      "name": "Spider Spawning",
+      "qty": 2,
+      "role": "Wide-board finisher, twice",
+      "board": "mainboard",
+      "cmc": 5,
+      "mana_cost": "{4}{G}",
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create a 1/2 green Spider creature token with reach for each creature card in your graveyard.\nFlashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+    },
+    {
+      "name": "The Gitrog Monster",
+      "qty": 1,
+      "role": "Pipeline payoff / card engine",
+      "board": "mainboard",
+      "cmc": 5,
+      "mana_cost": "{3}{B}{G}",
+      "type_line": "Legendary Creature — Frog Horror",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Deathtouch\nAt the beginning of your upkeep, sacrifice The Gitrog Monster unless you sacrifice a land.\nYou may play an additional land on each of your turns.\nWhenever one or more land cards are put into your graveyard from anywhere, draw a card."
+    },
+    {
+      "name": "Eccentric Farmer",
+      "qty": 2,
+      "role": "Self-mill + land recursion",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Human Peasant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, mill three cards, then you may return a land card from your graveyard to your hand. (To mill three cards, put the top three cards of your library into your graveyard.)"
+    },
+    {
+      "name": "Grapple with the Past",
+      "qty": 2,
+      "role": "Instant self-mill + rebuy",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Mill three cards, then you may return a creature or land card from your graveyard to your hand. (To mill three cards, put the top three cards of your library into your graveyard.)"
+    },
+    {
+      "name": "Groundskeeper",
+      "qty": 2,
+      "role": "Basic-land recursion engine",
+      "board": "mainboard",
+      "cmc": 1,
+      "mana_cost": "{G}",
+      "type_line": "Creature — Human Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "{1}{G}: Return target basic land card from your graveyard to your hand."
+    },
+    {
+      "name": "Hermit Druid",
+      "qty": 1,
+      "role": "Repeatable bulk self-mill",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Human Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "{G}, {T}: Reveal cards from the top of your library until you reveal a basic land card. Put that card into your hand and all other cards revealed this way into your graveyard."
+    },
+    {
+      "name": "Noose Constrictor",
+      "qty": 2,
+      "role": "Free discard outlet / reach body",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Snake",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Reach\nDiscard a card: This creature gets +1/+1 until end of turn."
+    },
+    {
+      "name": "Tireless Tracker",
+      "qty": 1,
+      "role": "Landfall card advantage",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Human Scout",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Landfall — Whenever a land you control enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on this creature."
+    },
+    {
+      "name": "Infernal Grasp",
+      "qty": 2,
+      "role": "Unconditional removal",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{B}",
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target creature. You lose 2 life."
+    },
+    {
+      "name": "Tragic Slip",
+      "qty": 2,
+      "role": "One-mana removal",
+      "board": "mainboard",
+      "cmc": 1,
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn."
+    },
+    {
+      "name": "Maelstrom Pulse",
+      "qty": 1,
+      "role": "Catch-all removal",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{1}{B}{G}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Destroy target nonland permanent and all other permanents with the same name as that permanent."
+    },
+    {
+      "name": "Evolving Wilds",
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard",
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle."
+    },
+    {
+      "name": "Haunted Mire",
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard",
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Land — Swamp Forest",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped."
+    },
+    {
+      "name": "Forest",
+      "qty": 10,
+      "role": "land",
+      "board": "mainboard",
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)"
+    },
+    {
+      "name": "Swamp",
+      "qty": 4,
+      "role": "land",
+      "board": "mainboard",
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Sever the Bloodline",
+      "qty": 2,
+      "role": "vs. recursion/tokens - exile, flashback",
+      "board": "sideboard",
+      "cmc": 4,
+      "mana_cost": "{3}{B}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Exile target creature and all other creatures with the same name as that creature.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+    },
+    {
+      "name": "Murderous Compulsion",
+      "qty": 2,
+      "role": "vs. aggro that must attack; madness live",
+      "board": "sideboard",
+      "cmc": 2,
+      "mana_cost": "{1}{B}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target tapped creature.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)"
+    },
+    {
+      "name": "Ambush Viper",
+      "qty": 2,
+      "role": "vs. fast starts - flash deathtouch",
+      "board": "sideboard",
+      "cmc": 2,
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Snake",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flash\nDeathtouch"
+    },
+    {
+      "name": "Clear Shot",
+      "qty": 2,
+      "role": "vs. fliers/large threats once scaled",
+      "board": "sideboard",
+      "cmc": 3,
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control."
+    },
+    {
+      "name": "Killing Wave",
+      "qty": 1,
+      "role": "vs. wide token boards",
+      "board": "sideboard",
+      "cmc": 1,
+      "mana_cost": "{X}{B}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "For each creature, its controller sacrifices it unless they pay X life."
+    },
+    {
+      "name": "The Meathook Massacre",
+      "qty": 1,
+      "role": "vs. Vampire/Zombie aggro - scalable sweeper",
+      "board": "sideboard",
+      "cmc": 2,
+      "mana_cost": "{X}{B}{B}",
+      "type_line": "Legendary Enchantment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "When The Meathook Massacre enters, each creature gets -X/-X until end of turn.\nWhenever a creature you control dies, each opponent loses 1 life.\nWhenever a creature an opponent controls dies, you gain 1 life."
+    }
+  ],
+  "pitch": "BG Gitrog self-mill. The Gitrog Monster converts every land that reaches the graveyard into a card - its own upkeep sacrifice, both Evolving Wilds, every land the mill turns up, and every land discarded to Noose Constrictor - while Groundskeeper rebuys the basics it eats so the loop keeps paying. The mill is not incidental: it is the same action that sizes the win condition, because Splinterfright, Ghoultree and Spider Spawning all read creature cards in the graveyard. The deck kills with a 10/10 Ghoultree cast for three or four mana, or with a Spider Spawning board, behind five pieces of unconditional removal.",
+  "strategy_es": "midrange de cementerio (automill con tierras importan)",
+  "identity_es": "Automill BG con Gitrog. The Gitrog Monster convierte cada tierra que llega al cementerio en una carta — su propio sacrificio de mantenimiento, ambas Evolving Wilds, cada tierra que saca la molienda y cada tierra descartada a Noose Constrictor — mientras Groundskeeper recompra las básicas que se come para que el bucle siga pagando. La molienda no es incidental: es la misma acción que dimensiona la condición de victoria, porque Splinterfright, Ghoultree y Spider Spawning leen todos las cartas de criatura en el cementerio. El mazo mata con un Ghoultree 10/10 lanzado por tres o cuatro manás, o con un tablero de Spider Spawning, por detrás de cinco piezas de eliminación incondicional.",
+  "pitch_es": "Automill BG con Gitrog. The Gitrog Monster convierte cada tierra que llega al cementerio en una carta — su propio sacrificio de mantenimiento, ambas Evolving Wilds, cada tierra que saca la molienda y cada tierra descartada a Noose Constrictor — mientras Groundskeeper recompra las básicas que se come para que el bucle siga pagando. La molienda no es incidental: es la misma acción que dimensiona la condición de victoria, porque Splinterfright, Ghoultree y Spider Spawning leen todos las cartas de criatura en el cementerio. El mazo mata con un Ghoultree 10/10 lanzado por tres o cuatro manás, o con un tablero de Spider Spawning, por detrás de cinco piezas de eliminación incondicional."
+}

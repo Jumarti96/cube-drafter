@@ -1,0 +1,629 @@
+{
+  "deck_name": "b-attrition-cruelty",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T00:00:00Z",
+  "format": "40-card",
+  "strategy": "control — The Cruelty of Gix reanimator",
+  "colors": "B",
+  "identity": "A mono-black attrition control deck. Seventeen Swamps mean zero fixing cost, zero tapped lands, zero life paid for mana and a 0.0pp colour gap in the audit, so every {B}{B} cost is castable the turn it comes up - which is what lets the deck run eight removal spells alongside a real engine. It trades one-for-one on curve while Braids Arisen Nightmare, Braids's Frightful Return, Gibbering Barricade and Bone Splinters convert its own spent bodies into cards and graveyard fuel. The graveyard then pays out three ways: Sheoldred's Restoration returns the best body, Braids's Frightful Return chapter II retrieves one to hand, and The Cruelty of Gix chapter III reads ANY graveyard - so the removal suite that answers the opponent's threats is simultaneously stocking the yard Cruelty steals from. Cult Conscript returns itself for {1}{B} off the same deaths. The clock is Sheoldred, the Apocalypse and Tyrannical Pitlord; Blight Pile x2 is a SUPPLEMENTARY drain, not the win condition - '{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control' is loss rather than damage and so is blocker-proof and unpreventable, but simulated on this list X averages 1.0 at turn 5 and 1.4 by turn 8, not the 4 that a full board of Defenders would give.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_user_constraint": "At most 5 rare-or-mythic cards total across mainboard + sideboard (rare LANDS count)."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.83,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.44,
+      "raw_target": 17.44,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.83,
+    "pip_demand": {
+      "B": 31
+    },
+    "land_color_production": {
+      "B": 17
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Cut Down",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bone Splinters",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 2,
+      "role": "Interaction/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Choking Miasma",
+      "mana_cost": "{1}{B}{B}",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nIf this spell was kicked, put a +1/+1 counter on a creature you control.\nAll creatures get -2/-2 until end of turn.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Extinguish the Light",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cult Conscript",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Creature — Skeleton Warrior",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "This creature enters tapped.\n{1}{B}: Return this card from your graveyard to the battlefield. Activate only if a non-Skeleton creature died under your control this turn.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Standalone Threat",
+        "Recursion"
+      ],
+      "qty": 2,
+      "role": "Threat/Recursion",
+      "board": "mainboard"
+    },
+    {
+      "name": "Blight Pile",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\n{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Life Drain",
+        "Payload/Payoff"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gibbering Barricade",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Creature — Nightmare Wall",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Defender\n{2}{B}, Sacrifice a creature: You gain 1 life and draw a card.",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Defender Matters",
+        "Lifegain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "qty": 2,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eerie Soultender",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Creature — Spirit Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, mill three cards. (Put the top three cards of your library into your graveyard.)\n{4}{B}, Exile this card from your graveyard: Return another target creature card from your graveyard to your hand.",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Reanimator",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Recursion"
+      ],
+      "qty": 2,
+      "role": "Engine/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sheoldred's Restoration",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {2}{W} (You may pay an additional {2}{W} as you cast this spell.)\nReturn target creature card from your graveyard to the battlefield. If this spell was kicked, you gain life equal to that card's mana value. Otherwise, you lose that much life.\nExile Sheoldred's Restoration.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Kicker/Scaling",
+        "Lifegain",
+        "Payload/Payoff",
+        "Reanimation",
+        "Kicker",
+        "Life: Cost"
+      ],
+      "qty": 2,
+      "role": "Engine/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Braids's Frightful Return",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Enchantment — Saga",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — You may sacrifice a creature. If you do, each opponent discards a card.\nII — Return target creature card from your graveyard to your hand.\nIII — Target opponent may sacrifice a nonland, nontoken permanent of their choice. If they don't, they lose 2 life and you draw a card.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Sagas",
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Reanimator",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Sacrifice Outlet",
+        "Discard",
+        "Recursion",
+        "Card Draw",
+        "Life Drain"
+      ],
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Braids, Arisen Nightmare",
+      "mana_cost": "{1}{B}{B}",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Nightmare",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "At the beginning of your end step, you may sacrifice an artifact, creature, enchantment, land, or planeswalker. If you do, each opponent may sacrifice a permanent of their choice that shares a card type with it. For each opponent who doesn't, that player loses 2 life and you draw a card.",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Sacrifice Outlet",
+        "Card Draw",
+        "Life Drain"
+      ],
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "The Cruelty of Gix",
+      "mana_cost": "{3}{B}{B}",
+      "cmc": 5,
+      "type_line": "Enchantment — Saga",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — Target opponent reveals their hand. You choose a creature or planeswalker card from it. That player discards that card.\nII — Search your library for a card, put that card into your hand, then shuffle. You lose 3 life.\nIII — Put target creature card from a graveyard onto the battlefield under your control.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Sagas",
+        "Reanimator",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Discard",
+        "Tutor",
+        "Reanimation",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Engine/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Lifegain",
+        "Life Drain",
+        "Standalone Threat",
+        "Payload/Payoff"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tyrannical Pitlord",
+      "mana_cost": "{4}{B}{B}",
+      "cmc": 6,
+      "type_line": "Creature — Demon",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying, trample\nAs this creature enters, choose another creature you control.\nThe chosen creature gets +3/+3 and has flying.\nWhen this creature leaves the battlefield, sacrifice the chosen creature.",
+      "power": "6",
+      "toughness": "6",
+      "tags": [
+        "Standalone Threat",
+        "Pump",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 17,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Karn's Sylex",
+      "mana_cost": "{3}",
+      "cmc": 3,
+      "type_line": "Legendary Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "mythic",
+      "oracle_text": "Karn's Sylex enters tapped.\nPlayers can't pay life to cast spells or to activate abilities that aren't mana abilities.\n{X}, {T}, Exile Karn's Sylex: Destroy each nonland permanent with mana value X or less. Activate only as a sorcery.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Tax Effect"
+      ],
+      "qty": 1,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "The ONLY card a mono-black deck in this cube can cast that answers an artifact or an enchantment: '{X}, {T}, Exile Karn's Sylex: Destroy each nonland permanent with mana value X or less.' Board in against the 15 artifacts and 18 enchantments; at X=3 it clears most of them while Sheoldred (MV 4) and Tyrannical Pitlord (MV 6) survive."
+    },
+    {
+      "name": "Knight of Dusk's Shadow",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nYour opponents can't gain life.\n{1}{B}: This creature gets +1/+1 until end of turn.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Lifegain Hate"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against the cube's 22 lifegain cards. 'Your opponents can't gain life' blanks Mossbeard Ancient's ETB, Silverback Elder's third mode and Prayer of Binding, on a 2/2 menace body with a pump ability so it is never a dead card."
+    },
+    {
+      "name": "Battlefly Swarm",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Creature — Phyrexian Insect",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\n{B}: This creature gains deathtouch until end of turn.",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against the cube's largest threat class - 51 evasion cards, 20.6% density. A one-mana 1/1 flier whose '{B}: This creature gains deathtouch until end of turn' lets it block and kill a flier of ANY size; it is also an unconditional turn-1 play, which this deck otherwise has only two of."
+    },
+    {
+      "name": "Tribute to Urborg",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nTarget creature gets -2/-2 until end of turn. If this spell was kicked, that creature gets an additional -1/-1 until end of turn for each instant and sorcery card in your graveyard.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Spellslinger",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Flex",
+      "board": "sideboard",
+      "when_to_board": "Against fast starts. 'Target creature gets -2/-2 until end of turn' at instant speed for two mana, cast with the {1}{U} kicker declined - the scaling half of the card is off-colour, which is why it is a sideboard card and not a maindeck one."
+    },
+    {
+      "name": "Splatter Goblin",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian Goblin",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature dies, target creature an opponent controls gets -1/-1 until end of turn.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against go-wide token decks (Tokens is the cube's 2nd-largest cluster at 38 cards). 'When this creature dies, target creature an opponent controls gets -1/-1 until end of turn' - a body that kills an x/1 on its way to the graveyard, where it then counts as a creature card for Sheoldred's Restoration."
+    },
+    {
+      "name": "Phyrexian Rager",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Creature — Phyrexian Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, you draw a card and you lose 1 life.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Self-Replacing",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Flex",
+      "board": "sideboard",
+      "when_to_board": "Against grindy decks - sacrifice fodder that replaces itself. 'When this creature enters, you draw a card and you lose 1 life', and it reaches the graveyard as a creature card for the reanimation package."
+    }
+  ],
+  "pitch": "A mono-black attrition control deck. Seventeen Swamps mean zero fixing cost, zero tapped lands, zero life paid for mana and a 0.0pp colour gap in the audit, so every {B}{B} cost is castable the turn it comes up - which is what lets the deck run eight removal spells alongside a real engine. It trades one-for-one on curve while Braids Arisen Nightmare, Braids's Frightful Return, Gibbering Barricade and Bone Splinters convert its own spent bodies into cards and graveyard fuel. The graveyard then pays out three ways: Sheoldred's Restoration returns the best body, Braids's Frightful Return chapter II retrieves one to hand, and The Cruelty of Gix chapter III reads ANY graveyard - so the removal suite that answers the opponent's threats is simultaneously stocking the yard Cruelty steals from. Cult Conscript returns itself for {1}{B} off the same deaths. The clock is Sheoldred, the Apocalypse and Tyrannical Pitlord; Blight Pile x2 is a SUPPLEMENTARY drain, not the win condition - '{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control' is loss rather than damage and so is blocker-proof and unpreventable, but simulated on this list X averages 1.0 at turn 5 and 1.4 by turn 8, not the 4 that a full board of Defenders would give.",
+  "strategy_es": "control — reanimador con The Cruelty of Gix",
+  "identity_es": "Un control de desgaste mono negro. Diecisiete Swamps significan cero coste de fijado, cero tierras giradas, cero vidas pagadas por maná y una brecha de color de 0,0 puntos porcentuales en la auditoría, así que cada coste de {B}{B} es lanzable el turno que toca, que es lo que permite al mazo jugar ocho hechizos de eliminación junto a un motor de verdad. Intercambia uno a uno en curva mientras Braids Arisen Nightmare, Braids's Frightful Return, Gibbering Barricade y Bone Splinters convierten sus propios cuerpos gastados en cartas y combustible de cementerio. El cementerio paga entonces de tres formas: Sheoldred's Restoration devuelve el mejor cuerpo, el capítulo II de Braids's Frightful Return recupera uno a la mano, y el capítulo III de The Cruelty of Gix lee CUALQUIER cementerio, así que el paquete de eliminación que responde a las amenazas del rival está a la vez abasteciendo el cementerio del que roba Cruelty. Cult Conscript se devuelve solo por {1}{B} con esas mismas muertes. El reloj es Sheoldred, the Apocalypse y Tyrannical Pitlord; Blight Pile x2 es un drenaje SUPLEMENTARIO, no la condición de victoria: '{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control' es pérdida y no daño, así que es a prueba de bloqueadores e imprevenible, pero simulado sobre esta lista X promedia 1,0 en el turno 5 y 1,4 para el turno 8, no el 4 que daría un tablero lleno de Defensores.",
+  "pitch_es": "Un control de desgaste mono negro. Diecisiete Swamps significan cero coste de fijado, cero tierras giradas, cero vidas pagadas por maná y una brecha de color de 0,0 puntos porcentuales en la auditoría, así que cada coste de {B}{B} es lanzable el turno que toca, que es lo que permite al mazo jugar ocho hechizos de eliminación junto a un motor de verdad. Intercambia uno a uno en curva mientras Braids Arisen Nightmare, Braids's Frightful Return, Gibbering Barricade y Bone Splinters convierten sus propios cuerpos gastados en cartas y combustible de cementerio. El cementerio paga entonces de tres formas: Sheoldred's Restoration devuelve el mejor cuerpo, el capítulo II de Braids's Frightful Return recupera uno a la mano, y el capítulo III de The Cruelty of Gix lee CUALQUIER cementerio, así que el paquete de eliminación que responde a las amenazas del rival está a la vez abasteciendo el cementerio del que roba Cruelty. Cult Conscript se devuelve solo por {1}{B} con esas mismas muertes. El reloj es Sheoldred, the Apocalypse y Tyrannical Pitlord; Blight Pile x2 es un drenaje SUPLEMENTARIO, no la condición de victoria: '{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control' es pérdida y no daño, así que es a prueba de bloqueadores e imprevenible, pero simulado sobre esta lista X promedia 1,0 en el turno 5 y 1,4 para el turno 8, no el 4 que daría un tablero lleno de Defensores."
+}

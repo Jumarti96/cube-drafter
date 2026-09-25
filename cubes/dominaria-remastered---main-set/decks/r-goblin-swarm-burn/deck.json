@@ -1,0 +1,646 @@
+{
+  "deck_name": "r-goblin-swarm-burn",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-30T00:21:59Z",
+  "format": "40-card",
+  "strategy": "mono-red Goblin go-wide aggro",
+  "colors": "R",
+  "identity": "Mono-red Goblin go-wide aggro. Flood the board with cheap Goblins and tokens (Skirk Prospector, Mogg War Marshal, Empty the Warrens, Siege-Gang Commander, Pashalik Mons), then convert that board into damage through sacrifice-to-face reach (Siege-Gang, Pashalik death-pings) and a mono-red burn suite (Chain Lightning, Fireblast, Solar Blast, Spark Spray) with Sulfuric Vortex as an inevitability clock. Goblin Matron tutors the shallow tribe's key pieces for consistency. Win by damage on turn 4-5.",
+  "restrictions": {
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "rares_mythics_max_each": 1,
+    "rares_mythics_max_total": 5
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 1,
+    "accel_count": 3,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.78,
+      "reference_avg_mv": 2.5,
+      "accel": 3,
+      "adjustment": -0.127,
+      "raw_target": 16.873,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.78,
+    "pip_demand": {
+      "R": 27
+    },
+    "land_color_production": {
+      "R": 17
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Skirk Prospector",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Creature — Goblin",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Sacrifice a Goblin: Add {R}.",
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Sacrifice Outlet",
+        "Mana Ramp"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "137",
+      "role": "Enabler/Fodder (free sac outlet, mana)"
+    },
+    {
+      "name": "Grim Lavamancer",
+      "qty": 1,
+      "cmc": 1,
+      "type_line": "Creature — Human Wizard",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "{R}, {T}, Exile two cards from your graveyard: This creature deals 2 damage to any target.",
+      "tags": [
+        "Graveyard",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Direct Damage"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "126",
+      "role": "Interaction/reach (repeatable burn)"
+    },
+    {
+      "name": "Mogg War Marshal",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Creature — Goblin Warrior",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Echo {1}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters or dies, create a 1/1 red Goblin creature token.",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Mana: Ongoing-Cost"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "131",
+      "role": "Enabler/Fodder (token generator)"
+    },
+    {
+      "name": "Goblin Matron",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Creature — Goblin",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, you may search your library for a Goblin card, reveal that card, put it into your hand, then shuffle.",
+      "tags": [
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Tutor",
+        "Cards: Self-Replacing"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "123",
+      "role": "Infrastructure/Consistency (tribal tutor)"
+    },
+    {
+      "name": "Subterranean Scout",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Creature — Goblin Scout",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, target creature with power 2 or less can't be blocked this turn.",
+      "tags": [
+        "Enabler/Fodder",
+        "Evasion Granting"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "143",
+      "role": "Enabler/Fodder (evasion enabler, Goblin body)"
+    },
+    {
+      "name": "Goblin Medics",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Creature — Goblin Shaman",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Whenever this creature becomes tapped, it deals 1 damage to any target.",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Direct Damage"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "124",
+      "role": "Threat/reach (Goblin body, ping)"
+    },
+    {
+      "name": "Suq'Ata Lancer",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Creature — Human Knight",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Haste\nFlanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)",
+      "tags": [
+        "Standalone Threat"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "145",
+      "role": "Threat (haste clock)"
+    },
+    {
+      "name": "Pashalik Mons",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Legendary Creature — Goblin Warrior",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever Pashalik Mons or another Goblin you control dies, Pashalik Mons deals 1 damage to any target.\n{3}{R}, Sacrifice a Goblin: Create two 1/1 red Goblin creature tokens.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Tokens",
+        "Goblins",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Token Generation",
+        "Sacrifice Outlet"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "133",
+      "role": "Payload/Payoff (death-to-damage)"
+    },
+    {
+      "name": "Gempalm Incinerator",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Creature — Goblin",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Cycling {1}{R} ({1}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have it deal X damage to target creature, where X is the number of Goblins on the battlefield.",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Direct Damage",
+        "Card Draw",
+        "Cycling",
+        "Cards: Self-Replacing"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "122",
+      "role": "Interaction (tribal-scaled removal, cantrip)"
+    },
+    {
+      "name": "Siege-Gang Commander",
+      "qty": 1,
+      "cmc": 5,
+      "type_line": "Creature — Goblin",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "When this creature enters, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: This creature deals 2 damage to any target.",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Sacrifice Outlet",
+        "Direct Damage"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "136",
+      "role": "Payload/Payoff (tokens + sac-to-face reach)"
+    },
+    {
+      "name": "Sulfuric Vortex",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "At the beginning of each player's upkeep, this enchantment deals 2 damage to that player.\nIf a player would gain life, that player gains no life instead.",
+      "tags": [
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Lifegain Prevention"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "144",
+      "role": "Payload/Payoff (clock + lifegain lock)"
+    },
+    {
+      "name": "Chain Lightning",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Chain Lightning deals 3 damage to any target. Then that player or that permanent's controller may pay {R}{R}. If the player does, they may copy this spell and may choose a new target for that copy.",
+      "tags": [
+        "Spellslinger",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Direct Damage"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "113",
+      "role": "Interaction/reach (burn)"
+    },
+    {
+      "name": "Spark Spray",
+      "qty": 1,
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Spark Spray deals 1 damage to any target.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+      "tags": [
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Direct Damage",
+        "Card Draw",
+        "Cycling"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "141",
+      "role": "Interaction (cheap removal + cycle)"
+    },
+    {
+      "name": "Solar Blast",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Solar Blast deals 3 damage to any target.\nCycling {1}{R}{R} ({1}{R}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have it deal 1 damage to any target.",
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Card Draw",
+        "Cycling"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "140",
+      "role": "Interaction/reach (burn + cycle)"
+    },
+    {
+      "name": "Fireblast",
+      "qty": 2,
+      "cmc": 6,
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "You may sacrifice two Mountains rather than pay this spell's mana cost.\nFireblast deals 4 damage to any target.",
+      "tags": [
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Board: Sacrifice-Cost"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "119",
+      "role": "Payload/Payoff (free reach finisher)"
+    },
+    {
+      "name": "Empty the Warrens",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Create two 1/1 red Goblin creature tokens.\nStorm (When you cast this spell, copy it for each spell cast before it this turn.)",
+      "tags": [
+        "Storm",
+        "Tokens",
+        "Tribal/Kindred",
+        "Goblins",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "118",
+      "role": "Enabler/Fodder (go-wide tokens)"
+    },
+    {
+      "name": "Mountain",
+      "qty": 17,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "tags": [],
+      "board": "mainboard",
+      "Set": "",
+      "Collector Number": "",
+      "role": "Land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "235",
+      "role": "GY hate",
+      "when_to_board": "vs reanimator / recursion (Dread Return, Body Snatcher, Necrosavant, Oversold Cemetery, Pyre Zombie) — free exile of their graveyard."
+    },
+    {
+      "name": "Slice and Dice",
+      "qty": 2,
+      "cmc": 6,
+      "type_line": "Sorcery",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Slice and Dice deals 4 damage to each creature.\nCycling {2}{R} ({2}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have it deal 1 damage to each creature.",
+      "tags": [
+        "Cycling Matters",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Cycling"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "138",
+      "role": "sweeper",
+      "when_to_board": "vs faster/wider aggro & token mirrors where we are the control; cycling {2}{R} gives a floor when it's dead."
+    },
+    {
+      "name": "Flametongue Kavu",
+      "qty": 2,
+      "cmc": 4,
+      "type_line": "Creature — Kavu",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, it deals 4 damage to target creature.",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "120",
+      "role": "removal on a body",
+      "when_to_board": "vs midrange/creature decks with key blockers or 4-toughness threats; trades up and leaves a 4/2."
+    },
+    {
+      "name": "Solar Blast",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Solar Blast deals 3 damage to any target.\nCycling {1}{R}{R} ({1}{R}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have it deal 1 damage to any target.",
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Card Draw",
+        "Cycling"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "140",
+      "role": "flexible burn",
+      "when_to_board": "vs creature decks & grind — extra reach/removal (main 1 + SB 1 = 2)."
+    },
+    {
+      "name": "Goblin Medics",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Creature — Goblin Shaman",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Whenever this creature becomes tapped, it deals 1 damage to any target.",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Direct Damage"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "124",
+      "role": "Goblin reach body",
+      "when_to_board": "vs grindy boards where repeatable pings matter (main 1 + SB 1 = 2)."
+    },
+    {
+      "name": "Damping Sphere",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "If a land is tapped for two or more mana, it produces {C} instead of any other type and amount.\nEach spell a player casts costs {1} more to cast for each other spell that player has cast this turn.",
+      "tags": [
+        "Stax/Taxing",
+        "Artifacts",
+        "Interaction/Disruption",
+        "Tax Effect"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "219",
+      "role": "tax / combo hate",
+      "when_to_board": "vs High Tide storm, big-mana ramp, and Cryptic Gateway — taxes multi-spell turns and shuts off 2+-mana lands."
+    },
+    {
+      "name": "Shivan Dragon",
+      "qty": 1,
+      "cmc": 6,
+      "type_line": "Creature — Dragon",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+      "tags": [
+        "Standalone Threat"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "135",
+      "role": "evasive finisher",
+      "when_to_board": "vs control / lifegain grind / ground stalls — a hard-to-block clock that closes when the go-wide plan stalls (rare: main 4 + SB 1 = 5 total)."
+    }
+  ],
+  "strategy_es": "agro de Goblins a lo ancho mono rojo",
+  "identity_es": "Agro de Goblins a lo ancho mono rojo. Inunda el tablero de Goblins y fichas baratas (Skirk Prospector, Mogg War Marshal, Empty the Warrens, Siege-Gang Commander, Pashalik Mons), y luego convierte ese tablero en daño mediante el alcance de sacrificar a la cara (Siege-Gang, los pinchazos por muerte de Pashalik) y un paquete de quemar mono rojo (Chain Lightning, Fireblast, Solar Blast, Spark Spray) con Sulfuric Vortex como reloj de inevitabilidad. Goblin Matron busca las piezas clave de una tribu poco profunda para dar consistencia. Gana por daño en el turno 4-5."
+}

@@ -1,0 +1,723 @@
+{
+  "deck_name": "bg-bloodline-bidding",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-10T00:00:00Z",
+  "format": "40-card",
+  "strategy": "combo",
+  "colors": "BG",
+  "identity": "A black-green Elf self-mill deck whose graveyard is its real hand. Fourteen of the twenty-three nonland cards cost two or less and all fifteen creatures are Elves that mill on the way down, so by turn five the graveyard holds six to ten Elf creature cards while the board holds three or four bodies. The graveyard then has two exits. Dose of Dawnglow reanimates a single card at instant speed for five mana — the cube's only uncapped single-target reanimation. Bloodline Bidding empties the yard in one action, and Convoke means it costs lands-plus-bodies rather than eight mana: the same Elves that filled the graveyard tap to pay for the spell that returns them. Gloom Ripper and Moon-Vigil Adherents turn either board into lethal.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "max_rare_mythic_total": 5
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.96,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.28,
+      "raw_target": 17.28,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.96,
+    "pip_demand": {
+      "B": 15,
+      "G": 11
+    },
+    "land_color_production": {
+      "B": 10,
+      "G": 7,
+      "U": 1,
+      "R": 1,
+      "W": 1
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 57.7,
+        "prod_pct": 58.8,
+        "gap": -1.1,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 42.3,
+        "prod_pct": 41.2,
+        "gap": 1.1,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Scarblade Scout",
+      "oracle_text": "Lifelink\nWhen this creature enters, mill two cards. (Put the top two cards of your library into your graveyard.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Elf Scout",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Lifegain",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Life Gain"
+      ],
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lys Alana Informant",
+      "oracle_text": "When this creature enters or dies, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Elf Scout",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lys Alana Dignitary",
+      "oracle_text": "As an additional cost to cast this spell, behold an Elf or pay {2}. (To behold an Elf, choose an Elf you control or reveal an Elf card from your hand.)\n{T}: Add {G}{G}. Activate only if there is an Elf card in your graveyard.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Elf Advisor",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Mana Ramp"
+      ],
+      "qty": 2,
+      "role": "Infrastructure/Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Creakwood Safewright",
+      "oracle_text": "This creature enters with three -1/-1 counters on it.\nAt the beginning of your end step, if there is an Elf card in your graveyard and this creature has a -1/-1 counter on it, remove a -1/-1 counter from this creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Elf Warrior",
+      "rarity": "uncommon",
+      "power": "5",
+      "toughness": "5",
+      "tags": [
+        "Tribal/Kindred",
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Enabler/Fodder",
+        "Counter Removal"
+      ],
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Midnight Tilling",
+      "oracle_text": "Mill four cards, then you may return a permanent card from among them to your hand. (To mill four cards, put the top four cards of your library into your graveyard.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Card Selection",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Moonglove Extractor",
+      "oracle_text": "Whenever this creature attacks, you draw a card and lose 1 life.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Elf Warlock",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Infrastructure/Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dose of Dawnglow",
+      "oracle_text": "Return target creature card from your graveyard to the battlefield. Then if it isn't your main phase, blight 2. (Put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 5,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Reanimation",
+        "Cards: Net-Positive"
+      ],
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lluwen, Imperfect Naturalist",
+      "oracle_text": "When Lluwen enters, mill four cards, then you may put a creature or land card from among the milled cards on top of your library.\n{2}{B/G}{B/G}{B/G}, {T}, Discard a land card: Create a 1/1 black and green Worm creature token for each land card in your graveyard.",
+      "mana_cost": "{B/G}{B/G}",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Legendary Creature — Elf Druid",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Self-Mill",
+        "Tokens",
+        "Lands-Matter",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Card Selection",
+        "Token Generation",
+        "Cards: Extra-Cost"
+      ],
+      "qty": 1,
+      "role": "Enabler/Fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Trystan, Callous Cultivator // Trystan, Penitent Culler",
+      "oracle_text": "Deathtouch\nWhenever this creature enters or transforms into Trystan, Callous Cultivator, mill three cards. Then if there is an Elf card in your graveyard, you gain 2 life.\nAt the beginning of your first main phase, you may pay {B}. If you do, transform Trystan.\n//\nDeathtouch\nWhenever this creature transforms into Trystan, Penitent Culler, mill three cards, then you may exile an Elf card from your graveyard. If you do, each opponent loses 2 life.\nAt the beginning of your first main phase, you may pay {G}. If you do, transform Trystan.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Elf Druid",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Tribal/Kindred",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Life Drain",
+        "Exile from Graveyard",
+        "Mana: Ongoing-Cost"
+      ],
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Twilight Diviner",
+      "oracle_text": "When this creature enters, surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)\nWhenever one or more other creatures you control enter, if they entered or were cast from a graveyard, create a token that's a copy of one of them. This ability triggers only once each turn.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Elf Cleric",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Self-Mill",
+        "Tokens",
+        "Blink/ETB",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Card Selection",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nameless Inversion",
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Moon-Vigil Adherents",
+      "oracle_text": "Trample\nThis creature gets +1/+1 for each creature you control and each creature card in your graveyard.",
+      "mana_cost": "{2}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Elf Druid",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "0",
+      "tags": [
+        "Graveyard",
+        "Tokens",
+        "Payload/Payoff",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gloom Ripper",
+      "oracle_text": "When this creature enters, target creature you control gets +X/+0 until end of turn and up to one target creature an opponent controls gets -0/-X until end of turn, where X is the number of Elves you control plus the number of Elf cards in your graveyard.",
+      "mana_cost": "{3}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Elf Assassin",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Tribal/Kindred",
+        "Graveyard",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bloodline Bidding",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nChoose a creature type. Return all creature cards of the chosen type from your graveyard to the battlefield.",
+      "mana_cost": "{6}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 8,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Reanimation",
+        "Cards: Net-Positive"
+      ],
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunted Mire",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eclipsed Realms",
+      "oracle_text": "As this land enters, choose Elemental, Elf, Faerie, Giant, Goblin, Kithkin, Merfolk, or Treefolk.\n{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a spell of the chosen type or activate an ability of a source of the chosen type.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 4,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Chomping Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, destroy up to one target artifact or enchantment.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard"
+    },
+    {
+      "name": "Unforgiving Aim",
+      "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard"
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard"
+    },
+    {
+      "name": "Requiting Hex",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nDestroy target creature with mana value 2 or less. If this spell's additional cost was paid, you gain 2 life.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard"
+    },
+    {
+      "name": "Dawn's Light Archer",
+      "oracle_text": "Flash\nReach",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Elf Archer",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "2",
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "A black-green Elf self-mill deck whose graveyard is its real hand. Fourteen of the twenty-three nonland cards cost two or less and all fifteen creatures are Elves that mill on the way down, so by turn five the graveyard holds six to ten Elf creature cards while the board holds three or four bodies. The graveyard then has two exits. Dose of Dawnglow reanimates a single card at instant speed for five mana — the cube's only uncapped single-target reanimation. Bloodline Bidding empties the yard in one action, and Convoke means it costs lands-plus-bodies rather than eight mana: the same Elves that filled the graveyard tap to pay for the spell that returns them. Gloom Ripper and Moon-Vigil Adherents turn either board into lethal.",
+  "strategy_es": "combo",
+  "identity_es": "Un automill de Elfos negro-verde cuyo cementerio es su mano de verdad. Catorce de las veintitrés cartas no-tierra cuestan dos o menos y las quince criaturas son Elfos que muelen de camino, así que para el turno cinco el cementerio guarda de seis a diez cartas de criatura Elfo mientras el tablero tiene tres o cuatro cuerpos. El cementerio tiene entonces dos salidas. Dose of Dawnglow reanima una sola carta a velocidad de instantáneo por cinco manás: la única reanimación de objetivo único sin límite del cubo. Bloodline Bidding vacía el cementerio en una sola acción, y el Convoke hace que cueste tierras más cuerpos en lugar de ocho manás: los mismos Elfos que llenaron el cementerio se giran para pagar el hechizo que los devuelve. Gloom Ripper y Moon-Vigil Adherents convierten cualquiera de los dos tableros en letal.",
+  "pitch_es": "Un automill de Elfos negro-verde cuyo cementerio es su mano de verdad. Catorce de las veintitrés cartas no-tierra cuestan dos o menos y las quince criaturas son Elfos que muelen de camino, así que para el turno cinco el cementerio guarda de seis a diez cartas de criatura Elfo mientras el tablero tiene tres o cuatro cuerpos. El cementerio tiene entonces dos salidas. Dose of Dawnglow reanima una sola carta a velocidad de instantáneo por cinco manás: la única reanimación de objetivo único sin límite del cubo. Bloodline Bidding vacía el cementerio en una sola acción, y el Convoke hace que cueste tierras más cuerpos en lugar de ocho manás: los mismos Elfos que llenaron el cementerio se giran para pagar el hechizo que los devuelve. Gloom Ripper y Moon-Vigil Adherents convierten cualquiera de los dos tableros en letal."
+}

@@ -1,0 +1,1124 @@
+{
+  "deck_name": "rg-raiding-schemes-conspire",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-10T21:00:08Z",
+  "format": "40-card",
+  "strategy": "tempo",
+  "colors": "RG",
+  "identity": "RG Raiding Schemes — Treasure-accelerated conspire tempo. Five Treasure makers and two Foraging Wickermaws power out Raiding Schemes around turn 4; from that point every coloured noncreature spell reads 'tap two untapped creatures you control that share a color with it, copy it'. Tweeze becomes 6 damage that can all go to a player, Burning Curiosity becomes four to six cards, Feed the Flames becomes two exiles. The deck is built around the fact that conspire's real cost is BODIES, not mana: Elder Auntie and Sourbread Auntie make two and three red bodies per card, so 14 creature cards field up to 20 blockers-or-conspirers. Spinerock Tyrant is the second copy engine that costs no bodies at all, copying any single-target spell for free. It is functionally a mono-red tempo deck that pays a single green pip for its payoff.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_build_constraint": "at most 5 rare+mythic total across mainboard + sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 7,
+    "cantrip_count": 0,
+    "accel_count": 7,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.17,
+      "reference_avg_mv": 2.5,
+      "accel": 7,
+      "adjustment": -0.273,
+      "raw_target": 16.727,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 3.17,
+    "pip_demand": {
+      "R": 19,
+      "G": 2
+    },
+    "land_color_production": {
+      "R": 14,
+      "G": 3
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 9.5,
+        "prod_pct": 17.6,
+        "gap": -8.1,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 90.5,
+        "prod_pct": 82.4,
+        "gap": 8.1,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Raiding Schemes",
+      "oracle_text": "Each noncreature spell you cast has conspire. (As you cast a noncreature spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it and you may choose new targets for the copy. A copy of a permanent spell becomes a token.)",
+      "mana_cost": "{3}{R}{G}",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Copy Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Spellslinger"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Copy Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine/Payoff — grants conspire to every noncreature spell",
+      "set": "ecl",
+      "collector_number": "239"
+    },
+    {
+      "name": "Noggle Robber",
+      "oracle_text": "When this creature enters or dies, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{1}{R/G}{R/G}",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Blink/ETB",
+        "Artifacts",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Mana Ramp"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Blink/ETB",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Mana Ramp"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Noggle Rogue",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine/Infra — Treasure on ETB and on death; hybrid R/G conspire fodder",
+      "set": "ecl",
+      "collector_number": "237"
+    },
+    {
+      "name": "Scuzzback Scrounger",
+      "oracle_text": "At the beginning of your first main phase, you may blight 1. If you do, create a Treasure token. (To blight 1, put a -1/-1 counter on a creature you control. A Treasure token is an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Treasure Generation",
+        "Mana Ramp"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Artifacts",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Treasure Generation",
+          "Mana Ramp"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Goblin Warrior",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine/Infra — a Treasure every turn",
+      "set": "ecl",
+      "collector_number": "153"
+    },
+    {
+      "name": "Foraging Wickermaw",
+      "oracle_text": "When this creature enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\n{1}: Add one mana of any color. This creature becomes that color until end of turn. Activate only once each turn.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Mana Ramp"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Self-Mill"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Self-Mill",
+          "Mana Ramp"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact Creature — Scarecrow",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine/Infra — untapped any-colour fixer, repeatable mana sink, and on-demand GREEN conspire fodder",
+      "set": "ecl",
+      "collector_number": "256"
+    },
+    {
+      "name": "Burning Curiosity",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nExile the top two cards of your library. If this spell's additional cost was paid, exile the top three cards instead. Until the end of your next turn, you may play those cards.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Infrastructure/Consistency",
+        "Card Advantage",
+        "Impulse Draw",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Advantage",
+          "Impulse Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine/Infra — the deck's only net card advantage; conspired it is 4-6 cards",
+      "set": "ecl",
+      "collector_number": "129"
+    },
+    {
+      "name": "Elder Auntie",
+      "oracle_text": "When this creature enters, create a 1/1 black and red Goblin creature token.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Goblin Warlock",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat — two red bodies per card (conspire fodder)",
+      "set": "ecl",
+      "collector_number": "133"
+    },
+    {
+      "name": "Sourbread Auntie",
+      "oracle_text": "When this creature enters, you may blight 2. If you do, create two 1/1 black and red Goblin creature tokens. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{2}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Tokens",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Counters (+1/+1)",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Goblin Warrior",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat — up to three red bodies per card",
+      "set": "ecl",
+      "collector_number": "158"
+    },
+    {
+      "name": "Flamekin Gildweaver",
+      "oracle_text": "Trample\nWhen this creature enters, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Kicker/Scaling",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Mana Ramp"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Mana Ramp"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat — 4/3 trample + Treasure on ETB",
+      "set": "ecl",
+      "collector_number": "140"
+    },
+    {
+      "name": "Gangly Stompling",
+      "oracle_text": "Changeling (This card is every creature type.)\nTrample",
+      "mana_cost": "{2}{R/G}",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat — 4/2 trample; hybrid R/G conspires either colour",
+      "set": "ecl",
+      "collector_number": "226"
+    },
+    {
+      "name": "Spinerock Tyrant",
+      "oracle_text": "Flying\nWither (This deals damage to creatures in the form of -1/-1 counters.)\nWhenever you cast an instant or sorcery spell with a single target, you may copy it. If you do, those spells gain wither. You may choose new targets for the copy.",
+      "mana_cost": "{3}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Spell Copy"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Spell Copy"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Dragon",
+      "rarity": "mythic",
+      "power": "6",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat — 6/6 flier; copies single-target spells WITHOUT tapping creatures",
+      "set": "ecl",
+      "collector_number": "159"
+    },
+    {
+      "name": "Sear",
+      "oracle_text": "Sear deals 4 damage to target creature or planeswalker.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — removal",
+      "set": "ecl",
+      "collector_number": "154"
+    },
+    {
+      "name": "Boulder Dash",
+      "oracle_text": "Boulder Dash deals 2 damage to any target and 1 damage to any other target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — 2 to any target + 1 to any other; the deck's reach",
+      "set": "ecl",
+      "collector_number": "127"
+    },
+    {
+      "name": "Tweeze",
+      "oracle_text": "Tweeze deals 3 damage to any target. You may discard a card. If you do, draw a card.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Looting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Looting"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — 3 to any target + loot; the only spell whose full doubled damage can hit a player",
+      "set": "ecl",
+      "collector_number": "162"
+    },
+    {
+      "name": "Feed the Flames",
+      "oracle_text": "Feed the Flames deals 5 damage to target creature. If that creature would die this turn, exile it instead.",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — 5 damage + exile; the only maindeck answer to toughness-5 threats",
+      "set": "ecl",
+      "collector_number": "137"
+    },
+    {
+      "name": "Unforgiving Aim",
+      "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — the only maindeck answer to flyers and enchantments",
+      "set": "ecl",
+      "collector_number": "200"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 12,
+      "role": "Land",
+      "set": "",
+      "collector_number": ""
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land",
+      "set": "",
+      "collector_number": ""
+    },
+    {
+      "name": "Wooded Ridgeline",
+      "oracle_text": "({T}: Add {R} or {G}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Mountain Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — RG dual",
+      "set": "dmu",
+      "collector_number": "260"
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Fetch",
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — fixing",
+      "set": "ecl",
+      "collector_number": "264"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Cinder Strike",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nCinder Strike deals 2 damage to target creature. It deals 4 damage to that creature instead if this spell's additional cost was paid.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "1-mana removal",
+      "set": "ecl",
+      "collector_number": "131",
+      "when_to_board": "vs. cheap-creature aggro, where a conspired Cinder Strike is two kills for one mana"
+    },
+    {
+      "name": "Giantfall",
+      "oracle_text": "Choose one —\n• Target creature you control deals damage equal to its power to target creature an opponent controls.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Artifact removal / fight",
+      "set": "ecl",
+      "collector_number": "141",
+      "when_to_board": "vs. the cube's 11 artifacts; the fight mode is live off 4-power Gangly Stompling and Flamekin Gildweaver"
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Graveyard hate + flying blocker",
+      "set": "ecl",
+      "collector_number": "2",
+      "when_to_board": "vs. graveyard decks (39 GY cards / 15% cube density) and vs. flyers"
+    },
+    {
+      "name": "Chomping Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, destroy up to one target artifact or enchantment.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Artifact/enchantment answer on a body; also a green conspire body",
+      "set": "ecl",
+      "collector_number": "172",
+      "when_to_board": "vs. enchantment builds (21 in the cube) and equipment/aura decks"
+    },
+    {
+      "name": "Feed the Flames",
+      "oracle_text": "Feed the Flames deals 5 damage to target creature. If that creature would die this turn, exile it instead.",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Second copy of the big removal",
+      "set": "ecl",
+      "collector_number": "137",
+      "when_to_board": "vs. decks with multiple toughness-5+ threats"
+    },
+    {
+      "name": "Unforgiving Aim",
+      "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Second modal answer",
+      "set": "ecl",
+      "collector_number": "200",
+      "when_to_board": "vs. the cube's 41 evasive cards, or enchantment builds"
+    }
+  ],
+  "pitch": "RG Raiding Schemes — Treasure-accelerated conspire tempo. Five Treasure makers and two Foraging Wickermaws power out Raiding Schemes around turn 4; from that point every coloured noncreature spell reads 'tap two untapped creatures you control that share a color with it, copy it'. Tweeze becomes 6 damage that can all go to a player, Burning Curiosity becomes four to six cards, Feed the Flames becomes two exiles. The deck is built around the fact that conspire's real cost is BODIES, not mana: Elder Auntie and Sourbread Auntie make two and three red bodies per card, so 14 creature cards field up to 20 blockers-or-conspirers. Spinerock Tyrant is the second copy engine that costs no bodies at all, copying any single-target spell for free. It is functionally a mono-red tempo deck that pays a single green pip for its payoff.",
+  "strategy_es": "tempo",
+  "identity_es": "Raiding Schemes RG — tempo de conspire acelerado con Tesoros. Cinco creadores de Tesoros y dos Foraging Wickermaw despliegan Raiding Schemes hacia el turno 4; desde ese punto cada hechizo coloreado que no sea criatura dice 'gira dos criaturas desgiradas que controles que compartan un color con él, cópialo'. Tweeze se vuelve 6 de daño que pueden ir todos a un jugador, Burning Curiosity se vuelve de cuatro a seis cartas, Feed the Flames se vuelve dos exilios. El mazo está construido alrededor del hecho de que el coste real del conspire son CUERPOS, no maná: Elder Auntie y Sourbread Auntie crean dos y tres cuerpos rojos por carta, así que 14 cartas de criatura despliegan hasta 20 bloqueadores o conspiradores. Spinerock Tyrant es el segundo motor de copia que no cuesta cuerpos en absoluto, copiando gratis cualquier hechizo de objetivo único. Funcionalmente es un mazo de tempo mono rojo que paga un único símbolo verde por su recompensa.",
+  "pitch_es": "Raiding Schemes RG — tempo de conspire acelerado con Tesoros. Cinco creadores de Tesoros y dos Foraging Wickermaw despliegan Raiding Schemes hacia el turno 4; desde ese punto cada hechizo coloreado que no sea criatura dice 'gira dos criaturas desgiradas que controles que compartan un color con él, cópialo'. Tweeze se vuelve 6 de daño que pueden ir todos a un jugador, Burning Curiosity se vuelve de cuatro a seis cartas, Feed the Flames se vuelve dos exilios. El mazo está construido alrededor del hecho de que el coste real del conspire son CUERPOS, no maná: Elder Auntie y Sourbread Auntie crean dos y tres cuerpos rojos por carta, así que 14 cartas de criatura despliegan hasta 20 bloqueadores o conspiradores. Spinerock Tyrant es el segundo motor de copia que no cuesta cuerpos en absoluto, copiando gratis cualquier hechizo de objetivo único. Funcionalmente es un mazo de tempo mono rojo que paga un único símbolo verde por su recompensa."
+}

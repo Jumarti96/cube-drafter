@@ -1,0 +1,1035 @@
+{
+  "deck_name": "gu-ghoultree-emerge-ramp",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-27T00:00:00Z",
+  "format": "40-card",
+  "strategy": "G/U Ghoultree Emerge Ramp",
+  "colors": "GU",
+  "identity": "A self-mill deck whose graveyard is a discount coupon. Ten mill sources fill the yard with creature cards, which does two things at once: it shrinks Ghoultree from {7}{G} toward {1}{G}, and it grows Splinterfright. Ghoultree's mana value stays 8 no matter how cheaply it was cast, so sacrificing it to Decimator of the Provinces' emerge cost erases the entire {6} generic and leaves only {G}{G}{G}. Decimator arrives with haste and hands the whole board +2/+2 and trample, turning a pile of milled-out value creatures into a lethal attack from a board state that looked harmless a moment earlier.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_build_constraint": "At most 5 rare/mythic cards total across mainboard + sideboard; basic lands unlimited and exempt"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 19,
+    "land_count_status": "PASS",
+    "ramp_count": 3,
+    "cantrip_count": 0,
+    "accel_count": 3,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 4.55,
+      "reference_avg_mv": 2.5,
+      "accel": 3,
+      "adjustment": 2.233,
+      "raw_target": 19.233,
+      "clamped": false,
+      "recommended_land_count": 19,
+      "p_window_at_recommended": 0.7742
+    },
+    "avg_cmc": 4.55,
+    "pip_demand": {
+      "G": 13,
+      "U": 5
+    },
+    "land_color_production": {
+      "G": 14,
+      "U": 6
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 72.2,
+        "prod_pct": 77.8,
+        "gap": -5.6,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 27.8,
+        "prod_pct": 33.3,
+        "gap": -5.5,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Decimator of the Provinces",
+      "oracle_text": "Emerge {6}{G}{G}{G} (You may cast this spell by sacrificing a creature and paying the emerge cost reduced by that creature's mana value.)\nWhen you cast this spell, creatures you control get +2/+2 and gain trample until end of turn.\nTrample, haste",
+      "mana_cost": "{10}",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Payload/Payoff",
+        "Standalone Threat",
+        "Pump",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Pump"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 10,
+      "type_line": "Creature — Eldrazi Boar",
+      "rarity": "rare",
+      "power": "7",
+      "toughness": "7",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Primary payoff — alpha strike"
+    },
+    {
+      "name": "It of the Horrid Swarm",
+      "oracle_text": "Emerge {6}{G} (You may cast this spell by sacrificing a creature and paying the emerge cost reduced by that creature's mana value.)\nWhen you cast this spell, create two 1/1 green Insect creature tokens.",
+      "mana_cost": "{8}",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 8,
+      "type_line": "Creature — Eldrazi Insect",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Emerge payoff — rebuilds the board it ate"
+    },
+    {
+      "name": "Wretched Gryff",
+      "oracle_text": "Emerge {5}{U} (You may cast this spell by sacrificing a creature and paying the emerge cost reduced by that creature's mana value.)\nWhen you cast this spell, draw a card.\nFlying",
+      "mana_cost": "{7}",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Board: Sacrifice-Cost",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost",
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 7,
+      "type_line": "Creature — Eldrazi Hippogriff",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Emerge payoff — cheapest sink, replaces itself"
+    },
+    {
+      "name": "Ghoultree",
+      "oracle_text": "This spell costs {1} less to cast for each creature card in your graveyard.",
+      "mana_cost": "{7}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Cost Reduction"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Self-Mill",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Cost Reduction"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 8,
+      "type_line": "Creature — Zombie Treefolk",
+      "rarity": "uncommon",
+      "power": "10",
+      "toughness": "10",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — mana-value-8 emerge fodder cast for 2-4"
+    },
+    {
+      "name": "Moldgraf Millipede",
+      "oracle_text": "When this creature enters, mill three cards, then put a +1/+1 counter on this creature for each creature card in your graveyard. (To mill three cards, put the top three cards of your library into your graveyard.)",
+      "mana_cost": "{4}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Counters (+1/+1)",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Self-Mill",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Insect Horror",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — mana-value-5 fodder that mills 3 on entry"
+    },
+    {
+      "name": "Splinterfright",
+      "oracle_text": "Trample\nSplinterfright's power and toughness are each equal to the number of creature cards in your graveyard.\nAt the beginning of your upkeep, mill two cards. (Put the top two cards of your library into your graveyard.)",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Self-Buff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Self-Mill"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Self-Mill",
+          "Self-Buff"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Elemental",
+      "rarity": "uncommon",
+      "power": "*",
+      "toughness": "*",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — upkeep self-mill / graveyard-scaled threat"
+    },
+    {
+      "name": "Grizzled Angler // Grisly Anglerfish",
+      "oracle_text": "{T}: Mill two cards. Then if there is a colorless creature card in your graveyard, transform this creature. (To mill two cards, put the top two cards of your library into your graveyard.)\n//\n{6}: Creatures your opponents control attack this turn if able.",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Engine/Outlet",
+        "Interaction/Disruption"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Self-Mill",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — self-mill that converts into a body"
+    },
+    {
+      "name": "Grapple with the Past",
+      "oracle_text": "Mill three cards, then you may return a creature or land card from your graveyard to your hand. (To mill three cards, put the top three cards of your library into your graveyard.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Reanimator",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Self-Mill",
+          "Reanimator"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Self-Mill",
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — mill 3 and rebuy Ghoultree"
+    },
+    {
+      "name": "Forbidden Alchemy",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest into your graveyard.\nFlashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Flashback/GY-Cast",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Card Selection",
+        "Flashback",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Self-Mill",
+          "Flashback/GY-Cast"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Self-Mill",
+          "Flashback"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine — instant-speed mill 3 that selects the payoff"
+    },
+    {
+      "name": "Deranged Assistant",
+      "oracle_text": "{T}, Mill a card: Add {C}. (To mill a card, put the top card of your library into your graveyard.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Mana Dork"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Self-Mill",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Mana Dork",
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Wizard",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine — self-mill + generic ramp"
+    },
+    {
+      "name": "Somberwald Sage",
+      "oracle_text": "{T}: Add three mana of any one color. Spend this mana only to cast creature spells.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Mana Dork",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Mana Dork",
+          "Mana Ramp"
+        ],
+        "resource_exchange": [
+          "Mana: Net-Positive"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Druid",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Ramp — three mana of one colour for creature spells"
+    },
+    {
+      "name": "Eldritch Evolution",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a creature card with mana value X or less, where X is 2 plus the sacrificed creature's mana value. Put that card onto the battlefield, then shuffle. Exile Eldritch Evolution.",
+      "mana_cost": "{1}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Tutor",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Tutor"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Tutor — converts a body into a payoff on the battlefield"
+    },
+    {
+      "name": "Clear Shot",
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — removal via a large creature"
+    },
+    {
+      "name": "Syncopate",
+      "oracle_text": "Counter target spell unless its controller pays {X}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+      "mana_cost": "{X}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — stack answer"
+    },
+    {
+      "name": "Tangled Islet",
+      "oracle_text": "({T}: Add {G} or {U}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Forest Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — GU dual, enters tapped"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 12,
+      "role": "Land"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 4,
+      "role": "Land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Compelling Deterrence",
+      "oracle_text": "Return target nonland permanent to its owner's hand. Then that player discards a card if you control a Zombie.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Bounce",
+        "Discard"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Discard"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Bounce",
+      "when_to_board": "vs artifacts and enchantments — 'Return target nonland permanent to its owner's hand' is the ONLY interaction these colours have with a class that is 49 of 277 cube cards (17.7%); the Zombie discard rider is live off Ghoultree, a Zombie Treefolk"
+    },
+    {
+      "name": "Ambush Viper",
+      "oracle_text": "Flash\nDeathtouch",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Snake",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Removal-by-trade",
+      "when_to_board": "vs creature decks — flash deathtouch at two mana trades with anything, and the body is still emerge fodder afterwards"
+    },
+    {
+      "name": "Imprisoned in the Moon",
+      "oracle_text": "Enchant creature, land, or planeswalker\nEnchanted permanent is a colorless land with \"{T}: Add {C}\" and loses all other card types and abilities.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Catch-all answer",
+      "when_to_board": "vs planeswalkers, indestructible or recursive creatures, and utility lands — it strips all abilities rather than destroying"
+    },
+    {
+      "name": "Geistcatcher's Rig",
+      "oracle_text": "When this creature enters, you may have it deal 4 damage to target creature with flying.",
+      "mana_cost": "{6}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "5",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Anti-flier / mana-value-6 fodder",
+      "when_to_board": "vs the cube's 58-card evasion class — 4 damage to a flier on entry, and at mana value 6 it pays an entire emerge generic cost by itself"
+    },
+    {
+      "name": "Clear Shot",
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Removal",
+      "when_to_board": "vs creature decks — second copy; a resolved Ghoultree turns it into unconditional removal"
+    },
+    {
+      "name": "Syncopate",
+      "oracle_text": "Counter target spell unless its controller pays {X}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+      "mana_cost": "{X}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Counterspell",
+      "when_to_board": "vs combo and control — second copy, and the exile clause matters against the 27%-density graveyard field"
+    },
+    {
+      "name": "Cryptolith Rite",
+      "oracle_text": "Creatures you control have \"{T}: Add one mana of any color.\"",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tokens",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Mana Ramp"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Ramp engine",
+      "when_to_board": "vs slow or controlling decks that let the game go long — it turns 16 creature cards into any-colour mana, which fixes {G}{G}{G} and enables hardcasting an {8} It of the Horrid Swarm when no fodder is available"
+    }
+  ],
+  "pitch": "A self-mill deck whose graveyard is a discount coupon. Ten mill sources fill the yard with creature cards, which does two things at once: it shrinks Ghoultree from {7}{G} toward {1}{G}, and it grows Splinterfright. Ghoultree's mana value stays 8 no matter how cheaply it was cast, so sacrificing it to Decimator of the Provinces' emerge cost erases the entire {6} generic and leaves only {G}{G}{G}. Decimator arrives with haste and hands the whole board +2/+2 and trample, turning a pile of milled-out value creatures into a lethal attack from a board state that looked harmless a moment earlier.",
+  "strategy_es": "Aceleración Emerge con Ghoultree G/U",
+  "identity_es": "Un mazo de automill cuyo cementerio es un cupón de descuento. Diez fuentes de molienda llenan el cementerio de cartas de criatura, lo que hace dos cosas a la vez: encoge a Ghoultree desde {7}{G} hacia {1}{G}, y hace crecer a Splinterfright. El valor de maná de Ghoultree sigue siendo 8 por muy barato que se haya lanzado, así que sacrificarlo al coste de emerge de Decimator of the Provinces borra los {6} genéricos enteros y deja solo {G}{G}{G}. Decimator llega con prisa y da a todo el tablero +2/+2 y arrollar, convirtiendo un montón de criaturas de valor molidas en un ataque letal desde un estado de tablero que un momento antes parecía inofensivo.",
+  "pitch_es": "Un mazo de automill cuyo cementerio es un cupón de descuento. Diez fuentes de molienda llenan el cementerio de cartas de criatura, lo que hace dos cosas a la vez: encoge a Ghoultree desde {7}{G} hacia {1}{G}, y hace crecer a Splinterfright. El valor de maná de Ghoultree sigue siendo 8 por muy barato que se haya lanzado, así que sacrificarlo al coste de emerge de Decimator of the Provinces borra los {6} genéricos enteros y deja solo {G}{G}{G}. Decimator llega con prisa y da a todo el tablero +2/+2 y arrollar, convirtiendo un montón de criaturas de valor molidas en un ataque letal desde un estado de tablero que un momento antes parecía inofensivo."
+}

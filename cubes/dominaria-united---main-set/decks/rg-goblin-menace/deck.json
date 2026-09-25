@@ -1,0 +1,695 @@
+{
+  "deck_name": "rg-goblin-menace",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-18T23:12:20Z",
+  "format": "40-card",
+  "strategy": "Gruul Goblin menace/kicker aggro",
+  "colors": "RG",
+  "identity": "A Gruul aggro deck that plays every Goblin the colour pair can reach - eight cards, tied for the most of any build in this cube - and wins by making them unblockable rather than numerous. Rulik Mons, Warren Chief is a menace body that Rundvelt Hordemaster turns into a 4/4 and that manufactures either a land or a lorded Goblin token on every attack. Around them sit the pool's kicker cards, all four of which are live here and only here: Sprouting Goblin fetches a basic, Yavimaya Iconoclast comes down as a 4/3 with haste and trample, Viashino Branchrider arrives with two counters, and Colossal Growth is a three-mana +4/+4 trample-and-haste finisher. Green also buys the one thing the other two builds cannot have at any price - Broken Wings, the cube's only enchantment answer a Goblin deck can cast.",
+  "restrictions": {
+    "base": "cube_mainboard, dominaria-united---main-set",
+    "commons_uncommons_max_2": "PASS - no name exceeds 2 copies across mainboard + sideboard; Bite Down is 1 MB + 1 SB = 2.",
+    "rares_mythics_max_1_each": "PASS - each at 1 copy.",
+    "rares_mythics_max_5_total": "PASS - 5 of 5 used (Rundvelt Hordemaster, Squee Dubious Monarch, Shivan Devastator, Quirion Beastcaller, Karplusan Forest). One slot goes to the mana base, which the shape judge specifically credited.",
+    "basics_unlimited": "Mountain 7, Forest 6 - format-supplied, rarity-exempt.",
+    "colour_legality": "All 20 distinct nonland cards return a usable mode within core_colors [R,G] via effective_cost.best_mode. All four kickers in the list are inside the core colours and payable: Sprouting Goblin {G} and Viashino Branchrider {2}{G} off 9 green sources, Yavimaya Iconoclast {R} and Colossal Growth {R} off 10 red sources."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.08,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.893,
+      "raw_target": 16.107,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.08,
+    "pip_demand": {
+      "R": 18,
+      "G": 10
+    },
+    "land_color_production": {
+      "R": 10,
+      "G": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 35.7,
+        "prod_pct": 56.2,
+        "gap": -20.5,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 64.3,
+        "prod_pct": 62.5,
+        "gap": 1.8,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Phoenix Chick",
+      "oracle_text": "Flying, haste\nThis creature can't block.\nWhenever you attack with three or more creatures, you may pay {R}{R}. If you do, return this card from your graveyard to the battlefield tapped and attacking with a +1/+1 counter on it.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Phoenix",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Standalone Threat",
+        "Recursion"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Viashino Branchrider",
+      "oracle_text": "Kicker {2}{G} (You may pay an additional {2}{G} as you cast this spell.)\nHaste\nIf this creature was kicked, it enters with two +1/+1 counters on it.\n{2}{R}: This creature gets +2/+0 until end of turn.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Lizard Warrior",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Kicker/Scaling",
+        "Counters (+1/+1)",
+        "Standalone Threat",
+        "Combat Trick",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shivan Devastator",
+      "oracle_text": "Flying, haste\nThis creature enters with X +1/+1 counters on it.",
+      "mana_cost": "{X}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Dragon Hydra",
+      "rarity": "mythic",
+      "power": "0",
+      "toughness": "0",
+      "tags": [
+        "Counters (+1/+1)",
+        "Kicker/Scaling",
+        "Standalone Threat"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rundvelt Hordemaster",
+      "oracle_text": "Other Goblins you control get +1/+1.\nWhenever this creature or another Goblin you control dies, exile the top card of your library. If it's a Goblin creature card, you may cast that card until the end of your next turn.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Goblin Warrior",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Card Advantage"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Goblin Picker",
+      "oracle_text": "{R}, {T}, Discard a card: Draw a card.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Goblin",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting"
+      ],
+      "qty": 2,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sprouting Goblin",
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nWhen this creature enters, if it was kicked, search your library for a land card with a basic land type, reveal it, put it into your hand, then shuffle.\n{R}, {T}, Sacrifice a land: Draw a card.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Goblin Druid",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Kicker/Scaling",
+        "Lands-Matter",
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Land Fetch",
+        "Card Draw",
+        "Sacrifice Outlet",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Yavimaya Iconoclast",
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nTrample\nWhen this creature enters, if it was kicked, it gets +1/+1 and gains haste until end of turn.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Elf",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Kicker/Scaling",
+        "Standalone Threat",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Quirion Beastcaller",
+      "oracle_text": "Whenever you cast a creature spell, put a +1/+1 counter on this creature.\nWhen this creature dies, distribute X +1/+1 counters among any number of target creatures you control, where X is the number of +1/+1 counters on this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Dryad Warrior",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Colossal Growth",
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nTarget creature gets +3/+3 until end of turn. If this spell was kicked, instead that creature gets +4/+4 and gains trample and haste until end of turn.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Payload/Payoff",
+        "Combat Trick",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Strike",
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bite Down",
+      "oracle_text": "Target creature you control deals damage equal to its power to target creature or planeswalker you don't control.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Thrill of Possibility",
+      "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Extra-Cost"
+      ],
+      "qty": 1,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Squee, Dubious Monarch",
+      "oracle_text": "Haste\nWhenever Squee attacks, create a 1/1 red Goblin creature token that's tapped and attacking.\nYou may cast this card from your graveyard by paying {3}{R} and exiling four other cards from your graveyard rather than paying its mana cost.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Goblin Noble",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tokens",
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Flowstone Kavu",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\n{R}: This creature gets +1/-1 until end of turn.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Kavu",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Standalone Threat",
+        "Pump"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rulik Mons, Warren Chief",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nWhenever Rulik Mons attacks, look at the top card of your library. If it's a land card, you may put it onto the battlefield tapped. If you didn't put a card onto the battlefield this way, create a 1/1 red Goblin creature token.",
+      "mana_cost": "{1}{R}{G}{G}",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Creature — Goblin",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Standalone Threat",
+        "Token Generation",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 6,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wooded Ridgeline",
+      "oracle_text": "({T}: Add {R} or {G}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Mountain Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Karplusan Forest",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {R} or {G}. This land deals 1 damage to you.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Broken Wings",
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "The single best sideboard card available to this colour pair - 'Destroy target artifact, enchantment, or creature with flying' answers three separate threat classes at once: the 15-card artifact class, the 18-card enchantment class (which neither black nor red can touch anywhere in this cube), and the 51-card evasion class."
+    },
+    {
+      "name": "Snarespinner",
+      "oracle_text": "Reach\nWhenever this creature blocks a creature with flying, this creature gets +2/+0 until end of turn.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Spider",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Interaction/Disruption",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against the 51-card evasion class (20.7% of the cube). This is the deck's answer to the one hole the maindeck has: of the 3 mainboard fliers only Shivan Devastator can legally block, and only if it was cast for X of 1 or more. Snarespinner is a two-mana 1/3 with 'Reach' that becomes a 3/3 on the block ('Whenever this creature blocks a creature with flying, this creature gets +2/+0')."
+    },
+    {
+      "name": "Magnigoth Sentry",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Treefolk",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "The heavier half of the same anti-air plan - a 4/4 with Reach for {3}{G} blocks and kills essentially every flier in the cube. Board both it and Snarespinner against a dedicated air deck; Snarespinner alone against a deck with only a couple of fliers, since it costs two mana less."
+    },
+    {
+      "name": "Tail Swipe",
+      "oracle_text": "Choose target creature you control and target creature you don't control. If you cast this spell during your main phase, the creature you control gets +1/+1 until end of turn. Then those creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against creature decks where a fourth cheap answer is needed - for {G} it fights with a +1/+1 bonus during our main phase. The cost the maindeck refuses: unlike Bite Down, our creature takes the damage back."
+    },
+    {
+      "name": "Bite Down",
+      "oracle_text": "Target creature you control deals damage equal to its power to target creature or planeswalker you don't control.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "The second copy comes in against creature decks - 'Target creature you control deals damage equal to its power to target creature or planeswalker you don't control' is one-sided removal that scales with Hordemaster's +1/+1 and with Colossal Growth."
+    },
+    {
+      "name": "Jaya's Firenado",
+      "oracle_text": "Jaya's Firenado deals 5 damage to target creature or planeswalker. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal",
+        "Card Selection"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against the pool's toughness-5-and-up bodies, which Lightning Strike's 3 and Bite Down's power-based damage often miss - 'deals 5 damage to target creature or planeswalker' answers Sheoldred, Tyrannical Pitlord, Mossbeard Ancient and Silverback Elder. Held at 1 copy, not 2: at {4}{R} it is one mana above anything the 16-land mana base was built for."
+    }
+  ],
+  "pitch": "A Gruul aggro deck that plays every Goblin the colour pair can reach - eight cards, tied for the most of any build in this cube - and wins by making them unblockable rather than numerous. Rulik Mons, Warren Chief is a menace body that Rundvelt Hordemaster turns into a 4/4 and that manufactures either a land or a lorded Goblin token on every attack. Around them sit the pool's kicker cards, all four of which are live here and only here: Sprouting Goblin fetches a basic, Yavimaya Iconoclast comes down as a 4/3 with haste and trample, Viashino Branchrider arrives with two counters, and Colossal Growth is a three-mana +4/+4 trample-and-haste finisher. Green also buys the one thing the other two builds cannot have at any price - Broken Wings, the cube's only enchantment answer a Goblin deck can cast.",
+  "strategy_es": "agro Gruul de Goblins con amenaza y kicker",
+  "identity_es": "Un agro Gruul que juega todos los Goblins a los que puede llegar la pareja de colores — ocho cartas, empatado como el máximo de cualquier construcción de este cubo — y gana haciéndolos imbloqueables en lugar de numerosos. Rulik Mons, Warren Chief es un cuerpo con amenaza que Rundvelt Hordemaster convierte en un 4/4 y que fabrica o bien una tierra o bien una ficha de Goblin con el anthem en cada ataque. A su alrededor se sientan las cartas con kicker del pool, las cuatro vivas aquí y solo aquí: Sprouting Goblin busca una básica, Yavimaya Iconoclast baja como un 4/3 con prisa y arrollar, Viashino Branchrider llega con dos contadores, y Colossal Growth es un finalizador de tres manás con +4/+4, arrollar y prisa. El verde compra además lo único que las otras dos construcciones no pueden tener a ningún precio: Broken Wings, la única respuesta a encantamientos del cubo que un mazo de Goblins puede lanzar.",
+  "pitch_es": "Un agro Gruul que juega todos los Goblins a los que puede llegar la pareja de colores — ocho cartas, empatado como el máximo de cualquier construcción de este cubo — y gana haciéndolos imbloqueables en lugar de numerosos. Rulik Mons, Warren Chief es un cuerpo con amenaza que Rundvelt Hordemaster convierte en un 4/4 y que fabrica o bien una tierra o bien una ficha de Goblin con el anthem en cada ataque. A su alrededor se sientan las cartas con kicker del pool, las cuatro vivas aquí y solo aquí: Sprouting Goblin busca una básica, Yavimaya Iconoclast baja como un 4/3 con prisa y arrollar, Viashino Branchrider llega con dos contadores, y Colossal Growth es un finalizador de tres manás con +4/+4, arrollar y prisa. El verde compra además lo único que las otras dos construcciones no pueden tener a ningún precio: Broken Wings, la única respuesta a encantamientos del cubo que un mazo de Goblins puede lanzar."
+}

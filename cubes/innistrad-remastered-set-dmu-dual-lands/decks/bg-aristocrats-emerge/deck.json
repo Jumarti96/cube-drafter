@@ -1,0 +1,1081 @@
+{
+  "deck_name": "bg-aristocrats-emerge",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-27T00:00:00Z",
+  "format": "40-card",
+  "strategy": "B/G Aristocrats Emerge",
+  "colors": "BG",
+  "identity": "This deck does not need to connect to win. Blood Artist and The Meathook Massacre turn every creature death into life loss, free sacrifice outlets keep the stream running, and undying bodies mean most of those deaths cost no cards at all. Emerge is folded into the same engine rather than bolted on top: emerge's sacrifice is part of the spell's cost, so casting Abundant Maw is simultaneously a drain trigger, a card, and a 6/4 that drains three more on the way down. Ghoultree is the bridge between the two halves — cast cheap off a graveyard the deck fills by killing its own creatures, and worth mana value 8 when eaten, which turns Abundant Maw into a one-mana spell.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_build_constraint": "At most 5 rare/mythic cards total across mainboard + sideboard; basic lands unlimited and exempt"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 19,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.77,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 1.693,
+      "raw_target": 18.693,
+      "clamped": false,
+      "recommended_land_count": 19,
+      "p_window_at_recommended": 0.7742
+    },
+    "avg_cmc": 3.77,
+    "pip_demand": {
+      "B": 16,
+      "G": 4
+    },
+    "land_color_production": {
+      "G": 8,
+      "B": 13
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 80,
+        "prod_pct": 72.2,
+        "gap": 7.8,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 20,
+        "prod_pct": 44.4,
+        "gap": -24.4,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Blood Artist",
+      "oracle_text": "Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tribal/Kindred",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Vampire",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Drain payoff — the kill mechanism"
+    },
+    {
+      "name": "The Meathook Massacre",
+      "oracle_text": "When The Meathook Massacre enters, each creature gets -X/-X until end of turn.\nWhenever a creature you control dies, each opponent loses 1 life.\nWhenever a creature an opponent controls dies, you gain 1 life.",
+      "mana_cost": "{X}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Sweeper/Board Wipe",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Legendary Enchantment",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Drain payoff + scalable sweeper"
+    },
+    {
+      "name": "Falkenrath Torturer",
+      "oracle_text": "Sacrifice a creature: This creature gains flying until end of turn. If the sacrificed creature was a Human, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Sacrifice Outlet"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Sacrifice Outlet"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Vampire",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Free repeatable sacrifice outlet"
+    },
+    {
+      "name": "Butcher Ghoul",
+      "oracle_text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Enabler/Fodder"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Zombie",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Undying fodder — two deaths from one card"
+    },
+    {
+      "name": "Young Wolf",
+      "oracle_text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Enabler/Fodder"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Wolf",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Undying fodder — two deaths from one card"
+    },
+    {
+      "name": "Morbid Opportunist",
+      "oracle_text": "Whenever one or more other creatures die, draw a card. This ability triggers only once each turn.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Rogue",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Death payoff — converts the stream into cards"
+    },
+    {
+      "name": "Ghoultree",
+      "oracle_text": "This spell costs {1} less to cast for each creature card in your graveyard.",
+      "mana_cost": "{7}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Cost Reduction"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Self-Mill",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Cost Reduction"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 8,
+      "type_line": "Creature — Zombie Treefolk",
+      "rarity": "uncommon",
+      "power": "10",
+      "toughness": "10",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Fodder — mana-value-8 body cast for 2-4 / 10-10 beater"
+    },
+    {
+      "name": "Abundant Maw",
+      "oracle_text": "Emerge {6}{B} (You may cast this spell by sacrificing a creature and paying the emerge cost reduced by that creature's mana value.)\nWhen you cast this spell, target opponent loses 3 life and you gain 3 life.",
+      "mana_cost": "{8}",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 8,
+      "type_line": "Creature — Eldrazi Leech",
+      "rarity": "common",
+      "power": "6",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Emerge payoff — drains 3 on cast"
+    },
+    {
+      "name": "It of the Horrid Swarm",
+      "oracle_text": "Emerge {6}{G} (You may cast this spell by sacrificing a creature and paying the emerge cost reduced by that creature's mana value.)\nWhen you cast this spell, create two 1/1 green Insect creature tokens.",
+      "mana_cost": "{8}",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 8,
+      "type_line": "Creature — Eldrazi Insect",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Emerge payoff — two Insect tokens = two more drain triggers; single {G} off a Ghoultree"
+    },
+    {
+      "name": "Decimator of the Provinces",
+      "oracle_text": "Emerge {6}{G}{G}{G} (You may cast this spell by sacrificing a creature and paying the emerge cost reduced by that creature's mana value.)\nWhen you cast this spell, creatures you control get +2/+2 and gain trample until end of turn.\nTrample, haste",
+      "mana_cost": "{10}",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Payload/Payoff",
+        "Standalone Threat",
+        "Pump",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Pump"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 10,
+      "type_line": "Creature — Eldrazi Boar",
+      "rarity": "rare",
+      "power": "7",
+      "toughness": "7",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Emerge payoff — converts a wide board into lethal"
+    },
+    {
+      "name": "Tragic Slip",
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — morbid removal, always live here"
+    },
+    {
+      "name": "Infernal Grasp",
+      "oracle_text": "Destroy target creature. You lose 2 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — unconditional removal"
+    },
+    {
+      "name": "Eaten Alive",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature or pay {3}{B}.\nExile target creature or planeswalker.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — exile removal, sacrifice as cost"
+    },
+    {
+      "name": "Maelstrom Pulse",
+      "oracle_text": "Destroy target nonland permanent and all other permanents with the same name as that permanent.",
+      "mana_cost": "{1}{B}{G}",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — the only artifact/enchantment answer in these colours"
+    },
+    {
+      "name": "Deathcap Glade",
+      "oracle_text": "This land enters tapped unless you control two or more other lands.\n{T}: Add {B} or {G}.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land — BG dual, untapped with two other lands"
+    },
+    {
+      "name": "Haunted Mire",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — BG dual, enters tapped"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 10,
+      "role": "Land"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 5,
+      "role": "Land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Sever the Bloodline",
+      "oracle_text": "Exile target creature and all other creatures with the same name as that creature.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Flashback"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Flashback/GY-Cast"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Flashback"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Wide-board / exile answer",
+      "when_to_board": "vs token and duplicate-heavy decks, and vs recursive threats — exile-by-name answers a swarm, and exile beats anything that returns from the graveyard"
+    },
+    {
+      "name": "Deadly Allure",
+      "oracle_text": "Target creature gains deathtouch until end of turn and must be blocked this turn if able.\nFlashback {G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Removal Enabler",
+        "Flashback"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Flashback/GY-Cast",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Removal Enabler",
+          "Flashback"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Removal-by-trade",
+      "when_to_board": "vs single large threats — deathtouch plus 'must be blocked this turn if able' forces the trade, and the {G} flashback makes it two answers in one card"
+    },
+    {
+      "name": "Ambush Viper",
+      "oracle_text": "Flash\nDeathtouch",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Snake",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Removal-by-trade",
+      "when_to_board": "vs aggressive creature decks — flash deathtouch at two mana trades with anything, and the body is drain fuel afterwards"
+    },
+    {
+      "name": "Skirsdag High Priest",
+      "oracle_text": "Morbid — {T}, Tap two untapped creatures you control: Create a 5/5 black Demon creature token with flying. Activate only if a creature died this turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Threat engine",
+      "when_to_board": "vs grindy or controlling decks — morbid 'Create a 5/5 black Demon creature token with flying' is live every turn in a deck that kills its own creatures, and it converts a stalled board into a clock"
+    },
+    {
+      "name": "Geistcatcher's Rig",
+      "oracle_text": "When this creature enters, you may have it deal 4 damage to target creature with flying.",
+      "mana_cost": "{6}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "5",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Anti-flier / mana-value-6 fodder",
+      "when_to_board": "vs decks with FLIERS specifically — 'deal 4 damage to target creature with flying'. Stated precisely: the cube's 58-card 'evasion' class also contains equipment, auras, menace and trample, none of which this answers, so the true denominator is materially smaller than 58. It is also a colourless mana-value-6 emerge battery: sacrificed to Abundant Maw it erases the full {6} generic exactly as a Ghoultree does."
+    },
+    {
+      "name": "Morkrut Banshee",
+      "oracle_text": "Morbid — When this creature enters, if a creature died this turn, target creature gets -4/-4 until end of turn.",
+      "mana_cost": "{3}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Spirit",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "4",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Removal on a mana-value-5 body",
+      "when_to_board": "vs creature decks — morbid 'target creature gets -4/-4' is live off any Falkenrath Torturer activation, and at mana value 5 it is the deck's second-largest emerge payment after Ghoultree"
+    },
+    {
+      "name": "Village Rites",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Card Draw",
+        "Sacrifice Outlet",
+        "Cards: Net-Positive",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Sacrifice Outlet"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive",
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Card draw off the sacrifice engine",
+      "when_to_board": "vs grindy and attrition decks — 'sacrifice a creature. Draw two cards' at instant speed, where the sacrifice is itself a Blood Artist trigger and an undying body comes straight back; it is the direct answer to the mainboard's thin card draw"
+    }
+  ],
+  "pitch": "This deck does not need to connect to win. Blood Artist and The Meathook Massacre turn every creature death into life loss, free sacrifice outlets keep the stream running, and undying bodies mean most of those deaths cost no cards at all. Emerge is folded into the same engine rather than bolted on top: emerge's sacrifice is part of the spell's cost, so casting Abundant Maw is simultaneously a drain trigger, a card, and a 6/4 that drains three more on the way down. Ghoultree is the bridge between the two halves — cast cheap off a graveyard the deck fills by killing its own creatures, and worth mana value 8 when eaten, which turns Abundant Maw into a one-mana spell.",
+  "strategy_es": "Aristócratas Emerge B/G",
+  "identity_es": "Este mazo no necesita conectar para ganar. Blood Artist y The Meathook Massacre convierten cada muerte de criatura en pérdida de vida, los medios de sacrificio gratuitos mantienen el flujo, y los cuerpos con undying hacen que la mayoría de esas muertes no cuesten carta alguna. El emerge está integrado en el mismo motor en vez de atornillado encima: el sacrificio del emerge es parte del coste del hechizo, así que lanzar Abundant Maw es a la vez un disparo de drenaje, una carta y un 6/4 que drena tres más al caer. Ghoultree es el puente entre ambas mitades: se lanza barato desde un cementerio que el mazo llena matando a sus propias criaturas, y vale valor de maná 8 cuando se lo comen, lo que convierte a Abundant Maw en un hechizo de un maná.",
+  "pitch_es": "Este mazo no necesita conectar para ganar. Blood Artist y The Meathook Massacre convierten cada muerte de criatura en pérdida de vida, los medios de sacrificio gratuitos mantienen el flujo, y los cuerpos con undying hacen que la mayoría de esas muertes no cuesten carta alguna. El emerge está integrado en el mismo motor en vez de atornillado encima: el sacrificio del emerge es parte del coste del hechizo, así que lanzar Abundant Maw es a la vez un disparo de drenaje, una carta y un 6/4 que drena tres más al caer. Ghoultree es el puente entre ambas mitades: se lanza barato desde un cementerio que el mazo llena matando a sus propias criaturas, y vale valor de maná 8 cuando se lo comen, lo que convierte a Abundant Maw en un hechizo de un maná."
+}

@@ -1,0 +1,1384 @@
+{
+  "deck_name": "gw-kithkin-winnowing",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-09T16:33:27Z",
+  "format": "40-card",
+  "strategy": "Typed Kithkin tribal; cumulative anthem stack with Winnowing as a reset",
+  "colors": "GW",
+  "identity": "A GW Kithkin tribal midrange deck that kills with a CUMULATIVE anthem stack over a wide, uniformly-typed token board. Champion of the Clachan's static 'Other Kithkin you control get +1/+1' persists across turns; Timid Shieldbearer x2 repeat '{4}{W}: Creatures you control get +1/+1' every turn there is spare mana; Gallant Fowlknight x2 closes with 'creatures you control get +1/+0 ... Kithkin creatures you control also gain first strike'. Five anthem effects across 23 nonland cards, fed by five token producers. All 12 creature copies are Kithkin-typed, which makes Winnowing a free reset -- but Winnowing is a MATCHUP-DEPENDENT reset, not the kill mechanism: see winnowing_asymmetry_ledger.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "only_from": {},
+    "excluded": []
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.78,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.373,
+      "raw_target": 17.373,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.78,
+    "pip_demand": {
+      "W": 21,
+      "G": 2
+    },
+    "land_color_production": {
+      "W": 14,
+      "G": 5
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 8.7,
+        "prod_pct": 29.4,
+        "gap": -20.7,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 91.3,
+        "prod_pct": 82.4,
+        "gap": 8.9,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Champion of the Clachan",
+      "cmc": 4,
+      "type_line": "Creature — Kithkin Knight",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "mana_cost": "{3}{W}",
+      "oracle_text": "Flash\nAs an additional cost to cast this spell, behold a Kithkin and exile it. (Exile a Kithkin you control or a Kithkin card from your hand.)\nOther Kithkin you control get +1/+1.\nWhen this creature leaves the battlefield, return the exiled card to its owner's hand.",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Anthem"
+      ],
+      "set": "ecl",
+      "collector_number": "9",
+      "image_url": "https://cards.scryfall.io/normal/front/4/6/46ce3474-381c-433b-acd8-4e628d0048d2.jpg?1782684155",
+      "image_back_url": "",
+      "role": "Static anthem; eats a token",
+      "board": "mainboard"
+    },
+    {
+      "name": "Brigid's Command",
+      "cmc": 3,
+      "type_line": "Kindred Sorcery — Kithkin",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "rare",
+      "mana_cost": "{1}{G}{W}",
+      "oracle_text": "Choose two —\n• Create a token that's a copy of target Kithkin you control.\n• Target player creates a 1/1 green and white Kithkin creature token.\n• Target creature you control gets +3/+3 until end of turn.\n• Target creature you control fights target creature an opponent controls.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Combat Trick",
+        "Fight"
+      ],
+      "set": "ecl",
+      "collector_number": "208",
+      "image_url": "https://cards.scryfall.io/normal/front/c/f/cf034777-3da7-4d5c-9213-5e9d235c315a.jpg?1782683958",
+      "image_back_url": "",
+      "role": "Copies a Kithkin; 2 modes",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gallant Fowlknight",
+      "cmc": 4,
+      "type_line": "Creature — Kithkin Knight",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "{3}{W}",
+      "oracle_text": "When this creature enters, creatures you control get +1/+0 until end of turn. Kithkin creatures you control also gain first strike until end of turn.",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "set": "ecl",
+      "collector_number": "17",
+      "image_url": "https://cards.scryfall.io/normal/front/f/b/fb6096ba-8083-4207-9a3f-c1e4ff095204.jpg?1782684147",
+      "image_back_url": "",
+      "role": "Team pump + Kithkin first strike",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gallant Fowlknight",
+      "cmc": 4,
+      "type_line": "Creature — Kithkin Knight",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "{3}{W}",
+      "oracle_text": "When this creature enters, creatures you control get +1/+0 until end of turn. Kithkin creatures you control also gain first strike until end of turn.",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "set": "ecl",
+      "collector_number": "17",
+      "image_url": "https://cards.scryfall.io/normal/front/f/b/fb6096ba-8083-4207-9a3f-c1e4ff095204.jpg?1782684147",
+      "image_back_url": "",
+      "role": "Team pump + Kithkin first strike",
+      "board": "mainboard"
+    },
+    {
+      "name": "Timid Shieldbearer",
+      "cmc": 2,
+      "type_line": "Creature — Kithkin Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "{4}{W}: Creatures you control get +1/+1 until end of turn.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Combat Trick"
+      ],
+      "set": "ecl",
+      "collector_number": "39",
+      "image_url": "https://cards.scryfall.io/normal/front/1/c/1c672d38-a1a6-4912-a9a6-b11e7bf0cc67.jpg?1782684125",
+      "image_back_url": "",
+      "role": "Repeatable team anthem",
+      "board": "mainboard"
+    },
+    {
+      "name": "Timid Shieldbearer",
+      "cmc": 2,
+      "type_line": "Creature — Kithkin Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "{4}{W}: Creatures you control get +1/+1 until end of turn.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Combat Trick"
+      ],
+      "set": "ecl",
+      "collector_number": "39",
+      "image_url": "https://cards.scryfall.io/normal/front/1/c/1c672d38-a1a6-4912-a9a6-b11e7bf0cc67.jpg?1782684125",
+      "image_back_url": "",
+      "role": "Repeatable team anthem",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mistmeadow Council",
+      "cmc": 5,
+      "type_line": "Creature — Kithkin Advisor",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "mana_cost": "{4}{G}",
+      "oracle_text": "This spell costs {1} less to cast if you control a Kithkin.\nWhen this creature enters, draw a card.",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cost Reduction",
+        "Cards: Self-Replacing"
+      ],
+      "set": "ecl",
+      "collector_number": "183",
+      "image_url": "https://cards.scryfall.io/normal/front/d/4/d4a7c9bc-81c8-4c31-96a9-eb6ba7715e7f.jpg?1782683983",
+      "image_back_url": "",
+      "role": "Only card draw; Kithkin discount",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ajani, Outland Chaperone",
+      "cmc": 3,
+      "type_line": "Legendary Planeswalker — Ajani",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "mythic",
+      "mana_cost": "{1}{W}{W}",
+      "oracle_text": "+1: Create a 1/1 green and white Kithkin creature token.\n−2: Ajani deals 4 damage to target tapped creature.\n−8: Look at the top X cards of your library, where X is your life total. You may put any number of nonland permanent cards with mana value 3 or less from among them onto the battlefield. Then shuffle.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "set": "ecl",
+      "collector_number": "4",
+      "image_url": "https://cards.scryfall.io/normal/front/6/1/6124a691-ae83-4d22-a177-0aee65b47064.jpg?1782684159",
+      "image_back_url": "",
+      "role": "Wrath-proof token engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Clachan Festival",
+      "cmc": 3,
+      "type_line": "Kindred Enchantment — Kithkin",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{2}{W}",
+      "oracle_text": "When this enchantment enters, create two 1/1 green and white Kithkin creature tokens.\n{4}{W}: Create a 1/1 green and white Kithkin creature token.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "ecl",
+      "collector_number": "10",
+      "image_url": "https://cards.scryfall.io/normal/front/3/2/324b5234-ffbf-4801-a475-8f693679ae2f.jpg?1782684154",
+      "image_back_url": "",
+      "role": "Wrath-proof; 2 tokens + sink",
+      "board": "mainboard"
+    },
+    {
+      "name": "Clachan Festival",
+      "cmc": 3,
+      "type_line": "Kindred Enchantment — Kithkin",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{2}{W}",
+      "oracle_text": "When this enchantment enters, create two 1/1 green and white Kithkin creature tokens.\n{4}{W}: Create a 1/1 green and white Kithkin creature token.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "ecl",
+      "collector_number": "10",
+      "image_url": "https://cards.scryfall.io/normal/front/3/2/324b5234-ffbf-4801-a475-8f693679ae2f.jpg?1782684154",
+      "image_back_url": "",
+      "role": "Wrath-proof; 2 tokens + sink",
+      "board": "mainboard"
+    },
+    {
+      "name": "Stalactite Dagger",
+      "cmc": 2,
+      "type_line": "Artifact — Equipment",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "mana_cost": "{2}",
+      "oracle_text": "When this Equipment enters, create a 1/1 colorless Shapeshifter creature token with changeling. (It's every creature type.)\nEquipped creature gets +1/+1 and is all creature types.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Pump"
+      ],
+      "set": "ecl",
+      "collector_number": "261",
+      "image_url": "https://cards.scryfall.io/normal/front/6/9/6954df09-95f3-46cf-9ba8-2a1aea653d8f.jpg?1782683915",
+      "image_back_url": "",
+      "role": "Wrath-proof; makes a changeling",
+      "board": "mainboard"
+    },
+    {
+      "name": "Goldmeadow Nomad",
+      "cmc": 1,
+      "type_line": "Creature — Kithkin Scout",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "{W}",
+      "oracle_text": "{W}, Exile this card from your graveyard: Create a 1/1 green and white Kithkin creature token. Activate only as a sorcery.",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Graveyard",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "ecl",
+      "collector_number": "18",
+      "image_url": "https://cards.scryfall.io/normal/front/0/0/00ddbe6c-11de-4bc6-aabe-d6d8385a838a.jpg?1782684145",
+      "image_back_url": "",
+      "role": "Returns as a token from the yard",
+      "board": "mainboard"
+    },
+    {
+      "name": "Goldmeadow Nomad",
+      "cmc": 1,
+      "type_line": "Creature — Kithkin Scout",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "{W}",
+      "oracle_text": "{W}, Exile this card from your graveyard: Create a 1/1 green and white Kithkin creature token. Activate only as a sorcery.",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Graveyard",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "ecl",
+      "collector_number": "18",
+      "image_url": "https://cards.scryfall.io/normal/front/0/0/00ddbe6c-11de-4bc6-aabe-d6d8385a838a.jpg?1782684145",
+      "image_back_url": "",
+      "role": "Returns as a token from the yard",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eclipsed Kithkin",
+      "cmc": 2,
+      "type_line": "Creature — Kithkin Scout",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{G/W}{G/W}",
+      "oracle_text": "When this creature enters, look at the top four cards of your library. You may reveal a Kithkin, Forest, or Plains card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "set": "ecl",
+      "collector_number": "220",
+      "image_url": "https://cards.scryfall.io/normal/front/2/9/29e1cfa4-0ad8-4228-9f7e-cbab114d1d5f.jpg?1782683948",
+      "image_back_url": "",
+      "role": "Hybrid body; digs 4 deep",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eclipsed Kithkin",
+      "cmc": 2,
+      "type_line": "Creature — Kithkin Scout",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{G/W}{G/W}",
+      "oracle_text": "When this creature enters, look at the top four cards of your library. You may reveal a Kithkin, Forest, or Plains card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "set": "ecl",
+      "collector_number": "220",
+      "image_url": "https://cards.scryfall.io/normal/front/2/9/29e1cfa4-0ad8-4228-9f7e-cbab114d1d5f.jpg?1782683948",
+      "image_back_url": "",
+      "role": "Hybrid body; digs 4 deep",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kinsbaile Aspirant",
+      "cmc": 1,
+      "type_line": "Creature — Kithkin Citizen",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{W}",
+      "oracle_text": "As an additional cost to cast this spell, behold a Kithkin or pay {2}. (To behold a Kithkin, choose a Kithkin you control or reveal a Kithkin card from your hand.)\nWhenever another creature you control enters, this creature gets +1/+1 until end of turn.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff"
+      ],
+      "set": "ecl",
+      "collector_number": "21",
+      "image_url": "https://cards.scryfall.io/normal/front/5/6/56dfdab1-ea3f-4663-a855-a9e72505f85e.jpg?1782684143",
+      "image_back_url": "",
+      "role": "1-drop Kithkin; behold, no exile",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kinsbaile Aspirant",
+      "cmc": 1,
+      "type_line": "Creature — Kithkin Citizen",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{W}",
+      "oracle_text": "As an additional cost to cast this spell, behold a Kithkin or pay {2}. (To behold a Kithkin, choose a Kithkin you control or reveal a Kithkin card from your hand.)\nWhenever another creature you control enters, this creature gets +1/+1 until end of turn.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff"
+      ],
+      "set": "ecl",
+      "collector_number": "21",
+      "image_url": "https://cards.scryfall.io/normal/front/5/6/56dfdab1-ea3f-4663-a855-a9e72505f85e.jpg?1782684143",
+      "image_back_url": "",
+      "role": "1-drop Kithkin; behold, no exile",
+      "board": "mainboard"
+    },
+    {
+      "name": "Winnowing",
+      "cmc": 6,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "mana_cost": "{4}{W}{W}",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFor each player, you choose a creature that player controls. Then each player sacrifices all other creatures they control that don't share a creature type with the chosen creature they control.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "set": "ecl",
+      "collector_number": "43",
+      "image_url": "https://cards.scryfall.io/normal/front/f/9/f943a7d8-9550-427e-8c45-ef834329d345.jpg?1782684120",
+      "image_back_url": "",
+      "role": "Matchup-dependent one-sided reset",
+      "board": "mainboard"
+    },
+    {
+      "name": "Crib Swap",
+      "cmc": 3,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{2}{W}",
+      "oracle_text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "set": "ecl",
+      "collector_number": "11",
+      "image_url": "https://cards.scryfall.io/normal/front/8/f/8f2fb3c6-af75-47a3-9f97-521872c32890.jpg?1782684153",
+      "image_back_url": "",
+      "role": "Unconditional exile",
+      "board": "mainboard"
+    },
+    {
+      "name": "Crib Swap",
+      "cmc": 3,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{2}{W}",
+      "oracle_text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "set": "ecl",
+      "collector_number": "11",
+      "image_url": "https://cards.scryfall.io/normal/front/8/f/8f2fb3c6-af75-47a3-9f97-521872c32890.jpg?1782684153",
+      "image_back_url": "",
+      "role": "Unconditional exile",
+      "board": "mainboard"
+    },
+    {
+      "name": "Protective Response",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{2}{W}",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target attacking or blocking creature.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "ecl",
+      "collector_number": "29",
+      "image_url": "https://cards.scryfall.io/normal/front/1/1/113975e1-7712-4760-96ad-405f8b4e41e3.jpg?1782684134",
+      "image_back_url": "",
+      "role": "Convoked removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Protective Response",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{2}{W}",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target attacking or blocking creature.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "ecl",
+      "collector_number": "29",
+      "image_url": "https://cards.scryfall.io/normal/front/1/1/113975e1-7712-4760-96ad-405f8b4e41e3.jpg?1782684134",
+      "image_back_url": "",
+      "role": "Convoked removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Pyrrhic Strike",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{2}{W}",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 2. (You may put two -1/-1 counters on a creature you control.)\nChoose one. If this spell's additional cost was paid, choose both instead.\n• Destroy target artifact or enchantment.\n• Destroy target creature with mana value 3 or greater.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "ecl",
+      "collector_number": "30",
+      "image_url": "https://cards.scryfall.io/normal/front/c/c/cce5b16d-07fb-4e64-8ec9-b8b29ba86cff.jpg?1782684134",
+      "image_back_url": "",
+      "role": "Only answer to a noncreature",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "dmu",
+      "collector_number": "253",
+      "image_url": "https://assets.cubecobra.com/cardimages/e0f9dca6-e5ae-4714-8a59-2ef1d8f1e82d/normal.webp",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "dmu",
+      "collector_number": "253",
+      "image_url": "https://assets.cubecobra.com/cardimages/e0f9dca6-e5ae-4714-8a59-2ef1d8f1e82d/normal.webp",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "set": "ecl",
+      "collector_number": "264",
+      "image_url": "https://cards.scryfall.io/normal/front/8/c/8c632984-5176-4c37-91df-6577cc294b85.jpg?1782683915",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Temple Garden",
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "rare",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "set": "ecl",
+      "collector_number": "268",
+      "image_url": "https://cards.scryfall.io/normal/front/6/c/6cdd2a74-63b3-4ff2-9c5a-a85dee63c3c9.jpg?1782683909",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Rooftop Percher",
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "mana_cost": "{5}",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "set": "ecl",
+      "collector_number": "2",
+      "image_url": "https://cards.scryfall.io/normal/front/2/d/2d89595c-1542-41fe-8d23-997522922698.jpg?1782684163",
+      "image_back_url": "",
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Rooftop Percher",
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "mana_cost": "{5}",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "set": "ecl",
+      "collector_number": "2",
+      "image_url": "https://cards.scryfall.io/normal/front/2/d/2d89595c-1542-41fe-8d23-997522922698.jpg?1782684163",
+      "image_back_url": "",
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Flock Impostor",
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{2}{W}",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlash\nFlying\nWhen this creature enters, return up to one other target creature you control to its owner's hand.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Bounce"
+      ],
+      "set": "ecl",
+      "collector_number": "16",
+      "image_url": "https://cards.scryfall.io/normal/front/d/3/d32d0336-5140-41f9-bc67-f3d743b9231d.jpg?1782684148",
+      "image_back_url": "",
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Flock Impostor",
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{2}{W}",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlash\nFlying\nWhen this creature enters, return up to one other target creature you control to its owner's hand.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Bounce"
+      ],
+      "set": "ecl",
+      "collector_number": "16",
+      "image_url": "https://cards.scryfall.io/normal/front/d/3/d32d0336-5140-41f9-bc67-f3d743b9231d.jpg?1782684148",
+      "image_back_url": "",
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Chomping Changeling",
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, destroy up to one target artifact or enchantment.",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "ecl",
+      "collector_number": "172",
+      "image_url": "https://cards.scryfall.io/normal/front/e/1/e187dcc6-19ad-4cf6-94b4-daf07f5144e5.jpg?1782683989",
+      "image_back_url": "",
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Chomping Changeling",
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, destroy up to one target artifact or enchantment.",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "ecl",
+      "collector_number": "172",
+      "image_url": "https://cards.scryfall.io/normal/front/e/1/e187dcc6-19ad-4cf6-94b4-daf07f5144e5.jpg?1782683989",
+      "image_back_url": "",
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Unforgiving Aim",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "set": "ecl",
+      "collector_number": "200",
+      "image_url": "https://cards.scryfall.io/normal/front/0/b/0bef3905-24f8-419b-aeca-396adfc6d0dc.jpg?1782683965",
+      "image_back_url": "",
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Unforgiving Aim",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "set": "ecl",
+      "collector_number": "200",
+      "image_url": "https://cards.scryfall.io/normal/front/0/b/0bef3905-24f8-419b-aeca-396adfc6d0dc.jpg?1782683965",
+      "image_back_url": "",
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Spiral into Solitude",
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.\n{1}{W}, Blight 1, Sacrifice this Aura: Exile enchanted creature. (To blight 1, put a -1/-1 counter on a creature you control.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Pacifism Effect",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "ecl",
+      "collector_number": "36",
+      "image_url": "https://cards.scryfall.io/normal/front/e/7/e7a12664-a930-4159-8311-19862488fb05.jpg?1782684130",
+      "image_back_url": "",
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Spiral into Solitude",
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.\n{1}{W}, Blight 1, Sacrifice this Aura: Exile enchanted creature. (To blight 1, put a -1/-1 counter on a creature you control.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Pacifism Effect",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "ecl",
+      "collector_number": "36",
+      "image_url": "https://cards.scryfall.io/normal/front/e/7/e7a12664-a930-4159-8311-19862488fb05.jpg?1782684130",
+      "image_back_url": "",
+      "role": "hate",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "A GW Kithkin tribal midrange deck that kills with a CUMULATIVE anthem stack over a wide, uniformly-typed token board. Champion of the Clachan's static 'Other Kithkin you control get +1/+1' persists across turns; Timid Shieldbearer x2 repeat '{4}{W}: Creatures you control get +1/+1' every turn there is spare mana; Gallant Fowlknight x2 closes with 'creatures you control get +1/+0 ... Kithkin creatures you control also gain first strike'. Five anthem effects across 23 nonland cards, fed by five token producers. All 12 creature copies are Kithkin-typed, which makes Winnowing a free reset -- but Winnowing is a MATCHUP-DEPENDENT reset, not the kill mechanism: see winnowing_asymmetry_ledger.",
+  "strategy_es": "tribal de Kithkin con tipo impreso; pila de anthems acumulativos con Winnowing como reinicio",
+  "identity_es": "Un midrange tribal de Kithkin GW que mata con una pila ACUMULATIVA de anthems sobre un tablero ancho de fichas uniformemente tipadas. La estática de Champion of the Clachan, 'Other Kithkin you control get +1/+1', persiste entre turnos; Timid Shieldbearer x2 repiten '{4}{W}: Creatures you control get +1/+1' cada turno en que haya maná sobrante; Gallant Fowlknight x2 cierran con 'creatures you control get +1/+0 ... Kithkin creatures you control also gain first strike'. Cinco efectos de anthem repartidos en 23 cartas no-tierra, alimentados por cinco productores de fichas. Las 12 copias de criatura son de tipo Kithkin, lo que convierte a Winnowing en un reinicio gratuito; pero Winnowing es un reinicio DEPENDIENTE DEL EMPAREJAMIENTO, no el mecanismo de victoria.",
+  "pitch_es": "Un midrange tribal de Kithkin GW que mata con una pila ACUMULATIVA de anthems sobre un tablero ancho de fichas uniformemente tipadas. La estática de Champion of the Clachan, 'Other Kithkin you control get +1/+1', persiste entre turnos; Timid Shieldbearer x2 repiten '{4}{W}: Creatures you control get +1/+1' cada turno en que haya maná sobrante; Gallant Fowlknight x2 cierran con 'creatures you control get +1/+0 ... Kithkin creatures you control also gain first strike'. Cinco efectos de anthem repartidos en 23 cartas no-tierra, alimentados por cinco productores de fichas. Las 12 copias de criatura son de tipo Kithkin, lo que convierte a Winnowing en un reinicio gratuito; pero Winnowing es un reinicio DEPENDIENTE DEL EMPAREJAMIENTO, no el mecanismo de victoria."
+}

@@ -1,0 +1,1055 @@
+{
+  "deck_name": "gu-lander-ramp-control",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-07T18:26:08Z",
+  "format": "40-card",
+  "strategy": "control",
+  "colors": "UG",
+  "identity": "Blue-green Lander ramp control. The Lander package and Icetill Explorer's extra land drop build toward a high land count while nine counters, bounce and auras hold the board. Starfield Vocalist is used here for something the other two builds of this archetype cannot: it doubles triggers caused by a permanent ENTERING the battlefield, which in a control shell means ETB value rather than landfall - Uthros Scanship draws four and discards two, Extinguisher Battleship destroys two noncreature permanents and deals 8 damage to each creature, Glacier Godmaw makes two Landers. The game ends with Harmonious Grovestrider, whose power and toughness equal the number of lands you control - the deck's own resource turned into the clock - with Glacier Godmaw supplying the trample it needs to actually connect.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "commons_uncommons_max_2": "PASS",
+    "rares_mythics_max_1": "PASS",
+    "rare_mythic_total_cap_6": "PASS - exactly 6 after Phase 9: Starfield Vocalist, Icetill Explorer, Consult the Star Charts, Quantum Riddler, Breeding Pool, Extinguisher Battleship. The 6th slot was left unspent in the pre-grill draft; the Challenger correctly called that under-justified, since the sideboard was rare-free anyway and the slot therefore bought nothing. Sideboard remains entirely commons/uncommons.",
+    "all_cards_in_cube": "PASS - exact-name match against the working pool cache",
+    "colour_legality": "PASS - effective_cost.best_mode(card, [U,G], []) non-None for all 50",
+    "basics": "format-supplied, exempt from copy limits"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 8,
+    "cantrip_count": 0,
+    "accel_count": 8,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.13,
+      "reference_avg_mv": 2.5,
+      "accel": 8,
+      "adjustment": -0.493,
+      "raw_target": 16.507,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 3.13,
+    "pip_demand": {
+      "G": 13,
+      "U": 18
+    },
+    "land_color_production": {
+      "U": 11,
+      "G": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 41.9,
+        "prod_pct": 52.9,
+        "gap": -11,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 58.1,
+        "prod_pct": 64.7,
+        "gap": -6.6,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Sami's Curiosity",
+      "oracle_text": "You gain 2 life. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lifegain",
+        "Lands-Matter",
+        "Tokens",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain",
+          "Lands-Matter",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Lander + 2 life, {G}"
+    },
+    {
+      "name": "Biomechan Engineer",
+      "oracle_text": "When this creature enters, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")\n{8}: Draw two cards and create a 2/2 colorless Robot artifact creature token.",
+      "mana_cost": "{G}{U}",
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Artifacts",
+        "Tokens",
+        "Enabler/Fodder",
+        "Engine/Outlet",
+        "Token Generation",
+        "Land Fetch",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Artifacts",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Land Fetch",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Insect Artificer",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "2-drop body + ETB Lander"
+    },
+    {
+      "name": "Consult the Star Charts",
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nLook at the top X cards of your library, where X is the number of lands you control. Put one of those cards into your hand. If this spell was kicked, put two of those cards into your hand instead. Put the rest on the bottom of your library in a random order.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Kicker/Scaling",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Card Draw",
+        "Kicker",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Card Draw",
+          "Kicker"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Dig X = your land count"
+    },
+    {
+      "name": "Icetill Explorer",
+      "oracle_text": "You may play an additional land on each of your turns.\nYou may play lands from your graveyard.\nLandfall — Whenever a land you control enters, mill a card.",
+      "mana_cost": "{2}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Landfall",
+        "Lands-Matter",
+        "Self-Mill",
+        "Graveyard",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Extra Land Drop"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Landfall",
+          "Lands-Matter",
+          "Self-Mill",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Self-Mill",
+          "Extra Land Drop"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Insect Scout",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Extra land drop each turn"
+    },
+    {
+      "name": "Starfield Vocalist",
+      "oracle_text": "If a permanent entering the battlefield causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.\nWarp {1}{U} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Trigger Doubling"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Trigger Doubling"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Human Bard",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Doubles every ETB trigger"
+    },
+    {
+      "name": "Uthros Scanship",
+      "oracle_text": "When this Spacecraft enters, draw two cards, then discard a card.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 8+.)\n8+ | Flying",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Looting",
+        "Station"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Looting",
+          "Station"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "ETB draw 2 (4 doubled)"
+    },
+    {
+      "name": "Harmonious Grovestrider",
+      "oracle_text": "Ward {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)\nHarmonious Grovestrider's power and toughness are each equal to the number of lands you control.",
+      "mana_cost": "{3}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Standalone Threat",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Beast",
+      "rarity": "uncommon",
+      "power": "*",
+      "toughness": "*",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "FINISHER: P/T = lands, Ward 2"
+    },
+    {
+      "name": "Quantum Riddler",
+      "oracle_text": "Flying\nWhen this creature enters, draw a card.\nAs long as you have one or fewer cards in hand, if you would draw one or more cards, you draw that many cards plus one instead.\nWarp {1}{U}",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Creature — Sphinx",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "4/6 flier, draws on entry"
+    },
+    {
+      "name": "Glacier Godmaw",
+      "oracle_text": "Trample\nWhen this creature enters, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")\nLandfall — Whenever a land you control enters, creatures you control get +1/+1 and gain vigilance and haste until end of turn.",
+      "mana_cost": "{5}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Landfall",
+        "Lands-Matter",
+        "Artifacts",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Land Fetch",
+        "Team Pump"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Landfall",
+          "Lands-Matter",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Land Fetch",
+          "Team Pump"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 7,
+      "type_line": "Creature — Leviathan",
+      "rarity": "uncommon",
+      "power": "6",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Trample + Lander + team haste"
+    },
+    {
+      "name": "Extinguisher Battleship",
+      "oracle_text": "When this Spacecraft enters, destroy target noncreature permanent. Then this Spacecraft deals 4 damage to each creature.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 5+.)\n5+ | Flying, trample",
+      "mana_cost": "{8}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Targeted Removal",
+        "Sweeper/Board Wipe"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Sweeper/Board Wipe"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 8,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "rare",
+      "power": "10",
+      "toughness": "10",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Sweeper: 4 dmg all (8 doubled)"
+    },
+    {
+      "name": "Divert Disaster",
+      "oracle_text": "Counter target spell unless its controller pays {2}. If they do, you create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Soft counter, or a Lander"
+    },
+    {
+      "name": "Unravel",
+      "oracle_text": "Counter target spell. If the amount of mana spent to cast that spell was less than its mana value, you draw a card.",
+      "mana_cost": "{1}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Hard counter"
+    },
+    {
+      "name": "Desculpting Blast",
+      "oracle_text": "Return target nonland permanent to its owner's hand. If it was attacking, create a 1/1 colorless Drone artifact creature token with flying and \"This token can block only creatures with flying.\"",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Bounce",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Bounce any nonland permanent"
+    },
+    {
+      "name": "Cryoshatter",
+      "oracle_text": "Enchant creature\nEnchanted creature gets -5/-0.\nWhen enchanted creature becomes tapped or is dealt damage, destroy it.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Debuff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Debuff"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Hard removal, {U}"
+    },
+    {
+      "name": "Seedship Impact",
+      "oracle_text": "Destroy target artifact or enchantment. If its mana value was 2 or less, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Tokens",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Artifact/ench. kill + Lander"
+    },
+    {
+      "name": "Tangled Islet",
+      "oracle_text": "({T}: Add {G} or {U}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Forest Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land"
+    },
+    {
+      "name": "Breeding Pool",
+      "oracle_text": "({T}: Add {G} or {U}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Forest Island",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 8,
+      "role": "Land"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 6,
+      "role": "Land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Shattered Wings",
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying. Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Self-Mill",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Self-Mill"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Artifacts/ench./fliers (29.7%+22.5%)"
+    },
+    {
+      "name": "Annul",
+      "oracle_text": "Counter target artifact or enchantment spell.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Counter artifact/ench. spell (74 cards)"
+    },
+    {
+      "name": "Skystinger",
+      "oracle_text": "Reach\nWhenever this creature blocks a creature with flying, this creature gets +5/+0 until end of turn.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Insect Warrior",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Blocks fliers (22.5% evasion)"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "1",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Graveyard exile + Lander (12.5%)"
+    },
+    {
+      "name": "Pull Through the Weft",
+      "oracle_text": "Return up to two target nonland permanent cards from your graveyard to your hand, then return up to two target land cards from your graveyard to the battlefield tapped.",
+      "mana_cost": "{3}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Graveyard",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Card Advantage",
+        "Land Fetch",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Advantage",
+          "Land Fetch"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Rebuild after a sweeper"
+    }
+  ],
+  "pitch": "Blue-green Lander ramp control. The Lander package and Icetill Explorer's extra land drop build toward a high land count while nine counters, bounce and auras hold the board. Starfield Vocalist is used here for something the other two builds of this archetype cannot: it doubles triggers caused by a permanent ENTERING the battlefield, which in a control shell means ETB value rather than landfall - Uthros Scanship draws four and discards two, Extinguisher Battleship destroys two noncreature permanents and deals 8 damage to each creature, Glacier Godmaw makes two Landers. The game ends with Harmonious Grovestrider, whose power and toughness equal the number of lands you control - the deck's own resource turned into the clock - with Glacier Godmaw supplying the trample it needs to actually connect.",
+  "strategy_es": "control",
+  "identity_es": "Control de aceleración de Landers azul-verde. El paquete de Landers y la tierra extra de Icetill Explorer construyen hacia un recuento alto de tierras mientras nueve contras, rebotes y auras sostienen el tablero. Starfield Vocalist se usa aquí para algo que las otras dos construcciones de este arquetipo no pueden: duplica los disparos causados por un permanente ENTRANDO al campo de batalla, lo que en un armazón de control significa valor de entrada en vez de landfall — Uthros Scanship roba cuatro y descarta dos, Extinguisher Battleship destruye dos permanentes que no sean criatura y hace 8 de daño a cada criatura, Glacier Godmaw crea dos Landers. La partida termina con Harmonious Grovestrider, cuya fuerza y resistencia equivalen al número de tierras que controlas — el propio recurso del mazo convertido en reloj — con Glacier Godmaw aportando el arrollar que necesita para conectar de verdad.",
+  "pitch_es": "Control de aceleración de Landers azul-verde. El paquete de Landers y la tierra extra de Icetill Explorer construyen hacia un recuento alto de tierras mientras nueve contras, rebotes y auras sostienen el tablero. Starfield Vocalist se usa aquí para algo que las otras dos construcciones de este arquetipo no pueden: duplica los disparos causados por un permanente ENTRANDO al campo de batalla, lo que en un armazón de control significa valor de entrada en vez de landfall — Uthros Scanship roba cuatro y descarta dos, Extinguisher Battleship destruye dos permanentes que no sean criatura y hace 8 de daño a cada criatura, Glacier Godmaw crea dos Landers. La partida termina con Harmonious Grovestrider, cuya fuerza y resistencia equivalen al número de tierras que controlas — el propio recurso del mazo convertido en reloj — con Glacier Godmaw aportando el arrollar que necesita para conectar de verdad."
+}

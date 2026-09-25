@@ -1,0 +1,750 @@
+{
+  "deck_name": "gw-ground-voltron",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-11T18:15:00Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "GW",
+  "identity": "A two-colour ground Voltron deck that wins by attaching Auras and Equipment to one cheap creature and pushing it through the only blocker that matters. The kill card is Gilt-Leaf's Embrace, which is simultaneously the stat buff, the evasion (trample) and the removal-blank (indestructible) at flash speed — the one card in the pool that answers a removal spell and converts a chump block on the same turn. Adept Watershaper covers every ATTACK for free ('Other tapped creatures you control have indestructible', and attacking taps) — note the two limits its own text imposes: it says OTHER, so it never protects itself, and it says TAPPED, so a carrier sitting untapped on the opponent's turn or declared as a blocker is uncovered. The deck has no counterspells and no mainboard mass removal; its interaction is seven cheap protection, pump and exile spells plus the fight stapled to Pitiless Fists.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "user_constraint": "max 5 rare/mythic cards total across mainboard + sideboard",
+    "rare_mythic_used": [
+      "Adept Watershaper",
+      "Figure of Fable",
+      "Selfless Safewright",
+      "Temple Garden",
+      "Winnowing"
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.08,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": -0.56,
+      "raw_target": 16.44,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.08,
+    "pip_demand": {
+      "W": 8,
+      "G": 13
+    },
+    "land_color_production": {
+      "G": 10,
+      "W": 8
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 61.9,
+        "prod_pct": 62.5,
+        "gap": -0.6,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 38.1,
+        "prod_pct": 50,
+        "gap": -11.9,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Figure of Fable",
+      "oracle_text": "{G/W}: This creature becomes a Kithkin Scout with base power and toughness 2/3.\n{1}{G/W}{G/W}: If this creature is a Scout, it becomes a Kithkin Soldier with base power and toughness 4/5.\n{3}{G/W}{G/W}{G/W}: If this creature is a Soldier, it becomes a Kithkin Avatar with base power and toughness 7/8 and protection from each of your opponents.",
+      "mana_cost": "{G/W}",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Kithkin",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Engine/Outlet",
+        "Pump",
+        "Protection"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kinsbaile Aspirant",
+      "oracle_text": "As an additional cost to cast this spell, behold a Kithkin or pay {2}. (To behold a Kithkin, choose a Kithkin you control or reveal a Kithkin card from your hand.)\nWhenever another creature you control enters, this creature gets +1/+1 until end of turn.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Kithkin Citizen",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Virulent Emissary",
+      "oracle_text": "Deathtouch\nWhenever another creature you control enters, you gain 1 life.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Elf Assassin",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Thoughtweft Lieutenant",
+      "oracle_text": "Whenever this creature or another Kithkin you control enters, target creature you control gets +1/+1 and gains trample until end of turn.",
+      "mana_cost": "{G}{W}",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Kithkin Soldier",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eclipsed Kithkin",
+      "oracle_text": "When this creature enters, look at the top four cards of your library. You may reveal a Kithkin, Forest, or Plains card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.",
+      "mana_cost": "{G/W}{G/W}",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Kithkin Scout",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dawn's Light Archer",
+      "oracle_text": "Flash\nReach",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Elf Archer",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "2",
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Adept Watershaper",
+      "oracle_text": "Other tapped creatures you control have indestructible.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Merfolk Cleric",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Tapped Matters",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Protection"
+      ],
+      "qty": 1,
+      "role": "Protection",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evershrike's Gift",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +1/+0 and has flying.\n{1}{W}, Blight 2: Return this card from your graveyard to your hand. Activate only as a sorcery. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Pump",
+        "Evasion Grant",
+        "Graveyard Recursion"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Stalactite Dagger",
+      "oracle_text": "When this Equipment enters, create a 1/1 colorless Shapeshifter creature token with changeling. (It's every creature type.)\nEquipped creature gets +1/+1 and is all creature types.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact — Equipment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Pump"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gilt-Leaf's Embrace",
+      "oracle_text": "Flash\nEnchant creature\nWhen this Aura enters, enchanted creature gains trample and indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it. If its toughness is 0 or less, it still dies.)\nEnchanted creature gets +2/+0.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Combat Trick",
+        "Protection"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Pitiless Fists",
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, enchanted creature fights up to one target creature an opponent controls. (Each deals damage equal to its power to the other.)\nEnchanted creature gets +2/+2.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Fight",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Blossoming Defense",
+      "oracle_text": "Target creature you control gets +2/+2 and gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Combat Trick"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Thoughtweft Charge",
+      "oracle_text": "Target creature gets +3/+3 until end of turn. If a creature entered the battlefield under your control this turn, draw a card.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Combat Trick",
+        "Card Draw"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Assert Perfection",
+      "oracle_text": "Target creature you control gets +1/+0 until end of turn. It deals damage equal to its power to up to one target creature an opponent controls.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Crib Swap",
+      "oracle_text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Unforgiving Aim",
+      "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 5,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Temple Garden",
+      "oracle_text": "({T}: Add {G} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Winnowing",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFor each player, you choose a creature that player controls. Then each player sacrifices all other creatures they control that don't share a creature type with the chosen creature they control.",
+      "mana_cost": "{4}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 6,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "qty": 1,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against wide boards — 'For each player, you choose a creature that player controls. Then each player sacrifices all other creatures they control that don't share a creature type with the chosen creature they control.' Naming Kithkin keeps 8 of this deck's 12 bodies (6 Kithkin creatures + both changeling Stalactite Dagger tokens); convoke pays for it off the same bodies."
+    },
+    {
+      "name": "Selfless Safewright",
+      "oracle_text": "Flash\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nWhen this creature enters, choose a creature type. Other permanents you control of that type gain hexproof and indestructible until end of turn.",
+      "mana_cost": "{3}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Elf Warrior",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Protection"
+      ],
+      "qty": 1,
+      "role": "Flex",
+      "board": "sideboard",
+      "when_to_board": "Against removal-dense decks — flash + convoke, and 'Other permanents you control of that type gain hexproof and indestructible until end of turn'; naming Kithkin covers the Auras on the carrier too, since Auras are permanents."
+    },
+    {
+      "name": "Keep Out",
+      "oracle_text": "Choose one —\n• Keep Out deals 4 damage to target tapped creature.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against attacking decks (an attacking flier is tapped, so 'deals 4 damage to target tapped creature' reaches it) and against enchantment decks via the second mode."
+    },
+    {
+      "name": "Pyrrhic Strike",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 2. (You may put two -1/-1 counters on a creature you control.)\nChoose one. If this spell's additional cost was paid, choose both instead.\n• Destroy target artifact or enchantment.\n• Destroy target creature with mana value 3 or greater.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against the cube's 11 artifacts and 21 enchantments, and against 3+ MV creatures; blight 2 to take both modes — but that cost kills most of this deck's own bodies, so take one mode by default."
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against the cube's 39 graveyard cards — 'exile up to two target cards from graveyards'; doubles as the deck's only 3/3 flying blocker."
+    },
+    {
+      "name": "Protective Response",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target attacking or blocking creature.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Flex",
+      "board": "sideboard",
+      "when_to_board": "Against a single large attacker or blocker — convoke 'Destroy target attacking or blocking creature'; a deck attacking into one blocker creates the 'blocking' condition itself."
+    }
+  ],
+  "pitch": "A two-colour ground Voltron deck that wins by attaching Auras and Equipment to one cheap creature and pushing it through the only blocker that matters. The kill card is Gilt-Leaf's Embrace, which is simultaneously the stat buff, the evasion (trample) and the removal-blank (indestructible) at flash speed — the one card in the pool that answers a removal spell and converts a chump block on the same turn. Adept Watershaper covers every ATTACK for free ('Other tapped creatures you control have indestructible', and attacking taps) — note the two limits its own text imposes: it says OTHER, so it never protects itself, and it says TAPPED, so a carrier sitting untapped on the opponent's turn or declared as a blocker is uncovered. The deck has no counterspells and no mainboard mass removal; its interaction is seven cheap protection, pump and exile spells plus the fight stapled to Pitiless Fists.",
+  "strategy_es": "agro",
+  "identity_es": "Un Voltron terrestre bicolor que gana anexando auras y equipo a una criatura barata y empujándola a través del único bloqueador que importa. La carta que mata es Gilt-Leaf's Embrace, que es a la vez la mejora de estadísticas, la evasión (arrollar) y el anulador de eliminación (indestructible) a velocidad de flash: la única carta del pool que responde a un hechizo de eliminación y convierte un bloqueo de carnaza en el mismo turno. Adept Watershaper cubre gratis cada ATAQUE ('Other tapped creatures you control have indestructible', y atacar gira); ojo a los dos límites que impone su propio texto: dice OTHER, así que nunca se protege a sí misma, y dice TAPPED, así que una portadora sentada desgirada en el turno del rival o declarada como bloqueadora queda sin cobertura. El mazo no tiene contrahechizos ni eliminación masiva en el principal; su interacción son siete hechizos baratos de protección, pompa y exilio más la pelea grapada a Pitiless Fists.",
+  "pitch_es": "Un Voltron terrestre bicolor que gana anexando auras y equipo a una criatura barata y empujándola a través del único bloqueador que importa. La carta que mata es Gilt-Leaf's Embrace, que es a la vez la mejora de estadísticas, la evasión (arrollar) y el anulador de eliminación (indestructible) a velocidad de flash: la única carta del pool que responde a un hechizo de eliminación y convierte un bloqueo de carnaza en el mismo turno. Adept Watershaper cubre gratis cada ATAQUE ('Other tapped creatures you control have indestructible', y atacar gira); ojo a los dos límites que impone su propio texto: dice OTHER, así que nunca se protege a sí misma, y dice TAPPED, así que una portadora sentada desgirada en el turno del rival o declarada como bloqueadora queda sin cobertura. El mazo no tiene contrahechizos ni eliminación masiva en el principal; su interacción son siete hechizos baratos de protección, pompa y exilio más la pelea grapada a Pitiless Fists."
+}

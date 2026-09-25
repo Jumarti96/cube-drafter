@@ -1,0 +1,809 @@
+{
+  "deck_name": "ur-scrapyard-blitz",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-02T23:40:00Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "UR",
+  "identity": "A U/R artifact-count aggro deck that wins by making the number of artifacts on the battlefield go up every single turn. Fifteen of the twenty-four nonland cards are artifacts, and three separate payoffs convert each artifact entering into a different resource: Oreplate Pangolin turns it into a +1/+1 counter, Mm'menon, Uthros Exile turns it into a counter on an evasive body, and Weftstalker Ardent turns it into a point of damage the opponent cannot block. Weapons Manufacturing and Pinnacle Emissary make the count self-sustaining by generating fresh artifact tokens off the artifacts already being cast. The clock is combat damage from cheap artifact creatures backed by non-combat pings, so a board stall does not stop the deck.",
+  "restrictions": {
+    "Commons/uncommons: max 2 copies each": "PASS",
+    "Rares/mythics: max 1 copy each": "PASS",
+    "Max 7 rares/mythics total across mainboard + sideboard": "PASS (6 used: Rust Harvester, Synthesizer Labship, Weapons Manufacturing, Pinnacle Emissary, Warmaker Gunship, Tezzeret Cruel Captain)",
+    "All cards drawn from cube eoe mainboard": "PASS",
+    "Basic lands format-supplied, exempt from copy limits": "PASS (9 Mountain, 5 Island)",
+    "Colour identity within core U/R, no splash": "PASS",
+    "Mainboard exactly 40 cards": "PASS",
+    "Sideboard exactly 10 cards": "PASS"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 2,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 1.92,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -1.107,
+      "raw_target": 15.893,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 1.92,
+    "pip_demand": {
+      "R": 17,
+      "U": 7
+    },
+    "land_color_production": {
+      "R": 11,
+      "U": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 70.8,
+        "prod_pct": 68.8,
+        "gap": 2,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 29.2,
+        "prod_pct": 43.8,
+        "gap": -14.6,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "build_output": {
+    "macro_archetype": "aggro",
+    "projected_avg_mv": 1.917,
+    "deck_identity": "A U/R artifact-count aggro deck that wins by making the number of artifacts on the battlefield go up every single turn. Fifteen of the twenty-four nonland cards are artifacts, and three separate payoffs convert each artifact entering into a different resource: Oreplate Pangolin turns it into a +1/+1 counter, Mm'menon, Uthros Exile turns it into a counter on an evasive body, and Weftstalker Ardent turns it into a point of damage the opponent cannot block. Weapons Manufacturing and Pinnacle Emissary make the count self-sustaining by generating fresh artifact tokens off the artifacts already being cast. The clock is combat damage from cheap artifact creatures backed by non-combat pings, so a board stall does not stop the deck.",
+    "thesis_turn": 5,
+    "default_role": "aggressor",
+    "slot_allocation": {
+      "lands": {
+        "count": 16,
+        "pct_of_deck": "40.0%",
+        "rationale": "Computed by deck_audit.land_target(40, 1.917, 2) = 16 on the final post-repair list; not read off a table. The pre-repair call, land_target(40, 2.042, 1), also returned 16."
+      },
+      "interaction": {
+        "count": 5,
+        "pct_of_nonland": "20.8%",
+        "rationale": "Above the 10-15% aggro band at 20.8%. Three of the five (Warmaker Gunship, Drill Too Deep’s charge-counter mode, Invasive Maneuvers’ Spacecraft clause) also advance the artifact plan. The other two - Plasma Bolt x2 - are a genuine subtraction from the threat count, 2 of 24 slots, and the deck owns that: against the cube’s 56/271 evasion cards and 74/271 artifacts, a competitive list with zero unconditional reach loses the races it has to win."
+      },
+      "threats_payoffs": {
+        "count": 12,
+        "pct_of_nonland": "50.0%",
+        "rationale": "Inside the 45-55% aggro band. Six distinct payoff cards across eight copies means no single answer decapitates the plan."
+      },
+      "engine_infrastructure": {
+        "count": 7,
+        "pct_of_nonland": "29.2%",
+        "rationale": "Above the 0-10% aggro band; deviation credited by the shape judge. The cost is stated plainly rather than argued away: seven of twenty-four slots buy artifact COUNT instead of a body that attacks, so the raw clock is slower than a pure-creature aggro deck of the same curve. The deck accepts that because every count payoff it runs multiplies against that denominator - Oreplate Pangolin, Mm’menon, Weftstalker Ardent, Weapons Manufacturing and Tezzeret all read \"whenever an artifact enters\", and 15 of 24 nonland cards are artifacts. Cutting the Engine slots to the band would raise the number of attackers and lower the value of every attacker."
+      }
+    },
+    "land_math": {
+      "target": {
+        "base_lands": 17,
+        "base_window": [
+          2,
+          4
+        ],
+        "base_p_window": 0.7945,
+        "avg_mv": 1.9166666666666667,
+        "reference_avg_mv": 2.5,
+        "accel": 2,
+        "adjustment": -1.111,
+        "raw_target": 15.889,
+        "clamped": false,
+        "recommended_land_count": 16,
+        "p_window_at_recommended": 0.7903
+      },
+      "recount_after_fill": "Re-ran deck_audit.land_target after the Phase 9 repair (Red Tiger Mechan -> Slagdrill Scrapper): avg MV fell 2.042 -> 1.917 and accel rose 1 -> 2, raw target 15.889, recommended 16 - unchanged. Built to 16.",
+      "deviation": "none — built to 16, the recommended count exactly.",
+      "composition_notes": "Molten Tributary is the pool's only U/R dual and it ENTERS TAPPED (verified against oracle text: 'This land enters tapped'); there is no untapped U/R dual in this cube. Capping it at 2 (its common-rarity copy limit) and filling the rest with basics keeps 14 of 16 lands untapped, which the 7 one-drops in this list require. Command Bridge was excluded from the manabase: 'When this land enters, sacrifice it unless you tap an untapped permanent you control' means it self-destructs on turn 1 on an empty board, exactly the turn this deck most needs a land. Secluded Starforge taps for {C} only and is a rare against the 7-card rare cap.",
+      "property_census": "not required — no core card in this list scales with a property of lands controlled."
+    },
+    "pip_math": {
+      "R_pips": 17,
+      "U_pips": 7,
+      "total_pips": 24,
+      "shares": "R 70.8% / U 29.2%",
+      "sources": "R sources 11 of 16 (68.8%) = 9 Mountain + 2 Molten Tributary; U sources 7 of 16 (43.8%) = 5 Island + 2 Molten Tributary. The two duals count for both colours, which is why the shares sum above 100%.",
+      "note": "U is deliberately over-supplied relative to its 29.2% pip share because both gold cards (Mm'menon, Uthros Exile and Pinnacle Emissary at {1}{U}{R}) want U on turn 3, while R's 17 pips are spread across seven one- and two-drops that a Mountain always covers."
+    },
+    "count_dependent_verdicts": [
+      "Weapons Manufacturing triggers on 'a NONTOKEN artifact you control enters': 15 of the 24 nonland cards in this list are nontoken artifact cards. INCLUDE.",
+      "Oreplate Pangolin triggers on 'another artifact you control enters': 14 other artifact cards of 24 nonland, PLUS every Munitions token (Weapons Manufacturing), Drone token (Pinnacle Emissary), Robot token (Kavaron Harrier, Melded Moxite). INCLUDE.",
+      "Weftstalker Ardent triggers on \"another creature OR artifact you control enters\": 18 of the 24 nonland cards are creatures or artifacts. The six that are not: Tezzeret, Cruel Captain (planeswalker), Weapons Manufacturing (enchantment), Plasma Bolt x2, Invasive Maneuvers and Drill Too Deep (instants/sorceries). INCLUDE. [CORRECTED in Phase 9 - the pre-grill build_output stated 20/24, which was an arithmetic error the Challenger caught.]",
+      "Emissary Escort gets \"+X/+0, where X is the greatest mana value among other artifacts you control\" on a 0/4 body. The highest-MV artifact in the final list is 3 (Pinnacle Emissary, Warmaker Gunship), and 13 of the 15 artifacts are MV 2 or less, so Escort plays as a 1/4 to 3/4. EXCLUDE - its oracle text is a big-artifact payoff, and this is a low-curve list.",
+      "Invasive Maneuvers 'deals 5 damage instead if you control a Spacecraft': only 2 of the 24 nonland cards are Spacecraft (Warmaker Gunship, Synthesizer Labship). INCLUDE for the base mode (3 damage for 2 mana); the upgrade is a bonus, not the reason for the slot.",
+      "Virulent Silencer needs 5 separate combat connections to reach 10 poison; 11 of the 15 artifacts here are creatures so the trigger is well fed, but 5 connections is slower than this list's 5-turn damage clock. EXCLUDE.",
+      "Rust Harvester needs artifact cards in the graveyard to exile. Slagdrill Scrapper (\"{2}, {T}, Sacrifice another artifact or land: Draw a card\") can put one there on demand; 14 of the 15 artifact cards in this list are legal sacrifice targets for it. Assembly weight raised from 0.70 to 0.85."
+    ],
+    "skeleton_selection": {
+      "archetype_family": "aggro",
+      "archetype_family_grounds": "Locked thesis default_role = aggressor; the include_candidates curve is dominated by 1-2 MV artifact bodies whose payoffs only pay when the board grows every turn; the available U/R interaction is one-sided burn rather than counter/bounce trades. Competitive intent breaks the aggro/tempo tie toward aggro.",
+      "chosen": "Sketch A",
+      "chosen_lens": "lowest-curve / most explosive",
+      "judge_grounds": "Tightest match to the thesis: every payoff card is exactly the thesis's own named engine (Oreplate Pangolin, Mm'menon, Weftstalker Ardent, Weapons Manufacturing), and the Engine/Infra deviation is thesis-grounded because cheap artifact bodies are the fuel the thesis explicitly requires. Its land_pip_implication ('skew R>U') does not contradict the tapped-only U/R manabase.",
+      "rejected_sketches": [
+        {
+          "lens": "most reach & evasion",
+          "macro_archetype": "aggro",
+          "slot_table": "Interaction 12% = 3 | Threats/Payoffs 52% = 12 | Engine & Infra 8% = 2",
+          "keystones": [
+            "Mm'menon, Uthros Exile",
+            "Pinnacle Emissary",
+            "Weftstalker Ardent",
+            "Rust Harvester",
+            "Weapons Manufacturing",
+            "Warmaker Gunship",
+            "Virulent Silencer"
+          ],
+          "why_rejected": "Judge: slot percentages summed to only 72%, leaving ~28% of nonland slots unaccounted for, and its land plan demanded untapped U/R duals that do not exist in this pool."
+        },
+        {
+          "lens": "most resilient to sweepers",
+          "macro_archetype": "aggro",
+          "slot_table": "Interaction 13% = 3 | Threats/Payoffs 52% = 12 | Engine & Infra 35% = 8",
+          "keystones": [
+            "Weapons Manufacturing",
+            "Tezzeret, Cruel Captain",
+            "Synthesizer Labship",
+            "Warmaker Gunship",
+            "The Dominion Bracelet",
+            "Cryogen Relic",
+            "Melded Moxite"
+          ],
+          "why_rejected": "Judge: internally consistent, but several keystones (Synthesizer Labship's 9+ station threshold, Tezzeret's loyalty ramp to -7, The Dominion Bracelet's {15} ability) come online multiple turns past goldfish turn 5, weakening turn-5 delivery for an aggressor role."
+        }
+      ],
+      "weak_keystones": [
+        {
+          "card": "Rust Harvester",
+          "flagged": "Assigned '1-MV artifact enabler' in Sketch A, but its oracle text never puts an artifact onto the battlefield.",
+          "resolution": "RESOLVED by reclassification, card retained. Rust Harvester's role in the final list is Payoff (menace body + repeatable reach), not enabler: it is itself one of the 15 artifact cards feeding the count, and '{2}, {T}, Exile an artifact card from your graveyard: Put a +1/+1 counter on this creature, then it deals damage equal to its power to any target' is a mana sink that converts dead artifacts into reach. Its assembly weight is discounted to 0.7 precisely because the graveyard is empty early. Further strengthened in Phase 9: Slagdrill Scrapper was added specifically to feed the graveyard Rust Harvester exiles from, raising its assembly weight from 0.70 to 0.85."
+        }
+      ],
+      "false_choice_note": "none — the judge found the three builds materially distinct in curve, evasion package and sweeper resilience.",
+      "harvested_from_rejected": [
+        {
+          "card": "Warmaker Gunship",
+          "from_lens": "most reach & evasion",
+          "role": "Interaction — filled an Interaction slot role-for-role; its ETB is removal whose size is the deck's own artifact count."
+        },
+        {
+          "card": "Tezzeret, Cruel Captain",
+          "from_lens": "most resilient to sweepers",
+          "role": "Payoff — filled a Threats/Payoffs slot role-for-role; a noncreature payoff that ticks off the same artifact ETBs."
+        },
+        {
+          "card": "Synthesizer Labship",
+          "from_lens": "most resilient to sweepers",
+          "role": "Engine — 1-MV artifact, the cheapest artifact card in the pool, which serves the chosen lowest-curve lens directly."
+        },
+        {
+          "card": "Cryogen Relic",
+          "from_lens": "most resilient to sweepers",
+          "role": "Engine — self-replacing artifact ETB."
+        },
+        {
+          "card": "Melded Moxite",
+          "from_lens": "most resilient to sweepers",
+          "role": "Engine — artifact ETB plus card filtering."
+        },
+        {
+          "card": "Virulent Silencer",
+          "from_lens": "most reach & evasion",
+          "role": "NOT harvested — would require adding a poison win-axis slot that the locked allocation does not contain; see count_dependent_verdicts."
+        },
+        {
+          "card": "Slagdrill Scrapper",
+          "from_lens": "phase-9 challenger absence audit",
+          "role": "Engine - filled an Engine slot role-for-role, replacing Red Tiger Mechan which the Challenger showed had no ETB or count text."
+        }
+      ]
+    },
+    "structural_responses": [],
+    "failure_modes": {
+      "flood": {
+        "mitigation": "At 16 lands this list carries four repeatable mana sinks that turn a surplus land into action every turn: Slagdrill Scrapper (\"{2}, {T}, Sacrifice another artifact or land: Draw a card\" - it eats the flooded land itself), Rust Harvester (\"{2}, {T}, Exile an artifact card from your graveyard: Put a +1/+1 counter on this creature, then it deals damage equal to its power to any target\"), Kavaron Harrier (\"you may pay {2}. If you do, create a 2/2 colorless Robot artifact creature token that’s tapped and attacking\"), and Oreplate Pangolin (\"you may pay {1}\" on each artifact ETB). Melded Moxite converts a dead card in hand into two cards."
+      },
+      "screw": {
+        "mitigation": "18 of the 24 nonland cards cost 2 or less (8 at one mana, 10 at two), so a two-land hand deploys on curve through turn 3 without missing a beat. The goldfish simulation confirms it: 87% of hands keepable, 80% of hands play something on turn 1."
+      },
+      "decapitation": {
+        "mitigation": "There is no single key card. Eight payoff copies are spread across six different cards (Oreplate Pangolin x2, Weftstalker Ardent x2, Mm’menon Uthros Exile, Pinnacle Emissary, Tezzeret Cruel Captain, Rust Harvester), and they convert the same artifact ETB into three different resources - counters, bodies and direct damage. Answering any one leaves the other five operating on the same trigger."
+      },
+      "gas-out": {
+        "mitigation": "Four of the 24 nonland cards replace themselves on the way through: Cryogen Relic x2 ('When this artifact enters OR LEAVES the battlefield, draw a card' — two cards per copy), Melded Moxite ('discard a card. If you do, draw two cards'), and Nutrient Block ('When this artifact is put into a graveyard from the battlefield, draw a card'). More importantly, three permanents make board out of zero cards each turn once resolved — Weapons Manufacturing (a Munitions token per nontoken artifact ETB), Pinnacle Emissary (a flying Drone per artifact spell) and Kavaron Harrier (a 2/2 Robot each attack for {2}) — plus Tezzeret's '-3: Search your library for an artifact card with mana value 1 or less'. An empty hand still advances the clock."
+      },
+      "raced": {
+        "accepted": "The cube's fastest clocks come from its 56 evasion cards (22% density). This list's only flying blocker is Mm'menon, Uthros Exile (1/3) and its only lifegain is Nutrient Block's '{2}, {T}, Sacrifice this artifact: You gain 3 life'. Mitigating would mean maindecking Cut Propulsion x2 and Bombard x2 in place of four artifact bodies — that drops the artifact count from 15 to 11 of 24 nonland cards, which is the denominator every count payoff in the deck multiplies against. The cost of not losing races is losing the engine, so those four cards live in the sideboard instead."
+      },
+      "disruption-fizzle": {
+        "mitigation": "This deck has no critical turn to interact with. Its damage is incremental and per-permanent: each artifact entering independently produces a +1/+1 counter (Oreplate Pangolin, Mm'menon), a token (Weapons Manufacturing, Pinnacle Emissary) and a point of damage (Weftstalker Ardent). A counterspell aimed at any single artifact removes one trigger of many rather than breaking a chain; there is no turn on which the plan is all-in."
+      }
+    },
+    "analysis_body": "### ONE ARTIFACT, FOUR RESOURCES\n\nThe whole deck is one sentence: *an artifact entered the battlefield.* What that sentence is worth depends on which payoffs are out. Every card below reads off the same trigger, so they stack rather than compete for it.\n\n| Payoff | What one artifact ETB becomes | Copies |\n|---|---|---|\n| Oreplate Pangolin | a permanent +1/+1 counter (for {1}) | 2 |\n| Mm'menon, Uthros Exile | a +1/+1 counter on any creature you choose | 1 |\n| Weftstalker Ardent | 1 damage to the opponent, unblockable | 2 |\n| Tezzeret, Cruel Captain | a loyalty counter | 1 |\n| Weapons Manufacturing | a Munitions token (2 more damage, later) | 1 |\n\nWith three of these on board, a single two-mana Cryogen Relic is a counter, a counter, a point of damage, a loyalty tick and a Munitions token — and the Munitions token is *itself* an artifact entering, so it runs the whole column a second time.\n\n### THE MUNITIONS DOUBLE-DIP\n\nThis is the most important line in the deck and it is easy to miss. Weapons Manufacturing reads \"Whenever a **nontoken** artifact you control enters, create a colorless artifact token named Munitions.\" The Munitions token is a token, so it does not re-trigger Weapons Manufacturing — no loop. But it *is* an artifact entering the battlefield, which is what Oreplate Pangolin, Mm'menon, Weftstalker Ardent and Tezzeret actually check. **Every one of the 15 nontoken artifact cards in this list therefore produces two count triggers instead of one** while Weapons Manufacturing is out. And the Munitions never dies for free: \"When this token leaves the battlefield, it deals 2 damage to any target\" means Slagdrill Scrapper eating one for a card also throws 2 damage at the opponent's face.\n\n### SYNTHESIZER LABSHIP IS THE EVASION PLAN\n\nFour of the 15 artifacts are *noncreature* artifacts that would otherwise just sit there being counted: Cryogen Relic ×2, Melded Moxite and Nutrient Block. Synthesizer Labship at 2+ charge counters reads \"At the beginning of combat on your turn, up to one other target artifact you control becomes an artifact creature with base power and toughness 2/2 **and gains flying** until end of turn.\" That is a free 2/2 flier every single combat, drawn from cards the opponent has already written off, and it is the only repeatable evasion in a deck whose ground creatures are 1/1s and 2/2s. It costs {U} — the cheapest artifact card in the entire cube.\n\n### TEZZERET'S TUTOR HAS FIVE TARGETS\n\nTezzeret's \"−3: Search your library for an artifact card with mana value 1 or less\" is only as good as the one-drops available. In this list **5 of the 15 artifact cards are MV 1 or less**: Rust Harvester, Kavaron Harrier, Synthesizer Labship, Nutrient Block and Slagdrill Scrapper. Every one of them is a live target, and Tezzeret arrives at 3 loyalty and ticks *up* off the artifact ETBs the deck is already producing, so the −3 is usually available the turn after he lands without ever going to zero.\n\n### THE MANABASE IS A COMPROMISE, STATED PLAINLY\n\nMolten Tributary is the only U/R dual this cube prints and its oracle text says \"This land enters tapped.\" There is no shockland for this pair. A deck with eight one-drops cannot afford many tapped lands, so the manabase is 14 untapped sources and 2 tapped duals, which leaves U slightly under-served for the two `{1}{U}{R}` gold cards. Pinnacle Emissary softens this itself — Warp `{U/R}` is hybrid, payable with either colour — but Mm'menon, Uthros Exile genuinely wants both colours on turn three and sometimes will not get them. That is the price of the pair, not a build error.\n\n### PLAY PATTERN\n\nTurn 1 is Rust Harvester, Kavaron Harrier, Slagdrill Scrapper, Synthesizer Labship or Nutrient Block — 8 of 24 nonland cards, and the goldfish sim plays something on turn 1 in 80% of hands. Turns 2-3 deploy a payoff and start attacking; Mechan Shieldmate's defender turns off \"as long as an artifact entered the battlefield under your control this turn,\" which in this deck means essentially always. From turn 4 the deck is not trying to make one big attack, it is trying to make the count go up twice per turn while Weftstalker Ardent bills the opponent for each one."
+  },
+  "mainboard": [
+    {
+      "name": "Mountain",
+      "qty": 9,
+      "role": "Land",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": ""
+    },
+    {
+      "name": "Island",
+      "qty": 5,
+      "role": "Land",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": ""
+    },
+    {
+      "name": "Molten Tributary",
+      "qty": 2,
+      "role": "Land — UR dual, enters tapped",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "251"
+    },
+    {
+      "name": "Rust Harvester",
+      "qty": 1,
+      "role": "Payoff — menace body + repeatable reach",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Menace\n{2}, {T}, Exile an artifact card from your graveyard: Put a +1/+1 counter on this creature, then it deals damage equal to its power to any target.",
+      "power": "1",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "159"
+    },
+    {
+      "name": "Kavaron Harrier",
+      "qty": 2,
+      "role": "Threat — 1-drop that makes an artifact every attack",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Soldier",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever this creature attacks, you may pay {2}. If you do, create a 2/2 colorless Robot artifact creature token that's tapped and attacking. Sacrifice that token at end of combat.",
+      "power": "2",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "139"
+    },
+    {
+      "name": "Oreplate Pangolin",
+      "qty": 2,
+      "role": "Payoff — counter per artifact ETB",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Robot Pangolin",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Whenever another artifact you control enters, you may pay {1}. If you do, put a +1/+1 counter on this creature.",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "150"
+    },
+    {
+      "name": "Mechan Shieldmate",
+      "qty": 2,
+      "role": "Threat — 3/2 attacker on artifact turns",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Robot Soldier",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Defender\nAs long as an artifact entered the battlefield under your control this turn, this creature can attack as though it didn't have defender.",
+      "power": "3",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "65"
+    },
+    {
+      "name": "Weftstalker Ardent",
+      "qty": 2,
+      "role": "Payoff — 1 dmg to each opponent per ETB",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Creature — Drix Artificer",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever another creature or artifact you control enters, this creature deals 1 damage to each opponent.\nWarp {R} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "2",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "169"
+    },
+    {
+      "name": "Mm'menon, Uthros Exile",
+      "qty": 1,
+      "role": "Payoff — evasive counter distributor",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Jellyfish Advisor",
+      "mana_cost": "{1}{U}{R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nWhenever an artifact you control enters, put a +1/+1 counter on target creature.",
+      "power": "1",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "221"
+    },
+    {
+      "name": "Pinnacle Emissary",
+      "qty": 1,
+      "role": "Payoff — flying Drone per artifact spell",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "mana_cost": "{1}{U}{R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever you cast an artifact spell, create a 1/1 colorless Drone artifact creature token with flying and \"This token can block only creatures with flying.\"\nWarp {U/R} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "3",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "223"
+    },
+    {
+      "name": "Tezzeret, Cruel Captain",
+      "qty": 1,
+      "role": "Payoff — noncreature engine, ticks off artifact ETBs",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Legendary Planeswalker — Tezzeret",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "mythic",
+      "oracle_text": "Whenever an artifact you control enters, put a loyalty counter on Tezzeret.\n0: Untap target artifact or creature. If it's an artifact creature, put a +1/+1 counter on it.\n−3: Search your library for an artifact card with mana value 1 or less, reveal it, put it into your hand, then shuffle.\n−7: You get an emblem with \"At the beginning of combat on your turn, put three +1/+1 counters on target artifact you control. If it's not a creature, it becomes a 0/0 Robot artifact creature.\"",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "2"
+    },
+    {
+      "name": "Synthesizer Labship",
+      "qty": 1,
+      "role": "Engine — 1-mana artifact; animates artifacts as 2/2 fliers",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Artifact — Spacecraft",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 9+.)\n2+ | At the beginning of combat on your turn, up to one other target artifact you control becomes an artifact creature with base power and toughness 2/2 and gains flying until end of turn.\n9+ | Flying, vigilance",
+      "power": "4",
+      "toughness": "4",
+      "set": "eoe",
+      "collector_number": "81"
+    },
+    {
+      "name": "Weapons Manufacturing",
+      "qty": 1,
+      "role": "Engine — Munitions token per nontoken artifact ETB",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever a nontoken artifact you control enters, create a colorless artifact token named Munitions with \"When this token leaves the battlefield, it deals 2 damage to any target.\"",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "168"
+    },
+    {
+      "name": "Cryogen Relic",
+      "qty": 2,
+      "role": "Engine — self-replacing artifact ETB",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Artifact",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this artifact enters or leaves the battlefield, draw a card.\n{1}{U}, Sacrifice this artifact: Put a stun counter on up to one target tapped creature. (If a permanent with a stun counter would become untapped, remove one from it instead.)",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "52"
+    },
+    {
+      "name": "Melded Moxite",
+      "qty": 1,
+      "role": "Engine — artifact ETB + card filtering",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Artifact",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this artifact enters, you may discard a card. If you do, draw two cards.\n{3}, Sacrifice this artifact: Create a tapped 2/2 colorless Robot artifact creature token.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "143"
+    },
+    {
+      "name": "Nutrient Block",
+      "qty": 1,
+      "role": "Engine — 1-mana indestructible artifact, cantrips on death",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Artifact — Food",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "243"
+    },
+    {
+      "name": "Slagdrill Scrapper",
+      "qty": 1,
+      "role": "Engine — 1-mana artifact body; sac outlet that feeds Rust Harvester and converts flood into cards",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Scout",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "{2}, {T}, Sacrifice another artifact or land: Draw a card.",
+      "power": "1",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "160"
+    },
+    {
+      "name": "Warmaker Gunship",
+      "qty": 1,
+      "role": "Interaction — ETB removal scaling with artifact count",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Artifact — Spacecraft",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "When this Spacecraft enters, it deals damage equal to the number of artifacts you control to target creature an opponent controls.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 6+.)\n6+ | Flying",
+      "power": "4",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "167"
+    },
+    {
+      "name": "Plasma Bolt",
+      "qty": 2,
+      "role": "Interaction — 2-3 damage any target",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Plasma Bolt deals 2 damage to any target.\nVoid — Plasma Bolt deals 3 damage instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "152"
+    },
+    {
+      "name": "Invasive Maneuvers",
+      "qty": 1,
+      "role": "Interaction — 3/5 damage to a creature",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Invasive Maneuvers deals 3 damage to target creature. It deals 5 damage instead if you control a Spacecraft.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "137"
+    },
+    {
+      "name": "Drill Too Deep",
+      "qty": 1,
+      "role": "Interaction — destroy artifact / 5 charge counters",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Put five charge counters on target Spacecraft or Planet you control.\n• Destroy target artifact.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "133"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Drill Too Deep",
+      "qty": 1,
+      "role": "Artifact removal — vs the cube's 74 artifacts",
+      "board": "sideboard",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Put five charge counters on target Spacecraft or Planet you control.\n• Destroy target artifact.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "133"
+    },
+    {
+      "name": "Annul",
+      "qty": 2,
+      "role": "Counter artifact/enchantment spells",
+      "board": "sideboard",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Counter target artifact or enchantment spell.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "46"
+    },
+    {
+      "name": "Cut Propulsion",
+      "qty": 2,
+      "role": "Anti-flier removal",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature deals damage to itself equal to its power. If that creature has flying, it deals twice that much damage to itself instead.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "130"
+    },
+    {
+      "name": "Desculpting Blast",
+      "qty": 2,
+      "role": "Bounce any nonland permanent (only enchantment answer)",
+      "board": "sideboard",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Return target nonland permanent to its owner's hand. If it was attacking, create a 1/1 colorless Drone artifact creature token with flying and \"This token can block only creatures with flying.\"",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "54"
+    },
+    {
+      "name": "Bombard",
+      "qty": 2,
+      "role": "Unconditional 4 damage to a creature",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Bombard deals 4 damage to target creature.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "129"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "qty": 1,
+      "role": "Graveyard exile + two artifact ETBs",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": "3",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "237"
+    }
+  ],
+  "pitch": "A U/R artifact-count aggro deck that wins by making the number of artifacts on the battlefield go up every single turn. Fifteen of the twenty-four nonland cards are artifacts, and three separate payoffs convert each artifact entering into a different resource: Oreplate Pangolin turns it into a +1/+1 counter, Mm'menon, Uthros Exile turns it into a counter on an evasive body, and Weftstalker Ardent turns it into a point of damage the opponent cannot block. Weapons Manufacturing and Pinnacle Emissary make the count self-sustaining by generating fresh artifact tokens off the artifacts already being cast. The clock is combat damage from cheap artifact creatures backed by non-combat pings, so a board stall does not stop the deck.",
+  "strategy_es": "agro",
+  "identity_es": "Un agro U/R por recuento de artefactos que gana haciendo que el número de artefactos en el campo de batalla suba todos y cada uno de los turnos. Quince de las veinticuatro cartas no-tierra son artefactos, y tres recompensas distintas convierten cada artefacto que entra en un recurso diferente: Oreplate Pangolin lo convierte en un contador +1/+1, Mm'menon, Uthros Exile lo convierte en un contador sobre un cuerpo evasivo, y Weftstalker Ardent lo convierte en un punto de daño que el rival no puede bloquear. Weapons Manufacturing y Pinnacle Emissary hacen el recuento autosostenible generando fichas de artefacto nuevas a partir de los artefactos que ya se están lanzando. El reloj es daño de combate de criaturas-artefacto baratas respaldado por pinchazos fuera de combate, así que un atasco de tablero no detiene al mazo.",
+  "pitch_es": "Un agro U/R por recuento de artefactos que gana haciendo que el número de artefactos en el campo de batalla suba todos y cada uno de los turnos. Quince de las veinticuatro cartas no-tierra son artefactos, y tres recompensas distintas convierten cada artefacto que entra en un recurso diferente: Oreplate Pangolin lo convierte en un contador +1/+1, Mm'menon, Uthros Exile lo convierte en un contador sobre un cuerpo evasivo, y Weftstalker Ardent lo convierte en un punto de daño que el rival no puede bloquear. Weapons Manufacturing y Pinnacle Emissary hacen el recuento autosostenible generando fichas de artefacto nuevas a partir de los artefactos que ya se están lanzando. El reloj es daño de combate de criaturas-artefacto baratas respaldado por pinchazos fuera de combate, así que un atasco de tablero no detiene al mazo."
+}

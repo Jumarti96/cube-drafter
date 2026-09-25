@@ -1,0 +1,1123 @@
+{
+  "deck_name": "wu-kinbinding-alpha-strike",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-11T04:37:52Z",
+  "format": "40-card",
+  "strategy": "W/U token swarm with a Kinbinding alpha strike",
+  "colors": "WU",
+  "identity": "A W/U token-swarm aggro deck that converts one turn's worth of bodies into lethal. Kinbinding reads 'Creatures you control get +X/+X, where X is the number of creatures that entered the battlefield under your control this turn' and 'At the beginning of combat on your turn, create a 1/1 green and white Kithkin creature token' — the second clause guarantees X is at least 1 in every one of my combats with no other cards in play, and 14 of 23 nonland cards put at least one more body onto the battlefield. The load-bearing rules fact is that convoke is a COST rather than an activated ability, so summoning-sick tokens created this turn are legal convoke fodder — the deck convokes with the bodies that cannot attack and attacks with the ones that can, which is why the tap-vs-attack tension that constrains a tap-trigger build barely exists here. Because a 1/1 swarm is answered by blockers rather than by removal, the deck carries Morningtide's Light to exile every blocker for exactly one attack, and points the anthem at evasion where it can.",
+  "restrictions": {
+    "base": "cube_mainboard only — every card verified by exact name against the working pool",
+    "commons_uncommons_max_2": "PASS — no common or uncommon exceeds 2 copies",
+    "rares_mythics_max_1_each": "PASS — all 5 rare/mythic cards are singletons",
+    "rares_mythics_max_5_total": "PASS — exactly 5/5: Ajani Outland Chaperone (M), Morningtide's Light (M), Kinbinding (R), Hallowed Fountain (R) in the mainboard + Sygg's Command (R) in the sideboard",
+    "basics_unlimited": "PASS — Plains x7, Island x5 are format-supplied and exempt",
+    "colour_legality": "PASS — every nonland card usable in W/U via effective_cost.best_mode. Kithkin tokens are green-and-white and Faerie tokens are blue-and-black, but a token's colour is not a deckbuilding constraint.",
+    "splash": "PASS — splash_colors empty; zero off-core nonland cards"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 1,
+    "cantrip_count": 0,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.96,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": 0.447,
+      "raw_target": 17.447,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.96,
+    "pip_demand": {
+      "U": 10,
+      "W": 13
+    },
+    "land_color_production": {
+      "W": 10,
+      "U": 8
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 43.5,
+        "prod_pct": 47.1,
+        "gap": -3.6,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 56.5,
+        "prod_pct": 58.8,
+        "gap": -2.3,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Springleaf Drum",
+      "oracle_text": "{T}, Tap an untapped creature you control: Add one mana of any color.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Mana Rock",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Rock",
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "Taps a token for mana; Stalactite Dagger gives it a turn-2 target"
+    },
+    {
+      "name": "Silvergill Mentor",
+      "oracle_text": "As an additional cost to cast this spell, behold a Merfolk or pay {2}. (To behold a Merfolk, choose a Merfolk you control or reveal a Merfolk card from your hand.)\nWhen this creature enters, create a 1/1 white and blue Merfolk creature token.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Wizard",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Two bodies for two mana"
+    },
+    {
+      "name": "Deepchannel Duelist",
+      "oracle_text": "At the beginning of your end step, untap target Merfolk you control.\nOther Merfolk you control get +1/+1.",
+      "mana_cost": "{W}{U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Pump",
+        "Untap"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Pump",
+          "Untap"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Merfolk lord + end-step untap"
+    },
+    {
+      "name": "Personify",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under its owner's control. Create a 1/1 colorless Shapeshifter creature token with changeling. (It's every creature type.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Tokens",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Flicker",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB",
+          "Tribal/Kindred",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Flicker",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Instant: two creatures enter (+2 to X); blanks removal"
+    },
+    {
+      "name": "Glamer Gifter",
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, choose up to one other target creature. Until end of turn, that creature has base power and toughness 4/4 and gains all creature types.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Faerie Wizard",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Flash flier: raises X on their turn, sets a token to base 4/4"
+    },
+    {
+      "name": "Stalactite Dagger",
+      "oracle_text": "When this Equipment enters, create a 1/1 colorless Shapeshifter creature token with changeling. (It's every creature type.)\nEquipped creature gets +1/+1 and is all creature types.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Voltron/Equipment",
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Pump"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment",
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Pump"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact — Equipment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Makes a changeling token; equipped creature is all creature types"
+    },
+    {
+      "name": "Clachan Festival",
+      "oracle_text": "When this enchantment enters, create two 1/1 green and white Kithkin creature tokens.\n{4}{W}: Create a 1/1 green and white Kithkin creature token.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Kindred Enchantment — Kithkin",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Two tokens on entry + a repeatable token sink"
+    },
+    {
+      "name": "Protective Response",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target attacking or blocking creature.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Convoke instant removal"
+    },
+    {
+      "name": "Ajani, Outland Chaperone",
+      "oracle_text": "+1: Create a 1/1 green and white Kithkin creature token.\n−2: Ajani deals 4 damage to target tapped creature.\n−8: Look at the top X cards of your library, where X is your life total. You may put any number of nonland permanent cards with mana value 3 or less from among them onto the battlefield. Then shuffle.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Interaction/Disruption",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Planeswalker — Ajani",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "A body every turn; -2 kills a tapped creature"
+    },
+    {
+      "name": "Morningtide's Light",
+      "oracle_text": "Exile any number of target creatures. At the beginning of the next end step, return those cards to the battlefield tapped under their owners' control.\nUntil your next turn, prevent all damage that would be dealt to you.\nExile Morningtide's Light.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Flicker",
+        "Damage Prevention"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Flicker",
+          "Damage Prevention"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Clears every blocker for one attack and prevents the crack-back"
+    },
+    {
+      "name": "Pestered Wellguard",
+      "oracle_text": "Whenever this creature becomes tapped, create a 1/1 blue and black Faerie creature token with flying.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "A flying Faerie each time it taps"
+    },
+    {
+      "name": "Merrow Skyswimmer",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying, vigilance\nWhen this creature enters, create a 1/1 white and blue Merfolk creature token.",
+      "mana_cost": "{3}{W/U}{W/U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Convoke flier + token; vigilance"
+    },
+    {
+      "name": "Kinbinding",
+      "oracle_text": "Creatures you control get +X/+X, where X is the number of creatures that entered the battlefield under your control this turn.\nAt the beginning of combat on your turn, create a 1/1 green and white Kithkin creature token.",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "The kill: self-fuelling +X/+X anthem"
+    },
+    {
+      "name": "Lofty Dreams",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nEnchant creature\nWhen this Aura enters, draw a card.\nEnchanted creature gets +2/+2 and has flying.",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Voltron/Equipment",
+        "Tokens",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "Convoke aura; draws a card and grants flying"
+    },
+    {
+      "name": "Hallowed Fountain",
+      "oracle_text": "({T}: Add {W} or {U}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "The pool's only untapped-capable WU dual"
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "WU dual, enters tapped"
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Fetch",
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Fetches a basic tapped"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 99,
+      "qty": 7,
+      "role": "Basic"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 99,
+      "qty": 5,
+      "role": "Basic"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Crib Swap",
+      "oracle_text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Unconditional exile removal",
+      "when_to_board": "vs a threat the maindeck cannot profitably block or race"
+    },
+    {
+      "name": "Pyrrhic Strike",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 2. (You may put two -1/-1 counters on a creature you control.)\nChoose one. If this spell's additional cost was paid, choose both instead.\n• Destroy target artifact or enchantment.\n• Destroy target creature with mana value 3 or greater.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Artifact/enchantment/MV3+ creature removal",
+      "when_to_board": "vs the cube's 11 artifacts + 21 enchantments, or a large blocker"
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Graveyard hate on a 3/3 changeling flier",
+      "when_to_board": "vs the cube's 39-card graveyard theme, its largest at 15% density"
+    },
+    {
+      "name": "Eclipsed Merrow",
+      "oracle_text": "When this creature enters, look at the top four cards of your library. You may reveal a Merfolk, Plains, or Island card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.",
+      "mana_cost": "{W/U}{W/U}{W/U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Merfolk Scout",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "A body that also digs 4 for a Merfolk, Plains or Island",
+      "when_to_board": "vs grindy decks, over Clachan Festival — this is the deck's only card selection"
+    },
+    {
+      "name": "Liminal Hold",
+      "oracle_text": "When this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "Exiles any nonland permanent an opponent controls",
+      "when_to_board": "vs a noncreature permanent, the class the maindeck concedes"
+    },
+    {
+      "name": "Sygg's Command",
+      "oracle_text": "Choose two —\n• Create a token that's a copy of target Merfolk you control.\n• Creatures target player controls gain lifelink until end of turn.\n• Target player draws a card.\n• Tap target creature. Put a stun counter on it.",
+      "mana_cost": "{1}{W}{U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Card Draw",
+        "Tap/Stun"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Tokens",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Card Draw",
+          "Tap/Stun"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Kindred Sorcery — Merfolk",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Copies a Merfolk token + a tempo or draw mode",
+      "when_to_board": "vs grindy decks where the maindeck's zero card advantage is exposed"
+    }
+  ],
+  "pitch": "A W/U token-swarm aggro deck that converts one turn's worth of bodies into lethal. Kinbinding reads 'Creatures you control get +X/+X, where X is the number of creatures that entered the battlefield under your control this turn' and 'At the beginning of combat on your turn, create a 1/1 green and white Kithkin creature token' — the second clause guarantees X is at least 1 in every one of my combats with no other cards in play, and 14 of 23 nonland cards put at least one more body onto the battlefield. The load-bearing rules fact is that convoke is a COST rather than an activated ability, so summoning-sick tokens created this turn are legal convoke fodder — the deck convokes with the bodies that cannot attack and attacks with the ones that can, which is why the tap-vs-attack tension that constrains a tap-trigger build barely exists here. Because a 1/1 swarm is answered by blockers rather than by removal, the deck carries Morningtide's Light to exile every blocker for exactly one attack, and points the anthem at evasion where it can.",
+  "strategy_es": "enjambre de fichas W/U con golpe alfa de Kinbinding",
+  "identity_es": "Un agro de enjambre de fichas W/U que convierte los cuerpos de un solo turno en letal. Kinbinding dice 'Creatures you control get +X/+X, where X is the number of creatures that entered the battlefield under your control this turn' y 'At the beginning of combat on your turn, create a 1/1 green and white Kithkin creature token'; la segunda cláusula garantiza que X sea al menos 1 en todos y cada uno de mis combates sin ninguna otra carta en juego, y 14 de 23 cartas no-tierra ponen al menos un cuerpo más en el campo de batalla. El hecho de reglas que sostiene la estructura es que el convoke es un COSTE y no una habilidad activada, así que las fichas con mareo de invocación creadas este turno son forraje legal de convoke: el mazo convoca con los cuerpos que no pueden atacar y ataca con los que sí, que es por lo que la tensión entre girar y atacar que limita a una construcción de disparos por giro apenas existe aquí. Como a un enjambre de 1/1 se le responde con bloqueadores y no con eliminación, el mazo lleva Morningtide's Light para exiliar cada bloqueador durante exactamente un ataque, y apunta el anthem hacia la evasión donde puede.",
+  "pitch_es": "Un agro de enjambre de fichas W/U que convierte los cuerpos de un solo turno en letal. Kinbinding dice 'Creatures you control get +X/+X, where X is the number of creatures that entered the battlefield under your control this turn' y 'At the beginning of combat on your turn, create a 1/1 green and white Kithkin creature token'; la segunda cláusula garantiza que X sea al menos 1 en todos y cada uno de mis combates sin ninguna otra carta en juego, y 14 de 23 cartas no-tierra ponen al menos un cuerpo más en el campo de batalla. El hecho de reglas que sostiene la estructura es que el convoke es un COSTE y no una habilidad activada, así que las fichas con mareo de invocación creadas este turno son forraje legal de convoke: el mazo convoca con los cuerpos que no pueden atacar y ataca con los que sí, que es por lo que la tensión entre girar y atacar que limita a una construcción de disparos por giro apenas existe aquí. Como a un enjambre de 1/1 se le responde con bloqueadores y no con eliminación, el mazo lleva Morningtide's Light para exiliar cada bloqueador durante exactamente un ataque, y apunta el anthem hacia la evasión donde puede."
+}

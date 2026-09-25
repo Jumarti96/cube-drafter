@@ -1,0 +1,629 @@
+{
+  "deck_name": "r-goblin-aggro",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-18T22:56:14Z",
+  "format": "40-card",
+  "strategy": "Mono-red Goblin aggro",
+  "colors": "R",
+  "identity": "A mono-red aggro deck built on the fastest curve Dominaria United allows: seven cards at mana value one and ten two-drops, so Rundvelt Hordemaster lands on turn two onto a board that is already attacking. All six mono-red Goblins are played at full copies and the lord makes each of them a 3/3, while Phoenix Chick, Viashino Branchrider and Squee provide haste from the first turn onward. Defiler of Instinct converts the deck's own permanent density into free damage, and Shivan Devastator is the single card that turns surplus lands into a flying finisher. The mana is flawless - sixteen Mountains, zero taplands, zero colour risk - which is the whole reason this build exists next to the Rakdos one.",
+  "restrictions": {
+    "base": "cube_mainboard, dominaria-united---main-set",
+    "commons_uncommons_max_2": "PASS - no name exceeds 2 copies across mainboard + sideboard; Dragon Whelp is 1 MB + 1 SB = 2.",
+    "rares_mythics_max_1_each": "PASS - each at 1 copy.",
+    "rares_mythics_max_5_total": "PASS - 5 of 5 used (Rundvelt Hordemaster, Squee Dubious Monarch, Shivan Devastator, Radha's Firebrand, Defiler of Instinct). Zero rare slots spent on the mana base.",
+    "basics_unlimited": "Mountain 16 - format-supplied, rarity-exempt.",
+    "colour_legality": "All 21 distinct nonland cards return a usable mode within core_colors [R] via effective_cost.best_mode; every off-colour kicker in the list (Sprouting Goblin {G}, Viashino Branchrider {2}{G}, Hurloon Battle Hymn {W}) is declined, which is a legal cast mode."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.08,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.893,
+      "raw_target": 16.107,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.08,
+    "pip_demand": {
+      "R": 26
+    },
+    "land_color_production": {
+      "R": 16
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Phoenix Chick",
+      "oracle_text": "Flying, haste\nThis creature can't block.\nWhenever you attack with three or more creatures, you may pay {R}{R}. If you do, return this card from your graveyard to the battlefield tapped and attacking with a +1/+1 counter on it.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Phoenix",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Standalone Threat",
+        "Recursion"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Viashino Branchrider",
+      "oracle_text": "Kicker {2}{G} (You may pay an additional {2}{G} as you cast this spell.)\nHaste\nIf this creature was kicked, it enters with two +1/+1 counters on it.\n{2}{R}: This creature gets +2/+0 until end of turn.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Lizard Warrior",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Kicker/Scaling",
+        "Counters (+1/+1)",
+        "Standalone Threat",
+        "Combat Trick",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hammerhand",
+      "oracle_text": "Enchant creature\nWhen this Aura enters, target creature can't block this turn.\nEnchanted creature gets +1/+1 and has haste.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Enabler/Fodder",
+        "Combat Trick",
+        "Evasion Grant"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shivan Devastator",
+      "oracle_text": "Flying, haste\nThis creature enters with X +1/+1 counters on it.",
+      "mana_cost": "{X}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Dragon Hydra",
+      "rarity": "mythic",
+      "power": "0",
+      "toughness": "0",
+      "tags": [
+        "Counters (+1/+1)",
+        "Kicker/Scaling",
+        "Standalone Threat"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rundvelt Hordemaster",
+      "oracle_text": "Other Goblins you control get +1/+1.\nWhenever this creature or another Goblin you control dies, exile the top card of your library. If it's a Goblin creature card, you may cast that card until the end of your next turn.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Goblin Warrior",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Card Advantage"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Goblin Picker",
+      "oracle_text": "{R}, {T}, Discard a card: Draw a card.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Goblin",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sprouting Goblin",
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nWhen this creature enters, if it was kicked, search your library for a land card with a basic land type, reveal it, put it into your hand, then shuffle.\n{R}, {T}, Sacrifice a land: Draw a card.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Goblin Druid",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Kicker/Scaling",
+        "Lands-Matter",
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Land Fetch",
+        "Card Draw",
+        "Sacrifice Outlet",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radha's Firebrand",
+      "oracle_text": "Whenever this creature attacks, target creature defending player controls with power less than this creature's power can't block this turn.\nDomain — {5}{R}: This creature gets +2/+2 until end of turn. This ability costs {1} less to activate for each basic land type among lands you control. Activate only once each turn.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Warrior",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Domain",
+        "Standalone Threat",
+        "Evasion Enabler",
+        "Pump"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Yavimaya Steelcrusher",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\n{1}, Sacrifice this creature: Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Ape Warrior",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Targeted Removal",
+        "Enlist",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Strike",
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Squee, Dubious Monarch",
+      "oracle_text": "Haste\nWhenever Squee attacks, create a 1/1 red Goblin creature token that's tapped and attacking.\nYou may cast this card from your graveyard by paying {3}{R} and exiling four other cards from your graveyard rather than paying its mana cost.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Goblin Noble",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tokens",
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Flowstone Kavu",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\n{R}: This creature gets +1/-1 until end of turn.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Kavu",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Standalone Threat",
+        "Pump"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hurloon Battle Hymn",
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nHurloon Battle Hymn deals 4 damage to target creature or planeswalker. If this spell was kicked, you gain 4 life.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Defiler of Instinct",
+      "oracle_text": "First strike\nAs an additional cost to cast red permanent spells, you may pay 2 life. Those spells cost {R} less to cast if you paid life this way. This effect reduces only the amount of red mana you pay.\nWhenever you cast a red permanent spell, this creature deals 1 damage to any target.",
+      "mana_cost": "{2}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Phyrexian Kavu",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Cost Reduction"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dragon Whelp",
+      "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step.",
+      "mana_cost": "{2}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Dragon",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Combat Trick"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 16,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Smash to Dust",
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target creature with defender.\n• Smash to Dust deals 1 damage to each creature your opponents control.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against the 15-card artifact class (Vanquisher's Axe, Hero's Heirloom, Golden Argosy, Karn's Sylex, Weatherlight Compleated) and against go-wide token decks - mode 3 is 'deals 1 damage to each creature your opponents control'."
+    },
+    {
+      "name": "Jaya's Firenado",
+      "oracle_text": "Jaya's Firenado deals 5 damage to target creature or planeswalker. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against the pool's largest bodies, which 3 damage does not answer - 'deals 5 damage to target creature or planeswalker' kills Sheoldred, Tyrannical Pitlord, Silverback Elder, Mossbeard Ancient and every planeswalker in the cube."
+    },
+    {
+      "name": "Flowstone Infusion",
+      "oracle_text": "Target creature gets +2/-2 until end of turn.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against X/1 and X/2 decks - 'Target creature gets +2/-2 until end of turn' for {R} is the cheapest instant-speed answer in the colour, and it doubles as a combat trick on our own attacker."
+    },
+    {
+      "name": "Thrill of Possibility",
+      "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Extra-Cost"
+      ],
+      "qty": 2,
+      "role": "Infrastructure",
+      "board": "sideboard",
+      "when_to_board": "Against control and grindy midrange, where the deck's own gas runs out first - 'discard a card, draw two cards' at instant speed converts a flooded or dead card into two live ones."
+    },
+    {
+      "name": "Dragon Whelp",
+      "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step.",
+      "mana_cost": "{2}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Dragon",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Combat Trick"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "sideboard",
+      "when_to_board": "The second copy comes in against the 51-card evasion class (20.7% of the cube) - a 2/3 flier that blocks their fliers and turns surplus mana into damage via '{R}: This creature gets +1/+0'."
+    },
+    {
+      "name": "Meria's Outrider",
+      "oracle_text": "Reach\nDomain — When this creature enters, it deals damage to each opponent equal to the number of basic land types among lands you control.",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Elf Archer",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Domain",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Life Drain"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against decks whose whole clock is in the air - a 4/4 with Reach for {4}{R} walls anything the cube flies at us. Note its Domain trigger deals exactly 1 damage here (mono-red controls one basic land type); it is boarded for the body, not the trigger."
+    }
+  ],
+  "pitch": "A mono-red aggro deck built on the fastest curve Dominaria United allows: seven cards at mana value one and ten two-drops, so Rundvelt Hordemaster lands on turn two onto a board that is already attacking. All six mono-red Goblins are played at full copies and the lord makes each of them a 3/3, while Phoenix Chick, Viashino Branchrider and Squee provide haste from the first turn onward. Defiler of Instinct converts the deck's own permanent density into free damage, and Shivan Devastator is the single card that turns surplus lands into a flying finisher. The mana is flawless - sixteen Mountains, zero taplands, zero colour risk - which is the whole reason this build exists next to the Rakdos one.",
+  "strategy_es": "agro de Goblins mono rojo",
+  "identity_es": "Un agro mono rojo construido sobre la curva más rápida que permite Dominaria United: siete cartas de valor de maná uno y diez de dos, así que Rundvelt Hordemaster aterriza en el turno dos sobre un tablero que ya está atacando. Los seis Goblins mono rojos se juegan a copias completas y el señor convierte a cada uno en un 3/3, mientras Phoenix Chick, Viashino Branchrider y Squee aportan prisa desde el primer turno. Defiler of Instinct convierte la propia densidad de permanentes del mazo en daño gratuito, y Shivan Devastator es la única carta que convierte las tierras sobrantes en un finalizador volador. El maná es impecable — dieciséis Mountains, cero tierras giradas, cero riesgo de color — que es toda la razón por la que esta construcción existe junto a la Rakdos.",
+  "pitch_es": "Un agro mono rojo construido sobre la curva más rápida que permite Dominaria United: siete cartas de valor de maná uno y diez de dos, así que Rundvelt Hordemaster aterriza en el turno dos sobre un tablero que ya está atacando. Los seis Goblins mono rojos se juegan a copias completas y el señor convierte a cada uno en un 3/3, mientras Phoenix Chick, Viashino Branchrider y Squee aportan prisa desde el primer turno. Defiler of Instinct convierte la propia densidad de permanentes del mazo en daño gratuito, y Shivan Devastator es la única carta que convierte las tierras sobrantes en un finalizador volador. El maná es impecable — dieciséis Mountains, cero tierras giradas, cero riesgo de color — que es toda la razón por la que esta construcción existe junto a la Rakdos."
+}

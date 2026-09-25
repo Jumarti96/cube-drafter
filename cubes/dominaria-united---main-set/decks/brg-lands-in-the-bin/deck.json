@@ -1,0 +1,729 @@
+{
+  "deck_name": "brg-lands-in-the-bin",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-18T16:23:37Z",
+  "format": "40-card",
+  "strategy": "midrange",
+  "colors": "BRG",
+  "identity": "Jund grindy-value midrange whose engine is the conversion of surplus lands into cards. Twelve of the twenty-three nonland cards can put a land into the graveyard - Sprouting Goblin and Goblin Picker as repeatable tap outlets, Thrill of Possibility and Shadow Prophecy at instant speed, Braids at every end step, Liliana every turn, Soul of Windgrace at will, Uurg on every upkeep - and every land that reaches the bin is a point of power on Uurg, Spawn of Turg, whose power is literally the count of land cards in your graveyard. Soul of Windgrace and Urborg Repossession recycle those same lands back into play or into hand, so the resource is rented rather than spent. The game ends with combat damage from a 4-7 power Uurg, a 5/4 Soul of Windgrace that rebuys a land on every attack, and Sheoldred draining two life on each of the deck's many draws, backed by seven pieces of removal and Nemata, Primeval Warden exiling everything that dies on the other side of the table.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "max 5 rare+mythic cards total across mainboard and sideboard",
+    "basics": "unlimited, rarity-exempt"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 3,
+    "cantrip_count": 0,
+    "accel_count": 3,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.39,
+      "reference_avg_mv": 2.5,
+      "accel": 3,
+      "adjustment": -0.647,
+      "raw_target": 16.353,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.39,
+    "pip_demand": {
+      "B": 19,
+      "R": 9,
+      "G": 6
+    },
+    "land_color_production": {
+      "B": 11,
+      "G": 7,
+      "R": 7,
+      "U": 1,
+      "W": 1
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 55.9,
+        "prod_pct": 64.7,
+        "gap": -8.8,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 17.6,
+        "prod_pct": 41.2,
+        "gap": -23.6,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 26.5,
+        "prod_pct": 41.2,
+        "gap": -14.7,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Cut Down",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "89",
+      "role": "Interaction — 1-mana instant removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Strike",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "tla",
+      "collector_number": "146",
+      "role": "Interaction — 3 damage any target",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tear Asunder",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nExile target artifact or enchantment. If this spell was kicked, exile target nonland permanent instead.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoc",
+      "collector_number": "109",
+      "role": "Interaction — modal exile (kicked: any nonland permanent)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Extinguish the Light",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "94",
+      "role": "Interaction — unconditional creature/PW removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Liliana of the Veil",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Legendary Planeswalker — Liliana",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "+1: Each player discards a card.\n−2: Target player sacrifices a creature.\n−6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "475",
+      "role": "Interaction — symmetric discard (bins our lands) + edict",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sprouting Goblin",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Creature — Goblin Druid",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nWhen this creature enters, if it was kicked, search your library for a land card with a basic land type, reveal it, put it into your hand, then shuffle.\n{R}, {T}, Sacrifice a land: Draw a card.",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoc",
+      "collector_number": "90",
+      "role": "Engine — {R},{T}, Sac a land: Draw a card",
+      "board": "mainboard"
+    },
+    {
+      "name": "Goblin Picker",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Creature — Goblin",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "{R}, {T}, Discard a card: Draw a card.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "set": "dmu",
+      "collector_number": "128",
+      "role": "Engine — {R},{T}, Discard a card: Draw a card",
+      "board": "mainboard"
+    },
+    {
+      "name": "Thrill of Possibility",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "fdn",
+      "collector_number": "210",
+      "role": "Engine — discard a land, draw two",
+      "board": "mainboard"
+    },
+    {
+      "name": "Urborg Repossession",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Kicker {1}{G} (You may pay an additional {1}{G} as you cast this spell.)\nReturn target creature card from your graveyard to your hand. You gain 2 life. If this spell was kicked, return another target permanent card from your graveyard to your hand.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "114",
+      "role": "Payoff — kicked, returns a land AND a creature from the graveyard to hand",
+      "board": "mainboard"
+    },
+    {
+      "name": "Uurg, Spawn of Turg",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Legendary Creature — Frog Beast",
+      "mana_cost": "{B}{B}{G}",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Uurg's power is equal to the number of land cards in your graveyard.\nAt the beginning of your upkeep, surveil 1. (Look at the top card of your library. You may put that card into your graveyard.)\n{B}{G}, Sacrifice a land: You gain 2 life.",
+      "rarity": "uncommon",
+      "power": "*",
+      "toughness": "5",
+      "set": "eoc",
+      "collector_number": "127",
+      "role": "Payoff — power = land cards in your graveyard; upkeep surveil; sac-a-land outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Braids, Arisen Nightmare",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Legendary Creature — Nightmare",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "At the beginning of your end step, you may sacrifice an artifact, creature, enchantment, land, or planeswalker. If you do, each opponent may sacrifice a permanent of their choice that shares a card type with it. For each opponent who doesn't, that player loses 2 life and you draw a card.",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "set": "eoc",
+      "collector_number": "82",
+      "role": "Engine — end-step land sacrifice into draw/drain",
+      "board": "mainboard"
+    },
+    {
+      "name": "Soul of Windgrace",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Legendary Creature — Cat Avatar",
+      "mana_cost": "{1}{B}{R}{G}",
+      "colors": [
+        "B",
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "G",
+        "R"
+      ],
+      "oracle_text": "Whenever Soul of Windgrace enters or attacks, you may put a land card from a graveyard onto the battlefield tapped under your control.\n{G}, Discard a land card: You gain 3 life.\n{1}{R}, Discard a land card: Draw a card.\n{2}{B}, Discard a land card: Soul of Windgrace gains indestructible until end of turn. Tap it.",
+      "rarity": "mythic",
+      "power": "5",
+      "toughness": "4",
+      "set": "eoc",
+      "collector_number": "126",
+      "role": "Payoff/Engine — replays lands from graveyard; discard-a-land outlets",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "5",
+      "set": "dmu",
+      "collector_number": "107",
+      "role": "Threat — 4/5 deathtouch; drain on every draw",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shadow Prophecy",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Domain — Look at the top X cards of your library, where X is the number of basic land types among lands you control. Put up to two of them into your hand and the rest into your graveyard. You lose 2 life.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "105",
+      "role": "Engine - instant-speed dig that bins the remainder (judge-credited keystone, restored)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Yavimaya Iconoclast",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Creature — Elf",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nTrample\nWhen this creature enters, if it was kicked, it gets +1/+1 and gains haste until end of turn.",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "set": "dmu",
+      "collector_number": "190",
+      "role": "Threat - 3/2 trample two-drop; kicked {R} for +1/+1 and haste",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nemata, Primeval Warden",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Legendary Creature — Treefolk",
+      "mana_cost": "{2}{B}{G}",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Reach\nIf a creature an opponent controls would die, exile it instead. When you do, create a 1/1 green Saproling creature token.\n{G}, Sacrifice a Saproling: Nemata gets +2/+2 until end of turn.\n{1}{B}, Sacrifice two Saprolings: Draw a card.",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "set": "dmu",
+      "collector_number": "209",
+      "role": "Threat/Answer - exiles opposing creatures that would die (graveyard hate), reach, Saproling draw outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "qty": 6,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "",
+      "role": "Land — B",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "({T}: Add {G}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "",
+      "role": "Land — G",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "({T}: Add {R}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "",
+      "role": "Land — R",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunted Mire",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "soc",
+      "collector_number": "379",
+      "role": "Land — BG dual (Swamp Forest), enters tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geothermal Bog",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dsc",
+      "collector_number": "278",
+      "role": "Land — BR dual (Swamp Mountain), enters tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wooded Ridgeline",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Land — Mountain Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "oracle_text": "({T}: Add {R} or {G}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "260",
+      "role": "Land — RG dual (Mountain Forest), enters tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Crystal Grotto",
+      "qty": 1,
+      "cmc": 0,
+      "type_line": "Land",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "When this land enters, scry 1.\n{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "woe",
+      "collector_number": "254",
+      "role": "Land — scry 1, {1},{T}: any colour",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Broken Wings",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dft",
+      "collector_number": "156",
+      "role": "Answer - artifact / enchantment / flier",
+      "board": "sideboard",
+      "when_to_board": "vs artifact, enchantment or evasion decks (evasion is 51 cards / 21% of the cube)"
+    },
+    {
+      "name": "Tear Asunder",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nExile target artifact or enchantment. If this spell was kicked, exile target nonland permanent instead.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoc",
+      "collector_number": "109",
+      "role": "Answer - exile any nonland permanent when kicked",
+      "board": "sideboard",
+      "when_to_board": "vs resilient noncreature permanents"
+    },
+    {
+      "name": "Choking Miasma",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nIf this spell was kicked, put a +1/+1 counter on a creature you control.\nAll creatures get -2/-2 until end of turn.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "86",
+      "role": "Sweeper - all creatures -2/-2",
+      "board": "sideboard",
+      "when_to_board": "vs go-wide token boards (Tokens is the cube's 2nd-largest cluster at 38 cards)"
+    },
+    {
+      "name": "Smash to Dust",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target creature with defender.\n• Smash to Dust deals 1 damage to each creature your opponents control.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "144",
+      "role": "Answer - modal: destroy artifact / destroy defender / 1 dmg to each opposing creature",
+      "board": "sideboard",
+      "when_to_board": "vs artifacts, Defender-Matters decks, or x/1 token swarms"
+    },
+    {
+      "name": "Snarespinner",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Creature — Spider",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Reach\nWhenever this creature blocks a creature with flying, this creature gets +2/+0 until end of turn.",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "179",
+      "role": "Blocker - reach, +2/+0 when blocking a flier",
+      "board": "sideboard",
+      "when_to_board": "vs flier-based aggro"
+    },
+    {
+      "name": "Extinguish the Light",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "94",
+      "role": "Answer - unconditional destroy creature or planeswalker",
+      "board": "sideboard",
+      "when_to_board": "vs single-large-threat and planeswalker decks"
+    },
+    {
+      "name": "Knight of Dusk's Shadow",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nYour opponents can't gain life.\n{1}{B}: This creature gets +1/+1 until end of turn.",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "set": "dmu",
+      "collector_number": "96",
+      "role": "Hate - 'Your opponents can't gain life'",
+      "board": "sideboard",
+      "when_to_board": "vs the cube's 22-card lifegain class (8.9% density), which the deck otherwise has zero answers to"
+    }
+  ],
+  "pitch": "Jund grindy-value midrange whose engine is the conversion of surplus lands into cards. Twelve of the twenty-three nonland cards can put a land into the graveyard - Sprouting Goblin and Goblin Picker as repeatable tap outlets, Thrill of Possibility and Shadow Prophecy at instant speed, Braids at every end step, Liliana every turn, Soul of Windgrace at will, Uurg on every upkeep - and every land that reaches the bin is a point of power on Uurg, Spawn of Turg, whose power is literally the count of land cards in your graveyard. Soul of Windgrace and Urborg Repossession recycle those same lands back into play or into hand, so the resource is rented rather than spent. The game ends with combat damage from a 4-7 power Uurg, a 5/4 Soul of Windgrace that rebuys a land on every attack, and Sheoldred draining two life on each of the deck's many draws, backed by seven pieces of removal and Nemata, Primeval Warden exiling everything that dies on the other side of the table.",
+  "strategy_es": "midrange",
+  "identity_es": "Midrange Jund de valor machacón cuyo motor es la conversión de tierras sobrantes en cartas. Doce de las veintitrés cartas no-tierra pueden poner una tierra en el cementerio — Sprouting Goblin y Goblin Picker como medios repetibles de giro, Thrill of Possibility y Shadow Prophecy a velocidad de instantáneo, Braids en cada paso final, Liliana cada turno, Soul of Windgrace a voluntad, Uurg en cada mantenimiento — y cada tierra que llega al cementerio es un punto de fuerza en Uurg, Spawn of Turg, cuya fuerza es literalmente el recuento de cartas de tierra en tu cementerio. Soul of Windgrace y Urborg Repossession reciclan esas mismas tierras de vuelta al juego o a la mano, así que el recurso se alquila en lugar de gastarse. La partida termina con daño de combate de un Uurg de 4-7 de fuerza, un Soul of Windgrace 5/4 que recompra una tierra en cada ataque, y Sheoldred drenando dos vidas en cada uno de los muchos robos del mazo, respaldado por siete piezas de eliminación y Nemata, Primeval Warden exiliando todo lo que muere al otro lado de la mesa.",
+  "pitch_es": "Midrange Jund de valor machacón cuyo motor es la conversión de tierras sobrantes en cartas. Doce de las veintitrés cartas no-tierra pueden poner una tierra en el cementerio — Sprouting Goblin y Goblin Picker como medios repetibles de giro, Thrill of Possibility y Shadow Prophecy a velocidad de instantáneo, Braids en cada paso final, Liliana cada turno, Soul of Windgrace a voluntad, Uurg en cada mantenimiento — y cada tierra que llega al cementerio es un punto de fuerza en Uurg, Spawn of Turg, cuya fuerza es literalmente el recuento de cartas de tierra en tu cementerio. Soul of Windgrace y Urborg Repossession reciclan esas mismas tierras de vuelta al juego o a la mano, así que el recurso se alquila en lugar de gastarse. La partida termina con daño de combate de un Uurg de 4-7 de fuerza, un Soul of Windgrace 5/4 que recompra una tierra en cada ataque, y Sheoldred drenando dos vidas en cada uno de los muchos robos del mazo, respaldado por siete piezas de eliminación y Nemata, Primeval Warden exiliando todo lo que muere al otro lado de la mesa."
+}

@@ -1,0 +1,522 @@
+{
+  "deck_name": "w-recursive-aura-voltron",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-28T02:58:44Z",
+  "format": "40-card",
+  "strategy": "midrange voltron",
+  "colors": "W",
+  "identity": "A mono-white midrange Voltron deck built on a single rule: every Aura in it either comes back, replaces itself, or brings a body. Gryff's Boon returns from the graveyard for {3}{W}, Twinblade Invocation is recast via Disturb and then exiles itself rather than dying again, Cathar's Call banks a 1/1 Human every end step whether or not the host survives, and Faith Unbroken exiles an opposing creature on the way in so it is removal and a suit on one card. The opponent's removal spell therefore trades one-for-one at worst instead of two-for-one'ing, and a fresh host is already on the board when it resolves. Sixteen untapped Plains means zero fixing cost and no tapland tax -- the price is no access to the stack and no reach.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": []
+  },
+  "max_rares_mythics": 5,
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 2,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.33,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.56,
+      "raw_target": 16.44,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.33,
+    "pip_demand": {
+      "W": 27
+    },
+    "land_color_production": {
+      "W": 16
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "W": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Gryff's Boon",
+      "qty": 2,
+      "role": "payoff-recursive-aura",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +1/+0 and has flying.\n{3}{W}: Return this card from your graveyard to the battlefield attached to target creature. Activate only as a sorcery.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "25"
+    },
+    {
+      "name": "Twinblade Geist // Twinblade Invocation",
+      "qty": 2,
+      "role": "payoff-recursive-aura",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Creature — Spirit Warrior",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Double strike\nDisturb {2}{W} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nEnchant creature\nEnchanted creature has double strike.\nIf Twinblade Invocation would be put into a graveyard from anywhere, exile it instead.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "47"
+    },
+    {
+      "name": "Cathar's Call",
+      "qty": 2,
+      "role": "payoff-recursive-aura",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant creature\nEnchanted creature has vigilance and \"At the beginning of your end step, create a 1/1 white Human creature token.\"",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "16"
+    },
+    {
+      "name": "Faith Unbroken",
+      "qty": 2,
+      "role": "payoff-removal-aura",
+      "board": "mainboard",
+      "cmc": 4,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield.\nEnchanted creature gets +2/+2.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "21"
+    },
+    {
+      "name": "Thraben Inspector",
+      "qty": 2,
+      "role": "threat-host",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Creature — Human Soldier",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "power": "1",
+      "toughness": "2",
+      "set": "inr",
+      "collector_number": "45"
+    },
+    {
+      "name": "Lunarch Veteran // Luminous Phantom",
+      "qty": 2,
+      "role": "threat-host",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Creature — Human Cleric",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Whenever another creature you control enters, you gain 1 life.\nDisturb {1}{W} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nFlying\nWhenever another creature you control leaves the battlefield, you gain 1 life.\nIf Luminous Phantom would be put into a graveyard from anywhere, exile it instead.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "32"
+    },
+    {
+      "name": "Cathar Commando",
+      "qty": 2,
+      "role": "threat-host",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "power": "3",
+      "toughness": "1",
+      "set": "inr",
+      "collector_number": "15"
+    },
+    {
+      "name": "Dauntless Cathar",
+      "qty": 2,
+      "role": "threat-host",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "{1}{W}, Exile this card from your graveyard: Create a 1/1 white Spirit creature token with flying. Activate only as a sorcery.",
+      "power": "3",
+      "toughness": "2",
+      "set": "inr",
+      "collector_number": "19"
+    },
+    {
+      "name": "Hopeful Initiate",
+      "qty": 1,
+      "role": "threat-host",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Creature — Human Warlock",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Training (Whenever this creature attacks with another creature with greater power, put a +1/+1 counter on this creature.)\n{2}{W}, Remove two +1/+1 counters from among creatures you control: Destroy target artifact or enchantment.",
+      "power": "1",
+      "toughness": "2",
+      "set": "inr",
+      "collector_number": "27"
+    },
+    {
+      "name": "Restoration Angel",
+      "qty": 1,
+      "role": "threat-host",
+      "board": "mainboard",
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, you may exile target non-Angel creature you control, then return that card to the battlefield under your control.",
+      "power": "3",
+      "toughness": "4",
+      "set": "inr",
+      "collector_number": "38"
+    },
+    {
+      "name": "Fiend Hunter",
+      "qty": 2,
+      "role": "interaction-removal",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Creature — Human Cleric",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, you may exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "power": "1",
+      "toughness": "3",
+      "set": "inr",
+      "collector_number": "22"
+    },
+    {
+      "name": "Gisela, the Broken Blade",
+      "qty": 1,
+      "role": "threat-evasive-host",
+      "board": "mainboard",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Angel Horror",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Flying, first strike, lifelink\nAt the beginning of your end step, if you both own and control Gisela and a creature named Bruna, the Fading Light, exile them, then meld them into Brisela, Voice of Nightmares.",
+      "power": "4",
+      "toughness": "3",
+      "set": "inr",
+      "collector_number": "24"
+    },
+    {
+      "name": "Valorous Stance",
+      "qty": 2,
+      "role": "interaction-protection",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "48"
+    },
+    {
+      "name": "Wedding Announcement // Wedding Festivity",
+      "qty": 1,
+      "role": "engine-card-flow",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "At the beginning of your end step, put an invitation counter on this enchantment. If you attacked with two or more creatures this turn, draw a card. Otherwise, create a 1/1 white Human creature token. Then if this enchantment has three or more invitation counters on it, transform it.\n//\nCreatures you control get +1/+1.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "51"
+    },
+    {
+      "name": "Plains",
+      "qty": 16,
+      "role": "land-basic",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "set": null,
+      "collector_number": null
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Soul-Guide Gryff",
+      "qty": 1,
+      "role": "hate-graveyard",
+      "board": "sideboard",
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "mana_cost": "{4}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "power": "3",
+      "toughness": "4",
+      "set": "inr",
+      "collector_number": "40"
+    },
+    {
+      "name": "Bound by Moonsilver",
+      "qty": 2,
+      "role": "hate-single-large-threat",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack, block, or transform.\nSacrifice another permanent: Attach this Aura to target creature. Activate only as a sorcery and only once each turn.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "13"
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "qty": 2,
+      "role": "hate-tribal-creatures",
+      "board": "sideboard",
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "power": "3",
+      "toughness": "2",
+      "set": "inr",
+      "collector_number": "39"
+    },
+    {
+      "name": "Subjugator Angel",
+      "qty": 1,
+      "role": "hate-wide-boards",
+      "board": "sideboard",
+      "cmc": 6,
+      "type_line": "Creature — Angel",
+      "mana_cost": "{4}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nWhen this creature enters, tap all creatures your opponents control.",
+      "power": "4",
+      "toughness": "3",
+      "set": "inr",
+      "collector_number": "43"
+    },
+    {
+      "name": "Avacynian Priest",
+      "qty": 2,
+      "role": "hate-nonhuman-blockers",
+      "board": "sideboard",
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "{1}, {T}: Tap target non-Human creature.",
+      "power": "1",
+      "toughness": "2",
+      "set": "inr",
+      "collector_number": "12"
+    },
+    {
+      "name": "Blazing Torch",
+      "qty": 1,
+      "role": "flex-reach",
+      "board": "sideboard",
+      "cmc": 1,
+      "type_line": "Artifact — Equipment",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Equipped creature can't be blocked by Vampires or Zombies.\nEquipped creature has \"{T}, Sacrifice Blazing Torch: Blazing Torch deals 2 damage to any target.\"\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "254"
+    },
+    {
+      "name": "Mausoleum Guard",
+      "qty": 1,
+      "role": "hate-evasion-blockers",
+      "board": "sideboard",
+      "cmc": 4,
+      "type_line": "Creature — Human Scout",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature dies, create two 1/1 white Spirit creature tokens with flying.",
+      "power": "2",
+      "toughness": "2",
+      "set": "inr",
+      "collector_number": "33"
+    }
+  ],
+  "pitch": "A mono-white midrange Voltron deck built on a single rule: every Aura in it either comes back, replaces itself, or brings a body. Gryff's Boon returns from the graveyard for {3}{W}, Twinblade Invocation is recast via Disturb and then exiles itself rather than dying again, Cathar's Call banks a 1/1 Human every end step whether or not the host survives, and Faith Unbroken exiles an opposing creature on the way in so it is removal and a suit on one card. The opponent's removal spell therefore trades one-for-one at worst instead of two-for-one'ing, and a fresh host is already on the board when it resolves. Sixteen untapped Plains means zero fixing cost and no tapland tax -- the price is no access to the stack and no reach.",
+  "strategy_es": "voltron midrange",
+  "identity_es": "Un Voltron midrange mono blanco construido sobre una única regla: cada aura que lleva o bien vuelve, o bien se reemplaza, o bien trae un cuerpo. Gryff's Boon vuelve del cementerio por {3}{W}, Twinblade Invocation se relanza vía Disturb y luego se exilia en lugar de morir otra vez, Cathar's Call guarda un Humano 1/1 en cada paso final sobreviva o no el anfitrión, y Faith Unbroken exilia una criatura rival al entrar, así que es eliminación y equipo en una sola carta. El hechizo de eliminación del rival intercambia por tanto uno a uno en el peor de los casos en lugar de hacer un dos por uno, y ya hay un anfitrión nuevo en el tablero cuando resuelve. Dieciséis Plains desgiradas significan cero coste de fijado y ningún impuesto de tierras giradas; el precio es no tener acceso a la pila ni alcance.",
+  "pitch_es": "Un Voltron midrange mono blanco construido sobre una única regla: cada aura que lleva o bien vuelve, o bien se reemplaza, o bien trae un cuerpo. Gryff's Boon vuelve del cementerio por {3}{W}, Twinblade Invocation se relanza vía Disturb y luego se exilia en lugar de morir otra vez, Cathar's Call guarda un Humano 1/1 en cada paso final sobreviva o no el anfitrión, y Faith Unbroken exilia una criatura rival al entrar, así que es eliminación y equipo en una sola carta. El hechizo de eliminación del rival intercambia por tanto uno a uno en el peor de los casos en lugar de hacer un dos por uno, y ya hay un anfitrión nuevo en el tablero cuando resuelve. Dieciséis Plains desgiradas significan cero coste de fijado y ningún impuesto de tierras giradas; el precio es no tener acceso a la pila ni alcance."
+}

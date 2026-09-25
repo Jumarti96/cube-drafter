@@ -1,0 +1,667 @@
+{
+  "deck_name": "wg-aura-voltron",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-30T02:35:00Z",
+  "format": "40-card",
+  "strategy": "GW aura-voltron aggro",
+  "colors": "WG",
+  "identity": "A GW aura-voltron aggro deck. It deploys a resilient, evasive carrier and enchants it into a lethal flier: Thran Golem becomes a 7/7 flying first-strike trampler off any single +2/+2 aura (base 3/3, +2/+2 from its own ability plus the aura), and Griffin Guide grants flight to anything. Mesa Enchantress (x2) draws a card off every aura cast, so trading auras into removal is card-neutral; Sylvan Library and Enlightened Tutor keep the carrier+aura combination consistent. Lyra Dawnbringer is a standalone finisher that needs no suit-up, and a flyer-dense carrier base (Voice of All, Serra Angel, Mystic Enforcer/Zealot) means one removal spell does not strand the auras. The clock closes in the air around turn 5-6.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "only_from": {},
+    "excluded": [],
+    "build_constraint": "max 5 rare/mythic total mainboard+sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 3,
+    "cantrip_count": 0,
+    "accel_count": 3,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.78,
+      "reference_avg_mv": 2.5,
+      "accel": 3,
+      "adjustment": -0.127,
+      "raw_target": 16.873,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.78,
+    "pip_demand": {
+      "W": 22,
+      "G": 7
+    },
+    "land_color_production": {
+      "W": 13,
+      "G": 6
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 24.1,
+        "prod_pct": 35.3,
+        "gap": -11.2,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 75.9,
+        "prod_pct": 76.5,
+        "gap": -0.6,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Mesa Enchantress",
+      "cmc": 3,
+      "type_line": "Creature — Human Druid",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever you cast an enchantment spell, you may draw a card.",
+      "role": "Aura cantrip engine",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Thran Golem",
+      "cmc": 5,
+      "type_line": "Artifact Creature — Golem",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "As long as this creature is enchanted, it gets +2/+2 and has flying, first strike, and trample.",
+      "role": "Aura payoff carrier",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Voice of All",
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nAs this creature enters, choose a color.\nThis creature has protection from the chosen color.",
+      "role": "Protection flyer carrier",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Mystic Enforcer",
+      "cmc": 4,
+      "type_line": "Creature — Human Nomad Mystic",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Protection from black\nThreshold — As long as there are seven or more cards in your graveyard, this creature gets +3/+3 and has flying.",
+      "role": "Pro-black threshold flyer",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Mystic Zealot",
+      "cmc": 4,
+      "type_line": "Creature — Human Nomad Mystic",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Threshold — As long as there are seven or more cards in your graveyard, this creature gets +1/+1 and has flying.",
+      "role": "Threshold flyer",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Serra Angel",
+      "cmc": 5,
+      "type_line": "Creature — Angel",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "role": "Evasive finisher",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Lyra Dawnbringer",
+      "cmc": 5,
+      "type_line": "Legendary Creature — Angel",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Flying\nFirst strike (This creature deals combat damage before creatures without first strike.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)\nOther Angels you control get +1/+1 and have lifelink.",
+      "role": "Standalone bomb finisher",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Savannah Lions",
+      "cmc": 1,
+      "type_line": "Creature — Cat",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "",
+      "role": "Turn-1 carrier",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Birds of Paradise",
+      "cmc": 1,
+      "type_line": "Creature — Bird",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\n{T}: Add one mana of any color.",
+      "role": "Ramp / fixing",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Werebear",
+      "cmc": 2,
+      "type_line": "Creature — Human Bear Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{T}: Add {G}.\nThreshold — This creature gets +3/+3 as long as there are seven or more cards in your graveyard.",
+      "role": "Dork / threshold beater",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Enlightened Tutor",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Search your library for an artifact or enchantment card, reveal it, then shuffle and put that card on top.",
+      "role": "Aura/artifact tutor",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Swords to Plowshares",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "role": "Premium removal",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Radiant's Judgment",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target creature with power 4 or greater.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "role": "Removal / cycling",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Wax // Wane",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature gets +2/+2 until end of turn.\n//\nDestroy target enchantment.",
+      "role": "Trick / enchantment removal",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Sevinne's Reclamation",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Return target permanent card with mana value 3 or less from your graveyard to the battlefield. If this spell was cast from a graveyard, you may copy this spell and may choose a new target for the copy.\nFlashback {4}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "role": "Carrier/aura recursion",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Griffin Guide",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2 and has flying.\nWhen enchanted creature dies, create a 2/2 white Griffin creature token with flying.",
+      "role": "Evasion aura + insurance",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Seton's Desire",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2.\nThreshold — As long as there are seven or more cards in your graveyard, all creatures able to block enchanted creature do so.",
+      "role": "Pump / lure aura",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Improvised Armor",
+      "cmc": 4,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/+5.\nCycling {3} ({3}, Discard this card: Draw a card.)",
+      "role": "Big buff / cycling",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Sun Clasp",
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +1/+3.\n{W}: Return enchanted creature to its owner's hand.",
+      "role": "Protective bounce aura",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Pacifism",
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+      "role": "Removal aura",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Wild Growth",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional {G}.",
+      "role": "Ramp aura",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Sylvan Library",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "At the beginning of your draw step, you may draw two additional cards. If you do, choose two cards in your hand drawn this turn. For each of those cards, pay 4 life or put the card on top of your library.",
+      "role": "Card advantage (Mesa fuel)",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Radiant Grove",
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "role": "",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Drifting Meadow",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "This land enters tapped.\n{T}: Add {W}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Slippery Karst",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "This land enters tapped.\n{T}: Add {G}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 10
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 3
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "cmc": 0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "role": "Graveyard hate",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Giant Spider",
+      "cmc": 4,
+      "type_line": "Creature — Spider",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "role": "Anti-air blocker",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Call of the Herd",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create a 3/3 green Elephant creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "role": "Recurring threat",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Battle Screech",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create two 1/1 white Bird creature tokens with flying.\nFlashback—Tap three untapped white creatures you control. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "role": "Go-wide flyers",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Congregate",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target player gains 2 life for each creature on the battlefield.",
+      "role": "Anti-aggro lifegain",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Spirit Link",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nWhenever enchanted creature deals damage, you gain that much life.",
+      "role": "Lifegain aura",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Emerald Charm",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Untap target permanent.\n• Destroy target non-Aura enchantment.\n• Target creature loses flying until end of turn.",
+      "role": "Strip flying / enchant removal",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Break Asunder",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or enchantment.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "role": "Artifact/enchant removal",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Nomad Decoy",
+      "cmc": 3,
+      "type_line": "Creature — Human Nomad",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "{W}, {T}: Tap target creature.\nThreshold — {W}{W}, {T}: Tap two target creatures. Activate only if there are seven or more cards in your graveyard.",
+      "role": "Tapper (push damage)",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Kavu Primarch",
+      "cmc": 4,
+      "type_line": "Creature — Kavu",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nIf this creature was kicked, it enters with four +1/+1 counters on it.",
+      "role": "Flexible late threat",
+      "board": "sideboard",
+      "qty": 1
+    }
+  ],
+  "pitch": "The central design problem of any aura-voltron deck is losing the whole investment to a single removal spell. This build answers that structurally rather than hoping to dodge it: Mesa Enchantress x2 turns every aura into a cantrip, so trading an aura into removal costs zero cards; Griffin Guide leaves a 2/2 flyer behind when the carrier dies; Sun Clasp can bounce the carrier out of a kill spell for {W}; Voice of All and Mystic Enforcer carry protection; and Lyra Dawnbringer wins the game with no auras at all. One Swords does not end the game.",
+  "strategy_es": "agro voltron de auras GW",
+  "identity_es": "Un agro voltron de auras GW. Despliega un portador resistente y evasivo y lo encanta hasta volverlo un volador letal: Thran Golem se convierte en un 7/7 volador con dañar primero y arrollar con cualquier aura de +2/+2 (base 3/3, +2/+2 de su propia habilidad más el aura), y Griffin Guide otorga volar a lo que sea. Mesa Enchantress (x2) roba una carta con cada aura lanzada, así que cambiar auras por eliminación es neutral en cartas; Sylvan Library y Enlightened Tutor mantienen consistente la combinación de portador + aura. Lyra Dawnbringer es un finalizador independiente que no necesita equiparse, y una base de portadores densa en voladores (Voice of All, Serra Angel, Mystic Enforcer/Zealot) hace que un solo hechizo de eliminación no deje varadas las auras. El reloj cierra por el aire hacia el turno 5-6.",
+  "pitch_es": "El problema central de diseño de cualquier voltron de auras es perder toda la inversión ante un solo hechizo de eliminación. Esta construcción lo responde estructuralmente en vez de confiar en esquivarlo: Mesa Enchantress x2 convierte cada aura en un cantrip, así que cambiar un aura por eliminación cuesta cero cartas; Griffin Guide deja un volador 2/2 cuando el portador muere; Sun Clasp puede rebotar al portador fuera de un hechizo de matar por {W}; Voice of All y Mystic Enforcer llevan protección; y Lyra Dawnbringer gana la partida sin ninguna aura. Un solo Swords no termina la partida."
+}

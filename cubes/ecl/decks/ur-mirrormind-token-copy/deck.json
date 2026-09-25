@@ -1,0 +1,1182 @@
+{
+  "deck_name": "ur-mirrormind-token-copy",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-11T18:38:21Z",
+  "format": "40-card",
+  "strategy": "Mirrormind Crown token-copy go-wide",
+  "colors": "UR",
+  "identity": "U/R token-copy go-wide. Mirrormind Crown replaces each turn's first token creation with that many copies of the equipped creature, so cheap token makers stop producing 1/1s and start producing copies of your best body. Every Crown carrier in the list has printed evasion - Spinerock Tyrant, Twinflame Travelers, Stratosoarer and Merrow Skyswimmer - because a copy effect carries the printed card and not any Aura or pump attached to it, so flying has to already be on the card. Mirrorform is the finisher: at instant speed it turns every nonland permanent you control into a copy of your best body, converting a board of tokens into a lethal air force in one shot.",
+  "restrictions": {
+    "Commons/uncommons max 2 copies": "PASS - no card appears more than twice across mainboard + sideboard",
+    "Rares/mythics max 1 copy": "PASS - every rare/mythic appears exactly once",
+    "Max 5 rares/mythics total (main + side)": "PASS - exactly 5, all mainboard: Mirrormind Crown, Mirrorform, Spinerock Tyrant, Scuzzback Scrounger, Steam Vents. The sideboard is entirely commons and uncommons.",
+    "All cards from the cube pool": "PASS - every name matched by exact string against the working pool; basics are format-supplied",
+    "Colour usability (U/R only)": "PASS - Merrow Skyswimmer prints as color_identity UW but its cost is {3}{W/U}{W/U}; both hybrid halves are paid with blue, so no white source is needed"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 3,
+    "cantrip_count": 1,
+    "accel_count": 4,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.64,
+      "reference_avg_mv": 2.5,
+      "accel": 4,
+      "adjustment": 0.853,
+      "raw_target": 17.853,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.64,
+    "pip_demand": {
+      "U": 12,
+      "R": 14
+    },
+    "land_color_production": {
+      "U": 11,
+      "R": 10
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 53.8,
+        "prod_pct": 55.6,
+        "gap": -1.8,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 46.2,
+        "prod_pct": 61.1,
+        "gap": -14.9,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Mirrormind Crown",
+      "oracle_text": "As long as this Equipment is attached to a creature, the first time you would create one or more tokens each turn, you may instead create that many tokens that are copies of equipped creature.\nEquip {2}",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4,
+      "type_line": "Artifact — Equipment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Voltron/Equipment",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation",
+        "Copy Effect"
+      ],
+      "role": "Payoff - kill mechanism, token-to-copy converter",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mirrorform",
+      "oracle_text": "Each nonland permanent you control becomes a copy of target non-Aura permanent.",
+      "mana_cost": "{4}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 6,
+      "type_line": "Instant",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Payload/Payoff",
+        "Copy Effect"
+      ],
+      "role": "Payoff - instant-speed mass conversion / finisher",
+      "board": "mainboard"
+    },
+    {
+      "name": "Spinerock Tyrant",
+      "oracle_text": "Flying\nWither (This deals damage to creatures in the form of -1/-1 counters.)\nWhenever you cast an instant or sorcery spell with a single target, you may copy it. If you do, those spells gain wither. You may choose new targets for the copy.",
+      "mana_cost": "{3}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Dragon",
+      "rarity": "mythic",
+      "power": "6",
+      "toughness": "6",
+      "tags": [
+        "Spellslinger",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Spell Copy"
+      ],
+      "role": "Threat - 6/6 flying Crown carrier and Mirrorform target",
+      "board": "mainboard"
+    },
+    {
+      "name": "Twinflame Travelers",
+      "oracle_text": "Flying\nIf a triggered ability of another Elemental you control triggers, it triggers an additional time.",
+      "mana_cost": "{2}{U}{R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Trigger Doubling"
+      ],
+      "role": "Threat - MV4 3/3 printed flier, second large Crown payload",
+      "board": "mainboard"
+    },
+    {
+      "name": "Stratosoarer",
+      "oracle_text": "Flying\nWhen this creature enters, target creature gains flying until end of turn.\nBasic landcycling {1}{U} ({1}{U}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)",
+      "mana_cost": "{4}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Elemental",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "5",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Land Fetch",
+        "Evasion Granting",
+        "Cycling"
+      ],
+      "role": "Threat - 3/5 printed flier with basic landcycling",
+      "board": "mainboard"
+    },
+    {
+      "name": "Merrow Skyswimmer",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying, vigilance\nWhen this creature enters, create a 1/1 white and blue Merfolk creature token.",
+      "mana_cost": "{3}{W/U}{W/U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Threat - flying vigilant Crown carrier that makes its own token",
+      "board": "mainboard"
+    },
+    {
+      "name": "Merrow Skyswimmer",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying, vigilance\nWhen this creature enters, create a 1/1 white and blue Merfolk creature token.",
+      "mana_cost": "{3}{W/U}{W/U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Threat - flying vigilant Crown carrier that makes its own token",
+      "board": "mainboard"
+    },
+    {
+      "name": "Pestered Wellguard",
+      "oracle_text": "Whenever this creature becomes tapped, create a 1/1 blue and black Faerie creature token with flying.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Engine - repeatable flying token on every tap",
+      "board": "mainboard"
+    },
+    {
+      "name": "Pestered Wellguard",
+      "oracle_text": "Whenever this creature becomes tapped, create a 1/1 blue and black Faerie creature token with flying.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Engine - repeatable flying token on every tap",
+      "board": "mainboard"
+    },
+    {
+      "name": "Scuzzback Scrounger",
+      "oracle_text": "At the beginning of your first main phase, you may blight 1. If you do, create a Treasure token. (To blight 1, put a -1/-1 counter on a creature you control. A Treasure token is an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Goblin Warrior",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Treasure Generation",
+        "Mana Ramp"
+      ],
+      "role": "Engine - a free token every first main phase",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sourbread Auntie",
+      "oracle_text": "When this creature enters, you may blight 2. If you do, create two 1/1 black and red Goblin creature tokens. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{2}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Goblin Warrior",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Tokens",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Engine - two tokens in one trigger = two copies",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sourbread Auntie",
+      "oracle_text": "When this creature enters, you may blight 2. If you do, create two 1/1 black and red Goblin creature tokens. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{2}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Goblin Warrior",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Tokens",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Engine - two tokens in one trigger = two copies",
+      "board": "mainboard"
+    },
+    {
+      "name": "Silvergill Mentor",
+      "oracle_text": "As an additional cost to cast this spell, behold a Merfolk or pay {2}. (To behold a Merfolk, choose a Merfolk you control or reveal a Merfolk card from your hand.)\nWhen this creature enters, create a 1/1 white and blue Merfolk creature token.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Wizard",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Engine - the pool's only MV2 creature-token maker",
+      "board": "mainboard"
+    },
+    {
+      "name": "Silvergill Mentor",
+      "oracle_text": "As an additional cost to cast this spell, behold a Merfolk or pay {2}. (To behold a Merfolk, choose a Merfolk you control or reveal a Merfolk card from your hand.)\nWhen this creature enters, create a 1/1 white and blue Merfolk creature token.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Wizard",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Engine - the pool's only MV2 creature-token maker",
+      "board": "mainboard"
+    },
+    {
+      "name": "Reckless Ransacking",
+      "oracle_text": "Target creature gets +3/+2 until end of turn. Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Enabler/Fodder",
+        "Combat Trick",
+        "Token Generation",
+        "Mana Ramp"
+      ],
+      "role": "Engine - instant-speed token creation",
+      "board": "mainboard"
+    },
+    {
+      "name": "Omni-Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nYou may have this creature enter as a copy of any creature on the battlefield, except it has changeling.",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "0",
+      "tags": [
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Standalone Threat",
+        "Copy Effect"
+      ],
+      "role": "Engine - enters as a copy of any creature",
+      "board": "mainboard"
+    },
+    {
+      "name": "Omni-Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nYou may have this creature enter as a copy of any creature on the battlefield, except it has changeling.",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "0",
+      "tags": [
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Standalone Threat",
+        "Copy Effect"
+      ],
+      "role": "Engine - enters as a copy of any creature",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kindle the Inner Flame",
+      "oracle_text": "Create a token that's a copy of target creature you control, except it has haste and \"At the beginning of the end step, sacrifice this token.\"\nFlashback—{1}{R}, Behold three Elementals. (You may cast this card from your graveyard for its flashback cost. Then exile it. To behold an Elemental, choose an Elemental you control or reveal an Elemental card from your hand.)",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Kindred Sorcery — Elemental",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Flashback"
+      ],
+      "role": "Engine - Crown-independent copy effect",
+      "board": "mainboard"
+    },
+    {
+      "name": "Impolite Entrance",
+      "oracle_text": "Target creature gains trample and haste until end of turn.\nDraw a card.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Combat Trick",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Infrastructure - haste + trample, replaces itself",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sear",
+      "oracle_text": "Sear deals 4 damage to target creature or planeswalker.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "role": "Interaction - removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Boulder Dash",
+      "oracle_text": "Boulder Dash deals 2 damage to any target and 1 damage to any other target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "role": "Interaction - split removal, face-capable",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tweeze",
+      "oracle_text": "Tweeze deals 3 damage to any target. You may discard a card. If you do, draw a card.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Looting"
+      ],
+      "role": "Interaction - removal, face-capable, loots",
+      "board": "mainboard"
+    },
+    {
+      "name": "Steam Vents",
+      "oracle_text": "({T}: Add {U} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "role": "Land - untapped-capable U/R dual",
+      "board": "mainboard"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land - U/R dual, enters tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land - U/R dual, enters tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "role": "Graveyard hate on a 3/3 flier",
+      "board": "sideboard",
+      "when_to_board": "vs. graveyard decks (39 GY-interaction cards in cube)"
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "role": "Graveyard hate on a 3/3 flier",
+      "board": "sideboard",
+      "when_to_board": "vs. graveyard decks (39 GY-interaction cards in cube)"
+    },
+    {
+      "name": "Giantfall",
+      "oracle_text": "Choose one —\n• Target creature you control deals damage equal to its power to target creature an opponent controls.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Artifact removal / power-based fight",
+      "board": "sideboard",
+      "when_to_board": "vs. artifact decks (11 artifacts); mode 1 stays live otherwise"
+    },
+    {
+      "name": "Giantfall",
+      "oracle_text": "Choose one —\n• Target creature you control deals damage equal to its power to target creature an opponent controls.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Artifact removal / power-based fight",
+      "board": "sideboard",
+      "when_to_board": "vs. artifact decks (11 artifacts); mode 1 stays live otherwise"
+    },
+    {
+      "name": "Temporal Cleansing",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nThe owner of target nonland permanent puts it into their library second from the top or on the bottom.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Targeted Removal"
+      ],
+      "role": "Catch-all nonland permanent answer",
+      "board": "sideboard",
+      "when_to_board": "vs. enchantments and resolved bombs (21 enchantments; no U or R enchantment answer in this pool)"
+    },
+    {
+      "name": "Temporal Cleansing",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nThe owner of target nonland permanent puts it into their library second from the top or on the bottom.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Targeted Removal"
+      ],
+      "role": "Catch-all nonland permanent answer",
+      "board": "sideboard",
+      "when_to_board": "vs. enchantments and resolved bombs (21 enchantments; no U or R enchantment answer in this pool)"
+    },
+    {
+      "name": "Swat Away",
+      "oracle_text": "This spell costs {2} less to cast if a creature is attacking you.\nThe owner of target spell or creature puts it on their choice of the top or bottom of their library.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Counterspell"
+      ],
+      "role": "Tempo answer to a spell or creature",
+      "board": "sideboard",
+      "when_to_board": "vs. single large threats and when being raced"
+    },
+    {
+      "name": "Swat Away",
+      "oracle_text": "This spell costs {2} less to cast if a creature is attacking you.\nThe owner of target spell or creature puts it on their choice of the top or bottom of their library.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Counterspell"
+      ],
+      "role": "Tempo answer to a spell or creature",
+      "board": "sideboard",
+      "when_to_board": "vs. single large threats and when being raced"
+    },
+    {
+      "name": "Feed the Flames",
+      "oracle_text": "Feed the Flames deals 5 damage to target creature. If that creature would die this turn, exile it instead.",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "role": "5 damage + exile",
+      "board": "sideboard",
+      "when_to_board": "vs. large or recursive creatures"
+    },
+    {
+      "name": "Spell Snare",
+      "oracle_text": "Counter target spell with mana value 2.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Counter a 2-mana spell",
+      "board": "sideboard",
+      "when_to_board": "vs. decks whose key piece costs exactly 2 (artifact ramp, 2-drop lords)"
+    }
+  ],
+  "pitch": "U/R token-copy go-wide. Mirrormind Crown replaces each turn's first token creation with that many copies of the equipped creature, so cheap token makers stop producing 1/1s and start producing copies of your best body. Every Crown carrier in the list has printed evasion - Spinerock Tyrant, Twinflame Travelers, Stratosoarer and Merrow Skyswimmer - because a copy effect carries the printed card and not any Aura or pump attached to it, so flying has to already be on the card. Mirrorform is the finisher: at instant speed it turns every nonland permanent you control into a copy of your best body, converting a board of tokens into a lethal air force in one shot.",
+  "strategy_es": "copia de fichas a lo ancho con Mirrormind Crown",
+  "identity_es": "Copia de fichas a lo ancho U/R. Mirrormind Crown sustituye la primera creación de fichas de cada turno por esa misma cantidad de copias de la criatura equipada, así que los creadores baratos de fichas dejan de producir 1/1 y empiezan a producir copias de tu mejor cuerpo. Cada portador de la Crown de la lista tiene evasión impresa — Spinerock Tyrant, Twinflame Travelers, Stratosoarer y Merrow Skyswimmer — porque un efecto de copia lleva la carta impresa y no ninguna aura o pompa anexada a ella, así que volar tiene que estar ya en la carta. Mirrorform es el finalizador: a velocidad de instantáneo convierte cada permanente que no sea tierra que controles en una copia de tu mejor cuerpo, transformando un tablero de fichas en una fuerza aérea letal de un solo golpe.",
+  "pitch_es": "Copia de fichas a lo ancho U/R. Mirrormind Crown sustituye la primera creación de fichas de cada turno por esa misma cantidad de copias de la criatura equipada, así que los creadores baratos de fichas dejan de producir 1/1 y empiezan a producir copias de tu mejor cuerpo. Cada portador de la Crown de la lista tiene evasión impresa — Spinerock Tyrant, Twinflame Travelers, Stratosoarer y Merrow Skyswimmer — porque un efecto de copia lleva la carta impresa y no ninguna aura o pompa anexada a ella, así que volar tiene que estar ya en la carta. Mirrorform es el finalizador: a velocidad de instantáneo convierte cada permanente que no sea tierra que controles en una copia de tu mejor cuerpo, transformando un tablero de fichas en una fuerza aérea letal de un solo golpe."
+}

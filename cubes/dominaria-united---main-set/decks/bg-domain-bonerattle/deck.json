@@ -1,0 +1,780 @@
+{
+  "deck_name": "bg-domain-bonerattle",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T00:00:00Z",
+  "format": "40-card",
+  "strategy": "midrange — Bortuk Bonerattle reanimator",
+  "colors": "BG",
+  "identity": "A B/G domain-ramp midrange deck that treats its manabase as a scaling term. Deathbloom Gardener, Slimefoot's Survey and 18 lands power out mana value 6-7 bodies, while Eerie Soultender, Shadow Prophecy, a kicked Urborg Lhurgoyf and Uurg's upkeep surveil stock the graveyard alongside them. From there the fat reaches the battlefield by whichever route is open: hard-cast it, return it with Sheoldred's Restoration (Mossbeard Ancient's 'When this creature enters, you gain 5 life' refunds 5 of the 7 life the unkicked spell charges, so a 7/7 trample costs a net 2 life), put it back with The Cruelty of Gix chapter III, which has no mana-value cap, or return the cheap half with Bortuk Bonerattle's domain clause. Monstrous War-Leech reads the same graveyard off the cast side, so the plan survives every reanimation spell being answered. The manabase is built to raise the basic-land-type count that Bortuk, Shadow Prophecy, Slimefoot's Survey and sideboard Drag to the Bottom all read - but that count is a distribution, not a constant, and the deck is built to function at its MODAL three types rather than its ceiling of four.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_user_constraint": "At most 5 rare-or-mythic cards total across mainboard + sideboard (rare LANDS count)."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.55,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 1.067,
+      "raw_target": 18.067,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.55,
+    "pip_demand": {
+      "B": 18,
+      "G": 13
+    },
+    "land_color_production": {
+      "B": 10,
+      "G": 10,
+      "W": 2,
+      "U": 2
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 58.1,
+        "prod_pct": 55.6,
+        "gap": 2.5,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 41.9,
+        "prod_pct": 55.6,
+        "gap": -13.7,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Sheoldred's Restoration",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {2}{W} (You may pay an additional {2}{W} as you cast this spell.)\nReturn target creature card from your graveyard to the battlefield. If this spell was kicked, you gain life equal to that card's mana value. Otherwise, you lose that much life.\nExile Sheoldred's Restoration.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Kicker/Scaling",
+        "Lifegain",
+        "Payload/Payoff",
+        "Reanimation",
+        "Kicker",
+        "Life: Cost"
+      ],
+      "qty": 2,
+      "role": "Engine/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "The Cruelty of Gix",
+      "mana_cost": "{3}{B}{B}",
+      "cmc": 5,
+      "type_line": "Enchantment — Saga",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — Target opponent reveals their hand. You choose a creature or planeswalker card from it. That player discards that card.\nII — Search your library for a card, put that card into your hand, then shuffle. You lose 3 life.\nIII — Put target creature card from a graveyard onto the battlefield under your control.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Sagas",
+        "Reanimator",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Discard",
+        "Tutor",
+        "Reanimation",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Engine/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eerie Soultender",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Creature — Spirit Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, mill three cards. (Put the top three cards of your library into your graveyard.)\n{4}{B}, Exile this card from your graveyard: Return another target creature card from your graveyard to your hand.",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Reanimator",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Recursion"
+      ],
+      "qty": 2,
+      "role": "Engine/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shadow Prophecy",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Domain — Look at the top X cards of your library, where X is the number of basic land types among lands you control. Put up to two of them into your hand and the rest into your graveyard. You lose 2 life.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Domain",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Card Draw",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "qty": 2,
+      "role": "Engine/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Uurg, Spawn of Turg",
+      "mana_cost": "{B}{B}{G}",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Frog Beast",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Uurg's power is equal to the number of land cards in your graveyard.\nAt the beginning of your upkeep, surveil 1. (Look at the top card of your library. You may put that card into your graveyard.)\n{B}{G}, Sacrifice a land: You gain 2 life.",
+      "power": "*",
+      "toughness": "5",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Lands-Matter",
+        "Lifegain",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "Engine/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Deathbloom Gardener",
+      "mana_cost": "{2}{G}",
+      "cmc": 3,
+      "type_line": "Creature — Elf Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Deathtouch\n{T}: Add one mana of any color.",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "qty": 1,
+      "role": "Engine/Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Slimefoot's Survey",
+      "mana_cost": "{4}{G}",
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Domain — Search your library for up to two land cards that each have a basic land type, put them onto the battlefield tapped, then shuffle. Look at the top X cards of your library, where X is the number of basic land types among lands you control. Put up to one of them on top of your library and the rest on the bottom of your library in a random order.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Domain",
+        "Lands-Matter",
+        "Landfall",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Ramp",
+        "Card Selection"
+      ],
+      "qty": 1,
+      "role": "Engine/Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bortuk Bonerattle",
+      "mana_cost": "{4}{B}{G}",
+      "cmc": 6,
+      "type_line": "Legendary Creature — Troll Shaman",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Domain — When Bortuk Bonerattle enters, if you cast it, choose target creature card in your graveyard. Return that card to the battlefield if its mana value is less than or equal to the number of basic land types among lands you control. Otherwise, put it into your hand.",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Domain",
+        "Reanimator",
+        "Graveyard",
+        "Lands-Matter",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Reanimation",
+        "Cards: Net-Positive"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mossbeard Ancient",
+      "mana_cost": "{5}{G}{G}",
+      "cmc": 7,
+      "type_line": "Creature — Treefolk",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Trample\nWhen this creature enters, you gain 5 life.",
+      "power": "7",
+      "toughness": "7",
+      "tags": [
+        "Lifegain",
+        "Standalone Threat",
+        "Life Gain",
+        "Life: Gain"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Monstrous War-Leech",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Creature — Leech Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {U} (You may pay an additional {U} as you cast this spell.)\nAs this creature enters, if it was kicked, mill four cards. (To mill a card, put the top card of your library into your graveyard.)\nMonstrous War-Leech's power and toughness are each equal to the greatest mana value among cards in your graveyard.",
+      "power": "*",
+      "toughness": "*",
+      "tags": [
+        "Kicker/Scaling",
+        "Graveyard",
+        "Self-Mill",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Kicker"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Urborg Lhurgoyf",
+      "mana_cost": "{1}{G}",
+      "cmc": 2,
+      "type_line": "Creature — Lhurgoyf",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G",
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Kicker {U} and/or {B} (You may pay an additional {U} and/or {B} as you cast this spell.)\nAs this creature enters, mill three cards for each time it was kicked.\nUrborg Lhurgoyf's power is equal to the number of creature cards in your graveyard and its toughness is equal to that number plus 1.",
+      "power": "*",
+      "toughness": "1+*",
+      "tags": [
+        "Kicker/Scaling",
+        "Graveyard",
+        "Self-Mill",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Kicker"
+      ],
+      "qty": 1,
+      "role": "Threat/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cut Down",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tear Asunder",
+      "mana_cost": "{1}{G}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nExile target artifact or enchantment. If this spell was kicked, exile target nonland permanent instead.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bone Splinters",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 1,
+      "role": "Interaction/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 6,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 6,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunted Mire",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tangled Islet",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land — Forest Island",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G} or {U}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Broken Wings",
+      "mana_cost": "{2}{G}",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Answers three cube threat classes with one card — 'Destroy target artifact, enchantment, or creature with flying' covers 15 artifacts, 18 enchantments and the flying half of the 51-card evasion class."
+    },
+    {
+      "name": "Magnigoth Sentry",
+      "mana_cost": "{3}{G}",
+      "cmc": 4,
+      "type_line": "Creature — Treefolk",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "A 4/4 for 4 whose entire oracle text is 'Reach' — it BLOCKS the cube's 51-card evasion class rather than killing it, and it is the slot where the mainboard's accepted 'raced' weakness gets reversed."
+    },
+    {
+      "name": "Choking Miasma",
+      "mana_cost": "{1}{B}{B}",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nIf this spell was kicked, put a +1/+1 counter on a creature you control.\nAll creatures get -2/-2 until end of turn.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against wide token boards (Tokens is the cube's 2nd-largest cluster at 38 cards). 'All creatures get -2/-2 until end of turn' — of this deck's own creatures it kills Deathbloom Gardener and Eerie Soultender x2, so board those out; Uurg, Bortuk and Mossbeard Ancient all survive."
+    },
+    {
+      "name": "Nemata, Primeval Warden",
+      "mana_cost": "{2}{B}{G}",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Treefolk",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Reach\nIf a creature an opponent controls would die, exile it instead. When you do, create a 1/1 green Saproling creature token.\n{G}, Sacrifice a Saproling: Nemata gets +2/+2 until end of turn.\n{1}{B}, Sacrifice two Saprolings: Draw a card.",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Token Generation",
+        "Sacrifice Outlet",
+        "Card Draw",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "PROPHYLAXIS against the cube's 32 graveyard-interaction cards, not an answer to a stocked yard: 'If a creature an opponent controls would die, exile it instead' is a replacement effect on FUTURE deaths, so board it in before an opposing graveyard deck fills up, not after. It does not touch this deck's own graveyard."
+    },
+    {
+      "name": "Drag to the Bottom",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Domain — Each creature gets -X/-X until end of turn, where X is 1 plus the number of basic land types among lands you control.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Domain",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "qty": 1,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against go-wide decks. 'Each creature gets -X/-X until end of turn, where X is 1 plus the number of basic land types among lands you control' — realistically -4/-4 at this manabase's modal three types and -5/-5 at four; Mossbeard Ancient survives either, Bortuk and Uurg do not."
+    },
+    {
+      "name": "Bite Down",
+      "mana_cost": "{1}{G}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature you control deals damage equal to its power to target creature or planeswalker you don't control.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight"
+      ],
+      "qty": 2,
+      "role": "Flex",
+      "board": "sideboard",
+      "when_to_board": "Against decks with a single large threat — 'Target creature you control deals damage equal to its power to target creature or planeswalker you don't control' turns a resolved 7/7 Mossbeard Ancient into repeatable removal at no card cost."
+    }
+  ],
+  "pitch": "A B/G domain-ramp midrange deck that treats its manabase as a scaling term. Deathbloom Gardener, Slimefoot's Survey and 18 lands power out mana value 6-7 bodies, while Eerie Soultender, Shadow Prophecy, a kicked Urborg Lhurgoyf and Uurg's upkeep surveil stock the graveyard alongside them. From there the fat reaches the battlefield by whichever route is open: hard-cast it, return it with Sheoldred's Restoration (Mossbeard Ancient's 'When this creature enters, you gain 5 life' refunds 5 of the 7 life the unkicked spell charges, so a 7/7 trample costs a net 2 life), put it back with The Cruelty of Gix chapter III, which has no mana-value cap, or return the cheap half with Bortuk Bonerattle's domain clause. Monstrous War-Leech reads the same graveyard off the cast side, so the plan survives every reanimation spell being answered. The manabase is built to raise the basic-land-type count that Bortuk, Shadow Prophecy, Slimefoot's Survey and sideboard Drag to the Bottom all read - but that count is a distribution, not a constant, and the deck is built to function at its MODAL three types rather than its ceiling of four.",
+  "strategy_es": "midrange — reanimador con Bortuk Bonerattle",
+  "identity_es": "Un midrange de aceleración domain B/G que trata su base de maná como un término de escala. Deathbloom Gardener, Slimefoot's Survey y 18 tierras despliegan cuerpos de valor de maná 6-7, mientras Eerie Soultender, Shadow Prophecy, un Urborg Lhurgoyf kickeado y el surveil de mantenimiento de Uurg abastecen el cementerio en paralelo. Desde ahí los gordos llegan al campo de batalla por la ruta que esté abierta: lanzarlo a coste normal, devolverlo con Sheoldred's Restoration (el 'When this creature enters, you gain 5 life' de Mossbeard Ancient reembolsa 5 de las 7 vidas que cobra el hechizo sin kicker, así que un 7/7 con arrollar cuesta netas 2 vidas), reponerlo con el capítulo III de The Cruelty of Gix, que no tiene límite de valor de maná, o devolver la mitad barata con la cláusula de domain de Bortuk Bonerattle. Monstrous War-Leech lee ese mismo cementerio desde el lado del lanzamiento, así que el plan sobrevive a que respondan a todos los hechizos de reanimación. La base de maná está construida para subir el recuento de tipos de tierra básica que leen Bortuk, Shadow Prophecy, Slimefoot's Survey y el Drag to the Bottom del banquillo; pero ese recuento es una distribución y no una constante, y el mazo está construido para funcionar en sus tres tipos MODALES y no en su techo de cuatro.",
+  "pitch_es": "Un midrange de aceleración domain B/G que trata su base de maná como un término de escala. Deathbloom Gardener, Slimefoot's Survey y 18 tierras despliegan cuerpos de valor de maná 6-7, mientras Eerie Soultender, Shadow Prophecy, un Urborg Lhurgoyf kickeado y el surveil de mantenimiento de Uurg abastecen el cementerio en paralelo. Desde ahí los gordos llegan al campo de batalla por la ruta que esté abierta: lanzarlo a coste normal, devolverlo con Sheoldred's Restoration (el 'When this creature enters, you gain 5 life' de Mossbeard Ancient reembolsa 5 de las 7 vidas que cobra el hechizo sin kicker, así que un 7/7 con arrollar cuesta netas 2 vidas), reponerlo con el capítulo III de The Cruelty of Gix, que no tiene límite de valor de maná, o devolver la mitad barata con la cláusula de domain de Bortuk Bonerattle. Monstrous War-Leech lee ese mismo cementerio desde el lado del lanzamiento, así que el plan sobrevive a que respondan a todos los hechizos de reanimación. La base de maná está construida para subir el recuento de tipos de tierra básica que leen Bortuk, Shadow Prophecy, Slimefoot's Survey y el Drag to the Bottom del banquillo; pero ese recuento es una distribución y no una constante, y el mazo está construido para funcionar en sus tres tipos MODALES y no en su techo de cuatro."
+}

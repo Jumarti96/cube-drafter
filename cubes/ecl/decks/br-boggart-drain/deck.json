@@ -1,0 +1,752 @@
+{
+  "deck_name": "br-boggart-drain",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-11T00:00:00Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "BR",
+  "identity": "A black-red Goblin deck that wins without needing combat to connect. All fourteen creature copies in the mainboard are Goblins, and two engines convert every Goblin death into life loss the opponent cannot block: Boggart Cursecrafter deals 1 damage to each opponent per death, Boggart Mischief drains 1 more. Sting-Slinger taps for 2, and Lasting Tarfire adds 2 at EACH end step for merely having put a -1/-1 counter on something that turn - which 11 of the 23 nonland cards do. The deaths are manufactured, not incidental: Meek Attack and the back face of Grub each create a creature that sacrifices itself at end of turn. And the graveyard those deaths fill is not wasted - Bloodline Bidding, cast for far less than eight mana off Convoke, returns every Goblin that has died so they can die again.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "max_rare_mythic_total": 5
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.52,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.027,
+      "raw_target": 17.027,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.52,
+    "pip_demand": {
+      "B": 17,
+      "R": 9
+    },
+    "land_color_production": {
+      "R": 9,
+      "B": 11,
+      "G": 1,
+      "U": 1,
+      "W": 1
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 65.4,
+        "prod_pct": 64.7,
+        "gap": 0.7,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 34.6,
+        "prod_pct": 52.9,
+        "gap": -18.3,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Boggart Cursecrafter",
+      "oracle_text": "Deathtouch\nWhenever another Goblin you control dies, this creature deals 1 damage to each opponent.",
+      "mana_cost": "{B}{R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Goblin Warlock",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Boggart Mischief",
+      "oracle_text": "When this enchantment enters, you may blight 1. If you do, create two 1/1 black and red Goblin creature tokens. (To blight 1, put a -1/-1 counter on a creature you control.)\nWhenever a Goblin creature you control dies, each opponent loses 1 life and you gain 1 life.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Kindred Enchantment — Goblin",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Tokens",
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Life Drain",
+        "Counter Placement"
+      ],
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sting-Slinger",
+      "oracle_text": "{1}{R}, {T}, Blight 1: This creature deals 2 damage to each opponent. (To blight 1, put a -1/-1 counter on a creature you control.)",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Goblin Warrior",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lasting Tarfire",
+      "oracle_text": "At the beginning of each end step, if you put a counter on a creature this turn, this enchantment deals 2 damage to each opponent.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bloodline Bidding",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nChoose a creature type. Return all creature cards of the chosen type from your graveyard to the battlefield.",
+      "mana_cost": "{6}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 8,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Reanimation",
+        "Cards: Net-Positive"
+      ],
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Meek Attack",
+      "oracle_text": "{1}{R}: You may put a creature card with total power and toughness 5 or less from your hand onto the battlefield. That creature gains haste. At the beginning of the next end step, sacrifice that creature.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Blink/ETB",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Cheat Into Play",
+        "Sacrifice Outlet"
+      ],
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Grub, Storied Matriarch // Grub, Notorious Auntie",
+      "oracle_text": "Menace\nWhenever this creature enters or transforms into Grub, Storied Matriarch, return up to one target Goblin card from your graveyard to your hand.\nAt the beginning of your first main phase, you may pay {R}. If you do, transform Grub.\n//\nMenace\nWhenever Grub attacks, you may blight 1. If you do, create a tapped and attacking token that's a copy of the blighted creature, except it has \"At the beginning of the end step, sacrifice this token.\"\nAt the beginning of your first main phase, you may pay {B}. If you do, transform Grub.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Goblin Warlock",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Graveyard",
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Graveyard Recursion",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gristle Glutton",
+      "oracle_text": "{T}, Blight 1: Discard a card. If you do, draw a card. (To blight 1, put a -1/-1 counter on a creature you control.)",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Goblin Scout",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting"
+      ],
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Elder Auntie",
+      "oracle_text": "When this creature enters, create a 1/1 black and red Goblin creature token.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Goblin Warlock",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "Enabler/Fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bile-Vial Boggart",
+      "oracle_text": "When this creature dies, put a -1/-1 counter on up to one target creature.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Goblin Assassin",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Counter Placement"
+      ],
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mudbutton Cursetosser",
+      "oracle_text": "As an additional cost to cast this spell, behold a Goblin or pay {2}. (To behold a Goblin, choose a Goblin you control or reveal a Goblin card from your hand.)\nThis creature can't block.\nWhen this creature dies, destroy target creature an opponent controls with power 2 or less.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Goblin Warlock",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Graveshifter",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, you may return target creature card from your graveyard to your hand.",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Cards: Net-Positive"
+      ],
+      "qty": 1,
+      "role": "Infrastructure/Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Heirloom Auntie",
+      "oracle_text": "This creature enters with two -1/-1 counters on it.\nWhenever another creature you control dies, surveil 1, then remove a -1/-1 counter from this creature. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Goblin Warlock",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Self-Mill",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "Infrastructure/Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nameless Inversion",
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Requiting Hex",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nDestroy target creature with mana value 2 or less. If this spell's additional cost was paid, you gain 2 life.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Blood Crypt",
+      "oracle_text": "({T}: Add {B} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geothermal Bog",
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eclipsed Realms",
+      "oracle_text": "As this land enters, choose Elemental, Elf, Faerie, Giant, Goblin, Kithkin, Merfolk, or Treefolk.\n{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a spell of the chosen type or activate an ability of a source of the chosen type.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 5,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Darkness Descends",
+      "oracle_text": "Put two -1/-1 counters on each creature.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard"
+    },
+    {
+      "name": "Sizzling Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature dies, exile the top card of your library. Until the end of your next turn, you may play that card.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Impulse Draw"
+      ],
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "board": "sideboard"
+    },
+    {
+      "name": "Blight Rot",
+      "oracle_text": "Put four -1/-1 counters on target creature.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Counter Placement"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard"
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard"
+    },
+    {
+      "name": "Grub's Command",
+      "oracle_text": "Choose two —\n• Create a token that's a copy of target Goblin you control.\n• Creatures target player controls get +1/+1 and gain haste until end of turn.\n• Destroy target artifact or creature.\n• Target player mills five cards, then puts each Goblin card milled this way into their hand.",
+      "mana_cost": "{3}{B}{R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 5,
+      "type_line": "Kindred Sorcery — Goblin",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Self-Mill",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "board": "sideboard"
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "A black-red Goblin deck that wins without needing combat to connect. All fourteen creature copies in the mainboard are Goblins, and two engines convert every Goblin death into life loss the opponent cannot block: Boggart Cursecrafter deals 1 damage to each opponent per death, Boggart Mischief drains 1 more. Sting-Slinger taps for 2, and Lasting Tarfire adds 2 at EACH end step for merely having put a -1/-1 counter on something that turn - which 11 of the 23 nonland cards do. The deaths are manufactured, not incidental: Meek Attack and the back face of Grub each create a creature that sacrifices itself at end of turn. And the graveyard those deaths fill is not wasted - Bloodline Bidding, cast for far less than eight mana off Convoke, returns every Goblin that has died so they can die again.",
+  "strategy_es": "agro",
+  "identity_es": "Un mazo de Goblins negro-rojo que gana sin necesitar que el combate conecte. Las catorce copias de criatura del principal son Goblins, y dos motores convierten cada muerte de Goblin en pérdida de vida que el rival no puede bloquear: Boggart Cursecrafter hace 1 de daño a cada rival por muerte, Boggart Mischief drena 1 más. Sting-Slinger gira por 2, y Lasting Tarfire añade 2 en CADA paso final simplemente por haber puesto un contador -1/-1 en algo ese turno, algo que hacen 11 de las 23 cartas no-tierra. Las muertes se fabrican, no son incidentales: Meek Attack y la cara trasera de Grub crean cada una una criatura que se sacrifica sola al final del turno. Y el cementerio que llenan esas muertes no se desperdicia: Bloodline Bidding, lanzada por mucho menos de ocho manás gracias al Convoke, devuelve cada Goblin que ha muerto para que pueda morir otra vez.",
+  "pitch_es": "Un mazo de Goblins negro-rojo que gana sin necesitar que el combate conecte. Las catorce copias de criatura del principal son Goblins, y dos motores convierten cada muerte de Goblin en pérdida de vida que el rival no puede bloquear: Boggart Cursecrafter hace 1 de daño a cada rival por muerte, Boggart Mischief drena 1 más. Sting-Slinger gira por 2, y Lasting Tarfire añade 2 en CADA paso final simplemente por haber puesto un contador -1/-1 en algo ese turno, algo que hacen 11 de las 23 cartas no-tierra. Las muertes se fabrican, no son incidentales: Meek Attack y la cara trasera de Grub crean cada una una criatura que se sacrifica sola al final del turno. Y el cementerio que llenan esas muertes no se desperdicia: Bloodline Bidding, lanzada por mucho menos de ocho manás gracias al Convoke, devuelve cada Goblin que ha muerto para que pueda morir otra vez."
+}

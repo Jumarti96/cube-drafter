@@ -1,0 +1,753 @@
+{
+  "deck_name": "wub-zur-enchantress",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-30T02:15:00Z",
+  "format": "40-card",
+  "strategy": "WUB Zur toolbox-control",
+  "colors": "WUB",
+  "identity": "A WUB Zur toolbox-control deck. Zur the Enchanter attacks each turn to tutor a value or lock enchantment (Mystic Remora, Oversold Cemetery, Pacifism, Griffin Guide, Spirit Link) directly onto the battlefield, assembling inevitability for free. Hard interaction (Counterspell, Circular Logic, Swords, Terror, Recoil, Royal Assassin) keeps the board clear while three permanent card-advantage engines (Mystic Remora, Thieving Magpie, Oversold Cemetery) plus recursion (Sevinne's Reclamation, Auramancer) out-grind the opponent; evasive fliers (Zur, Thieving Magpie, Serra Angel, Aven Fisher) close around turn 9.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "only_from": {},
+    "excluded": [],
+    "build_constraint": "max 5 rare/mythic total mainboard+sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 1,
+    "cantrip_count": 1,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.78,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.04,
+      "raw_target": 17.04,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.78,
+    "pip_demand": {
+      "W": 9,
+      "U": 12,
+      "B": 8
+    },
+    "land_color_production": {
+      "B": 6,
+      "U": 7,
+      "W": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 27.6,
+        "prod_pct": 35.3,
+        "gap": -7.7,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 41.4,
+        "prod_pct": 41.2,
+        "gap": 0.2,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 31,
+        "prod_pct": 41.2,
+        "gap": -10.2,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Zur the Enchanter",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Wizard",
+      "colors": [
+        "B",
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "U",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\nWhenever Zur attacks, you may search your library for an enchantment card with mana value 3 or less, put it onto the battlefield, then shuffle.",
+      "role": "Engine / tutor / flyer",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Thieving Magpie",
+      "cmc": 4,
+      "type_line": "Creature — Bird",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever this creature deals damage to an opponent, draw a card.",
+      "role": "Evasive card-advantage",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Phyrexian Rager",
+      "cmc": 3,
+      "type_line": "Creature — Phyrexian Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, you draw a card and you lose 1 life.",
+      "role": "Cantrip body",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Auramancer",
+      "cmc": 3,
+      "type_line": "Creature — Human Wizard",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, you may return target enchantment card from your graveyard to your hand.",
+      "role": "Enchantment recursion",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Aven Fisher",
+      "cmc": 4,
+      "type_line": "Creature — Bird Soldier",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhen this creature dies, you may draw a card.",
+      "role": "Flyer, draws on death",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Man-o'-War",
+      "cmc": 3,
+      "type_line": "Creature — Jellyfish",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, return target creature to its owner's hand.",
+      "role": "Bounce tempo",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Royal Assassin",
+      "cmc": 3,
+      "type_line": "Creature — Human Assassin",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "{T}: Destroy target tapped creature.",
+      "role": "Repeatable removal",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Serra Angel",
+      "cmc": 5,
+      "type_line": "Creature — Angel",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "role": "Air finisher",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Deep Analysis",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target player draws two cards.\nFlashback—{1}{U}, Pay 3 life. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "role": "Refuel (flashback)",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Frantic Search",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Draw two cards, then discard two cards. Untap up to three lands.",
+      "role": "Free dig / GY fill",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Sevinne's Reclamation",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Return target permanent card with mana value 3 or less from your graveyard to the battlefield. If this spell was cast from a graveyard, you may copy this spell and may choose a new target for the copy.\nFlashback {4}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "role": "Permanent recursion",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Counterspell",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target spell.",
+      "role": "Hard counter",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Circular Logic",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Counter target spell unless its controller pays {1} for each card in your graveyard.\nMadness {U} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "role": "Scaling counter",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Swords to Plowshares",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "role": "Premium removal",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Terror",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.",
+      "role": "Cheap removal",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Ichor Slick",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets -3/-3 until end of turn.\nCycling {2} ({2}, Discard this card: Draw a card.)\nMadness {3}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "role": "Removal / cycling",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Recoil",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Return target permanent to its owner's hand. Then that player discards a card.",
+      "role": "Bounce any permanent",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Mystic Remora",
+      "cmc": 1,
+      "type_line": "Enchantment",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhenever an opponent casts a noncreature spell, you may draw a card unless that player pays {4}.",
+      "role": "Card-advantage tax (Zur target)",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Oversold Cemetery",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "At the beginning of your upkeep, if you have four or more creature cards in your graveyard, you may return target creature card from your graveyard to your hand.",
+      "role": "Recursion engine (Zur target)",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Pacifism",
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+      "role": "Removal aura (Zur target)",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Griffin Guide",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2 and has flying.\nWhen enchanted creature dies, create a 2/2 white Griffin creature token with flying.",
+      "role": "Evasion aura (Zur target)",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Spirit Link",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nWhenever enchanted creature deals damage, you gain that much life.",
+      "role": "Lifegain aura (Zur target)",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Mind Stone",
+      "cmc": 2,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "{T}: Add {C}.\n{1}, {T}, Sacrifice this artifact: Draw a card.",
+      "role": "Ramp / cantrip",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "role": "",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "role": "",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Sunlit Marsh",
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "role": "",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Remote Isle",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "This land enters tapped.\n{T}: Add {U}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Polluted Mire",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "This land enters tapped.\n{T}: Add {B}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Drifting Meadow",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "This land enters tapped.\n{T}: Add {W}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 4
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 3
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 4
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "cmc": 0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "role": "Graveyard hate",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Floodgate",
+      "cmc": 4,
+      "type_line": "Creature — Wall",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\nWhen this creature has flying, sacrifice it.\nWhen this creature leaves the battlefield, it deals damage to each nonblue creature without flying equal to half the number of Islands you control, rounded down.",
+      "role": "Go-wide sweeper",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Congregate",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target player gains 2 life for each creature on the battlefield.",
+      "role": "Anti-aggro lifegain",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Renewed Faith",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "You gain 6 life.\nCycling {1}{W} ({1}{W}, Discard this card: Draw a card.)\nWhen you cycle this card, you may gain 2 life.",
+      "role": "Lifegain / cycling",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Remedy",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Prevent the next 5 damage that would be dealt this turn to any number of targets, divided as you choose.",
+      "role": "Damage prevention",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Nomad Decoy",
+      "cmc": 3,
+      "type_line": "Creature — Human Nomad",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "{W}, {T}: Tap target creature.\nThreshold — {W}{W}, {T}: Tap two target creatures. Activate only if there are seven or more cards in your graveyard.",
+      "role": "Tapper vs big creatures",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Cackling Fiend",
+      "cmc": 4,
+      "type_line": "Creature — Zombie",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, each opponent discards a card.",
+      "role": "Hand disruption",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Snap",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Return target creature to its owner's hand. Untap up to two lands.",
+      "role": "Tempo bounce",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Counterspell",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target spell.",
+      "role": "Hard counter",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Icy Manipulator",
+      "cmc": 4,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+      "role": "Soft lock",
+      "board": "sideboard",
+      "qty": 1
+    }
+  ],
+  "pitch": "Zur the Enchanter is both the engine and the deck's structural gamble. Because every one of the 5 maindeck enchantments is mana value 3 or less (Mystic Remora, Oversold Cemetery, Pacifism, Griffin Guide, Spirit Link), Zur has a live tutor target on every attack for roughly five turns before it repeats — Remora when the opponent is spell-slinging, Pacifism against a threat, Griffin Guide to make a flier lethal, Oversold once the game grinds long. Zur puts the card straight onto the battlefield, so it costs no mana and dodges counters.",
+  "strategy_es": "control-toolbox WUB con Zur",
+  "identity_es": "Un control-toolbox WUB con Zur. Zur the Enchanter ataca cada turno para buscar un encantamiento de valor o de bloqueo (Mystic Remora, Oversold Cemetery, Pacifism, Griffin Guide, Spirit Link) directamente al campo de batalla, ensamblando inevitabilidad gratis. La interacción dura (Counterspell, Circular Logic, Swords, Terror, Recoil, Royal Assassin) mantiene el tablero limpio mientras tres motores permanentes de ventaja de cartas (Mystic Remora, Thieving Magpie, Oversold Cemetery) más la recursión (Sevinne's Reclamation, Auramancer) superan al rival por desgaste; los voladores evasivos (Zur, Thieving Magpie, Serra Angel, Aven Fisher) cierran hacia el turno 9.",
+  "pitch_es": "Zur the Enchanter es a la vez el motor y la apuesta estructural del mazo. Como los 5 encantamientos del principal tienen valor de maná 3 o menos (Mystic Remora, Oversold Cemetery, Pacifism, Griffin Guide, Spirit Link), Zur tiene un objetivo de tutor vivo en cada ataque durante unos cinco turnos antes de repetirse: Remora cuando el rival lanza hechizos, Pacifism contra una amenaza, Griffin Guide para volver letal a un volador, Oversold cuando la partida se alarga. Zur pone la carta directamente en el campo de batalla, así que no cuesta maná y esquiva los contras."
+}

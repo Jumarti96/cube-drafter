@@ -1,0 +1,1187 @@
+{
+  "deck_name": "ur-spinerock-spell-copy",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-11T19:00:53Z",
+  "format": "40-card",
+  "strategy": "Spell-copy control",
+  "colors": "UR",
+  "identity": "U/R control that answers one-for-one and closes in the air, with a spell-doubling multiplier on top when it shows up. Every interaction spell in the mainboard has exactly one target, because Spinerock Tyrant reads \"Whenever you cast an instant or sorcery spell with a single target, you may copy it\" - and that clause is the reason Boulder Dash and Run Away Together are not in the deck at all. The honest framing, arrived at during the self-grill: the Tyrant is a 1-of that the deck sees in under a third of games by turn 7, and the pool contains no second card that copies a spell. So the reliable plan is nine single-target answers and nine closer copies, and the Tyrant is the game the deck steals rather than the game it expects.",
+  "restrictions": {
+    "Commons/uncommons max 2 copies": "PASS - no card appears more than twice across mainboard + sideboard",
+    "Rares/mythics max 1 copy": "PASS - every rare/mythic appears exactly once",
+    "Max 5 rares/mythics total (main + side)": "PASS - exactly 5, all mainboard: Spinerock Tyrant, Goliath Daydreamer, Glen Elendra Guardian, Ashling's Command, Steam Vents. The sideboard is entirely commons and uncommons.",
+    "All cards from the cube pool": "PASS - every name matched by exact string against the working pool; basics are format-supplied",
+    "Colour usability (U/R only)": "PASS - every card castable on U/R mana; zero off-identity inclusions"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 1,
+    "cantrip_count": 0,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.36,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": 0.98,
+      "raw_target": 17.98,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.36,
+    "pip_demand": {
+      "R": 12,
+      "U": 14
+    },
+    "land_color_production": {
+      "R": 10,
+      "U": 11
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 46.2,
+        "prod_pct": 55.6,
+        "gap": -9.4,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 53.8,
+        "prod_pct": 61.1,
+        "gap": -7.3,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Spinerock Tyrant",
+      "oracle_text": "Flying\nWither (This deals damage to creatures in the form of -1/-1 counters.)\nWhenever you cast an instant or sorcery spell with a single target, you may copy it. If you do, those spells gain wither. You may choose new targets for the copy.",
+      "mana_cost": "{3}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Dragon",
+      "rarity": "mythic",
+      "power": "6",
+      "toughness": "6",
+      "tags": [
+        "Spellslinger",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Spell Copy"
+      ],
+      "role": "Payoff - 6/6 flying finisher; copies single-target spells when it lands",
+      "board": "mainboard"
+    },
+    {
+      "name": "Goliath Daydreamer",
+      "oracle_text": "Whenever you cast an instant or sorcery spell from your hand, exile that card with a dream counter on it instead of putting it into your graveyard as it resolves.\nWhenever this creature attacks, you may cast a spell from among cards you own in exile with dream counters on them without paying its mana cost.",
+      "mana_cost": "{2}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Giant Wizard",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Free Cast"
+      ],
+      "role": "Payoff - 4/4 closer that recurs spent answers",
+      "board": "mainboard"
+    },
+    {
+      "name": "Twinflame Travelers",
+      "oracle_text": "Flying\nIf a triggered ability of another Elemental you control triggers, it triggers an additional time.",
+      "mana_cost": "{2}{U}{R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Trigger Doubling"
+      ],
+      "role": "Payoff - 3/3 flying closer, doubles Elemental triggers",
+      "board": "mainboard"
+    },
+    {
+      "name": "Stratosoarer",
+      "oracle_text": "Flying\nWhen this creature enters, target creature gains flying until end of turn.\nBasic landcycling {1}{U} ({1}{U}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)",
+      "mana_cost": "{4}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Elemental",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "5",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Land Fetch",
+        "Evasion Granting",
+        "Cycling"
+      ],
+      "role": "Payoff - 3/5 flying closer with basic landcycling",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kindle the Inner Flame",
+      "oracle_text": "Create a token that's a copy of target creature you control, except it has haste and \"At the beginning of the end step, sacrifice this token.\"\nFlashback—{1}{R}, Behold three Elementals. (You may cast this card from your graveyard for its flashback cost. Then exile it. To behold an Elemental, choose an Elemental you control or reveal an Elemental card from your hand.)",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Kindred Sorcery — Elemental",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Flashback"
+      ],
+      "role": "Payoff - hasty copy of your best body; also single-target fuel",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kindle the Inner Flame",
+      "oracle_text": "Create a token that's a copy of target creature you control, except it has haste and \"At the beginning of the end step, sacrifice this token.\"\nFlashback—{1}{R}, Behold three Elementals. (You may cast this card from your graveyard for its flashback cost. Then exile it. To behold an Elemental, choose an Elemental you control or reveal an Elemental card from your hand.)",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Kindred Sorcery — Elemental",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Flashback"
+      ],
+      "role": "Payoff - hasty copy of your best body; also single-target fuel",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sear",
+      "oracle_text": "Sear deals 4 damage to target creature or planeswalker.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "role": "Interaction - 4 damage, single target",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sear",
+      "oracle_text": "Sear deals 4 damage to target creature or planeswalker.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "role": "Interaction - 4 damage, single target",
+      "board": "mainboard"
+    },
+    {
+      "name": "Feed the Flames",
+      "oracle_text": "Feed the Flames deals 5 damage to target creature. If that creature would die this turn, exile it instead.",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "role": "Interaction - 5 damage + exile, single target",
+      "board": "mainboard"
+    },
+    {
+      "name": "Feed the Flames",
+      "oracle_text": "Feed the Flames deals 5 damage to target creature. If that creature would die this turn, exile it instead.",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "role": "Interaction - 5 damage + exile, single target",
+      "board": "mainboard"
+    },
+    {
+      "name": "Spell Snare",
+      "oracle_text": "Counter target spell with mana value 2.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Interaction - counter a 2-drop, single target",
+      "board": "mainboard"
+    },
+    {
+      "name": "Spell Snare",
+      "oracle_text": "Counter target spell with mana value 2.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Interaction - counter a 2-drop, single target",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swat Away",
+      "oracle_text": "This spell costs {2} less to cast if a creature is attacking you.\nThe owner of target spell or creature puts it on their choice of the top or bottom of their library.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Counterspell"
+      ],
+      "role": "Interaction - tuck a spell or creature, single target",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swat Away",
+      "oracle_text": "This spell costs {2} less to cast if a creature is attacking you.\nThe owner of target spell or creature puts it on their choice of the top or bottom of their library.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Counterspell"
+      ],
+      "role": "Interaction - tuck a spell or creature, single target",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ashling's Command",
+      "oracle_text": "Choose two —\n• Create a token that's a copy of target Elemental you control.\n• Target player draws two cards.\n• Ashling's Command deals 2 damage to each creature target player controls.\n• Target player creates two Treasure tokens.",
+      "mana_cost": "{3}{U}{R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Kindred Instant — Elemental",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Artifacts",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Card Draw",
+        "Sweeper/Board Wipe"
+      ],
+      "role": "Interaction - modal sweeper / Elemental copy",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tanufel Rimespeaker",
+      "oracle_text": "Whenever you cast a spell with mana value 4 or greater, draw a card.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Elemental Wizard",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Spellslinger",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "role": "Engine - draw on MV4+ casts",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tanufel Rimespeaker",
+      "oracle_text": "Whenever you cast a spell with mana value 4 or greater, draw a card.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Elemental Wizard",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Spellslinger",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "role": "Engine - draw on MV4+ casts",
+      "board": "mainboard"
+    },
+    {
+      "name": "Flaring Cinder",
+      "oracle_text": "When this creature enters and whenever you cast a spell with mana value 4 or greater, you may discard a card. If you do, draw a card.",
+      "mana_cost": "{1}{U/R}{U/R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting"
+      ],
+      "role": "Engine - loot on entry and on MV4+ casts",
+      "board": "mainboard"
+    },
+    {
+      "name": "Flaring Cinder",
+      "oracle_text": "When this creature enters and whenever you cast a spell with mana value 4 or greater, you may discard a card. If you do, draw a card.",
+      "mana_cost": "{1}{U/R}{U/R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting"
+      ],
+      "role": "Engine - loot on entry and on MV4+ casts",
+      "board": "mainboard"
+    },
+    {
+      "name": "Unwelcome Sprite",
+      "oracle_text": "Flying\nWhenever you cast a spell during an opponent's turn, surveil 2. (Look at the top two cards of your library. You may put any number of them into your graveyard and the rest on top of your library in any order.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Faerie Rogue",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Spellslinger",
+        "Self-Mill",
+        "Graveyard",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Card Selection"
+      ],
+      "role": "Engine - surveil 2 per spell cast on the opponent's turn",
+      "board": "mainboard"
+    },
+    {
+      "name": "Unwelcome Sprite",
+      "oracle_text": "Flying\nWhenever you cast a spell during an opponent's turn, surveil 2. (Look at the top two cards of your library. You may put any number of them into your graveyard and the rest on top of your library in any order.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Faerie Rogue",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Spellslinger",
+        "Self-Mill",
+        "Graveyard",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Card Selection"
+      ],
+      "role": "Engine - surveil 2 per spell cast on the opponent's turn",
+      "board": "mainboard"
+    },
+    {
+      "name": "Glen Elendra Guardian",
+      "oracle_text": "Flash\nFlying\nThis creature enters with a -1/-1 counter on it.\n{1}{U}, Remove a counter from this creature: Counter target noncreature spell. Its controller draws a card.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Faerie Wizard",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Card Draw"
+      ],
+      "role": "Engine - flash flier, one-shot counter for a noncreature spell",
+      "board": "mainboard"
+    },
+    {
+      "name": "Steam Vents",
+      "oracle_text": "({T}: Add {U} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "role": "Land - untapped-capable U/R dual",
+      "board": "mainboard"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land - U/R dual, enters tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land - U/R dual, enters tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land - basic",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "role": "Graveyard hate on a 3/3 flier",
+      "board": "sideboard",
+      "when_to_board": "vs. graveyard decks (39 GY-interaction cards in cube); changeling makes it an Elemental"
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "role": "Graveyard hate on a 3/3 flier",
+      "board": "sideboard",
+      "when_to_board": "vs. graveyard decks (39 GY-interaction cards in cube); changeling makes it an Elemental"
+    },
+    {
+      "name": "Giantfall",
+      "oracle_text": "Choose one —\n• Target creature you control deals damage equal to its power to target creature an opponent controls.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Artifact removal (mode 2 is single-target)",
+      "board": "sideboard",
+      "when_to_board": "vs. artifact decks (11 artifacts); mode 1 has TWO targets and does not trigger the Tyrant"
+    },
+    {
+      "name": "Giantfall",
+      "oracle_text": "Choose one —\n• Target creature you control deals damage equal to its power to target creature an opponent controls.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Artifact removal (mode 2 is single-target)",
+      "board": "sideboard",
+      "when_to_board": "vs. artifact decks (11 artifacts); mode 1 has TWO targets and does not trigger the Tyrant"
+    },
+    {
+      "name": "Temporal Cleansing",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nThe owner of target nonland permanent puts it into their library second from the top or on the bottom.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Targeted Removal"
+      ],
+      "role": "Nonland permanent answer, single target",
+      "board": "sideboard",
+      "when_to_board": "vs. enchantments (21 in cube; no U or R permanent answer exists) - note the owner may keep it second-from-top"
+    },
+    {
+      "name": "Temporal Cleansing",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nThe owner of target nonland permanent puts it into their library second from the top or on the bottom.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Targeted Removal"
+      ],
+      "role": "Nonland permanent answer, single target",
+      "board": "sideboard",
+      "when_to_board": "vs. enchantments (21 in cube; no U or R permanent answer exists) - note the owner may keep it second-from-top"
+    },
+    {
+      "name": "Wild Unraveling",
+      "oracle_text": "As an additional cost to cast this spell, blight 2 or pay {1}. (To blight 2, put two -1/-1 counters on a creature you control.)\nCounter target spell.",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Hard counter, single target",
+      "board": "sideboard",
+      "when_to_board": "vs. combo; its blight 2 can pay onto Glen Elendra Guardian for two extra counter activations"
+    },
+    {
+      "name": "Wild Unraveling",
+      "oracle_text": "As an additional cost to cast this spell, blight 2 or pay {1}. (To blight 2, put two -1/-1 counters on a creature you control.)\nCounter target spell.",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Hard counter, single target",
+      "board": "sideboard",
+      "when_to_board": "vs. combo; its blight 2 can pay onto Glen Elendra Guardian for two extra counter activations"
+    },
+    {
+      "name": "Enraged Flamecaster",
+      "oracle_text": "Reach\nWhenever you cast a spell with mana value 4 or greater, this creature deals 2 damage to each opponent.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Spellslinger",
+        "Payload/Payoff",
+        "Direct Damage"
+      ],
+      "role": "Reach - 2 damage to each opponent per MV4+ cast",
+      "board": "sideboard",
+      "when_to_board": "vs. decks that stabilise the ground - the mainboard cannot point damage at a player"
+    },
+    {
+      "name": "Enraged Flamecaster",
+      "oracle_text": "Reach\nWhenever you cast a spell with mana value 4 or greater, this creature deals 2 damage to each opponent.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Spellslinger",
+        "Payload/Payoff",
+        "Direct Damage"
+      ],
+      "role": "Reach - 2 damage to each opponent per MV4+ cast",
+      "board": "sideboard",
+      "when_to_board": "vs. decks that stabilise the ground - the mainboard cannot point damage at a player"
+    }
+  ],
+  "pitch": "U/R control that answers one-for-one and closes in the air, with a spell-doubling multiplier on top when it shows up. Every interaction spell in the mainboard has exactly one target, because Spinerock Tyrant reads \"Whenever you cast an instant or sorcery spell with a single target, you may copy it\" - and that clause is the reason Boulder Dash and Run Away Together are not in the deck at all. The honest framing, arrived at during the self-grill: the Tyrant is a 1-of that the deck sees in under a third of games by turn 7, and the pool contains no second card that copies a spell. So the reliable plan is nine single-target answers and nine closer copies, and the Tyrant is the game the deck steals rather than the game it expects.",
+  "strategy_es": "control de copia de hechizos",
+  "identity_es": "Control U/R que responde uno a uno y cierra por el aire, con un multiplicador de duplicación de hechizos encima cuando aparece. Cada hechizo de interacción del principal tiene exactamente un objetivo, porque Spinerock Tyrant dice \"Whenever you cast an instant or sorcery spell with a single target, you may copy it\", y esa cláusula es la razón de que Boulder Dash y Run Away Together no estén en el mazo en absoluto. El encuadre honesto: el Tyrant es una copia única que el mazo ve en menos de un tercio de las partidas para el turno 7, y el pool no contiene ninguna segunda carta que copie un hechizo. Así que el plan fiable son nueve respuestas de objetivo único y nueve copias de cierre, y el Tyrant es la partida que el mazo roba y no la que espera.",
+  "pitch_es": "Control U/R que responde uno a uno y cierra por el aire, con un multiplicador de duplicación de hechizos encima cuando aparece. Cada hechizo de interacción del principal tiene exactamente un objetivo, porque Spinerock Tyrant dice \"Whenever you cast an instant or sorcery spell with a single target, you may copy it\", y esa cláusula es la razón de que Boulder Dash y Run Away Together no estén en el mazo en absoluto. El encuadre honesto: el Tyrant es una copia única que el mazo ve en menos de un tercio de las partidas para el turno 7, y el pool no contiene ninguna segunda carta que copie un hechizo. Así que el plan fiable son nueve respuestas de objetivo único y nueve copias de cierre, y el Tyrant es la partida que el mazo roba y no la que espera."
+}

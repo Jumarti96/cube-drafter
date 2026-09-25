@@ -1,0 +1,709 @@
+{
+  "deck_name": "wb-cleric-kindred-anthem",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T19:30:00Z",
+  "format": "40-card",
+  "strategy": "Cleric kindred aggro",
+  "colors": "WB",
+  "identity": "A WB Cleric kindred aggro deck. Eleven of the eighteen creatures are printed Clerics - 7 of the 8 Clerics that exist in this cube, at maximum legal copies - and a twelfth body (Evolved Sleeper) becomes one for {B}, so Shadow-Rite Priest's 'Other Clerics you control get +1/+1' applies to 10 of the other 17 creatures when drawn. The kill is combat damage from a curve that puts a body down on turns 1-3 and attacks from turn 2. Elas il-Kor converts creature deaths into reach that does not require attacking, and Aron, Benalia's Ruin supplies a second anthem whose +1/+1 counters are permanent. Shadow-Rite Priest is deliberately NOT treated as an assembly requirement - it is a single copy seen only 32.5 percent of the time by turn 6 - so the deck is built to win without it and to win harder with it; its {3}{B}{B} sacrifice line converts a surplus Cleric into Sheoldred, the Apocalypse in long games.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "max 5 rares+mythics across mainboard and sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 1,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.04,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": -0.78,
+      "raw_target": 16.22,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.04,
+    "pip_demand": {
+      "B": 15,
+      "W": 14
+    },
+    "land_color_production": {
+      "B": 10,
+      "W": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 51.7,
+        "prod_pct": 62.5,
+        "gap": -10.8,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 48.3,
+        "prod_pct": 56.2,
+        "gap": -7.9,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Evolved Sleeper",
+      "oracle_text": "{B}: This creature becomes a Human Cleric with base power and toughness 2/2.\n{1}{B}: If this creature is a Cleric, put a deathtouch counter on it and it becomes a Phyrexian Human Cleric with base power and toughness 3/3.\n{1}{B}{B}: If this creature is a Phyrexian, put a +1/+1 counter on it, then you draw a card and you lose 1 life.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Counters (+1/+1)",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cult Conscript",
+      "oracle_text": "This creature enters tapped.\n{1}{B}: Return this card from your graveyard to the battlefield. Activate only if a non-Skeleton creature died under your control this turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Skeleton Warrior",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Standalone Threat",
+        "Recursion"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shadow-Rite Priest",
+      "oracle_text": "Other Clerics you control get +1/+1.\n{3}{B}{B}, {T}, Sacrifice another Cleric: Search your library for a black creature card, put it onto the battlefield, then shuffle.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Reanimator",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Tutor",
+        "Sacrifice Outlet"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Samite Herbalist",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life and scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Life Gain"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Phyrexian Missionary",
+      "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nLifelink\nWhen this creature enters, if it was kicked, return target creature card from your graveyard to your hand.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian Human Cleric",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Kicker/Scaling",
+        "Graveyard",
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Regrowth",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Benalish Faithbonder",
+      "oracle_text": "Vigilance\nEnlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Enlist Matters",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Elas il-Kor, Sadistic Pilgrim",
+      "oracle_text": "Deathtouch\nWhenever another creature you control enters, you gain 1 life.\nWhenever another creature you control dies, each opponent loses 1 life.",
+      "mana_cost": "{W}{B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Legendary Creature — Phyrexian Kor Cleric",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Lifegain",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Life Drain"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Knight of Dusk's Shadow",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nYour opponents can't gain life.\n{1}{B}: This creature gets +1/+1 until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Lifegain Hate"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Anointed Peacekeeper",
+      "oracle_text": "Vigilance\nAs this creature enters, look at an opponent's hand, then choose any card name.\nSpells your opponents cast with the chosen name cost {2} more to cast.\nActivated abilities of sources with the chosen name cost {2} more to activate unless they're mana abilities.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Tax Effect",
+        "Hand Disruption"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eerie Soultender",
+      "oracle_text": "When this creature enters, mill three cards. (Put the top three cards of your library into your graveyard.)\n{4}{B}, Exile this card from your graveyard: Return another target creature card from your graveyard to your hand.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Spirit Cleric",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Reanimator",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Recursion"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Lifegain",
+        "Life Drain",
+        "Standalone Threat",
+        "Payload/Payoff"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cut Down",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bone Splinters",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Citizen's Arrest",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Aron, Benalia's Ruin",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\n{W}{B}, {T}, Sacrifice another creature: Put a +1/+1 counter on each creature you control.",
+      "mana_cost": "{W}{W}{B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Phyrexian Human",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Sacrifice Outlet",
+        "Counter Placement"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Caves of Koilos",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {W} or {B}. This land deals 1 damage to you.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 6,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Extinguish the Light",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against decks whose threats exceed Cut Down's total power+toughness 5 limit and whose toughness is under 4 (Destroy Evil's floor) - the unconditional answer."
+    },
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against artifacts and enchantments - the only WB card in this pool that exiles a nonland permanent of any type. 15 artifacts and 18 enchantments in the cube."
+    },
+    {
+      "name": "Sheoldred's Restoration",
+      "oracle_text": "Kicker {2}{W} (You may pay an additional {2}{W} as you cast this spell.)\nReturn target creature card from your graveyard to the battlefield. If this spell was kicked, you gain life equal to that card's mana value. Otherwise, you lose that much life.\nExile Sheoldred's Restoration.",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Kicker/Scaling",
+        "Lifegain",
+        "Payload/Payoff",
+        "Reanimation",
+        "Kicker",
+        "Life: Cost"
+      ],
+      "qty": 2,
+      "role": "Recursion",
+      "board": "sideboard",
+      "when_to_board": "Against sweepers and heavy removal - the deck's only post-wipe rebuild. 'Return target creature card from your graveyard to the battlefield' has 17 creature copies (71% of nonlands) as live targets, and Eerie Soultender x2 actively stocks the yard. Kicker {2}{W} is on-colour for the lifegain mode."
+    },
+    {
+      "name": "Knight of Dawn's Light",
+      "oracle_text": "First strike\nIf you would gain life, you gain that much life plus 1 instead.\n{1}{W}: This creature gets +1/+1 until end of turn.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Lifegain",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "sideboard",
+      "when_to_board": "Against aggro and burn - first strike plus 'If you would gain life, you gain that much life plus 1 instead' amplifies 7 of the 24 mainboard nonlands that gain life."
+    },
+    {
+      "name": "Choking Miasma",
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nIf this spell was kicked, put a +1/+1 counter on a creature you control.\nAll creatures get -2/-2 until end of turn.",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against go-wide token decks ONLY - the class the mainboard concedes. 'All creatures get -2/-2 until end of turn' also kills 13 of this deck's own 17 creature copies, so it is boarded in only when the opponent's board is wider and smaller than ours. The {G} kicker is declined; {1}{B}{B} is castable off 10 black sources."
+    }
+  ],
+  "pitch": "A WB Cleric kindred aggro deck. Eleven of the eighteen creatures are printed Clerics - 7 of the 8 Clerics that exist in this cube, at maximum legal copies - and a twelfth body (Evolved Sleeper) becomes one for {B}, so Shadow-Rite Priest's 'Other Clerics you control get +1/+1' applies to 10 of the other 17 creatures when drawn. The kill is combat damage from a curve that puts a body down on turns 1-3 and attacks from turn 2. Elas il-Kor converts creature deaths into reach that does not require attacking, and Aron, Benalia's Ruin supplies a second anthem whose +1/+1 counters are permanent. Shadow-Rite Priest is deliberately NOT treated as an assembly requirement - it is a single copy seen only 32.5 percent of the time by turn 6 - so the deck is built to win without it and to win harder with it; its {3}{B}{B} sacrifice line converts a surplus Cleric into Sheoldred, the Apocalypse in long games.",
+  "strategy_es": "agro tribal de Clérigos",
+  "identity_es": "Un agro tribal de Clérigos WB. Once de las dieciocho criaturas son Clérigos impresos — 7 de los 8 Clérigos que existen en este cubo, a copias legales máximas — y un duodécimo cuerpo (Evolved Sleeper) se convierte en uno por {B}, así que el 'Other Clerics you control get +1/+1' de Shadow-Rite Priest se aplica a 10 de las otras 17 criaturas cuando se roba. La victoria es daño de combate desde una curva que pone un cuerpo en los turnos 1-3 y ataca desde el turno 2. Elas il-Kor convierte las muertes de criaturas en alcance que no requiere atacar, y Aron, Benalia's Ruin aporta un segundo anthem cuyos contadores +1/+1 son permanentes. Shadow-Rite Priest deliberadamente NO se trata como requisito de ensamblaje — es una copia única vista solo el 32,5 por ciento de las veces para el turno 6 — así que el mazo está construido para ganar sin él y para ganar con más fuerza con él; su línea de sacrificio de {3}{B}{B} convierte un Clérigo sobrante en Sheoldred, the Apocalypse en las partidas largas.",
+  "pitch_es": "Un agro tribal de Clérigos WB. Once de las dieciocho criaturas son Clérigos impresos — 7 de los 8 Clérigos que existen en este cubo, a copias legales máximas — y un duodécimo cuerpo (Evolved Sleeper) se convierte en uno por {B}, así que el 'Other Clerics you control get +1/+1' de Shadow-Rite Priest se aplica a 10 de las otras 17 criaturas cuando se roba. La victoria es daño de combate desde una curva que pone un cuerpo en los turnos 1-3 y ataca desde el turno 2. Elas il-Kor convierte las muertes de criaturas en alcance que no requiere atacar, y Aron, Benalia's Ruin aporta un segundo anthem cuyos contadores +1/+1 son permanentes. Shadow-Rite Priest deliberadamente NO se trata como requisito de ensamblaje — es una copia única vista solo el 32,5 por ciento de las veces para el turno 6 — así que el mazo está construido para ganar sin él y para ganar con más fuerza con él; su línea de sacrificio de {3}{B}{B} convierte un Clérigo sobrante en Sheoldred, the Apocalypse en las partidas largas."
+}

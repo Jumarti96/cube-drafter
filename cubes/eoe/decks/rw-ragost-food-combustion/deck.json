@@ -1,0 +1,628 @@
+{
+  "deck_name": "rw-ragost-food-combustion",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-07T17:35:19Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "RW",
+  "identity": "A red-white artifact aggro deck that wins with a creature board and converts its spent artifacts into reach. Ragost, Deft Gastronaut retroactively turns every artifact already in play into a Food with a lifegain sacrifice ability, and converts each Food into 3 damage to each opponent. CORRECTED RATE (Challenger F1): the SUSTAINED rate is one activation - 3 damage - per turn cycle. A second activation on the opponent's turn is available, but keeping the loop running then requires life gained during THEIR turn, so a full 6-damage cycle costs up to 4 artifacts and 6 mana against a library holding 15 nontoken artifacts. Six damage is a burst, not a clock. Weapons Manufacturing turns each nontoken artifact into two, the second carrying a 2-damage leave-the-battlefield trigger; Sami, Ship's Engineer makes a free artifact token at every end step you attacked with two creatures, the only card-free Food supply in these colours; and Rust Harvester recycles artifact cards Ragost has already eaten into escalating damage to any target. The plan does not require Ragost: Weftstalker Ardent x2 converts the same artifact flood into direct damage on its own.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_user_constraint": "Maximum 6 rare/mythic cards TOTAL across mainboard and sideboard; rare/mythic LANDS count toward this.",
+    "rare_mythic_total": 6,
+    "rare_mythic_list": [
+      [
+        "Ragost, Deft Gastronaut",
+        "rare"
+      ],
+      [
+        "Haliya, Guided by Light",
+        "rare"
+      ],
+      [
+        "Warmaker Gunship",
+        "rare"
+      ],
+      [
+        "Weapons Manufacturing",
+        "rare"
+      ],
+      [
+        "Rust Harvester",
+        "rare"
+      ],
+      [
+        "Sacred Foundry",
+        "rare"
+      ]
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 15,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 4,
+    "accel_count": 4,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 1.88,
+      "reference_avg_mv": 2.5,
+      "accel": 4,
+      "adjustment": -1.493,
+      "raw_target": 15.507,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 1.88,
+    "pip_demand": {
+      "R": 18,
+      "W": 7
+    },
+    "land_color_production": {
+      "W": 7,
+      "R": 11
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 72,
+        "prod_pct": 73.3,
+        "gap": -1.3,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 28,
+        "prod_pct": 46.7,
+        "gap": -18.7,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Ragost, Deft Gastronaut",
+      "qty": 1,
+      "role": "Payoff — Food combustion engine",
+      "board": "mainboard",
+      "mana_cost": "{R}{W}",
+      "cmc": 2,
+      "type_line": "Legendary Creature — Lobster Citizen",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Artifacts you control are Foods in addition to their other types and have \"{2}, {T}, Sacrifice this artifact: You gain 3 life.\"\n{1}, {T}, Sacrifice a Food: Ragost deals 3 damage to each opponent.\nAt the beginning of each end step, if you gained life this turn, untap Ragost.",
+      "power": "2",
+      "toughness": "2"
+    },
+    {
+      "name": "Weftstalker Ardent",
+      "qty": 2,
+      "role": "Payoff — artifact-ETB drain",
+      "board": "mainboard",
+      "mana_cost": "{2}{R}",
+      "cmc": 3,
+      "type_line": "Creature — Drix Artificer",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever another creature or artifact you control enters, this creature deals 1 damage to each opponent.\nWarp {R} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "2",
+      "toughness": "3"
+    },
+    {
+      "name": "Oreplate Pangolin",
+      "qty": 2,
+      "role": "Threat — scales with artifact flood",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Robot Pangolin",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Whenever another artifact you control enters, you may pay {1}. If you do, put a +1/+1 counter on this creature.",
+      "power": "2",
+      "toughness": "2"
+    },
+    {
+      "name": "Kavaron Harrier",
+      "qty": 2,
+      "role": "Threat — 1-mana artifact body, makes artifacts on attack",
+      "board": "mainboard",
+      "mana_cost": "{R}",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Soldier",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever this creature attacks, you may pay {2}. If you do, create a 2/2 colorless Robot artifact creature token that's tapped and attacking. Sacrifice that token at end of combat.",
+      "power": "2",
+      "toughness": "1"
+    },
+    {
+      "name": "Chrome Companion",
+      "qty": 1,
+      "role": "Threat — artifact body, tap-to-gain-life untaps Ragost; graveyard answer",
+      "board": "mainboard",
+      "mana_cost": "{2}",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Dog",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life.\n{2}, {T}: Put target card from a graveyard on the bottom of its owner's library.",
+      "power": "2",
+      "toughness": "1"
+    },
+    {
+      "name": "Haliya, Guided by Light",
+      "qty": 1,
+      "role": "Payoff — converts incidental lifegain into cards",
+      "board": "mainboard",
+      "mana_cost": "{2}{W}",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever Haliya or another creature or artifact you control enters, you gain 1 life.\nAt the beginning of your end step, draw a card if you've gained 3 or more life this turn.\nWarp {W} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "3",
+      "toughness": "3"
+    },
+    {
+      "name": "Sami, Ship's Engineer",
+      "qty": 1,
+      "role": "Threat/engine — free artifact token every turn you attack with two creatures",
+      "board": "mainboard",
+      "mana_cost": "{2}{R}{W}",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Artificer",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "At the beginning of your end step, if you control two or more tapped creatures, create a tapped 2/2 colorless Robot artifact creature token.",
+      "power": "2",
+      "toughness": "4"
+    },
+    {
+      "name": "Warmaker Gunship",
+      "qty": 1,
+      "role": "Threat — 4/3 Spacecraft whose ETB damage scales with artifact count",
+      "board": "mainboard",
+      "mana_cost": "{2}{R}",
+      "cmc": 3,
+      "type_line": "Artifact — Spacecraft",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "When this Spacecraft enters, it deals damage equal to the number of artifacts you control to target creature an opponent controls.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 6+.)\n6+ | Flying",
+      "power": "4",
+      "toughness": "3"
+    },
+    {
+      "name": "Weapons Manufacturing",
+      "qty": 1,
+      "role": "Engine — doubles every nontoken artifact into a Munitions",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever a nontoken artifact you control enters, create a colorless artifact token named Munitions with \"When this token leaves the battlefield, it deals 2 damage to any target.\"",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Nutrient Block",
+      "qty": 2,
+      "role": "Engine — indestructible Food, replaces itself",
+      "board": "mainboard",
+      "mana_cost": "{1}",
+      "cmc": 1,
+      "type_line": "Artifact — Food",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Melded Moxite",
+      "qty": 2,
+      "role": "Engine — filters, converts into a second artifact",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}",
+      "cmc": 2,
+      "type_line": "Artifact",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this artifact enters, you may discard a card. If you do, draw two cards.\n{3}, Sacrifice this artifact: Create a tapped 2/2 colorless Robot artifact creature token.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Slagdrill Scrapper",
+      "qty": 2,
+      "role": "Engine — repeatable sac outlet + card draw",
+      "board": "mainboard",
+      "mana_cost": "{R}",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Scout",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "{2}, {T}, Sacrifice another artifact or land: Draw a card.",
+      "power": "1",
+      "toughness": "2"
+    },
+    {
+      "name": "Squire's Lightblade",
+      "qty": 2,
+      "role": "Enabler — 1-mana artifact that triggers 4 ETB payoffs",
+      "board": "mainboard",
+      "mana_cost": "{W}",
+      "cmc": 1,
+      "type_line": "Artifact — Equipment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flash\nWhen this Equipment enters, attach it to target creature you control. That creature gains first strike until end of turn.\nEquipped creature gets +1/+0.\nEquip {3}",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Plasma Bolt",
+      "qty": 1,
+      "role": "Interaction — 3 damage to ANY target most turns; Void is live off constant sacrifices and warps",
+      "board": "mainboard",
+      "mana_cost": "{R}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Plasma Bolt deals 2 damage to any target.\nVoid — Plasma Bolt deals 3 damage instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Focus Fire",
+      "qty": 1,
+      "role": "Interaction — the only instant-speed removal; X = 2 + creatures/Spacecraft",
+      "board": "mainboard",
+      "mana_cost": "{W}",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Focus Fire deals X damage to target attacking or blocking creature, where X is 2 plus the number of creatures and/or Spacecraft you control.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Rust Harvester",
+      "qty": 1,
+      "role": "Payoff — converts artifact cards in the graveyard into escalating face damage",
+      "board": "mainboard",
+      "mana_cost": "{R}",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Menace\n{2}, {T}, Exile an artifact card from your graveyard: Put a +1/+1 counter on this creature, then it deals damage equal to its power to any target.",
+      "power": "1",
+      "toughness": "1"
+    },
+    {
+      "name": "Banishing Light",
+      "qty": 1,
+      "role": "Interaction — catch-all exile for any nonland permanent",
+      "board": "mainboard",
+      "mana_cost": "{2}{W}",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Ruinous Rampage",
+      "qty": 1,
+      "role": "Payoff — 3 damage to each opponent, one Ragost activation as a spell",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}{R}",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Choose one —\n• Ruinous Rampage deals 3 damage to each opponent.\n• Exile all artifacts with mana value 3 or less.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Sacred Foundry",
+      "qty": 1,
+      "role": "Land — untapped-capable RW dual",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "({T}: Add {R} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Sacred Peaks",
+      "qty": 2,
+      "role": "Land — RW dual (tapped)",
+      "board": "mainboard",
+      "mana_cost": null,
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Mountain",
+      "qty": 8,
+      "role": "Land",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Plains",
+      "qty": 4,
+      "role": "Land",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Radiant Strike",
+      "qty": 2,
+      "role": "vs the 74-card artifact class and tapped attackers; the 3 life also untaps Ragost",
+      "board": "sideboard",
+      "mana_cost": "{3}{W}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Drill Too Deep",
+      "qty": 2,
+      "role": "vs artifacts — 'Destroy target artifact' at 2 mana",
+      "board": "sideboard",
+      "mana_cost": "{1}{R}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Put five charge counters on target Spacecraft or Planet you control.\n• Destroy target artifact.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Cut Propulsion",
+      "qty": 2,
+      "role": "vs the 56-card evasion class — kills any flier at any size, doubled damage vs flying",
+      "board": "sideboard",
+      "mana_cost": "{2}{R}",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature deals damage to itself equal to its power. If that creature has flying, it deals twice that much damage to itself instead.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "qty": 2,
+      "role": "vs the 31-card graveyard class — exiles each opponent's graveyard on an artifact body",
+      "board": "sideboard",
+      "mana_cost": "{3}",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": "3",
+      "toughness": "1"
+    },
+    {
+      "name": "Banishing Light",
+      "qty": 1,
+      "role": "vs enchantments — the cube has 16 and only ONE enchantment answer cube-wide (green)",
+      "board": "sideboard",
+      "mana_cost": "{2}{W}",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Reroute Systems",
+      "qty": 1,
+      "role": "vs removal aimed at Ragost and vs the damage half of the cube's 5 sweepers — indestructible for {W}",
+      "board": "sideboard",
+      "mana_cost": "{W}",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Choose one —\n• Target artifact or creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Reroute Systems deals 2 damage to target tapped creature.",
+      "power": null,
+      "toughness": null
+    }
+  ],
+  "pitch": "A red-white artifact aggro deck that wins with a creature board and converts its spent artifacts into reach. Ragost, Deft Gastronaut retroactively turns every artifact already in play into a Food with a lifegain sacrifice ability, and converts each Food into 3 damage to each opponent. CORRECTED RATE (Challenger F1): the SUSTAINED rate is one activation - 3 damage - per turn cycle. A second activation on the opponent's turn is available, but keeping the loop running then requires life gained during THEIR turn, so a full 6-damage cycle costs up to 4 artifacts and 6 mana against a library holding 15 nontoken artifacts. Six damage is a burst, not a clock. Weapons Manufacturing turns each nontoken artifact into two, the second carrying a 2-damage leave-the-battlefield trigger; Sami, Ship's Engineer makes a free artifact token at every end step you attacked with two creatures, the only card-free Food supply in these colours; and Rust Harvester recycles artifact cards Ragost has already eaten into escalating damage to any target. The plan does not require Ragost: Weftstalker Ardent x2 converts the same artifact flood into direct damage on its own.",
+  "strategy_es": "agro",
+  "identity_es": "Un agro de artefactos rojo-blanco que gana con un tablero de criaturas y convierte sus artefactos gastados en alcance. Ragost, Deft Gastronaut convierte retroactivamente cada artefacto ya en juego en una Comida con una habilidad de sacrificio que gana vida, y convierte cada Comida en 3 de daño a cada rival. RITMO CORREGIDO: el ritmo SOSTENIDO es una activación — 3 de daño — por ciclo de turno. Hay disponible una segunda activación en el turno del rival, pero mantener el bucle en marcha exige vida ganada durante SU turno, así que un ciclo completo de 6 de daño cuesta hasta 4 artefactos y 6 manás contra una biblioteca que guarda 15 artefactos no-ficha. Seis de daño es una ráfaga, no un reloj. Weapons Manufacturing convierte cada artefacto no-ficha en dos, llevando el segundo un disparo de 2 de daño al dejar el campo de batalla; Sami, Ship's Engineer crea una ficha de artefacto gratis en cada paso final en que hayas atacado con dos criaturas, el único suministro de Comida sin coste de cartas de estos colores; y Rust Harvester recicla las cartas de artefacto que Ragost ya se ha comido en daño creciente a cualquier objetivo. El plan no requiere a Ragost: Weftstalker Ardent x2 convierte esa misma inundación de artefactos en daño directo por su cuenta.",
+  "pitch_es": "Un agro de artefactos rojo-blanco que gana con un tablero de criaturas y convierte sus artefactos gastados en alcance. Ragost, Deft Gastronaut convierte retroactivamente cada artefacto ya en juego en una Comida con una habilidad de sacrificio que gana vida, y convierte cada Comida en 3 de daño a cada rival. RITMO CORREGIDO: el ritmo SOSTENIDO es una activación — 3 de daño — por ciclo de turno. Hay disponible una segunda activación en el turno del rival, pero mantener el bucle en marcha exige vida ganada durante SU turno, así que un ciclo completo de 6 de daño cuesta hasta 4 artefactos y 6 manás contra una biblioteca que guarda 15 artefactos no-ficha. Seis de daño es una ráfaga, no un reloj. Weapons Manufacturing convierte cada artefacto no-ficha en dos, llevando el segundo un disparo de 2 de daño al dejar el campo de batalla; Sami, Ship's Engineer crea una ficha de artefacto gratis en cada paso final en que hayas atacado con dos criaturas, el único suministro de Comida sin coste de cartas de estos colores; y Rust Harvester recicla las cartas de artefacto que Ragost ya se ha comido en daño creciente a cualquier objetivo. El plan no requiere a Ragost: Weftstalker Ardent x2 convierte esa misma inundación de artefactos en daño directo por su cuenta."
+}

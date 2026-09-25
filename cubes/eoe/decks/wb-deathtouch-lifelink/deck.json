@@ -1,0 +1,621 @@
+{
+  "deck_name": "wb-deathtouch-lifelink",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-07T18:30:46Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "WB",
+  "identity": "A white-black combat deck that wins by making blocking illegal in practice. Syr Vondam, the Lucent is a 4/4 deathtouch lifelink body that grants your OTHER creatures +1/+0 and deathtouch every time it enters or attacks, so a 1/1 token trades with anything the opponent has. Squire's Lightblade, Dual-Sun Adepts and Dual-Sun Technique convert that from a trade into a one-sided kill: deathtouch plus first or double strike destroys the blocker in the first-strike damage step, before it deals any damage back. Underneath, 4 lifelink copies (Syr Vondam, the Lucent x2, Elegy Acolyte, Exalted Sunborn) win the race, and Hullcarver and Gravblade Heavy supply deathtouch that does not depend on Syr Vondam being alive. Tragic Trajectory turns the deck's own combat deaths into a one-mana -10/-10.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_user_constraint": "Maximum 6 rare/mythic cards TOTAL across mainboard and sideboard; rare/mythic LANDS count toward this.",
+    "rare_mythic_total": 6,
+    "rare_mythic_list": [
+      [
+        "Elegy Acolyte",
+        "rare"
+      ],
+      [
+        "Exalted Sunborn",
+        "mythic"
+      ],
+      [
+        "Sunstar Chaplain",
+        "rare"
+      ],
+      [
+        "Syr Vondam, Sunstar Exemplar",
+        "rare"
+      ],
+      [
+        "Lumen-Class Frigate",
+        "rare"
+      ],
+      [
+        "Godless Shrine",
+        "rare"
+      ]
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 1,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.39,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": -0.313,
+      "raw_target": 16.687,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.39,
+    "pip_demand": {
+      "W": 17,
+      "B": 13
+    },
+    "land_color_production": {
+      "W": 10,
+      "B": 10
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 43.3,
+        "prod_pct": 58.8,
+        "gap": -15.5,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 56.7,
+        "prod_pct": 58.8,
+        "gap": -2.1,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Syr Vondam, the Lucent",
+      "qty": 2,
+      "role": "Payoff — grants the whole team +1/+0 and deathtouch on every attack",
+      "board": "mainboard",
+      "mana_cost": "{2}{W}{B}{B}",
+      "cmc": 5,
+      "type_line": "Legendary Creature — Human Knight",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Deathtouch, lifelink\nWhenever Syr Vondam enters or attacks, other creatures you control get +1/+0 and gain deathtouch until end of turn.",
+      "power": "4",
+      "toughness": "4"
+    },
+    {
+      "name": "Elegy Acolyte",
+      "qty": 1,
+      "role": "Payoff — 4/4 lifelink that draws a card whenever creatures connect",
+      "board": "mainboard",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Lifelink\nWhenever one or more creatures you control deal combat damage to a player, you draw a card and lose 1 life.\nVoid — At the beginning of your end step, if a nonland permanent left the battlefield this turn or a spell was warped this turn, create a 2/2 colorless Robot artifact creature token.",
+      "power": "4",
+      "toughness": "4"
+    },
+    {
+      "name": "Exalted Sunborn",
+      "qty": 1,
+      "role": "Payoff — 4/5 flying lifelink; doubles every token the deck makes",
+      "board": "mainboard",
+      "mana_cost": "{3}{W}{W}",
+      "cmc": 5,
+      "type_line": "Creature — Angel Wizard",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Flying, lifelink\nIf one or more tokens would be created under your control, twice that many of those tokens are created instead.\nWarp {1}{W} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "4",
+      "toughness": "5"
+    },
+    {
+      "name": "Dual-Sun Adepts",
+      "qty": 2,
+      "role": "Threat — printed double strike, which turns granted deathtouch one-sided",
+      "board": "mainboard",
+      "mana_cost": "{2}{W}",
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Double strike\n{5}: Creatures you control get +1/+1 until end of turn.",
+      "power": "2",
+      "toughness": "2"
+    },
+    {
+      "name": "Sunstar Chaplain",
+      "qty": 1,
+      "role": "Threat — same end-step trigger as Flight-Deck Coordinator one mana cheaper, and the deck's only counter source",
+      "board": "mainboard",
+      "mana_cost": "{1}{W}",
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "At the beginning of your end step, if you control two or more tapped creatures, put a +1/+1 counter on target creature you control.\n{2}, Remove a +1/+1 counter from a creature you control: Tap target artifact or creature.",
+      "power": "3",
+      "toughness": "2"
+    },
+    {
+      "name": "Hullcarver",
+      "qty": 2,
+      "role": "Threat — 1-mana deathtouch that blocks and kills anything",
+      "board": "mainboard",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Assassin",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Deathtouch",
+      "power": "1",
+      "toughness": "1"
+    },
+    {
+      "name": "Gravblade Heavy",
+      "qty": 2,
+      "role": "Threat — a SECOND deathtouch source independent of Syr Vondam, while you control an artifact",
+      "board": "mainboard",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "As long as you control an artifact, this creature gets +1/+0 and has deathtouch.",
+      "power": "3",
+      "toughness": "4"
+    },
+    {
+      "name": "Syr Vondam, Sunstar Exemplar",
+      "qty": 1,
+      "role": "Threat — vigilance menace that grows and gains on every creature death",
+      "board": "mainboard",
+      "mana_cost": "{W}{B}",
+      "cmc": 2,
+      "type_line": "Legendary Creature — Human Knight",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Vigilance, menace\nWhenever another creature you control dies or is put into exile, put a +1/+1 counter on Syr Vondam and you gain 1 life.\nWhen Syr Vondam dies or is put into exile while its power is 4 or greater, destroy up to one target nonland permanent.",
+      "power": "2",
+      "toughness": "2"
+    },
+    {
+      "name": "Squire's Lightblade",
+      "qty": 2,
+      "role": "Enabler — flash first strike; deathtouch plus first strike kills the blocker before it swings back",
+      "board": "mainboard",
+      "mana_cost": "{W}",
+      "cmc": 1,
+      "type_line": "Artifact — Equipment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flash\nWhen this Equipment enters, attach it to target creature you control. That creature gains first strike until end of turn.\nEquipped creature gets +1/+0.\nEquip {3}",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Dual-Sun Technique",
+      "qty": 1,
+      "role": "Enabler — instant double strike; with granted deathtouch the blocker dies before it swings back",
+      "board": "mainboard",
+      "mana_cost": "{1}{W}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature you control gains double strike until end of turn. If it has a +1/+1 counter on it, draw a card.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Lumen-Class Frigate",
+      "qty": 1,
+      "role": "Enabler — a +1/+1 anthem at 2 charge counters, and an artifact that switches on Gravblade Heavy",
+      "board": "mainboard",
+      "mana_cost": "{1}{W}",
+      "cmc": 2,
+      "type_line": "Artifact — Spacecraft",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 12+.)\n2+ | Other creatures you control get +1/+1.\n12+ | Flying, lifelink",
+      "power": "3",
+      "toughness": "5"
+    },
+    {
+      "name": "Honored Knight-Captain",
+      "qty": 1,
+      "role": "Enabler — two bodies for two mana, both of which get the deathtouch grant",
+      "board": "mainboard",
+      "mana_cost": "{1}{W}",
+      "cmc": 2,
+      "type_line": "Creature — Human Advisor Knight",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, create a 1/1 white Human Soldier creature token.\n{4}{W}{W}, Sacrifice this creature: Search your library for an Equipment card, put it onto the battlefield, then shuffle.",
+      "power": "1",
+      "toughness": "1"
+    },
+    {
+      "name": "Honor",
+      "qty": 1,
+      "role": "Enabler — 1-mana cantrip; the deck's only card draw and its only counter for Dual-Sun Technique",
+      "board": "mainboard",
+      "mana_cost": "{W}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Put a +1/+1 counter on target creature.\nDraw a card.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Tragic Trajectory",
+      "qty": 2,
+      "role": "Interaction — a 1-mana -10/-10 whenever a nonland permanent left the battlefield this turn, which combat provides",
+      "board": "mainboard",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Focus Fire",
+      "qty": 2,
+      "role": "Interaction — 1-mana instant, X scales with the board this deck builds anyway",
+      "board": "mainboard",
+      "mana_cost": "{W}",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Focus Fire deals X damage to target attacking or blocking creature, where X is 2 plus the number of creatures and/or Spacecraft you control.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Banishing Light",
+      "qty": 1,
+      "role": "Interaction — the only catch-all for a noncreature permanent",
+      "board": "mainboard",
+      "mana_cost": "{2}{W}",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Godless Shrine",
+      "qty": 1,
+      "role": "Land — the only untapped-capable WB dual in the pool",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "({T}: Add {W} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Sunlit Marsh",
+      "qty": 2,
+      "role": "Land — WB dual (tapped)",
+      "board": "mainboard",
+      "mana_cost": null,
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Plains",
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Swamp",
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Radiant Strike",
+      "qty": 2,
+      "role": "vs the 74-card artifact class (29.7% of the cube) and tapped attackers; 3 life in a race",
+      "board": "sideboard",
+      "mana_cost": "{3}{W}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Gravkill",
+      "qty": 2,
+      "role": "vs recursive or oversized threats — exile, not destroy",
+      "board": "sideboard",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Seam Rip",
+      "qty": 2,
+      "role": "vs fast MV<=2 starts",
+      "board": "sideboard",
+      "mana_cost": "{W}",
+      "cmc": 1,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls with mana value 2 or less until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Banishing Light",
+      "qty": 1,
+      "role": "vs enchantments — the cube runs 16 and has ONE enchantment answer cube-wide",
+      "board": "sideboard",
+      "mana_cost": "{2}{W}",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Dark Endurance",
+      "qty": 1,
+      "role": "vs removal-heavy and blocking decks — indestructible protects Syr Vondam through a wrath",
+      "board": "sideboard",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "This spell costs {1} less to cast if it targets a blocking creature.\nTarget creature gets +2/+0 and gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Emergency Eject",
+      "qty": 1,
+      "role": "vs the 74-card artifact class, the 16 enchantments, and attacking fliers — instant-speed destroy any nonland permanent",
+      "board": "sideboard",
+      "mana_cost": "{2}{W}",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target nonland permanent. Its controller creates a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Depressurize",
+      "qty": 1,
+      "role": "vs x/1 and x/2 aggro starts at instant speed",
+      "board": "sideboard",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets -3/-0 until end of turn. Then if that creature's power is 0 or less, destroy it.",
+      "power": null,
+      "toughness": null
+    }
+  ],
+  "pitch": "A white-black combat deck that wins by making blocking illegal in practice. Syr Vondam, the Lucent is a 4/4 deathtouch lifelink body that grants your OTHER creatures +1/+0 and deathtouch every time it enters or attacks, so a 1/1 token trades with anything the opponent has. Squire's Lightblade, Dual-Sun Adepts and Dual-Sun Technique convert that from a trade into a one-sided kill: deathtouch plus first or double strike destroys the blocker in the first-strike damage step, before it deals any damage back. Underneath, 4 lifelink copies (Syr Vondam, the Lucent x2, Elegy Acolyte, Exalted Sunborn) win the race, and Hullcarver and Gravblade Heavy supply deathtouch that does not depend on Syr Vondam being alive. Tragic Trajectory turns the deck's own combat deaths into a one-mana -10/-10.",
+  "strategy_es": "agro",
+  "identity_es": "Un mazo de combate blanco-negro que gana haciendo que bloquear sea ilegal en la práctica. Syr Vondam, the Lucent es un cuerpo 4/4 con toque mortal y vínculo vital que otorga a tus OTRAS criaturas +1/+0 y toque mortal cada vez que entra o ataca, así que una ficha 1/1 intercambia con lo que sea que tenga el rival. Squire's Lightblade, Dual-Sun Adepts y Dual-Sun Technique convierten eso de intercambio en muerte unilateral: toque mortal más dañar primero o doble golpe destruye al bloqueador en el paso de daño de dañar primero, antes de que devuelva daño alguno. Por debajo, 4 copias con vínculo vital (Syr Vondam, the Lucent x2, Elegy Acolyte, Exalted Sunborn) ganan la carrera, y Hullcarver y Gravblade Heavy aportan toque mortal que no depende de que Syr Vondam siga vivo. Tragic Trajectory convierte las propias muertes en combate del mazo en un -10/-10 de un maná.",
+  "pitch_es": "Un mazo de combate blanco-negro que gana haciendo que bloquear sea ilegal en la práctica. Syr Vondam, the Lucent es un cuerpo 4/4 con toque mortal y vínculo vital que otorga a tus OTRAS criaturas +1/+0 y toque mortal cada vez que entra o ataca, así que una ficha 1/1 intercambia con lo que sea que tenga el rival. Squire's Lightblade, Dual-Sun Adepts y Dual-Sun Technique convierten eso de intercambio en muerte unilateral: toque mortal más dañar primero o doble golpe destruye al bloqueador en el paso de daño de dañar primero, antes de que devuelva daño alguno. Por debajo, 4 copias con vínculo vital (Syr Vondam, the Lucent x2, Elegy Acolyte, Exalted Sunborn) ganan la carrera, y Hullcarver y Gravblade Heavy aportan toque mortal que no depende de que Syr Vondam siga vivo. Tragic Trajectory convierte las propias muertes en combate del mazo en un -10/-10 de un maná."
+}

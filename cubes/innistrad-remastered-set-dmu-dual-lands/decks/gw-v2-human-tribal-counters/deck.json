@@ -1,0 +1,1362 @@
+{
+  "deck_name": "gw-v2-human-tribal-counters",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-31T03:35:44Z",
+  "format": "40-card",
+  "strategy": "midrange",
+  "colors": "GW",
+  "identity": "GW Human tribal midrange that wins by out-sizing rather than out-numbering. Sixteen of the seventeen creature cards are Humans, and Metallic Mimic naming Human makes every one of them that arrives afterwards enter carrying a permanent +1/+1 counter; Mayor of Avabruck adds a static, retroactive +1/+1 on top. Hamlet Captain and Intrepid Provisioner turn that base into combat swings, Butcher's Cleaver reads 'as long as equipped creature is a Human, it has lifelink', and Thalia, Heretic Cathar taxes every opposing deployment while the deck deploys ahead of it. Where the aggro Torens build spends its cards on board count, this one spends them on card advantage - Thraben Inspector, Duskwatch Recruiter, Tireless Tracker and Ulvenwald Mysteries all convert lands, spare mana and dead bodies into cards - and on six creature-answering spells plus Faith Unbroken's exile, so it can trade one-for-one all game and still be the deck with the larger board on turn seven.",
+  "restrictions": {
+    "base": "cube_mainboard only - every name verified by exact string match against working_pool.json (Phase 5C check 2, PASS)",
+    "commons_uncommons_max_2": "PASS - highest count is 2",
+    "rares_mythics_max_1_each": "PASS - Hopeful Initiate 1, Metallic Mimic 1, Mayor of Avabruck 1, Tireless Tracker 1, Thalia Heretic Cathar 1",
+    "rares_mythics_max_5_total_MB_plus_SB": "PASS at exactly 5/5 - all five in the mainboard, zero in the sideboard. No headroom.",
+    "basics": "Plains x8, Forest x7 - format-supplied, exempt from copy limits. Radiant Grove x2 is a COMMON nonbasic and legal at 2.",
+    "colour": "core_colors ['G','W'], splash_colors [] - every nonland card returns a non-null effective_cost.best_mode(card, ['G','W'], []) in normal cast mode. Ambitious Farmhand, Duskwatch Recruiter and Mayor of Avabruck are DFCs whose back faces stay inside GW; no off-identity inclusions."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 2,
+    "accel_count": 4,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.39,
+      "reference_avg_mv": 2.5,
+      "accel": 4,
+      "adjustment": -0.813,
+      "raw_target": 16.187,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.39,
+    "pip_demand": {
+      "W": 12,
+      "G": 12
+    },
+    "land_color_production": {
+      "W": 10,
+      "G": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 50,
+        "prod_pct": 52.9,
+        "gap": -2.9,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 50,
+        "prod_pct": 58.8,
+        "gap": -8.8,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Thraben Inspector",
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "set": "inr",
+      "collector_number": "45",
+      "image_url": "https://cards.scryfall.io/normal/front/0/8/08a5007f-06a0-40fa-a252-c38baa6b5c6f.jpg?1736467608",
+      "image_back_url": null,
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Thraben Inspector",
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "set": "inr",
+      "collector_number": "45",
+      "image_url": "https://cards.scryfall.io/normal/front/0/8/08a5007f-06a0-40fa-a252-c38baa6b5c6f.jpg?1736467608",
+      "image_back_url": null,
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hopeful Initiate",
+      "oracle_text": "Training (Whenever this creature attacks with another creature with greater power, put a +1/+1 counter on this creature.)\n{2}{W}, Remove two +1/+1 counters from among creatures you control: Destroy target artifact or enchantment.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Warlock",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Counters (+1/+1)",
+        "Training Matters",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "27",
+      "image_url": "https://cards.scryfall.io/normal/front/c/6/c655f9e8-ff99-48d0-83a9-ea6a853f17c6.jpg?1736467517",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ambitious Farmhand // Seasoned Cathar",
+      "oracle_text": "When this creature enters, you may search your library for a basic Plains card, reveal it, put it into your hand, then shuffle.\nCoven — {1}{W}{W}: Transform this creature. Activate only if you control three or more creatures with different powers.\n//\nLifelink",
+      "mana_cost": "{1}{W}",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Peasant",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Lands-Matter",
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Standalone Threat",
+        "Land Fetch",
+        "Cards: Self-Replacing"
+      ],
+      "set": "inr",
+      "collector_number": "8",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/3/6/36cb9b12-98a3-4770-9ae0-a3b02f057c2e.jpg?1736467448",
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ambitious Farmhand // Seasoned Cathar",
+      "oracle_text": "When this creature enters, you may search your library for a basic Plains card, reveal it, put it into your hand, then shuffle.\nCoven — {1}{W}{W}: Transform this creature. Activate only if you control three or more creatures with different powers.\n//\nLifelink",
+      "mana_cost": "{1}{W}",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Peasant",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Lands-Matter",
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Standalone Threat",
+        "Land Fetch",
+        "Cards: Self-Replacing"
+      ],
+      "set": "inr",
+      "collector_number": "8",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/3/6/36cb9b12-98a3-4770-9ae0-a3b02f057c2e.jpg?1736467448",
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hamlet Captain",
+      "oracle_text": "Whenever this creature attacks or blocks, other Humans you control get +1/+1 until end of turn.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Warrior",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Team Buff"
+      ],
+      "set": "inr",
+      "collector_number": "201",
+      "image_url": "https://cards.scryfall.io/normal/front/0/6/06e5d76a-0cec-40e0-b694-2b5c8484f6c0.jpg?1736468348",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hamlet Captain",
+      "oracle_text": "Whenever this creature attacks or blocks, other Humans you control get +1/+1 until end of turn.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Warrior",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Team Buff"
+      ],
+      "set": "inr",
+      "collector_number": "201",
+      "image_url": "https://cards.scryfall.io/normal/front/0/6/06e5d76a-0cec-40e0-b694-2b5c8484f6c0.jpg?1736468348",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Duskwatch Recruiter // Krallenhorde Howler",
+      "oracle_text": "{2}{G}: Look at the top three cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nCreature spells you cast cost {1} less to cast.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Warrior Werewolf",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Werewolf Matters",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cost Reduction"
+      ],
+      "set": "inr",
+      "collector_number": "193",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/4/e/4ef68479-ab2e-4a60-886c-ad007b64f185.jpg?1739519198",
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Duskwatch Recruiter // Krallenhorde Howler",
+      "oracle_text": "{2}{G}: Look at the top three cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nCreature spells you cast cost {1} less to cast.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Warrior Werewolf",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Werewolf Matters",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cost Reduction"
+      ],
+      "set": "inr",
+      "collector_number": "193",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/4/e/4ef68479-ab2e-4a60-886c-ad007b64f185.jpg?1739519198",
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Metallic Mimic",
+      "oracle_text": "As this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nEach other creature you control of the chosen type enters with an additional +1/+1 counter on it.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact Creature — Shapeshifter",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "set": "inr",
+      "collector_number": "268",
+      "image_url": "https://cards.scryfall.io/normal/front/9/a/9ad98263-9fe6-4766-a9fb-4776e570c250.jpg?1736468634",
+      "image_back_url": null,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mayor of Avabruck // Howlpack Alpha",
+      "oracle_text": "Other Human creatures you control get +1/+1.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nEach other creature you control that's a Werewolf or a Wolf gets +1/+1.\nAt the beginning of your end step, create a 2/2 green Wolf creature token.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Advisor Werewolf",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "207",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1736468379",
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Duel for Dominance",
+      "oracle_text": "Coven — Choose target creature you control and target creature you don't control. If you control three or more creatures with different powers, put a +1/+1 counter on the chosen creature you control. Then the chosen creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "192",
+      "image_url": "https://cards.scryfall.io/normal/front/c/8/c823ffae-4967-4a5d-a5d5-f00c25262e4f.jpg?1736468305",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Duel for Dominance",
+      "oracle_text": "Coven — Choose target creature you control and target creature you don't control. If you control three or more creatures with different powers, put a +1/+1 counter on the chosen creature you control. Then the chosen creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "192",
+      "image_url": "https://cards.scryfall.io/normal/front/c/8/c823ffae-4967-4a5d-a5d5-f00c25262e4f.jpg?1736468305",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Fiend Hunter",
+      "oracle_text": "When this creature enters, you may exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Blink/ETB",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "22",
+      "image_url": "https://cards.scryfall.io/normal/front/f/6/f606cf4d-e29b-415a-956c-b148045c44e9.jpg?1736467504",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Fiend Hunter",
+      "oracle_text": "When this creature enters, you may exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Blink/ETB",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "22",
+      "image_url": "https://cards.scryfall.io/normal/front/f/6/f606cf4d-e29b-415a-956c-b148045c44e9.jpg?1736467504",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tireless Tracker",
+      "oracle_text": "Landfall — Whenever a land you control enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Scout",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Landfall",
+        "Lands-Matter",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Token Generation"
+      ],
+      "set": "eoc",
+      "collector_number": "110",
+      "image_url": "https://cards.scryfall.io/normal/front/6/6/66444549-ad9b-49c6-a7c6-34e977c1085d.jpg?1752944911",
+      "image_back_url": null,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Thalia, Heretic Cathar",
+      "oracle_text": "First strike\nCreatures and nonbasic lands your opponents control enter tapped.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Tax Effect"
+      ],
+      "set": "inr",
+      "collector_number": "44",
+      "image_url": "https://cards.scryfall.io/normal/front/c/0/c062937f-d519-4206-99b0-cbea01b85a0d.jpg?1736467601",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ulvenwald Mysteries",
+      "oracle_text": "Whenever a nontoken creature you control dies, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, create a 1/1 white Human Soldier creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Artifacts",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Card Draw"
+      ],
+      "set": "inr",
+      "collector_number": "222",
+      "image_url": "https://cards.scryfall.io/normal/front/8/a/8a3997f1-5b02-4ca5-a390-fedb5874b575.jpg?1736468442",
+      "image_back_url": null,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Clear Shot",
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "set": "inr",
+      "collector_number": "188",
+      "image_url": "https://cards.scryfall.io/normal/front/8/8/88b8905b-68d3-491b-b7fe-eed74841e9a0.jpg?1736468291",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Intrepid Provisioner",
+      "oracle_text": "Trample\nWhen this creature enters, another target Human you control gets +2/+2 until end of turn.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Scout",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "set": "inr",
+      "collector_number": "205",
+      "image_url": "https://cards.scryfall.io/normal/front/f/b/fb0b9da3-bce8-463c-ab5e-2a2e9030df97.jpg?1736468364",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Intrepid Provisioner",
+      "oracle_text": "Trample\nWhen this creature enters, another target Human you control gets +2/+2 until end of turn.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Scout",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "set": "inr",
+      "collector_number": "205",
+      "image_url": "https://cards.scryfall.io/normal/front/f/b/fb0b9da3-bce8-463c-ab5e-2a2e9030df97.jpg?1736468364",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lunarch Mantle",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2 and has \"{1}, Sacrifice a permanent: This creature gains flying until end of turn.\"",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Aristocrats/Sacrifice",
+        "Payload/Payoff",
+        "Evasion Granting"
+      ],
+      "set": "inr",
+      "collector_number": "31",
+      "image_url": "https://cards.scryfall.io/normal/front/8/0/8092b454-4c74-439b-9c74-5d90b29c4e9d.jpg?1736467532",
+      "image_back_url": null,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Faith Unbroken",
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield.\nEnchanted creature gets +2/+2.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "21",
+      "image_url": "https://cards.scryfall.io/normal/front/5/1/514df7e7-3050-41ce-bd44-f215bbcfd1c5.jpg?1736467502",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "tdc",
+      "collector_number": "385",
+      "image_url": "https://cards.scryfall.io/normal/front/4/6/466fd4e6-f1dd-40c9-92df-1da48ab729d6.jpg?1743207689",
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "tdc",
+      "collector_number": "385",
+      "image_url": "https://cards.scryfall.io/normal/front/4/6/466fd4e6-f1dd-40c9-92df-1da48ab729d6.jpg?1743207689",
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Slayer of the Wicked",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "39",
+      "image_url": "https://cards.scryfall.io/normal/front/c/a/ca4537d3-c481-49ac-826c-b51c2e9b1fcf.jpg?1736467578",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "39",
+      "image_url": "https://cards.scryfall.io/normal/front/c/a/ca4537d3-c481-49ac-826c-b51c2e9b1fcf.jpg?1736467578",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Soul-Guide Gryff",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "mana_cost": "{4}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "set": "inr",
+      "collector_number": "40",
+      "image_url": "https://cards.scryfall.io/normal/front/3/9/39388258-cf07-4f29-a379-c743ecac680b.jpg?1736467581",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Soul-Guide Gryff",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "mana_cost": "{4}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "set": "inr",
+      "collector_number": "40",
+      "image_url": "https://cards.scryfall.io/normal/front/3/9/39388258-cf07-4f29-a379-c743ecac680b.jpg?1736467581",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cathar Commando",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "15",
+      "image_url": "https://cards.scryfall.io/normal/front/7/c/7cd21530-ca72-4986-a0f2-142b9f23c413.jpg?1736467482",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cathar Commando",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "15",
+      "image_url": "https://cards.scryfall.io/normal/front/7/c/7cd21530-ca72-4986-a0f2-142b9f23c413.jpg?1736467482",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Valorous Stance",
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "48",
+      "image_url": "https://cards.scryfall.io/normal/front/0/4/04762c85-d25d-4120-adec-8681adcf581a.jpg?1736467629",
+      "image_back_url": null,
+      "role": "Flex",
+      "board": "sideboard"
+    },
+    {
+      "name": "Angelic Purge",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "9",
+      "image_url": "https://cards.scryfall.io/normal/front/e/d/ed2fe361-2885-4fc9-a10f-960cc1ac0fbf.jpg?1736467455",
+      "image_back_url": null,
+      "role": "Flex",
+      "board": "sideboard"
+    },
+    {
+      "name": "Angelic Purge",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "9",
+      "image_url": "https://cards.scryfall.io/normal/front/e/d/ed2fe361-2885-4fc9-a10f-960cc1ac0fbf.jpg?1736467455",
+      "image_back_url": null,
+      "role": "Flex",
+      "board": "sideboard"
+    },
+    {
+      "name": "Ambush Viper",
+      "oracle_text": "Flash\nDeathtouch",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Snake",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "186",
+      "image_url": "https://cards.scryfall.io/normal/front/3/7/37f9be6b-ae6e-4708-9749-83bebd351102.jpg?1758104006",
+      "image_back_url": null,
+      "role": "Flex",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "GW Human tribal midrange that wins by out-sizing rather than out-numbering. Sixteen of the seventeen creature cards are Humans, and Metallic Mimic naming Human makes every one of them that arrives afterwards enter carrying a permanent +1/+1 counter; Mayor of Avabruck adds a static, retroactive +1/+1 on top. Hamlet Captain and Intrepid Provisioner turn that base into combat swings, Butcher's Cleaver reads 'as long as equipped creature is a Human, it has lifelink', and Thalia, Heretic Cathar taxes every opposing deployment while the deck deploys ahead of it. Where the aggro Torens build spends its cards on board count, this one spends them on card advantage - Thraben Inspector, Duskwatch Recruiter, Tireless Tracker and Ulvenwald Mysteries all convert lands, spare mana and dead bodies into cards - and on six creature-answering spells plus Faith Unbroken's exile, so it can trade one-for-one all game and still be the deck with the larger board on turn seven.",
+  "strategy_es": "midrange",
+  "identity_es": "Midrange tribal de Humanos GW que gana superando en tamaño y no en número. Dieciséis de las diecisiete cartas de criatura son Humanos, y Metallic Mimic nombrando Humano hace que todos los que lleguen después entren llevando un contador +1/+1 permanente; Mayor of Avabruck añade encima un +1/+1 estático y retroactivo. Hamlet Captain e Intrepid Provisioner convierten esa base en golpes de combate, Butcher's Cleaver dice 'as long as equipped creature is a Human, it has lifelink', y Thalia, Heretic Cathar cobra impuesto a cada despliegue rival mientras el mazo despliega por delante. Donde la construcción agro de Torens gasta sus cartas en recuento de tablero, esta las gasta en ventaja de cartas — Thraben Inspector, Duskwatch Recruiter, Tireless Tracker y Ulvenwald Mysteries convierten tierras, maná sobrante y cuerpos muertos en cartas — y en seis hechizos que responden a criaturas más el exilio de Faith Unbroken, de modo que puede intercambiar uno a uno toda la partida y seguir siendo el mazo con el tablero más grande en el turno siete.",
+  "pitch_es": "Midrange tribal de Humanos GW que gana superando en tamaño y no en número. Dieciséis de las diecisiete cartas de criatura son Humanos, y Metallic Mimic nombrando Humano hace que todos los que lleguen después entren llevando un contador +1/+1 permanente; Mayor of Avabruck añade encima un +1/+1 estático y retroactivo. Hamlet Captain e Intrepid Provisioner convierten esa base en golpes de combate, Butcher's Cleaver dice 'as long as equipped creature is a Human, it has lifelink', y Thalia, Heretic Cathar cobra impuesto a cada despliegue rival mientras el mazo despliega por delante. Donde la construcción agro de Torens gasta sus cartas en recuento de tablero, esta las gasta en ventaja de cartas — Thraben Inspector, Duskwatch Recruiter, Tireless Tracker y Ulvenwald Mysteries convierten tierras, maná sobrante y cuerpos muertos en cartas — y en seis hechizos que responden a criaturas más el exilio de Faith Unbroken, de modo que puede intercambiar uno a uno toda la partida y seguir siendo el mazo con el tablero más grande en el turno siete."
+}

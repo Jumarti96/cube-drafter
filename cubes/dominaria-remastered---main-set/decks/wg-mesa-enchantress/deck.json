@@ -1,0 +1,686 @@
+{
+  "deck_name": "wg-mesa-enchantress",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-30T01:45:00Z",
+  "format": "40-card",
+  "strategy": "WG Mesa Enchantress value-midrange",
+  "colors": "WG",
+  "identity": "A WG value-midrange built around Mesa Enchantress (x2) and Sylvan Library. Every enchantment cast refunds a card via Mesa; Sylvan Library and Jolrael convert that card advantage into a widening Squirrel/Cat token board. Enlightened Tutor and Sevinne's Reclamation add engine consistency and recursion; the deck grinds opponents out through combat with flyers (Serra Angel, Mystic Enforcer) and tokens.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "only_from": {},
+    "excluded": [],
+    "build_constraint": "max 5 rare/mythic total mainboard+sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 3,
+    "cantrip_count": 0,
+    "accel_count": 3,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.43,
+      "reference_avg_mv": 2.5,
+      "accel": 3,
+      "adjustment": -0.593,
+      "raw_target": 16.407,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.43,
+    "pip_demand": {
+      "W": 18,
+      "G": 13
+    },
+    "land_color_production": {
+      "G": 8,
+      "W": 10
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 41.9,
+        "prod_pct": 47.1,
+        "gap": -5.2,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 58.1,
+        "prod_pct": 58.8,
+        "gap": -0.7,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Mesa Enchantress",
+      "cmc": 3,
+      "type_line": "Creature — Human Druid",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever you cast an enchantment spell, you may draw a card.",
+      "role": "Enchantress draw engine",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Auramancer",
+      "cmc": 3,
+      "type_line": "Creature — Human Wizard",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, you may return target enchantment card from your graveyard to your hand.",
+      "role": "Enchantment recursion",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Jolrael, Mwonvuli Recluse",
+      "cmc": 2,
+      "type_line": "Legendary Creature — Human Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever you draw your second card each turn, create a 2/2 green Cat creature token.\n{4}{G}{G}: Until end of turn, creatures you control have base power and toughness X/X, where X is the number of cards in your hand.",
+      "role": "Draw-to-tokens payoff",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Birds of Paradise",
+      "cmc": 1,
+      "type_line": "Creature — Bird",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\n{T}: Add one mana of any color.",
+      "role": "Ramp / fixing",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Werebear",
+      "cmc": 2,
+      "type_line": "Creature — Human Bear Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{T}: Add {G}.\nThreshold — This creature gets +3/+3 as long as there are seven or more cards in your graveyard.",
+      "role": "Mana dork / threshold beater",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Mystic Enforcer",
+      "cmc": 4,
+      "type_line": "Creature — Human Nomad Mystic",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Protection from black\nThreshold — As long as there are seven or more cards in your graveyard, this creature gets +3/+3 and has flying.",
+      "role": "Threshold flyer finisher",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Serra Angel",
+      "cmc": 5,
+      "type_line": "Creature — Angel",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "role": "Air finisher",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Terravore",
+      "cmc": 3,
+      "type_line": "Creature — Lhurgoyf",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Trample\nTerravore's power and toughness are each equal to the number of land cards in all graveyards.",
+      "role": "Threshold beater",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Voice of All",
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nAs this creature enters, choose a color.\nThis creature has protection from the chosen color.",
+      "role": "Evasive protection threat",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Enlightened Tutor",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Search your library for an artifact or enchantment card, reveal it, then shuffle and put that card on top.",
+      "role": "Enchantment tutor",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Sevinne's Reclamation",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Return target permanent card with mana value 3 or less from your graveyard to the battlefield. If this spell was cast from a graveyard, you may copy this spell and may choose a new target for the copy.\nFlashback {4}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "role": "Permanent recursion",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Swords to Plowshares",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "role": "Premium removal",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Radiant's Judgment",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target creature with power 4 or greater.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "role": "Removal / cycling",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Wax // Wane",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature gets +2/+2 until end of turn.\n//\nDestroy target enchantment.",
+      "role": "Trick / enchantment removal",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Emerald Charm",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Untap target permanent.\n• Destroy target non-Aura enchantment.\n• Target creature loses flying until end of turn.",
+      "role": "Modal utility",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Sylvan Library",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "At the beginning of your draw step, you may draw two additional cards. If you do, choose two cards in your hand drawn this turn. For each of those cards, pay 4 life or put the card on top of your library.",
+      "role": "Card-advantage engine",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Squirrel Nest",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant land\nEnchanted land has \"{T}: Create a 1/1 green Squirrel creature token.\"",
+      "role": "Token engine",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Griffin Guide",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2 and has flying.\nWhen enchanted creature dies, create a 2/2 white Griffin creature token with flying.",
+      "role": "Evasion aura",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Wild Growth",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional {G}.",
+      "role": "Ramp aura",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Pacifism",
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+      "role": "Removal aura",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Spirit Link",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nWhenever enchanted creature deals damage, you gain that much life.",
+      "role": "Lifegain aura",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Seton's Desire",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2.\nThreshold — As long as there are seven or more cards in your graveyard, all creatures able to block enchanted creature do so.",
+      "role": "Pump/threshold aura",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Radiant Grove",
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "role": "",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Drifting Meadow",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "This land enters tapped.\n{T}: Add {W}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Slippery Karst",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "This land enters tapped.\n{T}: Add {G}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Nantuko Monastery",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "{T}: Add {C}.\nThreshold — {G}{W}: This land becomes a 4/4 green and white Insect Monk creature with first strike until end of turn. It's still a land. Activate only if there are seven or more cards in your graveyard.",
+      "role": "",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 7
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "role": "",
+      "board": "mainboard",
+      "qty": 5
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "cmc": 0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "role": "Graveyard hate",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Giant Spider",
+      "cmc": 4,
+      "type_line": "Creature — Spider",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "role": "Anti-air blocker",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Phantom Flock",
+      "cmc": 5,
+      "type_line": "Creature — Bird Soldier Spirit",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nThis creature enters with three +1/+1 counters on it.\nIf damage would be dealt to this creature, prevent that damage. Remove a +1/+1 counter from this creature.",
+      "role": "Resilient flyer",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Break Asunder",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or enchantment.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "role": "Artifact/enchantment removal",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Congregate",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target player gains 2 life for each creature on the battlefield.",
+      "role": "Anti-aggro lifegain",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Renewed Faith",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "You gain 6 life.\nCycling {1}{W} ({1}{W}, Discard this card: Draw a card.)\nWhen you cycle this card, you may gain 2 life.",
+      "role": "Lifegain / cycling",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Remedy",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Prevent the next 5 damage that would be dealt this turn to any number of targets, divided as you choose.",
+      "role": "Damage prevention",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Battle Screech",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create two 1/1 white Bird creature tokens with flying.\nFlashback—Tap three untapped white creatures you control. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "role": "Go-wide flyers",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Call of the Herd",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create a 3/3 green Elephant creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "role": "Recurring threat",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Nomad Decoy",
+      "cmc": 3,
+      "type_line": "Creature — Human Nomad",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "{W}, {T}: Tap target creature.\nThreshold — {W}{W}, {T}: Tap two target creatures. Activate only if there are seven or more cards in your graveyard.",
+      "role": "Tapper vs big creatures",
+      "board": "sideboard",
+      "qty": 1
+    }
+  ],
+  "pitch": "The deck's engine is deliberately redundant against removal: two Mesa Enchantress plus Sylvan Library mean the card-draw motor rarely dies to a single answer, and Sevinne's Reclamation / Auramancer rebuy an enchantment or engine that does get killed. Jolrael, Mwonvuli Recluse is the quiet payoff — every \"draw your second card\" (which Sylvan Library alone supplies each turn) drops a 2/2 Cat, so the same card advantage that keeps the hand full also builds the board.",
+  "strategy_es": "midrange de valor WG con Mesa Enchantress",
+  "identity_es": "Un midrange de valor WG construido alrededor de Mesa Enchantress (x2) y Sylvan Library. Cada encantamiento lanzado reembolsa una carta vía Mesa; Sylvan Library y Jolrael convierten esa ventaja de cartas en un tablero creciente de fichas de Ardilla/Gato. Enlightened Tutor y Sevinne's Reclamation añaden consistencia de motor y recursión; el mazo desgasta al rival en combate con voladores (Serra Angel, Mystic Enforcer) y fichas.",
+  "pitch_es": "El motor del mazo es deliberadamente redundante frente a la eliminación: dos Mesa Enchantress más Sylvan Library hacen que el motor de robo rara vez muera a una sola respuesta, y Sevinne's Reclamation / Auramancer recompran un encantamiento o motor que sí caiga. Jolrael, Mwonvuli Recluse es la recompensa silenciosa: cada \"robar tu segunda carta\" (que Sylvan Library sola aporta cada turno) deja un Gato 2/2, así que la misma ventaja de cartas que mantiene la mano llena construye también el tablero."
+}

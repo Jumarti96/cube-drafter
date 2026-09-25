@@ -1,0 +1,946 @@
+{
+  "deck_name": "wur-station-keeper",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-03T00:20:00Z",
+  "format": "40-card",
+  "strategy": "midrange",
+  "colors": "WUR",
+  "identity": "A W/U/R midrange deck built on Station, the mechanic that lets you tap a creature to put charge counters equal to its power onto a Spacecraft. Every creature in this list is therefore two resources at once: a body that blocks, and a battery that charges a hull. The same act of tapping turns on a whole cycle of 'if you control two or more tapped creatures' payoffs — Sami, Ship's Engineer manufactures a free tapped 2/2 Robot every end step, Sunstar Chaplain hands out counters, Flight-Deck Coordinator buys life, Frontline War-Rager grows itself. The deck wins in the air with Galvanizing Sawship, a 6/5 flier with haste that needs only three charge counters, and Warmaker Gunship, whose entry damage equals your artifact count.",
+  "restrictions": {
+    "Commons/uncommons: max 2 copies each": "PASS",
+    "Rares/mythics: max 1 copy each": "PASS",
+    "Max 7 rares/mythics total across mainboard + sideboard": "PASS (6 used: Sacred Foundry, Synthesizer Labship, Lumen-Class Frigate, Warmaker Gunship, Sunstar Chaplain, Hardlight Containment)",
+    "All cards drawn from cube eoe mainboard": "PASS",
+    "Basic lands format-supplied, exempt from copy limits": "PASS (5 Plains, 3 Mountain, 2 Island)",
+    "Colour identity within core W/U/R, no splash": "PASS",
+    "Mainboard exactly 40 cards": "PASS",
+    "Sideboard exactly 10 cards": "PASS"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.83,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.107,
+      "raw_target": 17.107,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.83,
+    "pip_demand": {
+      "U": 4,
+      "W": 10,
+      "R": 8
+    },
+    "land_color_production": {
+      "W": 10,
+      "R": 8,
+      "U": 6
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 36.4,
+        "prod_pct": 47.1,
+        "gap": -10.7,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 18.2,
+        "prod_pct": 35.3,
+        "gap": -17.1,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 45.5,
+        "prod_pct": 58.8,
+        "gap": -13.3,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "build_output": {
+    "macro_archetype": "midrange",
+    "projected_avg_mv": 2.826,
+    "deck_identity": "A W/U/R midrange deck built on Station, the mechanic that lets you tap a creature to put charge counters equal to its power onto a Spacecraft. Every creature in this list is therefore two resources at once: a body that blocks, and a battery that charges a hull. The same act of tapping turns on a whole cycle of 'if you control two or more tapped creatures' payoffs — Sami, Ship's Engineer manufactures a free tapped 2/2 Robot every end step, Sunstar Chaplain hands out counters, Flight-Deck Coordinator buys life, Frontline War-Rager grows itself. The deck wins in the air with Galvanizing Sawship, a 6/5 flier with haste that needs only three charge counters, and Warmaker Gunship, whose entry damage equals your artifact count.",
+    "thesis_turn": 6,
+    "default_role": "controller",
+    "slot_allocation": {
+      "lands": {
+        "count": 17,
+        "pct_of_deck": "42.5%",
+        "rationale": "Computed by deck_audit.land_target(40, 2.826, 2) = 17 on the final post-repair list; not read off a table."
+      },
+      "interaction": {
+        "count": 6,
+        "pct_of_nonland": "26.1%",
+        "rationale": "Inside the 20-30% midrange band at 26.1%. Two of the six (Drill Too Deep x2) are modal and are usually cast for \"Put five charge counters on target Spacecraft or Planet you control\" rather than for their removal mode, so the effective removal count is 4 of 23. After the Phase 9 repair one of those four is Lithobraking, a sweeper rather than a single-target answer."
+      },
+      "threats_payoffs": {
+        "count": 17,
+        "pct_of_nonland": "73.9%",
+        "rationale": "Well above the nominal 30-40% band, and deliberately so: the slot table's own NOTE says midrange 'does not reserve a separate Engine budget - the expectation is that Threats/Payoffs cards pull double duty', so the Engine allocation is 0% and everything non-Interaction lands in this bucket. That is literal here rather than a bookkeeping trick: Frontline War-Rager, Flight-Deck Coordinator, Sunstar Chaplain and Sami, Ship's Engineer are each simultaneously a Station battery (the engine) and a tapped-creature payoff (the threat). Read as a conventional threat count, the deck runs 7 Spacecraft and 10 creatures."
+      },
+      "engine_infrastructure": {
+        "count": 0,
+        "pct_of_nonland": "0%",
+        "rationale": "Absorbed into Threats/Payoffs per the midrange row of the slot table."
+      }
+    },
+    "land_math": {
+      "target": {
+        "base_lands": 17,
+        "base_window": [
+          2,
+          4
+        ],
+        "base_p_window": 0.7945,
+        "avg_mv": 2.8260869565217392,
+        "reference_avg_mv": 2.5,
+        "accel": 2,
+        "adjustment": 0.101,
+        "raw_target": 17.101,
+        "clamped": false,
+        "recommended_land_count": 17,
+        "p_window_at_recommended": 0.7945
+      },
+      "recount_after_fill": "Re-ran deck_audit.land_target after the Phase 9 repair (Invasive Maneuvers -> Lithobraking): avg MV rose 2.783 -> 2.826 and accel rose 1 -> 2, raw target 17.101, recommended 17 - unchanged. Built to 17.",
+      "deviation": "none — built to 17, the recommended count exactly.",
+      "composition_notes": "Verified against oracle text: 6 of the 17 lands enter tapped (Sacred Peaks x2, Idyllic Beachfront x2, Molten Tributary x2). Sacred Foundry ('As this land enters, you may pay 2 life. If you don't, it enters tapped') is the ONLY untapped-capable dual in this colour identity — the WU and UR pairs have no shockland at all. Six tapped lands is a real cost, and it is affordable only because the thesis turn is 6 rather than 4. Command Bridge was excluded for a reason specific to THIS deck rather than a general one: 'When this land enters, sacrifice it unless you tap an untapped permanent you control' competes for exactly the untapped creatures Station needs to consume, so its fixing is paid for in the deck's core resource. Secluded Starforge taps for {C} only and is a rare against the 7-card cap.",
+      "property_census": "not required — no core card in this list scales with a property of lands controlled."
+    },
+    "pip_math": {
+      "W_pips": 10,
+      "R_pips": 8,
+      "U_pips": 4,
+      "total_pips": 22,
+      "shares": "W 45.5% / R 36.4% / U 18.2%",
+      "sources": "W sources 10 of 17 (58.8%) = 5 Plains + Sacred Foundry + 2 Sacred Peaks + 2 Idyllic Beachfront. R sources 8 of 17 (47.1%) = 3 Mountain + Sacred Foundry + 2 Sacred Peaks + 2 Molten Tributary. U sources 6 of 17 (35.3%) = 2 Island + 2 Idyllic Beachfront + 2 Molten Tributary. Duals count for two colours each, which is why the shares sum above 100%.",
+      "note": "Every coloured cost in the deck is a SINGLE pip — there is no {W}{W} or {U}{U} anywhere in the 23 nonland cards. That was a build constraint, not an accident: with only one untapped-capable dual, a double pip in the third colour would be unsupportable. The Seriema ({1}{W}{W}) was cut for exactly this reason."
+    },
+    "count_dependent_verdicts": [
+      "Warmaker Gunship 'deals damage equal to the number of artifacts you control': 11 of the 23 nonland cards are artifacts (7 Spacecraft — Synthesizer Labship, Lumen-Class Frigate, Wurmwall Sweeper x2, Warmaker Gunship, Uthros Scanship, Galvanizing Sawship — plus Dockworker Drone x2 and Nanoform Sentinel x2, which are artifact creatures), and Sami, Ship's Engineer adds a Robot artifact token every end step. On a developed board it enters for 3-5 damage. INCLUDE.",
+      "Invasive Maneuvers \"deals 5 damage instead if you control a Spacecraft\": 7 of the 23 nonland cards are Spacecraft, so the upgraded mode would have been the default in this list rather than the exception. CUT ANYWAY in Phase 9 - not on its own rate, but because it was the fourth single-target removal spell in a six-slot Interaction budget while the deck had zero answers to a wide board. Lithobraking took the slot. (Contrast the U/R count build, where only 2 of 24 nonland cards were Spacecraft and the same card was kept for its base mode.)",
+      "Hardlight Containment 'Enchant artifact you control': 11 of the 23 nonland cards are legal hosts, and 7 of those are Spacecraft that are NOT creatures, so the aura sits on a permanent most removal in this cube does not target. INCLUDE.",
+      "Station yield: the deck's stationers are Dockworker Drone (2 power with its own counter), Nanoform Sentinel (3), Frontline War-Rager (2, growing), Flight-Deck Coordinator (3), Sunstar Chaplain (3), Sami Ship's Engineer (2), Dawnstrike Vanguard (4) and Sami's 2/2 Robot tokens — a mean of about 2.7 power per activation. Galvanizing Sawship's 3+ threshold is therefore ONE activation; Wurmwall Sweeper's 4+ is one large or two small; Warmaker Gunship's 6+ is two. Every flip threshold retained in this list is reachable inside the turn-6 thesis.",
+      "Thresholds of 8 or more were excluded on this same arithmetic. At 2.7 power per activation, an 8+ flip (Uthros Scanship, Debris Field Crusher) needs three activations and a 12+ flip (Lumen-Class Frigate's creature mode, Adagia) needs five. Uthros Scanship is nonetheless INCLUDED — for its entry trigger 'draw two cards, then discard a card' and its 4/4 hull, explicitly NOT for its 8+ mode.",
+      "Lumen-Class Frigate is included for '2+ | Other creatures you control get +1/+1', which is TWO charge counters — one activation from any stationer in the list. Its '12+ | Flying, lifelink' mode is not part of the plan and was not counted toward it. The shape judge flagged this card on its 12+ line; the 2+ line is the one the deck uses.",
+      "Drill Too Deep's \"Put five charge counters on target Spacecraft or Planet you control\" outright flips Galvanizing Sawship (3+) and Wurmwall Sweeper (4+) from zero in a single card, and brings Warmaker Gunship (6+) to within one activation. 6 of the 7 Spacecraft copies in this list have a threshold of 6 or less - Synthesizer Labship 2, Lumen-Class Frigate 2, Wurmwall Sweeper 4 (x2), Galvanizing Sawship 3, Warmaker Gunship 6 - and only Uthros Scanship (8) is above it. INCLUDE, 2 copies. [CORRECTED in Phase 9 - the pre-grill build_output said \"5 of the 7\", which the Challenger recounted as 6.]",
+      "Lithobraking \"deals 2 damage to each creature\" is asymmetric in THIS list, not merely symmetric. All 7 Spacecraft are noncreature permanents until they reach a charge threshold, so they take nothing; of the deck's 10 creature cards it kills 5 (Dockworker Drone x2 at 2/2, Sunstar Chaplain at 3/2, Nanoform Sentinel x2 at 3/2) and spares 5 (Frontline War-Rager x2 at 2/3, Flight-Deck Coordinator at 3/3, Sami Ship's Engineer at 2/4, Dawnstrike Vanguard at 4/5). Against a token or wide-aggro board it is a one-sided wipe; against a board of 3-toughness creatures it is not. INCLUDE 1 maindeck, 1 sideboard - held as an instant and cast when the count favours the deck.",
+      "Lithobraking is tagged Board: Sacrifice-Cost (\"you may sacrifice an artifact\"). The cost is fed by the card itself - it creates a Lander token first, and the Lander is an artifact - so it never needs another permanent. Beyond that, 11 of the 23 nonland cards are artifacts if a different sacrifice is preferred. The cost is fully fed."
+    ],
+    "skeleton_selection": {
+      "archetype_family": "midrange",
+      "archetype_family_grounds": "Locked thesis default_role = controller, which maps to control or midrange. Broken to midrange by the include_candidates' threat density (17 of 23 nonland slots are bodies or Spacecraft) and by the fact the plan converts board presence into large evasive threats rather than attriting the opponent out of resources.",
+      "chosen": "Sketch A",
+      "chosen_lens": "most threat-dense / aggressive",
+      "judge_grounds": "Its keystones are the exact Spacecraft named in the thesis (Galvanizing Sawship at 3, Wurmwall Sweeper at 4, Warmaker Gunship at 6), all flippable within the accumulated-power budget of a turn-6 goldfish. Sketches B and C both leaned on 8+ and 12+ thresholds that one-power-per-tap Stationing cannot reach by turn 6.",
+      "rejected_sketches": [
+        {
+          "lens": "most grindy value",
+          "macro_archetype": "midrange",
+          "slot_table": "Interaction 26% = 6 | Threats/Payoffs 74% = 17 | Engine 0% (absorbed)",
+          "keystones": [
+            "Lumen-Class Frigate",
+            "Uthros Scanship",
+            "Haliya, Guided by Light",
+            "Dawnstrike Vanguard",
+            "Nanoform Sentinel"
+          ],
+          "why_rejected": "Judge: its slot deviation was thesis-grounded, but its keystones (Frigate credited at 12+, Scanship at 8+) push past the thesis's own 3/4/5/6 threshold cycle and are not reachable by turn 6."
+        },
+        {
+          "lens": "most flexible toolbox",
+          "macro_archetype": "midrange",
+          "slot_table": "Interaction 26% = 6 | Threats/Payoffs 74% = 17 | Engine 0% (absorbed)",
+          "keystones": [
+            "Drill Too Deep",
+            "Emergency Eject",
+            "Thaumaton Torpedo",
+            "Debris Field Crusher",
+            "Lumen-Class Frigate"
+          ],
+          "why_rejected": "Judge: the toolbox lens diluted commitment to Station itself — Emergency Eject and Thaumaton Torpedo are generic removal rather than power-into-counters payoffs — and it still carried the unreachable 8+/12+ thresholds."
+        }
+      ],
+      "weak_keystones": [
+        {
+          "card": "Wurmwall Sweeper",
+          "flagged": "Assigned 'cheapest early flip' in Sketch A, but its own quoted threshold is 4+, which is HIGHER than Galvanizing Sawship's 3+ in the same build.",
+          "resolution": "RESOLVED by reclassification, card retained at 2 copies. Its role in the final list is 'early colorless Spacecraft, surveil 2 on entry, flips at 4'. It is the cheapest Spacecraft to CAST at {2} (not the cheapest to flip), it costs no coloured pips in a three-colour manabase, and 'When this Spacecraft enters, surveil 2' digs toward the payoffs on turn 2 when the deck has nothing else to do."
+        },
+        {
+          "card": "Lumen-Class Frigate",
+          "flagged": "Judge faulted its 12+ creature threshold as unreachable by turn 6.",
+          "resolution": "RESOLVED with thesis grounds, card retained. The judge read the wrong line. Oracle text: '2+ | Other creatures you control get +1/+1. / 12+ | Flying, lifelink'. The card is in this deck for the 2+ anthem, which is ONE activation from any stationer and therefore live on turn 3. The 12+ mode is not part of the plan and is not counted toward any role. Recorded in count_dependent_verdicts."
+        }
+      ],
+      "false_choice_note": "none — the judge found the three builds materially distinct in slot allocation and keystone identity.",
+      "harvested_from_rejected": [
+        {
+          "card": "Nanoform Sentinel",
+          "from_lens": "most grindy value",
+          "role": "Enabler — filled an enabler slot role-for-role at 2 copies; tapping it to Station untaps another permanent, which can then Station again the same turn."
+        },
+        {
+          "card": "Uthros Scanship",
+          "from_lens": "most grindy value",
+          "role": "Payoff — filled a Spacecraft slot role-for-role, for its entry draw and its 4/4 hull, explicitly not for its 8+ flip."
+        },
+        {
+          "card": "Drill Too Deep",
+          "from_lens": "most flexible toolbox",
+          "role": "Interaction/Enabler — filled Interaction slots role-for-role at 2 copies; its five-counter mode is the single largest Station accelerator in the pool."
+        },
+        {
+          "card": "Emergency Eject",
+          "from_lens": "most flexible toolbox",
+          "role": "Interaction — filled an Interaction slot role-for-role."
+        },
+        {
+          "card": "Haliya, Guided by Light",
+          "from_lens": "most grindy value",
+          "role": "NOT harvested — it is a value engine, and adding it would mean widening the Interaction or creating an Engine slot the locked midrange allocation does not contain."
+        },
+        {
+          "card": "Thaumaton Torpedo / Debris Field Crusher",
+          "from_lens": "most flexible toolbox",
+          "role": "NOT harvested — Debris Field Crusher's flip is 8+, ruled unreachable by the same arithmetic that chose this build; Thaumaton Torpedo's {3}-after-discount activation costs a whole turn's mana in a deck that must spend its turn stationing."
+        },
+        {
+          "card": "Lithobraking",
+          "from_lens": "phase-9 challenger absence audit",
+          "role": "Interaction - filled an Interaction slot role-for-role, replacing Invasive Maneuvers. The Challenger showed the wide_boards concession was factually false: Lithobraking is a mono-red sweeper legal in this identity and listed in the dossier's own sweeper census, which the concession had consulted."
+        }
+      ]
+    },
+    "structural_responses": [],
+    "failure_modes": {
+      "flood": {
+        "mitigation": "The curve tops at 6 with two 6-drops (Galvanizing Sawship, Dawnstrike Vanguard), so surplus lands cast the top end. Beyond that the deck has three ways to spend spare mana: Sunstar Chaplain's '{2}, Remove a +1/+1 counter from a creature you control: Tap target artifact or creature' is a repeatable mana sink that also taps a blocker (and taps YOUR OWN creature to satisfy the two-tapped-creatures payoffs), Nanoform Sentinel's 'untap another target permanent' can untap a land for real mana, and Uthros Scanship's 'draw two cards, then discard a card' converts a flooded draw step into selection. Lithobraking also creates a Lander token (\"{2}, {T}, Sacrifice this token: Search your library for a basic land card\"), which is a mana sink rather than another land."
+      },
+      "screw": {
+        "mitigation": "11 of the 23 nonland cards cost 2 or less (Synthesizer Labship at 1, Hardlight Containment at 1, Lumen-Class Frigate, Wurmwall Sweeper x2, Dockworker Drone x2, Sunstar Chaplain, Drill Too Deep x2, Invasive Maneuvers), so a two-land hand still deploys a Spacecraft and a stationer. The goldfish simulation shows 89% of hands keepable and 91% reaching three lands by turn 3."
+      },
+      "decapitation": {
+        "mitigation": "No single piece is required. The Station mechanic is printed on all 7 Spacecraft, so removing any one leaves six other hulls; the tapped-creature payoff cycle is spread across 5 different cards (Sami Ship's Engineer, Sunstar Chaplain, Flight-Deck Coordinator, Frontline War-Rager x2, Dawnstrike Vanguard); and charge counters already placed are not lost when a stationer dies, because tapping the creature is a COST paid on activation rather than an ongoing dependency."
+      },
+      "gas-out": {
+        "mitigation": "Sami, Ship's Engineer is the answer: 'At the beginning of your end step, if you control two or more tapped creatures, create a tapped 2/2 colorless Robot artifact creature token' makes a new body — and therefore a new Station battery and a new artifact for Warmaker Gunship's count — from an empty hand, every turn, forever. Alongside it, Uthros Scanship draws two on entry, Wurmwall Sweeper x2 surveil 2 on entry, and Flight-Deck Coordinator's 2 life per turn buys the draw steps to find more."
+      },
+      "raced": {
+        "accepted": "This deck is slow on purpose and it will lose some races. Its average mana value is 2.83, six of its seventeen lands enter tapped, and its turn-2 and turn-3 plays are stationers that tap rather than attack — the goldfish sim plays something on turn 1 in only 29% of hands. Mitigating would mean cutting Station enablers for cheap interaction, which removes the exact resource the kill mechanism consumes: fewer creatures means fewer charge counters means no Spacecraft ever flips. Flight-Deck Coordinator's 2 life per turn and Dawnstrike Vanguard's lifelink buy turns but do not stop a genuinely fast clock. Cut Propulsion x2, Radiant Strike and a second Lithobraking are in the sideboard for the matchups where that is the actual problem."
+      },
+      "disruption-fizzle": {
+        "mitigation": "Station is unusually resilient to a single piece of interaction on the critical turn, for a specific rules reason: tapping the creature is a COST of the activated ability, so once activated, killing the creature in response does not stop the charge counters from being placed. The Spacecraft themselves also front-load value on entry rather than on the flip turn — Warmaker Gunship deals its damage, Uthros Scanship draws two, Wurmwall Sweeper surveils two — so a Spacecraft answered before it charges has already traded for something. Hardlight Containment grants 'ward {1}' to whichever artifact it enchants, and Drill Too Deep places five counters at instant speed, so the flip can be completed on the opponent's turn in response to their removal."
+      }
+    },
+    "analysis_body": "### THE MECHANIC THAT PAYS ITSELF TWICE\n\nStation reads: *\"Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery.\"* Read literally, that is a cost — you give up a creature's turn to charge a hull. This deck is built on the observation that the cost is also a trigger. White prints a whole cycle of cards gated on **\"if you control two or more tapped creatures\"**, and Station is the cheapest, most repeatable way in the cube to satisfy that condition on demand, without attacking into anything.\n\n| Card | What it pays, every turn you Station |\n|---|---|\n| Sami, Ship's Engineer | a tapped 2/2 Robot artifact creature token |\n| Sunstar Chaplain | a +1/+1 counter on any creature |\n| Frontline War-Rager ×2 | a +1/+1 counter on itself |\n| Flight-Deck Coordinator | 2 life |\n| Dawnstrike Vanguard | a +1/+1 counter on **every** other creature |\n\nSami is the one that makes this a deck rather than a pile. Her Robot enters **tapped**, which means it counts toward next turn's \"two or more tapped creatures\" on its own, and it is a fresh 2-power Station battery the turn after that. From an empty hand she manufactures ammunition indefinitely.\n\n### THE THRESHOLD ARITHMETIC IS THE WHOLE BUILD\n\nCharge counters equal the tapped creature's **power**, one creature per activation. This deck's stationers are Dockworker Drone (2, with its own counter), Nanoform Sentinel (3), Frontline War-Rager (2, growing), Flight-Deck Coordinator (3), Sunstar Chaplain (3), Sami (2), Dawnstrike Vanguard (4), plus 2/2 Robot tokens — a mean of about **2.7 power per activation**. That single number decided which Spacecraft made the deck:\n\n| Spacecraft | Threshold | Activations needed |\n|---|---|---|\n| Synthesizer Labship | 2+ (animate mode) | 1 |\n| Lumen-Class Frigate | 2+ (anthem mode) | 1 |\n| Galvanizing Sawship | 3+ (flying, haste) | 1 |\n| Wurmwall Sweeper ×2 | 4+ (flying) | 1 large or 2 small |\n| Warmaker Gunship | 6+ (flying) | 2 |\n| *Uthros Scanship* | *8+* | *3 — not part of the plan* |\n| *Debris Field Crusher* | *8+* | *3 — cut* |\n| *Adagia, Windswept Bastion* | *12+* | *5 — cut* |\n\nSix of the seven Spacecraft copies flip at 6 or under. Uthros Scanship is the only exception and it is in the deck purely for *\"draw two cards, then discard a card\"* on entry — its 8+ mode is not counted toward any role. This is also why every Planet in the cube was cut: they gate their payoffs at 12+, and they compete with the Spacecraft for the same activations.\n\n### NANOFORM SENTINEL DOUBLES A TURN\n\n*\"Whenever this creature becomes tapped, untap another target permanent. This ability triggers only once each turn.\"* Tap Nanoform Sentinel to Station — that is 3 counters — and its trigger untaps a creature you already stationed with, which can then Station again. Two activations from one turn's worth of creatures. It is the only card in these colours that raises the deck's counter *rate* rather than its counter *total*, and Drill Too Deep is the only card that raises the total in one shot (five counters, at instant speed).\n\n### WHY LITHOBRAKING IS NOT SYMMETRICAL HERE\n\n*\"Create a Lander token. Then you may sacrifice an artifact. When you do, Lithobraking deals 2 damage to each creature.\"* Two things make this one-sided in this list. First, **all seven Spacecraft are noncreature permanents** until they hit a charge threshold, so they take nothing — the deck's actual threat base is immune to its own sweeper. Second, the sacrifice cost is **self-fed**: the Lander token it creates is itself an artifact, so it never needs another permanent. Of the deck's ten creature cards it kills five (Dockworker Drone ×2, Sunstar Chaplain, Nanoform Sentinel ×2) and spares five (Frontline War-Rager ×2, Flight-Deck Coordinator, Sami, Dawnstrike Vanguard) — so it is an instant you hold until the count favours you, not a card you fire on sight.\n\n### A RULES POINT THAT MATTERS IN PRACTICE\n\nTapping the creature is a **cost** of the Station ability, not an ongoing requirement. Once you activate, killing the creature in response does not stop the charge counters from being placed. That makes the deck unusually resistant to being interacted with on its critical turn — combined with Drill Too Deep placing five counters at instant speed, a Spacecraft can complete its flip on the opponent's turn in response to their removal.\n\n### SINGLE PIPS ONLY\n\nThere is no `{W}{W}` or `{U}{U}` anywhere in the 23 nonland cards. That was a hard build constraint, not a coincidence: six of seventeen lands enter tapped and Sacred Foundry is the only untapped-capable dual in the entire colour identity. The Seriema (`{1}{W}{W}`) would have tutored Sami and given tapped legendary creatures indestructible — a genuinely elegant fit — and it was cut on the pip test alone."
+  },
+  "mainboard": [
+    {
+      "name": "Plains",
+      "qty": 5,
+      "role": "Land",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": ""
+    },
+    {
+      "name": "Mountain",
+      "qty": 3,
+      "role": "Land",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": ""
+    },
+    {
+      "name": "Island",
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": ""
+    },
+    {
+      "name": "Sacred Foundry",
+      "qty": 1,
+      "role": "Land — WR shock, only untapped-capable dual",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "({T}: Add {R} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "256"
+    },
+    {
+      "name": "Sacred Peaks",
+      "qty": 2,
+      "role": "Land — WR dual, enters tapped",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "254"
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "qty": 2,
+      "role": "Land — WU dual, enters tapped",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "mana_cost": null,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "249"
+    },
+    {
+      "name": "Molten Tributary",
+      "qty": 2,
+      "role": "Land — UR dual, enters tapped",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "251"
+    },
+    {
+      "name": "Synthesizer Labship",
+      "qty": 1,
+      "role": "Payoff — 1-mana Spacecraft; at 2+ animates an artifact as a 2/2 flier each combat",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Artifact — Spacecraft",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 9+.)\n2+ | At the beginning of combat on your turn, up to one other target artifact you control becomes an artifact creature with base power and toughness 2/2 and gains flying until end of turn.\n9+ | Flying, vigilance",
+      "power": "4",
+      "toughness": "4",
+      "set": "eoe",
+      "collector_number": "81"
+    },
+    {
+      "name": "Lumen-Class Frigate",
+      "qty": 1,
+      "role": "Payoff — anthem at 2 charge counters",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Artifact — Spacecraft",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 12+.)\n2+ | Other creatures you control get +1/+1.\n12+ | Flying, lifelink",
+      "power": "3",
+      "toughness": "5",
+      "set": "eoe",
+      "collector_number": "25"
+    },
+    {
+      "name": "Wurmwall Sweeper",
+      "qty": 2,
+      "role": "Payoff — early colorless Spacecraft, surveil 2 on entry, flips at 4",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Artifact — Spacecraft",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "When this Spacecraft enters, surveil 2.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 4+.)\n4+ | Flying",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "249"
+    },
+    {
+      "name": "Warmaker Gunship",
+      "qty": 1,
+      "role": "Payoff — ETB removal scaling with artifact count, 4/3 flier at 6",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Artifact — Spacecraft",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "When this Spacecraft enters, it deals damage equal to the number of artifacts you control to target creature an opponent controls.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 6+.)\n6+ | Flying",
+      "power": "4",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "167"
+    },
+    {
+      "name": "Uthros Scanship",
+      "qty": 1,
+      "role": "Payoff — refuels on entry, 4/4 hull",
+      "board": "mainboard",
+      "cmc": 4,
+      "type_line": "Artifact — Spacecraft",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this Spacecraft enters, draw two cards, then discard a card.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 8+.)\n8+ | Flying",
+      "power": "4",
+      "toughness": "4",
+      "set": "eoe",
+      "collector_number": "85"
+    },
+    {
+      "name": "Galvanizing Sawship",
+      "qty": 1,
+      "role": "Payoff — 6/5 flying haste at only 3 charge counters",
+      "board": "mainboard",
+      "cmc": 6,
+      "type_line": "Artifact — Spacecraft",
+      "mana_cost": "{5}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 3+.)\n3+ | Flying, haste",
+      "power": "6",
+      "toughness": "5",
+      "set": "eoe",
+      "collector_number": "136"
+    },
+    {
+      "name": "Dockworker Drone",
+      "qty": 2,
+      "role": "Enabler — 2-power stationer whose counters survive its death",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Robot",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "This creature enters with a +1/+1 counter on it.\nWhen this creature dies, put its counters on target creature you control.",
+      "power": "1",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "11"
+    },
+    {
+      "name": "Sunstar Chaplain",
+      "qty": 1,
+      "role": "Enabler+Payoff — 3-power stationer; tapped-creature counter engine and a tap-down outlet",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "At the beginning of your end step, if you control two or more tapped creatures, put a +1/+1 counter on target creature you control.\n{2}, Remove a +1/+1 counter from a creature you control: Tap target artifact or creature.",
+      "power": "3",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "40"
+    },
+    {
+      "name": "Nanoform Sentinel",
+      "qty": 2,
+      "role": "Enabler — tapping it untaps another permanent, doubling a Station turn",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Whenever this creature becomes tapped, untap another target permanent. This ability triggers only once each turn.",
+      "power": "3",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "71"
+    },
+    {
+      "name": "Frontline War-Rager",
+      "qty": 2,
+      "role": "Enabler+Payoff — grows itself every turn the deck stations",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Creature — Kavu Soldier",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "At the beginning of your end step, if you control two or more tapped creatures, put a +1/+1 counter on this creature.",
+      "power": "2",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "134"
+    },
+    {
+      "name": "Flight-Deck Coordinator",
+      "qty": 1,
+      "role": "Enabler+Payoff — 3-power stationer, gains 2 life per Station turn",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "At the beginning of your end step, if you control two or more tapped creatures, you gain 2 life.",
+      "power": "3",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "17"
+    },
+    {
+      "name": "Sami, Ship's Engineer",
+      "qty": 1,
+      "role": "Payoff — free tapped 2/2 Robot every end step the deck stations",
+      "board": "mainboard",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Artificer",
+      "mana_cost": "{2}{R}{W}",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "At the beginning of your end step, if you control two or more tapped creatures, create a tapped 2/2 colorless Robot artifact creature token.",
+      "power": "2",
+      "toughness": "4",
+      "set": "eoe",
+      "collector_number": "225"
+    },
+    {
+      "name": "Dawnstrike Vanguard",
+      "qty": 1,
+      "role": "Payoff — raises every stationer's power, which raises every future Station yield",
+      "board": "mainboard",
+      "cmc": 6,
+      "type_line": "Creature — Human Knight",
+      "mana_cost": "{5}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Lifelink\nAt the beginning of your end step, if you control two or more tapped creatures, put a +1/+1 counter on each creature you control other than this creature.",
+      "power": "4",
+      "toughness": "5",
+      "set": "eoe",
+      "collector_number": "10"
+    },
+    {
+      "name": "Hardlight Containment",
+      "qty": 1,
+      "role": "Interaction — 1-mana exile; grants ward {1} to the Spacecraft it enchants",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Enchant artifact you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield.\nEnchanted permanent has ward {1}.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "20"
+    },
+    {
+      "name": "Drill Too Deep",
+      "qty": 2,
+      "role": "Interaction/Enabler — five charge counters at instant speed, or destroy an artifact",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Put five charge counters on target Spacecraft or Planet you control.\n• Destroy target artifact.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "133"
+    },
+    {
+      "name": "Lithobraking",
+      "qty": 1,
+      "role": "Interaction — self-feeding sweeper; 2 damage to each creature, Spacecraft take none",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create a Lander token. Then you may sacrifice an artifact. When you do, Lithobraking deals 2 damage to each creature. (A Lander token is an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "142"
+    },
+    {
+      "name": "Banishing Light",
+      "qty": 1,
+      "role": "Interaction — exile any nonland permanent",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "6"
+    },
+    {
+      "name": "Emergency Eject",
+      "qty": 1,
+      "role": "Interaction — instant-speed destroy any nonland permanent",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target nonland permanent. Its controller creates a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "14"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Radiant Strike",
+      "qty": 1,
+      "role": "Destroy artifact or tapped creature +3 life — vs the cube's 74 artifacts",
+      "board": "sideboard",
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "29"
+    },
+    {
+      "name": "Annul",
+      "qty": 2,
+      "role": "Counter artifact/enchantment spells — 90 legal targets in the cube",
+      "board": "sideboard",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Counter target artifact or enchantment spell.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "46"
+    },
+    {
+      "name": "Cut Propulsion",
+      "qty": 2,
+      "role": "Double damage to fliers — vs the cube's 56 evasion cards",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature deals damage to itself equal to its power. If that creature has flying, it deals twice that much damage to itself instead.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "130"
+    },
+    {
+      "name": "Emergency Eject",
+      "qty": 1,
+      "role": "Second universal answer for permanent-heavy matchups",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target nonland permanent. Its controller creates a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "14"
+    },
+    {
+      "name": "Banishing Light",
+      "qty": 1,
+      "role": "Second catch-all exile",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "6"
+    },
+    {
+      "name": "Chrome Companion",
+      "qty": 1,
+      "role": "Graveyard hate on a colorless stationer body",
+      "board": "sideboard",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Dog",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life.\n{2}, {T}: Put target card from a graveyard on the bottom of its owner's library.",
+      "power": "2",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "236"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "qty": 1,
+      "role": "Exile each opponent's graveyard — vs the cube's 31 graveyard cards",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": "3",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "237"
+    },
+    {
+      "name": "Lithobraking",
+      "qty": 1,
+      "role": "Second sweeper vs wide boards / token decks",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create a Lander token. Then you may sacrifice an artifact. When you do, Lithobraking deals 2 damage to each creature. (A Lander token is an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "142"
+    }
+  ],
+  "pitch": "A W/U/R midrange deck built on Station, the mechanic that lets you tap a creature to put charge counters equal to its power onto a Spacecraft. Every creature in this list is therefore two resources at once: a body that blocks, and a battery that charges a hull. The same act of tapping turns on a whole cycle of 'if you control two or more tapped creatures' payoffs — Sami, Ship's Engineer manufactures a free tapped 2/2 Robot every end step, Sunstar Chaplain hands out counters, Flight-Deck Coordinator buys life, Frontline War-Rager grows itself. The deck wins in the air with Galvanizing Sawship, a 6/5 flier with haste that needs only three charge counters, and Warmaker Gunship, whose entry damage equals your artifact count.",
+  "strategy_es": "midrange",
+  "identity_es": "Un midrange W/U/R construido sobre Station, la mecánica que permite girar una criatura para poner contadores de carga iguales a su fuerza sobre una Spacecraft. Cada criatura de esta lista es por tanto dos recursos a la vez: un cuerpo que bloquea y una batería que carga un casco. Ese mismo acto de girar activa todo un ciclo de recompensas de 'si controlas dos o más criaturas giradas': Sami, Ship's Engineer fabrica un Robot 2/2 girado gratis en cada paso final, Sunstar Chaplain reparte contadores, Flight-Deck Coordinator compra vida, Frontline War-Rager se hace crecer a sí mismo. El mazo gana por el aire con Galvanizing Sawship, un volador 6/5 con prisa que necesita solo tres contadores de carga, y Warmaker Gunship, cuyo daño de entrada equivale a tu número de artefactos.",
+  "pitch_es": "Un midrange W/U/R construido sobre Station, la mecánica que permite girar una criatura para poner contadores de carga iguales a su fuerza sobre una Spacecraft. Cada criatura de esta lista es por tanto dos recursos a la vez: un cuerpo que bloquea y una batería que carga un casco. Ese mismo acto de girar activa todo un ciclo de recompensas de 'si controlas dos o más criaturas giradas': Sami, Ship's Engineer fabrica un Robot 2/2 girado gratis en cada paso final, Sunstar Chaplain reparte contadores, Flight-Deck Coordinator compra vida, Frontline War-Rager se hace crecer a sí mismo. El mazo gana por el aire con Galvanizing Sawship, un volador 6/5 con prisa que necesita solo tres contadores de carga, y Warmaker Gunship, cuyo daño de entrada equivale a tu número de artefactos."
+}

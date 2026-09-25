@@ -1,0 +1,650 @@
+{
+  "deck_name": "rg-domain-lands-matter",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-18T20:42:09Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "RG",
+  "identity": "Gruul Domain beatdown. This is the interpretation of 'lands matter' that Dominaria United was actually designed around: the deck does not care what is in its graveyard, it cares how many distinct basic land types are on its battlefield, because that number is literally the size of its creatures. Nishoba Brawler's power is the count, Territorial Maro's power and toughness are each twice the count, Gaea's Might is a one-mana pump equal to the count, and Meria's Outrider throws the count at the opponent's face on arrival, unblockably. Nine of the seventeen lands are typed duals bought for their type line rather than their colour, and three of them incidentally produce white, which is what lets Leyline Binding into the deck as a one-card splash costing {1}{W} at Domain 4. Sprouting Goblin ties the two halves together: kicked it tutors whichever basic land type is missing - it never whiffs, because all 17 lands here carry one - and its '{R}, {T}, Sacrifice a land: Draw a card' converts the deck's redundant Forests into the only card advantage the colours offer.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "max 5 rare+mythic cards total across mainboard and sideboard",
+    "basics": "unlimited, rarity-exempt"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.96,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.28,
+      "raw_target": 17.28,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.96,
+    "pip_demand": {
+      "G": 16,
+      "R": 10
+    },
+    "land_color_production": {
+      "G": 11,
+      "R": 6,
+      "W": 3,
+      "U": 4,
+      "B": 2
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 61.5,
+        "prod_pct": 64.7,
+        "gap": -3.2,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 38.5,
+        "prod_pct": 35.3,
+        "gap": 3.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Gaea's Might",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Domain — Target creature gets +1/+1 until end of turn for each basic land type among lands you control.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "164",
+      "role": "Payoff — {G} instant, +Domain/+Domain; the deck's reach",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shivan Devastator",
+      "qty": 1,
+      "cmc": 1,
+      "type_line": "Creature — Dragon Hydra",
+      "mana_cost": "{X}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Flying, haste\nThis creature enters with X +1/+1 counters on it.",
+      "rarity": "mythic",
+      "power": "0",
+      "toughness": "0",
+      "set": "dmu",
+      "collector_number": "143",
+      "role": "Threat — {X}{R} flying haste, X +1/+1 counters",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nishoba Brawler",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Creature — Cat Warrior",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Trample\nDomain — Nishoba Brawler's power is equal to the number of basic land types among lands you control.",
+      "rarity": "uncommon",
+      "power": "*",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "174",
+      "role": "Payoff — power = basic land types; a 4/3 trample two-drop at Domain 4",
+      "board": "mainboard"
+    },
+    {
+      "name": "Yavimaya Iconoclast",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Creature — Elf",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nTrample\nWhen this creature enters, if it was kicked, it gets +1/+1 and gains haste until end of turn.",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "set": "dmu",
+      "collector_number": "190",
+      "role": "Threat — 3/2 trample two-drop; kicked {R} for +1/+1 and haste",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radha's Firebrand",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Creature — Human Warrior",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Whenever this creature attacks, target creature defending player controls with power less than this creature's power can't block this turn.\nDomain — {5}{R}: This creature gets +2/+2 until end of turn. This ability costs {1} less to activate for each basic land type among lands you control. Activate only once each turn.",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "1",
+      "set": "dmu",
+      "collector_number": "141",
+      "role": "Evasion — attacking, a smaller creature can't block; Domain-discounted pump",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Strike",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "tla",
+      "collector_number": "146",
+      "role": "Interaction — 3 damage any target, including the face",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bite Down",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Target creature you control deals damage equal to its power to target creature or planeswalker you don't control.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "fdn",
+      "collector_number": "212",
+      "role": "Interaction — our oversized creature deals its power to a creature or planeswalker",
+      "board": "mainboard"
+    },
+    {
+      "name": "Llanowar Greenwidow",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Creature — Spider",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Reach, trample\nDomain — {7}{G}: Return this card from your graveyard to the battlefield tapped. It gains \"If this permanent would leave the battlefield, exile it instead of putting it anywhere else.\" This ability costs {1} less to activate for each basic land type among lands you control.",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "169",
+      "role": "Threat — 4/3 reach trample; self-recurring at {7}{G} minus Domain",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rulik Mons, Warren Chief",
+      "qty": 2,
+      "cmc": 4,
+      "type_line": "Legendary Creature — Goblin",
+      "mana_cost": "{1}{R}{G}{G}",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nWhenever Rulik Mons attacks, look at the top card of your library. If it's a land card, you may put it onto the battlefield tapped. If you didn't put a card onto the battlefield this way, create a 1/1 red Goblin creature token.",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "217",
+      "role": "Threat/Enabler — 3/3 menace; on attack puts a land from the top into play",
+      "board": "mainboard"
+    },
+    {
+      "name": "Territorial Maro",
+      "qty": 2,
+      "cmc": 5,
+      "type_line": "Creature — Elemental",
+      "mana_cost": "{4}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Domain — Territorial Maro's power and toughness are each equal to twice the number of basic land types among lands you control.",
+      "rarity": "uncommon",
+      "power": "*",
+      "toughness": "*",
+      "set": "dmu",
+      "collector_number": "184",
+      "role": "Payoff — P/T each twice the basic land type count; an 8/8 for five at Domain 4",
+      "board": "mainboard"
+    },
+    {
+      "name": "Meria's Outrider",
+      "qty": 2,
+      "cmc": 5,
+      "type_line": "Creature — Elf Archer",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Reach\nDomain — When this creature enters, it deals damage to each opponent equal to the number of basic land types among lands you control.",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "set": "dmu",
+      "collector_number": "138",
+      "role": "Payoff — reach; ETB deals Domain-many damage to each opponent, unblockable reach",
+      "board": "mainboard"
+    },
+    {
+      "name": "Leyline Binding",
+      "qty": 1,
+      "cmc": 6,
+      "type_line": "Enchantment",
+      "mana_cost": "{5}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "oracle_text": "Flash\nDomain — This spell costs {1} less to cast for each basic land type among lands you control.\nWhen this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "24",
+      "role": "Interaction (W splash) — flash exile any nonland permanent; costs {1}{W} at Domain 4",
+      "board": "mainboard"
+    },
+    {
+      "name": "Briar Hydra",
+      "qty": 1,
+      "cmc": 6,
+      "type_line": "Creature — Plant Hydra",
+      "mana_cost": "{5}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Trample\nDomain — Whenever this creature deals combat damage to a player, put X +1/+1 counters on target creature you control, where X is the number of basic land types among lands you control.",
+      "rarity": "rare",
+      "power": "6",
+      "toughness": "6",
+      "set": "dmu",
+      "collector_number": "286",
+      "role": "Threat — 6/6 trample; combat damage adds Domain-many +1/+1 counters",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sprouting Goblin",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Creature — Goblin Druid",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nWhen this creature enters, if it was kicked, search your library for a land card with a basic land type, reveal it, put it into your hand, then shuffle.\n{R}, {T}, Sacrifice a land: Draw a card.",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoc",
+      "collector_number": "90",
+      "role": "Enabler — kicked, tutors any basic-typed land; {R},{T}, Sac a land: Draw a card",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "qty": 6,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "({T}: Add {G}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "",
+      "role": "Land — G, Forest type",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "({T}: Add {R}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "",
+      "role": "Land — R, Mountain type",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "tdc",
+      "collector_number": "385",
+      "role": "Land — G or W; Forest Plains adds Plains and is a splash source",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tangled Islet",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Land — Forest Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "oracle_text": "({T}: Add {G} or {U}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "soc",
+      "collector_number": "411",
+      "role": "Land — G; Forest Island adds Island",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sacred Peaks",
+      "qty": 1,
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "soc",
+      "collector_number": "402",
+      "role": "Land — R or W; Mountain Plains adds Plains and is a splash source",
+      "board": "mainboard"
+    },
+    {
+      "name": "Molten Tributary",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "soc",
+      "collector_number": "387",
+      "role": "Land — R; Island Mountain adds Island",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geothermal Bog",
+      "qty": 1,
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dsc",
+      "collector_number": "278",
+      "role": "Land — R; Swamp Mountain adds Swamp, the fifth type",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunted Mire",
+      "qty": 1,
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "soc",
+      "collector_number": "379",
+      "role": "Land — G; Swamp Forest, the deck's second Swamp source",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Broken Wings",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dft",
+      "collector_number": "156",
+      "role": "Answer — artifact / enchantment / flier",
+      "board": "sideboard",
+      "when_to_board": "vs artifact, enchantment or evasion decks; evasion is 51 cards / 21% of the cube"
+    },
+    {
+      "name": "Magnigoth Sentry",
+      "qty": 2,
+      "cmc": 4,
+      "type_line": "Creature — Treefolk",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "set": "fdn",
+      "collector_number": "556",
+      "role": "Blocker — 4/4 reach",
+      "board": "sideboard",
+      "when_to_board": "vs flier-based aggro that goes over our ground bodies"
+    },
+    {
+      "name": "Jaya's Firenado",
+      "qty": 2,
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Jaya's Firenado deals 5 damage to target creature or planeswalker. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "134",
+      "role": "Removal — 5 damage to a creature or planeswalker, scry 1",
+      "board": "sideboard",
+      "when_to_board": "vs single-large-threat decks our Bite Down cannot outsize"
+    },
+    {
+      "name": "Tail Swipe",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "oracle_text": "Choose target creature you control and target creature you don't control. If you cast this spell during your main phase, the creature you control gets +1/+1 until end of turn. Then those creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "182",
+      "role": "Removal — fight, +1/+1 in your main phase",
+      "board": "sideboard",
+      "when_to_board": "vs creature decks; efficient once Territorial Maro or Nishoba Brawler is on the board"
+    },
+    {
+      "name": "Flowstone Infusion",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Target creature gets +2/-2 until end of turn.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "124",
+      "role": "Removal — {R} instant, target creature gets +2/-2",
+      "board": "sideboard",
+      "when_to_board": "vs x/1 and x/2 token swarms and utility creatures; also a one-mana pump on our own attacker"
+    }
+  ],
+  "pitch": "Gruul Domain beatdown. This is the interpretation of 'lands matter' that Dominaria United was actually designed around: the deck does not care what is in its graveyard, it cares how many distinct basic land types are on its battlefield, because that number is literally the size of its creatures. Nishoba Brawler's power is the count, Territorial Maro's power and toughness are each twice the count, Gaea's Might is a one-mana pump equal to the count, and Meria's Outrider throws the count at the opponent's face on arrival, unblockably. Nine of the seventeen lands are typed duals bought for their type line rather than their colour, and three of them incidentally produce white, which is what lets Leyline Binding into the deck as a one-card splash costing {1}{W} at Domain 4. Sprouting Goblin ties the two halves together: kicked it tutors whichever basic land type is missing - it never whiffs, because all 17 lands here carry one - and its '{R}, {T}, Sacrifice a land: Draw a card' converts the deck's redundant Forests into the only card advantage the colours offer.",
+  "strategy_es": "agro",
+  "identity_es": "Beatdown Domain Gruul. Esta es la interpretación de 'las tierras importan' alrededor de la cual se diseñó realmente Dominaria United: al mazo no le importa lo que haya en su cementerio, le importa cuántos tipos distintos de tierra básica hay en su campo de batalla, porque ese número es literalmente el tamaño de sus criaturas. La fuerza de Nishoba Brawler es el recuento, la fuerza y resistencia de Territorial Maro son cada una el doble del recuento, Gaea's Might es una pompa de un maná igual al recuento, y Meria's Outrider lanza el recuento a la cara del rival al llegar, sin posibilidad de bloqueo. Nueve de las diecisiete tierras son duales con tipo compradas por su línea de tipo y no por su color, y tres de ellas producen blanco de paso, que es lo que permite meter Leyline Binding en el mazo como salpicadura de una carta que cuesta {1}{W} con Domain 4. Sprouting Goblin ata las dos mitades: kickeado busca el tipo de tierra básica que falte — nunca falla, porque las 17 tierras de aquí llevan uno — y su '{R}, {T}, Sacrifice a land: Draw a card' convierte los Forests redundantes del mazo en la única ventaja de cartas que ofrecen estos colores.",
+  "pitch_es": "Beatdown Domain Gruul. Esta es la interpretación de 'las tierras importan' alrededor de la cual se diseñó realmente Dominaria United: al mazo no le importa lo que haya en su cementerio, le importa cuántos tipos distintos de tierra básica hay en su campo de batalla, porque ese número es literalmente el tamaño de sus criaturas. La fuerza de Nishoba Brawler es el recuento, la fuerza y resistencia de Territorial Maro son cada una el doble del recuento, Gaea's Might es una pompa de un maná igual al recuento, y Meria's Outrider lanza el recuento a la cara del rival al llegar, sin posibilidad de bloqueo. Nueve de las diecisiete tierras son duales con tipo compradas por su línea de tipo y no por su color, y tres de ellas producen blanco de paso, que es lo que permite meter Leyline Binding en el mazo como salpicadura de una carta que cuesta {1}{W} con Domain 4. Sprouting Goblin ata las dos mitades: kickeado busca el tipo de tierra básica que falte — nunca falla, porque las 17 tierras de aquí llevan uno — y su '{R}, {T}, Sacrifice a land: Draw a card' convierte los Forests redundantes del mazo en la única ventaja de cartas que ofrecen estos colores."
+}

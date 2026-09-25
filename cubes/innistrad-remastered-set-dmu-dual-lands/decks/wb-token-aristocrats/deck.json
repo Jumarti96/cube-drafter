@@ -1,0 +1,821 @@
+{
+  "deck_name": "wb-token-aristocrats",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-27T14:58:49Z",
+  "format": "40-card",
+  "strategy": "midrange",
+  "colors": "WB",
+  "identity": "A W/B deck in which the tokens are ammunition, not attackers. Eight of its twenty-three nonland copies make creature tokens, and one of them - Bloodline Keeper - makes a 2/2 flier every turn for free and without limit, which is what turns a finite pile of fodder into an engine. The deck spends those bodies: Falkenrath Torturer x2 is a free, repeatable, instant-speed sacrifice outlet, and Village Rites and Angelic Purge convert a dying body into two cards or an exiled permanent. Every death is monetised twice, by Blood Artist x2 and The Meathook Massacre on one side and Morbid Opportunist on the other. Skirsdag High Priest then converts leftovers into a 5/5 flier a turn - note it TAPS two creatures rather than sacrificing them, so it needs a separate death to satisfy its own morbid clause - and Westvale Abbey, a land, eats five bodies to become a 9/7 flying lifelink indestructible haste creature. The kill is drain plus one uninteractable flier, not combat width.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "only_from": {},
+    "excluded": [],
+    "user_extra_constraint": "at most 5 rare/mythic cards total across mainboard + sideboard",
+    "basics": "unlimited, format-supplied"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 1,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.39,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": -0.313,
+      "raw_target": 16.687,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.39,
+    "pip_demand": {
+      "B": 20,
+      "W": 6
+    },
+    "land_color_production": {
+      "B": 12,
+      "W": 5
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 76.9,
+        "prod_pct": 70.6,
+        "gap": 6.3,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 23.1,
+        "prod_pct": 29.4,
+        "gap": -6.3,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Tragic Slip",
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{B}",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "134",
+      "board": "mainboard"
+    },
+    {
+      "name": "Village Rites",
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{B}",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Card Draw",
+        "Sacrifice Outlet",
+        "Cards: Net-Positive",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "137",
+      "board": "mainboard"
+    },
+    {
+      "name": "Blood Artist",
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "cmc": 2,
+      "type_line": "Creature — Vampire",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "1",
+      "oracle_text": "Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "set": "soc",
+      "collector_number": "209",
+      "board": "mainboard"
+    },
+    {
+      "name": "Skirsdag High Priest",
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "2",
+      "oracle_text": "Morbid — {T}, Tap two untapped creatures you control: Create a 5/5 black Demon creature token with flying. Activate only if a creature died this turn.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "132",
+      "board": "mainboard"
+    },
+    {
+      "name": "Infernal Grasp",
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Destroy target creature. You lose 2 life.",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life: Cost"
+      ],
+      "set": "soc",
+      "collector_number": "216",
+      "board": "mainboard"
+    },
+    {
+      "name": "Collective Brutality",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Escalate—Discard a card. (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Target opponent reveals their hand. You choose an instant or sorcery card from it. That player discards that card.\n• Target creature gets -2/-2 until end of turn.\n• Target opponent loses 2 life and you gain 2 life.",
+      "tags": [
+        "Graveyard",
+        "Kicker/Scaling",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Discard",
+        "Life Drain",
+        "Cards: Extra-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "101",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gather the Townsfolk",
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "23",
+      "board": "mainboard"
+    },
+    {
+      "name": "Fleshtaker",
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "cmc": 2,
+      "type_line": "Creature — Human Assassin",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "mana_cost": "{W}{B}",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "Whenever you sacrifice another creature, you gain 1 life and scry 1. (Look at the top card of your library. You may put that card on the bottom.)\n{1}, Sacrifice another creature: This creature gets +2/+2 until end of turn.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Sacrifice Outlet",
+        "Card Selection"
+      ],
+      "set": "inr",
+      "collector_number": "235",
+      "board": "mainboard"
+    },
+    {
+      "name": "The Meathook Massacre",
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "cmc": 2,
+      "type_line": "Legendary Enchantment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{X}{B}{B}",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "When The Meathook Massacre enters, each creature gets -X/-X until end of turn.\nWhenever a creature you control dies, each opponent loses 1 life.\nWhenever a creature an opponent controls dies, you gain 1 life.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Sweeper/Board Wipe",
+        "Life Drain"
+      ],
+      "set": "inr",
+      "collector_number": "122",
+      "board": "mainboard"
+    },
+    {
+      "name": "Falkenrath Torturer",
+      "qty": 2,
+      "role": "Engine/Outlet",
+      "cmc": 3,
+      "type_line": "Creature — Vampire",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "oracle_text": "Sacrifice a creature: This creature gains flying until end of turn. If the sacrificed creature was a Human, put a +1/+1 counter on this creature.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Sacrifice Outlet"
+      ],
+      "set": "inr",
+      "collector_number": "109",
+      "board": "mainboard"
+    },
+    {
+      "name": "Morbid Opportunist",
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "cmc": 3,
+      "type_line": "Creature — Human Rogue",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "oracle_text": "Whenever one or more other creatures die, draw a card. This ability triggers only once each turn.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "set": "soc",
+      "collector_number": "219",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lingering Souls",
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "tdc",
+      "collector_number": "123",
+      "board": "mainboard"
+    },
+    {
+      "name": "Angelic Purge",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "9",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunted Dead",
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "cmc": 4,
+      "type_line": "Creature — Zombie",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "When this creature enters, create a 1/1 white Spirit creature token with flying.\n{1}{B}, Discard two cards: Return this card from your graveyard to the battlefield tapped.",
+      "tags": [
+        "Tokens",
+        "Graveyard",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Engine/Outlet",
+        "Token Generation",
+        "Reanimation",
+        "Cards: Extra-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "116",
+      "board": "mainboard"
+    },
+    {
+      "name": "Westvale Abbey // Ormendahl, Profane Prince",
+      "qty": 1,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": null,
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "{T}: Add {C}.\n{5}, {T}, Pay 1 life: Create a 1/1 white and black Human Cleric creature token.\n{5}, {T}, Sacrifice five creatures: Transform this land, then untap it.\n//\nFlying, lifelink, indestructible, haste",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Sacrifice Outlet",
+        "Life: Cost"
+      ],
+      "set": "inr",
+      "collector_number": "287",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "qty": 2,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "mana_cost": "",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "soc",
+      "collector_number": "409",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "qty": 1,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [],
+      "mana_cost": "",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "set": "tmc",
+      "collector_number": "65",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "qty": 10,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {B}.)",
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "qty": 3,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {W}.)",
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bloodline Keeper // Lord of Lineage",
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "cmc": 4,
+      "type_line": "Creature — Vampire",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}{B}",
+      "rarity": "mythic",
+      "power": "3",
+      "toughness": "3",
+      "oracle_text": "Flying\n{T}: Create a 2/2 black Vampire creature token with flying.\n{B}: Transform this creature. Activate only if you control five or more Vampires.\n//\nFlying\nOther Vampire creatures you control get +2/+2.\n{T}: Create a 2/2 black Vampire creature token with flying.",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "98",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ghoulish Procession",
+      "qty": 1,
+      "role": "Enabler/Fodder",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Whenever one or more nontoken creatures die, create a 2/2 black Zombie creature token with decayed. This ability triggers only once each turn. (A creature with decayed can't block. When it attacks, sacrifice it at end of combat.)",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "110",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Sever the Bloodline",
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Exile target creature and all other creatures with the same name as that creature.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Flashback"
+      ],
+      "set": "inr",
+      "collector_number": "130",
+      "board": "sideboard",
+      "when_to_board": "vs token and recursion decks: 'Exile target creature and all other creatures with the same name as that creature' removes an entire opposing token type at once, and exile beats the undying and graveyard recursion that 27% of this cube is built on."
+    },
+    {
+      "name": "Angelic Purge",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "9",
+      "board": "sideboard",
+      "when_to_board": "the second copy vs the cube's 24 artifacts and 25 enchantments; the 'sacrifice a permanent' additional cost is a benefit in this deck, feeding Blood Artist and The Meathook Massacre in the same action."
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{3}{W}",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "39",
+      "board": "sideboard",
+      "when_to_board": "vs the cube's three largest non-Human tribes (Vampire 23, Zombie 15, Werewolf 13 = 51 cards): a 3/2 body that is also fodder, plus 'you may destroy target Vampire, Werewolf, or Zombie'."
+    },
+    {
+      "name": "Valorous Stance",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "48",
+      "board": "sideboard",
+      "when_to_board": "'Destroy target creature with toughness 4 or greater' answers the large creatures Tragic Slip and Infernal Grasp sometimes cannot reach profitably. Trimmed to one copy at the grill: the indestructible mode was justified as protecting Skirsdag High Priest, and the Challenger correctly noted that indestructible does not save a 1/2 from -X/-X, exile or bounce, so that half of the argument does not hold."
+    },
+    {
+      "name": "Eaten Alive",
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{B}",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature or pay {3}{B}.\nExile target creature or planeswalker.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "106",
+      "board": "sideboard",
+      "when_to_board": "vs planeswalkers (7 in the pool, and the mainboard answers none of them) and vs indestructible or death-triggered creatures: 'Exile target creature or planeswalker' for {B} once a token pays the additional cost."
+    },
+    {
+      "name": "Cathar Commando",
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "15",
+      "board": "sideboard",
+      "when_to_board": "vs the cube's 24 artifacts and 25 enchantments - a class the dossier says the whole cube answers with only 4 artifact answers and 2 enchantment answers, and which the mainboard covers with a single Angelic Purge. 'Flash. {1}, Sacrifice this creature: Destroy target artifact or enchantment' is a body, a sacrifice outlet and an answer in one card, so it is never a dead draw in this deck."
+    }
+  ],
+  "pitch": "A W/B deck in which the tokens are ammunition, not attackers. Eight of its twenty-three nonland copies make creature tokens, and one of them - Bloodline Keeper - makes a 2/2 flier every turn for free and without limit, which is what turns a finite pile of fodder into an engine. The deck spends those bodies: Falkenrath Torturer x2 is a free, repeatable, instant-speed sacrifice outlet, and Village Rites and Angelic Purge convert a dying body into two cards or an exiled permanent. Every death is monetised twice, by Blood Artist x2 and The Meathook Massacre on one side and Morbid Opportunist on the other. Skirsdag High Priest then converts leftovers into a 5/5 flier a turn - note it TAPS two creatures rather than sacrificing them, so it needs a separate death to satisfy its own morbid clause - and Westvale Abbey, a land, eats five bodies to become a 9/7 flying lifelink indestructible haste creature. The kill is drain plus one uninteractable flier, not combat width.",
+  "strategy_es": "midrange",
+  "identity_es": "Un mazo W/B en el que las fichas son munición, no atacantes. Ocho de sus veintitrés copias no-tierra crean fichas de criatura, y una de ellas — Bloodline Keeper — crea un volador 2/2 cada turno gratis y sin límite, que es lo que convierte un montón finito de forraje en un motor. El mazo gasta esos cuerpos: Falkenrath Torturer x2 es un medio de sacrificio gratuito, repetible y a velocidad de instantáneo, y Village Rites y Angelic Purge convierten un cuerpo moribundo en dos cartas o en un permanente exiliado. Cada muerte se monetiza dos veces, por Blood Artist x2 y The Meathook Massacre por un lado y Morbid Opportunist por el otro. Skirsdag High Priest convierte luego las sobras en un volador 5/5 por turno — ojo, GIRA dos criaturas en lugar de sacrificarlas, así que necesita una muerte aparte para satisfacer su propia cláusula morbid — y Westvale Abbey, una tierra, se come cinco cuerpos para convertirse en una criatura 9/7 voladora con vínculo vital, indestructible y con prisa. La victoria es drenaje más un volador con el que no se puede interactuar, no anchura de combate.",
+  "pitch_es": "Un mazo W/B en el que las fichas son munición, no atacantes. Ocho de sus veintitrés copias no-tierra crean fichas de criatura, y una de ellas — Bloodline Keeper — crea un volador 2/2 cada turno gratis y sin límite, que es lo que convierte un montón finito de forraje en un motor. El mazo gasta esos cuerpos: Falkenrath Torturer x2 es un medio de sacrificio gratuito, repetible y a velocidad de instantáneo, y Village Rites y Angelic Purge convierten un cuerpo moribundo en dos cartas o en un permanente exiliado. Cada muerte se monetiza dos veces, por Blood Artist x2 y The Meathook Massacre por un lado y Morbid Opportunist por el otro. Skirsdag High Priest convierte luego las sobras en un volador 5/5 por turno — ojo, GIRA dos criaturas en lugar de sacrificarlas, así que necesita una muerte aparte para satisfacer su propia cláusula morbid — y Westvale Abbey, una tierra, se come cinco cuerpos para convertirse en una criatura 9/7 voladora con vínculo vital, indestructible y con prisa. La victoria es drenaje más un volador con el que no se puede interactuar, no anchura de combate."
+}

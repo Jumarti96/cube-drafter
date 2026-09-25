@@ -1,0 +1,935 @@
+{
+  "deck_name": "b-blight-board-lock",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-12T04:50:52Z",
+  "format": "40-card",
+  "strategy": "Path 3 - Blight Board-Lock (Aria as Wincon)",
+  "colors": "B",
+  "identity": "Mono-black board-lock control, and the one deck of the three where Mornsong Aria is genuinely the win condition rather than an accelerant - made viable by a turn-order fact the whole build is arranged around. Aria is a sorcery-speed enchantment, so it resolves in the pilot's MAIN PHASE, after the pilot's own draw step. The next draw step in the game therefore belongs to the OPPONENT, and every trigger afterwards alternates opponent-first. A player at life L dies on their ceil(L/3)-th trigger, so the pilot wins iff ceil(L_opponent/3) <= ceil(L_pilot/3): the Aria player wins at EQUAL life totals, and at 20/20 the opponent hits zero on their seventh trigger with the pilot still at 2. The deck therefore does not need a life lead - it needs to avoid falling a three-life bracket behind, which 8 removal copies and Blighted Blackthorn's 7 toughness are built to guarantee. Two costs are stated rather than buried. First, Aria's tutor half is symmetric and the opponent gets theirs FIRST every cycle - six free selections before their lethal seventh - and the cube's only four enchantment answers are all G/UG/W, so against a green or white opponent Aria is the card that finds their answer to Aria. Second, Aria is a rare capped at one copy seen 42.5% of the time by turn 10, so the same 8 removal copies plus a ten-power board of Blighted Blackthorn, Chaos Spewer and Nightmare Sower win by attrition without it.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2,
+        "rare": 1,
+        "mythic": 1
+      },
+      "only_from": {},
+      "excluded": [],
+      "extra_constraint": "max 5 rare+mythic total across mainboard and sideboard"
+    },
+    "checklist": {
+      "base": "cube_mainboard - every card verified present in the working pool by exact name.",
+      "copy_limits": "Commons and uncommons capped at 2, rares and mythics at 1; the Phase 5C validator cross-checked every combined mainboard+sideboard count against cube_search.get_max_copies and returned PASS.",
+      "rare_mythic_budget": "4 of the maximum 5: Mornsong Aria (rare, MB), Shadow Urchin (rare, MB), Deceit (mythic, SB), Dawnhand Dissident (rare, SB). The Phase 9 repair swapped Emptiness (mythic) out and Deceit (mythic) in, keeping the total unchanged with one slot deliberately unused.",
+      "basics": "18 Swamp - format-supplied and exempt from copy limits.",
+      "colour": "All 19 distinct nonland cards return a usable 'cast' mode from effective_cost.best_mode against core_colors ['B']; the five hybrid cards (Shadow Urchin {2}{B/R}, Chaos Spewer {2}{B/R}, Eclipsed Boggart {B/R}{B/R}{B/R}, Deceit {4}{U/B}{U/B} with Evoke {U/B}{U/B}, Mischievous Sneakling {1}{U/B}) are cast entirely off Swamps, so splash_colors is empty. Deceit's 'if {B}{B} was spent to cast it' clause is satisfied by paying its two hybrid pips with black mana."
+    }
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.667,
+      "raw_target": 17.667,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3,
+    "pip_demand": {
+      "B": 21
+    },
+    "land_color_production": {
+      "B": 18
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Bile-Vial Boggart",
+      "oracle_text": "When this creature dies, put a -1/-1 counter on up to one target creature.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Goblin Assassin",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "fodder"
+    },
+    {
+      "name": "Nameless Inversion",
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "interaction"
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "interaction"
+    },
+    {
+      "name": "Unbury",
+      "oracle_text": "Choose one —\n• Return target creature card from your graveyard to your hand.\n• Return two target creature cards that share a creature type from your graveyard to your hand.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Graveyard",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Graveyard Recursion"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "refuel"
+    },
+    {
+      "name": "Blight Rot",
+      "oracle_text": "Put four -1/-1 counters on target creature.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "interaction"
+    },
+    {
+      "name": "Mornsong Aria",
+      "oracle_text": "Players can't draw cards or gain life.\nAt the beginning of each player's draw step, that player loses 3 life, searches their library for a card, puts it into their hand, then shuffles.",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Tax Effect",
+        "Tutor",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Stax/Taxing"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Tax Effect",
+          "Tutor",
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "accelerant"
+    },
+    {
+      "name": "Boggart Mischief",
+      "oracle_text": "When this enchantment enters, you may blight 1. If you do, create two 1/1 black and red Goblin creature tokens. (To blight 1, put a -1/-1 counter on a creature you control.)\nWhenever a Goblin creature you control dies, each opponent loses 1 life and you gain 1 life.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Tokens",
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Life Drain",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tribal/Kindred",
+          "Tokens",
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Life Drain",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Kindred Enchantment — Goblin",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "drain"
+    },
+    {
+      "name": "Shadow Urchin",
+      "oracle_text": "Whenever this creature attacks, blight 1. (Put a -1/-1 counter on a creature you control.)\nWhenever a creature you control with one or more counters on it dies, exile that many cards from the top of your library. Until your next end step, you may play those cards.",
+      "mana_cost": "{2}{B/R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Impulse Draw",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Aristocrats/Sacrifice",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Impulse Draw",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Ouphe",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "refuel"
+    },
+    {
+      "name": "Chaos Spewer",
+      "oracle_text": "When this creature enters, you may pay {2}. If you don't, blight 2. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{2}{B/R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Goblin Warlock",
+      "rarity": "common",
+      "power": "5",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "clock"
+    },
+    {
+      "name": "Eclipsed Boggart",
+      "oracle_text": "When this creature enters, look at the top four cards of your library. You may reveal a Goblin, Swamp, or Mountain card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.",
+      "mana_cost": "{B/R}{B/R}{B/R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Goblin Scout",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "refuel"
+    },
+    {
+      "name": "Darkness Descends",
+      "oracle_text": "Put two -1/-1 counters on each creature.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "interaction"
+    },
+    {
+      "name": "Nightmare Sower",
+      "oracle_text": "Flying, lifelink\nWhenever you cast a spell during an opponent's turn, put a -1/-1 counter on up to one target creature.",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Faerie Assassin",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "clock"
+    },
+    {
+      "name": "Blighted Blackthorn",
+      "oracle_text": "Whenever this creature enters or attacks, you may blight 2. If you do, you draw a card and lose 1 life. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Counter Placement",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Counter Placement"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Creature — Treefolk Warlock",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "7",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "clock"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 18,
+      "role": "land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Auntie's Sentence",
+      "oracle_text": "Choose one —\n• Target opponent reveals their hand. You choose a nonland permanent card from it. That player discards that card.\n• Target creature gets -2/-2 until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Discard",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Discard",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "hand attack",
+      "when_to_board": "Vs any deck with artifacts or enchantments - the cube holds 11 artifacts and 21 enchantments and mono-black has ZERO answers to either once they resolve, so 'Target opponent reveals their hand. You choose a nonland permanent card from it. That player discards that card' is the only interaction available, and it must happen before the permanent is cast. Its second mode, '-2/-2', is also removal with no mana-value ceiling."
+    },
+    {
+      "name": "Deceit",
+      "oracle_text": "When this creature enters, if {U}{U} was spent to cast it, return up to one other target nonland permanent to its owner's hand.\nWhen this creature enters, if {B}{B} was spent to cast it, target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\nEvoke {U/B}{U/B}",
+      "mana_cost": "{4}{U/B}{U/B}",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Targeted Discard",
+        "Evoke",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Targeted Discard",
+          "Evoke"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 6,
+      "type_line": "Creature — Elemental Incarnation",
+      "rarity": "mythic",
+      "power": "5",
+      "toughness": "5",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "hand attack",
+      "when_to_board": "Vs green and white opponents specifically. Evoke {U/B}{U/B} is paid as {B}{B} off two Swamps and satisfies its own 'if {B}{B} was spent' clause, giving 'target opponent reveals their hand. You choose a nonland card from it. That player discards that card'. This is the answer to Mornsong Aria's own drawback: Aria hands the opponent a tutor every turn and the cube's only four enchantment answers are all G/UG/W, so against those colours you must be able to take the answer out of their hand."
+    },
+    {
+      "name": "Dawnhand Dissident",
+      "oracle_text": "{T}, Blight 1: Surveil 1.\n{T}, Blight 2: Exile target card from a graveyard.\nDuring your turn, you may cast creature spells from among cards you own exiled with this creature by removing three counters from among creatures you control in addition to paying their other costs.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Graveyard",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Card Selection",
+        "Graveyard Hate",
+        "Self-Mill"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Graveyard Hate",
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Elf Warlock",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "graveyard hate",
+      "when_to_board": "Vs the cube's 39 graveyard-interaction cards. Both abilities put counters on your own creatures and at 1/2 a Blight 2 kills it, so it exiles once off its own toughness and repeatedly only while other bodies absorb the counters."
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "graveyard hate",
+      "when_to_board": "Vs reanimator and flashback decks; 'exile up to two target cards from graveyards' on a 3/3 flier that also joins the clock and survives Darkness Descends at 1/1. Changeling makes it a Goblin for Boggart Mischief's drain. Its 'gain 3 life' rider is live only before Aria is cast, so sequence Percher first."
+    },
+    {
+      "name": "Mischievous Sneakling",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlash",
+      "mana_cost": "{1}{U/B}",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Enabler/Fodder"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "ambush blocker",
+      "when_to_board": "Vs fast aggro, the matchup where falling a three-life bracket behind stops the turn-order ruling from rescuing the Aria race. Flash blocks at instant speed; Changeling makes it a Goblin for the Mischief drain."
+    },
+    {
+      "name": "Gnarlbark Elm",
+      "oracle_text": "This creature enters with two -1/-1 counters on it.\n{2}{B}, Remove two counters from this creature: Target creature gets -2/-2 until end of turn. Activate only as a sorcery.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Treefolk Warlock",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "4",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "removal on a body",
+      "when_to_board": "Vs creature decks, boarded in ONLY while boarding Darkness Descends x2 OUT - Gnarlbark enters as a 1/2 and dies to my own sweeper, so the two cards must not share a 40. It then leaves a 3/4 wall and shares Treefolk and Warlock with Blighted Blackthorn, turning on Unbury's second mode."
+    }
+  ],
+  "pitch": "Mono-black board-lock control, and the one deck of the three where Mornsong Aria is genuinely the win condition rather than an accelerant - made viable by a turn-order fact the whole build is arranged around. Aria is a sorcery-speed enchantment, so it resolves in the pilot's MAIN PHASE, after the pilot's own draw step. The next draw step in the game therefore belongs to the OPPONENT, and every trigger afterwards alternates opponent-first. A player at life L dies on their ceil(L/3)-th trigger, so the pilot wins iff ceil(L_opponent/3) <= ceil(L_pilot/3): the Aria player wins at EQUAL life totals, and at 20/20 the opponent hits zero on their seventh trigger with the pilot still at 2. The deck therefore does not need a life lead - it needs to avoid falling a three-life bracket behind, which 8 removal copies and Blighted Blackthorn's 7 toughness are built to guarantee. Two costs are stated rather than buried. First, Aria's tutor half is symmetric and the opponent gets theirs FIRST every cycle - six free selections before their lethal seventh - and the cube's only four enchantment answers are all G/UG/W, so against a green or white opponent Aria is the card that finds their answer to Aria. Second, Aria is a rare capped at one copy seen 42.5% of the time by turn 10, so the same 8 removal copies plus a ten-power board of Blighted Blackthorn, Chaos Spewer and Nightmare Sower win by attrition without it.",
+  "strategy_es": "Ruta 3 — Bloqueo de tablero con blight (Aria como condición de victoria)",
+  "identity_es": "Control de bloqueo de tablero mono negro, y el único de los tres mazos donde Mornsong Aria es genuinamente la condición de victoria y no un acelerante, hecho viable por un detalle de orden de turnos alrededor del cual se organiza toda la construcción. Aria es un encantamiento a velocidad de conjuro, así que resuelve en la FASE PRINCIPAL del piloto, después de su propio paso de robar. El siguiente paso de robar de la partida pertenece por tanto al RIVAL, y cada disparo posterior alterna empezando por el rival. Un jugador con vidas L muere en su disparo número techo(L/3), así que el piloto gana si y solo si techo(L_rival/3) <= techo(L_piloto/3): el jugador de Aria gana con totales de vida IGUALES, y a 20/20 el rival llega a cero en su séptimo disparo con el piloto todavía a 2. El mazo no necesita por tanto una ventaja de vidas: necesita evitar quedarse una franja de tres vidas por detrás, que es lo que garantizan 8 copias de eliminación y los 7 de resistencia de Blighted Blackthorn. Dos costes se enuncian en vez de enterrarse. Primero, la mitad de tutor de Aria es simétrica y el rival recibe la suya PRIMERO en cada ciclo — seis selecciones gratuitas antes de su séptima letal — y las únicas cuatro respuestas a encantamientos del cubo son todas G/UG/W, así que contra un rival verde o blanco Aria es la carta que le encuentra su respuesta a Aria. Segundo, Aria es una rara limitada a una copia que se ve el 42,5% de las veces para el turno 10, así que esas mismas 8 copias de eliminación más un tablero de diez de fuerza entre Blighted Blackthorn, Chaos Spewer y Nightmare Sower ganan por desgaste sin ella.",
+  "pitch_es": "Control de bloqueo de tablero mono negro, y el único de los tres mazos donde Mornsong Aria es genuinamente la condición de victoria y no un acelerante, hecho viable por un detalle de orden de turnos alrededor del cual se organiza toda la construcción. Aria es un encantamiento a velocidad de conjuro, así que resuelve en la FASE PRINCIPAL del piloto, después de su propio paso de robar. El siguiente paso de robar de la partida pertenece por tanto al RIVAL, y cada disparo posterior alterna empezando por el rival. Un jugador con vidas L muere en su disparo número techo(L/3), así que el piloto gana si y solo si techo(L_rival/3) <= techo(L_piloto/3): el jugador de Aria gana con totales de vida IGUALES, y a 20/20 el rival llega a cero en su séptimo disparo con el piloto todavía a 2. El mazo no necesita por tanto una ventaja de vidas: necesita evitar quedarse una franja de tres vidas por detrás, que es lo que garantizan 8 copias de eliminación y los 7 de resistencia de Blighted Blackthorn. Dos costes se enuncian en vez de enterrarse. Primero, la mitad de tutor de Aria es simétrica y el rival recibe la suya PRIMERO en cada ciclo — seis selecciones gratuitas antes de su séptima letal — y las únicas cuatro respuestas a encantamientos del cubo son todas G/UG/W, así que contra un rival verde o blanco Aria es la carta que le encuentra su respuesta a Aria. Segundo, Aria es una rara limitada a una copia que se ve el 42,5% de las veces para el turno 10, así que esas mismas 8 copias de eliminación más un tablero de diez de fuerza entre Blighted Blackthorn, Chaos Spewer y Nightmare Sower ganan por desgaste sin ella."
+}

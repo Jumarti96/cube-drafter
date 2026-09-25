@@ -1,0 +1,607 @@
+{
+  "deck_name": "wb-aristocrats-drain",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-07T18:04:23Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "WB",
+  "identity": "A white-black aristocrats deck whose engine and whose threats are the same cards. Umbral Collar Zealot's 'Sacrifice another creature or artifact: Surveil 1' costs no mana, has no tap and has no limit, so every permanent you control is convertible at instant speed as many times as you have bodies. Susurian Voidborn turns each death into a 2-point life swing; Syr Vondam, Sunstar Exemplar turns each into a +1/+1 counter and a life; Lightless Evangel grows on every sacrifice; Sothera, the Supervoid turns each creature death into a non-targeted edict. Timeline Culler makes the fodder genuinely renewable - it recasts ITSELF from the graveyard for {B} and 2 life, so the same card can be sacrificed every turn. All of that sacrificing keeps Void switched on, which turns Tragic Trajectory into a one-mana -10/-10, re-attaches Hylderblade for free every end step, and lets Alpharael, Stonechosen halve the defender's life on each attack.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_user_constraint": "Maximum 6 rare/mythic cards TOTAL across mainboard and sideboard; rare/mythic LANDS count toward this.",
+    "rare_mythic_total": 5,
+    "rare_mythic_list": [
+      [
+        "Syr Vondam, Sunstar Exemplar",
+        "rare"
+      ],
+      [
+        "Sothera, the Supervoid",
+        "mythic"
+      ],
+      [
+        "Elegy Acolyte",
+        "rare"
+      ],
+      [
+        "Alpharael, Stonechosen",
+        "mythic"
+      ],
+      [
+        "Godless Shrine",
+        "rare"
+      ]
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 2,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.42,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.44,
+      "raw_target": 16.56,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.42,
+    "pip_demand": {
+      "B": 25,
+      "W": 3
+    },
+    "land_color_production": {
+      "B": 13,
+      "W": 6
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 89.3,
+        "prod_pct": 81.2,
+        "gap": 8.1,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 10.7,
+        "prod_pct": 37.5,
+        "gap": -26.8,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Susurian Voidborn",
+      "qty": 2,
+      "role": "Payoff — drains 1 both ways on every creature or artifact death",
+      "board": "mainboard",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Creature — Vampire Soldier",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life.\nWarp {B} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "2",
+      "toughness": "2"
+    },
+    {
+      "name": "Syr Vondam, Sunstar Exemplar",
+      "qty": 1,
+      "role": "Payoff — grows and gains on every other creature dying or exiled",
+      "board": "mainboard",
+      "mana_cost": "{W}{B}",
+      "cmc": 2,
+      "type_line": "Legendary Creature — Human Knight",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Vigilance, menace\nWhenever another creature you control dies or is put into exile, put a +1/+1 counter on Syr Vondam and you gain 1 life.\nWhen Syr Vondam dies or is put into exile while its power is 4 or greater, destroy up to one target nonland permanent.",
+      "power": "2",
+      "toughness": "2"
+    },
+    {
+      "name": "Lightless Evangel",
+      "qty": 2,
+      "role": "Payoff — grows on every sacrifice",
+      "board": "mainboard",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Vampire Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever you sacrifice another creature or artifact, put a +1/+1 counter on this creature.",
+      "power": "2",
+      "toughness": "2"
+    },
+    {
+      "name": "Sothera, the Supervoid",
+      "qty": 1,
+      "role": "Payoff — every creature death exiles a creature each opponent controls",
+      "board": "mainboard",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Legendary Enchantment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Whenever a creature you control dies, each opponent chooses a creature they control and exiles it.\nAt the beginning of your end step, if a player controls no creatures, sacrifice Sothera, then put a creature card exiled with it onto the battlefield under your control with two additional +1/+1 counters on it.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Elegy Acolyte",
+      "qty": 1,
+      "role": "Payoff — 4/4 lifelink that draws on combat damage; Void makes a Robot each turn",
+      "board": "mainboard",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Lifelink\nWhenever one or more creatures you control deal combat damage to a player, you draw a card and lose 1 life.\nVoid — At the beginning of your end step, if a nonland permanent left the battlefield this turn or a spell was warped this turn, create a 2/2 colorless Robot artifact creature token.",
+      "power": "4",
+      "toughness": "4"
+    },
+    {
+      "name": "Alpharael, Stonechosen",
+      "qty": 1,
+      "role": "Payoff — halves the defender's life on every attack while Void is on",
+      "board": "mainboard",
+      "mana_cost": "{3}{B}{B}",
+      "cmc": 5,
+      "type_line": "Legendary Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Ward—Discard a card at random.\nVoid — Whenever Alpharael attacks, if a nonland permanent left the battlefield this turn or a spell was warped this turn, defending player loses half their life, rounded up.",
+      "power": "3",
+      "toughness": "3"
+    },
+    {
+      "name": "Umbral Collar Zealot",
+      "qty": 2,
+      "role": "Outlet — FREE unlimited repeatable sacrifice outlet",
+      "board": "mainboard",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Sacrifice another creature or artifact: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "power": "3",
+      "toughness": "2"
+    },
+    {
+      "name": "Swarm Culler",
+      "qty": 2,
+      "role": "Outlet — tap-triggered sacrifice that draws a card, on a 2/4 flier",
+      "board": "mainboard",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Creature — Insect Warrior",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nWhenever this creature becomes tapped, you may sacrifice another creature or artifact. If you do, draw a card.",
+      "power": "2",
+      "toughness": "4"
+    },
+    {
+      "name": "Comet Crawler",
+      "qty": 1,
+      "role": "Outlet/threat — lifelink attacker that eats a permanent for +2/+0",
+      "board": "mainboard",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Creature — Insect Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Lifelink\nWhenever this creature attacks, you may sacrifice another creature or artifact. If you do, this creature gets +2/+0 until end of turn.",
+      "power": "2",
+      "toughness": "3"
+    },
+    {
+      "name": "Embrace Oblivion",
+      "qty": 1,
+      "role": "Outlet/removal — its sacrifice cost is itself a payoff trigger",
+      "board": "mainboard",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDestroy target creature or Spacecraft.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Timeline Culler",
+      "qty": 2,
+      "role": "Fodder engine — recasts itself from the graveyard for {B} and 2 life, forever",
+      "board": "mainboard",
+      "mana_cost": "{B}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Drix Warlock",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Haste\nYou may cast this card from your graveyard using its warp ability.\nWarp—{B}, Pay 2 life. (You may cast this card from your hand or graveyard for its warp cost. If you do, exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "2",
+      "toughness": "2"
+    },
+    {
+      "name": "Nutrient Block",
+      "qty": 2,
+      "role": "Fodder — indestructible Food that draws a card when it dies; a {2} mana sink",
+      "board": "mainboard",
+      "mana_cost": "{1}",
+      "cmc": 1,
+      "type_line": "Artifact — Food",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Honored Knight-Captain",
+      "qty": 1,
+      "role": "Fodder — two bodies for two mana; also tutors Hylderblade late",
+      "board": "mainboard",
+      "mana_cost": "{1}{W}",
+      "cmc": 2,
+      "type_line": "Creature — Human Advisor Knight",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, create a 1/1 white Human Soldier creature token.\n{4}{W}{W}, Sacrifice this creature: Search your library for an Equipment card, put it onto the battlefield, then shuffle.",
+      "power": "1",
+      "toughness": "1"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "qty": 2,
+      "role": "Interaction — -10/-10 for one mana whenever Void is on",
+      "board": "mainboard",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Banishing Light",
+      "qty": 1,
+      "role": "Interaction — the only catch-all for a noncreature permanent",
+      "board": "mainboard",
+      "mana_cost": "{2}{W}",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Dubious Delicacy",
+      "qty": 1,
+      "role": "Interaction/sink — flash -3/-3, a Food, 3 reach, and the deck's repeatable mana sink",
+      "board": "mainboard",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Artifact — Food",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flash\nWhen this artifact enters, up to one target creature gets -3/-3 until end of turn.\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\n{2}, {T}, Sacrifice this artifact: Target opponent loses 3 life.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Hylderblade",
+      "qty": 1,
+      "role": "Equipment — +3/+1 that re-attaches itself free every end step Void is on",
+      "board": "mainboard",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Artifact — Equipment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Equipped creature gets +3/+1.\nVoid — At the beginning of your end step, if a nonland permanent left the battlefield this turn or a spell was warped this turn, attach this Equipment to target creature you control.\nEquip {4} ({4}: Attach to target creature you control. Equip only as a sorcery.)",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Godless Shrine",
+      "qty": 1,
+      "role": "Land — the only untapped-capable WB dual in the pool",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "({T}: Add {W} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Sunlit Marsh",
+      "qty": 2,
+      "role": "Land — WB dual (tapped)",
+      "board": "mainboard",
+      "mana_cost": null,
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Swamp",
+      "qty": 10,
+      "role": "Land",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Plains",
+      "qty": 3,
+      "role": "Land",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Gravkill",
+      "qty": 2,
+      "role": "vs recursive or oversized threats — exile, not destroy",
+      "board": "sideboard",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Vote Out",
+      "qty": 2,
+      "role": "vs creature decks — unconditional destroy; convoke is fed by the board and the tapping triggers Swarm Culler",
+      "board": "sideboard",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target creature.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Seam Rip",
+      "qty": 2,
+      "role": "vs fast MV<=2 starts — Robot/Lander/Food openings",
+      "board": "sideboard",
+      "mana_cost": "{W}",
+      "cmc": 1,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls with mana value 2 or less until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Radiant Strike",
+      "qty": 2,
+      "role": "vs the 52 non-Spacecraft artifacts Gravkill cannot reach; board 1-2 Swamps to Plains alongside",
+      "board": "sideboard",
+      "mana_cost": "{3}{W}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Banishing Light",
+      "qty": 1,
+      "role": "vs enchantments — the cube runs 16 and has ONE enchantment answer cube-wide",
+      "board": "sideboard",
+      "mana_cost": "{2}{W}",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "qty": 1,
+      "role": "vs the 31-card graveyard class — exiles each opponent's graveyard",
+      "board": "sideboard",
+      "mana_cost": "{3}",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": "3",
+      "toughness": "1"
+    }
+  ],
+  "pitch": "A white-black aristocrats deck whose engine and whose threats are the same cards. Umbral Collar Zealot's 'Sacrifice another creature or artifact: Surveil 1' costs no mana, has no tap and has no limit, so every permanent you control is convertible at instant speed as many times as you have bodies. Susurian Voidborn turns each death into a 2-point life swing; Syr Vondam, Sunstar Exemplar turns each into a +1/+1 counter and a life; Lightless Evangel grows on every sacrifice; Sothera, the Supervoid turns each creature death into a non-targeted edict. Timeline Culler makes the fodder genuinely renewable - it recasts ITSELF from the graveyard for {B} and 2 life, so the same card can be sacrificed every turn. All of that sacrificing keeps Void switched on, which turns Tragic Trajectory into a one-mana -10/-10, re-attaches Hylderblade for free every end step, and lets Alpharael, Stonechosen halve the defender's life on each attack.",
+  "strategy_es": "agro",
+  "identity_es": "Un mazo de aristócratas blanco-negro cuyo motor y cuyas amenazas son las mismas cartas. El 'Sacrifice another creature or artifact: Surveil 1' de Umbral Collar Zealot no cuesta maná, no gira y no tiene límite, así que cada permanente que controlas es convertible a velocidad de instantáneo tantas veces como cuerpos tengas. Susurian Voidborn convierte cada muerte en un vaivén de 2 puntos de vida; Syr Vondam, Sunstar Exemplar convierte cada una en un contador +1/+1 y una vida; Lightless Evangel crece con cada sacrificio; Sothera, the Supervoid convierte cada muerte de criatura en un edicto sin objetivo. Timeline Culler hace el forraje genuinamente renovable: se relanza a SÍ MISMA desde el cementerio por {B} y 2 vidas, así que la misma carta puede sacrificarse cada turno. Todo ese sacrificar mantiene Void activo, lo que convierte Tragic Trajectory en un -10/-10 de un maná, reanexa Hylderblade gratis en cada paso final, y permite a Alpharael, Stonechosen reducir a la mitad la vida del defensor en cada ataque.",
+  "pitch_es": "Un mazo de aristócratas blanco-negro cuyo motor y cuyas amenazas son las mismas cartas. El 'Sacrifice another creature or artifact: Surveil 1' de Umbral Collar Zealot no cuesta maná, no gira y no tiene límite, así que cada permanente que controlas es convertible a velocidad de instantáneo tantas veces como cuerpos tengas. Susurian Voidborn convierte cada muerte en un vaivén de 2 puntos de vida; Syr Vondam, Sunstar Exemplar convierte cada una en un contador +1/+1 y una vida; Lightless Evangel crece con cada sacrificio; Sothera, the Supervoid convierte cada muerte de criatura en un edicto sin objetivo. Timeline Culler hace el forraje genuinamente renovable: se relanza a SÍ MISMA desde el cementerio por {B} y 2 vidas, así que la misma carta puede sacrificarse cada turno. Todo ese sacrificar mantiene Void activo, lo que convierte Tragic Trajectory en un -10/-10 de un maná, reanexa Hylderblade gratis en cada paso final, y permite a Alpharael, Stonechosen reducir a la mitad la vida del defensor en cada ataque."
+}

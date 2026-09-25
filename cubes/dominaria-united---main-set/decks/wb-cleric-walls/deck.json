@@ -1,0 +1,668 @@
+{
+  "deck_name": "wb-cleric-walls",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T20:00:00Z",
+  "format": "40-card",
+  "strategy": "Defenders control / Blight Pile drain",
+  "colors": "WB",
+  "identity": "A WB Defenders control deck that kills without ever needing to win a combat. It runs all 12 Defender bodies that W/B can legally supply - six W/B-legal defender cards at two copies each is the ceiling in these colours - and Blight Pile converts that count directly into life loss: '{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.' Wingmantle Chaplain turns the same denominator into 1/1 flying Birds, which are the deck's only evasive damage and its only flying blockers, and Walking Bulwark can send a Defender in for its toughness instead of its power when the drain alone is too slow. Sheoldred, the Apocalypse is a second clock that needs no defenders at all. Of the three Cleric builds this one honours the constraint least: only Wingmantle Chaplain is both a Cleric and a Defender, so the deck runs 6 Cleric cards where the kindred build runs 11.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "max 5 rares+mythics across mainboard and sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.35,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": -0.2,
+      "raw_target": 16.8,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.35,
+    "pip_demand": {
+      "W": 13,
+      "B": 9
+    },
+    "land_color_production": {
+      "W": 10,
+      "B": 10
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 40.9,
+        "prod_pct": 58.8,
+        "gap": -17.9,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 59.1,
+        "prod_pct": 58.8,
+        "gap": 0.3,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Walking Bulwark",
+      "oracle_text": "Defender\n{2}: Until end of turn, target creature with defender gains haste, can attack as though it didn't have defender, and assigns combat damage equal to its toughness rather than its power. Activate only as a sorcery.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1,
+      "type_line": "Artifact Creature — Golem",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Artifacts",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Combat Enabler"
+      ],
+      "qty": 2,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Clockwork Drawbridge",
+      "oracle_text": "Defender\n{2}{W}, {T}: Tap target creature.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Artifact Creature — Wall",
+      "rarity": "common",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Defender Matters",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Tap Effect"
+      ],
+      "qty": 2,
+      "role": "Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cut Down",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Blight Pile",
+      "oracle_text": "Defender\n{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Life Drain",
+        "Payload/Payoff"
+      ],
+      "qty": 2,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Elas il-Kor, Sadistic Pilgrim",
+      "oracle_text": "Deathtouch\nWhenever another creature you control enters, you gain 1 life.\nWhenever another creature you control dies, each opponent loses 1 life.",
+      "mana_cost": "{W}{B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Legendary Creature — Phyrexian Kor Cleric",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Lifegain",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Life Drain"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Phyrexian Missionary",
+      "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nLifelink\nWhen this creature enters, if it was kicked, return target creature card from your graveyard to your hand.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian Human Cleric",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Kicker/Scaling",
+        "Graveyard",
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Regrowth",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Take Up the Shield",
+      "oracle_text": "Put a +1/+1 counter on target creature. It gains lifelink and indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Protection"
+      ],
+      "qty": 1,
+      "role": "Protection",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gibbering Barricade",
+      "oracle_text": "Defender\n{2}{B}, Sacrifice a creature: You gain 1 life and draw a card.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Nightmare Wall",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Defender Matters",
+        "Lifegain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "qty": 2,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Anointed Peacekeeper",
+      "oracle_text": "Vigilance\nAs this creature enters, look at an opponent's hand, then choose any card name.\nSpells your opponents cast with the chosen name cost {2} more to cast.\nActivated abilities of sources with the chosen name cost {2} more to activate unless they're mana abilities.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Tax Effect",
+        "Hand Disruption"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Citizen's Arrest",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wingmantle Chaplain",
+      "oracle_text": "Defender\nWhen this creature enters, create a 1/1 white Bird creature token with flying for each creature with defender you control.\nWhenever another creature you control with defender enters, create a 1/1 white Bird creature token with flying.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Tokens",
+        "Defender Matters",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "qty": 2,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shield-Wall Sentinel",
+      "oracle_text": "Defender\nWhen this creature enters, you may search your library for a creature card with defender, reveal it, put it into your hand, then shuffle.",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4,
+      "type_line": "Artifact Creature — Golem",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Tutor",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 2,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Lifegain",
+        "Life Drain",
+        "Standalone Threat",
+        "Payload/Payoff"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Caves of Koilos",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {W} or {B}. This land deals 1 damage to you.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against artifacts - a 15-card, 6.1%-density class that this mainboard cannot touch at all (Destroy Evil answers enchantments, Citizen's Arrest creatures and planeswalkers). 'exile up to one target nonland permanent' is the only WB answer of any kind, and every card the cube offers for artifacts otherwise is green or red."
+    },
+    {
+      "name": "Extinguish the Light",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against the creatures that fall between Cut Down (total power+toughness 5 or less) and Destroy Evil (toughness 4 or greater) - a 4/3 is missed by both. That gap is the card's whole job; the mainboard already answers planeswalkers via Citizen's Arrest."
+    },
+    {
+      "name": "Knight of Dusk's Shadow",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nYour opponents can't gain life.\n{1}{B}: This creature gets +1/+1 until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Lifegain Hate"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against the 22-card, 8.9%-density lifegain class. This deck's entire clock is incremental life loss of 3-7 per turn; an opponent gaining 4-6 a turn does not slow it down, it turns it off. 'Your opponents can't gain life' is the sharpest card in this board."
+    },
+    {
+      "name": "Pilfer",
+      "oracle_text": "Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Discard"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against control and combo. WB has zero counterspells in this pool, so the stack class is conceded; stripping the key card before it is cast is the only proactive answer available."
+    },
+    {
+      "name": "Serra Paragon",
+      "oracle_text": "Flying\nOnce during each of your turns, you may play a land from your graveyard or cast a permanent spell with mana value 3 or less from your graveyard. If you do, it gains \"When this permanent is put into a graveyard from the battlefield, exile it and you gain 2 life.\"",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "rarity": "mythic",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Graveyard",
+        "Lands-Matter",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Recursion",
+        "Life Gain",
+        "Cards: Net-Positive"
+      ],
+      "qty": 1,
+      "role": "Engine",
+      "board": "sideboard",
+      "when_to_board": "Against sweepers and removal-heavy decks - the post-wipe rebuild. Its 'permanent spell with mana value 3 or less' clause recasts 7 of this mainboard's permanent names from the graveyard (Blight Pile MV2, Clockwork Drawbridge MV1, Walking Bulwark MV1, Elas il-Kor MV2, Phyrexian Missionary MV2, Citizen's Arrest MV3, Gibbering Barricade MV3) but NOT Wingmantle Chaplain or Shield-Wall Sentinel, both MV4."
+    },
+    {
+      "name": "Serra Redeemer",
+      "oracle_text": "Flying\nWhenever another creature you control with power 2 or less enters, put two +1/+1 counters on that creature.",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Angel Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "sideboard",
+      "when_to_board": "Against decks that go wide or attack on the ground. 'Whenever another creature you control with power 2 or less enters, put two +1/+1 counters on that creature' applies to 10 of the 12 defender bodies (every one except Blight Pile, printed 3/3) plus every 1/1 Bird token. A 0/3 wall becomes a 2/5, which under Walking Bulwark's toughness-assignment clause attacks for 5 instead of 3. It is also a flier, so it blocks the 20.6% evasion class."
+    }
+  ],
+  "pitch": "A WB Defenders control deck that kills without ever needing to win a combat. It runs all 12 Defender bodies that W/B can legally supply - six W/B-legal defender cards at two copies each is the ceiling in these colours - and Blight Pile converts that count directly into life loss: '{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.' Wingmantle Chaplain turns the same denominator into 1/1 flying Birds, which are the deck's only evasive damage and its only flying blockers, and Walking Bulwark can send a Defender in for its toughness instead of its power when the drain alone is too slow. Sheoldred, the Apocalypse is a second clock that needs no defenders at all. Of the three Cleric builds this one honours the constraint least: only Wingmantle Chaplain is both a Cleric and a Defender, so the deck runs 6 Cleric cards where the kindred build runs 11.",
+  "strategy_es": "control de Defensores / drenaje con Blight Pile",
+  "identity_es": "Un control de Defensores WB que mata sin necesitar ganar nunca un combate. Juega los 12 cuerpos con Defensor que W/B puede aportar legalmente — seis cartas de defensor legales en W/B a dos copias cada una es el techo de estos colores — y Blight Pile convierte ese recuento directamente en pérdida de vida: '{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.' Wingmantle Chaplain convierte ese mismo denominador en Pájaros voladores 1/1, que son el único daño evasivo del mazo y sus únicos bloqueadores voladores, y Walking Bulwark puede mandar a un Defensor a atacar por su resistencia en lugar de por su fuerza cuando el drenaje solo es demasiado lento. Sheoldred, the Apocalypse es un segundo reloj que no necesita defensores en absoluto. De las tres construcciones de Clérigos, esta es la que menos honra la restricción: solo Wingmantle Chaplain es a la vez Clérigo y Defensor, así que el mazo juega 6 cartas de Clérigo donde la construcción tribal juega 11.",
+  "pitch_es": "Un control de Defensores WB que mata sin necesitar ganar nunca un combate. Juega los 12 cuerpos con Defensor que W/B puede aportar legalmente — seis cartas de defensor legales en W/B a dos copias cada una es el techo de estos colores — y Blight Pile convierte ese recuento directamente en pérdida de vida: '{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.' Wingmantle Chaplain convierte ese mismo denominador en Pájaros voladores 1/1, que son el único daño evasivo del mazo y sus únicos bloqueadores voladores, y Walking Bulwark puede mandar a un Defensor a atacar por su resistencia en lugar de por su fuerza cuando el drenaje solo es demasiado lento. Sheoldred, the Apocalypse es un segundo reloj que no necesita defensores en absoluto. De las tres construcciones de Clérigos, esta es la que menos honra la restricción: solo Wingmantle Chaplain es a la vez Clérigo y Defensor, así que el mazo juega 6 cartas de Clérigo donde la construcción tribal juega 11."
+}

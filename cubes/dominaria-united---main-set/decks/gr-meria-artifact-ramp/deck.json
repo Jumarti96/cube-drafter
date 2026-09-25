@@ -1,0 +1,1130 @@
+{
+  "deck_name": "gr-meria-artifact-ramp",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-17T00:00:00Z",
+  "format": "40-card",
+  "strategy": "artifact-ramp midrange",
+  "colors": "GR",
+  "identity": "A G/R midrange deck that treats cheap nontoken artifacts as a mana battery. Meria, Scholar of Antiquity taps them for {G} as HER activated ability, so an artifact cast this turn is usable the same turn, and two at a time convert into a card off the top. The deck is deliberately built so Meria is an accelerant rather than a prerequisite: she is a singleton seen by turn 6 in roughly 30% of games, and the floor plan is 17 lands plus Relic of Legends, Salvaged Manaworker and Llanowar Loamspeaker curving into Linebreaker Baloth, Elfhame Wurm and Mossbeard Ancient. Yotia Declares War is the second, Meria-independent artifact payoff, converting a wide artifact board directly into removal. Games are won by combat damage from bodies deployed two to three turns ahead of curve.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "at most 5 rare+mythic cards total across mainboard and sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 7,
+    "cantrip_count": 2,
+    "accel_count": 9,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.78,
+      "reference_avg_mv": 2.5,
+      "accel": 9,
+      "adjustment": -1.127,
+      "raw_target": 15.873,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.78,
+    "pip_demand": {
+      "G": 14,
+      "R": 6
+    },
+    "land_color_production": {
+      "R": 7,
+      "G": 12
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 70,
+        "prod_pct": 70.6,
+        "gap": -0.6,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 30,
+        "prod_pct": 41.2,
+        "gap": -11.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Walking Bulwark",
+      "oracle_text": "Defender\n{2}: Until end of turn, target creature with defender gains haste, can attack as though it didn't have defender, and assigns combat damage equal to its toughness rather than its power. Activate only as a sorcery.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1,
+      "type_line": "Artifact Creature — Golem",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Artifacts",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Combat Enabler"
+      ],
+      "role": "Enabler/Fodder — artifact fuel",
+      "board": "mainboard"
+    },
+    {
+      "name": "Inscribed Tablet",
+      "oracle_text": "{1}, {T}, Sacrifice this artifact: Reveal the top five cards of your library. Put a land card from among them into your hand and the rest on the bottom of your library in a random order. If you didn't put a card into your hand this way, draw a card.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Enabler/Fodder — artifact fuel + land finder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Inscribed Tablet",
+      "oracle_text": "{1}, {T}, Sacrifice this artifact: Reveal the top five cards of your library. Put a land card from among them into your hand and the rest on the bottom of your library in a random order. If you didn't put a card into your hand this way, draw a card.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Enabler/Fodder — artifact fuel + land finder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Salvaged Manaworker",
+      "oracle_text": "{1}: Add one mana of any color. Activate only once each turn.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Mana Dork",
+        "Mana Rock"
+      ],
+      "role": "Infrastructure — fixing/artifact fuel",
+      "board": "mainboard"
+    },
+    {
+      "name": "Salvaged Manaworker",
+      "oracle_text": "{1}: Add one mana of any color. Activate only once each turn.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Mana Dork",
+        "Mana Rock"
+      ],
+      "role": "Infrastructure — fixing/artifact fuel",
+      "board": "mainboard"
+    },
+    {
+      "name": "Llanowar Loamspeaker",
+      "oracle_text": "{T}: Add one mana of any color.\n{T}: Target land you control becomes a 3/3 Elemental creature with haste until end of turn. It's still a land. Activate only as a sorcery.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Elf Druid",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Lands-Matter",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Mana Dork",
+        "Manland Animation"
+      ],
+      "role": "Infrastructure — acceleration",
+      "board": "mainboard"
+    },
+    {
+      "name": "Automatic Librarian",
+      "oracle_text": "When this creature enters, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "role": "Enabler/Fodder — artifact fuel + selection",
+      "board": "mainboard"
+    },
+    {
+      "name": "Automatic Librarian",
+      "oracle_text": "When this creature enters, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "role": "Enabler/Fodder — artifact fuel + selection",
+      "board": "mainboard"
+    },
+    {
+      "name": "Relic of Legends",
+      "oracle_text": "{T}: Add one mana of any color.\nTap an untapped legendary creature you control: Add one mana of any color.",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Legendary Matters",
+        "Infrastructure/Consistency",
+        "Mana Rock"
+      ],
+      "role": "Infrastructure — acceleration",
+      "board": "mainboard"
+    },
+    {
+      "name": "Relic of Legends",
+      "oracle_text": "{T}: Add one mana of any color.\nTap an untapped legendary creature you control: Add one mana of any color.",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Legendary Matters",
+        "Infrastructure/Consistency",
+        "Mana Rock"
+      ],
+      "role": "Infrastructure — acceleration",
+      "board": "mainboard"
+    },
+    {
+      "name": "Meria, Scholar of Antiquity",
+      "oracle_text": "Tap an untapped nontoken artifact you control: Add {G}.\nTap two untapped nontoken artifacts you control: Exile the top card of your library. You may play it this turn.",
+      "mana_cost": "{1}{R}{G}",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Elf Artificer",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Mana Dork",
+        "Card Advantage"
+      ],
+      "role": "Engine/Outlet — acceleration anchor",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shivan Devastator",
+      "oracle_text": "Flying, haste\nThis creature enters with X +1/+1 counters on it.",
+      "mana_cost": "{X}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Dragon Hydra",
+      "rarity": "mythic",
+      "power": "0",
+      "toughness": "0",
+      "tags": [
+        "Counters (+1/+1)",
+        "Kicker/Scaling",
+        "Standalone Threat"
+      ],
+      "role": "Payload/Payoff — mana sink finisher",
+      "board": "mainboard"
+    },
+    {
+      "name": "Silverback Elder",
+      "oracle_text": "Whenever you cast a creature spell, choose one —\n• Destroy target artifact or enchantment.\n• Look at the top five cards of your library. You may put a land card from among them onto the battlefield tapped. Put the rest on the bottom of your library in a random order.\n• You gain 4 life.",
+      "mana_cost": "{2}{G}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Ape Shaman",
+      "rarity": "mythic",
+      "power": "5",
+      "toughness": "7",
+      "tags": [
+        "Lands-Matter",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Targeted Removal",
+        "Land Fetch",
+        "Life Gain",
+        "Card Selection"
+      ],
+      "role": "Payload/Payoff — engine threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mossbeard Ancient",
+      "oracle_text": "Trample\nWhen this creature enters, you gain 5 life.",
+      "mana_cost": "{5}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 7,
+      "type_line": "Creature — Treefolk",
+      "rarity": "uncommon",
+      "power": "7",
+      "toughness": "7",
+      "tags": [
+        "Lifegain",
+        "Standalone Threat",
+        "Life Gain",
+        "Life: Gain"
+      ],
+      "role": "Payload/Payoff — top-end threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Linebreaker Baloth",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nThis creature can't be blocked by creatures with power 2 or less.",
+      "mana_cost": "{3}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Beast",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Enlist Matters",
+        "Standalone Threat",
+        "Evasion"
+      ],
+      "role": "Payload/Payoff — threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Linebreaker Baloth",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nThis creature can't be blocked by creatures with power 2 or less.",
+      "mana_cost": "{3}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Beast",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Enlist Matters",
+        "Standalone Threat",
+        "Evasion"
+      ],
+      "role": "Payload/Payoff — threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Elfhame Wurm",
+      "oracle_text": "Vigilance, trample",
+      "mana_cost": "{4}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Wurm",
+      "rarity": "common",
+      "power": "5",
+      "toughness": "4",
+      "tags": [
+        "Standalone Threat"
+      ],
+      "role": "Payload/Payoff — threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Yotia Declares War",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — Create a 0/2 colorless Thopter artifact creature token with flying named Ornithopter.\nII — Tap any number of untapped artifacts you control. When you do, this Saga deals that much damage to target creature or planeswalker.\nIII — Up to one target artifact you control becomes an artifact creature with base power and toughness 4/4 until end of turn.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Enchantment — Saga",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Sagas",
+        "Artifacts",
+        "Tokens",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Direct Damage"
+      ],
+      "role": "Interaction/Disruption — artifact-count removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Yotia Declares War",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — Create a 0/2 colorless Thopter artifact creature token with flying named Ornithopter.\nII — Tap any number of untapped artifacts you control. When you do, this Saga deals that much damage to target creature or planeswalker.\nIII — Up to one target artifact you control becomes an artifact creature with base power and toughness 4/4 until end of turn.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Enchantment — Saga",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Sagas",
+        "Artifacts",
+        "Tokens",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Direct Damage"
+      ],
+      "role": "Interaction/Disruption — artifact-count removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Strike",
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Strike",
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bite Down",
+      "oracle_text": "Target creature you control deals damage equal to its power to target creature or planeswalker you don't control.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight"
+      ],
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bite Down",
+      "oracle_text": "Target creature you control deals damage equal to its power to target creature or planeswalker you don't control.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight"
+      ],
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wooded Ridgeline",
+      "oracle_text": "({T}: Add {R} or {G}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Mountain Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land — dual",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wooded Ridgeline",
+      "oracle_text": "({T}: Add {R} or {G}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Mountain Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land — dual",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Broken Wings",
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Hate — artifact/enchantment/flier",
+      "board": "sideboard"
+    },
+    {
+      "name": "Broken Wings",
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Hate — artifact/enchantment/flier",
+      "board": "sideboard"
+    },
+    {
+      "name": "Smash to Dust",
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target creature with defender.\n• Smash to Dust deals 1 damage to each creature your opponents control.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "role": "Hate — artifact + anti-token sweep",
+      "board": "sideboard"
+    },
+    {
+      "name": "Smash to Dust",
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target creature with defender.\n• Smash to Dust deals 1 damage to each creature your opponents control.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "role": "Hate — artifact + anti-token sweep",
+      "board": "sideboard"
+    },
+    {
+      "name": "Magnigoth Sentry",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Treefolk",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "role": "Flex — 4/4 reach vs evasion",
+      "board": "sideboard"
+    },
+    {
+      "name": "Magnigoth Sentry",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Treefolk",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "role": "Flex — 4/4 reach vs evasion",
+      "board": "sideboard"
+    },
+    {
+      "name": "Snarespinner",
+      "oracle_text": "Reach\nWhenever this creature blocks a creature with flying, this creature gets +2/+0 until end of turn.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Spider",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Interaction/Disruption",
+        "Combat Trick"
+      ],
+      "role": "Flex — cheap reach blocker",
+      "board": "sideboard"
+    },
+    {
+      "name": "Llanowar Greenwidow",
+      "oracle_text": "Reach, trample\nDomain — {7}{G}: Return this card from your graveyard to the battlefield tapped. It gains \"If this permanent would leave the battlefield, exile it instead of putting it anywhere else.\" This ability costs {1} less to activate for each basic land type among lands you control.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Spider",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Domain",
+        "Graveyard",
+        "Standalone Threat",
+        "Engine/Outlet",
+        "Reanimation"
+      ],
+      "role": "Flex — 4/3 reach trample vs evasion",
+      "board": "sideboard"
+    },
+    {
+      "name": "Jaya's Firenado",
+      "oracle_text": "Jaya's Firenado deals 5 damage to target creature or planeswalker. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal",
+        "Card Selection"
+      ],
+      "role": "Flex — 5 damage removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Tail Swipe",
+      "oracle_text": "Choose target creature you control and target creature you don't control. If you cast this spell during your main phase, the creature you control gets +1/+1 until end of turn. Then those creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight",
+        "Combat Trick"
+      ],
+      "role": "Flex — 1-mana removal",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "A G/R midrange deck that treats cheap nontoken artifacts as a mana battery. Meria, Scholar of Antiquity taps them for {G} as HER activated ability, so an artifact cast this turn is usable the same turn, and two at a time convert into a card off the top. The deck is deliberately built so Meria is an accelerant rather than a prerequisite: she is a singleton seen by turn 6 in roughly 30% of games, and the floor plan is 17 lands plus Relic of Legends, Salvaged Manaworker and Llanowar Loamspeaker curving into Linebreaker Baloth, Elfhame Wurm and Mossbeard Ancient. Yotia Declares War is the second, Meria-independent artifact payoff, converting a wide artifact board directly into removal. Games are won by combat damage from bodies deployed two to three turns ahead of curve.",
+  "strategy_es": "midrange de aceleración con artefactos",
+  "identity_es": "Un midrange G/R que trata los artefactos no-ficha baratos como una batería de maná. Meria, Scholar of Antiquity los gira por {G} como habilidad activada SUYA, así que un artefacto lanzado este turno es utilizable el mismo turno, y dos a la vez se convierten en una carta desde lo alto. El mazo está construido deliberadamente para que Meria sea un acelerante y no un requisito: es una copia única vista para el turno 6 en aproximadamente el 30% de las partidas, y el plan de suelo son 17 tierras más Relic of Legends, Salvaged Manaworker y Llanowar Loamspeaker desarrollando curva hacia Linebreaker Baloth, Elfhame Wurm y Mossbeard Ancient. Yotia Declares War es la segunda recompensa de artefactos independiente de Meria, convirtiendo un tablero ancho de artefactos directamente en eliminación. Las partidas se ganan con daño de combate de cuerpos desplegados dos o tres turnos por delante de la curva.",
+  "pitch_es": "Un midrange G/R que trata los artefactos no-ficha baratos como una batería de maná. Meria, Scholar of Antiquity los gira por {G} como habilidad activada SUYA, así que un artefacto lanzado este turno es utilizable el mismo turno, y dos a la vez se convierten en una carta desde lo alto. El mazo está construido deliberadamente para que Meria sea un acelerante y no un requisito: es una copia única vista para el turno 6 en aproximadamente el 30% de las partidas, y el plan de suelo son 17 tierras más Relic of Legends, Salvaged Manaworker y Llanowar Loamspeaker desarrollando curva hacia Linebreaker Baloth, Elfhame Wurm y Mossbeard Ancient. Yotia Declares War es la segunda recompensa de artefactos independiente de Meria, convirtiendo un tablero ancho de artefactos directamente en eliminación. Las partidas se ganan con daño de combate de cuerpos desplegados dos o tres turnos por delante de la curva."
+}

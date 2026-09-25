@@ -1,0 +1,883 @@
+{
+  "deck_name": "gw-crusade-counters",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-27T14:35:09Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "GW",
+  "identity": "A G/W deck that makes the whole board permanently bigger every time anything enters. Ten of its twenty-three nonland copies create creature tokens and eight are creature cards, so Cathars' Crusade - 'Whenever a creature you control enters, put a +1/+1 counter on each creature you control' - fires several times a turn rather than once. Join the Dance and Gather the Townsfolk each resolve as TWO separate enter-the-battlefield events, Lingering Souls adds two more plus the deck's only flying bodies, and Torens converts every creature spell into a further token and trigger. Mentor of the Meek turns that same stream of entries into cards, because every token ENTERS at power 1 - Crusade's counters arrive afterwards, from a separate trigger. The kill is ordinary combat damage from a board that has quietly become several sizes too large to block.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "only_from": {},
+    "excluded": [],
+    "user_extra_constraint": "at most 5 rare/mythic cards total across mainboard + sideboard",
+    "basics": "unlimited, format-supplied"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.52,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.027,
+      "raw_target": 17.027,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.52,
+    "pip_demand": {
+      "W": 18,
+      "G": 8
+    },
+    "land_color_production": {
+      "W": 11,
+      "G": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 30.8,
+        "prod_pct": 41.2,
+        "gap": -10.4,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 69.2,
+        "prod_pct": 64.7,
+        "gap": 4.5,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Gather the Townsfolk",
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "23",
+      "board": "mainboard"
+    },
+    {
+      "name": "Join the Dance",
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "mana_cost": "{G}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFlashback {3}{G}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "inr",
+      "collector_number": "242",
+      "board": "mainboard"
+    },
+    {
+      "name": "Intangible Virtue",
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Creature tokens you control get +1/+1 and have vigilance.",
+      "tags": [
+        "Tokens",
+        "Payload/Payoff",
+        "Anthem"
+      ],
+      "set": "inr",
+      "collector_number": "29",
+      "board": "mainboard"
+    },
+    {
+      "name": "Travel Preparations",
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "mana_cost": "{1}{G}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Put a +1/+1 counter on each of up to two target creatures.\nFlashback {1}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [
+        "Counters (+1/+1)",
+        "Flashback/GY-Cast",
+        "Payload/Payoff",
+        "Counter Placement",
+        "Flashback"
+      ],
+      "set": "inr",
+      "collector_number": "220",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hamlet Captain",
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "cmc": 2,
+      "type_line": "Creature — Human Warrior",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{1}{G}",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "Whenever this creature attacks or blocks, other Humans you control get +1/+1 until end of turn.",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Team Buff"
+      ],
+      "set": "inr",
+      "collector_number": "201",
+      "board": "mainboard"
+    },
+    {
+      "name": "Valorous Stance",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "48",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cathar Commando",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "15",
+      "board": "mainboard"
+    },
+    {
+      "name": "Torens, Fist of the Angels",
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Cleric",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "mana_cost": "{1}{G}{W}",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "Training (Whenever this creature attacks with another creature with greater power, put a +1/+1 counter on this creature.)\nWhenever you cast a creature spell, create a 1/1 green and white Human Soldier creature token with training.",
+      "tags": [
+        "Counters (+1/+1)",
+        "Tokens",
+        "Training Matters",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "250",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dauntless Cathar",
+      "qty": 1,
+      "role": "Enabler/Fodder",
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "oracle_text": "{1}{W}, Exile this card from your graveyard: Create a 1/1 white Spirit creature token with flying. Activate only as a sorcery.",
+      "tags": [
+        "Graveyard",
+        "Tokens",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "19",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cathar's Call",
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Enchant creature\nEnchanted creature has vigilance and \"At the beginning of your end step, create a 1/1 white Human creature token.\"",
+      "tags": [
+        "Tokens",
+        "Voltron/Equipment",
+        "Engine/Outlet",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "16",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wedding Announcement // Wedding Festivity",
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "At the beginning of your end step, put an invitation counter on this enchantment. If you attacked with two or more creatures this turn, draw a card. Otherwise, create a 1/1 white Human creature token. Then if this enchantment has three or more invitation counters on it, transform it.\n//\nCreatures you control get +1/+1.",
+      "tags": [
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Card Draw"
+      ],
+      "set": "inr",
+      "collector_number": "51",
+      "board": "mainboard"
+    },
+    {
+      "name": "Clear Shot",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{2}{G}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control.",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "set": "inr",
+      "collector_number": "188",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cathars' Crusade",
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "cmc": 5,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{3}{W}{W}",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Whenever a creature you control enters, put a +1/+1 counter on each creature you control.",
+      "tags": [
+        "Counters (+1/+1)",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Team Buff"
+      ],
+      "set": "inr",
+      "collector_number": "17",
+      "board": "mainboard"
+    },
+    {
+      "name": "Overgrown Farmland",
+      "qty": 1,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "mana_cost": "",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "This land enters tapped unless you control two or more other lands.\n{T}: Add {G} or {W}.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "tdc",
+      "collector_number": "381",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "qty": 2,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "mana_cost": "",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "tdc",
+      "collector_number": "385",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "qty": 2,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [],
+      "mana_cost": "",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "set": "tmc",
+      "collector_number": "65",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "qty": 8,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {W}.)",
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "qty": 4,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lingering Souls",
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "tdc",
+      "collector_number": "123",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lunarch Veteran // Luminous Phantom",
+      "qty": 1,
+      "role": "Enabler/Fodder",
+      "cmc": 1,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{W}",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": "Whenever another creature you control enters, you gain 1 life.\nDisturb {1}{W} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nFlying\nWhenever another creature you control leaves the battlefield, you gain 1 life.\nIf Luminous Phantom would be put into a graveyard from anywhere, exile it instead.",
+      "tags": [
+        "Lifegain",
+        "Flashback/GY-Cast",
+        "Aristocrats/Sacrifice",
+        "Blink/ETB",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "set": "inr",
+      "collector_number": "32",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mentor of the Meek",
+      "qty": 2,
+      "role": "Infrastructure/Consistency",
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "Whenever another creature you control with power 2 or less enters, you may pay {1}. If you do, draw a card.",
+      "tags": [
+        "Tokens",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Mana: Ongoing-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "34",
+      "board": "mainboard"
+    },
+    {
+      "name": "Duel for Dominance",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{1}{G}",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Coven — Choose target creature you control and target creature you don't control. If you control three or more creatures with different powers, put a +1/+1 counter on the chosen creature you control. Then the chosen creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "192",
+      "board": "mainboard"
+    },
+    {
+      "name": "Angel's Tomb",
+      "qty": 1,
+      "role": "Standalone Threat",
+      "cmc": 3,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "mana_cost": "{3}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Whenever a creature you control enters, you may have this artifact become a 3/3 white Angel artifact creature with flying until end of turn.",
+      "tags": [
+        "Standalone Threat",
+        "Animate"
+      ],
+      "set": "inr",
+      "collector_number": "253",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Angelic Purge",
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "9",
+      "board": "sideboard",
+      "when_to_board": "vs the cube's 24 artifacts and 25 enchantments: 'Exile target artifact, creature, or enchantment'; a spare token pays the sacrifice cost, and sacrificing a token that Cathars' Crusade has already grown costs nothing the board misses."
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{3}{W}",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "39",
+      "board": "sideboard",
+      "when_to_board": "vs the cube's three largest non-Human tribes (Vampire 23, Zombie 15, Werewolf 13 = 51 cards): 'you may destroy target Vampire, Werewolf, or Zombie' on a 3/2 Human body, so it is also a Crusade trigger."
+    },
+    {
+      "name": "Cathar Commando",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "15",
+      "board": "sideboard",
+      "when_to_board": "the second copy vs artifact and enchantment decks; '{1}, Sacrifice this creature: Destroy target artifact or enchantment' answers a permanent this deck otherwise cannot touch, off a 3/1 flash body. Capped at 1 here because one copy is already maindecked and commons are limited to 2 total across both boards."
+    },
+    {
+      "name": "Soul-Guide Gryff",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{4}{W}",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "set": "inr",
+      "collector_number": "40",
+      "board": "sideboard",
+      "when_to_board": "vs graveyard decks (75 cards, 27% of the cube): 'When this creature enters, exile up to one target card from a graveyard' - the only graveyard answer in G/W, and it arrives on a 3/4 flying body that also triggers Cathars' Crusade."
+    },
+    {
+      "name": "Thalia, Heretic Cathar",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "oracle_text": "First strike\nCreatures and nonbasic lands your opponents control enter tapped.",
+      "tags": [
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Tax Effect"
+      ],
+      "set": "inr",
+      "collector_number": "44",
+      "board": "sideboard",
+      "when_to_board": "vs slower midrange and control: 'Creatures and nonbasic lands your opponents control enter tapped' buys the growing board a full extra attack step, and every dual in this cube is a nonbasic."
+    },
+    {
+      "name": "Valorous Stance",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "48",
+      "board": "sideboard",
+      "when_to_board": "the second copy vs removal-heavy decks: 'Target creature gains indestructible until end of turn' protects a Crusade-grown creature from a targeted kill spell at the moment it matters, and the other mode kills a toughness-4-or-greater wall."
+    },
+    {
+      "name": "Noose Constrictor",
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Creature — Snake",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{1}{G}",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "Reach\nDiscard a card: This creature gets +1/+1 until end of turn.",
+      "tags": [
+        "Graveyard",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Discard Outlet",
+        "Self-Buff"
+      ],
+      "set": "inr",
+      "collector_number": "210",
+      "board": "sideboard",
+      "when_to_board": "vs the cube's 58 evasion cards (20.9%), which the mainboard cannot block at all: 'Reach' is the only way a G/W ground board interacts with a flier, and 'Discard a card: this creature gets +1/+1 until end of turn' turns flooded lands into blocking size. This replaces Ambush Viper, whose printed text is only 'Flash. Deathtouch' - no reach, so it could never block the threat class it was boarded for."
+    }
+  ],
+  "pitch": "A G/W deck that makes the whole board permanently bigger every time anything enters. Ten of its twenty-three nonland copies create creature tokens and eight are creature cards, so Cathars' Crusade - 'Whenever a creature you control enters, put a +1/+1 counter on each creature you control' - fires several times a turn rather than once. Join the Dance and Gather the Townsfolk each resolve as TWO separate enter-the-battlefield events, Lingering Souls adds two more plus the deck's only flying bodies, and Torens converts every creature spell into a further token and trigger. Mentor of the Meek turns that same stream of entries into cards, because every token ENTERS at power 1 - Crusade's counters arrive afterwards, from a separate trigger. The kill is ordinary combat damage from a board that has quietly become several sizes too large to block.",
+  "strategy_es": "agro",
+  "identity_es": "Un mazo G/W que hace todo el tablero permanentemente más grande cada vez que algo entra. Diez de sus veintitrés copias no-tierra crean fichas de criatura y ocho son cartas de criatura, así que Cathars' Crusade — 'Whenever a creature you control enters, put a +1/+1 counter on each creature you control' — se dispara varias veces por turno en lugar de una. Join the Dance y Gather the Townsfolk resuelven cada una como DOS eventos de entrada separados, Lingering Souls añade dos más y además los únicos cuerpos voladores del mazo, y Torens convierte cada hechizo de criatura en otra ficha y otro disparo. Mentor of the Meek convierte ese mismo flujo de entradas en cartas, porque cada ficha ENTRA con fuerza 1: los contadores de la Crusade llegan después, desde un disparo aparte. La victoria es daño de combate normal desde un tablero que sin hacer ruido se ha vuelto varias tallas demasiado grande para bloquear.",
+  "pitch_es": "Un mazo G/W que hace todo el tablero permanentemente más grande cada vez que algo entra. Diez de sus veintitrés copias no-tierra crean fichas de criatura y ocho son cartas de criatura, así que Cathars' Crusade — 'Whenever a creature you control enters, put a +1/+1 counter on each creature you control' — se dispara varias veces por turno en lugar de una. Join the Dance y Gather the Townsfolk resuelven cada una como DOS eventos de entrada separados, Lingering Souls añade dos más y además los únicos cuerpos voladores del mazo, y Torens convierte cada hechizo de criatura en otra ficha y otro disparo. Mentor of the Meek convierte ese mismo flujo de entradas en cartas, porque cada ficha ENTRA con fuerza 1: los contadores de la Crusade llegan después, desde un disparo aparte. La victoria es daño de combate normal desde un tablero que sin hacer ruido se ha vuelto varias tallas demasiado grande para bloquear."
+}

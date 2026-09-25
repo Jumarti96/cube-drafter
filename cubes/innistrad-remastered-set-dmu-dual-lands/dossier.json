@@ -1,0 +1,1422 @@
+{
+ "dossier_version": 5,
+ "cube_fingerprint": {
+  "card_count": 300,
+  "fetched_at": "2026-05-18T23:02:42.064830+00:00"
+ },
+ "census_caveat": "Every census entry is a regex probe over oracle text. A probe that matched 0 cards proves nothing: no-match is not the same as does-not-exist. Only positive matches, with the oracle text they matched, are facts. Never treat a 0-match line as a hard constraint on what a deck can do — verify against the actual oracle text in your pool before relying on it.",
+ "environment": {
+  "total_cards": 300,
+  "nonland_cards": 277,
+  "color_distribution": {
+   "B": 46,
+   "W": 40,
+   "G": 42,
+   "C": 23,
+   "R": 45,
+   "Multi": 39,
+   "U": 42
+  },
+  "top_tags": {
+   "Payload/Payoff": 103,
+   "Interaction/Disruption": 82,
+   "Tribal/Kindred": 77,
+   "Infrastructure/Consistency": 75,
+   "Graveyard": 74,
+   "Standalone Threat": 73,
+   "Engine/Outlet": 70,
+   "Aristocrats/Sacrifice": 61,
+   "Tokens": 49,
+   "Token Generation": 48,
+   "Enabler/Fodder": 45,
+   "Self-Mill": 35
+  },
+  "multicolor_reward_signals": {
+   "domain": {
+    "count": 0,
+    "density": 0.0
+   },
+   "kicker": {
+    "count": 0,
+    "density": 0.0
+   },
+   "converge": {
+    "count": 0,
+    "density": 0.0
+   },
+   "sunburst": {
+    "count": 0,
+    "density": 0.0
+   },
+   "vivid": {
+    "count": 0,
+    "density": 0.0
+   }
+  }
+ },
+ "mana_infrastructure": {
+  "basics_in_pool": false,
+  "total_lands": 23,
+  "lands_by_identity": {
+   "BG": [
+    {
+     "name": "Haunted Mire",
+     "rarity": "common",
+     "type_line": "Land — Swamp Forest",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "B",
+      "G"
+     ]
+    },
+    {
+     "name": "Deathcap Glade",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": true,
+     "conditionally_tapped": true,
+     "self_bounce": false,
+     "produces": [
+      "B",
+      "G"
+     ]
+    }
+   ],
+   "BR": [
+    {
+     "name": "Geothermal Bog",
+     "rarity": "common",
+     "type_line": "Land — Swamp Mountain",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "B",
+      "R"
+     ]
+    },
+    {
+     "name": "Haunted Ridge",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": true,
+     "conditionally_tapped": true,
+     "self_bounce": false,
+     "produces": [
+      "B",
+      "R"
+     ]
+    }
+   ],
+   "C": [
+    {
+     "name": "Evolving Wilds",
+     "rarity": "common",
+     "type_line": "Land",
+     "enters_tapped": false,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": []
+    },
+    {
+     "name": "Hanweir Battlements",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": false,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "C"
+     ]
+    },
+    {
+     "name": "Westvale Abbey // Ormendahl, Profane Prince",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": false,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "C"
+     ]
+    }
+   ],
+   "RG": [
+    {
+     "name": "Rockfall Vale",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": true,
+     "conditionally_tapped": true,
+     "self_bounce": false,
+     "produces": [
+      "R",
+      "G"
+     ]
+    },
+    {
+     "name": "Wooded Ridgeline",
+     "rarity": "common",
+     "type_line": "Land — Mountain Forest",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "R",
+      "G"
+     ]
+    }
+   ],
+   "UB": [
+    {
+     "name": "Contaminated Aquifer",
+     "rarity": "common",
+     "type_line": "Land — Island Swamp",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "U",
+      "B"
+     ]
+    },
+    {
+     "name": "Shipwreck Marsh",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": true,
+     "conditionally_tapped": true,
+     "self_bounce": false,
+     "produces": [
+      "U",
+      "B"
+     ]
+    }
+   ],
+   "UG": [
+    {
+     "name": "Dreamroot Cascade",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": true,
+     "conditionally_tapped": true,
+     "self_bounce": false,
+     "produces": [
+      "U",
+      "G"
+     ]
+    },
+    {
+     "name": "Tangled Islet",
+     "rarity": "common",
+     "type_line": "Land — Forest Island",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "U",
+      "G"
+     ]
+    }
+   ],
+   "UR": [
+    {
+     "name": "Stormcarved Coast",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": true,
+     "conditionally_tapped": true,
+     "self_bounce": false,
+     "produces": [
+      "U",
+      "R"
+     ]
+    },
+    {
+     "name": "Molten Tributary",
+     "rarity": "common",
+     "type_line": "Land — Island Mountain",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "U",
+      "R"
+     ]
+    }
+   ],
+   "WB": [
+    {
+     "name": "Sunlit Marsh",
+     "rarity": "common",
+     "type_line": "Land — Plains Swamp",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "B"
+     ]
+    },
+    {
+     "name": "Shattered Sanctum",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": true,
+     "conditionally_tapped": true,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "B"
+     ]
+    }
+   ],
+   "WG": [
+    {
+     "name": "Radiant Grove",
+     "rarity": "common",
+     "type_line": "Land — Forest Plains",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "G"
+     ]
+    },
+    {
+     "name": "Overgrown Farmland",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": true,
+     "conditionally_tapped": true,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "G"
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "name": "Sundown Pass",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": true,
+     "conditionally_tapped": true,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "R"
+     ]
+    },
+    {
+     "name": "Sacred Peaks",
+     "rarity": "common",
+     "type_line": "Land — Mountain Plains",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "R"
+     ]
+    }
+   ],
+   "WU": [
+    {
+     "name": "Idyllic Beachfront",
+     "rarity": "common",
+     "type_line": "Land — Plains Island",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "U"
+     ]
+    },
+    {
+     "name": "Deserted Beach",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": true,
+     "conditionally_tapped": true,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "U"
+     ]
+    }
+   ]
+  },
+  "duals_by_pair": {
+   "WU": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1,
+     "rare": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Deserted Beach",
+     "Idyllic Beachfront"
+    ],
+    "lair_names": []
+   },
+   "WB": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1,
+     "rare": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Shattered Sanctum",
+     "Sunlit Marsh"
+    ],
+    "lair_names": []
+   },
+   "WR": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "rare": 1,
+     "common": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Sacred Peaks",
+     "Sundown Pass"
+    ],
+    "lair_names": []
+   },
+   "WG": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1,
+     "rare": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Overgrown Farmland",
+     "Radiant Grove"
+    ],
+    "lair_names": []
+   },
+   "UB": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1,
+     "rare": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Contaminated Aquifer",
+     "Shipwreck Marsh"
+    ],
+    "lair_names": []
+   },
+   "UR": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "rare": 1,
+     "common": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Molten Tributary",
+     "Stormcarved Coast"
+    ],
+    "lair_names": []
+   },
+   "UG": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "rare": 1,
+     "common": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Dreamroot Cascade",
+     "Tangled Islet"
+    ],
+    "lair_names": []
+   },
+   "BR": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1,
+     "rare": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Geothermal Bog",
+     "Haunted Ridge"
+    ],
+    "lair_names": []
+   },
+   "BG": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1,
+     "rare": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Deathcap Glade",
+     "Haunted Mire"
+    ],
+    "lair_names": []
+   },
+   "RG": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "rare": 1,
+     "common": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Rockfall Vale",
+     "Wooded Ridgeline"
+    ],
+    "lair_names": []
+   }
+  },
+  "three_plus_color_lands": []
+ },
+ "structural_census": {
+  "rituals": {
+   "count": 0,
+   "cards": []
+  },
+  "mana_producers": {
+   "count": 5,
+   "cards": [
+    {
+     "name": "Conduit of Storms // Conduit of Emrakul",
+     "cmc": 3.0,
+     "type_line": "Creature — Werewolf Horror",
+     "mana_added": 2,
+     "repeatable": false,
+     "net_mana": -1.0
+    },
+    {
+     "name": "Imprisoned in the Moon",
+     "cmc": 3.0,
+     "type_line": "Enchantment — Aura",
+     "mana_added": 1,
+     "repeatable": true,
+     "net_mana": -2.0
+    },
+    {
+     "name": "Scorned Villager // Moonscarred Werewolf",
+     "cmc": 2.0,
+     "type_line": "Creature — Human Werewolf",
+     "mana_added": 2,
+     "repeatable": true,
+     "net_mana": 0.0
+    },
+    {
+     "name": "Deranged Assistant",
+     "cmc": 2.0,
+     "type_line": "Creature — Human Wizard",
+     "mana_added": 1,
+     "repeatable": true,
+     "net_mana": -1.0
+    },
+    {
+     "name": "Chandra, Dressed to Kill",
+     "cmc": 3.0,
+     "type_line": "Legendary Planeswalker — Chandra",
+     "mana_added": 1,
+     "repeatable": false,
+     "net_mana": -2.0
+    }
+   ]
+  },
+  "cost_reducers": {
+   "count": 2,
+   "cards": [
+    {
+     "name": "Heartless Summoning",
+     "cmc": 2.0,
+     "clause": "cost {2} less to cast",
+     "restricted": true
+    },
+    {
+     "name": "Duskwatch Recruiter // Krallenhorde Howler",
+     "cmc": 2.0,
+     "clause": "cost {1} less to cast",
+     "restricted": true
+    }
+   ]
+  },
+  "sacrifice_outlets": {
+   "count": 10,
+   "free_count": 6,
+   "cards": [
+    {
+     "name": "Biolume Egg // Biolume Serpent",
+     "cost": "Sacrifice two Islands",
+     "free": true
+    },
+    {
+     "name": "Falkenrath Torturer",
+     "cost": "Sacrifice a creature",
+     "free": true
+    },
+    {
+     "name": "Bound by Moonsilver",
+     "cost": "Sacrifice another permanent",
+     "free": true
+    },
+    {
+     "name": "Tamiyo's Journal",
+     "cost": "{T}, Sacrifice three Clues",
+     "free": true
+    },
+    {
+     "name": "Lunarch Mantle",
+     "cost": "Enchanted creature gets +2/+2 and has \"{1}, Sacrifice a permanent",
+     "free": false
+    },
+    {
+     "name": "Ecstatic Awakener // Awoken Demon",
+     "cost": "{2}{B}, Sacrifice another creature",
+     "free": false
+    },
+    {
+     "name": "Grimgrin, Corpse-Born",
+     "cost": "Sacrifice another creature",
+     "free": true
+    },
+    {
+     "name": "Restless Bloodseeker // Bloodsoaked Reveler",
+     "cost": "Sacrifice two Blood tokens",
+     "free": true
+    },
+    {
+     "name": "Fleshtaker",
+     "cost": "{1}, Sacrifice another creature",
+     "free": false
+    },
+    {
+     "name": "Indulgent Aristocrat",
+     "cost": "{2}, Sacrifice a creature",
+     "free": false
+    }
+   ]
+  },
+  "tutors": [
+   "Ambitious Farmhand // Seasoned Cathar",
+   "Eldritch Evolution",
+   "Garruk Relentless // Garruk, the Veil-Cursed",
+   "Tamiyo's Journal",
+   "Traveler's Amulet",
+   "Traverse the Ulvenwald",
+   "Wild-Field Scarecrow",
+   "Wretched Throng"
+  ],
+  "sweepers": [
+   "Archangel Avacyn // Avacyn, the Purifier",
+   "Savage Alliance",
+   "Smoldering Werewolf // Erupting Dreadwolf",
+   "Vanquish the Horde"
+  ],
+  "haste_granters": [
+   "Arlinn Kord // Arlinn, Embraced by the Moon",
+   "Lightning Mauler",
+   "Mass Hysteria",
+   "Through the Breach",
+   "Zealous Conscripts"
+  ],
+  "graveyard_hate": [
+   "Invasion of Innistrad // Deluge of the Dead",
+   "Soul-Guide Gryff"
+  ]
+ },
+ "tribal_rosters": {
+  "Human": {
+   "total": 53,
+   "by_color": {
+    "B": [
+     "Desperate Farmer // Depraved Harvester",
+     "Ecstatic Awakener // Awoken Demon",
+     "Midnight Scavengers",
+     "Morbid Opportunist",
+     "Skirsdag High Priest"
+    ],
+    "G": [
+     "Dawnhart Disciple",
+     "Duskwatch Recruiter // Krallenhorde Howler",
+     "Eccentric Farmer",
+     "Groundskeeper",
+     "Hamlet Captain",
+     "Hermit Druid",
+     "Hinterland Logger // Timber Shredder",
+     "Intrepid Provisioner",
+     "Mayor of Avabruck // Howlpack Alpha",
+     "Scorned Villager // Moonscarred Werewolf",
+     "Somberwald Sage",
+     "Tireless Tracker",
+     "Villagers of Estwald // Howlpack of Estwald"
+    ],
+    "R": [
+     "Geier Reach Bandit // Vildin-Pack Alpha",
+     "Hanweir Garrison",
+     "Hanweir Watchkeep // Bane of Hanweir",
+     "Kruin Outlaw // Terror of Kruin Pass",
+     "Lightning Mauler",
+     "Thermo-Alchemist",
+     "Village Messenger // Moonrise Intruder",
+     "Zealous Conscripts"
+    ],
+    "RG": [
+     "Huntmaster of the Fells // Ravager of the Fells"
+    ],
+    "U": [
+     "Aberrant Researcher // Perfected Form",
+     "Covetous Castaway // Ghostly Castigator",
+     "Delver of Secrets // Insectile Aberration",
+     "Deranged Assistant",
+     "Grizzled Angler // Grisly Anglerfish",
+     "Laboratory Maniac",
+     "Reckless Scholar"
+    ],
+    "UB": [
+     "Gisa and Geralf"
+    ],
+    "W": [
+     "Ambitious Farmhand // Seasoned Cathar",
+     "Avacynian Priest",
+     "Cathar Commando",
+     "Crusader of Odric",
+     "Dauntless Cathar",
+     "Fiend Hunter",
+     "Hopeful Initiate",
+     "Inspiring Captain",
+     "Lunarch Veteran // Luminous Phantom",
+     "Mausoleum Guard",
+     "Mentor of the Meek",
+     "Odric, Lunarch Marshal",
+     "Slayer of the Wicked",
+     "Thalia, Heretic Cathar",
+     "Thraben Inspector"
+    ],
+    "WB": [
+     "Fleshtaker"
+    ],
+    "WG": [
+     "Torens, Fist of the Angels"
+    ],
+    "WR": [
+     "Town Gossipmonger // Incited Rabble"
+    ]
+   }
+  },
+  "Vampire": {
+   "total": 23,
+   "by_color": {
+    "B": [
+     "Asylum Visitor",
+     "Blood Artist",
+     "Bloodline Keeper // Lord of Lineage",
+     "Captivating Vampire",
+     "Falkenrath Torturer",
+     "Gluttonous Guest",
+     "Indulgent Aristocrat",
+     "Olivia's Dragoon",
+     "Restless Bloodseeker // Bloodsoaked Reveler",
+     "Voldaren Bloodcaster // Bloodbat Summoner"
+    ],
+    "BR": [
+     "Bloodhall Priest",
+     "Bloodtithe Harvester",
+     "Olivia Voldaren"
+    ],
+    "R": [
+     "Blood Petal Celebrant",
+     "Bloodmad Vampire",
+     "Falkenrath Gorger",
+     "Furyblade Vampire",
+     "Stromkirk Occultist",
+     "Voldaren Ambusher",
+     "Voldaren Duelist",
+     "Voldaren Epicure"
+    ],
+    "WBR": [
+     "Edgar Markov"
+    ],
+    "WR": [
+     "Markov Waltzer"
+    ]
+   }
+  },
+  "Horror": {
+   "total": 18,
+   "by_color": {
+    "B": [
+     "Chittering Host"
+    ],
+    "BG": [
+     "The Gitrog Monster"
+    ],
+    "G": [
+     "Moldgraf Millipede",
+     "Shrill Howler // Howling Chorus"
+    ],
+    "R": [
+     "Bedlam Reveler",
+     "Conduit of Storms // Conduit of Emrakul",
+     "Smoldering Werewolf // Erupting Dreadwolf",
+     "Stromkirk Occultist"
+    ],
+    "U": [
+     "Docent of Perfection // Final Iteration",
+     "Hullbreaker Horror",
+     "Makeshift Mauler",
+     "Overcharged Amalgam",
+     "Stitched Mangler",
+     "Thing in the Ice // Awoken Horror",
+     "Wretched Throng"
+    ],
+    "UR": [
+     "Wandering Mind"
+    ],
+    "W": [
+     "Bruna, the Fading Light",
+     "Gisela, the Broken Blade"
+    ]
+   }
+  },
+  "Spirit": {
+   "total": 17,
+   "by_color": {
+    "B": [
+     "Morkrut Banshee"
+    ],
+    "G": [
+     "Pack Guardian"
+    ],
+    "U": [
+     "Battleground Geist",
+     "Deadeye Navigator",
+     "Lantern Bearer // Lanterns' Lift",
+     "Mausoleum Wanderer",
+     "Nebelgast Herald",
+     "Tower Geist"
+    ],
+    "W": [
+     "Apothecary Geist",
+     "Drogskol Shieldmate",
+     "Guardian of Pilgrims",
+     "Niblis of the Urn",
+     "Soul-Guide Gryff",
+     "Twinblade Geist // Twinblade Invocation",
+     "Voice of the Blessed"
+    ],
+    "WU": [
+     "Spectral Shepherd",
+     "Spell Queller"
+    ]
+   }
+  },
+  "Zombie": {
+   "total": 15,
+   "by_color": {
+    "B": [
+     "Archghoul of Thraben",
+     "Butcher Ghoul",
+     "Gravecrawler",
+     "Haunted Dead",
+     "Siege Zombie"
+    ],
+    "BG": [
+     "Grizzly Ghoul"
+    ],
+    "G": [
+     "Ghoultree"
+    ],
+    "U": [
+     "Cobbled Lancer",
+     "Makeshift Mauler",
+     "Overcharged Amalgam",
+     "Stitched Mangler",
+     "Wretched Throng"
+    ],
+    "UB": [
+     "Bladestitched Skaab",
+     "Drunau Corpse Trawler",
+     "Grimgrin, Corpse-Born"
+    ]
+   }
+  },
+  "Werewolf": {
+   "total": 13,
+   "by_color": {
+    "G": [
+     "Duskwatch Recruiter // Krallenhorde Howler",
+     "Hinterland Logger // Timber Shredder",
+     "Mayor of Avabruck // Howlpack Alpha",
+     "Scorned Villager // Moonscarred Werewolf",
+     "Shrill Howler // Howling Chorus",
+     "Villagers of Estwald // Howlpack of Estwald"
+    ],
+    "R": [
+     "Conduit of Storms // Conduit of Emrakul",
+     "Geier Reach Bandit // Vildin-Pack Alpha",
+     "Hanweir Watchkeep // Bane of Hanweir",
+     "Kruin Outlaw // Terror of Kruin Pass",
+     "Smoldering Werewolf // Erupting Dreadwolf",
+     "Village Messenger // Moonrise Intruder"
+    ],
+    "RG": [
+     "Huntmaster of the Fells // Ravager of the Fells"
+    ]
+   }
+  },
+  "Soldier": {
+   "total": 11,
+   "by_color": {
+    "R": [
+     "Hanweir Garrison"
+    ],
+    "UB": [
+     "Bladestitched Skaab"
+    ],
+    "W": [
+     "Cathar Commando",
+     "Crusader of Odric",
+     "Dauntless Cathar",
+     "Drogskol Shieldmate",
+     "Mentor of the Meek",
+     "Odric, Lunarch Marshal",
+     "Slayer of the Wicked",
+     "Thalia, Heretic Cathar",
+     "Thraben Inspector"
+    ]
+   }
+  },
+  "Eldrazi": {
+   "total": 10,
+   "by_color": {
+    "B": [
+     "Abundant Maw",
+     "Chittering Host",
+     "Distended Mindbender"
+    ],
+    "C": [
+     "Emrakul, the Promised End"
+    ],
+    "G": [
+     "Decimator of the Provinces",
+     "It of the Horrid Swarm"
+    ],
+    "R": [
+     "Hanweir, the Writhing Township"
+    ],
+    "U": [
+     "Elder Deep-Fiend",
+     "Wretched Gryff"
+    ],
+    "W": [
+     "Brisela, Voice of Nightmares"
+    ]
+   }
+  },
+  "Cleric": {
+   "total": 9,
+   "by_color": {
+    "B": [
+     "Archghoul of Thraben",
+     "Skirsdag High Priest"
+    ],
+    "BR": [
+     "Bloodhall Priest"
+    ],
+    "W": [
+     "Avacynian Priest",
+     "Fiend Hunter",
+     "Guardian of Pilgrims",
+     "Lunarch Veteran // Luminous Phantom",
+     "Voice of the Blessed"
+    ],
+    "WG": [
+     "Torens, Fist of the Angels"
+    ]
+   }
+  },
+  "Wizard": {
+   "total": 8,
+   "by_color": {
+    "B": [
+     "Asylum Visitor",
+     "Ecstatic Awakener // Awoken Demon",
+     "Voldaren Bloodcaster // Bloodbat Summoner"
+    ],
+    "U": [
+     "Delver of Secrets // Insectile Aberration",
+     "Deranged Assistant",
+     "Laboratory Maniac",
+     "Reckless Scholar"
+    ],
+    "UB": [
+     "Gisa and Geralf"
+    ]
+   }
+  },
+  "Angel": {
+   "total": 8,
+   "by_color": {
+    "W": [
+     "Brisela, Voice of Nightmares",
+     "Bruna, the Fading Light",
+     "Gisela, the Broken Blade",
+     "Restoration Angel",
+     "Subjugator Angel"
+    ],
+    "WB": [
+     "Liesa, Forgotten Archangel"
+    ],
+    "WG": [
+     "Sigarda, Host of Herons"
+    ],
+    "WR": [
+     "Archangel Avacyn // Avacyn, the Purifier"
+    ]
+   }
+  },
+  "Warrior": {
+   "total": 7,
+   "by_color": {
+    "G": [
+     "Duskwatch Recruiter // Krallenhorde Howler",
+     "Hamlet Captain"
+    ],
+    "R": [
+     "Hanweir Watchkeep // Bane of Hanweir",
+     "Voldaren Duelist",
+     "Zealous Conscripts"
+    ],
+    "UB": [
+     "Grimgrin, Corpse-Born"
+    ],
+    "W": [
+     "Twinblade Geist // Twinblade Invocation"
+    ]
+   }
+  },
+  "Wolf": {
+   "total": 6,
+   "by_color": {
+    "C": [
+     "Lupine Prototype"
+    ],
+    "G": [
+     "Pack Guardian",
+     "Young Wolf"
+    ],
+    "R": [
+     "Hungry Ridgewolf",
+     "Runebound Wolf"
+    ],
+    "RG": [
+     "Ulrich's Kindred"
+    ]
+   }
+  },
+  "Berserker": {
+   "total": 5,
+   "by_color": {
+    "B": [
+     "Olivia's Dragoon"
+    ],
+    "R": [
+     "Bloodmad Vampire",
+     "Falkenrath Gorger",
+     "Furyblade Vampire",
+     "Lightning Mauler"
+    ]
+   }
+  },
+  "Insect": {
+   "total": 5,
+   "by_color": {
+    "B": [
+     "Distended Mindbender"
+    ],
+    "G": [
+     "It of the Horrid Swarm",
+     "Moldgraf Millipede"
+    ],
+    "U": [
+     "Aberrant Researcher // Perfected Form",
+     "Docent of Perfection // Final Iteration"
+    ]
+   }
+  },
+  "Rogue": {
+   "total": 4,
+   "by_color": {
+    "B": [
+     "Midnight Scavengers",
+     "Morbid Opportunist"
+    ],
+    "R": [
+     "Geier Reach Bandit // Vildin-Pack Alpha",
+     "Kruin Outlaw // Terror of Kruin Pass"
+    ]
+   }
+  }
+ },
+ "threat_profile": {
+  "graveyard_interaction": {
+   "count": 75,
+   "density": 0.2708,
+   "by_color": {
+    "B": 12,
+    "BG": 4,
+    "BR": 1,
+    "C": 4,
+    "G": 10,
+    "R": 11,
+    "RG": 1,
+    "U": 16,
+    "UB": 2,
+    "UG": 1,
+    "UR": 2,
+    "W": 6,
+    "WB": 1,
+    "WG": 2,
+    "WR": 2
+   },
+   "names": [
+    "Aberrant Researcher // Perfected Form",
+    "Alchemist's Greeting",
+    "Ancestral Anger",
+    "Angelfire Ignition",
+    "Archghoul of Thraben",
+    "Asylum Visitor",
+    "Bedlam Reveler",
+    "Bloodhall Priest",
+    "Bloodmad Vampire",
+    "Bramble Wurm",
+    "Bruna, the Fading Light",
+    "Burning Vengeance",
+    "Cackling Counterpart",
+    "Cobbled Lancer",
+    "Covetous Castaway // Ghostly Castigator",
+    "Crawl from the Cellar",
+    "Dauntless Cathar",
+    "Deadly Allure",
+    "Deranged Assistant",
+    "Eccentric Farmer",
+    "Edgar's Awakening",
+    "Emrakul, the Promised End",
+    "Epitaph Golem",
+    "Faithless Looting",
+    "Falkenrath Gorger",
+    "Fiery Temper",
+    "Forbidden Alchemy",
+    "Galvanic Iteration",
+    "Garruk Relentless // Garruk, the Veil-Cursed",
+    "Ghoultree",
+    "Gisa and Geralf",
+    "Gisa's Bidding",
+    "Grapple with the Past",
+    "Gravecrawler",
+    "Grizzled Angler // Grisly Anglerfish",
+    "Groundskeeper",
+    "Gryff's Boon",
+    "Haunted Dead",
+    "Helvault",
+    "Hermit Druid",
+    "Invasion of Innistrad // Deluge of the Dead",
+    "Join the Dance",
+    "Lantern Bearer // Lanterns' Lift",
+    "Lingering Souls",
+    "Lunarch Veteran // Luminous Phantom",
+    "Makeshift Mauler",
+    "Memory Deluge",
+    "Midnight Scavengers",
+    "Moldgraf Millipede",
+    "Murderous Compulsion",
+    "Mystic Retrieval",
+    "Rally the Peasants",
+    "Rise from the Tides",
+    "Sanitarium Skeleton",
+    "Seize the Storm",
+    "Sever the Bloodline",
+    "Silent Departure",
+    "Soul Separator",
+    "Soul-Guide Gryff",
+    "Soulcipher Board // Cipherbound Spirit",
+    "Spider Spawning",
+    "Splinterfright",
+    "Spontaneous Mutation",
+    "Stensia Masquerade",
+    "Stromkirk Occultist",
+    "Syncopate",
+    "The Gitrog Monster",
+    "Think Twice",
+    "Tower Geist",
+    "Travel Preparations",
+    "Traverse the Ulvenwald",
+    "Twinblade Geist // Twinblade Invocation",
+    "Vilespawn Spider",
+    "Wild Hunger",
+    "Wrenn and Seven"
+   ]
+  },
+  "artifacts": {
+   "count": 24,
+   "density": 0.0866,
+   "by_color": {
+    "C": 22,
+    "R": 1,
+    "U": 1
+   },
+   "names": [
+    "Angel's Tomb",
+    "Blazing Torch",
+    "Boarded Window",
+    "Butcher's Cleaver",
+    "Chalice of Life // Chalice of Death",
+    "Cobbled Wings",
+    "Conjurer's Closet",
+    "Cryptolith Fragment // Aurora of Emrakul",
+    "Demonmail Hauberk",
+    "Epitaph Golem",
+    "Galvanic Juggernaut",
+    "Geistcatcher's Rig",
+    "Harvest Hand // Scrounged Scythe",
+    "Helvault",
+    "Honeymoon Hearse",
+    "Lupine Prototype",
+    "Metallic Mimic",
+    "Neglected Heirloom // Ashmouth Blade",
+    "Soul Separator",
+    "Soulcipher Board // Cipherbound Spirit",
+    "Stitcher's Graft",
+    "Tamiyo's Journal",
+    "Traveler's Amulet",
+    "Wild-Field Scarecrow"
+   ]
+  },
+  "enchantments": {
+   "count": 25,
+   "density": 0.0903,
+   "by_color": {
+    "B": 4,
+    "G": 5,
+    "R": 4,
+    "U": 4,
+    "W": 8
+   },
+   "names": [
+    "Abundant Growth",
+    "Blood Mist",
+    "Bound by Moonsilver",
+    "Burning Vengeance",
+    "Cathar's Call",
+    "Cathars' Crusade",
+    "Cryptolith Rite",
+    "Faith Unbroken",
+    "Ghoulish Procession",
+    "Gryff's Boon",
+    "Heartless Summoning",
+    "Howlpack Resurgence",
+    "Imprisoned in the Moon",
+    "Intangible Virtue",
+    "Lunarch Mantle",
+    "Mass Hysteria",
+    "Necroduality",
+    "Rooftop Storm",
+    "Spontaneous Mutation",
+    "Stensia Masquerade",
+    "The Meathook Massacre",
+    "Triskaidekaphobia",
+    "Ulvenwald Mysteries",
+    "Unnatural Growth",
+    "Wedding Announcement // Wedding Festivity"
+   ]
+  },
+  "sweepers": {
+   "count": 4,
+   "density": 0.0144,
+   "by_color": {
+    "R": 2,
+    "W": 1,
+    "WR": 1
+   },
+   "names": [
+    "Archangel Avacyn // Avacyn, the Purifier",
+    "Savage Alliance",
+    "Smoldering Werewolf // Erupting Dreadwolf",
+    "Vanquish the Horde"
+   ]
+  },
+  "lifegain": {
+   "count": 15,
+   "density": 0.0542,
+   "by_color": {
+    "B": 8,
+    "C": 1,
+    "G": 1,
+    "RG": 1,
+    "W": 3,
+    "WB": 1
+   },
+   "names": [
+    "Abundant Maw",
+    "Apothecary Geist",
+    "Blood Artist",
+    "Bramble Wurm",
+    "Chalice of Life // Chalice of Death",
+    "Collective Brutality",
+    "Fleshtaker",
+    "Gluttonous Guest",
+    "Huntmaster of the Fells // Ravager of the Fells",
+    "Lunarch Veteran // Luminous Phantom",
+    "Restless Bloodseeker // Bloodsoaked Reveler",
+    "Sorin, Imperious Bloodlord",
+    "The Meathook Massacre",
+    "Triskaidekaphobia",
+    "Voice of the Blessed"
+   ]
+  },
+  "evasion": {
+   "count": 58,
+   "density": 0.2094,
+   "by_color": {
+    "B": 9,
+    "BR": 1,
+    "C": 8,
+    "R": 3,
+    "U": 14,
+    "UR": 1,
+    "W": 15,
+    "WB": 2,
+    "WG": 1,
+    "WR": 2,
+    "WU": 2
+   },
+   "names": [
+    "Aberrant Researcher // Perfected Form",
+    "Angel's Tomb",
+    "Apothecary Geist",
+    "Archangel Avacyn // Avacyn, the Purifier",
+    "Battleground Geist",
+    "Biolume Egg // Biolume Serpent",
+    "Blazing Torch",
+    "Bloodline Keeper // Lord of Lineage",
+    "Brisela, Voice of Nightmares",
+    "Bruna, the Fading Light",
+    "Chittering Host",
+    "Cobbled Wings",
+    "Covetous Castaway // Ghostly Castigator",
+    "Cryptolith Fragment // Aurora of Emrakul",
+    "Dauntless Cathar",
+    "Delver of Secrets // Insectile Aberration",
+    "Demonic Taskmaster",
+    "Docent of Perfection // Final Iteration",
+    "Emrakul, the Promised End",
+    "Falkenrath Torturer",
+    "Geistcatcher's Rig",
+    "Gisela, the Broken Blade",
+    "Griselbrand",
+    "Gryff's Boon",
+    "Harvest Hand // Scrounged Scythe",
+    "Haunted Dead",
+    "Kruin Outlaw // Terror of Kruin Pass",
+    "Lantern Bearer // Lanterns' Lift",
+    "Liesa, Forgotten Archangel",
+    "Lingering Souls",
+    "Lunarch Mantle",
+    "Lunarch Veteran // Luminous Phantom",
+    "Markov Waltzer",
+    "Mausoleum Guard",
+    "Mausoleum Wanderer",
+    "Mirrorwing Dragon",
+    "Mist Raven",
+    "Nebelgast Herald",
+    "Niblis of the Urn",
+    "Odric, Lunarch Marshal",
+    "Olivia Voldaren",
+    "Olivia's Dragoon",
+    "Overcharged Amalgam",
+    "Restoration Angel",
+    "Sigarda, Host of Herons",
+    "Skirsdag High Priest",
+    "Soul Separator",
+    "Soul-Guide Gryff",
+    "Soulcipher Board // Cipherbound Spirit",
+    "Spectral Shepherd",
+    "Spell Queller",
+    "Subjugator Angel",
+    "Tower Geist",
+    "Village Messenger // Moonrise Intruder",
+    "Voice of the Blessed",
+    "Voldaren Bloodcaster // Bloodbat Summoner",
+    "Wandering Mind",
+    "Wretched Gryff"
+   ]
+  },
+  "artifact_answers": {
+   "count": 4,
+   "density": 0.0144,
+   "by_color": {
+    "R": 1,
+    "W": 3
+   },
+   "names": [
+    "Abrade",
+    "Angelic Purge",
+    "Cathar Commando",
+    "Hopeful Initiate"
+   ]
+  },
+  "enchantment_answers": {
+   "count": 2,
+   "density": 0.0072,
+   "by_color": {
+    "W": 2
+   },
+   "names": [
+    "Cathar Commando",
+    "Hopeful Initiate"
+   ]
+  }
+ },
+ "pool_limits": [
+  "Ritual probe (a nonland 'Add ...' clause producing more mana than the card's cost, non-repeatable) matched 0 cards. No-match is not does-not-exist: this probe cannot see untap-lands effects, mana multipliers, cost reducers, or free spells, which can accelerate mana just as well. Check the pool's oracle text before treating acceleration as unavailable.",
+  "The cube list contains no basic lands. Basics are format-supplied and exempt from copy limits; every nonbasic land in the pool is listed under lands_by_identity.",
+  "Artifact-removal probe ('destroy/exile target artifact...') matched 0 mono-colour cards in: B, G, U. No-match is not does-not-exist: sacrifice effects, bounce, theft, or -X/-X are invisible to this probe. Verify before concluding those colours cannot answer artifacts.",
+  "Enchantment-removal probe ('destroy/exile target enchantment...') matched 0 mono-colour cards in: B, G, R, U. No-match is not does-not-exist: sacrifice effects, bounce, theft, or -X/-X are invisible to this probe. Verify before concluding those colours cannot answer enchantments."
+ ],
+ "chains_caveat": "interaction_chains is an authored, known-incomplete list. Absence of a chain is not absence of an engine — the cube may contain engines no chain records. Derive card compositions from oracle text first; use chains as recorded evidence of engines that exist, never as the boundary of what exists.",
+ "interaction_chains": [],
+ "chains_seeded_at": null
+}

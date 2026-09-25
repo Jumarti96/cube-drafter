@@ -1,0 +1,593 @@
+{
+  "deck_name": "wb-wingmantle-drain",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T14:00:57Z",
+  "format": "40-card",
+  "strategy": "control — Wingmantle Chaplain defenders",
+  "colors": "WB",
+  "identity": "A WB Defenders control deck that treats the defender count itself as the resource being scaled. Eleven defender bodies across six cards hold the ground while two payoffs convert that count into a win: Wingmantle Chaplain, which has Defender and therefore counts itself, turning every subsequent defender ETB into a 1/1 flying Bird; and Blight Pile, whose {2}{B},{T} drains each opponent for the number of defenders controlled, requiring no combat at all. Eight interaction spells buy the turns needed to reach that count, Choking Miasma sweeps a board that all eleven defenders survive, and Shield-Wall Sentinel makes the two-of payoffs findable. The deck wins in the air or through a stalled board, and does not care which.",
+  "restrictions": {
+    "commons_uncommons_max_2": "PASS - no card exceeds 2 copies counting mainboard and sideboard jointly; verified by cube_search.get_max_copies against per_rarity {common:2, uncommon:2, rare:1, mythic:1}.",
+    "rares_mythics_max_1_copy": "PASS - Sheoldred x1, Serra Paragon x1, Serra Redeemer x1, Caves of Koilos x1.",
+    "rares_mythics_max_5_total_MB_plus_SB": "PASS - 4 total (Sheoldred mythic, Serra Paragon mythic, Serra Redeemer rare, Caves of Koilos rare). Sideboard contains 0 rares or mythics. One slot unspent.",
+    "all_cards_from_cube_pool": "PASS - every name matched by exact string against the working pool cache.",
+    "basics_format_supplied": "Plains x7 and Swamp x7 are format-supplied; the cube list contains no basics.",
+    "colour_usability": "PASS - every nonland card returns a non-None effective_cost.best_mode against core_colors [W,B] with an empty splash. Three cards print off the core axis and are legal by mode, not identity: Runic Shot ({U,W}, unpayable {U} kicker, cast for {W}), Choking Miasma ({B,G}, unpayable {G} kicker, cast for {1}{B}{B}), and Sheoldred's Restoration ({B,W}, both modes payable in core)."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.78,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.373,
+      "raw_target": 17.373,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.78,
+    "pip_demand": {
+      "W": 15,
+      "B": 13
+    },
+    "land_color_production": {
+      "W": 10,
+      "B": 10
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 46.4,
+        "prod_pct": 58.8,
+        "gap": -12.4,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 53.6,
+        "prod_pct": 58.8,
+        "gap": -5.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Clockwork Drawbridge",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Enabler - defender count plus repeatable tapper",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Wall",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Defender\n{2}{W}, {T}: Tap target creature.",
+      "power": "0",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "13"
+    },
+    {
+      "name": "Walking Bulwark",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Payoff/Engine - converts defenders into attackers",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\n{2}: Until end of turn, target creature with defender gains haste, can attack as though it didn't have defender, and assigns combat damage equal to its toughness rather than its power. Activate only as a sorcery.",
+      "power": "0",
+      "toughness": "3",
+      "set": "tdc",
+      "collector_number": "334"
+    },
+    {
+      "name": "Cut Down",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Interaction - cheap instant removal",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "89"
+    },
+    {
+      "name": "Blight Pile",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Payoff - non-combat inevitability drain",
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\n{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.",
+      "power": "3",
+      "toughness": "3",
+      "set": "tdc",
+      "collector_number": "174"
+    },
+    {
+      "name": "Elas il-Kor, Sadistic Pilgrim",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Engine - converts creature ETBs and deaths into life and drain",
+      "cmc": 2,
+      "type_line": "Legendary Creature — Phyrexian Kor Cleric",
+      "mana_cost": "{W}{B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Deathtouch\nWhenever another creature you control enters, you gain 1 life.\nWhenever another creature you control dies, each opponent loses 1 life.",
+      "power": "2",
+      "toughness": "2",
+      "set": "dmu",
+      "collector_number": "198"
+    },
+    {
+      "name": "Destroy Evil",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Interaction - large-creature or enchantment removal",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "17"
+    },
+    {
+      "name": "Gibbering Barricade",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Enabler/Engine - defender count plus repeatable draw outlet",
+      "cmc": 3,
+      "type_line": "Creature — Nightmare Wall",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Defender\n{2}{B}, Sacrifice a creature: You gain 1 life and draw a card.",
+      "power": "2",
+      "toughness": "4",
+      "set": "dmu",
+      "collector_number": "95"
+    },
+    {
+      "name": "Citizen's Arrest",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Interaction - exile creature or planeswalker",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "11"
+    },
+    {
+      "name": "Choking Miasma",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Interaction - one-sided sweeper; all 11 defenders survive",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nIf this spell was kicked, put a +1/+1 counter on a creature you control.\nAll creatures get -2/-2 until end of turn.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "86"
+    },
+    {
+      "name": "Wingmantle Chaplain",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Payoff - primary clock generator",
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\nWhen this creature enters, create a 1/1 white Bird creature token with flying for each creature with defender you control.\nWhenever another creature you control with defender enters, create a 1/1 white Bird creature token with flying.",
+      "power": "0",
+      "toughness": "3",
+      "set": "tdc",
+      "collector_number": "141"
+    },
+    {
+      "name": "Shield-Wall Sentinel",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Enabler/Infrastructure - defender count plus defender tutor",
+      "cmc": 4,
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Defender\nWhen this creature enters, you may search your library for a creature card with defender, reveal it, put it into your hand, then shuffle.",
+      "power": "1",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "238"
+    },
+    {
+      "name": "Prayer of Binding",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Interaction - flash exile any nonland permanent",
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "power": null,
+      "toughness": null,
+      "set": "fdn",
+      "collector_number": "739"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Threat/Engine - deathtouch wall plus symmetric draw drain",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "power": "4",
+      "toughness": "5",
+      "set": "dmu",
+      "collector_number": "107"
+    },
+    {
+      "name": "Serra Paragon",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Threat/Engine - flying body plus per-turn permanent recursion",
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Flying\nOnce during each of your turns, you may play a land from your graveyard or cast a permanent spell with mana value 3 or less from your graveyard. If you do, it gains \"When this permanent is put into a graveyard from the battlefield, exile it and you gain 2 life.\"",
+      "power": "3",
+      "toughness": "4",
+      "set": "soc",
+      "collector_number": "169"
+    },
+    {
+      "name": "Serra Redeemer",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Threat - flying blocker and Bird multiplier",
+      "cmc": 5,
+      "type_line": "Creature — Angel Soldier",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\nWhenever another creature you control with power 2 or less enters, put two +1/+1 counters on that creature.",
+      "power": "2",
+      "toughness": "4",
+      "set": "blb",
+      "collector_number": "387"
+    },
+    {
+      "name": "Plains",
+      "qty": 7,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "set": "DMU",
+      "collector_number": ""
+    },
+    {
+      "name": "Swamp",
+      "qty": 7,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "set": "DMU",
+      "collector_number": ""
+    },
+    {
+      "name": "Sunlit Marsh",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "soc",
+      "collector_number": "409"
+    },
+    {
+      "name": "Caves of Koilos",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Land",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {W} or {B}. This land deals 1 damage to you.",
+      "power": null,
+      "toughness": null,
+      "set": "soc",
+      "collector_number": "365"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Runic Shot",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard interaction - kills a tapped (attacking) creature",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {U} (You may pay an additional {U} as you cast this spell.)\nDestroy target tapped creature. If this spell was kicked, scry 2.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "30"
+    },
+    {
+      "name": "Artillery Blast",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard interaction - 3 damage to a tapped (attacking) creature",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Domain — Artillery Blast deals X damage to target tapped creature, where X is 1 plus the number of basic land types among lands you control.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "6"
+    },
+    {
+      "name": "Sheoldred's Restoration",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard recursion - returns a creature to the battlefield",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {2}{W} (You may pay an additional {2}{W} as you cast this spell.)\nReturn target creature card from your graveyard to the battlefield. If this spell was kicked, you gain life equal to that card's mana value. Otherwise, you lose that much life.\nExile Sheoldred's Restoration.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "108"
+    },
+    {
+      "name": "Extinguish the Light",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard interaction - unconditional instant kill",
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "94"
+    },
+    {
+      "name": "Phyrexian Missionary",
+      "qty": 1,
+      "board": "sideboard",
+      "role": "Sideboard engine - lifelink blocker, kicked returns a creature",
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian Human Cleric",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nLifelink\nWhen this creature enters, if it was kicked, return target creature card from your graveyard to your hand.",
+      "power": "2",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "27"
+    },
+    {
+      "name": "Destroy Evil",
+      "qty": 1,
+      "board": "sideboard",
+      "role": "Interaction - large-creature or enchantment removal",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "17"
+    }
+  ],
+  "pitch": "A WB Defenders control deck that treats the defender count itself as the resource being scaled. Eleven defender bodies across six cards hold the ground while two payoffs convert that count into a win: Wingmantle Chaplain, which has Defender and therefore counts itself, turning every subsequent defender ETB into a 1/1 flying Bird; and Blight Pile, whose {2}{B},{T} drains each opponent for the number of defenders controlled, requiring no combat at all. Eight interaction spells buy the turns needed to reach that count, Choking Miasma sweeps a board that all eleven defenders survive, and Shield-Wall Sentinel makes the two-of payoffs findable. The deck wins in the air or through a stalled board, and does not care which.",
+  "strategy_es": "control — defensores con Wingmantle Chaplain",
+  "identity_es": "Un control de Defensores WB que trata el propio recuento de defensores como el recurso que escala. Once cuerpos con defensor repartidos en seis cartas sostienen el suelo mientras dos recompensas convierten ese recuento en una victoria: Wingmantle Chaplain, que tiene Defensor y por tanto se cuenta a sí misma, convirtiendo cada entrada posterior de defensor en un Pájaro volador 1/1; y Blight Pile, cuyo {2}{B},{T} drena a cada rival por el número de defensores controlados, sin requerir combate alguno. Ocho hechizos de interacción compran los turnos necesarios para alcanzar ese recuento, Choking Miasma barre un tablero que los once defensores sobreviven, y Shield-Wall Sentinel hace localizables las recompensas a dos copias. El mazo gana por el aire o a través de un tablero atascado, y le da igual cuál de las dos.",
+  "pitch_es": "Un control de Defensores WB que trata el propio recuento de defensores como el recurso que escala. Once cuerpos con defensor repartidos en seis cartas sostienen el suelo mientras dos recompensas convierten ese recuento en una victoria: Wingmantle Chaplain, que tiene Defensor y por tanto se cuenta a sí misma, convirtiendo cada entrada posterior de defensor en un Pájaro volador 1/1; y Blight Pile, cuyo {2}{B},{T} drena a cada rival por el número de defensores controlados, sin requerir combate alguno. Ocho hechizos de interacción compran los turnos necesarios para alcanzar ese recuento, Choking Miasma barre un tablero que los once defensores sobreviven, y Shield-Wall Sentinel hace localizables las recompensas a dos copias. El mazo gana por el aire o a través de un tablero atascado, y le da igual cuál de las dos."
+}

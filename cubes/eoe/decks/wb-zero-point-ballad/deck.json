@@ -1,0 +1,1286 @@
+{
+  "deck_name": "wb-zero-point-ballad",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-03T15:58:58Z",
+  "format": "40-card",
+  "strategy": "control graveyard reanimator",
+  "colors": "WB",
+  "identity": "A white-black control deck built on a scalable wrath. Zero Point Ballad reads 'Destroy all creatures with toughness X or less. You lose X life. If X is 6 or more, return a creature card put into a graveyard this way to the battlefield under your control' - so it is a sweeper that can also hand you the best creature it just killed, including the opponent's. White covers what a toughness-capped wrath misses with unconditional exile. The recursion here is not the usual creature reanimation: Scrounge for Eternity returns SPACECRAFT as well as creatures, Fell Gravship rebuys Spacecraft to hand, and Rescue Skiff returns a creature OR ENCHANTMENT - which means it rebuys Banishing Light and re-exiles a second permanent. Dawnstrike Vanguard's toughness 5 is chosen so it survives this deck's own Ballad at any X of 4 or less.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "verified": "All 40 mainboard + 10 sideboard cards exist by exact name in the working pool. No common/uncommon exceeds 2 combined copies; no rare/mythic exceeds 1. Rare+mythic total across mainboard and sideboard = 5 (Zero Point Ballad, Beyond the Quiet, Xu-Ifit Osteoharmonist, Astelli Reclaimer, Godless Shrine), inside the user's cap of 6. Basic lands are format-supplied and exempt."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.5,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 1.333,
+      "raw_target": 18.333,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.5,
+    "pip_demand": {
+      "B": 15,
+      "W": 10
+    },
+    "land_color_production": {
+      "B": 12,
+      "W": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 60,
+        "prod_pct": 66.7,
+        "gap": -6.7,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 40,
+        "prod_pct": 50,
+        "gap": -10,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Zero Point Ballad",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{X}{B}",
+      "oracle_text": "Destroy all creatures with toughness X or less. You lose X life. If X is 6 or more, return a creature card put into a graveyard this way to the battlefield under your control.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "128",
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Sweeper/Board Wipe",
+        "Reanimation",
+        "Life: Cost"
+      ],
+      "role": "Anchor sweeper (scalable; at X>=6 it also reanimates)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Beyond the Quiet",
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{3}{W}{W}",
+      "oracle_text": "Exile all creatures and Spacecraft.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "7",
+      "tags": [
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "role": "Unconditional mass exile",
+      "board": "mainboard"
+    },
+    {
+      "name": "Banishing Light",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "6",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction (any nonland permanent; an ENCHANTMENT, so Rescue Skiff rebuys it)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Banishing Light",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "6",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction (any nonland permanent; an ENCHANTMENT, so Rescue Skiff rebuys it)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gravkill",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "103",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction (instant-speed exile)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gravkill",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "103",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction (instant-speed exile)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{B}",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "122",
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction (one mana, Void-scaling)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{B}",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "122",
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction (one mana, Void-scaling)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Depressurize",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Target creature gets -3/-0 until end of turn. Then if that creature's power is 0 or less, destroy it.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "95",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "role": "Interaction (cheap answer to an early utility creature)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dawnstrike Vanguard",
+      "cmc": 6,
+      "type_line": "Creature — Human Knight",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{5}{W}",
+      "oracle_text": "Lifelink\nAt the beginning of your end step, if you control two or more tapped creatures, put a +1/+1 counter on each creature you control other than this creature.",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "5",
+      "set": "eoe",
+      "collector_number": "10",
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Payload/Payoff"
+      ],
+      "role": "Finisher (toughness 5 survives this deck's own Ballad at X<=4)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dawnstrike Vanguard",
+      "cmc": 6,
+      "type_line": "Creature — Human Knight",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{5}{W}",
+      "oracle_text": "Lifelink\nAt the beginning of your end step, if you control two or more tapped creatures, put a +1/+1 counter on each creature you control other than this creature.",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "5",
+      "set": "eoe",
+      "collector_number": "10",
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Payload/Payoff"
+      ],
+      "role": "Finisher (toughness 5 survives this deck's own Ballad at X<=4)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Astelli Reclaimer",
+      "cmc": 5,
+      "type_line": "Creature — Angel Warrior",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{3}{W}{W}",
+      "oracle_text": "Flying\nWhen this creature enters, return target noncreature, nonland permanent card with mana value X or less from your graveyard to the battlefield, where X is the amount of mana spent to cast this creature.\nWarp {2}{W}",
+      "rarity": "rare",
+      "power": "5",
+      "toughness": "4",
+      "set": "eoe",
+      "collector_number": "4",
+      "tags": [
+        "Blink/ETB",
+        "Reanimator",
+        "Graveyard",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Reanimation",
+        "Cards: Net-Positive"
+      ],
+      "role": "Finisher (5/4 flier) + noncreature-permanent recursion (rebuys Banishing Light)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Fell Gravship",
+      "cmc": 3,
+      "type_line": "Artifact — Spacecraft",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "When this Spacecraft enters, mill three cards, then return a creature or Spacecraft card from your graveyard to your hand.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 8+.)\n8+ | Flying, lifelink",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "101",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Recursion to hand + self-mill",
+      "board": "mainboard"
+    },
+    {
+      "name": "Fell Gravship",
+      "cmc": 3,
+      "type_line": "Artifact — Spacecraft",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "When this Spacecraft enters, mill three cards, then return a creature or Spacecraft card from your graveyard to your hand.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 8+.)\n8+ | Flying, lifelink",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "101",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Recursion to hand + self-mill",
+      "board": "mainboard"
+    },
+    {
+      "name": "Scrounge for Eternity",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nReturn target creature or Spacecraft card with mana value 5 or less from your graveyard to the battlefield. Then create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "114",
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Lands-Matter",
+        "Tokens",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Reanimation",
+        "Token Generation",
+        "Board: Sacrifice-Cost"
+      ],
+      "role": "Recursion (creature OR Spacecraft, mana value 5 or less)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Scrounge for Eternity",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nReturn target creature or Spacecraft card with mana value 5 or less from your graveyard to the battlefield. Then create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "114",
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Lands-Matter",
+        "Tokens",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Reanimation",
+        "Token Generation",
+        "Board: Sacrifice-Cost"
+      ],
+      "role": "Recursion (creature OR Spacecraft, mana value 5 or less)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rescue Skiff",
+      "cmc": 6,
+      "type_line": "Artifact — Spacecraft",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{5}{W}",
+      "oracle_text": "When this Spacecraft enters, return target creature or enchantment card from your graveyard to the battlefield.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 10+.)\n10+ | Flying",
+      "rarity": "uncommon",
+      "power": "5",
+      "toughness": "6",
+      "set": "eoe",
+      "collector_number": "32",
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Reanimator",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Reanimation",
+        "Cards: Net-Positive"
+      ],
+      "role": "Recursion (creature or ENCHANTMENT - rebuys Banishing Light)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rescue Skiff",
+      "cmc": 6,
+      "type_line": "Artifact — Spacecraft",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{5}{W}",
+      "oracle_text": "When this Spacecraft enters, return target creature or enchantment card from your graveyard to the battlefield.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 10+.)\n10+ | Flying",
+      "rarity": "uncommon",
+      "power": "5",
+      "toughness": "6",
+      "set": "eoe",
+      "collector_number": "32",
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Reanimator",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Reanimation",
+        "Cards: Net-Positive"
+      ],
+      "role": "Recursion (creature or ENCHANTMENT - rebuys Banishing Light)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Susurian Dirgecraft",
+      "cmc": 5,
+      "type_line": "Artifact — Spacecraft",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{4}{B}",
+      "oracle_text": "When this Spacecraft enters, each opponent sacrifices a nontoken creature of their choice.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 7+.)\n7+ | Flying",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "117",
+      "tags": [
+        "Artifacts",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Edict"
+      ],
+      "role": "Interaction (edict; answers hexproof and ward)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hymn of the Faller",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Surveil 1, then you draw a card and lose 1 life. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)\nVoid — If a nonland permanent left the battlefield this turn or a spell was warped this turn, draw another card.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "107",
+      "tags": [
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "role": "Card flow + graveyard enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hymn of the Faller",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Surveil 1, then you draw a card and lose 1 life. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)\nVoid — If a nonland permanent left the battlefield this turn or a spell was warped this turn, draw another card.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "107",
+      "tags": [
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "role": "Card flow + graveyard enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Xu-Ifit, Osteoharmonist",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Wizard",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}{B}",
+      "oracle_text": "{T}: Return target creature card from your graveyard to the battlefield. It's a Skeleton in addition to its other types and has no abilities. Activate only as a sorcery.",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "127",
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Engine/Outlet",
+        "Reanimation"
+      ],
+      "role": "Recursion (free, repeatable; only 3 creature targets in this list)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Godless Shrine",
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "254",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "mana_cost": null,
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "257",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "mana_cost": null,
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "257",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Radiant Strike",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{3}{W}",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "29",
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Radiant Strike",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{3}{W}",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "29",
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Seam Rip",
+      "cmc": 1,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{W}",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls with mana value 2 or less until this enchantment leaves the battlefield.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "34",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Seam Rip",
+      "cmc": 1,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{W}",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls with mana value 2 or less until this enchantment leaves the battlefield.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "34",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Vote Out",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target creature.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "126",
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Convoke"
+      ],
+      "role": "Flex removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Vote Out",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target creature.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "126",
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Convoke"
+      ],
+      "role": "Flex removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "All-Fates Stalker",
+      "cmc": 4,
+      "type_line": "Creature — Drix Assassin",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{3}{W}",
+      "oracle_text": "When this creature enters, exile up to one target non-Assassin creature until this creature leaves the battlefield.\nWarp {1}{W} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "3",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Flex removal on a body",
+      "board": "sideboard"
+    },
+    {
+      "name": "All-Fates Stalker",
+      "cmc": 4,
+      "type_line": "Creature — Drix Assassin",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{3}{W}",
+      "oracle_text": "When this creature enters, exile up to one target non-Assassin creature until this creature leaves the battlefield.\nWarp {1}{W} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "3",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Flex removal on a body",
+      "board": "sideboard"
+    },
+    {
+      "name": "Emergency Eject",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "oracle_text": "Destroy target nonland permanent. Its controller creates a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "14",
+      "tags": [
+        "Lands-Matter",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "role": "Flex removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Chrome Companion",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Dog",
+      "colors": [],
+      "color_identity": [],
+      "mana_cost": "{2}",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life.\n{2}, {T}: Put target card from a graveyard on the bottom of its owner's library.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "236",
+      "tags": [
+        "Artifacts",
+        "Lifegain",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Interaction/Disruption",
+        "Life Drain",
+        "Graveyard Hate"
+      ],
+      "role": "Hate",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "A white-black control deck built on a scalable wrath. Zero Point Ballad reads 'Destroy all creatures with toughness X or less. You lose X life. If X is 6 or more, return a creature card put into a graveyard this way to the battlefield under your control' - so it is a sweeper that can also hand you the best creature it just killed, including the opponent's. White covers what a toughness-capped wrath misses with unconditional exile. The recursion here is not the usual creature reanimation: Scrounge for Eternity returns SPACECRAFT as well as creatures, Fell Gravship rebuys Spacecraft to hand, and Rescue Skiff returns a creature OR ENCHANTMENT - which means it rebuys Banishing Light and re-exiles a second permanent. Dawnstrike Vanguard's toughness 5 is chosen so it survives this deck's own Ballad at any X of 4 or less.",
+  "strategy_es": "reanimador de cementerio de control",
+  "identity_es": "Un control blanco-negro construido sobre un barrido escalable. Zero Point Ballad dice 'Destroy all creatures with toughness X or less. You lose X life. If X is 6 or more, return a creature card put into a graveyard this way to the battlefield under your control', así que es un barredor que además puede entregarte la mejor criatura que acaba de matar, incluida la del rival. El blanco cubre lo que un barrido limitado por resistencia se deja con exilio incondicional. La recursión aquí no es la reanimación de criaturas habitual: Scrounge for Eternity devuelve SPACECRAFT además de criaturas, Fell Gravship recompra Spacecraft a la mano, y Rescue Skiff devuelve una criatura O ENCANTAMIENTO, lo que significa que recompra Banishing Light y vuelve a exiliar un segundo permanente. La resistencia 5 de Dawnstrike Vanguard está elegida para que sobreviva a la propia Ballad de este mazo con cualquier X de 4 o menos.",
+  "pitch_es": "Un control blanco-negro construido sobre un barrido escalable. Zero Point Ballad dice 'Destroy all creatures with toughness X or less. You lose X life. If X is 6 or more, return a creature card put into a graveyard this way to the battlefield under your control', así que es un barredor que además puede entregarte la mejor criatura que acaba de matar, incluida la del rival. El blanco cubre lo que un barrido limitado por resistencia se deja con exilio incondicional. La recursión aquí no es la reanimación de criaturas habitual: Scrounge for Eternity devuelve SPACECRAFT además de criaturas, Fell Gravship recompra Spacecraft a la mano, y Rescue Skiff devuelve una criatura O ENCANTAMIENTO, lo que significa que recompra Banishing Light y vuelve a exiliar un segundo permanente. La resistencia 5 de Dawnstrike Vanguard está elegida para que sobreviva a la propia Ballad de este mazo con cualquier X de 4 o menos."
+}

@@ -1,0 +1,852 @@
+{
+  "deck_name": "gw-cryptolith-harvest",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-27T14:57:42Z",
+  "format": "40-card",
+  "strategy": "combo",
+  "colors": "GW",
+  "identity": "A G/W deck that turns its own board into mana and then doubles it. Nine of its twenty-three nonland copies create creature tokens and eight are creature cards, and Cryptolith Rite - 'Creatures you control have \"{T}: Add one mana of any color.\"' - makes every one of those bodies a mana source. Second Harvest copies every token at instant speed; Unnatural Growth doubles the power of the whole team at the beginning of each combat. Because all three of those are singleton rares, the redundancy lives one layer down: nine token-making copies make the WIDE BOARD precondition near-automatic, and Rally the Peasants x2 and Intangible Virtue x2 are non-green conversion steps that reach lethal without either doubler. Stated plainly: P(at least one payoff copy by turn 7) is 0.94, P(at least one doubler) is 0.58, and P(all three named pieces) is 0.04 - the deck is built to win on the first of those numbers.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "only_from": {},
+    "excluded": [],
+    "user_extra_constraint": "at most 5 rare/mythic cards total across mainboard + sideboard",
+    "basics": "unlimited, format-supplied"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 1,
+    "accel_count": 3,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.65,
+      "reference_avg_mv": 2.5,
+      "accel": 3,
+      "adjustment": -0.3,
+      "raw_target": 16.7,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.65,
+    "pip_demand": {
+      "W": 13,
+      "G": 18
+    },
+    "land_color_production": {
+      "W": 8,
+      "G": 10
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 58.1,
+        "prod_pct": 58.8,
+        "gap": -0.7,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 41.9,
+        "prod_pct": 47.1,
+        "gap": -5.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Thraben Inspector",
+      "qty": 1,
+      "role": "Infrastructure/Consistency",
+      "cmc": 1,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{W}",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "2",
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "tags": [
+        "Artifacts",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "set": "inr",
+      "collector_number": "45",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cryptolith Rite",
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{1}{G}",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Creatures you control have \"{T}: Add one mana of any color.\"",
+      "tags": [
+        "Tokens",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Mana Ramp"
+      ],
+      "set": "inr",
+      "collector_number": "189",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gather the Townsfolk",
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "23",
+      "board": "mainboard"
+    },
+    {
+      "name": "Join the Dance",
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "mana_cost": "{G}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFlashback {3}{G}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "inr",
+      "collector_number": "242",
+      "board": "mainboard"
+    },
+    {
+      "name": "Intangible Virtue",
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Creature tokens you control get +1/+1 and have vigilance.",
+      "tags": [
+        "Tokens",
+        "Payload/Payoff",
+        "Anthem"
+      ],
+      "set": "inr",
+      "collector_number": "29",
+      "board": "mainboard"
+    },
+    {
+      "name": "Duskwatch Recruiter // Krallenhorde Howler",
+      "qty": 2,
+      "role": "Infrastructure/Consistency",
+      "cmc": 2,
+      "type_line": "Creature — Human Warrior Werewolf",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{1}{G}",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "{2}{G}: Look at the top three cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nCreature spells you cast cost {1} less to cast.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "tags": [
+        "Werewolf Matters",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cost Reduction"
+      ],
+      "set": "inr",
+      "collector_number": "193",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cathar Commando",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "15",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cathar's Call",
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Enchant creature\nEnchanted creature has vigilance and \"At the beginning of your end step, create a 1/1 white Human creature token.\"",
+      "tags": [
+        "Tokens",
+        "Voltron/Equipment",
+        "Engine/Outlet",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "16",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ulvenwald Mysteries",
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{2}{G}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Whenever a nontoken creature you control dies, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, create a 1/1 white Human Soldier creature token.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Artifacts",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Card Draw"
+      ],
+      "set": "inr",
+      "collector_number": "222",
+      "board": "mainboard"
+    },
+    {
+      "name": "Clear Shot",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{2}{G}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control.",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "set": "inr",
+      "collector_number": "188",
+      "board": "mainboard"
+    },
+    {
+      "name": "Pack Guardian",
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "cmc": 4,
+      "type_line": "Creature — Wolf Spirit",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{2}{G}{G}",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "3",
+      "oracle_text": "Flash\nWhen this creature enters, you may discard a land card. If you do, create a 2/2 green Wolf creature token.",
+      "tags": [
+        "Tokens",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Cards: Extra-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "211",
+      "board": "mainboard"
+    },
+    {
+      "name": "Second Harvest",
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{2}{G}{G}",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "For each token you control, create a token that's a copy of that permanent.",
+      "tags": [
+        "Tokens",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "213",
+      "board": "mainboard"
+    },
+    {
+      "name": "Unnatural Growth",
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "cmc": 5,
+      "type_line": "Enchantment",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{1}{G}{G}{G}{G}",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "At the beginning of each combat, double the power and toughness of each creature you control until end of turn.",
+      "tags": [
+        "Payload/Payoff",
+        "Pump Effect"
+      ],
+      "set": "inr",
+      "collector_number": "223",
+      "board": "mainboard"
+    },
+    {
+      "name": "Overgrown Farmland",
+      "qty": 1,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "mana_cost": "",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "This land enters tapped unless you control two or more other lands.\n{T}: Add {G} or {W}.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "tdc",
+      "collector_number": "381",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "qty": 2,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "mana_cost": "",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "tdc",
+      "collector_number": "385",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "qty": 2,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [],
+      "mana_cost": "",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "set": "tmc",
+      "collector_number": "65",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "qty": 7,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {G}.)",
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "qty": 5,
+      "role": "Land",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {W}.)",
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rally the Peasants",
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Creatures you control get +2/+0 until end of turn.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Payload/Payoff",
+        "Pump Effect",
+        "Flashback"
+      ],
+      "set": "inr",
+      "collector_number": "37",
+      "board": "mainboard"
+    },
+    {
+      "name": "Valorous Stance",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "48",
+      "board": "mainboard"
+    },
+    {
+      "name": "Scorned Villager // Moonscarred Werewolf",
+      "qty": 1,
+      "role": "Infrastructure/Consistency",
+      "cmc": 2,
+      "type_line": "Creature — Human Werewolf",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{1}{G}",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": "{T}: Add {G}.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nVigilance\n{T}: Add {G}{G}.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "tags": [
+        "Werewolf Matters",
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "set": "inr",
+      "collector_number": "212",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mausoleum Guard",
+      "qty": 1,
+      "role": "Enabler/Fodder",
+      "cmc": 4,
+      "type_line": "Creature — Human Scout",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{3}{W}",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "When this creature dies, create two 1/1 white Spirit creature tokens with flying.",
+      "tags": [
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "33",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Angelic Purge",
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "9",
+      "board": "sideboard",
+      "when_to_board": "vs the cube's 24 artifacts and 25 enchantments: 'Exile target artifact, creature, or enchantment'. The additional cost - 'sacrifice a permanent' - is nearly free here, since a spare 1/1 token is the deck's most abundant resource."
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{3}{W}",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "39",
+      "board": "sideboard",
+      "when_to_board": "vs the cube's three largest non-Human tribes (Vampire 23, Zombie 15, Werewolf 13 = 51 cards): 'you may destroy target Vampire, Werewolf, or Zombie' on a 3/2 body, which is also another creature to tap for Cryptolith Rite mana."
+    },
+    {
+      "name": "Ambush Viper",
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Creature — Snake",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{1}{G}",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "oracle_text": "Flash\nDeathtouch",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "186",
+      "board": "sideboard",
+      "when_to_board": "vs a single large threat: 'Flash. Deathtouch' answers any size at instant speed, and unlike a removal spell it leaves a body behind that taps for mana under Cryptolith Rite."
+    },
+    {
+      "name": "Soul-Guide Gryff",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{4}{W}",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "set": "inr",
+      "collector_number": "40",
+      "board": "sideboard",
+      "when_to_board": "vs graveyard decks (75 cards, 27% of the cube): 'When this creature enters, exile up to one target card from a graveyard' - the only graveyard answer in G/W. At {4}{W} it is castable off Cryptolith Rite mana far earlier than off lands alone."
+    },
+    {
+      "name": "Thalia, Heretic Cathar",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{2}{W}",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "oracle_text": "First strike\nCreatures and nonbasic lands your opponents control enter tapped.",
+      "tags": [
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Tax Effect"
+      ],
+      "set": "inr",
+      "collector_number": "44",
+      "board": "sideboard",
+      "when_to_board": "vs decks that hold up instant-speed interaction: 'Creatures and nonbasic lands your opponents control enter tapped' means a flashed-in blocker arrives tapped and cannot stop the burst-turn swing, and it taxes every dual in this cube."
+    },
+    {
+      "name": "Valorous Stance",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "mana_cost": "{1}{W}",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "48",
+      "board": "sideboard",
+      "when_to_board": "vs targeted removal: 'Target creature gains indestructible until end of turn' protects a doubled attacker mid-combat; the other mode destroys a toughness-4-or-greater wall that a board of 1/1s cannot get through even doubled."
+    },
+    {
+      "name": "Noose Constrictor",
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "cmc": 2,
+      "type_line": "Creature — Snake",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{1}{G}",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "Reach\nDiscard a card: This creature gets +1/+1 until end of turn.",
+      "tags": [
+        "Graveyard",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Discard Outlet",
+        "Self-Buff"
+      ],
+      "set": "inr",
+      "collector_number": "210",
+      "board": "sideboard",
+      "when_to_board": "vs the cube's 58 evasion cards (20.9%), the second-largest threat class and the one this deck's ground board cannot block at all: 'Reach' is the only way G/W interacts with a flier here, and 'Discard a card: this creature gets +1/+1 until end of turn' turns a flooded hand into blocking size. It replaces a second Cathar Commando, which would have been a third sideboard slot aimed at the artifact/enchantment class already covered by Angelic Purge x2 and the maindeck Commando."
+    }
+  ],
+  "pitch": "A G/W deck that turns its own board into mana and then doubles it. Nine of its twenty-three nonland copies create creature tokens and eight are creature cards, and Cryptolith Rite - 'Creatures you control have \"{T}: Add one mana of any color.\"' - makes every one of those bodies a mana source. Second Harvest copies every token at instant speed; Unnatural Growth doubles the power of the whole team at the beginning of each combat. Because all three of those are singleton rares, the redundancy lives one layer down: nine token-making copies make the WIDE BOARD precondition near-automatic, and Rally the Peasants x2 and Intangible Virtue x2 are non-green conversion steps that reach lethal without either doubler. Stated plainly: P(at least one payoff copy by turn 7) is 0.94, P(at least one doubler) is 0.58, and P(all three named pieces) is 0.04 - the deck is built to win on the first of those numbers.",
+  "strategy_es": "combo",
+  "identity_es": "Un mazo G/W que convierte su propio tablero en maná y luego lo duplica. Nueve de sus veintitrés copias no-tierra crean fichas de criatura y ocho son cartas de criatura, y Cryptolith Rite — 'Creatures you control have \"{T}: Add one mana of any color.\"' — convierte cada uno de esos cuerpos en una fuente de maná. Second Harvest copia cada ficha a velocidad de instantáneo; Unnatural Growth duplica la fuerza de todo el equipo al comienzo de cada combate. Como las tres son raras de copia única, la redundancia vive una capa más abajo: nueve copias creadoras de fichas hacen casi automática la precondición del TABLERO ANCHO, y Rally the Peasants x2 e Intangible Virtue x2 son pasos de conversión no verdes que llegan a letal sin ninguno de los dos duplicadores. Dicho con claridad: P(al menos una copia de recompensa para el turno 7) es 0,94, P(al menos un duplicador) es 0,58, y P(las tres piezas nombradas) es 0,04; el mazo está construido para ganar con el primero de esos números.",
+  "pitch_es": "Un mazo G/W que convierte su propio tablero en maná y luego lo duplica. Nueve de sus veintitrés copias no-tierra crean fichas de criatura y ocho son cartas de criatura, y Cryptolith Rite — 'Creatures you control have \"{T}: Add one mana of any color.\"' — convierte cada uno de esos cuerpos en una fuente de maná. Second Harvest copia cada ficha a velocidad de instantáneo; Unnatural Growth duplica la fuerza de todo el equipo al comienzo de cada combate. Como las tres son raras de copia única, la redundancia vive una capa más abajo: nueve copias creadoras de fichas hacen casi automática la precondición del TABLERO ANCHO, y Rally the Peasants x2 e Intangible Virtue x2 son pasos de conversión no verdes que llegan a letal sin ninguno de los dos duplicadores. Dicho con claridad: P(al menos una copia de recompensa para el turno 7) es 0,94, P(al menos un duplicador) es 0,58, y P(las tres piezas nombradas) es 0,04; el mazo está construido para ganar con el primero de esos números."
+}

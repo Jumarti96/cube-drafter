@@ -1,0 +1,749 @@
+{
+  "deck_name": "ur-big-spell-trigger-burn",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-09T00:00:00Z",
+  "format": "40-card",
+  "strategy": "tempo",
+  "colors": "UR",
+  "identity": "A UR Elementals deck whose damage comes from casting expensive spells rather than from connecting in combat. Enraged Flamecaster converts every mana-value-4-or-greater cast into 2 damage to each opponent; Twinflame Travelers doubles that and every other Elemental trigger; Kulrath Mystic and Tanufel Rimespeaker turn the same cast into a 4/4 vigilant attacker and a card. Ashling, Rimebound and Flamebraider produce mana that can ONLY be spent on exactly those big spells, so the first mana-value-4-or-greater CAST happens on turn 3; because the cheapest payoff on the battlefield costs 3 mana, the first payoff TRIGGER lands on turn 4 rather than turn 5. Thirteen of the twenty-two nonland cards have mana value 4 or greater, so the trigger is not a corner case - it is the deck's normal turn.",
+  "restrictions": {
+    "base": "cube_mainboard — every card is in cubes/ecl mainboard.csv (277 unique cards)",
+    "copy_limits": "PASS — no common or uncommon above 2 copies, no rare or mythic above 1. Basic lands (Mountain x7, Island x6) are format-supplied and exempt.",
+    "rare_mythic_cap": "PASS — exactly 5 of 5 used, all mainboard: Ashling Rekindled // Ashling Rimebound, Champion of the Path, Sunderflock, Ashling's Command, Steam Vents. The sideboard contains zero rares or mythics.",
+    "colour_identity": "PASS — every nonland card is usable in {U, R} via effective_cost.best_mode; no splash.",
+    "deck_size": "PASS — 40 mainboard (22 nonland + 18 lands), 10 sideboard."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 5,
+    "cantrip_count": 0,
+    "accel_count": 5,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.82,
+      "reference_avg_mv": 2.5,
+      "accel": 5,
+      "adjustment": 0.927,
+      "raw_target": 17.927,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.82,
+    "pip_demand": {
+      "R": 16,
+      "U": 9
+    },
+    "land_color_production": {
+      "U": 10,
+      "R": 11,
+      "G": 1,
+      "W": 1,
+      "B": 1
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 64,
+        "prod_pct": 61.1,
+        "gap": 2.9,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 36,
+        "prod_pct": 55.6,
+        "gap": -19.6,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Ashling, Rekindled // Ashling, Rimebound",
+      "cmc": 2,
+      "type_line": "Legendary Creature — Elemental Sorcerer",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "mana_cost": "{1}{R}",
+      "rarity": "rare",
+      "oracle_text": "Whenever this creature enters or transforms into Ashling, Rekindled, you may discard a card. If you do, draw a card.\nAt the beginning of your first main phase, you may pay {U}. If you do, transform Ashling.\n//\nWhenever this creature transforms into Ashling, Rimebound and at the beginning of your first main phase, add two mana of any one color. Spend this mana only to cast spells with mana value 4 or greater.\nAt the beginning of your first main phase, you may pay {R}. If you do, transform Ashling.",
+      "tags": [
+        "Kicker/Scaling",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "role": "engine",
+      "set": "ECL",
+      "collector_number": "124",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Flamebraider",
+      "cmc": 2,
+      "type_line": "Creature — Elemental Bard",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "mana_cost": "{1}{R}",
+      "rarity": "uncommon",
+      "oracle_text": "{T}: Add two mana in any combination of colors. Spend this mana only to cast Elemental spells or activate abilities of Elemental sources.",
+      "tags": [
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Mana Dork",
+        "Mana Fixing"
+      ],
+      "role": "engine",
+      "set": "ECL",
+      "collector_number": "139",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Eclipsed Flamekin",
+      "cmc": 3,
+      "type_line": "Creature — Elemental Scout",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "mana_cost": "{1}{U/R}{U/R}",
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, look at the top four cards of your library. You may reveal an Elemental, Island, or Mountain card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.",
+      "tags": [
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "role": "engine",
+      "set": "ECL",
+      "collector_number": "219",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Tanufel Rimespeaker",
+      "cmc": 4,
+      "type_line": "Creature — Elemental Wizard",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{3}{U}",
+      "rarity": "uncommon",
+      "oracle_text": "Whenever you cast a spell with mana value 4 or greater, draw a card.",
+      "tags": [
+        "Spellslinger",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "role": "engine",
+      "set": "ECL",
+      "collector_number": "77",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Enraged Flamecaster",
+      "cmc": 3,
+      "type_line": "Creature — Elemental Sorcerer",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "mana_cost": "{2}{R}",
+      "rarity": "common",
+      "oracle_text": "Reach\nWhenever you cast a spell with mana value 4 or greater, this creature deals 2 damage to each opponent.",
+      "tags": [
+        "Spellslinger",
+        "Payload/Payoff",
+        "Direct Damage"
+      ],
+      "role": "payoff",
+      "set": "ECL",
+      "collector_number": "135",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Kulrath Mystic",
+      "cmc": 3,
+      "type_line": "Creature — Elemental Wizard",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{2}{U}",
+      "rarity": "common",
+      "oracle_text": "Whenever you cast a spell with mana value 4 or greater, this creature gets +2/+0 and gains vigilance until end of turn.",
+      "tags": [
+        "Spellslinger",
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "role": "payoff",
+      "set": "ECL",
+      "collector_number": "56",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Kindle the Inner Flame",
+      "cmc": 4,
+      "type_line": "Kindred Sorcery — Elemental",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "mana_cost": "{3}{R}",
+      "rarity": "uncommon",
+      "oracle_text": "Create a token that's a copy of target creature you control, except it has haste and \"At the beginning of the end step, sacrifice this token.\"\nFlashback—{1}{R}, Behold three Elementals. (You may cast this card from your graveyard for its flashback cost. Then exile it. To behold an Elemental, choose an Elemental you control or reveal an Elemental card from your hand.)",
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Flashback"
+      ],
+      "role": "payoff",
+      "set": "ECL",
+      "collector_number": "147",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Twinflame Travelers",
+      "cmc": 4,
+      "type_line": "Creature — Elemental Sorcerer",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "mana_cost": "{2}{U}{R}",
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nIf a triggered ability of another Elemental you control triggers, it triggers an additional time.",
+      "tags": [
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Trigger Doubling"
+      ],
+      "role": "payoff",
+      "set": "ECL",
+      "collector_number": "248",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Champion of the Path",
+      "cmc": 4,
+      "type_line": "Creature — Elemental Sorcerer",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "mana_cost": "{3}{R}",
+      "rarity": "rare",
+      "oracle_text": "As an additional cost to cast this spell, behold an Elemental and exile it. (Exile an Elemental you control or an Elemental card from your hand.)\nWhenever another Elemental you control enters, it deals damage equal to its power to each opponent.\nWhen this creature leaves the battlefield, return the exiled card to its owner's hand.",
+      "tags": [
+        "Tribal/Kindred",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Direct Damage"
+      ],
+      "role": "payoff",
+      "set": "ECL",
+      "collector_number": "130",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Kulrath Zealot",
+      "cmc": 6,
+      "type_line": "Creature — Elemental Warrior",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "mana_cost": "{5}{R}",
+      "rarity": "common",
+      "oracle_text": "When this creature enters, exile the top card of your library. Until the end of your next turn, you may play that card.\nBasic landcycling {1}{R} ({1}{R}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Impulse Draw",
+        "Land Fetch",
+        "Cycling",
+        "Cards: Self-Replacing"
+      ],
+      "role": "threat",
+      "set": "ECL",
+      "collector_number": "148",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Sunderflock",
+      "cmc": 9,
+      "type_line": "Creature — Elemental",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{7}{U}{U}",
+      "rarity": "rare",
+      "oracle_text": "This spell costs {X} less to cast, where X is the greatest mana value among Elementals you control.\nFlying\nWhen this creature enters, if you cast it, return all non-Elemental creatures to their owners' hands.",
+      "tags": [
+        "Tribal/Kindred",
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Bounce"
+      ],
+      "role": "finisher",
+      "set": "ECL",
+      "collector_number": "74",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Sear",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "mana_cost": "{1}{R}",
+      "rarity": "uncommon",
+      "oracle_text": "Sear deals 4 damage to target creature or planeswalker.",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "role": "interaction",
+      "set": "ECL",
+      "collector_number": "154",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Feed the Flames",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "mana_cost": "{3}{R}",
+      "rarity": "common",
+      "oracle_text": "Feed the Flames deals 5 damage to target creature. If that creature would die this turn, exile it instead.",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "role": "interaction",
+      "set": "ECL",
+      "collector_number": "137",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Ashling's Command",
+      "cmc": 5,
+      "type_line": "Kindred Instant — Elemental",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "mana_cost": "{3}{U}{R}",
+      "rarity": "rare",
+      "oracle_text": "Choose two —\n• Create a token that's a copy of target Elemental you control.\n• Target player draws two cards.\n• Ashling's Command deals 2 damage to each creature target player controls.\n• Target player creates two Treasure tokens.",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Artifacts",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Card Draw",
+        "Sweeper/Board Wipe"
+      ],
+      "role": "interaction",
+      "set": "ECL",
+      "collector_number": "205",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Temporal Cleansing",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{3}{U}",
+      "rarity": "common",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nThe owner of target nonland permanent puts it into their library second from the top or on the bottom.",
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Targeted Removal"
+      ],
+      "role": "interaction",
+      "set": "ECL",
+      "collector_number": "78",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Steam Vents",
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "mana_cost": "",
+      "rarity": "rare",
+      "oracle_text": "({T}: Add {U} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "role": "land",
+      "set": "ECL",
+      "collector_number": "267",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Molten Tributary",
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "mana_cost": null,
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "land",
+      "set": "DMU",
+      "collector_number": "251",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Eclipsed Realms",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [],
+      "mana_cost": "",
+      "rarity": "uncommon",
+      "oracle_text": "As this land enters, choose Elemental, Elf, Faerie, Giant, Goblin, Kithkin, Merfolk, or Treefolk.\n{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a spell of the chosen type or activate an ability of a source of the chosen type.",
+      "tags": [
+        "Tribal/Kindred",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "land",
+      "set": "ECL",
+      "collector_number": "263",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "mana_cost": "",
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "tags": [],
+      "role": "land",
+      "set": "",
+      "collector_number": "",
+      "board": "mainboard",
+      "qty": 7
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "",
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "tags": [],
+      "role": "land",
+      "set": "",
+      "collector_number": "",
+      "board": "mainboard",
+      "qty": 6
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Rooftop Percher",
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "colors": [],
+      "color_identity": [],
+      "mana_cost": "{5}",
+      "rarity": "common",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "role": "hate",
+      "set": "ECL",
+      "collector_number": "2",
+      "board": "sideboard",
+      "qty": 2,
+      "when_to_board": "Against any graveyard deck. Graveyard interaction is the cube's single largest threat class at 39 of 277 cards (14%). 'When this creature enters, exile up to two target cards from graveyards' is the only graveyard answer available to these colours, and because Changeling makes it an Elemental at mana value 5, it is also a payoff trigger and a Champion of the Path trigger."
+    },
+    {
+      "name": "Spell Snare",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{U}",
+      "rarity": "uncommon",
+      "oracle_text": "Counter target spell with mana value 2.",
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "hate",
+      "set": "ECL",
+      "collector_number": "71",
+      "board": "sideboard",
+      "qty": 2,
+      "when_to_board": "Against decks whose key card costs 2. This is the mainboard's conceded threat class (stack) bought back after sideboarding."
+    },
+    {
+      "name": "Cinder Strike",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "mana_cost": "{R}",
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nCinder Strike deals 2 damage to target creature. It deals 4 damage to that creature instead if this spell's additional cost was paid.",
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "role": "hate",
+      "set": "ECL",
+      "collector_number": "131",
+      "board": "sideboard",
+      "qty": 1,
+      "when_to_board": "Against fast starts, paired with Tweeze. One mana for 4 damage to a creature when the blight cost is paid is the cheapest interaction in the colours. It is a SORCERY, so it is the slower half of the anti-race package, and the 4-damage mode puts a -1/-1 counter on one of the deck's own Elementals - which is why it is 1 copy."
+    },
+    {
+      "name": "Tweeze",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "mana_cost": "{2}{R}",
+      "rarity": "common",
+      "oracle_text": "Tweeze deals 3 damage to any target. You may discard a card. If you do, draw a card.",
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Looting"
+      ],
+      "role": "hate",
+      "set": "ECL",
+      "collector_number": "162",
+      "board": "sideboard",
+      "qty": 1,
+      "when_to_board": "Against fast or evasive starts, alongside Cinder Strike. 'Tweeze deals 3 damage to any target. You may discard a card. If you do, draw a card' - unlike Cinder Strike it is an INSTANT, it can go to the face to finish a race, and it replaces itself instead of costing a card."
+    },
+    {
+      "name": "Giantfall",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "mana_cost": "{1}{R}",
+      "rarity": "uncommon",
+      "oracle_text": "Choose one —\n• Target creature you control deals damage equal to its power to target creature an opponent controls.\n• Destroy target artifact.",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "hate",
+      "set": "ECL",
+      "collector_number": "141",
+      "board": "sideboard",
+      "qty": 2,
+      "when_to_board": "Against artifacts (11 in the cube, and it is one of only 4 artifact answers in the whole pool). Mode one, 'Target creature you control deals damage equal to its power to target creature an opponent controls', is live off a 7/3 Champion of the Path or a 6/5 Kulrath Zealot."
+    },
+    {
+      "name": "Temporal Cleansing",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{3}{U}",
+      "rarity": "common",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nThe owner of target nonland permanent puts it into their library second from the top or on the bottom.",
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Targeted Removal"
+      ],
+      "role": "hate",
+      "set": "ECL",
+      "collector_number": "78",
+      "board": "sideboard",
+      "qty": 1,
+      "when_to_board": "Against enchantments (21 in the cube). No U or R card in this cube destroys an enchantment — all 4 enchantment answers are G/W/UG — so this bounce-to-library effect, invisible to a destroy-probe, is the colours' only answer. Also still mana value 4."
+    },
+    {
+      "name": "Rimekin Recluse",
+      "cmc": 3,
+      "type_line": "Creature — Elemental Wizard",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{2}{U}",
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, return up to one other target creature to its owner's hand.",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Bounce"
+      ],
+      "role": "flex",
+      "set": "ECL",
+      "collector_number": "66",
+      "board": "sideboard",
+      "qty": 1,
+      "when_to_board": "Against auras and equipment, and against decks with one oversized creature. 'When this creature enters, return up to one other target creature to its owner's hand' resets an enchanted or equipped threat and is an Elemental body on a mana-value-3 tempo turn."
+    }
+  ],
+  "pitch": "A UR Elementals deck whose damage comes from casting expensive spells rather than from connecting in combat. Enraged Flamecaster converts every mana-value-4-or-greater cast into 2 damage to each opponent; Twinflame Travelers doubles that and every other Elemental trigger; Kulrath Mystic and Tanufel Rimespeaker turn the same cast into a 4/4 vigilant attacker and a card. Ashling, Rimebound and Flamebraider produce mana that can ONLY be spent on exactly those big spells, so the first mana-value-4-or-greater CAST happens on turn 3; because the cheapest payoff on the battlefield costs 3 mana, the first payoff TRIGGER lands on turn 4 rather than turn 5. Thirteen of the twenty-two nonland cards have mana value 4 or greater, so the trigger is not a corner case - it is the deck's normal turn.",
+  "strategy_es": "tempo",
+  "identity_es": "Un mazo de Elementales UR cuyo daño viene de lanzar hechizos caros y no de conectar en combate. Enraged Flamecaster convierte cada lanzamiento de valor de maná 4 o mayor en 2 de daño a cada rival; Twinflame Travelers duplica eso y todos los demás disparos de Elemental; Kulrath Mystic y Tanufel Rimespeaker convierten ese mismo lanzamiento en un atacante 4/4 con vigilancia y en una carta. Ashling, Rimebound y Flamebraider producen maná que SOLO puede gastarse en exactamente esos hechizos grandes, así que el primer LANZAMIENTO de valor de maná 4 o mayor ocurre en el turno 3; como la recompensa más barata en el campo de batalla cuesta 3 manás, el primer DISPARO de recompensa aterriza en el turno 4 en lugar del 5. Trece de las veintidós cartas no-tierra tienen valor de maná 4 o mayor, así que el disparo no es un caso extremo: es el turno normal del mazo.",
+  "pitch_es": "Un mazo de Elementales UR cuyo daño viene de lanzar hechizos caros y no de conectar en combate. Enraged Flamecaster convierte cada lanzamiento de valor de maná 4 o mayor en 2 de daño a cada rival; Twinflame Travelers duplica eso y todos los demás disparos de Elemental; Kulrath Mystic y Tanufel Rimespeaker convierten ese mismo lanzamiento en un atacante 4/4 con vigilancia y en una carta. Ashling, Rimebound y Flamebraider producen maná que SOLO puede gastarse en exactamente esos hechizos grandes, así que el primer LANZAMIENTO de valor de maná 4 o mayor ocurre en el turno 3; como la recompensa más barata en el campo de batalla cuesta 3 manás, el primer DISPARO de recompensa aterriza en el turno 4 en lugar del 5. Trece de las veintidós cartas no-tierra tienen valor de maná 4 o mayor, así que el disparo no es un caso extremo: es el turno normal del mazo."
+}

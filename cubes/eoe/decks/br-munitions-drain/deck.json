@@ -1,0 +1,730 @@
+{
+  "deck_name": "br-munitions-drain",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-03T17:19:26Z",
+  "format": "40-card",
+  "strategy": "black-red aristocrats drain (aggro)",
+  "colors": "BR",
+  "identity": "Black-red aristocrats drain built as a 13-one-drop aggro curve. Susurian Voidborn ('Whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life') turns every body and artifact the deck loses into reach, while Weftstalker Ardent bills the same permanents on the way in and Lightless Evangel banks them as +1/+1 counters. Weapons Manufacturing banks a 2-damage Munitions charge off each of the 10/24 nontoken artifacts, and those charges are only worth damage when something removes them — the Munitions clause is 'When this token LEAVES THE BATTLEFIELD, it deals 2 damage to any target' — so the list carries 6/24 cards that can cash one (Umbral Collar Zealot 2, Slagdrill Scrapper 2, Embrace Oblivion 2), 4/24 of them repeatably. Rust Harvester is the one repeatable non-combat damage source. The deck manufactures its own Void condition on 16/24 cards, which upgrades Plasma Bolt to 3 to the face and Tragic Trajectory to -10/-10 for one mana each.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": []
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 15,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 4,
+    "accel_count": 4,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 1.62,
+      "reference_avg_mv": 2.5,
+      "accel": 4,
+      "adjustment": -1.84,
+      "raw_target": 15.16,
+      "clamped": false,
+      "recommended_land_count": 15,
+      "p_window_at_recommended": 0.7763
+    },
+    "avg_cmc": 1.62,
+    "pip_demand": {
+      "B": 10,
+      "R": 12
+    },
+    "land_color_production": {
+      "B": 9,
+      "R": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 45.5,
+        "prod_pct": 56.2,
+        "gap": -10.7,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 54.5,
+        "prod_pct": 56.2,
+        "gap": -1.7,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Susurian Voidborn",
+      "qty": 2,
+      "cmc": 3,
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Vampire Soldier",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life.\nWarp {B} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "set": "eoe",
+      "collector_number": "118",
+      "image_url": "https://cards.scryfall.io/normal/front/b/e/beb97e7b-0ae7-4b08-9ceb-6a7f825bcd49.jpg?1782685504",
+      "image_back_url": null,
+      "role": "Payload/Payoff — the locked kill mechanism; every creature/artifact death is 1 drain + 1 life",
+      "board": "mainboard"
+    },
+    {
+      "name": "Weftstalker Ardent",
+      "qty": 2,
+      "cmc": 3,
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Drix Artificer",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever another creature or artifact you control enters, this creature deals 1 damage to each opponent.\nWarp {R} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Tokens",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Warp"
+      ],
+      "set": "eoe",
+      "collector_number": "169",
+      "image_url": "https://cards.scryfall.io/normal/front/c/d/cddb48cc-8eb1-47ce-90f0-7aad1e93e2c4.jpg?1782685468",
+      "image_back_url": null,
+      "role": "Payload/Payoff — reach on the ENTER side of the same permanents Voidborn drains on the DIE side",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightless Evangel",
+      "qty": 2,
+      "cmc": 2,
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Vampire Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever you sacrifice another creature or artifact, put a +1/+1 counter on this creature.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Payload/Payoff"
+      ],
+      "set": "eoe",
+      "collector_number": "109",
+      "image_url": "https://cards.scryfall.io/normal/front/6/8/6860556a-6c34-4c41-89ea-f0bc495a159c.jpg?1782685511",
+      "image_back_url": null,
+      "role": "Payload/Payoff — converts each sacrifice into permanent combat damage",
+      "board": "mainboard"
+    },
+    {
+      "name": "Weapons Manufacturing",
+      "qty": 1,
+      "cmc": 2,
+      "mana_cost": "{1}{R}",
+      "type_line": "Enchantment",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever a nontoken artifact you control enters, create a colorless artifact token named Munitions with \"When this token leaves the battlefield, it deals 2 damage to any target.\"",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Direct Damage"
+      ],
+      "set": "eoe",
+      "collector_number": "168",
+      "image_url": "https://cards.scryfall.io/normal/front/a/0/a058f1a6-318c-4bba-981e-ace079ada806.jpg?1782685468",
+      "image_back_url": null,
+      "role": "Payload/Payoff (rare 1 of 2 spent) — each nontoken artifact ETB banks a Munitions worth 2 damage",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rust Harvester",
+      "qty": 1,
+      "cmc": 1,
+      "mana_cost": "{R}",
+      "type_line": "Artifact Creature — Robot",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Menace\n{2}, {T}, Exile an artifact card from your graveyard: Put a +1/+1 counter on this creature, then it deals damage equal to its power to any target.",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Direct Damage"
+      ],
+      "set": "eoe",
+      "collector_number": "159",
+      "image_url": "https://cards.scryfall.io/normal/front/7/c/7ce58765-d2f4-4fbf-8635-580c9400ff2e.jpg?1782685475",
+      "image_back_url": null,
+      "role": "Payload/Engine (rare 2 of 2 spent) — 'Menace // {2}, {T}, Exile an artifact card from your graveyard: Put a +1/+1 counter on this creature, then it deals damage equal to its power to any target.' The only repeatable non-combat damage source in the list; MV1 nontoken artifact",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kavaron Harrier",
+      "qty": 2,
+      "cmc": 1,
+      "mana_cost": "{R}",
+      "type_line": "Artifact Creature — Robot Soldier",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever this creature attacks, you may pay {2}. If you do, create a 2/2 colorless Robot artifact creature token that's tapped and attacking. Sacrifice that token at end of combat.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tokens",
+        "Artifacts",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Mana: Ongoing-Cost"
+      ],
+      "set": "eoe",
+      "collector_number": "139",
+      "image_url": "https://cards.scryfall.io/normal/front/1/d/1da2a740-e4ff-4661-ba57-39b15c58e26e.jpg?1782685490",
+      "image_back_url": null,
+      "role": "Threat/Payoff — 1-mana artifact creature that manufactures one guaranteed death per combat for {2}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hullcarver",
+      "qty": 1,
+      "cmc": 1,
+      "mana_cost": "{B}",
+      "type_line": "Artifact Creature — Robot Assassin",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Deathtouch",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption"
+      ],
+      "set": "eoe",
+      "collector_number": "105",
+      "image_url": "https://cards.scryfall.io/normal/front/8/1/817b5b18-beb5-48c8-aa45-0515ff9ca5da.jpg?1782685515",
+      "image_back_url": null,
+      "role": "Threat — {B} 1/1 nontoken artifact creature whose entire oracle text is 'Deathtouch'; it is legal fodder for the outlets, but nothing on the card itself says so",
+      "board": "mainboard"
+    },
+    {
+      "name": "Slagdrill Scrapper",
+      "qty": 2,
+      "cmc": 1,
+      "mana_cost": "{R}",
+      "type_line": "Artifact Creature — Robot Scout",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "{2}, {T}, Sacrifice another artifact or land: Draw a card.",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Sacrifice Outlet"
+      ],
+      "set": "eoe",
+      "collector_number": "160",
+      "image_url": "https://cards.scryfall.io/normal/front/1/5/155dcf54-8fdb-4715-97dc-4eb5d3d80d78.jpg?1782685474",
+      "image_back_url": null,
+      "role": "Engine/Outlet — '{2}, {T}, Sacrifice another artifact or land: Draw a card.' Repeatable Munitions consumer, MV1 nontoken artifact, and net-positive on cards",
+      "board": "mainboard"
+    },
+    {
+      "name": "Umbral Collar Zealot",
+      "qty": 2,
+      "cmc": 2,
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Sacrifice another creature or artifact: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Self-Mill",
+        "Graveyard",
+        "Artifacts",
+        "Engine/Outlet",
+        "Sacrifice Outlet",
+        "Card Selection"
+      ],
+      "set": "eoe",
+      "collector_number": "123",
+      "image_url": "https://cards.scryfall.io/normal/front/b/b/bbcc1d84-9772-475d-924a-75bb54c9bc20.jpg?1782685500",
+      "image_back_url": null,
+      "role": "Engine/Outlet — the only mana-free unlimited sac outlet in the pool",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nutrient Block",
+      "qty": 2,
+      "cmc": 1,
+      "mana_cost": "{1}",
+      "type_line": "Artifact — Food",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Lifegain",
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Life Drain",
+        "Card Draw",
+        "Sacrifice Outlet"
+      ],
+      "set": "eoe",
+      "collector_number": "243",
+      "image_url": "https://cards.scryfall.io/normal/front/a/2/a26064bb-c568-4ed6-86db-3aab69b050db.jpg?1782685415",
+      "image_back_url": null,
+      "role": "Engine/Outlet — 1-mana nontoken artifact; self-sacrificing outlet ({2}, {T}, not free) that replaces itself with a card",
+      "board": "mainboard"
+    },
+    {
+      "name": "Melded Moxite",
+      "qty": 2,
+      "cmc": 2,
+      "mana_cost": "{1}{R}",
+      "type_line": "Artifact",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this artifact enters, you may discard a card. If you do, draw two cards.\n{3}, Sacrifice this artifact: Create a tapped 2/2 colorless Robot artifact creature token.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Tokens",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Card Draw",
+        "Looting",
+        "Token Generation",
+        "Cards: Extra-Cost"
+      ],
+      "set": "eoe",
+      "collector_number": "143",
+      "image_url": "https://cards.scryfall.io/normal/front/4/7/474c067f-eb24-4ae8-b4c0-f6f8e24cdb2a.jpg?1782685487",
+      "image_back_url": null,
+      "role": "Engine/Outlet — nontoken artifact, ETB optional discard-for-two, later self-sacrifices into a Robot for {3}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plasma Bolt",
+      "qty": 2,
+      "cmc": 1,
+      "mana_cost": "{R}",
+      "type_line": "Sorcery",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Plasma Bolt deals 2 damage to any target.\nVoid — Plasma Bolt deals 3 damage instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Spellslinger",
+        "Interaction/Disruption",
+        "Direct Damage"
+      ],
+      "set": "eoe",
+      "collector_number": "152",
+      "image_url": "https://cards.scryfall.io/normal/front/a/1/a1a1834b-76c2-4496-b8c5-18b69ab34c4c.jpg?1782685481",
+      "image_back_url": null,
+      "role": "Reach — 1 mana for 2 to the face, 3 whenever Void is live (sorcery speed)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Embrace Oblivion",
+      "qty": 2,
+      "cmc": 1,
+      "mana_cost": "{B}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDestroy target creature or Spacecraft.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "eoe",
+      "collector_number": "98",
+      "image_url": "https://cards.scryfall.io/normal/front/3/7/3754fc20-7aaa-437d-97df-d6cf1c29586c.jpg?1782685518",
+      "image_back_url": null,
+      "role": "Interaction/Outlet — 1-mana unconditional kill whose additional cost is itself a Voidborn drain",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "qty": 1,
+      "cmc": 1,
+      "mana_cost": "{B}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "eoe",
+      "collector_number": "122",
+      "image_url": "https://cards.scryfall.io/normal/front/7/8/78c8bc60-1378-4028-8ab1-3286e459bffb.jpg?1782685501",
+      "image_back_url": null,
+      "role": "Interaction — 1-mana -2/-2, or -10/-10 on any turn a permanent has left the battlefield (sorcery speed)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geothermal Bog",
+      "qty": 2,
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Land — Swamp Mountain",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "dmu",
+      "collector_number": "247",
+      "image_url": "https://assets.cubecobra.com/cardimages/1e62fe57-4fa4-4bfd-8e31-9f6db774d7e2/normal.webp",
+      "image_back_url": null,
+      "role": "Land — the only free BR dual in the pool (enters tapped)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "qty": 7,
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "eoe",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "Land — untapped black source",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "qty": 7,
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "eoe",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "Land — untapped red source",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Drill Too Deep",
+      "qty": 2,
+      "cmc": 2,
+      "mana_cost": "{1}{R}",
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Put five charge counters on target Spacecraft or Planet you control.\n• Destroy target artifact.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Charge Counter Placement"
+      ],
+      "set": "eoe",
+      "collector_number": "133",
+      "image_url": "https://cards.scryfall.io/normal/front/b/9/b9d3b6e8-47c8-49e3-b204-8b659e127bde.jpg?1782685494",
+      "image_back_url": null,
+      "role": "Answers artifacts — oracle is 'Destroy target artifact'; it cannot touch an enchantment, so the previous 'noncreature_permanents' label was over-broad",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cut Propulsion",
+      "qty": 2,
+      "cmc": 3,
+      "mana_cost": "{2}{R}",
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature deals damage to itself equal to its power. If that creature has flying, it deals twice that much damage to itself instead.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "eoe",
+      "collector_number": "130",
+      "image_url": "https://cards.scryfall.io/normal/front/d/9/d96f1c41-3d11-48a8-b962-db46a2d054de.jpg?1782685496",
+      "image_back_url": null,
+      "role": "Answers aggressive large threats and fliers — the damage scales with the creature's POWER, so a high-toughness / low-power blocker survives it",
+      "board": "sideboard"
+    },
+    {
+      "name": "Lithobraking",
+      "qty": 2,
+      "cmc": 3,
+      "mana_cost": "{2}{R}",
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create a Lander token. Then you may sacrifice an artifact. When you do, Lithobraking deals 2 damage to each creature. (A Lander token is an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Tokens",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Sweeper/Board Wipe",
+        "Token Generation",
+        "Land Fetch",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "eoe",
+      "collector_number": "142",
+      "image_url": "https://cards.scryfall.io/normal/front/5/a/5a22024c-2c0f-4487-98d1-ee89cf3dba89.jpg?1782685488",
+      "image_back_url": null,
+      "role": "Answers wide_boards — makes its own Lander to pay the sacrifice, and every creature it kills on our side is a Voidborn drain",
+      "board": "sideboard"
+    },
+    {
+      "name": "Ruinous Rampage",
+      "qty": 2,
+      "cmc": 3,
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Sorcery",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Choose one —\n• Ruinous Rampage deals 3 damage to each opponent.\n• Exile all artifacts with mana value 3 or less.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Sweeper/Board Wipe"
+      ],
+      "set": "eoe",
+      "collector_number": "158",
+      "image_url": "https://cards.scryfall.io/normal/front/9/1/91d7a4c2-1a4b-4e9f-b543-225b6906752f.jpg?1782685476",
+      "image_back_url": null,
+      "role": "Answers lifegain (mode 1) and artifacts (mode 2) — 3 uninteractable points to the face when the opponent is gaining life faster than the 1-per-death drain, or a one-sided-when-boarded-correctly artifact exile",
+      "board": "sideboard"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "qty": 2,
+      "cmc": 3,
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Robot",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "set": "eoe",
+      "collector_number": "237",
+      "image_url": "https://cards.scryfall.io/normal/front/0/e/0efe5342-42b7-4f49-b4b4-d77055508c4d.jpg?1782685420",
+      "image_back_url": null,
+      "role": "Answers graveyard — and is itself a nontoken artifact creature, so it is a Weapons Manufacturing trigger and its Lander is fodder",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "Black-red aristocrats drain built as a 13-one-drop aggro curve. Susurian Voidborn ('Whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life') turns every body and artifact the deck loses into reach, while Weftstalker Ardent bills the same permanents on the way in and Lightless Evangel banks them as +1/+1 counters. Weapons Manufacturing banks a 2-damage Munitions charge off each of the 10/24 nontoken artifacts, and those charges are only worth damage when something removes them — the Munitions clause is 'When this token LEAVES THE BATTLEFIELD, it deals 2 damage to any target' — so the list carries 6/24 cards that can cash one (Umbral Collar Zealot 2, Slagdrill Scrapper 2, Embrace Oblivion 2), 4/24 of them repeatably. Rust Harvester is the one repeatable non-combat damage source. The deck manufactures its own Void condition on 16/24 cards, which upgrades Plasma Bolt to 3 to the face and Tragic Trajectory to -10/-10 for one mana each.",
+  "strategy_es": "drenaje de aristócratas negro-rojo (agro)",
+  "identity_es": "Drenaje de aristócratas negro-rojo construido como una curva agro de 13 cartas de un maná. Susurian Voidborn ('Whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life') convierte cada cuerpo y artefacto que pierde el mazo en alcance, mientras Weftstalker Ardent cobra por esos mismos permanentes a la entrada y Lightless Evangel los guarda como contadores +1/+1. Weapons Manufacturing guarda una carga de Munitions de 2 de daño por cada uno de los 10/24 artefactos no-ficha, y esas cargas solo valen daño cuando algo las quita — la cláusula de Munitions es 'When this token LEAVES THE BATTLEFIELD, it deals 2 damage to any target' — así que la lista lleva 6/24 cartas que pueden cobrar una (Umbral Collar Zealot 2, Slagdrill Scrapper 2, Embrace Oblivion 2), 4/24 de ellas de forma repetible. Rust Harvester es la única fuente repetible de daño fuera de combate. El mazo fabrica su propia condición de Void en 16/24 cartas, lo que mejora Plasma Bolt a 3 a la cara y Tragic Trajectory a -10/-10 por un maná cada uno.",
+  "pitch_es": "Drenaje de aristócratas negro-rojo construido como una curva agro de 13 cartas de un maná. Susurian Voidborn ('Whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life') convierte cada cuerpo y artefacto que pierde el mazo en alcance, mientras Weftstalker Ardent cobra por esos mismos permanentes a la entrada y Lightless Evangel los guarda como contadores +1/+1. Weapons Manufacturing guarda una carga de Munitions de 2 de daño por cada uno de los 10/24 artefactos no-ficha, y esas cargas solo valen daño cuando algo las quita — la cláusula de Munitions es 'When this token LEAVES THE BATTLEFIELD, it deals 2 damage to any target' — así que la lista lleva 6/24 cartas que pueden cobrar una (Umbral Collar Zealot 2, Slagdrill Scrapper 2, Embrace Oblivion 2), 4/24 de ellas de forma repetible. Rust Harvester es la única fuente repetible de daño fuera de combate. El mazo fabrica su propia condición de Void en 16/24 cartas, lo que mejora Plasma Bolt a 3 a la cara y Tragic Trajectory a -10/-10 por un maná cada uno."
+}
