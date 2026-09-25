@@ -2,21 +2,16 @@
   "deck_name": "wbr-meld-midrange",
   "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
   "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
-  "built_at": "2026-07-09T17:50:14Z",
+  "built_at": "2026-08-31T17:16:05Z",
   "format": "40-card",
-  "strategy": "Mardu (W/B/R) meld midrange with a reanimator-lite subtheme",
-  "colors": "WBR",
-  "identity": "All three Innistrad meld pairs (Brisela, Hanweir the Writhing Township, Chittering Host) built as pure upside on top of a removal-and-recursion Mardu midrange shell; Through the Breach cheats Griselbrand in early, and its own sacrifice clause sets up a permanent Edgar's Awakening reanimation later.",
+  "strategy": "Midrange",
+  "colors": "WRB",
+  "identity": "A Mardu tokens-midrange deck that happens to run all three of the cube's meld pairs. Its floor is the deck: Hanweir Garrison makes two attacking tokens every combat, Gather the Townsfolk and Lingering Souls add up to twelve bodies across four cards, and seven interaction slots hold the board. The melds are high-value upside layered on top, not the plan: measured against this 40-card list at 15 cards seen, the Graf Rats / Midnight Scavengers pair assembles 36.9% of the time (2 copies each), while the two singleton pairs - Gisela/Bruna and Hanweir Garrison/Battlements - assemble 13.5% each, and at least one pair assembles 54.3% of the time. Brisela, the only meld result that is a win condition on its own rather than a large body, is a 13.5% card. The graveyard layer exists to move those numbers after the fact rather than before it: Crawl from the Cellar and Edgar's Awakening return any creature card at any mana value, Midnight Scavengers returns the MV 3-or-less halves, and Bruna returns an Angel or Human directly to the battlefield - so a half that is answered comes back, though none of them find a half that was never drawn.",
   "restrictions": {
-    "base": "cube_mainboard",
-    "multipliers": {
-      "common": 2,
-      "uncommon": 2
-    },
-    "only_from": {},
-    "excluded": [],
-    "max_total_rare_mythic": 6,
-    "max_total_rare_mythic_note": "Relaxed from default 5 to 6, per explicit user approval, to fit the full meld package (3 pairs) plus both named keystones (Griselbrand, Through the Breach)."
+    "copy_limits": "PASS - every common and uncommon at <=2 copies, every rare and mythic at 1. Basic lands exempt (Plains 2, Swamp 3, Mountain 2).",
+    "rare_mythic_cap": "PASS - exactly 5 of 5 used, all mainboard: Gisela, the Broken Blade (mythic), Bruna, the Fading Light (rare), Hanweir Garrison (rare), Hanweir Battlements (rare land), Collective Brutality (rare). Sideboard contains zero rares or mythics.",
+    "excluded_cards": "PASS - the three meld results (Brisela, Voice of Nightmares; Hanweir, the Writhing Township; Chittering Host) are excluded from the deckable pool per the ruling that meld results are combined back faces and occupy no deck slot.",
+    "colour_identity": "PASS - every nonland card usable in W/R/B by effective_cost.best_mode. Lingering Souls prints identity [B,W] and is legal on both of its actual modes ({2}{W} cast, {1}{B} flashback)."
   },
   "commander": null,
   "mana_audit": {
@@ -24,35 +19,53 @@
     "recommended_land_count": 16,
     "land_count_status": "PASS",
     "ramp_count": 0,
-    "avg_cmc": 3.17,
+    "cantrip_count": 4,
+    "accel_count": 4,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.54,
+      "reference_avg_mv": 2.5,
+      "accel": 4,
+      "adjustment": -0.613,
+      "raw_target": 16.387,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.54,
     "pip_demand": {
-      "B": 18,
-      "R": 6,
-      "W": 9
+      "W": 10,
+      "B": 12,
+      "R": 6
     },
     "land_color_production": {
-      "W": 5,
-      "B": 9,
-      "R": 5
+      "W": 6,
+      "R": 6,
+      "B": 7
     },
     "color_balance_status": "PASS",
     "color_balance_per_color": {
       "B": {
-        "pip_pct": 54.5,
-        "prod_pct": 56.2,
-        "gap": -1.7,
+        "pip_pct": 42.9,
+        "prod_pct": 43.8,
+        "gap": -0.9,
         "status": "OK"
       },
       "R": {
-        "pip_pct": 18.2,
-        "prod_pct": 31.2,
-        "gap": -13,
+        "pip_pct": 21.4,
+        "prod_pct": 37.5,
+        "gap": -16.1,
         "status": "OK"
       },
       "W": {
-        "pip_pct": 27.3,
-        "prod_pct": 31.2,
-        "gap": -3.9,
+        "pip_pct": 35.7,
+        "prod_pct": 37.5,
+        "gap": -1.8,
         "status": "OK"
       }
     },
@@ -60,721 +73,1359 @@
   },
   "mainboard": [
     {
-      "name": "Griselbrand",
-      "cmc": 8,
-      "type_line": "Legendary Creature — Demon",
-      "color_identity": [
-        "B"
-      ],
-      "colors": [
-        "B"
-      ],
-      "oracle_text": "Flying, lifelink\nPay 7 life: Draw seven cards.",
-      "rarity": "mythic",
-      "mana_cost": "{4}{B}{B}{B}{B}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Through the Breach",
-      "cmc": 5,
-      "type_line": "Instant — Arcane",
-      "color_identity": [
-        "R"
-      ],
-      "colors": [
-        "R"
-      ],
-      "oracle_text": "You may put a creature card from your hand onto the battlefield. That creature gains haste. Sacrifice that creature at the beginning of the next end step.\nSplice onto Arcane {2}{R}{R} (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)",
-      "rarity": "mythic",
-      "mana_cost": "{4}{R}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Bruna, the Fading Light",
-      "cmc": 7,
-      "type_line": "Legendary Creature — Angel Horror",
-      "color_identity": [
-        "W"
-      ],
+      "name": "Thraben Inspector",
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "mana_cost": "{W}",
       "colors": [
         "W"
       ],
-      "oracle_text": "When you cast this spell, you may return target Angel or Human creature card from your graveyard to the battlefield.\nFlying, vigilance\n(Melds with Gisela, the Broken Blade.)",
-      "rarity": "rare",
-      "mana_cost": "{5}{W}{W}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Gisela, the Broken Blade",
-      "cmc": 4,
-      "type_line": "Legendary Creature — Angel Horror",
       "color_identity": [
         "W"
       ],
-      "colors": [
-        "W"
-      ],
-      "oracle_text": "Flying, first strike, lifelink\nAt the beginning of your end step, if you both own and control Gisela and a creature named Bruna, the Fading Light, exile them, then meld them into Brisela, Voice of Nightmares.",
-      "rarity": "mythic",
-      "mana_cost": "{2}{W}{W}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Hanweir Garrison",
-      "cmc": 3,
+      "cmc": 1,
       "type_line": "Creature — Human Soldier",
-      "color_identity": [
-        "R"
-      ],
-      "colors": [
-        "R"
-      ],
-      "oracle_text": "Whenever this creature attacks, create two 1/1 red Human creature tokens that are tapped and attacking.\n(Melds with Hanweir Battlements.)",
-      "rarity": "rare",
-      "mana_cost": "{2}{R}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Graf Rats",
-      "cmc": 2,
-      "type_line": "Creature — Rat",
-      "color_identity": [
-        "B"
-      ],
-      "colors": [
-        "B"
-      ],
-      "oracle_text": "At the beginning of combat on your turn, if you both own and control this creature and a creature named Midnight Scavengers, exile them, then meld them into Chittering Host.",
-      "rarity": "uncommon",
-      "mana_cost": "{1}{B}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Graf Rats",
-      "cmc": 2,
-      "type_line": "Creature — Rat",
-      "color_identity": [
-        "B"
-      ],
-      "colors": [
-        "B"
-      ],
-      "oracle_text": "At the beginning of combat on your turn, if you both own and control this creature and a creature named Midnight Scavengers, exile them, then meld them into Chittering Host.",
-      "rarity": "uncommon",
-      "mana_cost": "{1}{B}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Midnight Scavengers",
-      "cmc": 5,
-      "type_line": "Creature — Human Rogue",
-      "color_identity": [
-        "B"
-      ],
-      "colors": [
-        "B"
-      ],
-      "oracle_text": "When this creature enters, you may return target creature card with mana value 3 or less from your graveyard to your hand.\n(Melds with Graf Rats.)",
       "rarity": "common",
-      "mana_cost": "{4}{B}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Midnight Scavengers",
-      "cmc": 5,
-      "type_line": "Creature — Human Rogue",
-      "color_identity": [
-        "B"
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Card Draw",
+        "Cards: Self-Replacing"
       ],
-      "colors": [
-        "B"
-      ],
-      "oracle_text": "When this creature enters, you may return target creature card with mana value 3 or less from your graveyard to your hand.\n(Melds with Graf Rats.)",
-      "rarity": "common",
-      "mana_cost": "{4}{B}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Edgar's Awakening",
-      "cmc": 5,
-      "type_line": "Sorcery",
-      "color_identity": [
-        "B"
-      ],
-      "colors": [
-        "B"
-      ],
-      "oracle_text": "Return target creature card from your graveyard to the battlefield.\nWhen you discard this card, you may pay {B}. When you do, return target creature card from your graveyard to your hand.",
-      "rarity": "uncommon",
-      "mana_cost": "{3}{B}{B}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Edgar's Awakening",
-      "cmc": 5,
-      "type_line": "Sorcery",
-      "color_identity": [
-        "B"
-      ],
-      "colors": [
-        "B"
-      ],
-      "oracle_text": "Return target creature card from your graveyard to the battlefield.\nWhen you discard this card, you may pay {B}. When you do, return target creature card from your graveyard to your hand.",
-      "rarity": "uncommon",
-      "mana_cost": "{3}{B}{B}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Tragic Slip",
-      "cmc": 1,
-      "type_line": "Instant",
-      "color_identity": [
-        "B"
-      ],
-      "colors": [
-        "B"
-      ],
-      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.",
-      "rarity": "common",
-      "mana_cost": "{B}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Tragic Slip",
-      "cmc": 1,
-      "type_line": "Instant",
-      "color_identity": [
-        "B"
-      ],
-      "colors": [
-        "B"
-      ],
-      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.",
-      "rarity": "common",
-      "mana_cost": "{B}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Infernal Grasp",
-      "cmc": 2,
-      "type_line": "Instant",
-      "color_identity": [
-        "B"
-      ],
-      "colors": [
-        "B"
-      ],
-      "oracle_text": "Destroy target creature. You lose 2 life.",
-      "rarity": "uncommon",
-      "mana_cost": "{1}{B}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Infernal Grasp",
-      "cmc": 2,
-      "type_line": "Instant",
-      "color_identity": [
-        "B"
-      ],
-      "colors": [
-        "B"
-      ],
-      "oracle_text": "Destroy target creature. You lose 2 life.",
-      "rarity": "uncommon",
-      "mana_cost": "{1}{B}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Abrade",
-      "cmc": 2,
-      "type_line": "Instant",
-      "color_identity": [
-        "R"
-      ],
-      "colors": [
-        "R"
-      ],
-      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
-      "rarity": "uncommon",
-      "mana_cost": "{1}{R}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Abrade",
-      "cmc": 2,
-      "type_line": "Instant",
-      "color_identity": [
-        "R"
-      ],
-      "colors": [
-        "R"
-      ],
-      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
-      "rarity": "uncommon",
-      "mana_cost": "{1}{R}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Bloodtithe Harvester",
-      "cmc": 2,
-      "type_line": "Creature — Vampire",
-      "color_identity": [
-        "B",
-        "R"
-      ],
-      "colors": [
-        "B",
-        "R"
-      ],
-      "oracle_text": "When this creature enters, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\n{T}, Sacrifice this creature: Target creature gets -X/-X until end of turn, where X is twice the number of Blood tokens you control. Activate only as a sorcery.",
-      "rarity": "uncommon",
-      "mana_cost": "{B}{R}",
-      "board": "mainboard"
-    },
-    {
-      "name": "Bloodtithe Harvester",
-      "cmc": 2,
-      "type_line": "Creature — Vampire",
-      "color_identity": [
-        "B",
-        "R"
-      ],
-      "colors": [
-        "B",
-        "R"
-      ],
-      "oracle_text": "When this creature enters, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\n{T}, Sacrifice this creature: Target creature gets -X/-X until end of turn, where X is twice the number of Blood tokens you control. Activate only as a sorcery.",
-      "rarity": "uncommon",
-      "mana_cost": "{B}{R}",
+      "set": "inr",
+      "collector_number": "45",
+      "image_url": "https://cards.scryfall.io/normal/front/0/8/08a5007f-06a0-40fa-a252-c38baa6b5c6f.jpg?1736467608",
+      "image_back_url": null,
+      "role": "Engine/Infrastructure",
       "board": "mainboard"
     },
     {
       "name": "Thraben Inspector",
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
       "cmc": 1,
       "type_line": "Creature — Human Soldier",
-      "color_identity": [
-        "W"
-      ],
-      "colors": [
-        "W"
-      ],
-      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
       "rarity": "common",
-      "mana_cost": "{W}",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "set": "inr",
+      "collector_number": "45",
+      "image_url": "https://cards.scryfall.io/normal/front/0/8/08a5007f-06a0-40fa-a252-c38baa6b5c6f.jpg?1736467608",
+      "image_back_url": null,
+      "role": "Engine/Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Crawl from the Cellar",
+      "oracle_text": "Return target creature card from your graveyard to your hand. Put a +1/+1 counter on up to one target Zombie you control.\nFlashback {3}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Reanimator",
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "inr",
+      "collector_number": "102",
+      "image_url": "https://cards.scryfall.io/normal/front/7/9/79563dd1-640c-4ebd-a347-0b71439b79d3.jpg?1736467916",
+      "image_back_url": null,
+      "role": "Engine/Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Crawl from the Cellar",
+      "oracle_text": "Return target creature card from your graveyard to your hand. Put a +1/+1 counter on up to one target Zombie you control.\nFlashback {3}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Reanimator",
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "inr",
+      "collector_number": "102",
+      "image_url": "https://cards.scryfall.io/normal/front/7/9/79563dd1-640c-4ebd-a347-0b71439b79d3.jpg?1736467916",
+      "image_back_url": null,
+      "role": "Engine/Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Faithless Looting",
+      "oracle_text": "Draw two cards, then discard two cards.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Looting",
+        "Flashback"
+      ],
+      "set": "soc",
+      "collector_number": "244",
+      "image_url": "https://cards.scryfall.io/normal/front/f/c/fc019ffa-4461-4f3d-ab8d-e4d20e77ca0c.jpg?1775941293",
+      "image_back_url": null,
+      "role": "Engine/Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Faithless Looting",
+      "oracle_text": "Draw two cards, then discard two cards.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Looting",
+        "Flashback"
+      ],
+      "set": "soc",
+      "collector_number": "244",
+      "image_url": "https://cards.scryfall.io/normal/front/f/c/fc019ffa-4461-4f3d-ab8d-e4d20e77ca0c.jpg?1775941293",
+      "image_back_url": null,
+      "role": "Engine/Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Axe",
+      "oracle_text": "As an additional cost to cast this spell, discard a card or pay {5}.\nLightning Axe deals 5 damage to target creature.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cards: Extra-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "162",
+      "image_url": "https://cards.scryfall.io/normal/front/9/0/90911c79-24c3-4566-b72c-02ccde083f1b.jpg?1736473361",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Graf Rats",
+      "oracle_text": "At the beginning of combat on your turn, if you both own and control this creature and a creature named Midnight Scavengers, exile them, then meld them into Chittering Host.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Rat",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Enabler/Fodder",
+        "Meld"
+      ],
+      "set": "inr",
+      "collector_number": "113",
+      "image_url": "https://cards.scryfall.io/normal/front/f/8/f830ede6-ddbf-49b9-80cd-e3dbeccbf208.jpg?1738701303",
+      "image_back_url": null,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Graf Rats",
+      "oracle_text": "At the beginning of combat on your turn, if you both own and control this creature and a creature named Midnight Scavengers, exile them, then meld them into Chittering Host.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Rat",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Enabler/Fodder",
+        "Meld"
+      ],
+      "set": "inr",
+      "collector_number": "113",
+      "image_url": "https://cards.scryfall.io/normal/front/f/8/f830ede6-ddbf-49b9-80cd-e3dbeccbf208.jpg?1738701303",
+      "image_back_url": null,
+      "role": "Threat/Payoff",
       "board": "mainboard"
     },
     {
       "name": "Gather the Townsfolk",
-      "cmc": 2,
-      "type_line": "Sorcery",
-      "color_identity": [
-        "W"
-      ],
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "mana_cost": "{1}{W}",
       "colors": [
         "W"
       ],
-      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
       "rarity": "common",
-      "mana_cost": "{1}{W}",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "23",
+      "image_url": "https://cards.scryfall.io/normal/front/8/1/81bd1cd0-fa8c-4e93-aebe-dfde70ac002b.jpg?1736467509",
+      "image_back_url": null,
+      "role": "Threat/Payoff",
       "board": "mainboard"
     },
     {
       "name": "Gather the Townsfolk",
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
       "cmc": 2,
       "type_line": "Sorcery",
-      "color_identity": [
-        "W"
-      ],
-      "colors": [
-        "W"
-      ],
-      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
       "rarity": "common",
-      "mana_cost": "{1}{W}",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "23",
+      "image_url": "https://cards.scryfall.io/normal/front/8/1/81bd1cd0-fa8c-4e93-aebe-dfde70ac002b.jpg?1736467509",
+      "image_back_url": null,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Infernal Grasp",
+      "oracle_text": "Destroy target creature. You lose 2 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life: Cost"
+      ],
+      "set": "soc",
+      "collector_number": "216",
+      "image_url": "https://cards.scryfall.io/normal/front/f/6/f67b323d-0dda-45f8-84b7-d883ce5045a8.jpg?1775941089",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Infernal Grasp",
+      "oracle_text": "Destroy target creature. You lose 2 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life: Cost"
+      ],
+      "set": "soc",
+      "collector_number": "216",
+      "image_url": "https://cards.scryfall.io/normal/front/f/6/f67b323d-0dda-45f8-84b7-d883ce5045a8.jpg?1775941089",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Collective Brutality",
+      "oracle_text": "Escalate—Discard a card. (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Target opponent reveals their hand. You choose an instant or sorcery card from it. That player discards that card.\n• Target creature gets -2/-2 until end of turn.\n• Target opponent loses 2 life and you gain 2 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Kicker/Scaling",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Discard",
+        "Life Drain",
+        "Cards: Extra-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "101",
+      "image_url": "https://cards.scryfall.io/normal/front/a/e/ae35b6c5-3bfd-483e-9c85-58629b717d7f.jpg?1736467909",
+      "image_back_url": null,
+      "role": "Interaction",
       "board": "mainboard"
     },
     {
       "name": "Lingering Souls",
-      "cmc": 3,
-      "type_line": "Sorcery",
+      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
       "color_identity": [
         "B",
         "W"
       ],
-      "colors": [
-        "W"
-      ],
-      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "cmc": 3,
+      "type_line": "Sorcery",
       "rarity": "uncommon",
-      "mana_cost": "{2}{W}",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "tdc",
+      "collector_number": "123",
+      "image_url": "https://cards.scryfall.io/normal/front/2/a/2a00c585-5bbc-4622-bf5b-4ec63b669f4c.jpg?1743206160",
+      "image_back_url": null,
+      "role": "Threat/Payoff",
       "board": "mainboard"
     },
     {
       "name": "Lingering Souls",
-      "cmc": 3,
-      "type_line": "Sorcery",
+      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
       "color_identity": [
         "B",
         "W"
       ],
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "tdc",
+      "collector_number": "123",
+      "image_url": "https://cards.scryfall.io/normal/front/2/a/2a00c585-5bbc-4622-bf5b-4ec63b669f4c.jpg?1743206160",
+      "image_back_url": null,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hanweir Garrison",
+      "oracle_text": "Whenever this creature attacks, create two 1/1 red Human creature tokens that are tapped and attacking.\n(Melds with Hanweir Battlements.)",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Tokens",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "157",
+      "image_url": "https://cards.scryfall.io/normal/front/1/8/1811b4fa-fed6-46ea-a6de-bb7624a5b1de.jpg?1777874484",
+      "image_back_url": null,
+      "role": "Engine/Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Fiery Temper",
+      "oracle_text": "Fiery Temper deals 3 damage to any target.\nMadness {R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{1}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Madness"
+      ],
+      "set": "inr",
+      "collector_number": "154",
+      "image_url": "https://cards.scryfall.io/normal/front/1/d/1d3a3a1d-c393-4a57-8a0e-5907d1722331.jpg?1736468138",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Edgar's Awakening",
+      "oracle_text": "Return target creature card from your graveyard to the battlefield.\nWhen you discard this card, you may pay {B}. When you do, return target creature card from your graveyard to your hand.",
+      "mana_cost": "{3}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Payload/Payoff",
+        "Reanimation"
+      ],
+      "set": "inr",
+      "collector_number": "108",
+      "image_url": "https://cards.scryfall.io/normal/front/b/2/b2ff8b0a-f424-4a8d-a682-848bf1f3b07b.jpg?1736467950",
+      "image_back_url": null,
+      "role": "Engine/Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Olivia's Dragoon",
+      "oracle_text": "Discard a card: This creature gains flying until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Vampire Berserker",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Evasion Granting"
+      ],
+      "set": "inr",
+      "collector_number": "127",
+      "image_url": "https://cards.scryfall.io/normal/front/5/7/571a9e92-6f34-4bf4-b7f4-15d12560efb6.jpg?1736468024",
+      "image_back_url": null,
+      "role": "Engine/Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gisela, the Broken Blade",
+      "oracle_text": "Flying, first strike, lifelink\nAt the beginning of your end step, if you both own and control Gisela and a creature named Bruna, the Fading Light, exile them, then meld them into Brisela, Voice of Nightmares.",
+      "mana_cost": "{2}{W}{W}",
       "colors": [
         "W"
       ],
-      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
-      "rarity": "uncommon",
-      "mana_cost": "{2}{W}",
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Creature — Angel Horror",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Lifegain",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Meld"
+      ],
+      "set": "inr",
+      "collector_number": "24",
+      "image_url": "https://cards.scryfall.io/normal/front/0/4/04506bad-3856-4184-8dda-941ded60f41a.jpg?1738701214",
+      "image_back_url": null,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Midnight Scavengers",
+      "oracle_text": "When this creature enters, you may return target creature card with mana value 3 or less from your graveyard to your hand.\n(Melds with Graf Rats.)",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Human Rogue",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Cards: Net-Positive"
+      ],
+      "set": "inr",
+      "collector_number": "123",
+      "image_url": "https://cards.scryfall.io/normal/front/b/c/bc079c81-85e8-4a0d-83fe-533c4feaa343.jpg?1738701336",
+      "image_back_url": null,
+      "role": "Engine/Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Midnight Scavengers",
+      "oracle_text": "When this creature enters, you may return target creature card with mana value 3 or less from your graveyard to your hand.\n(Melds with Graf Rats.)",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Human Rogue",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Cards: Net-Positive"
+      ],
+      "set": "inr",
+      "collector_number": "123",
+      "image_url": "https://cards.scryfall.io/normal/front/b/c/bc079c81-85e8-4a0d-83fe-533c4feaa343.jpg?1738701336",
+      "image_back_url": null,
+      "role": "Engine/Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bruna, the Fading Light",
+      "oracle_text": "When you cast this spell, you may return target Angel or Human creature card from your graveyard to the battlefield.\nFlying, vigilance\n(Melds with Gisela, the Broken Blade.)",
+      "mana_cost": "{5}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 7,
+      "type_line": "Legendary Creature — Angel Horror",
+      "rarity": "rare",
+      "power": "5",
+      "toughness": "7",
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Reanimation",
+        "Cards: Net-Positive"
+      ],
+      "set": "inr",
+      "collector_number": "14",
+      "image_url": "https://cards.scryfall.io/normal/front/6/f/6fccdb60-5fce-4a6e-a709-b986f9a4b653.jpg?1756757752",
+      "image_back_url": null,
+      "role": "Threat/Payoff",
       "board": "mainboard"
     },
     {
       "name": "Hanweir Battlements",
-      "cmc": 0,
-      "type_line": "Land",
-      "color_identity": [
-        "R"
-      ],
-      "colors": [],
       "oracle_text": "{T}: Add {C}.\n{R}, {T}: Target creature gains haste until end of turn.\n{3}{R}{R}, {T}: If you both own and control this land and a creature named Hanweir Garrison, exile them, then meld them into Hanweir, the Writhing Township.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
       "rarity": "rare",
-      "mana_cost": "",
-      "board": "mainboard"
-    },
-    {
-      "name": "Sunlit Marsh",
-      "cmc": 0,
-      "type_line": "Land — Plains Swamp",
-      "color_identity": [
-        "B",
-        "W"
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Haste Granting"
       ],
-      "colors": [],
-      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
-      "rarity": "common",
-      "mana_cost": "",
-      "board": "mainboard"
-    },
-    {
-      "name": "Sunlit Marsh",
-      "cmc": 0,
-      "type_line": "Land — Plains Swamp",
-      "color_identity": [
-        "B",
-        "W"
-      ],
-      "colors": [],
-      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
-      "rarity": "common",
-      "mana_cost": "",
-      "board": "mainboard"
-    },
-    {
-      "name": "Geothermal Bog",
-      "cmc": 0,
-      "type_line": "Land — Swamp Mountain",
-      "color_identity": [
-        "B",
-        "R"
-      ],
-      "colors": [],
-      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
-      "rarity": "common",
-      "mana_cost": "",
-      "board": "mainboard"
-    },
-    {
-      "name": "Geothermal Bog",
-      "cmc": 0,
-      "type_line": "Land — Swamp Mountain",
-      "color_identity": [
-        "B",
-        "R"
-      ],
-      "colors": [],
-      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
-      "rarity": "common",
-      "mana_cost": "",
+      "set": "inr",
+      "collector_number": "279",
+      "image_url": "https://cards.scryfall.io/normal/front/8/c/8c0acb91-edfc-43a5-af77-6614327fce43.jpg?1777874503",
+      "image_back_url": null,
+      "role": "Land",
       "board": "mainboard"
     },
     {
       "name": "Sacred Peaks",
-      "cmc": 0,
-      "type_line": "Land — Mountain Plains",
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
       "color_identity": [
         "R",
         "W"
       ],
-      "colors": [],
-      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
       "rarity": "common",
-      "mana_cost": "",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "soc",
+      "collector_number": "402",
+      "image_url": "https://cards.scryfall.io/normal/front/e/e/ee2d6798-b19d-4628-bb57-05663ab4af68.jpg?1775942394",
+      "image_back_url": null,
+      "role": "Land",
       "board": "mainboard"
     },
     {
       "name": "Sacred Peaks",
-      "cmc": 0,
-      "type_line": "Land — Mountain Plains",
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
       "color_identity": [
         "R",
         "W"
       ],
-      "colors": [],
-      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
       "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "soc",
+      "collector_number": "402",
+      "image_url": "https://cards.scryfall.io/normal/front/e/e/ee2d6798-b19d-4628-bb57-05663ab4af68.jpg?1775942394",
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
       "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "soc",
+      "collector_number": "409",
+      "image_url": "https://cards.scryfall.io/normal/front/f/a/fa447616-db24-4729-bf66-7f72aba0272d.jpg?1775942445",
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "soc",
+      "collector_number": "409",
+      "image_url": "https://cards.scryfall.io/normal/front/f/a/fa447616-db24-4729-bf66-7f72aba0272d.jpg?1775942445",
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geothermal Bog",
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "dsc",
+      "collector_number": "278",
+      "image_url": "https://cards.scryfall.io/normal/front/6/d/6da04570-5d3c-4e9f-a9c1-20589a4bcc24.jpg?1726285420",
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geothermal Bog",
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "dsc",
+      "collector_number": "278",
+      "image_url": "https://cards.scryfall.io/normal/front/6/d/6da04570-5d3c-4e9f-a9c1-20589a4bcc24.jpg?1726285420",
+      "image_back_url": null,
+      "role": "Land",
       "board": "mainboard"
     },
     {
       "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
       "cmc": 0,
       "type_line": "Land",
-      "color_identity": [],
-      "colors": [],
-      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
       "rarity": "common",
-      "mana_cost": "",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "set": "tmc",
+      "collector_number": "65",
+      "image_url": "https://cards.scryfall.io/normal/front/a/3/a30f5555-2fbe-4c88-9e4f-1f2e81ea6cfd.jpg?1771424582",
+      "image_back_url": null,
+      "role": "Land",
       "board": "mainboard"
     },
     {
       "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
       "cmc": 0,
       "type_line": "Land",
-      "color_identity": [],
-      "colors": [],
-      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
       "rarity": "common",
-      "mana_cost": "",
-      "board": "mainboard"
-    },
-    {
-      "name": "Swamp",
-      "cmc": 0,
-      "type_line": "Basic Land — Swamp",
-      "color_identity": [],
-      "colors": [],
-      "oracle_text": "({T}: Add {B}.)",
-      "rarity": "common",
-      "mana_cost": "",
-      "board": "mainboard"
-    },
-    {
-      "name": "Swamp",
-      "cmc": 0,
-      "type_line": "Basic Land — Swamp",
-      "color_identity": [],
-      "colors": [],
-      "oracle_text": "({T}: Add {B}.)",
-      "rarity": "common",
-      "mana_cost": "",
-      "board": "mainboard"
-    },
-    {
-      "name": "Swamp",
-      "cmc": 0,
-      "type_line": "Basic Land — Swamp",
-      "color_identity": [],
-      "colors": [],
-      "oracle_text": "({T}: Add {B}.)",
-      "rarity": "common",
-      "mana_cost": "",
-      "board": "mainboard"
-    },
-    {
-      "name": "Swamp",
-      "cmc": 0,
-      "type_line": "Basic Land — Swamp",
-      "color_identity": [],
-      "colors": [],
-      "oracle_text": "({T}: Add {B}.)",
-      "rarity": "common",
-      "mana_cost": "",
-      "board": "mainboard"
-    },
-    {
-      "name": "Swamp",
-      "cmc": 0,
-      "type_line": "Basic Land — Swamp",
-      "color_identity": [],
-      "colors": [],
-      "oracle_text": "({T}: Add {B}.)",
-      "rarity": "common",
-      "mana_cost": "",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "set": "tmc",
+      "collector_number": "65",
+      "image_url": "https://cards.scryfall.io/normal/front/a/3/a30f5555-2fbe-4c88-9e4f-1f2e81ea6cfd.jpg?1771424582",
+      "image_back_url": null,
+      "role": "Land",
       "board": "mainboard"
     },
     {
       "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
       "cmc": 0,
       "type_line": "Basic Land — Plains",
-      "color_identity": [],
-      "colors": [],
-      "oracle_text": "({T}: Add {W}.)",
       "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
       "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
       "board": "mainboard"
     },
     {
       "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
       "cmc": 0,
       "type_line": "Basic Land — Mountain",
-      "color_identity": [],
-      "colors": [],
-      "oracle_text": "({T}: Add {R}.)",
       "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
       "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
       "board": "mainboard"
     }
   ],
   "sideboard": [
     {
-      "name": "Soul-Guide Gryff",
-      "cmc": 5,
-      "type_line": "Creature — Hippogriff Spirit",
-      "color_identity": [
-        "W"
-      ],
+      "name": "Cathar Commando",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
       "colors": [
         "W"
       ],
-      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
-      "rarity": "common",
-      "mana_cost": "{4}{W}",
-      "board": "sideboard"
-    },
-    {
-      "name": "Soul-Guide Gryff",
-      "cmc": 5,
-      "type_line": "Creature — Hippogriff Spirit",
       "color_identity": [
         "W"
       ],
-      "colors": [
-        "W"
-      ],
-      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
       "rarity": "common",
-      "mana_cost": "{4}{W}",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "15",
+      "image_url": "https://cards.scryfall.io/normal/front/7/c/7cd21530-ca72-4986-a0f2-142b9f23c413.jpg?1736467482",
+      "image_back_url": null,
+      "role": "Hate",
       "board": "sideboard"
     },
     {
       "name": "Cathar Commando",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
       "cmc": 2,
       "type_line": "Creature — Human Soldier",
-      "color_identity": [
-        "W"
-      ],
-      "colors": [
-        "W"
-      ],
-      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
       "rarity": "common",
-      "mana_cost": "{1}{W}",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "15",
+      "image_url": "https://cards.scryfall.io/normal/front/7/c/7cd21530-ca72-4986-a0f2-142b9f23c413.jpg?1736467482",
+      "image_back_url": null,
+      "role": "Hate",
       "board": "sideboard"
     },
     {
-      "name": "Cathar Commando",
-      "cmc": 2,
-      "type_line": "Creature — Human Soldier",
-      "color_identity": [
-        "W"
-      ],
+      "name": "Abrade",
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
       "colors": [
-        "W"
+        "R"
       ],
-      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
-      "rarity": "common",
-      "mana_cost": "{1}{W}",
-      "board": "sideboard"
-    },
-    {
-      "name": "Valorous Stance",
+      "color_identity": [
+        "R"
+      ],
       "cmc": 2,
       "type_line": "Instant",
-      "color_identity": [
-        "W"
-      ],
-      "colors": [
-        "W"
-      ],
-      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
       "rarity": "uncommon",
-      "mana_cost": "{1}{W}",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "set": "soc",
+      "collector_number": "234",
+      "image_url": "https://cards.scryfall.io/normal/front/1/a/1add1757-c1f8-448a-b279-c6940fb7ad5f.jpg?1775941207",
+      "image_back_url": null,
+      "role": "Hate",
       "board": "sideboard"
     },
     {
-      "name": "Valorous Stance",
+      "name": "Abrade",
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
       "cmc": 2,
       "type_line": "Instant",
-      "color_identity": [
-        "W"
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
       ],
+      "set": "soc",
+      "collector_number": "234",
+      "image_url": "https://cards.scryfall.io/normal/front/1/a/1add1757-c1f8-448a-b279-c6940fb7ad5f.jpg?1775941207",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Soul-Guide Gryff",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "mana_cost": "{4}{W}",
       "colors": [
         "W"
       ],
-      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "set": "inr",
+      "collector_number": "40",
+      "image_url": "https://cards.scryfall.io/normal/front/3/9/39388258-cf07-4f29-a379-c743ecac680b.jpg?1736467581",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Soul-Guide Gryff",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "mana_cost": "{4}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "set": "inr",
+      "collector_number": "40",
+      "image_url": "https://cards.scryfall.io/normal/front/3/9/39388258-cf07-4f29-a379-c743ecac680b.jpg?1736467581",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Sever the Bloodline",
+      "oracle_text": "Exile target creature and all other creatures with the same name as that creature.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
       "rarity": "uncommon",
-      "mana_cost": "{1}{W}",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Flashback"
+      ],
+      "set": "inr",
+      "collector_number": "130",
+      "image_url": "https://cards.scryfall.io/normal/front/a/2/a2d4152d-c128-453c-86f5-f2ebcfd48b98.jpg?1736473279",
+      "image_back_url": null,
+      "role": "Hate",
       "board": "sideboard"
     },
     {
       "name": "Killing Wave",
+      "oracle_text": "For each creature, its controller sacrifices it unless they pay X life.",
+      "mana_cost": "{X}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
       "cmc": 1,
       "type_line": "Sorcery",
-      "color_identity": [
-        "B"
-      ],
-      "colors": [
-        "B"
-      ],
-      "oracle_text": "For each creature, its controller sacrifices it unless they pay X life.",
       "rarity": "uncommon",
-      "mana_cost": "{X}{B}",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "set": "inr",
+      "collector_number": "121",
+      "image_url": "https://cards.scryfall.io/normal/front/d/4/d412f946-9063-49da-adb8-1248b828b286.jpg?1736468002",
+      "image_back_url": null,
+      "role": "Flex",
       "board": "sideboard"
     },
     {
-      "name": "Killing Wave",
-      "cmc": 1,
-      "type_line": "Sorcery",
-      "color_identity": [
-        "B"
-      ],
+      "name": "Valorous Stance",
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "mana_cost": "{1}{W}",
       "colors": [
-        "B"
+        "W"
       ],
-      "oracle_text": "For each creature, its controller sacrifices it unless they pay X life.",
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
       "rarity": "uncommon",
-      "mana_cost": "{X}{B}",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "48",
+      "image_url": "https://cards.scryfall.io/normal/front/0/4/04762c85-d25d-4120-adec-8681adcf581a.jpg?1736467629",
+      "image_back_url": null,
+      "role": "Flex",
       "board": "sideboard"
     },
     {
-      "name": "Slayer of the Wicked",
-      "cmc": 4,
-      "type_line": "Creature — Human Soldier",
-      "color_identity": [
-        "W"
-      ],
+      "name": "Valorous Stance",
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "mana_cost": "{1}{W}",
       "colors": [
         "W"
       ],
-      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
-      "rarity": "uncommon",
-      "mana_cost": "{3}{W}",
-      "board": "sideboard"
-    },
-    {
-      "name": "Slayer of the Wicked",
-      "cmc": 4,
-      "type_line": "Creature — Human Soldier",
       "color_identity": [
         "W"
       ],
-      "colors": [
-        "W"
-      ],
-      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "cmc": 2,
+      "type_line": "Instant",
       "rarity": "uncommon",
-      "mana_cost": "{3}{W}",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "48",
+      "image_url": "https://cards.scryfall.io/normal/front/0/4/04762c85-d25d-4120-adec-8681adcf581a.jpg?1736467629",
+      "image_back_url": null,
+      "role": "Flex",
       "board": "sideboard"
     }
   ],
-  "strategy_es": "Midrange Mardu meld con Reanimator ligero",
-  "identity_es": "Tres parejas meld de Innistrad sobre un caparazÃ³n Mardu de removal y recursiÃ³n.",
-  "pitch_es": "Cada mitad de Brisela, Hanweir y Chittering Host funciona sola; completar una pareja es ventaja adicional sobre un mazo real."
+  "pitch": "A Mardu tokens-midrange deck that happens to run all three of the cube's meld pairs. Its floor is the deck: Hanweir Garrison makes two attacking tokens every combat, Gather the Townsfolk and Lingering Souls add up to twelve bodies across four cards, and seven interaction slots hold the board. The melds are high-value upside layered on top, not the plan: measured against this 40-card list at 15 cards seen, the Graf Rats / Midnight Scavengers pair assembles 36.9% of the time (2 copies each), while the two singleton pairs - Gisela/Bruna and Hanweir Garrison/Battlements - assemble 13.5% each, and at least one pair assembles 54.3% of the time. Brisela, the only meld result that is a win condition on its own rather than a large body, is a 13.5% card. The graveyard layer exists to move those numbers after the fact rather than before it: Crawl from the Cellar and Edgar's Awakening return any creature card at any mana value, Midnight Scavengers returns the MV 3-or-less halves, and Bruna returns an Angel or Human directly to the battlefield - so a half that is answered comes back, though none of them find a half that was never drawn.",
+  "strategy_es": "Midrange",
+  "identity_es": "Un midrange de fichas Mardu que resulta jugar las tres parejas de meld del cubo. Su suelo es el mazo: Hanweir Garrison crea dos fichas atacantes en cada combate, Gather the Townsfolk y Lingering Souls suman hasta doce cuerpos repartidos en cuatro cartas, y siete huecos de interacción sostienen el tablero. Los melds son una ganancia de alto valor superpuesta encima, no el plan: medido contra esta lista de 40 cartas con 15 cartas vistas, la pareja Graf Rats / Midnight Scavengers se ensambla el 36,9% de las veces (2 copias de cada una), mientras que las dos parejas de copia única — Gisela/Bruna y Hanweir Garrison/Battlements — se ensamblan el 13,5% cada una, y al menos una pareja se ensambla el 54,3% de las veces. Brisela, el único resultado de meld que es condición de victoria por sí solo y no simplemente un cuerpo grande, es una carta del 13,5%. La capa de cementerio existe para mover esos números a posteriori y no a priori: Crawl from the Cellar y Edgar's Awakening devuelven cualquier carta de criatura de cualquier valor de maná, Midnight Scavengers devuelve las mitades de MV 3 o menos, y Bruna devuelve un Ángel o Humano directamente al campo de batalla, así que una mitad respondida vuelve, aunque ninguna de ellas encuentra una mitad que nunca se robó.",
+  "pitch_es": "Un midrange de fichas Mardu que resulta jugar las tres parejas de meld del cubo. Su suelo es el mazo: Hanweir Garrison crea dos fichas atacantes en cada combate, Gather the Townsfolk y Lingering Souls suman hasta doce cuerpos repartidos en cuatro cartas, y siete huecos de interacción sostienen el tablero. Los melds son una ganancia de alto valor superpuesta encima, no el plan: medido contra esta lista de 40 cartas con 15 cartas vistas, la pareja Graf Rats / Midnight Scavengers se ensambla el 36,9% de las veces (2 copias de cada una), mientras que las dos parejas de copia única — Gisela/Bruna y Hanweir Garrison/Battlements — se ensamblan el 13,5% cada una, y al menos una pareja se ensambla el 54,3% de las veces. Brisela, el único resultado de meld que es condición de victoria por sí solo y no simplemente un cuerpo grande, es una carta del 13,5%. La capa de cementerio existe para mover esos números a posteriori y no a priori: Crawl from the Cellar y Edgar's Awakening devuelven cualquier carta de criatura de cualquier valor de maná, Midnight Scavengers devuelve las mitades de MV 3 o menos, y Bruna devuelve un Ángel o Humano directamente al campo de batalla, así que una mitad respondida vuelve, aunque ninguna de ellas encuentra una mitad que nunca se robó."
 }

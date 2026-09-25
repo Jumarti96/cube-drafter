@@ -1,0 +1,510 @@
+{
+  "deck_name": "gw-colossus-landfall-ramp",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-28T03:40:00Z",
+  "format": "40-card",
+  "strategy": "land-hoarding ramp combo",
+  "colors": "GW",
+  "identity": "GW land-hoarding ramp. Ten cards in this list put a land CARD INTO YOUR HAND rather than onto the battlefield - Wild-Field Scarecrow two at a time, plus Traveler's Amulet, Ambitious Farmhand, Hermit Druid, Eccentric Farmer, Grapple with the Past and Wrenn and Seven's +1 - and that hoarded hand is the ammunition for Cultivator Colossus, whose ETB reads 'you may put a land card from your hand onto the battlefield tapped. If you do, draw a card and repeat this process'. The same land count sizes the kill: Colossus and Wrenn's Treefolk token are both P/T equal to lands you control. Somberwald Sage pulls the seven-mana turn forward to five, and Sigarda, Host of Herons is the hexproof body that wins when the mythics stay in the library.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "rare_mythic_cap": "5 across mainboard + sideboard",
+    "excluded": []
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 10,
+    "cantrip_count": 0,
+    "accel_count": 10,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.87,
+      "reference_avg_mv": 2.5,
+      "accel": 10,
+      "adjustment": -1.173,
+      "raw_target": 15.827,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.87,
+    "pip_demand": {
+      "W": 10,
+      "G": 14
+    },
+    "land_color_production": {
+      "W": 8,
+      "G": 11
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 58.3,
+        "prod_pct": 64.7,
+        "gap": -6.4,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 41.7,
+        "prod_pct": 47.1,
+        "gap": -5.4,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Traveler's Amulet",
+      "qty": 2,
+      "role": "Fuel - basic land to HAND",
+      "board": "mainboard",
+      "cmc": 1,
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle."
+    },
+    {
+      "name": "Ambitious Farmhand // Seasoned Cathar",
+      "qty": 2,
+      "role": "Fuel - basic Plains to HAND",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Peasant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, you may search your library for a basic Plains card, reveal it, put it into your hand, then shuffle.\nCoven — {1}{W}{W}: Transform this creature. Activate only if you control three or more creatures with different powers.\n//\nLifelink"
+    },
+    {
+      "name": "Wild-Field Scarecrow",
+      "qty": 2,
+      "role": "Fuel - TWO basic lands to HAND",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Scarecrow",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Defender\n{2}, Sacrifice this creature: Search your library for up to two basic land cards, reveal them, put them into your hand, then shuffle."
+    },
+    {
+      "name": "Eccentric Farmer",
+      "qty": 1,
+      "role": "Fuel - land card from GY to HAND",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Human Peasant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, mill three cards, then you may return a land card from your graveyard to your hand. (To mill three cards, put the top three cards of your library into your graveyard.)"
+    },
+    {
+      "name": "Grapple with the Past",
+      "qty": 1,
+      "role": "Fuel (instant) + only creature rebuy",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Mill three cards, then you may return a creature or land card from your graveyard to your hand. (To mill three cards, put the top three cards of your library into your graveyard.)"
+    },
+    {
+      "name": "Hermit Druid",
+      "qty": 1,
+      "role": "Fuel - repeatable basic to HAND",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Human Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "{G}, {T}: Reveal cards from the top of your library until you reveal a basic land card. Put that card into your hand and all other cards revealed this way into your graveyard."
+    },
+    {
+      "name": "Somberwald Sage",
+      "qty": 2,
+      "role": "Acceleration for creature spells",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Human Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "{T}: Add three mana of any one color. Spend this mana only to cast creature spells."
+    },
+    {
+      "name": "Scorned Villager // Moonscarred Werewolf",
+      "qty": 2,
+      "role": "Acceleration",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Human Werewolf",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{T}: Add {G}.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nVigilance\n{T}: Add {G}{G}.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+    },
+    {
+      "name": "Cultivator Colossus",
+      "qty": 1,
+      "role": "Pipeline payoff - mass land dump",
+      "board": "mainboard",
+      "cmc": 7,
+      "mana_cost": "{4}{G}{G}{G}",
+      "type_line": "Creature — Plant Beast",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Trample\nCultivator Colossus's power and toughness are each equal to the number of lands you control.\nWhen this creature enters, you may put a land card from your hand onto the battlefield tapped. If you do, draw a card and repeat this process."
+    },
+    {
+      "name": "Wrenn and Seven",
+      "qty": 1,
+      "role": "Redundant payoff + repeatable fuel",
+      "board": "mainboard",
+      "cmc": 5,
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Legendary Planeswalker — Wrenn",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "+1: Reveal the top four cards of your library. Put all land cards revealed this way into your hand and the rest into your graveyard.\n0: Put any number of land cards from your hand onto the battlefield tapped.\n−3: Create a green Treefolk creature token with reach and \"This token's power and toughness are each equal to the number of lands you control.\"\n−8: Return all permanent cards from your graveyard to your hand. You get an emblem with \"You have no maximum hand size.\""
+    },
+    {
+      "name": "Sigarda, Host of Herons",
+      "qty": 1,
+      "role": "Untargetable closer",
+      "board": "mainboard",
+      "cmc": 5,
+      "mana_cost": "{2}{G}{W}{W}",
+      "type_line": "Legendary Creature — Angel",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Flying, hexproof\nSpells and abilities your opponents control can't cause you to sacrifice permanents."
+    },
+    {
+      "name": "Tireless Tracker",
+      "qty": 1,
+      "role": "Landfall card advantage",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Human Scout",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Landfall — Whenever a land you control enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on this creature."
+    },
+    {
+      "name": "Crusader of Odric",
+      "qty": 1,
+      "role": "Board-count closer",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Crusader of Odric's power and toughness are each equal to the number of creatures you control."
+    },
+    {
+      "name": "Valorous Stance",
+      "qty": 2,
+      "role": "Modal removal / payoff protection",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater."
+    },
+    {
+      "name": "Bound by Moonsilver",
+      "qty": 1,
+      "role": "Creature answer, no sacrifice to cast",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{2}{W}",
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack, block, or transform.\nSacrifice another permanent: Attach this Aura to target creature. Activate only as a sorcery and only once each turn."
+    },
+    {
+      "name": "Angelic Purge",
+      "qty": 1,
+      "role": "Only noncreature-permanent answer",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{2}{W}",
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment."
+    },
+    {
+      "name": "Faith Unbroken",
+      "qty": 1,
+      "role": "Exile removal, no sacrifice cost",
+      "board": "mainboard",
+      "cmc": 4,
+      "mana_cost": "{3}{W}",
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield.\nEnchanted creature gets +2/+2."
+    },
+    {
+      "name": "Radiant Grove",
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard",
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Land — Forest Plains",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped."
+    },
+    {
+      "name": "Forest",
+      "qty": 9,
+      "role": "land",
+      "board": "mainboard",
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)"
+    },
+    {
+      "name": "Plains",
+      "qty": 6,
+      "role": "land",
+      "board": "mainboard",
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Fiend Hunter",
+      "qty": 2,
+      "role": "vs. a must-answer creature - exile on a body; maindeck-excluded on {1}{W}{W}",
+      "board": "sideboard",
+      "cmc": 3,
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, you may exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control."
+    },
+    {
+      "name": "Ambush Viper",
+      "qty": 2,
+      "role": "vs. Vampire (23) / Werewolf (13) aggro - flash deathtouch",
+      "board": "sideboard",
+      "cmc": 2,
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Snake",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flash\nDeathtouch"
+    },
+    {
+      "name": "Cathar Commando",
+      "qty": 2,
+      "role": "vs. the cube's 24 artifacts + 25 enchantments",
+      "board": "sideboard",
+      "cmc": 2,
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment."
+    },
+    {
+      "name": "Clear Shot",
+      "qty": 2,
+      "role": "vs. a large threat once a land-count body is online",
+      "board": "sideboard",
+      "cmc": 3,
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control."
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "qty": 1,
+      "role": "vs. the Vampire/Zombie/Werewolf half of the cube (51 cards)",
+      "board": "sideboard",
+      "cmc": 4,
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Human Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie."
+    },
+    {
+      "name": "Drogskol Shieldmate",
+      "qty": 1,
+      "role": "vs. fast starts on the draw - flash 2/3",
+      "board": "sideboard",
+      "cmc": 3,
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Spirit Soldier",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flash\nWhen this creature enters, other creatures you control get +0/+1 until end of turn."
+    }
+  ],
+  "pitch": "GW land-hoarding ramp. Ten cards in this list put a land CARD INTO YOUR HAND rather than onto the battlefield - Wild-Field Scarecrow two at a time, plus Traveler's Amulet, Ambitious Farmhand, Hermit Druid, Eccentric Farmer, Grapple with the Past and Wrenn and Seven's +1 - and that hoarded hand is the ammunition for Cultivator Colossus, whose ETB reads 'you may put a land card from your hand onto the battlefield tapped. If you do, draw a card and repeat this process'. The same land count sizes the kill: Colossus and Wrenn's Treefolk token are both P/T equal to lands you control. Somberwald Sage pulls the seven-mana turn forward to five, and Sigarda, Host of Herons is the hexproof body that wins when the mythics stay in the library.",
+  "strategy_es": "combo de aceleración acumulando tierras",
+  "identity_es": "Aceleración GW acumulando tierras. Diez cartas de esta lista ponen una CARTA de tierra EN TU MANO en lugar de en el campo de batalla — Wild-Field Scarecrow dos a la vez, más Traveler's Amulet, Ambitious Farmhand, Hermit Druid, Eccentric Farmer, Grapple with the Past y el +1 de Wrenn and Seven — y esa mano acumulada es la munición de Cultivator Colossus, cuya entrada dice 'you may put a land card from your hand onto the battlefield tapped. If you do, draw a card and repeat this process'. Ese mismo recuento de tierras dimensiona la victoria: el Colossus y la ficha de Treefolk de Wrenn tienen ambos fuerza/resistencia iguales a las tierras que controlas. Somberwald Sage adelanta el turno de siete manás al quinto, y Sigarda, Host of Herons es el cuerpo con antimaleficio que gana cuando las míticas se quedan en la biblioteca.",
+  "pitch_es": "Aceleración GW acumulando tierras. Diez cartas de esta lista ponen una CARTA de tierra EN TU MANO en lugar de en el campo de batalla — Wild-Field Scarecrow dos a la vez, más Traveler's Amulet, Ambitious Farmhand, Hermit Druid, Eccentric Farmer, Grapple with the Past y el +1 de Wrenn and Seven — y esa mano acumulada es la munición de Cultivator Colossus, cuya entrada dice 'you may put a land card from your hand onto the battlefield tapped. If you do, draw a card and repeat this process'. Ese mismo recuento de tierras dimensiona la victoria: el Colossus y la ficha de Treefolk de Wrenn tienen ambos fuerza/resistencia iguales a las tierras que controlas. Somberwald Sage adelanta el turno de siete manás al quinto, y Sigarda, Host of Herons es el cuerpo con antimaleficio que gana cuando las míticas se quedan en la biblioteca."
+}

@@ -1,0 +1,1115 @@
+{
+  "deck_name": "wc-karn-sylex-prison",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-17T00:00:00Z",
+  "format": "40-card",
+  "strategy": "artifact prison control",
+  "colors": "W",
+  "identity": "A mono-white artifact prison deck built around a mana-value line. Karn's Sylex reads '{X}, {T}, Exile Karn's Sylex: Destroy each nonland permanent with mana value X or less', so 21 of the 23 nonland cards are either permanents priced at mana value 3 or more or instants that never occupy the battlefield — the sweep at X=2 destroys the cube's cheap creatures and none of this deck's permanent cards. Two honest exceptions are recorded rather than hidden: Inscribed Tablet x2 sit at mana value 1, but '{1}, {T}, Sacrifice this artifact' is their own activation cost at instant speed, so they are cracked in response to Sylex's sorcery-speed ability; and TOKENS have mana value 0, so Karn's Powerstones die to the sweep they paid for. Karn, Living Legacy banks Powerstone mana spendable only on the 11 colourless cards and on activated costs, white exile effects answer what is too large for the sweep, and the game is closed by Wingmantle Chaplain's Birds behind a Golden Argosy that re-buys enters-the-battlefield triggers on 7 of the 8 creature cards.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "at most 5 rare+mythic cards total across mainboard and sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 4,
+    "cantrip_count": 2,
+    "accel_count": 6,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.3,
+      "reference_avg_mv": 2.5,
+      "accel": 6,
+      "adjustment": 0.067,
+      "raw_target": 17.067,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 3.3,
+    "pip_demand": {
+      "W": 14
+    },
+    "land_color_production": {
+      "W": 17
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "W": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Karn's Sylex",
+      "oracle_text": "Karn's Sylex enters tapped.\nPlayers can't pay life to cast spells or to activate abilities that aren't mana abilities.\n{X}, {T}, Exile Karn's Sylex: Destroy each nonland permanent with mana value X or less. Activate only as a sorcery.",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Legendary Artifact",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Tax Effect"
+      ],
+      "role": "Interaction/Disruption — asymmetric sweeper",
+      "board": "mainboard"
+    },
+    {
+      "name": "Karn, Living Legacy",
+      "oracle_text": "+1: Create a tapped Powerstone token. (It's an artifact with \"{T}: Add {C}. This mana can't be spent to cast a nonartifact spell.\")\n−1: Pay any amount of mana. Look at that many cards from the top of your library, then put one of those cards into your hand and the rest on the bottom of your library in a random order.\n−7: You get an emblem with \"Tap an untapped artifact you control: This emblem deals 1 damage to any target.\"",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Karn",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Mana Rock",
+        "Card Selection",
+        "Direct Damage"
+      ],
+      "role": "Engine/Outlet — Powerstone ramp + card selection",
+      "board": "mainboard"
+    },
+    {
+      "name": "Golden Argosy",
+      "oracle_text": "Whenever Golden Argosy attacks, exile each creature that crewed it this turn. Return them to the battlefield tapped under their owner's control at the beginning of the next end step.\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4,
+      "type_line": "Legendary Artifact — Vehicle",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "6",
+      "tags": [
+        "Blink/ETB",
+        "Artifacts",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Blink"
+      ],
+      "role": "Payload/Payoff — closer + ETB re-buy",
+      "board": "mainboard"
+    },
+    {
+      "name": "Anointed Peacekeeper",
+      "oracle_text": "Vigilance\nAs this creature enters, look at an opponent's hand, then choose any card name.\nSpells your opponents cast with the chosen name cost {2} more to cast.\nActivated abilities of sources with the chosen name cost {2} more to activate unless they're mana abilities.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Tax Effect",
+        "Hand Disruption"
+      ],
+      "role": "Interaction/Disruption — taxing + turn-3 3/3 blocker",
+      "board": "mainboard"
+    },
+    {
+      "name": "Serra Paragon",
+      "oracle_text": "Flying\nOnce during each of your turns, you may play a land from your graveyard or cast a permanent spell with mana value 3 or less from your graveyard. If you do, it gains \"When this permanent is put into a graveyard from the battlefield, exile it and you gain 2 life.\"",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "rarity": "mythic",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Graveyard",
+        "Lands-Matter",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Recursion",
+        "Life Gain",
+        "Cards: Net-Positive"
+      ],
+      "role": "Payload/Payoff — recursion engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Inscribed Tablet",
+      "oracle_text": "{1}, {T}, Sacrifice this artifact: Reveal the top five cards of your library. Put a land card from among them into your hand and the rest on the bottom of your library in a random order. If you didn't put a card into your hand this way, draw a card.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Infrastructure — land finder that sacrifices itself",
+      "board": "mainboard"
+    },
+    {
+      "name": "Inscribed Tablet",
+      "oracle_text": "{1}, {T}, Sacrifice this artifact: Reveal the top five cards of your library. Put a land card from among them into your hand and the rest on the bottom of your library in a random order. If you didn't put a card into your hand this way, draw a card.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Infrastructure — land finder that sacrifices itself",
+      "board": "mainboard"
+    },
+    {
+      "name": "Relic of Legends",
+      "oracle_text": "{T}: Add one mana of any color.\nTap an untapped legendary creature you control: Add one mana of any color.",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Legendary Matters",
+        "Infrastructure/Consistency",
+        "Mana Rock"
+      ],
+      "role": "Infrastructure — unrestricted acceleration",
+      "board": "mainboard"
+    },
+    {
+      "name": "Relic of Legends",
+      "oracle_text": "{T}: Add one mana of any color.\nTap an untapped legendary creature you control: Add one mana of any color.",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Legendary Matters",
+        "Infrastructure/Consistency",
+        "Mana Rock"
+      ],
+      "role": "Infrastructure — unrestricted acceleration",
+      "board": "mainboard"
+    },
+    {
+      "name": "Automatic Librarian",
+      "oracle_text": "When this creature enters, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "role": "Infrastructure — selection body above the Sylex line",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shield-Wall Sentinel",
+      "oracle_text": "Defender\nWhen this creature enters, you may search your library for a creature card with defender, reveal it, put it into your hand, then shuffle.",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4,
+      "type_line": "Artifact Creature — Golem",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Tutor",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Enabler/Fodder — defender tutor",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shield-Wall Sentinel",
+      "oracle_text": "Defender\nWhen this creature enters, you may search your library for a creature card with defender, reveal it, put it into your hand, then shuffle.",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4,
+      "type_line": "Artifact Creature — Golem",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Tutor",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Enabler/Fodder — defender tutor",
+      "board": "mainboard"
+    },
+    {
+      "name": "Meteorite",
+      "oracle_text": "When this artifact enters, it deals 2 damage to any target.\n{T}: Add one mana of any color.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5,
+      "type_line": "Artifact",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Interaction/Disruption",
+        "Mana Rock",
+        "Direct Damage"
+      ],
+      "role": "Interaction/Disruption — ETB removal + fixing",
+      "board": "mainboard"
+    },
+    {
+      "name": "Jodah's Codex",
+      "oracle_text": "Domain — {5}, {T}: Draw a card. This ability costs {1} less to activate for each basic land type among lands you control.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5,
+      "type_line": "Artifact — Book",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Domain",
+        "Artifacts",
+        "Lands-Matter",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "role": "Infrastructure — repeatable card draw",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wingmantle Chaplain",
+      "oracle_text": "Defender\nWhen this creature enters, create a 1/1 white Bird creature token with flying for each creature with defender you control.\nWhenever another creature you control with defender enters, create a 1/1 white Bird creature token with flying.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Tokens",
+        "Defender Matters",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Payload/Payoff — Bird factory",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wingmantle Chaplain",
+      "oracle_text": "Defender\nWhen this creature enters, create a 1/1 white Bird creature token with flying for each creature with defender you control.\nWhenever another creature you control with defender enters, create a 1/1 white Bird creature token with flying.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Tokens",
+        "Defender Matters",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Payload/Payoff — Bird factory",
+      "board": "mainboard"
+    },
+    {
+      "name": "Argivian Cavalier",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Orc Knight",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Enlist Matters",
+        "Tokens",
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Payload/Payoff — MV3 body + Soldier token",
+      "board": "mainboard"
+    },
+    {
+      "name": "Citizen's Arrest",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction/Disruption — exile",
+      "board": "mainboard"
+    },
+    {
+      "name": "Citizen's Arrest",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction/Disruption — exile",
+      "board": "mainboard"
+    },
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "role": "Interaction/Disruption — flash exile",
+      "board": "mainboard"
+    },
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "role": "Interaction/Disruption — flash exile",
+      "board": "mainboard"
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction/Disruption — modal instant",
+      "board": "mainboard"
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction/Disruption — modal instant",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Argivian Phalanx",
+      "oracle_text": "Affinity for creatures (This spell costs {1} less to cast for each creature you control.)\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "mana_cost": "{5}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 6,
+      "type_line": "Creature — Human Kor Soldier",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Cost Reduction"
+      ],
+      "role": "Flex — 4/4 vigilance with affinity for creatures; blocks and attacks vs races",
+      "board": "sideboard"
+    },
+    {
+      "name": "Argivian Phalanx",
+      "oracle_text": "Affinity for creatures (This spell costs {1} less to cast for each creature you control.)\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "mana_cost": "{5}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 6,
+      "type_line": "Creature — Human Kor Soldier",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Cost Reduction"
+      ],
+      "role": "Flex — 4/4 vigilance with affinity for creatures; blocks and attacks vs races",
+      "board": "sideboard"
+    },
+    {
+      "name": "Clockwork Drawbridge",
+      "oracle_text": "Defender\n{2}{W}, {T}: Tap target creature.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Artifact Creature — Wall",
+      "rarity": "common",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Defender Matters",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Tap Effect"
+      ],
+      "role": "Flex — 0/3 defender wall vs aggro; raises the Chaplain defender count",
+      "board": "sideboard"
+    },
+    {
+      "name": "Clockwork Drawbridge",
+      "oracle_text": "Defender\n{2}{W}, {T}: Tap target creature.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Artifact Creature — Wall",
+      "rarity": "common",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Defender Matters",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Tap Effect"
+      ],
+      "role": "Flex — 0/3 defender wall vs aggro; raises the Chaplain defender count",
+      "board": "sideboard"
+    },
+    {
+      "name": "Walking Bulwark",
+      "oracle_text": "Defender\n{2}: Until end of turn, target creature with defender gains haste, can attack as though it didn't have defender, and assigns combat damage equal to its toughness rather than its power. Activate only as a sorcery.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1,
+      "type_line": "Artifact Creature — Golem",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Artifacts",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Combat Enabler"
+      ],
+      "role": "Flex — 1-mana artifact wall vs aggro",
+      "board": "sideboard"
+    },
+    {
+      "name": "Walking Bulwark",
+      "oracle_text": "Defender\n{2}: Until end of turn, target creature with defender gains haste, can attack as though it didn't have defender, and assigns combat damage equal to its toughness rather than its power. Activate only as a sorcery.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1,
+      "type_line": "Artifact Creature — Golem",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Artifacts",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Combat Enabler"
+      ],
+      "role": "Flex — 1-mana artifact wall vs aggro",
+      "board": "sideboard"
+    },
+    {
+      "name": "Mesa Cavalier",
+      "oracle_text": "Flying\nWhen this creature enters, you gain 2 life.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Knight",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Lifegain",
+        "Standalone Threat",
+        "Life Gain"
+      ],
+      "role": "Flex — 2/1 flier + 2 life vs evasion races",
+      "board": "sideboard"
+    },
+    {
+      "name": "Mesa Cavalier",
+      "oracle_text": "Flying\nWhen this creature enters, you gain 2 life.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Knight",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Lifegain",
+        "Standalone Threat",
+        "Life Gain"
+      ],
+      "role": "Flex — 2/1 flier + 2 life vs evasion races",
+      "board": "sideboard"
+    },
+    {
+      "name": "Captain's Call",
+      "oracle_text": "Create three 1/1 white Soldier creature tokens.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Flex — three Soldier tokens; a sorcery, so exempt from the mana-value line",
+      "board": "sideboard"
+    },
+    {
+      "name": "Samite Herbalist",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life and scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Life Gain"
+      ],
+      "role": "Flex — lifegain + scry vs race matchups",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "A mono-white artifact prison deck built around a mana-value line. Karn's Sylex reads '{X}, {T}, Exile Karn's Sylex: Destroy each nonland permanent with mana value X or less', so 21 of the 23 nonland cards are either permanents priced at mana value 3 or more or instants that never occupy the battlefield — the sweep at X=2 destroys the cube's cheap creatures and none of this deck's permanent cards. Two honest exceptions are recorded rather than hidden: Inscribed Tablet x2 sit at mana value 1, but '{1}, {T}, Sacrifice this artifact' is their own activation cost at instant speed, so they are cracked in response to Sylex's sorcery-speed ability; and TOKENS have mana value 0, so Karn's Powerstones die to the sweep they paid for. Karn, Living Legacy banks Powerstone mana spendable only on the 11 colourless cards and on activated costs, white exile effects answer what is too large for the sweep, and the game is closed by Wingmantle Chaplain's Birds behind a Golden Argosy that re-buys enters-the-battlefield triggers on 7 of the 8 creature cards.",
+  "strategy_es": "control prisión de artefactos",
+  "identity_es": "Un mazo prisión de artefactos mono blanco construido alrededor de una línea de valor de maná. Karn's Sylex dice '{X}, {T}, Exile Karn's Sylex: Destroy each nonland permanent with mana value X or less', así que 21 de las 23 cartas no-tierra son o bien permanentes tarifados a valor de maná 3 o más o bien instantáneos que nunca ocupan el campo de batalla; el barrido con X=2 destruye las criaturas baratas del cubo y ninguna de las cartas de permanente de este mazo. Dos excepciones honestas quedan registradas en vez de escondidas: Inscribed Tablet x2 están a valor de maná 1, pero '{1}, {T}, Sacrifice this artifact' es su propio coste de activación a velocidad de instantáneo, así que se rompen en respuesta a la habilidad a velocidad de conjuro del Sylex; y las FICHAS tienen valor de maná 0, así que las Powerstone de Karn mueren al barrido que pagaron. Karn, Living Legacy guarda maná de Powerstone gastable solo en las 11 cartas incoloras y en costes activados, los efectos blancos de exilio responden a lo que sea demasiado grande para el barrido, y la partida la cierran los Pájaros de Wingmantle Chaplain tras una Golden Argosy que recompra disparos de entrada en 7 de las 8 cartas de criatura.",
+  "pitch_es": "Un mazo prisión de artefactos mono blanco construido alrededor de una línea de valor de maná. Karn's Sylex dice '{X}, {T}, Exile Karn's Sylex: Destroy each nonland permanent with mana value X or less', así que 21 de las 23 cartas no-tierra son o bien permanentes tarifados a valor de maná 3 o más o bien instantáneos que nunca ocupan el campo de batalla; el barrido con X=2 destruye las criaturas baratas del cubo y ninguna de las cartas de permanente de este mazo. Dos excepciones honestas quedan registradas en vez de escondidas: Inscribed Tablet x2 están a valor de maná 1, pero '{1}, {T}, Sacrifice this artifact' es su propio coste de activación a velocidad de instantáneo, así que se rompen en respuesta a la habilidad a velocidad de conjuro del Sylex; y las FICHAS tienen valor de maná 0, así que las Powerstone de Karn mueren al barrido que pagaron. Karn, Living Legacy guarda maná de Powerstone gastable solo en las 11 cartas incoloras y en costes activados, los efectos blancos de exilio responden a lo que sea demasiado grande para el barrido, y la partida la cierran los Pájaros de Wingmantle Chaplain tras una Golden Argosy que recompra disparos de entrada en 7 de las 8 cartas de criatura."
+}

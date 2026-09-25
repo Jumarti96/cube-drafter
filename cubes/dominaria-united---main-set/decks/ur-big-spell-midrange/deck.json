@@ -1,0 +1,1437 @@
+{
+  "deck_name": "ur-big-spell-midrange",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-07-11T16:45:32Z",
+  "format": "40-card",
+  "strategy": "Izzet big-spell midrange (Najal / Keldon Flamesage / Jaya)",
+  "colors": "UR",
+  "identity": "UR midrange that ramps to haymaker sorceries and doubles them with Najal, Twinferno, and Jaya's emblem",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "excluded": [],
+    "deck_level_constraint": "max 5 rare/mythic cards total across mainboard+sideboard, 1 copy each"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "avg_cmc": 3.42,
+    "pip_demand": {
+      "R": 22,
+      "U": 10
+    },
+    "land_color_production": {
+      "U": 10,
+      "R": 11,
+      "W": 2,
+      "G": 2,
+      "B": 2
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 68.8,
+        "prod_pct": 68.8,
+        "gap": 0,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 31.2,
+        "prod_pct": 62.5,
+        "gap": -31.3,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Ghitu Amplifier",
+      "oracle_text": "Kicker {2}{U} (You may pay an additional {2}{U} as you cast this spell.)\nWhen this creature enters, if it was kicked, return target creature an opponent controls to its owner's hand.\nWhenever you cast an instant or sorcery spell, this creature gets +2/+0 until end of turn.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Pump Effect"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Wizard",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}",
+      "role": "Early body / kicked bounce tempo"
+    },
+    {
+      "name": "Electrostatic Infantry",
+      "oracle_text": "Trample\nWhenever you cast an instant or sorcery spell, put a +1/+1 counter on this creature.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Counter Accumulation"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Creature — Dwarf Wizard",
+      "rarity": "uncommon",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}",
+      "role": "Growing trample enlist body"
+    },
+    {
+      "name": "Balmor, Battlemage Captain",
+      "oracle_text": "Flying\nWhenever you cast an instant or sorcery spell, creatures you control get +1/+0 and gain trample until end of turn.",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Pump Effect"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Legendary Creature — Bird Wizard",
+      "rarity": "uncommon",
+      "board": "mainboard",
+      "mana_cost": "{U}{R}",
+      "role": "Early flier: team pump on I/S cast"
+    },
+    {
+      "name": "Keldon Flamesage",
+      "oracle_text": "Enlist\nWhenever this creature attacks, look at the top X cards of your library, where X is this creature's power. You may exile an instant or sorcery card with mana value X or less from among them. Put the rest on the bottom of your library in a random order. You may cast the exiled card without paying its mana cost.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Free Cast"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Shaman",
+      "rarity": "rare",
+      "board": "mainboard",
+      "mana_cost": "{2}{R}",
+      "role": "Keystone: free-cast big I/S on attack"
+    },
+    {
+      "name": "Najal, the Storm Runner",
+      "oracle_text": "You may cast sorcery spells as though they had flash.\nWhenever Najal attacks, you may pay {2}. If you do, when you next cast an instant or sorcery spell this turn, copy it. You may choose new targets for the copy.",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Storm"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Spell Copy",
+          "Flash Enabler"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Legendary Creature — Efreet Wizard",
+      "rarity": "uncommon",
+      "board": "mainboard",
+      "mana_cost": "{2}{U}{U}{R}",
+      "role": "Keystone: flash sorceries + attack copy"
+    },
+    {
+      "name": "Najal, the Storm Runner",
+      "oracle_text": "You may cast sorcery spells as though they had flash.\nWhenever Najal attacks, you may pay {2}. If you do, when you next cast an instant or sorcery spell this turn, copy it. You may choose new targets for the copy.",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Storm"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Spell Copy",
+          "Flash Enabler"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Legendary Creature — Efreet Wizard",
+      "rarity": "uncommon",
+      "board": "mainboard",
+      "mana_cost": "{2}{U}{U}{R}",
+      "role": "Keystone: flash sorceries + attack copy"
+    },
+    {
+      "name": "Djinn of the Fountain",
+      "oracle_text": "Flying\nWhenever you cast an instant or sorcery spell, choose one —\n• This creature gets +1/+1 until end of turn.\n• Exile this creature. Return it to the battlefield under its owner's control at the beginning of the next end step.\n• Scry 1.",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Power Boost",
+          "Blink Effect",
+          "Card Selection"
+        ]
+      },
+      "cmc": 6,
+      "type_line": "Creature — Djinn",
+      "rarity": "uncommon",
+      "board": "mainboard",
+      "mana_cost": "{4}{U}{U}",
+      "role": "Modal payoff flier"
+    },
+    {
+      "name": "Coalition Warbrute",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nTrample",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Minotaur Berserker",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "{3}{R}",
+      "role": "Trample beater / enlist fodder when home"
+    },
+    {
+      "name": "Coalition Warbrute",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nTrample",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Minotaur Berserker",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "{3}{R}",
+      "role": "Trample beater / enlist fodder when home"
+    },
+    {
+      "name": "Tolarian Terror",
+      "oracle_text": "This spell costs {1} less to cast for each instant and sorcery card in your graveyard.\nWard {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Cost Reduction"
+        ]
+      },
+      "cmc": 7,
+      "type_line": "Creature — Serpent",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "{6}{U}",
+      "role": "Discounted 5/5 ward finisher"
+    },
+    {
+      "name": "Jaya, Fiery Negotiator",
+      "oracle_text": "+1: Create a 1/1 red Monk creature token with prowess.\n−1: Exile the top two cards of your library. Choose one of them. You may play that card this turn.\n−2: Choose target creature an opponent controls. Whenever you attack this turn, Jaya deals damage equal to the number of attacking creatures to that creature.\n−8: You get an emblem with \"Whenever you cast a red instant or sorcery spell, copy it twice. You may choose new targets for the copies.\"",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Engine/Outlet",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Card Selection",
+          "Direct Damage",
+          "Spell Copy"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Jaya",
+      "rarity": "mythic",
+      "board": "mainboard",
+      "mana_cost": "{2}{R}{R}",
+      "role": "Keystone: token engine + copy emblem"
+    },
+    {
+      "name": "The Elder Dragon War",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — This Saga deals 2 damage to each creature and each opponent.\nII — Discard any number of cards, then draw that many cards.\nIII — Create a 4/4 red Dragon creature token with flying.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Sagas",
+          "Tokens",
+          "Wheels"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Looting",
+          "Token Generation"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Enchantment — Saga",
+      "rarity": "rare",
+      "board": "mainboard",
+      "mana_cost": "{2}{R}{R}",
+      "role": "Sweep + loot + dragon finisher"
+    },
+    {
+      "name": "Jaya's Firenado",
+      "oracle_text": "Jaya's Firenado deals 5 damage to target creature or planeswalker. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage",
+          "Card Selection"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "{4}{R}",
+      "role": "Big removal (copy target)"
+    },
+    {
+      "name": "Jaya's Firenado",
+      "oracle_text": "Jaya's Firenado deals 5 damage to target creature or planeswalker. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage",
+          "Card Selection"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "{4}{R}",
+      "role": "Big removal (copy target)"
+    },
+    {
+      "name": "Twinferno",
+      "oracle_text": "Choose one —\n• When you cast your next instant or sorcery spell this turn, copy that spell. You may choose new targets for the copy.\n• Target creature you control gains double strike until end of turn. (It deals both first-strike and regular combat damage.)",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Combo",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Spell Copy",
+          "Combat Trick"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}",
+      "role": "Spell copy / double strike"
+    },
+    {
+      "name": "Twinferno",
+      "oracle_text": "Choose one —\n• When you cast your next instant or sorcery spell this turn, copy that spell. You may choose new targets for the copy.\n• Target creature you control gains double strike until end of turn. (It deals both first-strike and regular combat damage.)",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Combo",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Spell Copy",
+          "Combat Trick"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}",
+      "role": "Spell copy / double strike"
+    },
+    {
+      "name": "Thrill of Possibility",
+      "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Looting",
+          "Card Draw"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}",
+      "role": "Instant refuel"
+    },
+    {
+      "name": "Thrill of Possibility",
+      "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Looting",
+          "Card Draw"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}",
+      "role": "Instant refuel"
+    },
+    {
+      "name": "Impulse",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "{1}{U}",
+      "role": "Card selection"
+    },
+    {
+      "name": "Impulse",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "{1}{U}",
+      "role": "Card selection"
+    },
+    {
+      "name": "Lightning Strike",
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}",
+      "role": "Cheap removal"
+    },
+    {
+      "name": "Lightning Strike",
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}",
+      "role": "Cheap removal"
+    },
+    {
+      "name": "Fires of Victory",
+      "oracle_text": "Kicker {2}{U} (You may pay an additional {2}{U} as you cast this spell.)\nIf this spell was kicked, draw a card. Fires of Victory deals damage to target creature or planeswalker equal to the number of cards in your hand.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage",
+          "Card Draw"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "board": "mainboard",
+      "mana_cost": "{1}{R}",
+      "role": "Scaling removal + kicked draw"
+    },
+    {
+      "name": "Chaotic Transformation",
+      "oracle_text": "Exile up to one target artifact, up to one target creature, up to one target enchantment, up to one target planeswalker, and/or up to one target land. For each permanent exiled this way, its controller reveals cards from the top of their library until they reveal a card that shares a card type with it, puts that card onto the battlefield, then shuffles.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Exile"
+        ]
+      },
+      "cmc": 6,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "board": "mainboard",
+      "mana_cost": "{5}{R}",
+      "role": "Flexible exile removal (copy target)"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Domain"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "UR dual"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Domain"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "UR dual"
+    },
+    {
+      "name": "Shivan Reef",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {U} or {R}. This land deals 1 damage to you.",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "UR painland"
+    },
+    {
+      "name": "Crystal Grotto",
+      "oracle_text": "When this land enters, scry 1.\n{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
+      "colors": [],
+      "color_identity": [],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Card Selection"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Any-color + scry"
+    },
+    {
+      "name": "Crystal Grotto",
+      "oracle_text": "When this land enters, scry 1.\n{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
+      "colors": [],
+      "color_identity": [],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Card Selection"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Any-color + scry"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {},
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Basic"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {},
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Basic"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {},
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Basic"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {},
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Basic"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {},
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Basic"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {},
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Basic"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {},
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Basic"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {},
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Basic"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {},
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Basic"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {},
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Basic"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {},
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "board": "mainboard",
+      "mana_cost": "",
+      "role": "Basic"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Essence Scatter",
+      "oracle_text": "Counter target creature spell.",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "board": "sideboard",
+      "mana_cost": "{1}{U}",
+      "role": "Counter creature bombs"
+    },
+    {
+      "name": "Essence Scatter",
+      "oracle_text": "Counter target creature spell.",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "board": "sideboard",
+      "mana_cost": "{1}{U}",
+      "role": "Counter creature bombs"
+    },
+    {
+      "name": "Negate",
+      "oracle_text": "Counter target noncreature spell.",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "board": "sideboard",
+      "mana_cost": "{1}{U}",
+      "role": "Vs control / noncreature bombs"
+    },
+    {
+      "name": "Negate",
+      "oracle_text": "Counter target noncreature spell.",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "board": "sideboard",
+      "mana_cost": "{1}{U}",
+      "role": "Vs control / noncreature bombs"
+    },
+    {
+      "name": "Smash to Dust",
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target creature with defender.\n• Smash to Dust deals 1 damage to each creature your opponents control.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Sweeper/Board Wipe"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "board": "sideboard",
+      "mana_cost": "{1}{R}",
+      "role": "Artifact hate / mini-sweep"
+    },
+    {
+      "name": "Smash to Dust",
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target creature with defender.\n• Smash to Dust deals 1 damage to each creature your opponents control.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Sweeper/Board Wipe"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "board": "sideboard",
+      "mana_cost": "{1}{R}",
+      "role": "Artifact hate / mini-sweep"
+    },
+    {
+      "name": "Flowstone Infusion",
+      "oracle_text": "Target creature gets +2/-2 until end of turn.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Targeted Removal"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "board": "sideboard",
+      "mana_cost": "{R}",
+      "role": "Cheap removal vs x/2s"
+    },
+    {
+      "name": "Flowstone Infusion",
+      "oracle_text": "Target creature gets +2/-2 until end of turn.",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Targeted Removal"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "board": "sideboard",
+      "mana_cost": "{R}",
+      "role": "Cheap removal vs x/2s"
+    },
+    {
+      "name": "Impede Momentum",
+      "oracle_text": "Tap target creature and put three stun counters on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nScry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Tap Effect",
+          "Stun Counter Application"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "board": "sideboard",
+      "mana_cost": "{1}{U}",
+      "role": "Pseudo-removal for fatties"
+    },
+    {
+      "name": "Frostfist Strider",
+      "oracle_text": "Ward {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)\nWhen this creature enters, tap target creature an opponent controls and put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Tap Effect",
+          "Stun Counter"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Creature — Elemental Giant",
+      "rarity": "uncommon",
+      "board": "sideboard",
+      "mana_cost": "{3}{U}{U}",
+      "role": "Extra tempo body vs aggro"
+    }
+  ],
+  "pitch": "Deck identity. UR midrange that wins by doubling haymakers. Three keystones drive it: Najal, the Storm Runner (sorceries gain flash; pay 2 on attack to copy your next instant/sorcery), Keldon Flamesage (attack: look at top X = its power, free-cast an instant/sorcery with MV ≤ X), and Jaya, Fiery Negotiator (prowess tokens, impulse draw, and a copy-twice emblem). Twinferno's copy mode and Najal's fork turn Jaya's Firenado into 10 damage across two targets and Chaotic Transformation into a multi-permanent exile. It uses the full 5-card rare/mythic budget.",
+  "strategy_es": "midrange Izzet de hechizos grandes (Najal / Keldon Flamesage / Jaya)",
+  "identity_es": "Midrange UR que acelera hacia conjuros mandoble y los duplica con Najal, Twinferno y el emblema de Jaya",
+  "pitch_es": "Identidad del mazo. Midrange UR que gana duplicando mandobles. Tres piedras angulares lo mueven: Najal, the Storm Runner (los conjuros ganan flash; paga 2 al atacar para copiar tu siguiente instantáneo o conjuro), Keldon Flamesage (al atacar: mira las X cartas superiores siendo X su fuerza, y lanza gratis un instantáneo o conjuro con MV ≤ X), y Jaya, Fiery Negotiator (fichas con prowess, robo por impulso y un emblema que copia dos veces). El modo de copia de Twinferno y el fork de Najal convierten Jaya's Firenado en 10 de daño repartidos en dos objetivos y Chaotic Transformation en un exilio de varios permanentes. Usa el presupuesto completo de 5 raras/míticas."
+}

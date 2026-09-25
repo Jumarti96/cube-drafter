@@ -1,0 +1,959 @@
+{
+  "deck_name": "wb-etb-drain",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-18T20:29:06Z",
+  "format": "40-card",
+  "strategy": "WB aristocrats drain (Elas il-Kor death triggers + Blight Pile)",
+  "colors": "WB",
+  "identity": "WB ETB Drain. Elas il-Kor, Sadistic Pilgrim reads 'Whenever another creature you control enters, you gain 1 life. Whenever another creature you control dies, each opponent loses 1 life.' The deck floods the board with cheap multi-body token-makers and converts them into damage through repeatable sacrifice outlets. Golden Argosy is the blink component: exiling and returning Resolute Reinforcements and Wingmantle Chaplain manufactures brand-new tokens every combat, which are then fed to the outlets. Blight Pile and Sheoldred, the Apocalypse are Elas-independent drain engines. STATED HONESTLY: the uninteractive drain half of the clock delivers a median of about 12 by turn 10; the remaining damage comes from the leftover bodies the deck never got around to sacrificing. This is not a pure no-combat kill.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_build_constraint": "max 5 rare+mythic cards total across mainboard and sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.57,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.093,
+      "raw_target": 17.093,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.57,
+    "pip_demand": {
+      "W": 8,
+      "B": 18
+    },
+    "land_color_production": {
+      "W": 7,
+      "B": 12
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 69.2,
+        "prod_pct": 70.6,
+        "gap": -1.4,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 30.8,
+        "prod_pct": 41.2,
+        "gap": -10.4,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Elas il-Kor, Sadistic Pilgrim",
+      "oracle_text": "Deathtouch\nWhenever another creature you control enters, you gain 1 life.\nWhenever another creature you control dies, each opponent loses 1 life.",
+      "mana_cost": "{W}{B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Lifegain",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tokens",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Life Drain",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Legendary Creature — Phyrexian Kor Cleric",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Payoff - the drain itself"
+    },
+    {
+      "name": "Blight Pile",
+      "oracle_text": "Defender\n{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Defender Matters",
+        "Life Drain",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Defender Matters",
+          "Life Drain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Payoff - Elas-independent drain, scales off defenders"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Lifegain",
+        "Life Drain",
+        "Standalone Threat",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain",
+          "Life Drain"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payoff - 2 per opposing draw, no death or mana needed"
+    },
+    {
+      "name": "Cult Conscript",
+      "oracle_text": "This creature enters tapped.\n{1}{B}: Return this card from your graveyard to the battlefield. Activate only if a non-Skeleton creature died under your control this turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Standalone Threat",
+        "Recursion"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Graveyard",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Recursion"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Skeleton Warrior",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Fodder - self-recurring body"
+    },
+    {
+      "name": "Resolute Reinforcements",
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Fodder - two bodies, flash"
+    },
+    {
+      "name": "Wingmantle Chaplain",
+      "oracle_text": "Defender\nWhen this creature enters, create a 1/1 white Bird creature token with flying for each creature with defender you control.\nWhenever another creature you control with defender enters, create a 1/1 white Bird creature token with flying.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Defender Matters",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Fodder + Blight Pile scaler + best Argosy blink target"
+    },
+    {
+      "name": "Gibbering Barricade",
+      "oracle_text": "Defender\n{2}{B}, Sacrifice a creature: You gain 1 life and draw a card.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Defender Matters",
+        "Lifegain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Defender Matters",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Sacrifice Outlet",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Nightmare Wall",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Outlet - sac for a card; also a defender"
+    },
+    {
+      "name": "Captain's Call",
+      "oracle_text": "Create three 1/1 white Soldier creature tokens.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Fodder - three bodies per card"
+    },
+    {
+      "name": "Phyrexian Warhorse",
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nWhen this creature enters, if it was kicked, create a 1/1 white Soldier creature token.\n{1}, Sacrifice another creature: This creature gets +2/+1 until end of turn.",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Sacrifice Outlet",
+        "Combat Trick",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Tokens",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Sacrifice Outlet",
+          "Combat Trick",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Phyrexian Horse",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Outlet - {1} per sac, no tap"
+    },
+    {
+      "name": "Golden Argosy",
+      "oracle_text": "Whenever Golden Argosy attacks, exile each creature that crewed it this turn. Return them to the battlefield tapped under their owner's control at the beginning of the next end step.\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Blink/ETB",
+        "Artifacts",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Blink"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Blink"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Artifact — Vehicle",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Blink - re-buys token ETBs into fresh fodder"
+    },
+    {
+      "name": "Braids, Arisen Nightmare",
+      "oracle_text": "At the beginning of your end step, you may sacrifice an artifact, creature, enchantment, land, or planeswalker. If you do, each opponent may sacrifice a permanent of their choice that shares a card type with it. For each opponent who doesn't, that player loses 2 life and you draw a card.",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Sacrifice Outlet",
+        "Card Draw",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Sacrifice Outlet",
+          "Card Draw",
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Creature — Nightmare",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Outlet - free end-step sac that also drains 2"
+    },
+    {
+      "name": "Bone Splinters",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction - removal that is also a death trigger"
+    },
+    {
+      "name": "Cut Down",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction - 1-mana removal"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 5,
+      "role": "Basic"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 10,
+      "role": "Basic"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "WB dual, enters tapped"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Citizen's Arrest",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs single large threats - unconditional exile"
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "vs enchantments and toughness-4+ blockers"
+    },
+    {
+      "name": "Extinguish the Light",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs planeswalkers and larger creatures"
+    },
+    {
+      "name": "Pilfer",
+      "oracle_text": "Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Discard"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Discard"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs artifacts/enchantments - hand disruption, taken BEFORE they resolve"
+    },
+    {
+      "name": "Knight of Dusk's Shadow",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nYour opponents can't gain life.\n{1}{B}: This creature gets +1/+1 until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Lifegain Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Lifegain Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs the cube's 22-card lifegain class - shuts it off outright"
+    },
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "the only post-resolution answer to any nonland permanent"
+    }
+  ],
+  "pitch": "WB ETB Drain. Elas il-Kor, Sadistic Pilgrim reads 'Whenever another creature you control enters, you gain 1 life. Whenever another creature you control dies, each opponent loses 1 life.' The deck floods the board with cheap multi-body token-makers and converts them into damage through repeatable sacrifice outlets. Golden Argosy is the blink component: exiling and returning Resolute Reinforcements and Wingmantle Chaplain manufactures brand-new tokens every combat, which are then fed to the outlets. Blight Pile and Sheoldred, the Apocalypse are Elas-independent drain engines. STATED HONESTLY: the uninteractive drain half of the clock delivers a median of about 12 by turn 10; the remaining damage comes from the leftover bodies the deck never got around to sacrificing. This is not a pure no-combat kill.",
+  "strategy_es": "drenaje de aristócratas WB (disparos de muerte de Elas il-Kor + Blight Pile)",
+  "identity_es": "Drenaje de entradas WB. Elas il-Kor, Sadistic Pilgrim dice 'Whenever another creature you control enters, you gain 1 life. Whenever another creature you control dies, each opponent loses 1 life.' El mazo inunda el tablero con creadores de fichas baratos de varios cuerpos y los convierte en daño mediante medios de sacrificio repetibles. Golden Argosy es el componente de parpadeo: exiliar y devolver Resolute Reinforcements y Wingmantle Chaplain fabrica fichas completamente nuevas en cada combate, que luego se dan de comer a los medios. Blight Pile y Sheoldred, the Apocalypse son motores de drenaje independientes de Elas. DICHO CON HONESTIDAD: la mitad no interactiva del reloj de drenaje entrega una mediana de unos 12 para el turno 10; el daño restante viene de los cuerpos sobrantes que el mazo nunca llegó a sacrificar. Esto no es una victoria pura sin combate.",
+  "pitch_es": "Drenaje de entradas WB. Elas il-Kor, Sadistic Pilgrim dice 'Whenever another creature you control enters, you gain 1 life. Whenever another creature you control dies, each opponent loses 1 life.' El mazo inunda el tablero con creadores de fichas baratos de varios cuerpos y los convierte en daño mediante medios de sacrificio repetibles. Golden Argosy es el componente de parpadeo: exiliar y devolver Resolute Reinforcements y Wingmantle Chaplain fabrica fichas completamente nuevas en cada combate, que luego se dan de comer a los medios. Blight Pile y Sheoldred, the Apocalypse son motores de drenaje independientes de Elas. DICHO CON HONESTIDAD: la mitad no interactiva del reloj de drenaje entrega una mediana de unos 12 para el turno 10; el daño restante viene de los cuerpos sobrantes que el mazo nunca llegó a sacrificar. Esto no es una victoria pura sin combate."
+}

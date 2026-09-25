@@ -1,0 +1,969 @@
+{
+  "deck_name": "w-soldiers-tribal",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-14T03:03:35Z",
+  "format": "40-card",
+  "strategy": "mono-white Soldiers go-wide aggro",
+  "colors": "W",
+  "identity": "Mono-white Soldiers go-wide aggro. It converts cheap white cards into multiple bodies (Resolute Reinforcements, Argivian Cavalier, Captain's Call, Defiler of Faith), then makes those bodies lethal with Valiant Veteran's static Soldier anthem, Serra Redeemer's two +1/+1 counters on every small creature that enters, and a Heroic Charge alpha strike. It pays zero fixing cost: every land is a Plains, so all five permitted rare/mythic slots are spent on spells rather than on a manabase. The locked build lens is sweeper resilience — Serra Paragon replays permanents from the graveyard, Valiant Veteran has a graveyard mode, and Take Up the Shield protects the anthem body.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "max 5 rare/mythic cards total across mainboard + sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.09,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.787,
+      "raw_target": 17.787,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.09,
+    "pip_demand": {
+      "W": 29
+    },
+    "land_color_production": {
+      "W": 18
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "W": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Resolute Reinforcements",
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "Enabler - flash, two Soldier bodies",
+      "qty": 2
+    },
+    {
+      "name": "Benalish Sleeper",
+      "oracle_text": "Kicker {B} (You may pay an additional {B} as you cast this spell.)\nWhen this creature enters, if it was kicked, each player sacrifices a creature of their choice.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Edict",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Edict",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian Human Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "Threat - 3/1 Soldier two-drop (black kicker declined)",
+      "qty": 1
+    },
+    {
+      "name": "Guardian of New Benalia",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nWhenever this creature enlists a creature, scry 2.\nDiscard a card: This creature gains indestructible until end of turn. Tap it.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Enlist Matters",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Protection",
+        "Cards: Extra-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Enlist Matters"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Protection"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Threat/infra - Soldier body, enlist scry 2",
+      "qty": 1
+    },
+    {
+      "name": "Valiant Veteran",
+      "oracle_text": "Other Soldiers you control get +1/+1.\n{3}{W}{W}, Exile this card from your graveyard: Put a +1/+1 counter on each Soldier you control.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Flashback/GY-Cast",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Counters (+1/+1)",
+          "Flashback/GY-Cast"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Kor Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Payoff - Soldier anthem, graveyard counter mode",
+      "qty": 1
+    },
+    {
+      "name": "Take Up the Shield",
+      "oracle_text": "Put a +1/+1 counter on target creature. It gains lifelink and indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Protection - counter + indestructible",
+      "qty": 1
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Interaction - big blocker or enchantment",
+      "qty": 2
+    },
+    {
+      "name": "Argivian Cavalier",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Enlist Matters",
+        "Tokens",
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Enlist Matters",
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Orc Knight",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Enabler - token on ETB, enlist",
+      "qty": 2
+    },
+    {
+      "name": "Charismatic Vanguard",
+      "oracle_text": "{4}{W}: Creatures you control get +1/+1 until end of turn.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Dwarf Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Payoff - repeatable team pump, Soldier",
+      "qty": 2
+    },
+    {
+      "name": "Citizen's Arrest",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Interaction - unconditional exile",
+      "qty": 2
+    },
+    {
+      "name": "Captain's Call",
+      "oracle_text": "Create three 1/1 white Soldier creature tokens.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Enabler - three Soldier tokens",
+      "qty": 2
+    },
+    {
+      "name": "Heroic Charge",
+      "oracle_text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nCreatures you control get +2/+1 until end of turn. If this spell was kicked, those creatures also gain trample until end of turn.",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Tokens",
+        "Payload/Payoff",
+        "Combat Trick",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Payoff - alpha-strike finisher (red kicker declined)",
+      "qty": 2
+    },
+    {
+      "name": "Griffin Protector",
+      "oracle_text": "Flying\nWhenever another creature you control enters, this creature gets +1/+1 until end of turn.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Griffin",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "role": "Payoff - evasive body that grows on each ETB",
+      "qty": 1
+    },
+    {
+      "name": "Serra Paragon",
+      "oracle_text": "Flying\nOnce during each of your turns, you may play a land from your graveyard or cast a permanent spell with mana value 3 or less from your graveyard. If you do, it gains \"When this permanent is put into a graveyard from the battlefield, exile it and you gain 2 life.\"",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Graveyard",
+        "Lands-Matter",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Recursion",
+        "Life Gain",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Lands-Matter",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Recursion",
+          "Life Gain"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "rarity": "mythic",
+      "power": "3",
+      "toughness": "4",
+      "board": "mainboard",
+      "role": "Engine - graveyard rebuild after a sweeper",
+      "qty": 1
+    },
+    {
+      "name": "Serra Redeemer",
+      "oracle_text": "Flying\nWhenever another creature you control with power 2 or less enters, put two +1/+1 counters on that creature.",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Angel Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "4",
+      "board": "mainboard",
+      "role": "Payoff - two +1/+1 counters on each small ETB",
+      "qty": 1
+    },
+    {
+      "name": "Defiler of Faith",
+      "oracle_text": "Vigilance\nAs an additional cost to cast white permanent spells, you may pay 2 life. Those spells cost {W} less to cast if you paid life this way. This effect reduces only the amount of white mana you pay.\nWhenever you cast a white permanent spell, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation",
+        "Cost Reduction",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Cost Reduction"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Creature — Phyrexian Human",
+      "rarity": "rare",
+      "power": "5",
+      "toughness": "5",
+      "board": "mainboard",
+      "role": "Engine/payoff - Soldier per white permanent spell",
+      "qty": 1
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Basic - untapped white source, zero fixing cost",
+      "qty": 18
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Flash exile any nonland permanent",
+      "qty": 2,
+      "when_to_board": "vs artifact/enchantment decks and single-bomb decks"
+    },
+    {
+      "name": "Runic Shot",
+      "oracle_text": "Kicker {U} (You may pay an additional {U} as you cast this spell.)\nDestroy target tapped creature. If this spell was kicked, scry 2.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Card Selection",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Card Selection",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Destroy target tapped creature",
+      "qty": 2,
+      "when_to_board": "vs attacking or evasive decks whose creatures tap"
+    },
+    {
+      "name": "Take Up the Shield",
+      "oracle_text": "Put a +1/+1 counter on target creature. It gains lifelink and indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Indestructible + counter",
+      "qty": 1,
+      "when_to_board": "vs targeted removal and damage-based sweepers"
+    },
+    {
+      "name": "Knight of Dawn's Light",
+      "oracle_text": "First strike\nIf you would gain life, you gain that much life plus 1 instead.\n{1}{W}: This creature gets +1/+1 until end of turn.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "sideboard",
+      "role": "First-strike blocker, lifegain amplifier",
+      "qty": 2,
+      "when_to_board": "vs fast aggro and racing decks"
+    },
+    {
+      "name": "Coalition Skyknight",
+      "oracle_text": "Flying\nEnlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Enlist Matters",
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Enlist Matters"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Human Knight",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "sideboard",
+      "role": "Evasive flier with enlist",
+      "qty": 2,
+      "when_to_board": "vs ground stalls and big-creature decks"
+    },
+    {
+      "name": "Argivian Phalanx",
+      "oracle_text": "Affinity for creatures (This spell costs {1} less to cast for each creature you control.)\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "mana_cost": "{5}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Cost Reduction"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Cost Reduction"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Creature — Human Kor Soldier",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "board": "sideboard",
+      "role": "4/4 vigilance, affinity for creatures",
+      "qty": 1,
+      "when_to_board": "vs grindy decks that go long"
+    }
+  ],
+  "pitch": "Mono-white Soldiers go-wide aggro. It converts cheap white cards into multiple bodies (Resolute Reinforcements, Argivian Cavalier, Captain's Call, Defiler of Faith), then makes those bodies lethal with Valiant Veteran's static Soldier anthem, Serra Redeemer's two +1/+1 counters on every small creature that enters, and a Heroic Charge alpha strike. It pays zero fixing cost: every land is a Plains, so all five permitted rare/mythic slots are spent on spells rather than on a manabase. The locked build lens is sweeper resilience — Serra Paragon replays permanents from the graveyard, Valiant Veteran has a graveyard mode, and Take Up the Shield protects the anthem body.",
+  "strategy_es": "agro de Soldados a lo ancho mono blanco",
+  "identity_es": "Agro de Soldados a lo ancho mono blanco. Convierte cartas blancas baratas en varios cuerpos (Resolute Reinforcements, Argivian Cavalier, Captain's Call, Defiler of Faith), y luego vuelve letales esos cuerpos con el anthem estático de Soldados de Valiant Veteran, los dos contadores +1/+1 de Serra Redeemer sobre cada criatura pequeña que entra, y un golpe alfa de Heroic Charge. No paga coste de fijado alguno: cada tierra es un Plains, así que los cinco huecos permitidos de rara/mítica se gastan en hechizos y no en la base de maná. La lente de construcción elegida es la resistencia a barridos: Serra Paragon rejuega permanentes desde el cementerio, Valiant Veteran tiene un modo desde el cementerio, y Take Up the Shield protege el cuerpo con el anthem.",
+  "pitch_es": "Agro de Soldados a lo ancho mono blanco. Convierte cartas blancas baratas en varios cuerpos (Resolute Reinforcements, Argivian Cavalier, Captain's Call, Defiler of Faith), y luego vuelve letales esos cuerpos con el anthem estático de Soldados de Valiant Veteran, los dos contadores +1/+1 de Serra Redeemer sobre cada criatura pequeña que entra, y un golpe alfa de Heroic Charge. No paga coste de fijado alguno: cada tierra es un Plains, así que los cinco huecos permitidos de rara/mítica se gastan en hechizos y no en la base de maná. La lente de construcción elegida es la resistencia a barridos: Serra Paragon rejuega permanentes desde el cementerio, Valiant Veteran tiene un modo desde el cementerio, y Take Up the Shield protege el cuerpo con el anthem."
+}

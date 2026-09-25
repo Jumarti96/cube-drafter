@@ -1,0 +1,720 @@
+{
+  "deck_name": "wb-cleric-aristocrats",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T19:45:00Z",
+  "format": "40-card",
+  "strategy": "aristocrats sacrifice-drain midrange",
+  "colors": "WB",
+  "identity": "A WB aristocrats deck that uses Clerics as its fodder and blocking layer rather than as a tribe. Seventeen creatures plus a stream of tokens feed five kinds of sacrifice outlet - Phyrexian Warhorse at {1}, Gibbering Barricade at {2}{B} for a card, Braids, Arisen Nightmare for free at end step, Braids's Frightful Return chapter I, and Bone Splinters as removal - and every death is converted into value by six payoff cards. Elas il-Kor turns deaths directly into opponent life loss and is the single best draw in the deck, but it is a 1-of Legendary, so the deck is built to grind on Weatherlight Compleated's per-death counters, Gibbering Barricade's card, Phyrexian Vivisector's scry and Braids's draw-or-drain even when Elas never appears. Four Defender bodies (Gibbering Barricade x2, Wingmantle Chaplain x2) hold the ground while Wingmantle turns them into flying Birds - the deck's only answer to a cube whose largest threat class is 51 evasive creatures. Six Cleric cards (a seventh on demand via Evolved Sleeper) honour the constraint without the deck depending on the type.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "max 5 rares+mythics across mainboard and sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 1,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.21,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": -0.553,
+      "raw_target": 16.447,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.21,
+    "pip_demand": {
+      "B": 17,
+      "W": 8
+    },
+    "land_color_production": {
+      "B": 12,
+      "W": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 68,
+        "prod_pct": 75,
+        "gap": -7,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 32,
+        "prod_pct": 43.8,
+        "gap": -11.8,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Evolved Sleeper",
+      "oracle_text": "{B}: This creature becomes a Human Cleric with base power and toughness 2/2.\n{1}{B}: If this creature is a Cleric, put a deathtouch counter on it and it becomes a Phyrexian Human Cleric with base power and toughness 3/3.\n{1}{B}{B}: If this creature is a Phyrexian, put a +1/+1 counter on it, then you draw a card and you lose 1 life.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Counters (+1/+1)",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cult Conscript",
+      "oracle_text": "This creature enters tapped.\n{1}{B}: Return this card from your graveyard to the battlefield. Activate only if a non-Skeleton creature died under your control this turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Skeleton Warrior",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Standalone Threat",
+        "Recursion"
+      ],
+      "qty": 2,
+      "role": "Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Elas il-Kor, Sadistic Pilgrim",
+      "oracle_text": "Deathtouch\nWhenever another creature you control enters, you gain 1 life.\nWhenever another creature you control dies, each opponent loses 1 life.",
+      "mana_cost": "{W}{B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Legendary Creature — Phyrexian Kor Cleric",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Lifegain",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Life Drain"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Phyrexian Vivisector",
+      "oracle_text": "Whenever a creature you control dies, scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian Human",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Phyrexian Missionary",
+      "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nLifelink\nWhen this creature enters, if it was kicked, return target creature card from your graveyard to your hand.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian Human Cleric",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Kicker/Scaling",
+        "Graveyard",
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Regrowth",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shadow-Rite Priest",
+      "oracle_text": "Other Clerics you control get +1/+1.\n{3}{B}{B}, {T}, Sacrifice another Cleric: Search your library for a black creature card, put it onto the battlefield, then shuffle.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Reanimator",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Tutor",
+        "Sacrifice Outlet"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Resolute Reinforcements",
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "qty": 2,
+      "role": "Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Weatherlight Compleated",
+      "oracle_text": "Flying\nAs long as Weatherlight Compleated has four or more phyresis counters on it, it's a Phyrexian creature in addition to its other types.\nWhenever a creature you control dies, put a phyresis counter on Weatherlight Compleated. Then draw a card if it has seven or more phyresis counters on it. If it doesn't, scry 1.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Legendary Artifact — Vehicle",
+      "rarity": "mythic",
+      "power": "5",
+      "toughness": "5",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Historic",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Card Draw",
+        "Card Selection"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gibbering Barricade",
+      "oracle_text": "Defender\n{2}{B}, Sacrifice a creature: You gain 1 life and draw a card.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Nightmare Wall",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Defender Matters",
+        "Lifegain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "qty": 2,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Braids, Arisen Nightmare",
+      "oracle_text": "At the beginning of your end step, you may sacrifice an artifact, creature, enchantment, land, or planeswalker. If you do, each opponent may sacrifice a permanent of their choice that shares a card type with it. For each opponent who doesn't, that player loses 2 life and you draw a card.",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Nightmare",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Sacrifice Outlet",
+        "Card Draw",
+        "Life Drain"
+      ],
+      "qty": 1,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Braids's Frightful Return",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — You may sacrifice a creature. If you do, each opponent discards a card.\nII — Return target creature card from your graveyard to your hand.\nIII — Target opponent may sacrifice a nonland, nontoken permanent of their choice. If they don't, they lose 2 life and you draw a card.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment — Saga",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Sagas",
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Reanimator",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Sacrifice Outlet",
+        "Discard",
+        "Recursion",
+        "Card Draw",
+        "Life Drain"
+      ],
+      "qty": 1,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Phyrexian Warhorse",
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nWhen this creature enters, if it was kicked, create a 1/1 white Soldier creature token.\n{1}, Sacrifice another creature: This creature gets +2/+1 until end of turn.",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Phyrexian Horse",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Kicker/Scaling",
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Sacrifice Outlet",
+        "Combat Trick",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wingmantle Chaplain",
+      "oracle_text": "Defender\nWhen this creature enters, create a 1/1 white Bird creature token with flying for each creature with defender you control.\nWhenever another creature you control with defender enters, create a 1/1 white Bird creature token with flying.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Tokens",
+        "Defender Matters",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "qty": 2,
+      "role": "Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cut Down",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bone Splinters",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Caves of Koilos",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {W} or {B}. This land deals 1 damage to you.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 4,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 9,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Extinguish the Light",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against the 28 of 157 pool creatures that neither Cut Down (total power+toughness 5 or less) nor Destroy Evil (toughness 4 or greater) can hit - a 4/3 is missed by both. Also the only planeswalker answer in the 50."
+    },
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against artifacts (15 in the cube, 6.1%) - the mainboard's only noncreature answer is Destroy Evil's enchantment mode. Chosen over Leyline Binding, which has the same flash-exile-any-nonland-permanent effect at the same effective cost with 2 basic land types, because Prayer is uncommon and the 5 rare slots are fully spent."
+    },
+    {
+      "name": "Sengir Connoisseur",
+      "oracle_text": "Flying\nWhenever one or more other creatures die, put a +1/+1 counter on this creature. This ability triggers only once each turn.",
+      "mana_cost": "{3}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Vampire",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Payload/Payoff"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "sideboard",
+      "when_to_board": "Against the evasion class - 51 cards at 20.6% density, the largest in the cube, and 41 of the 51 have flying. 'Flying. Whenever one or more other creatures die, put a +1/+1 counter on this creature' is a flying blocker that grows off the deck's own sacrifice engine, which is the only way this shell contests the air."
+    },
+    {
+      "name": "Benalish Sleeper",
+      "oracle_text": "Kicker {B} (You may pay an additional {B} as you cast this spell.)\nWhen this creature enters, if it was kicked, each player sacrifices a creature of their choice.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian Human Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Kicker/Scaling",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Edict",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against the 7 ward/hexproof creatures in the cube that targeted removal cannot reach - kicked for {B} it reads 'each player sacrifices a creature of their choice'. The symmetric half is upside: our own sacrifice triggers Elas il-Kor, Weatherlight Compleated and Phyrexian Vivisector, and satisfies Cult Conscript's recursion clause."
+    },
+    {
+      "name": "Knight of Dusk's Shadow",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nYour opponents can't gain life.\n{1}{B}: This creature gets +1/+1 until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Lifegain Hate"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "sideboard",
+      "when_to_board": "Against lifegain decks - 'Your opponents can't gain life' shuts off a 22-card, 8.9%-density class, which is the single thing that undoes an incremental drain plan."
+    }
+  ],
+  "pitch": "A WB aristocrats deck that uses Clerics as its fodder and blocking layer rather than as a tribe. Seventeen creatures plus a stream of tokens feed five kinds of sacrifice outlet - Phyrexian Warhorse at {1}, Gibbering Barricade at {2}{B} for a card, Braids, Arisen Nightmare for free at end step, Braids's Frightful Return chapter I, and Bone Splinters as removal - and every death is converted into value by six payoff cards. Elas il-Kor turns deaths directly into opponent life loss and is the single best draw in the deck, but it is a 1-of Legendary, so the deck is built to grind on Weatherlight Compleated's per-death counters, Gibbering Barricade's card, Phyrexian Vivisector's scry and Braids's draw-or-drain even when Elas never appears. Four Defender bodies (Gibbering Barricade x2, Wingmantle Chaplain x2) hold the ground while Wingmantle turns them into flying Birds - the deck's only answer to a cube whose largest threat class is 51 evasive creatures. Six Cleric cards (a seventh on demand via Evolved Sleeper) honour the constraint without the deck depending on the type.",
+  "strategy_es": "midrange de aristócratas de sacrificio y drenaje",
+  "identity_es": "Un mazo de aristócratas WB que usa los Clérigos como forraje y capa de bloqueo en lugar de como tribu. Diecisiete criaturas más un flujo de fichas alimentan cinco tipos de medio de sacrificio — Phyrexian Warhorse por {1}, Gibbering Barricade por {2}{B} a cambio de una carta, Braids, Arisen Nightmare gratis en el paso final, el capítulo I de Braids's Frightful Return, y Bone Splinters como eliminación — y cada muerte se convierte en valor por seis cartas de recompensa. Elas il-Kor convierte las muertes directamente en pérdida de vida del rival y es la mejor carta que se puede robar en el mazo, pero es una legendaria de copia única, así que el mazo está construido para desgastar con los contadores por muerte de Weatherlight Compleated, la carta de Gibbering Barricade, el scry de Phyrexian Vivisector y el robar-o-drenar de Braids incluso cuando Elas nunca aparece. Cuatro cuerpos con Defensor (Gibbering Barricade x2, Wingmantle Chaplain x2) sostienen el suelo mientras Wingmantle los convierte en Pájaros voladores, la única respuesta del mazo a un cubo cuya mayor clase de amenaza son 51 criaturas evasivas. Seis cartas de Clérigo (una séptima a demanda vía Evolved Sleeper) honran la restricción sin que el mazo dependa del tipo.",
+  "pitch_es": "Un mazo de aristócratas WB que usa los Clérigos como forraje y capa de bloqueo en lugar de como tribu. Diecisiete criaturas más un flujo de fichas alimentan cinco tipos de medio de sacrificio — Phyrexian Warhorse por {1}, Gibbering Barricade por {2}{B} a cambio de una carta, Braids, Arisen Nightmare gratis en el paso final, el capítulo I de Braids's Frightful Return, y Bone Splinters como eliminación — y cada muerte se convierte en valor por seis cartas de recompensa. Elas il-Kor convierte las muertes directamente en pérdida de vida del rival y es la mejor carta que se puede robar en el mazo, pero es una legendaria de copia única, así que el mazo está construido para desgastar con los contadores por muerte de Weatherlight Compleated, la carta de Gibbering Barricade, el scry de Phyrexian Vivisector y el robar-o-drenar de Braids incluso cuando Elas nunca aparece. Cuatro cuerpos con Defensor (Gibbering Barricade x2, Wingmantle Chaplain x2) sostienen el suelo mientras Wingmantle los convierte en Pájaros voladores, la única respuesta del mazo a un cubo cuya mayor clase de amenaza son 51 criaturas evasivas. Seis cartas de Clérigo (una séptima a demanda vía Evolved Sleeper) honran la restricción sin que el mazo dependa del tipo."
+}

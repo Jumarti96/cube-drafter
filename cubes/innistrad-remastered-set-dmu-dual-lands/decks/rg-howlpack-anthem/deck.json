@@ -1,0 +1,683 @@
+{
+  "deck_name": "rg-howlpack-anthem",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-26T19:00:00Z",
+  "format": "40-card",
+  "strategy": "Wolf-count go-wide aggro (Howlpack Anthem)",
+  "colors": "RG",
+  "identity": "A red-green Wolf-count aggro deck. Fifteen of its twenty-three nonland cards carry the Wolf or Werewolf creature type on the printed line, and four more cards manufacture 2/2 green Wolf tokens, so the board is almost entirely made of the exact creature type its payoffs read. Those payoffs - Howlpack Resurgence, Stensia Masquerade, the back face of Mayor of Avabruck and Runebound Wolf - read 'Wolf or Werewolf' or simply 'attacking creatures', never 'transformed'. That is the whole point: every flip Werewolf in this pool transforms only 'if no spells were cast last turn', a clause either player can switch off, so a competitive build must not depend on it. Transforming is upside, not the plan. Of the four Wolf-token sources only Garruk's '0: Create a 2/2 green Wolf creature token' is unconditionally repeatable - Arlinn's token ability transforms her as part of the ability, and Howlpack Alpha's end-step token and Huntmaster's re-trigger are both transform-gated.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "deck_construction_constraint": "Maximum 5 rare+mythic cards total across mainboard and sideboard.",
+    "basics": "unlimited, format-supplied"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.43,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": -0.093,
+      "raw_target": 16.907,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.43,
+    "pip_demand": {
+      "R": 12,
+      "G": 14
+    },
+    "land_color_production": {
+      "G": 11,
+      "R": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 53.8,
+        "prod_pct": 64.7,
+        "gap": -10.9,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 46.2,
+        "prod_pct": 52.9,
+        "gap": -6.7,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Village Messenger // Moonrise Intruder",
+      "oracle_text": "Haste\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nMenace (This creature can't be blocked except by two or more creatures.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Werewolf",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Werewolf Matters",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Young Wolf",
+      "oracle_text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Wolf",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Enabler/Fodder"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Duskwatch Recruiter // Krallenhorde Howler",
+      "oracle_text": "{2}{G}: Look at the top three cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nCreature spells you cast cost {1} less to cast.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Warrior Werewolf",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Werewolf Matters",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cost Reduction"
+      ],
+      "qty": 2,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hungry Ridgewolf",
+      "oracle_text": "As long as you control another Wolf or Werewolf, this creature gets +1/+0 and has trample.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Wolf",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Pump"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Runebound Wolf",
+      "oracle_text": "{3}{R}, {T}: This creature deals damage equal to the number of Wolves and Werewolves you control to target opponent.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Wolf",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mayor of Avabruck // Howlpack Alpha",
+      "oracle_text": "Other Human creatures you control get +1/+1.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nEach other creature you control that's a Werewolf or a Wolf gets +1/+1.\nAt the beginning of your end step, create a 2/2 green Wolf creature token.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Advisor Werewolf",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Moonlight Hunt",
+      "oracle_text": "Choose target creature you don't control. Each creature you control that's a Wolf or a Werewolf deals damage equal to its power to that creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Howlpack Resurgence",
+      "oracle_text": "Flash\nEach creature you control that's a Wolf or a Werewolf gets +1/+1 and has trample.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Team Buff"
+      ],
+      "qty": 2,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geier Reach Bandit // Vildin-Pack Alpha",
+      "oracle_text": "Haste\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nWhenever a Werewolf you control enters, you may transform it.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Rogue Werewolf",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Stensia Masquerade",
+      "oracle_text": "Attacking creatures you control have first strike.\nWhenever a Vampire you control deals combat damage to a player, put a +1/+1 counter on it.\nMadness {2}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Graveyard",
+        "Payload/Payoff",
+        "Counter Placement",
+        "Madness"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Savage Alliance",
+      "oracle_text": "Escalate {1} (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Creatures target player controls gain trample until end of turn.\n• Savage Alliance deals 2 damage to target creature.\n• Savage Alliance deals 1 damage to each creature target opponent controls.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Combat Trick"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Huntmaster of the Fells // Ravager of the Fells",
+      "oracle_text": "Whenever this creature enters or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nTrample\nWhenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent or planeswalker and 2 damage to up to one target creature that player or that planeswalker's controller controls.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{2}{R}{G}",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Werewolf",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tokens",
+        "Lifegain",
+        "Werewolf Matters",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Life Drain",
+        "Direct Damage"
+      ],
+      "qty": 1,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Arlinn Kord // Arlinn, Embraced by the Moon",
+      "oracle_text": "+1: Until end of turn, up to one target creature gets +2/+2 and gains vigilance and haste.\n0: Create a 2/2 green Wolf creature token. Transform Arlinn Kord.\n//\n+1: Creatures you control get +1/+1 and gain trample until end of turn.\n−1: Arlinn deals 3 damage to any target. Transform Arlinn.\n−6: You get an emblem with \"Creatures you control have haste and '{T}: This creature deals damage equal to its power to any target.'\"",
+      "mana_cost": "{2}{R}{G}",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Arlinn",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Werewolf Matters",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Pump Effect",
+        "Direct Damage"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Garruk Relentless // Garruk, the Veil-Cursed",
+      "oracle_text": "When Garruk has two or fewer loyalty counters on him, transform him.\n0: Garruk deals 3 damage to target creature. That creature deals damage equal to its power to him.\n0: Create a 2/2 green Wolf creature token.\n//\n+1: Create a 1/1 black Wolf creature token with deathtouch.\n−1: Sacrifice a creature. If you do, search your library for a creature card, reveal it, put it into your hand, then shuffle.\n−3: Creatures you control gain trample and get +X/+X until end of turn, where X is the number of creature cards in your graveyard.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Garruk",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Direct Damage",
+        "Tutor",
+        "Team Buff"
+      ],
+      "qty": 1,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Pack Guardian",
+      "oracle_text": "Flash\nWhen this creature enters, you may discard a land card. If you do, create a 2/2 green Wolf creature token.",
+      "mana_cost": "{2}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Wolf Spirit",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Tokens",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Cards: Extra-Cost"
+      ],
+      "qty": 1,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 8,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 6,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wooded Ridgeline",
+      "oracle_text": "({T}: Add {R} or {G}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Mountain Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rockfall Vale",
+      "oracle_text": "This land enters tapped unless you control two or more other lands.\n{T}: Add {R} or {G}.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 1,
+      "role": "land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Abrade",
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against artifact decks. 24 artifacts in the cube and Abrade is the only card castable in R or G that answers one; the 3-damage mode keeps it live otherwise."
+    },
+    {
+      "name": "Fiery Temper",
+      "oracle_text": "Fiery Temper deals 3 damage to any target.\nMadness {R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{1}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Madness"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against fliers and low-toughness threats - 'deals 3 damage to any target' at instant speed reaches the 58-card evasion class the ground board cannot block. Its Madness {R} is also what makes Lightning Axe's discard a free spell instead of a card lost."
+    },
+    {
+      "name": "Lightning Axe",
+      "oracle_text": "As an additional cost to cast this spell, discard a card or pay {5}.\nLightning Axe deals 5 damage to target creature.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cards: Extra-Cost"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against toughness 4-5 blockers that Abrade's 3 damage cannot kill and the Wolf board cannot attack through. Board it in alongside Fiery Temper so the additional discard cost casts a spell rather than throwing one away."
+    },
+    {
+      "name": "Ambush Viper",
+      "oracle_text": "Flash\nDeathtouch",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Snake",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against big-creature midrange; flash deathtouch ambushes an attacker or a freshly landed fatty. Cost: it is a Snake, so each copy shrinks every count payoff's denominator by one."
+    },
+    {
+      "name": "Hanweir Watchkeep // Bane of Hanweir",
+      "oracle_text": "Defender\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nThis creature attacks each combat if able.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Warrior Werewolf",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "5",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "sideboard",
+      "when_to_board": "Against faster aggro - a 1/5 Defender that blocks all day and is still a Werewolf the anthems count."
+    }
+  ],
+  "pitch": "A red-green Wolf-count aggro deck. Fifteen of its twenty-three nonland cards carry the Wolf or Werewolf creature type on the printed line, and four more cards manufacture 2/2 green Wolf tokens, so the board is almost entirely made of the exact creature type its payoffs read. Those payoffs - Howlpack Resurgence, Stensia Masquerade, the back face of Mayor of Avabruck and Runebound Wolf - read 'Wolf or Werewolf' or simply 'attacking creatures', never 'transformed'. That is the whole point: every flip Werewolf in this pool transforms only 'if no spells were cast last turn', a clause either player can switch off, so a competitive build must not depend on it. Transforming is upside, not the plan. Of the four Wolf-token sources only Garruk's '0: Create a 2/2 green Wolf creature token' is unconditionally repeatable - Arlinn's token ability transforms her as part of the ability, and Howlpack Alpha's end-step token and Huntmaster's re-trigger are both transform-gated.",
+  "strategy_es": "agro a lo ancho por recuento de Lobos (Howlpack Anthem)",
+  "identity_es": "Un agro rojo-verde de recuento de Lobos. Quince de sus veintitrés cartas no-tierra llevan el tipo de criatura Lobo u Hombre lobo en la línea impresa, y otras cuatro cartas fabrican fichas de Lobo verde 2/2, así que el tablero está hecho casi por entero del tipo de criatura exacto que leen sus recompensas. Esas recompensas — Howlpack Resurgence, Stensia Masquerade, la cara trasera de Mayor of Avabruck y Runebound Wolf — dicen 'Lobo u Hombre lobo' o sencillamente 'criaturas atacantes', nunca 'transformada'. Ese es todo el asunto: cada Hombre lobo que se transforma en este pool solo lo hace 'si no se lanzaron hechizos el turno pasado', una cláusula que cualquiera de los dos jugadores puede apagar, así que una construcción competitiva no debe depender de ella. Transformarse es ganancia, no el plan. De las cuatro fuentes de fichas de Lobo solo el '0: Create a 2/2 green Wolf creature token' de Garruk es repetible sin condiciones: la habilidad de fichas de Arlinn la transforma como parte de la habilidad, y tanto la ficha de paso final de Howlpack Alpha como el redisparo de Huntmaster dependen de la transformación.",
+  "pitch_es": "Un agro rojo-verde de recuento de Lobos. Quince de sus veintitrés cartas no-tierra llevan el tipo de criatura Lobo u Hombre lobo en la línea impresa, y otras cuatro cartas fabrican fichas de Lobo verde 2/2, así que el tablero está hecho casi por entero del tipo de criatura exacto que leen sus recompensas. Esas recompensas — Howlpack Resurgence, Stensia Masquerade, la cara trasera de Mayor of Avabruck y Runebound Wolf — dicen 'Lobo u Hombre lobo' o sencillamente 'criaturas atacantes', nunca 'transformada'. Ese es todo el asunto: cada Hombre lobo que se transforma en este pool solo lo hace 'si no se lanzaron hechizos el turno pasado', una cláusula que cualquiera de los dos jugadores puede apagar, así que una construcción competitiva no debe depender de ella. Transformarse es ganancia, no el plan. De las cuatro fuentes de fichas de Lobo solo el '0: Create a 2/2 green Wolf creature token' de Garruk es repetible sin condiciones: la habilidad de fichas de Arlinn la transforma como parte de la habilidad, y tanto la ficha de paso final de Howlpack Alpha como el redisparo de Huntmaster dependen de la transformación."
+}

@@ -1,0 +1,1041 @@
+{
+  "deck_name": "br-lasting-tarfire",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-10T03:44:09Z",
+  "format": "40-card",
+  "strategy": "blight burn / -1/-1 counters as a damage trigger",
+  "colors": "BR",
+  "identity": "A two-colour B/R blight deck whose damage comes off triggers rather than the combat step. Lasting Tarfire converts any -1/-1 counter placed during a turn into 2 damage at each end step, and the list is built so that a counter gets placed at zero card cost on every one of your own turns — Warren Torchmaster at the beginning of combat on your turn, Scuzzback Scrounger at the beginning of your first main phase, and Gristle Glutton via an untimed tap ability. The opponent's end-step trigger is a bonus, not a guarantee: 6 of the 23 nonland cards can place a counter during the opponent's turn (Gristle Glutton x2 and Sting-Slinger x2, whose tap abilities carry no timing restriction and must be activated before their end step begins, and Requiting Hex x2 at instant speed). Every interaction spell in the deck pays its discount by placing that same counter, so removal and clock are the same card. The undercosted blight bodies (Chaos Spewer 5/4 for two) are the landing pads for those counters and a real ground clock underneath the burn.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2,
+        "rare": 1,
+        "mythic": 1
+      },
+      "only_from": {},
+      "excluded": []
+    },
+    "extra_build_constraint": "at most 5 rare+mythic cards total across mainboard and sideboard",
+    "status": "PASS",
+    "rare_mythic_used": "5 rare/mythic across MB+SB: ['Blood Crypt', 'Dawnhand Dissident', 'Scuzzback Scrounger', 'Shadow Urchin', 'Soul Immolation']"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 1,
+    "cantrip_count": 0,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.35,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": -0.367,
+      "raw_target": 16.633,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.35,
+    "pip_demand": {
+      "R": 15,
+      "B": 6
+    },
+    "land_color_production": {
+      "B": 8,
+      "R": 11
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 28.6,
+        "prod_pct": 47.1,
+        "gap": -18.5,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 71.4,
+        "prod_pct": 64.7,
+        "gap": 6.7,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Lasting Tarfire",
+      "oracle_text": "At the beginning of each end step, if you put a counter on a creature this turn, this enchantment deals 2 damage to each opponent.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Sting-Slinger",
+      "oracle_text": "{1}{R}, {T}, Blight 1: This creature deals 2 damage to each opponent. (To blight 1, put a -1/-1 counter on a creature you control.)",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Goblin Warrior",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Boggart Mischief",
+      "oracle_text": "When this enchantment enters, you may blight 1. If you do, create two 1/1 black and red Goblin creature tokens. (To blight 1, put a -1/-1 counter on a creature you control.)\nWhenever a Goblin creature you control dies, each opponent loses 1 life and you gain 1 life.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Tokens",
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Life Drain",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tribal/Kindred",
+          "Tokens",
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Life Drain",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Kindred Enchantment — Goblin",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Chaos Spewer",
+      "oracle_text": "When this creature enters, you may pay {2}. If you don't, blight 2. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{2}{B/R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Goblin Warlock",
+      "rarity": "common",
+      "power": "5",
+      "toughness": "4",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Shadow Urchin",
+      "oracle_text": "Whenever this creature attacks, blight 1. (Put a -1/-1 counter on a creature you control.)\nWhenever a creature you control with one or more counters on it dies, exile that many cards from the top of your library. Until your next end step, you may play those cards.",
+      "mana_cost": "{2}{B/R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Impulse Draw",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Aristocrats/Sacrifice",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Impulse Draw",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Ouphe",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Soul Immolation",
+      "oracle_text": "As an additional cost to cast this spell, blight X. X can't be greater than the greatest toughness among creatures you control. (Put X -1/-1 counters on a creature you control.)\nSoul Immolation deals X damage to each opponent and each creature they control.",
+      "mana_cost": "{3}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Sweeper/Board Wipe",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Warren Torchmaster",
+      "oracle_text": "At the beginning of combat on your turn, you may blight 1. When you do, target creature gains haste until end of turn. (To blight 1, put a -1/-1 counter on a creature you control.)",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Haste Granting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Haste Granting"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Goblin Warrior",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Gristle Glutton",
+      "oracle_text": "{T}, Blight 1: Discard a card. If you do, draw a card. (To blight 1, put a -1/-1 counter on a creature you control.)",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Looting"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Goblin Scout",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Scuzzback Scrounger",
+      "oracle_text": "At the beginning of your first main phase, you may blight 1. If you do, create a Treasure token. (To blight 1, put a -1/-1 counter on a creature you control. A Treasure token is an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Treasure Generation",
+        "Mana Ramp"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Artifacts",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Treasure Generation",
+          "Mana Ramp"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Goblin Warrior",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Burning Curiosity",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nExile the top two cards of your library. If this spell's additional cost was paid, exile the top three cards instead. Until the end of your next turn, you may play those cards.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Infrastructure/Consistency",
+        "Card Advantage",
+        "Impulse Draw",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Advantage",
+          "Impulse Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Cinder Strike",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nCinder Strike deals 2 damage to target creature. It deals 4 damage to that creature instead if this spell's additional cost was paid.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption"
+    },
+    {
+      "name": "Requiting Hex",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nDestroy target creature with mana value 2 or less. If this spell's additional cost was paid, you gain 2 life.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption"
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption"
+    },
+    {
+      "name": "Blood Crypt",
+      "oracle_text": "({T}: Add {B} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Land"
+    },
+    {
+      "name": "Geothermal Bog",
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "Land"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 99,
+      "qty": 9,
+      "role": "Land"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 99,
+      "qty": 6,
+      "role": "Land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Giantfall",
+      "oracle_text": "Choose one —\n• Target creature you control deals damage equal to its power to target creature an opponent controls.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "when_to_board": "vs artifact decks (11 artifacts in cube, 4.2% density) — 'Destroy target artifact'; mode 1 stays live otherwise"
+    },
+    {
+      "name": "Dawnhand Dissident",
+      "oracle_text": "{T}, Blight 1: Surveil 1.\n{T}, Blight 2: Exile target card from a graveyard.\nDuring your turn, you may cast creature spells from among cards you own exiled with this creature by removing three counters from among creatures you control in addition to paying their other costs.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Graveyard",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Card Selection",
+        "Graveyard Hate",
+        "Self-Mill"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Graveyard Hate",
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Elf Warlock",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "2",
+      "board": "sideboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "when_to_board": "vs graveyard decks (39 cards, 15.0% density) — repeatable '{T}, Blight 2: Exile target card from a graveyard' at 1 mana, and the blight is itself a Lasting Tarfire enabler"
+    },
+    {
+      "name": "Boulder Dash",
+      "oracle_text": "Boulder Dash deals 2 damage to any target and 1 damage to any other target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "when_to_board": "vs wide token boards — kills two x/1 or x/2 bodies for 2 mana on 11 red sources, and can go to the face"
+    },
+    {
+      "name": "Darkness Descends",
+      "oracle_text": "Put two -1/-1 counters on each creature.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "when_to_board": "vs the widest token boards only; symmetric, and it kills our own 4 Goblin tokens, so 1 copy not 2"
+    },
+    {
+      "name": "Blight Rot",
+      "oracle_text": "Put four -1/-1 counters on target creature.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "when_to_board": "vs single large threats — instant-speed four -1/-1 counters, and the only removal that satisfies Lasting Tarfire off an OPPONENT's creature"
+    },
+    {
+      "name": "Sear",
+      "oracle_text": "Sear deals 4 damage to target creature or planeswalker.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "when_to_board": "vs evasive fliers and planeswalkers (evasion density 15.8%, 41 cards)"
+    }
+  ],
+  "pitch": "A two-colour B/R blight deck whose damage comes off triggers rather than the combat step. Lasting Tarfire converts any -1/-1 counter placed during a turn into 2 damage at each end step, and the list is built so that a counter gets placed at zero card cost on every one of your own turns — Warren Torchmaster at the beginning of combat on your turn, Scuzzback Scrounger at the beginning of your first main phase, and Gristle Glutton via an untimed tap ability. The opponent's end-step trigger is a bonus, not a guarantee: 6 of the 23 nonland cards can place a counter during the opponent's turn (Gristle Glutton x2 and Sting-Slinger x2, whose tap abilities carry no timing restriction and must be activated before their end step begins, and Requiting Hex x2 at instant speed). Every interaction spell in the deck pays its discount by placing that same counter, so removal and clock are the same card. The undercosted blight bodies (Chaos Spewer 5/4 for two) are the landing pads for those counters and a real ground clock underneath the burn.",
+  "strategy_es": "quemar con blight / contadores -1/-1 como disparo de daño",
+  "identity_es": "Un mazo de blight bicolor B/R cuyo daño viene de disparos y no del paso de combate. Lasting Tarfire convierte cualquier contador -1/-1 colocado durante un turno en 2 de daño en cada paso final, y la lista está construida para que se coloque un contador sin coste de cartas en todos y cada uno de tus propios turnos: Warren Torchmaster al comienzo del combate en tu turno, Scuzzback Scrounger al comienzo de tu primera fase principal, y Gristle Glutton mediante una habilidad de giro sin restricción de tiempo. El disparo del paso final del rival es una propina, no una garantía: 6 de las 23 cartas no-tierra pueden colocar un contador durante el turno del rival (Gristle Glutton x2 y Sting-Slinger x2, cuyas habilidades de giro no llevan restricción de tiempo y deben activarse antes de que empiece su paso final, y Requiting Hex x2 a velocidad de instantáneo). Cada hechizo de interacción del mazo paga su descuento colocando ese mismo contador, así que eliminación y reloj son la misma carta. Los cuerpos infracosteados con blight (Chaos Spewer 5/4 por dos) son las pistas de aterrizaje de esos contadores y un reloj terrestre real por debajo del quemar.",
+  "pitch_es": "Un mazo de blight bicolor B/R cuyo daño viene de disparos y no del paso de combate. Lasting Tarfire convierte cualquier contador -1/-1 colocado durante un turno en 2 de daño en cada paso final, y la lista está construida para que se coloque un contador sin coste de cartas en todos y cada uno de tus propios turnos: Warren Torchmaster al comienzo del combate en tu turno, Scuzzback Scrounger al comienzo de tu primera fase principal, y Gristle Glutton mediante una habilidad de giro sin restricción de tiempo. El disparo del paso final del rival es una propina, no una garantía: 6 de las 23 cartas no-tierra pueden colocar un contador durante el turno del rival (Gristle Glutton x2 y Sting-Slinger x2, cuyas habilidades de giro no llevan restricción de tiempo y deben activarse antes de que empiece su paso final, y Requiting Hex x2 a velocidad de instantáneo). Cada hechizo de interacción del mazo paga su descuento colocando ese mismo contador, así que eliminación y reloj son la misma carta. Los cuerpos infracosteados con blight (Chaos Spewer 5/4 por dos) son las pistas de aterrizaje de esos contadores y un reloj terrestre real por debajo del quemar."
+}

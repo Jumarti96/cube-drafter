@@ -1,0 +1,969 @@
+{
+  "deck_name": "rw-enlist-kicker-aggro",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-14T03:47:41Z",
+  "format": "40-card",
+  "strategy": "red-white kicker go-wide aggro",
+  "colors": "RW",
+  "identity": "Red-white kicker aggro with the fastest clock in the shortlist. Keldon Strike Team kicked is three bodies and haste for the entire board in one card; Baird, Argivian Recruiter turns every pump effect into a free Soldier at end step; Tori D'Avenant pumps all other attackers, gives the red ones trample and untaps the white ones so they block afterwards; Heroic Charge is the alpha strike. The build is deliberately bottom-heavy - 13 of 22 nonland cards cost two mana or less - because the deck's edge is winning on turn five, before the thin RW fixing it cannot solve becomes a liability.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "max 5 rare/mythic cards total across mainboard + sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.41,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": -0.12,
+      "raw_target": 16.88,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.41,
+    "pip_demand": {
+      "R": 15,
+      "W": 15
+    },
+    "land_color_production": {
+      "R": 10,
+      "W": 10,
+      "G": 0,
+      "B": 0,
+      "U": 0
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 50,
+        "prod_pct": 55.6,
+        "gap": -5.6,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 50,
+        "prod_pct": 55.6,
+        "gap": -5.6,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Phoenix Chick",
+      "oracle_text": "Flying, haste\nThis creature can't block.\nWhenever you attack with three or more creatures, you may pay {R}{R}. If you do, return this card from your graveyard to the battlefield tapped and attacking with a +1/+1 counter on it.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Standalone Threat",
+        "Recursion"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Recursion"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Phoenix",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "Threat - 1/1 flying haste, returns from the graveyard attacking",
+      "qty": 2
+    },
+    {
+      "name": "Hammerhand",
+      "oracle_text": "Enchant creature\nWhen this Aura enters, target creature can't block this turn.\nEnchanted creature gets +1/+1 and has haste.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Voltron/Equipment",
+        "Enabler/Fodder",
+        "Combat Trick",
+        "Evasion Grant"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Evasion Grant"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Enabler - haste + can't block; the +1/+1 turns Baird on",
+      "qty": 2
+    },
+    {
+      "name": "Baird, Argivian Recruiter",
+      "oracle_text": "At the beginning of your end step, if you control a creature with power greater than its base power, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{R}{W}",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Legendary Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Payoff/engine - a free Soldier each end step off any pumped creature",
+      "qty": 2
+    },
+    {
+      "name": "Resolute Reinforcements",
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "Enabler - flash, two Soldier bodies",
+      "qty": 2
+    },
+    {
+      "name": "Valiant Veteran",
+      "oracle_text": "Other Soldiers you control get +1/+1.\n{3}{W}{W}, Exile this card from your graveyard: Put a +1/+1 counter on each Soldier you control.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Flashback/GY-Cast",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Counters (+1/+1)",
+          "Flashback/GY-Cast"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Kor Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Payoff - Soldier anthem; also a permanent Baird enabler",
+      "qty": 1
+    },
+    {
+      "name": "Guardian of New Benalia",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nWhenever this creature enlists a creature, scry 2.\nDiscard a card: This creature gains indestructible until end of turn. Tap it.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Enlist Matters",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Protection",
+        "Cards: Extra-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Enlist Matters"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Protection"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Infra - Soldier body, enlist scry 2, enlist turns Baird on",
+      "qty": 1
+    },
+    {
+      "name": "Take Up the Shield",
+      "oracle_text": "Put a +1/+1 counter on target creature. It gains lifelink and indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Enabler/protection - a permanent +1/+1 counter, so Baird triggers every end step",
+      "qty": 1
+    },
+    {
+      "name": "Lightning Strike",
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Interaction - 3 damage to any target, including the face",
+      "qty": 2
+    },
+    {
+      "name": "Keldon Strike Team",
+      "oracle_text": "Kicker {1}{W} (You may pay an additional {1}{W} as you cast this spell.)\nWhen this creature enters, if it was kicked, create two 1/1 white Soldier creature tokens.\nAs long as this creature entered this turn, creatures you control have haste.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Tokens",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Haste Grant",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Haste Grant",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Warrior",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "Payoff/enabler - kicked, two Soldiers and haste for the whole board",
+      "qty": 2
+    },
+    {
+      "name": "Argivian Cavalier",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Enlist Matters",
+        "Tokens",
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Enlist Matters",
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Orc Knight",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Enabler - Soldier token on ETB; enlist turns Baird on",
+      "qty": 2
+    },
+    {
+      "name": "Squee, Dubious Monarch",
+      "oracle_text": "Haste\nWhenever Squee attacks, create a 1/1 red Goblin creature token that's tapped and attacking.\nYou may cast this card from your graveyard by paying {3}{R} and exiling four other cards from your graveyard rather than paying its mana cost.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Tokens",
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Graveyard",
+          "Flashback/GY-Cast",
+          "Tribal/Kindred",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Creature — Goblin Noble",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Threat - a tapped attacking Goblin every attack, recastable from the graveyard",
+      "qty": 1
+    },
+    {
+      "name": "Tori D'Avenant, Fury Rider",
+      "oracle_text": "Vigilance, trample\nWhenever Tori D'Avenant attacks, all other attacking creatures you control get +1/+1 until end of turn. Other red attacking creatures you control gain trample until end of turn. Untap each other white attacking creature you control.",
+      "mana_cost": "{1}{R}{R}{W}",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Knight",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "role": "Payoff - pumps all other attackers, tramples the red, untaps the white",
+      "qty": 2
+    },
+    {
+      "name": "Heroic Charge",
+      "oracle_text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nCreatures you control get +2/+1 until end of turn. If this spell was kicked, those creatures also gain trample until end of turn.",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Tokens",
+        "Payload/Payoff",
+        "Combat Trick",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Payoff - the alpha-strike finisher; kicked it adds trample",
+      "qty": 2
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Basic - red source",
+      "qty": 7
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Basic - white source",
+      "qty": 8
+    },
+    {
+      "name": "Sacred Peaks",
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "RW dual, enters tapped - the only non-rare RW fixing in the pool",
+      "qty": 2
+    },
+    {
+      "name": "Plaza of Heroes",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a legendary spell.\n{T}: Add one mana of any color among legendary permanents you control.\n{3}, {T}, Exile this land: Target legendary creature gains hexproof and indestructible until end of turn.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Historic",
+        "Infrastructure/Consistency",
+        "Interaction/Disruption",
+        "Mana Fixing",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Historic"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Any colour for legendary spells - 5 legendary cards in this list",
+      "qty": 1
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Hurloon Battle Hymn",
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nHurloon Battle Hymn deals 4 damage to target creature or planeswalker. If this spell was kicked, you gain 4 life.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage",
+          "Lifegain",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "4 damage to a creature or planeswalker; kicked, gain 4 life",
+      "qty": 2,
+      "when_to_board": "vs bigger creatures and vs decks that try to race"
+    },
+    {
+      "name": "Smash to Dust",
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target creature with defender.\n• Smash to Dust deals 1 damage to each creature your opponents control.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Destroy an artifact, or 1 damage to each opposing creature",
+      "qty": 2,
+      "when_to_board": "vs artifact decks and opposing 1/1 token swarms"
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Destroy a toughness-4-or-greater creature, or an enchantment",
+      "qty": 2,
+      "when_to_board": "vs fat blockers and enchantment decks"
+    },
+    {
+      "name": "Citizen's Arrest",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Unconditional exile of a creature or planeswalker",
+      "qty": 2,
+      "when_to_board": "vs single-large-threat and planeswalker decks"
+    },
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Flash exile any nonland permanent",
+      "qty": 2,
+      "when_to_board": "vs decks whose best permanent must be answered at instant speed"
+    }
+  ],
+  "pitch": "Red-white kicker aggro with the fastest clock in the shortlist. Keldon Strike Team kicked is three bodies and haste for the entire board in one card; Baird, Argivian Recruiter turns every pump effect into a free Soldier at end step; Tori D'Avenant pumps all other attackers, gives the red ones trample and untaps the white ones so they block afterwards; Heroic Charge is the alpha strike. The build is deliberately bottom-heavy - 13 of 22 nonland cards cost two mana or less - because the deck's edge is winning on turn five, before the thin RW fixing it cannot solve becomes a liability.",
+  "strategy_es": "agro a lo ancho rojo-blanco con kicker",
+  "identity_es": "Agro rojo-blanco con kicker y el reloj más rápido de la preselección. Keldon Strike Team kickeado son tres cuerpos y prisa para todo el tablero en una sola carta; Baird, Argivian Recruiter convierte cada efecto de pompa en un Soldado gratis en el paso final; Tori D'Avenant pompea a todos los demás atacantes, da arrollar a los rojos y desgira a los blancos para que bloqueen después; Heroic Charge es el golpe alfa. La construcción es deliberadamente pesada por abajo — 13 de 22 cartas no-tierra cuestan dos manás o menos — porque la ventaja del mazo es ganar en el turno cinco, antes de que el escaso fijado RW que no puede resolver se vuelva un lastre.",
+  "pitch_es": "Agro rojo-blanco con kicker y el reloj más rápido de la preselección. Keldon Strike Team kickeado son tres cuerpos y prisa para todo el tablero en una sola carta; Baird, Argivian Recruiter convierte cada efecto de pompa en un Soldado gratis en el paso final; Tori D'Avenant pompea a todos los demás atacantes, da arrollar a los rojos y desgira a los blancos para que bloqueen después; Heroic Charge es el golpe alfa. La construcción es deliberadamente pesada por abajo — 13 de 22 cartas no-tierra cuestan dos manás o menos — porque la ventaja del mazo es ganar en el turno cinco, antes de que el escaso fijado RW que no puede resolver se vuelva un lastre."
+}

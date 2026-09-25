@@ -2,7 +2,15 @@ import { useState } from 'react'
 import CardImage from './CardImage'
 import { ColorPips } from './ColorPips'
 import { ManaCost } from './ManaSymbols.jsx'
-import { getCardImageLookup, isLandCard, getColorCardCounts, getNonLandMainboardCount } from '../lib/cubeData.js'
+import {
+  getCardImageLookup,
+  getColorCardCounts,
+  getMainboardCards,
+  getNonLandMainboardCount,
+  getSideboardCards,
+  groupCardsByName,
+  isLandCard,
+} from '../lib/cubeData.js'
 import { getDeckExportOptions, localizeExportOption, runDeckExport } from '../lib/deckExport.js'
 import { useI18n } from '../i18n/useT.js'
 import { pickLocalized } from '../i18n/localized.js'
@@ -66,36 +74,19 @@ export default function DeckViewer({ deckData, deckName, onCardClick, onConfirm,
 
   if (!deckData) return null
 
-  const mainboard = deckData.mainboard || []
-  const sideboardCards = [
-    ...mainboard.filter(c => c.board === 'sideboard'),
-    ...(deckData.sideboard || []),
-  ]
-  const mainDeck = mainboard.filter(c => !c.board || c.board === 'mainboard')
+  const sideboardCards = getSideboardCards(deckData)
+  const mainDeck = getMainboardCards(deckData)
 
   const creatures = mainDeck.filter(c => getDeckCardCategory(c) === 'creatures')
   const instantsSorceries = mainDeck.filter(c => getDeckCardCategory(c) === 'instants-sorceries')
   const otherSpells = mainDeck.filter(c => getDeckCardCategory(c) === 'other-spells')
   const lands = mainDeck.filter(c => getDeckCardCategory(c) === 'lands')
 
-  function countCards(cards) {
-    const map = new Map()
-    for (const c of cards) {
-      const key = c.name
-      if (map.has(key)) {
-        map.get(key).count += 1
-      } else {
-        map.set(key, { ...c, count: 1 })
-      }
-    }
-    return [...map.values()]
-  }
-
-  const creaturesGrouped = enrichCards(countCards(creatures)).sort((a, b) => (a.cmc ?? 0) - (b.cmc ?? 0))
-  const instantsSorceriesGrouped = enrichCards(countCards(instantsSorceries)).sort((a, b) => (a.cmc ?? 0) - (b.cmc ?? 0))
-  const otherSpellsGrouped = enrichCards(countCards(otherSpells)).sort((a, b) => (a.cmc ?? 0) - (b.cmc ?? 0))
-  const landsGrouped = enrichCards(countCards(lands))
-  const sideboardGrouped = enrichCards(countCards(sideboardCards)).sort((a, b) => (a.cmc ?? 0) - (b.cmc ?? 0))
+  const creaturesGrouped = enrichCards(groupCardsByName(creatures)).sort((a, b) => (a.cmc ?? 0) - (b.cmc ?? 0))
+  const instantsSorceriesGrouped = enrichCards(groupCardsByName(instantsSorceries)).sort((a, b) => (a.cmc ?? 0) - (b.cmc ?? 0))
+  const otherSpellsGrouped = enrichCards(groupCardsByName(otherSpells)).sort((a, b) => (a.cmc ?? 0) - (b.cmc ?? 0))
+  const landsGrouped = enrichCards(groupCardsByName(lands))
+  const sideboardGrouped = enrichCards(groupCardsByName(sideboardCards)).sort((a, b) => (a.cmc ?? 0) - (b.cmc ?? 0))
 
   const colorCardCounts = getColorCardCounts(deckData)
   const nonLandCount = getNonLandMainboardCount(deckData)

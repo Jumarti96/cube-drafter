@@ -1,0 +1,1140 @@
+{
+  "deck_name": "bg-perfection-midrange",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-09T22:45:00Z",
+  "format": "40-card",
+  "strategy": "Elf graveyard aggro (\"Graveyard Perfection\")",
+  "colors": "BG",
+  "identity": "A BG Elf aggro deck whose creatures are priced as though the graveyard requirement were hard, and which makes it trivial. Creakwood Safewright is a 5/5 body for {1}{B} that enters with three -1/-1 counters and removes one per end step 'if there is an Elf card in your graveyard' — cast on turn 2 it attacks as a 3/3 on turn 3 and reaches 5/5 at the end of turn 4. Scarblade Scout, Lys Alana Informant, Dawnhand Eulogist and Trystan put Elf cards there as a side effect of being bodies you wanted to play anyway, and Nameless Inversion is a changeling removal spell that flips the switch simply by being cast. Morcant's Loyalist converts the resulting board of undercosted Elves into lethal, Champions of the Perfect turns every subsequent creature spell into a card, and Gloom Ripper — whose X counts Elves on the battlefield PLUS Elf cards in the graveyard — turns a stalled attack into a kill. The graveyard here is a switch, not an engine: it is on by turn 2 and never turns off.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "build_constraint": "at most 5 rare/mythic cards total across mainboard + sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.87,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.493,
+      "raw_target": 17.493,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.87,
+    "pip_demand": {
+      "B": 15,
+      "G": 10
+    },
+    "land_color_production": {
+      "B": 10,
+      "G": 10,
+      "W": 1,
+      "U": 1,
+      "R": 1
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 60,
+        "prod_pct": 58.8,
+        "gap": 1.2,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 40,
+        "prod_pct": 58.8,
+        "gap": -18.8,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Creakwood Safewright",
+      "oracle_text": "This creature enters with three -1/-1 counters on it.\nAt the beginning of your end step, if there is an Elf card in your graveyard and this creature has a -1/-1 counter on it, remove a -1/-1 counter from this creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Enabler/Fodder",
+        "Counter Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Graveyard",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Elf Warrior",
+      "rarity": "uncommon",
+      "power": "5",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat/Payoff"
+    },
+    {
+      "name": "Lys Alana Informant",
+      "oracle_text": "When this creature enters or dies, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Self-Mill",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Self-Mill",
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Elf Scout",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler/Infrastructure"
+    },
+    {
+      "name": "Scarblade Scout",
+      "oracle_text": "Lifelink\nWhen this creature enters, mill two cards. (Put the top two cards of your library into your graveyard.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Lifegain",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Self-Mill",
+          "Graveyard",
+          "Lifegain",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Self-Mill",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Elf Scout",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler/Infrastructure"
+    },
+    {
+      "name": "Morcant's Loyalist",
+      "oracle_text": "Other Elves you control get +1/+1.\nWhen this creature dies, return another target Elf card from your graveyard to your hand.",
+      "mana_cost": "{1}{B}{G}",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Graveyard",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Graveyard Recursion"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Elf Warrior",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat/Payoff"
+    },
+    {
+      "name": "Vinebred Brawler",
+      "oracle_text": "This creature must be blocked if able.\nWhenever this creature attacks, another target Elf you control gets +2/+1 until end of turn.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Elf Berserker",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat/Payoff"
+    },
+    {
+      "name": "Eclipsed Elf",
+      "oracle_text": "When this creature enters, look at the top four cards of your library. You may reveal an Elf, Swamp, or Forest card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.",
+      "mana_cost": "{B/G}{B/G}{B/G}",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Elf Scout",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler/Infrastructure"
+    },
+    {
+      "name": "Trystan, Callous Cultivator // Trystan, Penitent Culler",
+      "oracle_text": "Deathtouch\nWhenever this creature enters or transforms into Trystan, Callous Cultivator, mill three cards. Then if there is an Elf card in your graveyard, you gain 2 life.\nAt the beginning of your first main phase, you may pay {B}. If you do, transform Trystan.\n//\nDeathtouch\nWhenever this creature transforms into Trystan, Penitent Culler, mill three cards, then you may exile an Elf card from your graveyard. If you do, each opponent loses 2 life.\nAt the beginning of your first main phase, you may pay {G}. If you do, transform Trystan.",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Tribal/Kindred",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Life Drain",
+        "Exile from Graveyard",
+        "Mana: Ongoing-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Self-Mill",
+          "Graveyard",
+          "Tribal/Kindred",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Self-Mill",
+          "Life Drain",
+          "Exile from Graveyard"
+        ],
+        "resource_exchange": [
+          "Mana: Ongoing-Cost"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Legendary Creature — Elf Druid",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff"
+    },
+    {
+      "name": "High Perfect Morcant",
+      "oracle_text": "Whenever High Perfect Morcant or another Elf you control enters, each opponent blights 1. (They each put a -1/-1 counter on a creature they control.)\nTap three untapped Elves you control: Proliferate. Activate only as a sorcery. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "mana_cost": "{2}{B}{G}",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Proliferate",
+        "Blight"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Proliferate",
+          "Blight"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Creature — Elf Noble",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff"
+    },
+    {
+      "name": "Moon-Vigil Adherents",
+      "oracle_text": "Trample\nThis creature gets +1/+1 for each creature you control and each creature card in your graveyard.",
+      "mana_cost": "{2}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Graveyard",
+        "Tokens",
+        "Payload/Payoff",
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elf Druid",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "0",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff"
+    },
+    {
+      "name": "Dawnhand Eulogist",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nWhen this creature enters, mill three cards. Then if there is an Elf card in your graveyard, each opponent loses 2 life and you gain 2 life. (To mill three cards, put the top three cards of your library into your graveyard.)",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Graveyard",
+        "Self-Mill",
+        "Lifegain",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Graveyard",
+          "Self-Mill",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Self-Mill",
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elf Warlock",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat/Payoff"
+    },
+    {
+      "name": "Gloom Ripper",
+      "oracle_text": "When this creature enters, target creature you control gets +X/+0 until end of turn and up to one target creature an opponent controls gets -0/-X until end of turn, where X is the number of Elves you control plus the number of Elf cards in your graveyard.",
+      "mana_cost": "{3}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Graveyard",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Elf Assassin",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff"
+    },
+    {
+      "name": "Nameless Inversion",
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction"
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction"
+    },
+    {
+      "name": "Champions of the Perfect",
+      "oracle_text": "As an additional cost to cast this spell, behold an Elf and exile it. (Exile an Elf you control or an Elf card from your hand.)\nWhenever you cast a creature spell, draw a card.\nWhen this creature leaves the battlefield, return the exiled card to its owner's hand.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Extra-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elf Warrior",
+      "rarity": "rare",
+      "power": "6",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff"
+    },
+    {
+      "name": "Unbury",
+      "oracle_text": "Choose one —\n• Return target creature card from your graveyard to your hand.\n• Return two target creature cards that share a creature type from your graveyard to your hand.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Graveyard",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Graveyard Recursion"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Enabler/Infrastructure"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 6,
+      "role": "Land"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 6,
+      "role": "Land"
+    },
+    {
+      "name": "Haunted Mire",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land"
+    },
+    {
+      "name": "Overgrown Tomb",
+      "oracle_text": "({T}: Add {B} or {G}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land"
+    },
+    {
+      "name": "Eclipsed Realms",
+      "oracle_text": "As this land enters, choose Elemental, Elf, Faerie, Giant, Goblin, Kithkin, Merfolk, or Treefolk.\n{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a spell of the chosen type or activate an ability of a source of the chosen type.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Unforgiving Aim",
+      "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate — fliers / enchantments"
+    },
+    {
+      "name": "Chomping Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, destroy up to one target artifact or enchantment.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Hate — artifacts / enchantments"
+    },
+    {
+      "name": "Dawn's Light Archer",
+      "oracle_text": "Flash\nReach",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Elf Archer",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Flex — anti-evasion blocker"
+    },
+    {
+      "name": "Requiting Hex",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nDestroy target creature with mana value 2 or less. If this spell's additional cost was paid, you gain 2 life.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Flex — cheap removal vs aggro"
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Flex — second unconditional exile"
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate — graveyard"
+    }
+  ],
+  "pitch": "A BG Elf aggro deck whose creatures are priced as though the graveyard requirement were hard, and which makes it trivial. Creakwood Safewright is a 5/5 body for {1}{B} that enters with three -1/-1 counters and removes one per end step 'if there is an Elf card in your graveyard' — cast on turn 2 it attacks as a 3/3 on turn 3 and reaches 5/5 at the end of turn 4. Scarblade Scout, Lys Alana Informant, Dawnhand Eulogist and Trystan put Elf cards there as a side effect of being bodies you wanted to play anyway, and Nameless Inversion is a changeling removal spell that flips the switch simply by being cast. Morcant's Loyalist converts the resulting board of undercosted Elves into lethal, Champions of the Perfect turns every subsequent creature spell into a card, and Gloom Ripper — whose X counts Elves on the battlefield PLUS Elf cards in the graveyard — turns a stalled attack into a kill. The graveyard here is a switch, not an engine: it is on by turn 2 and never turns off.",
+  "strategy_es": "agro de cementerio con Elfos (\"Graveyard Perfection\")",
+  "identity_es": "Un agro de Elfos BG cuyas criaturas están tarifadas como si el requisito de cementerio fuera duro, y que lo vuelve trivial. Creakwood Safewright es un cuerpo 5/5 por {1}{B} que entra con tres contadores -1/-1 y retira uno por paso final 'if there is an Elf card in your graveyard'; lanzado en el turno 2 ataca como 3/3 en el turno 3 y llega a 5/5 al final del turno 4. Scarblade Scout, Lys Alana Informant, Dawnhand Eulogist y Trystan ponen cartas de Elfo ahí como efecto secundario de ser cuerpos que ibas a jugar de todos modos, y Nameless Inversion es un hechizo de eliminación changeling que acciona el interruptor simplemente con ser lanzado. Morcant's Loyalist convierte el tablero resultante de Elfos infracosteados en letal, Champions of the Perfect convierte cada hechizo de criatura posterior en una carta, y Gloom Ripper — cuya X cuenta Elfos en el campo de batalla MÁS cartas de Elfo en el cementerio — convierte un ataque atascado en una victoria. El cementerio aquí es un interruptor, no un motor: está encendido en el turno 2 y no se apaga nunca.",
+  "pitch_es": "Un agro de Elfos BG cuyas criaturas están tarifadas como si el requisito de cementerio fuera duro, y que lo vuelve trivial. Creakwood Safewright es un cuerpo 5/5 por {1}{B} que entra con tres contadores -1/-1 y retira uno por paso final 'if there is an Elf card in your graveyard'; lanzado en el turno 2 ataca como 3/3 en el turno 3 y llega a 5/5 al final del turno 4. Scarblade Scout, Lys Alana Informant, Dawnhand Eulogist y Trystan ponen cartas de Elfo ahí como efecto secundario de ser cuerpos que ibas a jugar de todos modos, y Nameless Inversion es un hechizo de eliminación changeling que acciona el interruptor simplemente con ser lanzado. Morcant's Loyalist convierte el tablero resultante de Elfos infracosteados en letal, Champions of the Perfect convierte cada hechizo de criatura posterior en una carta, y Gloom Ripper — cuya X cuenta Elfos en el campo de batalla MÁS cartas de Elfo en el cementerio — convierte un ataque atascado en una victoria. El cementerio aquí es un interruptor, no un motor: está encendido en el turno 2 y no se apaga nunca."
+}

@@ -1,0 +1,1030 @@
+{
+  "deck_name": "ur-crab-gun-burn",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-08-02T19:08:36Z",
+  "format": "40-card",
+  "strategy": "untap-pinger combo (Crab Gun)",
+  "colors": "UR",
+  "identity": "A blue-red engine deck built on Horseshoe Crab's '{U}: Untap this creature'. Attach a tap-ability Aura to the Crab and every blue mana becomes one point of damage: Hermetic Study grants '{T}: This creature deals 1 damage to any target', Quicksilver Dagger grants the same at a player plus a card. High Tide, Frantic Search, Cloud of Faeries and Peregrine Drake multiply how many blue mana exist in a single turn, so an assembled board converts a normal turn into a lethal burst. Because Horseshoe Crab is a 2-of with no functional redundancy in this cube, the list is built to win without it too: Thieving Magpie and Cloud of Faeries are evasive Aura hosts, Grim Lavamancer is an independent repeating damage source, and Counterspell / Force of Will protect whichever half landed first.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": []
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 6,
+    "cantrip_count": 0,
+    "accel_count": 6,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.78,
+      "reference_avg_mv": 2.5,
+      "accel": 6,
+      "adjustment": -0.627,
+      "raw_target": 16.373,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.78,
+    "pip_demand": {
+      "U": 28,
+      "R": 3
+    },
+    "land_color_production": {
+      "U": 14,
+      "R": 6
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 9.7,
+        "prod_pct": 35.3,
+        "gap": -25.6,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 90.3,
+        "prod_pct": 82.4,
+        "gap": 7.9,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Horseshoe Crab",
+      "oracle_text": "{U}: Untap this creature.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Engine/Outlet",
+        "Self-Untap"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Self-Untap"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Crab",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — untap body / Aura host (multiplier)"
+    },
+    {
+      "name": "Hermetic Study",
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Voltron/Equipment",
+        "Engine/Outlet",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — repeating damage source (Aura)"
+    },
+    {
+      "name": "Quicksilver Dagger",
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to target player or planeswalker. You draw a card.\"",
+      "mana_cost": "{1}{U}{R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Voltron/Equipment",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Direct Damage",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — repeating damage source + card draw (Aura)"
+    },
+    {
+      "name": "High Tide",
+      "oracle_text": "Until end of turn, whenever a player taps an Island for mana, that player adds an additional {U}.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Storm",
+        "Spellslinger",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Storm",
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp"
+        ],
+        "resource_exchange": [
+          "Mana: Net-Positive"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — kill-turn mana multiplier"
+    },
+    {
+      "name": "Frantic Search",
+      "oracle_text": "Draw two cards, then discard two cards. Untap up to three lands.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Looting",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Looting",
+          "Land Untap"
+        ],
+        "resource_exchange": [
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — free filter + land untap"
+    },
+    {
+      "name": "Turnabout",
+      "oracle_text": "Choose artifact, creature, or land. Tap all untapped permanents of the chosen type target player controls, or untap all tapped permanents of that type that player controls.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Mana Ramp",
+        "Tap Effect",
+        "Land Untap"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Tap Effect",
+          "Land Untap"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — instant mass land-untap; the biggest kill-turn mana card"
+    },
+    {
+      "name": "Impulse",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Infrastructure — engine-piece selection"
+    },
+    {
+      "name": "Peregrine Drake",
+      "oracle_text": "Flying\nWhen this creature enters, untap up to five lands.",
+      "mana_cost": "{4}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Land Untap"
+        ],
+        "resource_exchange": [
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Creature — Drake",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — mana refund body / Aura host"
+    },
+    {
+      "name": "Cloud of Faeries",
+      "oracle_text": "Flying\nWhen this creature enters, untap up to two lands.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Land Untap",
+        "Card Draw",
+        "Cycling",
+        "Cards: Self-Replacing",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Untap",
+          "Card Draw",
+          "Cycling"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing",
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Creature — Faerie",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — mana refund body / evasive Aura host"
+    },
+    {
+      "name": "Thieving Magpie",
+      "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever this creature deals damage to an opponent, draw a card.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Standalone Threat",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Bird",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payoff — evasive Aura host; converts each ping into a card"
+    },
+    {
+      "name": "Grim Lavamancer",
+      "oracle_text": "{R}, {T}, Exile two cards from your graveyard: This creature deals 2 damage to any target.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Graveyard",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Human Wizard",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payoff — independent repeating damage source"
+    },
+    {
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — stack"
+    },
+    {
+      "name": "Force of Will",
+      "oracle_text": "You may pay 1 life and exile a blue card from your hand rather than pay this spell's mana cost.\nCounter target spell.",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell",
+        "Cards: Extra-Cost",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost",
+          "Life: Cost"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Instant",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — free stack protection"
+    },
+    {
+      "name": "Snap",
+      "oracle_text": "Return target creature to its owner's hand. Untap up to two lands.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Bounce",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Land Untap"
+        ],
+        "resource_exchange": [
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — mana-neutral bounce"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 11,
+      "role": "Land — blue source, High Tide census member"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — UR dual, Island-typed (High Tide census member)"
+    },
+    {
+      "name": "Sulfur Falls",
+      "oracle_text": "This land enters tapped unless you control an Island or a Mountain.\n{T}: Add {U} or {R}.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land — UR dual, untapped-capable"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 3,
+      "role": "Land — red source"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Ovinize",
+      "oracle_text": "Until end of turn, target creature loses all abilities and has base power and toughness 0/1.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Ability Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Ability Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "SB — single large threat / ability shutoff"
+    },
+    {
+      "name": "Man-o'-War",
+      "oracle_text": "When this creature enters, return target creature to its owner's hand.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Bounce"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Jellyfish",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "SB — tempo bounce"
+    },
+    {
+      "name": "Floodgate",
+      "oracle_text": "Defender\nWhen this creature has flying, sacrifice it.\nWhen this creature leaves the battlefield, it deals damage to each nonblue creature without flying equal to half the number of Islands you control, rounded down.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Wall",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "5",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "SB — wide-board sweeper (Islands-scaling)"
+    },
+    {
+      "name": "Tormod's Crypt",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "SB — graveyard hate"
+    },
+    {
+      "name": "Confiscate",
+      "oracle_text": "Enchant permanent\nYou control enchanted permanent.",
+      "mana_cost": "{4}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Control Magic"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Control Magic"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "SB — noncreature permanent answer"
+    },
+    {
+      "name": "Fire // Ice",
+      "oracle_text": "Fire deals 2 damage divided as you choose among one or two targets.\n//\nTap target permanent.\nDraw a card.",
+      "mana_cost": "{1}{R} // {1}{U}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Direct Damage",
+        "Tap Effect",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Tap Effect",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "SB — small-creature removal / cantrip tempo"
+    }
+  ],
+  "pitch": "A blue-red engine deck built on Horseshoe Crab's '{U}: Untap this creature'. Attach a tap-ability Aura to the Crab and every blue mana becomes one point of damage: Hermetic Study grants '{T}: This creature deals 1 damage to any target', Quicksilver Dagger grants the same at a player plus a card. High Tide, Frantic Search, Cloud of Faeries and Peregrine Drake multiply how many blue mana exist in a single turn, so an assembled board converts a normal turn into a lethal burst. Because Horseshoe Crab is a 2-of with no functional redundancy in this cube, the list is built to win without it too: Thieving Magpie and Cloud of Faeries are evasive Aura hosts, Grim Lavamancer is an independent repeating damage source, and Counterspell / Force of Will protect whichever half landed first.",
+  "strategy_es": "combo de desgiro y pinchazo (Crab Gun)",
+  "identity_es": "Un mazo motor azul-rojo construido sobre el '{U}: Untap this creature' de Horseshoe Crab. Engancha un aura con habilidad de giro al Crab y cada maná azul se convierte en un punto de daño: Hermetic Study otorga '{T}: This creature deals 1 damage to any target', Quicksilver Dagger otorga lo mismo hacia un jugador más una carta. High Tide, Frantic Search, Cloud of Faeries y Peregrine Drake multiplican cuántos manás azules existen en un solo turno, así que un tablero ensamblado convierte un turno normal en una ráfaga letal. Como Horseshoe Crab es una copia doble sin redundancia funcional en este cubo, la lista está construida para ganar también sin él: Thieving Magpie y Cloud of Faeries son anfitriones evasivos de auras, Grim Lavamancer es una fuente de daño repetida e independiente, y Counterspell / Force of Will protegen la mitad que haya aterrizado primero.",
+  "pitch_es": "Un mazo motor azul-rojo construido sobre el '{U}: Untap this creature' de Horseshoe Crab. Engancha un aura con habilidad de giro al Crab y cada maná azul se convierte en un punto de daño: Hermetic Study otorga '{T}: This creature deals 1 damage to any target', Quicksilver Dagger otorga lo mismo hacia un jugador más una carta. High Tide, Frantic Search, Cloud of Faeries y Peregrine Drake multiplican cuántos manás azules existen en un solo turno, así que un tablero ensamblado convierte un turno normal en una ráfaga letal. Como Horseshoe Crab es una copia doble sin redundancia funcional en este cubo, la lista está construida para ganar también sin él: Thieving Magpie y Cloud of Faeries son anfitriones evasivos de auras, Grim Lavamancer es una fuente de daño repetida e independiente, y Counterspell / Force of Will protegen la mitad que haya aterrizado primero."
+}

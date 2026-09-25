@@ -1,0 +1,1245 @@
+{
+  "deck_name": "bgw-doran-beatdown",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-11T18:05:10Z",
+  "format": "40-card",
+  "strategy": "toughness-matters midrange",
+  "colors": "BGW",
+  "identity": "BGW toughness-matters midrange. Every creature in the deck has toughness far exceeding its power (0/4, 2/5, 3/6, 3/7, 4/7), so the early turns are spent blocking profitably while the board builds. Two cards then convert that defensive stat line into lethal offence: Doran, Besieged by Time discounts every such creature spell by {1} and pumps each attacker or blocker by its power/toughness gap, and Bark of Doran makes an equipped gap creature assign combat damage equal to its toughness rather than its power. Because Doran's bonus is +X/+X it preserves the gap, so the two stack multiplicatively, and Gilt-Leaf's Embrace supplies the trample that stops a 1/1 from absorbing the whole attack. Between deployment and the kill the deck grinds: the -1/-1 counters it pays as costs are fuel for Moonlit Lamenter's draw, Reaping Willow's and Slumbering Walker's recursion, and Blighted Blackthorn's attack-trigger card draw.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "user_constraint": "max 5 rare/mythic cards total across mainboard + sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.333,
+      "raw_target": 17.333,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 3,
+    "pip_demand": {
+      "W": 8,
+      "B": 8,
+      "G": 8
+    },
+    "land_color_production": {
+      "B": 7,
+      "W": 8,
+      "G": 8
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 33.3,
+        "prod_pct": 41.2,
+        "gap": -7.9,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 33.3,
+        "prod_pct": 47.1,
+        "gap": -13.8,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 33.3,
+        "prod_pct": 47.1,
+        "gap": -13.8,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Doran, Besieged by Time",
+      "oracle_text": "Each creature spell you cast with toughness greater than its power costs {1} less to cast.\nWhenever a creature you control attacks or blocks, it gets +X/+X until end of turn, where X is the difference between its power and toughness.",
+      "mana_cost": "{1}{W}{B}{G}",
+      "colors": [
+        "B",
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "G",
+        "W"
+      ],
+      "tags": [
+        "Toughness Matters",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Cost Reduction",
+        "Pump"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Toughness Matters"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Cost Reduction",
+          "Pump"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Creature — Treefolk Druid",
+      "rarity": "rare",
+      "power": "0",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payoff — kill mechanism"
+    },
+    {
+      "name": "Bark of Doran",
+      "oracle_text": "Equipped creature gets +0/+1.\nAs long as equipped creature's toughness is greater than its power, it assigns combat damage equal to its toughness rather than its power.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Voltron/Equipment",
+        "Payload/Payoff",
+        "Combat Modification"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Modification"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact — Equipment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Payoff — damage converter"
+    },
+    {
+      "name": "Gilt-Leaf's Embrace",
+      "oracle_text": "Flash\nEnchant creature\nWhen this Aura enters, enchanted creature gains trample and indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it. If its toughness is 0 or less, it still dies.)\nEnchanted creature gets +2/+0.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Combat Trick",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Payoff — trample enabler; makes the converted damage connect"
+    },
+    {
+      "name": "Great Forest Druid",
+      "oracle_text": "{T}: Add one mana of any color.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Dork"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Treefolk Druid",
+      "rarity": "common",
+      "power": "0",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler — gap+4 body / any-color fixer"
+    },
+    {
+      "name": "Moonlit Lamenter",
+      "oracle_text": "This creature enters with a -1/-1 counter on it.\n{1}{W}, Remove a counter from this creature: Draw a card. Activate only as a sorcery.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Treefolk Cleric",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler — gap+3 body / counter-to-card draw"
+    },
+    {
+      "name": "Formidable Speaker",
+      "oracle_text": "When this creature enters, you may discard a card. If you do, search your library for a creature card, reveal it, put it into your hand, then shuffle.\n{1}, {T}: Untap another target permanent.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Tutor"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Tutor"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Elf Druid",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Enabler — gap+2 body / creature tutor for Doran"
+    },
+    {
+      "name": "Reaping Willow",
+      "oracle_text": "Lifelink\nThis creature enters with two -1/-1 counters on it.\n{1}{W/B}, Remove two counters from this creature: Return target creature card with mana value 3 or less from your graveyard to the battlefield. Activate only as a sorcery.",
+      "mana_cost": "{1}{W/B}{W/B}{W/B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Reanimator",
+        "Graveyard",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Reanimation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Reanimator",
+          "Graveyard",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Reanimation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Treefolk Cleric",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler — gap+3 lifelink body / recursion"
+    },
+    {
+      "name": "Gathering Stone",
+      "oracle_text": "As this artifact enters, choose a creature type.\nSpells you cast of the chosen type cost {1} less to cast.\nWhen this artifact enters and at the beginning of your upkeep, look at the top card of your library. If it's a card of the chosen type, you may reveal it and put it into your hand. If you don't put the card into your hand, you may put it into your graveyard.",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Card Selection",
+        "Tax Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Tax Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine — names Treefolk: discounts 9/23 nonlands, digs for Doran"
+    },
+    {
+      "name": "Blighted Blackthorn",
+      "oracle_text": "Whenever this creature enters or attacks, you may blight 2. If you do, you draw a card and lose 1 life. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Counter Placement",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Counter Placement"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Creature — Treefolk Warlock",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "7",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler — gap+4 body / repeatable draw"
+    },
+    {
+      "name": "Slumbering Walker",
+      "oracle_text": "This creature enters with two -1/-1 counters on it.\nAt the beginning of your end step, you may remove a counter from this creature. When you do, return target creature card with power 2 or less from your graveyard to the battlefield.",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Reanimator",
+        "Graveyard",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Reanimation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Reanimator",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Reanimation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Giant Warrior",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "7",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Enabler — gap+3 body / repeatable recursion"
+    },
+    {
+      "name": "Blossoming Defense",
+      "oracle_text": "Target creature you control gets +2/+2 and gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Protection",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — gap-neutral protection for the 1-of Doran"
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — unconditional exile"
+    },
+    {
+      "name": "Nameless Inversion",
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — instant-speed -3 toughness"
+    },
+    {
+      "name": "Pyrrhic Strike",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 2. (You may put two -1/-1 counters on a creature you control.)\nChoose one. If this spell's additional cost was paid, choose both instead.\n• Destroy target artifact or enchantment.\n• Destroy target creature with mana value 3 or greater.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — modal artifact/enchantment + mv>=3 creature"
+    },
+    {
+      "name": "Darkness Descends",
+      "oracle_text": "Put two -1/-1 counters on each creature.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — asymmetric sweeper"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — WB dual"
+    },
+    {
+      "name": "Haunted Mire",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — BG dual"
+    },
+    {
+      "name": "Radiant Grove",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — GW dual"
+    },
+    {
+      "name": "Overgrown Tomb",
+      "oracle_text": "({T}: Add {B} or {G}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land — BG untapped-capable"
+    },
+    {
+      "name": "Temple Garden",
+      "oracle_text": "({T}: Add {G} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land — GW untapped-capable"
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Fetch",
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — basic fetch"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 3,
+      "role": "Land — basic"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — basic"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — basic"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Unforgiving Aim",
+      "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs evasion (41 cube cards) / enchantments"
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs graveyard (39 cube cards); also a 3/3 flying blocker"
+    },
+    {
+      "name": "Chomping Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, destroy up to one target artifact or enchantment.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs artifacts (11) / enchantments (21), on a gap+1 body"
+    },
+    {
+      "name": "Crib Swap",
+      "oracle_text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs single large threats — unconditional exile"
+    },
+    {
+      "name": "Darkness Descends",
+      "oracle_text": "Put two -1/-1 counters on each creature.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "vs wide boards — 2nd copy"
+    },
+    {
+      "name": "Keep Out",
+      "oracle_text": "Choose one —\n• Keep Out deals 4 damage to target tapped creature.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "vs tapped attackers / enchantments"
+    }
+  ],
+  "pitch": "BGW toughness-matters midrange. Every creature in the deck has toughness far exceeding its power (0/4, 2/5, 3/6, 3/7, 4/7), so the early turns are spent blocking profitably while the board builds. Two cards then convert that defensive stat line into lethal offence: Doran, Besieged by Time discounts every such creature spell by {1} and pumps each attacker or blocker by its power/toughness gap, and Bark of Doran makes an equipped gap creature assign combat damage equal to its toughness rather than its power. Because Doran's bonus is +X/+X it preserves the gap, so the two stack multiplicatively, and Gilt-Leaf's Embrace supplies the trample that stops a 1/1 from absorbing the whole attack. Between deployment and the kill the deck grinds: the -1/-1 counters it pays as costs are fuel for Moonlit Lamenter's draw, Reaping Willow's and Slumbering Walker's recursion, and Blighted Blackthorn's attack-trigger card draw.",
+  "strategy_es": "midrange de la resistencia importa",
+  "identity_es": "Midrange BGW de la resistencia importa. Cada criatura del mazo tiene una resistencia que supera con mucho su fuerza (0/4, 2/5, 3/6, 3/7, 4/7), así que los turnos tempranos se gastan bloqueando con provecho mientras el tablero se construye. Dos cartas convierten entonces esa línea defensiva en ofensiva letal: Doran, Besieged by Time abarata en {1} cada hechizo de criatura de ese tipo y pompea a cada atacante o bloqueador por su diferencia entre fuerza y resistencia, y Bark of Doran hace que una criatura equipada con esa diferencia asigne daño de combate igual a su resistencia en lugar de a su fuerza. Como el bono de Doran es +X/+X, preserva la diferencia, así que ambos se acumulan multiplicativamente, y Gilt-Leaf's Embrace aporta el arrollar que impide que un 1/1 absorba todo el ataque. Entre el despliegue y la victoria el mazo desgasta: los contadores -1/-1 que paga como costes son combustible para el robo de Moonlit Lamenter, para la recursión de Reaping Willow y Slumbering Walker, y para el robo por disparo de ataque de Blighted Blackthorn.",
+  "pitch_es": "Midrange BGW de la resistencia importa. Cada criatura del mazo tiene una resistencia que supera con mucho su fuerza (0/4, 2/5, 3/6, 3/7, 4/7), así que los turnos tempranos se gastan bloqueando con provecho mientras el tablero se construye. Dos cartas convierten entonces esa línea defensiva en ofensiva letal: Doran, Besieged by Time abarata en {1} cada hechizo de criatura de ese tipo y pompea a cada atacante o bloqueador por su diferencia entre fuerza y resistencia, y Bark of Doran hace que una criatura equipada con esa diferencia asigne daño de combate igual a su resistencia en lugar de a su fuerza. Como el bono de Doran es +X/+X, preserva la diferencia, así que ambos se acumulan multiplicativamente, y Gilt-Leaf's Embrace aporta el arrollar que impide que un 1/1 absorba todo el ataque. Entre el despliegue y la victoria el mazo desgasta: los contadores -1/-1 que paga como costes son combustible para el robo de Moonlit Lamenter, para la recursión de Reaping Willow y Slumbering Walker, y para el robo por disparo de ataque de Blighted Blackthorn."
+}

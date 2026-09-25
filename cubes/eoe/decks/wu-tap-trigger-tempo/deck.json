@@ -1,0 +1,1158 @@
+{
+  "deck_name": "w-u-tap-trigger-tempo",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-03T00:16:55Z",
+  "format": "40-card",
+  "strategy": "tempo | WU tap-trigger tempo",
+  "colors": "WU",
+  "identity": "A WU tempo deck in which tapping your own creatures is the engine, the removal trigger, and the clock at once. Station is a cost that taps a creature WITHOUT using that creature's {T} symbol, so summoning-sick bodies qualify - it is a free, repeatable, sorcery-speed tap button. Every tap fires Mechan Navigator (loot), Nanoform Sentinel (untap another permanent, worth exactly one extra Station per turn), Starfighter Pilot (surveil 1) and banks charge counters. The same tapping arms this pool's tapped-matters removal: Cryoshatter destroys the creature it enchants the moment that creature becomes tapped. The honest problem with the plan is that the fliers it produces are 2/2s, so the damage clock is slow; Virulent Silencer fixes that by converting each connection into two poison counters, and 10 poison arrives in three connects where 20 damage needs five. Tezzeret, Cruel Captain supplies a free untap every turn with no once-per-turn cap. Divert Disaster is the only stack interaction available to any build in this series.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "at most 7 rare+mythic total across mainboard and sideboard",
+    "rare_mythic_used": 6,
+    "rare_mythic_names": [
+      "Hardlight Containment",
+      "Lumen-Class Frigate",
+      "Secluded Starforge",
+      "Sunstar Chaplain",
+      "Synthesizer Labship",
+      "Tezzeret, Cruel Captain"
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 1.92,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -1.107,
+      "raw_target": 15.893,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 1.92,
+    "pip_demand": {
+      "U": 13,
+      "W": 7
+    },
+    "land_color_production": {
+      "U": 11,
+      "W": 7,
+      "G": 1,
+      "R": 1,
+      "B": 1
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 65,
+        "prod_pct": 68.8,
+        "gap": -3.8,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 35,
+        "prod_pct": 43.8,
+        "gap": -8.8,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Synthesizer Labship",
+      "oracle_text": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 9+.)\n2+ | At the beginning of combat on your turn, up to one other target artifact you control becomes an artifact creature with base power and toughness 2/2 and gains flying until end of turn.\n9+ | Flying, vigilance",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Artifacts",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Animate Artifact"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Animate Artifact"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff — 1-mana Spacecraft; 2+ animates an artifact into a 2/2 flier every combat"
+    },
+    {
+      "name": "Cryoshatter",
+      "oracle_text": "Enchant creature\nEnchanted creature gets -5/-0.\nWhen enchanted creature becomes tapped or is dealt damage, destroy it.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Debuff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Debuff"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — 1-mana Pacifism that upgrades to a kill when the creature taps; 2 of 24 cards force that on demand"
+    },
+    {
+      "name": "Reroute Systems",
+      "oracle_text": "Choose one —\n• Target artifact or creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Reroute Systems deals 2 damage to target tapped creature.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Protection"
+        ],
+        "mechanical_functions": [
+          "Protection",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — the deck's REAL protection: indestructible at instant speed on a below-threshold Spacecraft"
+    },
+    {
+      "name": "Hardlight Containment",
+      "oracle_text": "Enchant artifact you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield.\nEnchanted permanent has ward {1}.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — 1-mana exile; 13 of 24 artifact hosts, though killing the host returns the creature"
+    },
+    {
+      "name": "Mechan Navigator",
+      "oracle_text": "Whenever this creature becomes tapped, draw a card, then discard a card.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Looting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Looting"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact Creature — Robot Pilot",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — loots whenever it becomes tapped, i.e. on every Station"
+    },
+    {
+      "name": "Starfighter Pilot",
+      "oracle_text": "Whenever this creature becomes tapped, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Self-Mill",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Pilot",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — surveils whenever it becomes tapped"
+    },
+    {
+      "name": "Sunstar Chaplain",
+      "oracle_text": "At the beginning of your end step, if you control two or more tapped creatures, put a +1/+1 counter on target creature you control.\n{2}, Remove a +1/+1 counter from a creature you control: Tap target artifact or creature.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Counter Placement",
+        "Tap Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counter Placement",
+          "Tap Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine — the deck's only +1/+1 counter source, and an instant-speed tap outlet for Cryoshatter"
+    },
+    {
+      "name": "Lumen-Class Frigate",
+      "oracle_text": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 12+.)\n2+ | Other creatures you control get +1/+1.\n12+ | Flying, lifelink",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Artifacts",
+        "Payload/Payoff",
+        "Anthem Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Anthem Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff — 2+ anthem takes both fliers to 3/3; NOT a blocker, it is not a creature until 12+"
+    },
+    {
+      "name": "Wurmwall Sweeper",
+      "oracle_text": "When this Spacecraft enters, surveil 2.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 4+.)\n4+ | Flying",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Surveil",
+        "Card Selection",
+        "Station"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Self-Mill",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Surveil",
+          "Card Selection",
+          "Station"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat/Payoff — the realistic clock: 4+ makes it a 2/2 flier; ETB surveil 2"
+    },
+    {
+      "name": "Mechan Shieldmate",
+      "oracle_text": "Defender\nAs long as an artifact entered the battlefield under your control this turn, this creature can attack as though it didn't have defender.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Artifacts",
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact Creature — Robot Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — 3 power for two mana is the best Station battery in blue; a 3/2 defender that actually blocks"
+    },
+    {
+      "name": "Mental Modulation",
+      "oracle_text": "This spell costs {1} less to cast during your turn.\nTap target artifact or creature.\nDraw a card.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Tap Down",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Tap Down",
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — {U} on our turn: taps a creature (ours or theirs) AND draws a card"
+    },
+    {
+      "name": "Divert Disaster",
+      "oracle_text": "Counter target spell unless its controller pays {2}. If they do, you create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — the stack answer; if they pay the {2}, we get a Lander"
+    },
+    {
+      "name": "Nanoform Sentinel",
+      "oracle_text": "Whenever this creature becomes tapped, untap another target permanent. This ability triggers only once each turn.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Artifacts",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Untap Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Untap Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — 3-power artifact creature; untaps a body that already Stationed, buying exactly +1 Station per turn"
+    },
+    {
+      "name": "Virulent Silencer",
+      "oracle_text": "Whenever a nontoken artifact creature you control deals combat damage to a player, that player gets two poison counters. (A player with ten or more poison counters loses the game.)",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Infect/Poison",
+        "Payload/Payoff",
+        "Poison Counters"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Infect/Poison"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Poison Counters"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot Assassin",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff — 2 poison per connecting nontoken artifact creature; 10 poison beats 20 damage on this clock"
+    },
+    {
+      "name": "Tezzeret, Cruel Captain",
+      "oracle_text": "Whenever an artifact you control enters, put a loyalty counter on Tezzeret.\n0: Untap target artifact or creature. If it's an artifact creature, put a +1/+1 counter on it.\n−3: Search your library for an artifact card with mana value 1 or less, reveal it, put it into your hand, then shuffle.\n−7: You get an emblem with \"At the beginning of combat on your turn, put three +1/+1 counters on target artifact you control. If it's not a creature, it becomes a 0/0 Robot artifact creature.\"",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Tutor",
+        "Counter Placement",
+        "Untap"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Tutor",
+          "Counter Placement",
+          "Untap"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Planeswalker — Tezzeret",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine — a FREE untap every turn with no once-per-turn cap, and a second +1/+1 counter source"
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — the only WU dual in the pool (enters tapped)"
+    },
+    {
+      "name": "Command Bridge",
+      "oracle_text": "This land enters tapped.\nWhen this land enters, sacrifice it unless you tap an untapped permanent you control.\n{T}: Add one mana of any color.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land — any colour; its 'tap an untapped permanent' clause is a COST here, not upside"
+    },
+    {
+      "name": "Secluded Starforge",
+      "oracle_text": "{T}: Add {C}.\n{2}, {T}, Tap X untapped artifacts you control: Target creature gets +X/+0 until end of turn. Activate only as a sorcery.\n{5}, {T}: Create a 2/2 colorless Robot artifact creature token.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Tokens",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Token Generation",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Tokens",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land — enters untapped; taps X artifacts as a repeatable multi-trigger outlet"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 8,
+      "role": "Land"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 4,
+      "role": "Land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Annul",
+      "oracle_text": "Counter target artifact or enchantment spell.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate — artifacts and enchantments",
+      "when_to_board": "vs the 74-card artifact class and the 16-card enchantment class; 1 mana to hard-counter either"
+    },
+    {
+      "name": "Banishing Light",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate — noncreature permanents",
+      "when_to_board": "vs resolved enchantments and bombs that beat the soft counter"
+    },
+    {
+      "name": "Emergency Eject",
+      "oracle_text": "Destroy target nonland permanent. Its controller creates a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate — noncreature permanents",
+      "when_to_board": "instant-speed answer to any nonland permanent, including fliers"
+    },
+    {
+      "name": "Desculpting Blast",
+      "oracle_text": "Return target nonland permanent to its owner's hand. If it was attacking, create a 1/1 colorless Drone artifact creature token with flying and \"This token can block only creatures with flying.\"",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Bounce",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Flex — tempo bounce",
+      "when_to_board": "vs a single large threat; makes a flying blocker if it was attacking"
+    },
+    {
+      "name": "Focus Fire",
+      "oracle_text": "Focus Fire deals X damage to target attacking or blocking creature, where X is 2 plus the number of creatures and/or Spacecraft you control.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Flex — the raced answer",
+      "when_to_board": "vs fast aggro; X is 2 plus 15 creatures/Spacecraft in this list, so routinely 4-7 for one mana"
+    },
+    {
+      "name": "Chrome Companion",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life.\n{2}, {T}: Put target card from a graveyard on the bottom of its owner's library.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Lifegain",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Interaction/Disruption",
+        "Life Drain",
+        "Graveyard Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Life Drain",
+          "Graveyard Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact Creature — Dog",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Hate — graveyard",
+      "when_to_board": "vs the 31-card graveyard class; repeatable, and a becomes-tapped body"
+    },
+    {
+      "name": "Radiant Strike",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Hate — artifacts",
+      "when_to_board": "vs artifact decks; also kills a tapped creature"
+    }
+  ],
+  "pitch": "A WU tempo deck in which tapping your own creatures is the engine, the removal trigger, and the clock at once. Station is a cost that taps a creature WITHOUT using that creature's {T} symbol, so summoning-sick bodies qualify - it is a free, repeatable, sorcery-speed tap button. Every tap fires Mechan Navigator (loot), Nanoform Sentinel (untap another permanent, worth exactly one extra Station per turn), Starfighter Pilot (surveil 1) and banks charge counters. The same tapping arms this pool's tapped-matters removal: Cryoshatter destroys the creature it enchants the moment that creature becomes tapped. The honest problem with the plan is that the fliers it produces are 2/2s, so the damage clock is slow; Virulent Silencer fixes that by converting each connection into two poison counters, and 10 poison arrives in three connects where 20 damage needs five. Tezzeret, Cruel Captain supplies a free untap every turn with no once-per-turn cap. Divert Disaster is the only stack interaction available to any build in this series.",
+  "strategy_es": "tempo | tempo WU de disparos por giro",
+  "identity_es": "Un mazo de tempo WU en el que girar tus propias criaturas es a la vez el motor, el disparo de eliminación y el reloj. Station es un coste que gira una criatura SIN usar el símbolo de {T} de esa criatura, así que los cuerpos con mareo de invocación cumplen: es un botón de girar gratuito, repetible y a velocidad de conjuro. Cada giro dispara a Mechan Navigator (descartar y robar), Nanoform Sentinel (desgirar otro permanente, que vale exactamente un Station extra por turno), Starfighter Pilot (surveil 1) y guarda contadores de carga. Ese mismo girar arma la eliminación del pool que se fija en criaturas giradas: Cryoshatter destruye la criatura que encanta en el momento en que esa criatura se gira. El problema honesto del plan es que los voladores que produce son 2/2, así que el reloj de daño es lento; Virulent Silencer lo arregla convirtiendo cada conexión en dos contadores de veneno, y 10 de veneno llegan en tres conexiones donde 20 de daño necesita cinco. Tezzeret, Cruel Captain aporta un desgiro gratuito cada turno sin límite por turno. Divert Disaster es la única interacción en la pila disponible para cualquier construcción de esta serie.",
+  "pitch_es": "Un mazo de tempo WU en el que girar tus propias criaturas es a la vez el motor, el disparo de eliminación y el reloj. Station es un coste que gira una criatura SIN usar el símbolo de {T} de esa criatura, así que los cuerpos con mareo de invocación cumplen: es un botón de girar gratuito, repetible y a velocidad de conjuro. Cada giro dispara a Mechan Navigator (descartar y robar), Nanoform Sentinel (desgirar otro permanente, que vale exactamente un Station extra por turno), Starfighter Pilot (surveil 1) y guarda contadores de carga. Ese mismo girar arma la eliminación del pool que se fija en criaturas giradas: Cryoshatter destruye la criatura que encanta en el momento en que esa criatura se gira. El problema honesto del plan es que los voladores que produce son 2/2, así que el reloj de daño es lento; Virulent Silencer lo arregla convirtiendo cada conexión en dos contadores de veneno, y 10 de veneno llegan en tres conexiones donde 20 de daño necesita cinco. Tezzeret, Cruel Captain aporta un desgiro gratuito cada turno sin límite por turno. Divert Disaster es la única interacción en la pila disponible para cualquier construcción de esta serie."
+}

@@ -1,0 +1,1049 @@
+{
+  "deck_name": "u-marit-lage-high-tide",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-31T16:55:00Z",
+  "format": "40-card",
+  "strategy": "combo — Dark Depths / Marit Lage",
+  "colors": "U",
+  "identity": "A mono-blue High Tide combo deck whose only intended win condition is Dark Depths. Mono-blue has no card that searches the library for a land, so the deck's binding constraint is not the thirty mana — it is drawing one mythic land out of forty cards, and nine of the twenty-three nonland slots exist purely to dig for it. The mana comes from stacking two multipliers on a monolithic basic-Island base: Gauntlet of Power makes every basic Island tap for two permanently, High Tide adds a third for a turn, and Turnabout, Peregrine Drake, Frantic Search, Snap and Cloud of Faeries untap those Islands again. Stroke of Genius is the honest concession — the same thirty mana that would strip ten ice counters instead decks the opponent in the roughly one game in five where Dark Depths never appears.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_user_rule": "At most 5 rare/mythic cards total across mainboard + sideboard; basic lands unlimited"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 7,
+    "cantrip_count": 0,
+    "accel_count": 7,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3,
+      "reference_avg_mv": 2.5,
+      "accel": 7,
+      "adjustment": -0.5,
+      "raw_target": 16.5,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 3,
+    "pip_demand": {
+      "U": 25
+    },
+    "land_color_production": {
+      "U": 16
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 100,
+        "prod_pct": 94.1,
+        "gap": 5.9,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Dark Depths",
+      "oracle_text": "Dark Depths enters with ten ice counters on it.\n{3}: Remove an ice counter from Dark Depths.\nWhen Dark Depths has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tokens",
+        "Lands-Matter",
+        "Payload/Payoff",
+        "Token Generation",
+        "Mana: Ongoing-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": [
+          "Mana: Ongoing-Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Legendary Snow Land",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payoff — win condition"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 16,
+      "role": "Land — the High Tide and Gauntlet of Power multiplier"
+    },
+    {
+      "name": "Impulse",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Find — digs four deep for Dark Depths"
+    },
+    {
+      "name": "Fact or Fiction",
+      "oracle_text": "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Card Selection"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Find — digs five deep; you choose the pile"
+    },
+    {
+      "name": "Deep Analysis",
+      "oracle_text": "Target player draws two cards.\nFlashback—{1}{U}, Pay 3 life. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Flashback",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Flashback/GY-Cast",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Flashback"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive",
+          "Life: Cost"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Find — four cards from one slot via flashback"
+    },
+    {
+      "name": "Frantic Search",
+      "oracle_text": "Draw two cards, then discard two cards. Untap up to three lands.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Looting",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Looting",
+          "Land Untap"
+        ],
+        "resource_exchange": [
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Find + engine — free untap and two cards deep"
+    },
+    {
+      "name": "High Tide",
+      "oracle_text": "Until end of turn, whenever a player taps an Island for mana, that player adds an additional {U}.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Storm",
+        "Spellslinger",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Storm",
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp"
+        ],
+        "resource_exchange": [
+          "Mana: Net-Positive"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — doubles every Island for a turn"
+    },
+    {
+      "name": "Turnabout",
+      "oracle_text": "Choose artifact, creature, or land. Tap all untapped permanents of the chosen type target player controls, or untap all tapped permanents of that type that player controls.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Mana Ramp",
+        "Tap Effect",
+        "Land Untap"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Tap Effect",
+          "Land Untap"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — untap all your lands"
+    },
+    {
+      "name": "Cloud of Faeries",
+      "oracle_text": "Flying\nWhen this creature enters, untap up to two lands.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Land Untap",
+        "Card Draw",
+        "Cycling",
+        "Cards: Self-Replacing",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Untap",
+          "Card Draw",
+          "Cycling"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing",
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Creature — Faerie",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — untap two lands; cycles when mana is not the problem"
+    },
+    {
+      "name": "Snap",
+      "oracle_text": "Return target creature to its owner's hand. Untap up to two lands.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Bounce",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Land Untap"
+        ],
+        "resource_exchange": [
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine + interaction — free bounce, untaps two lands"
+    },
+    {
+      "name": "Mind Stone",
+      "oracle_text": "{T}: Add {C}.\n{1}, {T}, Sacrifice this artifact: Draw a card.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Mana Rock",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Rock",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Ramp — accelerates to a turn-4 Gauntlet of Power"
+    },
+    {
+      "name": "Gauntlet of Power",
+      "oracle_text": "As this artifact enters, choose a color.\nCreatures of the chosen color get +1/+1.\nWhenever a basic land is tapped for mana of the chosen color, its controller adds an additional one mana of that color.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Anthem",
+        "Mana Ramp"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Anthem",
+          "Mana Ramp"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Artifact",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine — a permanent High Tide on every basic Island"
+    },
+    {
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — protects the assembly"
+    },
+    {
+      "name": "Force of Will",
+      "oracle_text": "You may pay 1 life and exile a blue card from your hand rather than pay this spell's mana cost.\nCounter target spell.",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell",
+        "Cards: Extra-Cost",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost",
+          "Life: Cost"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Instant",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — zero-mana protection on the burst turn"
+    },
+    {
+      "name": "Stroke of Genius",
+      "oracle_text": "Target player draws X cards.",
+      "mana_cost": "{X}{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Card Draw",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Combo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Backup payoff — decks the opponent off the same 30 mana"
+    },
+    {
+      "name": "Peregrine Drake",
+      "oracle_text": "Flying\nWhen this creature enters, untap up to five lands.",
+      "mana_cost": "{4}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Land Untap"
+        ],
+        "resource_exchange": [
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Creature — Drake",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine — untaps five lands unconditionally; a 2/3 flying blocker"
+    },
+    {
+      "name": "Jalum Tome",
+      "oracle_text": "{2}, {T}: Draw a card, then discard a card.",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Graveyard",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Looting"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Artifact — Book",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Find — the deck's only REPEATABLE digger"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Graveyard hate",
+      "when_to_board": "vs the cube's 45 graveyard cards — flashback, threshold, reanimator"
+    },
+    {
+      "name": "Circular Logic",
+      "oracle_text": "Counter target spell unless its controller pays {1} for each card in your graveyard.\nMadness {U} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Graveyard",
+        "Madness",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Madness"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell",
+          "Madness"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Scaling counterspell",
+      "when_to_board": "vs control and combo — 18 of the 23 nonland cards are instants or sorceries that bin themselves on resolution, so the tax is hard by turn 6"
+    },
+    {
+      "name": "Floodgate",
+      "oracle_text": "Defender\nWhen this creature has flying, sacrifice it.\nWhen this creature leaves the battlefield, it deals damage to each nonblue creature without flying equal to half the number of Islands you control, rounded down.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Wall",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "5",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Wall + delayed sweeper",
+      "when_to_board": "vs creature decks — a 0/5 Defender that on leaving the battlefield deals half your Island count to each nonblue non-flying creature; on a realistic turn-6 board of 8-12 Islands that is 4-6 damage"
+    },
+    {
+      "name": "Ovinize",
+      "oracle_text": "Until end of turn, target creature loses all abilities and has base power and toughness 0/1.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Ability Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Ability Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Single-large-threat answer",
+      "when_to_board": "vs a lone fatty, regenerator or protection-from-colour creature"
+    },
+    {
+      "name": "Confiscate",
+      "oracle_text": "Enchant permanent\nYou control enchanted permanent.",
+      "mana_cost": "{4}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Control Magic"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Control Magic"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Noncreature-permanent answer",
+      "when_to_board": "vs a key artifact or enchantment — mono-blue has no destroy effect at all, so stealing it is the only answer available"
+    },
+    {
+      "name": "Maze of Ith",
+      "oracle_text": "{T}: Untap target attacking creature. Prevent all combat damage that would be dealt to and dealt by that creature this turn.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Interaction/Disruption",
+        "Damage Prevention",
+        "Land Untap"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Damage Prevention",
+          "Land Untap"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Recurring attacker blank (land)",
+      "when_to_board": "vs creature aggro — swap for a Mishra's Factory, not an Island, so the High Tide count is untouched"
+    },
+    {
+      "name": "Man-o'-War",
+      "oracle_text": "When this creature enters, return target creature to its owner's hand.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Bounce"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Jellyfish",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Bounce on a body + Floodgate trigger",
+      "when_to_board": "vs creature decks — 'return target creature to its owner's hand' on a 2/2, and a second on-demand way to make Floodgate leave the battlefield and fire its sweeper trigger"
+    }
+  ],
+  "pitch": "A mono-blue High Tide combo deck whose only intended win condition is Dark Depths. Mono-blue has no card that searches the library for a land, so the deck's binding constraint is not the thirty mana — it is drawing one mythic land out of forty cards, and nine of the twenty-three nonland slots exist purely to dig for it. The mana comes from stacking two multipliers on a monolithic basic-Island base: Gauntlet of Power makes every basic Island tap for two permanently, High Tide adds a third for a turn, and Turnabout, Peregrine Drake, Frantic Search, Snap and Cloud of Faeries untap those Islands again. Stroke of Genius is the honest concession — the same thirty mana that would strip ten ice counters instead decks the opponent in the roughly one game in five where Dark Depths never appears.",
+  "strategy_es": "combo — Dark Depths / Marit Lage",
+  "identity_es": "Un mazo de combo High Tide mono azul cuya única condición de victoria prevista es Dark Depths. El mono azul no tiene ninguna carta que busque una tierra en la biblioteca, así que la restricción del mazo no son los treinta manás: es robar una tierra mítica de entre cuarenta cartas, y nueve de los veintitrés huecos no-tierra existen puramente para cavar a por ella. El maná viene de acumular dos multiplicadores sobre una base monolítica de Islands básicas: Gauntlet of Power hace que cada Island básica gire por dos de forma permanente, High Tide añade una tercera durante un turno, y Turnabout, Peregrine Drake, Frantic Search, Snap y Cloud of Faeries vuelven a desgirar esas Islands. Stroke of Genius es la concesión honesta: esos mismos treinta manás que quitarían diez contadores de hielo deckean al rival en aproximadamente una de cada cinco partidas en las que Dark Depths nunca aparece.",
+  "pitch_es": "Un mazo de combo High Tide mono azul cuya única condición de victoria prevista es Dark Depths. El mono azul no tiene ninguna carta que busque una tierra en la biblioteca, así que la restricción del mazo no son los treinta manás: es robar una tierra mítica de entre cuarenta cartas, y nueve de los veintitrés huecos no-tierra existen puramente para cavar a por ella. El maná viene de acumular dos multiplicadores sobre una base monolítica de Islands básicas: Gauntlet of Power hace que cada Island básica gire por dos de forma permanente, High Tide añade una tercera durante un turno, y Turnabout, Peregrine Drake, Frantic Search, Snap y Cloud of Faeries vuelven a desgirar esas Islands. Stroke of Genius es la concesión honesta: esos mismos treinta manás que quitarían diez contadores de hielo deckean al rival en aproximadamente una de cada cinco partidas en las que Dark Depths nunca aparece."
+}

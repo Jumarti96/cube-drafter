@@ -1,0 +1,1893 @@
+{
+  "deck_name": "ubr-vivid-sanar-elementals",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-11T00:00:00Z",
+  "format": "40-card",
+  "strategy": "midrange",
+  "colors": "UBR",
+  "identity": "A Grixis midrange deck built on Vivid - a keyword whose every payoff scales with X, the number of colours among permanents you control. Sanar, Innovative First-Year converts that number into a free play-from-exile at the beginning of every first main phase, and because hybrid cards are BOTH of their colours as permanents, Sanar counts 2 toward its own X just by being on the battlefield. Two colourless permanents push X past the three colours the mana base can produce: Puca's Eye permanently becomes a chosen colour while cantripping, and Foraging Wickermaw becomes any colour at instant speed for {1}. The cashiers are Elementals - Shinestriker draws X, Shimmercreep drains X, Enraged Flamecaster converts every mana-value-4-or-greater cast into 2 damage to each opponent - and Twinflame Travelers makes each of those triggers happen an additional time. Burning Curiosity gives the play-from-exile plan redundancy so it does not live or die on a single legendary creature.",
+  "restrictions": {
+    "base": "cube_mainboard (ecl), 277 unique cards",
+    "copy_limits": "commons/uncommons max 2, rares/mythics max 1 - verified by cube_search.get_max_copies against every card in mainboard + sideboard: PASS",
+    "rare_mythic_budget": "4 of the allowed 5 used, all mainboard: Sanar, Ashling's Command, Steam Vents (land), Blood Crypt (land). TWO OF THE FOUR ARE LANDS - the price of three-colour mana in this cube, where Steam Vents and Blood Crypt are the ONLY duals in these colours that can enter untapped. Cutting Ashling in the Phase 9 repair freed the fifth slot, which is deliberately left unspent: the sideboard is entirely commons and uncommons, and no remaining rare improves the deck more than the flexibility of the open slot.",
+    "basics": "Island x5 + Mountain x2 + Swamp x2 are format-supplied and exempt from copy limits",
+    "colour_legality": "every nonland card returns a usable mode from effective_cost.best_mode(card, ['U','B','R'], []): PASS, all 18 distinct nonland cards resolve as a normal 'cast'. Note that 4 nonland copies are hybrids castable off either of two colours (Sanar, Flaring Cinder), which is a real mana-base subsidy in a three-colour deck with 7 tapped lands.",
+    "splash": "splash_colors = [], splash_candidates = [] - no splashed cards. The off-colour Vivid payoffs (Bloom Tender, Prismabasher, Aurora Awakener, Prismatic Undercurrents, Luminollusk, Wildvine Pummeler) are all mono-GREEN, so admitting any of them would be a fourth colour rather than a splash."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.27,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.693,
+      "raw_target": 17.693,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.27,
+    "pip_demand": {
+      "R": 9,
+      "B": 5,
+      "U": 7
+    },
+    "land_color_production": {
+      "U": 10,
+      "R": 8,
+      "B": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 23.8,
+        "prod_pct": 38.9,
+        "gap": -15.1,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 42.9,
+        "prod_pct": 44.4,
+        "gap": -1.5,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 33.3,
+        "prod_pct": 55.6,
+        "gap": -22.3,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Explosive Prodigy",
+      "oracle_text": "Vivid — When this creature enters, it deals X damage to target creature an opponent controls, where X is the number of colors among permanents you control.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Domain",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Domain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "Interaction"
+    },
+    {
+      "name": "Nameless Inversion",
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Interaction"
+    },
+    {
+      "name": "Nameless Inversion",
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Interaction"
+    },
+    {
+      "name": "Sear",
+      "oracle_text": "Sear deals 4 damage to target creature or planeswalker.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Interaction"
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Interaction"
+    },
+    {
+      "name": "Puca's Eye",
+      "oracle_text": "When this artifact enters, draw a card, then choose a color. This artifact becomes the chosen color.\n{3}, {T}: Draw a card. Activate only if there are five colors among permanents you control.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Domain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Domain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Puca's Eye",
+      "oracle_text": "When this artifact enters, draw a card, then choose a color. This artifact becomes the chosen color.\n{3}, {T}: Draw a card. Activate only if there are five colors among permanents you control.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Domain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Domain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Foraging Wickermaw",
+      "oracle_text": "When this creature enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\n{1}: Add one mana of any color. This creature becomes that color until end of turn. Activate only once each turn.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Mana Ramp"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Self-Mill"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Self-Mill",
+          "Mana Ramp"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact Creature — Scarecrow",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "board": "mainboard",
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Foraging Wickermaw",
+      "oracle_text": "When this creature enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\n{1}: Add one mana of any color. This creature becomes that color until end of turn. Activate only once each turn.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Mana Ramp"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Self-Mill"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Self-Mill",
+          "Mana Ramp"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact Creature — Scarecrow",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "board": "mainboard",
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Flaring Cinder",
+      "oracle_text": "When this creature enters and whenever you cast a spell with mana value 4 or greater, you may discard a card. If you do, draw a card.",
+      "mana_cost": "{1}{U/R}{U/R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Looting"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Burning Curiosity",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nExile the top two cards of your library. If this spell's additional cost was paid, exile the top three cards instead. Until the end of your next turn, you may play those cards.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Infrastructure/Consistency",
+        "Card Advantage",
+        "Impulse Draw",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Advantage",
+          "Impulse Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Burning Curiosity",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nExile the top two cards of your library. If this spell's additional cost was paid, exile the top three cards instead. Until the end of your next turn, you may play those cards.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Infrastructure/Consistency",
+        "Card Advantage",
+        "Impulse Draw",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Advantage",
+          "Impulse Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Enraged Flamecaster",
+      "oracle_text": "Reach\nWhenever you cast a spell with mana value 4 or greater, this creature deals 2 damage to each opponent.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Payload/Payoff",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Enraged Flamecaster",
+      "oracle_text": "Reach\nWhenever you cast a spell with mana value 4 or greater, this creature deals 2 damage to each opponent.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Payload/Payoff",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Sanar, Innovative First-Year",
+      "oracle_text": "Vivid — At the beginning of your first main phase, reveal cards from the top of your library until you reveal X nonland cards, where X is the number of colors among permanents you control. For each of those colors, you may exile a card of that color from among the revealed cards. Then shuffle. You may cast the exiled cards this turn.",
+      "mana_cost": "{2}{U/R}{U/R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Advantage",
+        "Impulse Draw",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Advantage",
+          "Impulse Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Legendary Creature — Goblin Sorcerer",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "4",
+      "board": "mainboard",
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Twinflame Travelers",
+      "oracle_text": "Flying\nIf a triggered ability of another Elemental you control triggers, it triggers an additional time.",
+      "mana_cost": "{2}{U}{R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Trigger Doubling"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Trigger Doubling"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Twinflame Travelers",
+      "oracle_text": "Flying\nIf a triggered ability of another Elemental you control triggers, it triggers an additional time.",
+      "mana_cost": "{2}{U}{R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Trigger Doubling"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Trigger Doubling"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Shimmercreep",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nVivid — When this creature enters, each opponent loses X life and you gain X life, where X is the number of colors among permanents you control.",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Lifegain",
+        "Payload/Payoff",
+        "Standalone Threat",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Elemental",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "5",
+      "board": "mainboard",
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Shimmercreep",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nVivid — When this creature enters, each opponent loses X life and you gain X life, where X is the number of colors among permanents you control.",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Lifegain",
+        "Payload/Payoff",
+        "Standalone Threat",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Elemental",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "5",
+      "board": "mainboard",
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Ashling's Command",
+      "oracle_text": "Choose two —\n• Create a token that's a copy of target Elemental you control.\n• Target player draws two cards.\n• Ashling's Command deals 2 damage to each creature target player controls.\n• Target player creates two Treasure tokens.",
+      "mana_cost": "{3}{U}{R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Artifacts",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Card Draw",
+        "Sweeper/Board Wipe"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Tokens",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Card Draw",
+          "Sweeper/Board Wipe"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Kindred Instant — Elemental",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Shinestriker",
+      "oracle_text": "Flying\nVivid — When this creature enters, draw cards equal to the number of colors among permanents you control.",
+      "mana_cost": "{4}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 6,
+      "type_line": "Creature — Elemental",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Shinestriker",
+      "oracle_text": "Flying\nVivid — When this creature enters, draw cards equal to the number of colors among permanents you control.",
+      "mana_cost": "{4}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 6,
+      "type_line": "Creature — Elemental",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Steam Vents",
+      "oracle_text": "({T}: Add {U} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Blood Crypt",
+      "oracle_text": "({T}: Add {B} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Geothermal Bog",
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Geothermal Bog",
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Fetch",
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "Land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Chaos Spewer",
+      "oracle_text": "When this creature enters, you may pay {2}. If you don't, blight 2. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{2}{B/R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Goblin Warlock",
+      "rarity": "common",
+      "power": "5",
+      "toughness": "4",
+      "board": "sideboard",
+      "role": "Standalone Threat",
+      "when_to_board": "Against fast aggro - the deck's accepted weakness. A three-mana 5/4 blocker is the largest body available in these colours at that cost, and 'When this creature enters, you may pay {2}. If you don't, blight 2' can put its own counters on itself (5/4 to 3/2) and still block everything. It is also BOTH black and red on one permanent, so it adds a colour to the Vivid count that this deck otherwise only gets from Shimmercreep."
+    },
+    {
+      "name": "Chaos Spewer",
+      "oracle_text": "When this creature enters, you may pay {2}. If you don't, blight 2. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{2}{B/R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Goblin Warlock",
+      "rarity": "common",
+      "power": "5",
+      "toughness": "4",
+      "board": "sideboard",
+      "role": "Standalone Threat",
+      "when_to_board": "Against fast aggro - the deck's accepted weakness. A three-mana 5/4 blocker is the largest body available in these colours at that cost, and 'When this creature enters, you may pay {2}. If you don't, blight 2' can put its own counters on itself (5/4 to 3/2) and still block everything. It is also BOTH black and red on one permanent, so it adds a colour to the Vivid count that this deck otherwise only gets from Shimmercreep."
+    },
+    {
+      "name": "Wild Unraveling",
+      "oracle_text": "As an additional cost to cast this spell, blight 2 or pay {1}. (To blight 2, put two -1/-1 counters on a creature you control.)\nCounter target spell.",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Interaction",
+      "when_to_board": "Against combo or a single must-answer spell. 'blight 2 or pay {1}. Counter target spell' is a hard counter, and the pay-{1} mode means it is castable with no creature on board. Only 2 counterspells exist cube-wide (0.7%) and both are blue - this is the only one of the three decks that can board either."
+    },
+    {
+      "name": "Wild Unraveling",
+      "oracle_text": "As an additional cost to cast this spell, blight 2 or pay {1}. (To blight 2, put two -1/-1 counters on a creature you control.)\nCounter target spell.",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Interaction",
+      "when_to_board": "Against combo or a single must-answer spell. 'blight 2 or pay {1}. Counter target spell' is a hard counter, and the pay-{1} mode means it is castable with no creature on board. Only 2 counterspells exist cube-wide (0.7%) and both are blue - this is the only one of the three decks that can board either."
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "role": "Interaction",
+      "when_to_board": "Against the cube's graveyard decks (39 cards, 15.0% density - the second-largest threat class). 'exile up to two target cards from graveyards. You gain 3 life' on a 3/3 flier. It is a changeling, therefore an Elemental, so Twinflame Travelers doubles its trigger to four exiles and 6 life."
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "role": "Interaction",
+      "when_to_board": "Against the cube's graveyard decks (39 cards, 15.0% density - the second-largest threat class). 'exile up to two target cards from graveyards. You gain 3 life' on a 3/3 flier. It is a changeling, therefore an Elemental, so Twinflame Travelers doubles its trigger to four exiles and 6 life."
+    },
+    {
+      "name": "Giantfall",
+      "oracle_text": "Choose one —\n• Target creature you control deals damage equal to its power to target creature an opponent controls.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Interaction",
+      "when_to_board": "Against artifact decks. 'Destroy target artifact' - 1 of only 4 artifact answers cube-wide and the only one legal in U/B/R. The fight mode is weak here: this deck's creatures are 3/2, 3/3, 3/5 and 1/3, so board it for the artifact half."
+    },
+    {
+      "name": "Giantfall",
+      "oracle_text": "Choose one —\n• Target creature you control deals damage equal to its power to target creature an opponent controls.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Interaction",
+      "when_to_board": "Against artifact decks. 'Destroy target artifact' - 1 of only 4 artifact answers cube-wide and the only one legal in U/B/R. The fight mode is weak here: this deck's creatures are 3/2, 3/3, 3/5 and 1/3, so board it for the artifact half."
+    },
+    {
+      "name": "Sear",
+      "oracle_text": "Sear deals 4 damage to target creature or planeswalker.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Interaction",
+      "when_to_board": "Against creature decks - the second copy, bringing it to the uncommon cap of 2. 'deals 4 damage to target creature or planeswalker' kills most of the cube's evasive threats, the largest threat class at 41 cards (15.8%)."
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "Interaction",
+      "when_to_board": "Against a recursive or indestructible threat - the second copy. 'Exile target creature', and the cost reads 'blight 1 OR pay {3}', so it is castable on an empty board."
+    }
+  ],
+  "pitch": "A Grixis midrange deck built on Vivid - a keyword whose every payoff scales with X, the number of colours among permanents you control. Sanar, Innovative First-Year converts that number into a free play-from-exile at the beginning of every first main phase, and because hybrid cards are BOTH of their colours as permanents, Sanar counts 2 toward its own X just by being on the battlefield. Two colourless permanents push X past the three colours the mana base can produce: Puca's Eye permanently becomes a chosen colour while cantripping, and Foraging Wickermaw becomes any colour at instant speed for {1}. The cashiers are Elementals - Shinestriker draws X, Shimmercreep drains X, Enraged Flamecaster converts every mana-value-4-or-greater cast into 2 damage to each opponent - and Twinflame Travelers makes each of those triggers happen an additional time. Burning Curiosity gives the play-from-exile plan redundancy so it does not live or die on a single legendary creature.",
+  "strategy_es": "midrange",
+  "identity_es": "Un midrange Grixis construido sobre Vivid, una palabra clave cuyas recompensas escalan todas con X, el número de colores entre los permanentes que controlas. Sanar, Innovative First-Year convierte ese número en un lanzamiento gratuito desde el exilio al comienzo de cada primera fase principal, y como las cartas híbridas son de AMBOS colores como permanentes, Sanar cuenta 2 para su propia X solo con estar en el campo de batalla. Dos permanentes incoloros empujan X más allá de los tres colores que puede producir la base de maná: Puca's Eye se vuelve permanentemente un color elegido mientras cantrea, y Foraging Wickermaw se vuelve cualquier color a velocidad de instantáneo por {1}. Los cajeros son Elementales — Shinestriker roba X, Shimmercreep drena X, Enraged Flamecaster convierte cada lanzamiento de valor de maná 4 o mayor en 2 de daño a cada rival — y Twinflame Travelers hace que cada uno de esos disparos ocurra una vez más. Burning Curiosity da redundancia al plan de jugar desde el exilio para que no dependa por entero de una sola criatura legendaria.",
+  "pitch_es": "Un midrange Grixis construido sobre Vivid, una palabra clave cuyas recompensas escalan todas con X, el número de colores entre los permanentes que controlas. Sanar, Innovative First-Year convierte ese número en un lanzamiento gratuito desde el exilio al comienzo de cada primera fase principal, y como las cartas híbridas son de AMBOS colores como permanentes, Sanar cuenta 2 para su propia X solo con estar en el campo de batalla. Dos permanentes incoloros empujan X más allá de los tres colores que puede producir la base de maná: Puca's Eye se vuelve permanentemente un color elegido mientras cantrea, y Foraging Wickermaw se vuelve cualquier color a velocidad de instantáneo por {1}. Los cajeros son Elementales — Shinestriker roba X, Shimmercreep drena X, Enraged Flamecaster convierte cada lanzamiento de valor de maná 4 o mayor en 2 de daño a cada rival — y Twinflame Travelers hace que cada uno de esos disparos ocurra una vez más. Burning Curiosity da redundancia al plan de jugar desde el exilio para que no dependa por entero de una sola criatura legendaria."
+}

@@ -1,0 +1,684 @@
+{
+  "deck_name": "rg-ravager-midrange",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-26T19:00:00Z",
+  "format": "40-card",
+  "strategy": "Werewolf midrange with the full RG removal suite (Ravager Midrange)",
+  "colors": "RG",
+  "identity": "A red-green midrange deck that plays Werewolves for their front faces and pays for the privilege in removal. It is the only one of the three Werewolf builds that expects never to transform, and it says so: seven mainboard removal cards mean a spell is cast almost every turn, and the upkeep clause 'if no spells were cast last turn' is therefore off by the deck's own choice. What it buys instead is seven double-duty permanents - Huntmaster of the Fells, Garruk Relentless, Arlinn Kord, Tireless Tracker, Duskwatch Recruiter x2 and Pack Guardian x2 - every one of which leaves behind more than one thing, plus Mayor of Avabruck, whose transform-free front face raises the power of the board AND of the four removal spells that read creature power. It wins by having a better board and more cards from turn four onward, and any flip that happens is a bonus rather than a step in the plan.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "deck_construction_constraint": "Maximum 5 rare+mythic cards total across mainboard and sideboard.",
+    "basics": "unlimited, format-supplied"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.91,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.213,
+      "raw_target": 17.213,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.91,
+    "pip_demand": {
+      "G": 18,
+      "R": 11
+    },
+    "land_color_production": {
+      "R": 8,
+      "G": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 62.1,
+        "prod_pct": 52.9,
+        "gap": 9.2,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 37.9,
+        "prod_pct": 47.1,
+        "gap": -9.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Duskwatch Recruiter // Krallenhorde Howler",
+      "oracle_text": "{2}{G}: Look at the top three cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nCreature spells you cast cost {1} less to cast.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Warrior Werewolf",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Werewolf Matters",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cost Reduction"
+      ],
+      "qty": 2,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Scorned Villager // Moonscarred Werewolf",
+      "oracle_text": "{T}: Add {G}.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nVigilance\n{T}: Add {G}{G}.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Werewolf",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Werewolf Matters",
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "qty": 2,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Moonlight Hunt",
+      "oracle_text": "Choose target creature you don't control. Each creature you control that's a Wolf or a Werewolf deals damage equal to its power to that creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Abrade",
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mayor of Avabruck // Howlpack Alpha",
+      "oracle_text": "Other Human creatures you control get +1/+1.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nEach other creature you control that's a Werewolf or a Wolf gets +1/+1.\nAt the beginning of your end step, create a 2/2 green Wolf creature token.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Advisor Werewolf",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geier Reach Bandit // Vildin-Pack Alpha",
+      "oracle_text": "Haste\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nWhenever a Werewolf you control enters, you may transform it.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Rogue Werewolf",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tireless Tracker",
+      "oracle_text": "Landfall — Whenever a land you control enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Scout",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Landfall",
+        "Lands-Matter",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Clear Shot",
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shrill Howler // Howling Chorus",
+      "oracle_text": "Creatures with power less than this creature's power can't block it.\n{5}{G}: Transform this creature.\n//\nCreatures with power less than this creature's power can't block it.\nWhenever this creature deals combat damage to a player, create a 3/2 colorless Eldrazi Horror creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Werewolf Horror",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Tokens",
+        "Standalone Threat",
+        "Engine/Outlet",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Savage Alliance",
+      "oracle_text": "Escalate {1} (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Creatures target player controls gain trample until end of turn.\n• Savage Alliance deals 2 damage to target creature.\n• Savage Alliance deals 1 damage to each creature target opponent controls.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Combat Trick"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Huntmaster of the Fells // Ravager of the Fells",
+      "oracle_text": "Whenever this creature enters or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nTrample\nWhenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent or planeswalker and 2 damage to up to one target creature that player or that planeswalker's controller controls.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{2}{R}{G}",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Werewolf",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tokens",
+        "Lifegain",
+        "Werewolf Matters",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Life Drain",
+        "Direct Damage"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Garruk Relentless // Garruk, the Veil-Cursed",
+      "oracle_text": "When Garruk has two or fewer loyalty counters on him, transform him.\n0: Garruk deals 3 damage to target creature. That creature deals damage equal to its power to him.\n0: Create a 2/2 green Wolf creature token.\n//\n+1: Create a 1/1 black Wolf creature token with deathtouch.\n−1: Sacrifice a creature. If you do, search your library for a creature card, reveal it, put it into your hand, then shuffle.\n−3: Creatures you control gain trample and get +X/+X until end of turn, where X is the number of creature cards in your graveyard.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Garruk",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Direct Damage",
+        "Tutor",
+        "Team Buff"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Arlinn Kord // Arlinn, Embraced by the Moon",
+      "oracle_text": "+1: Until end of turn, up to one target creature gets +2/+2 and gains vigilance and haste.\n0: Create a 2/2 green Wolf creature token. Transform Arlinn Kord.\n//\n+1: Creatures you control get +1/+1 and gain trample until end of turn.\n−1: Arlinn deals 3 damage to any target. Transform Arlinn.\n−6: You get an emblem with \"Creatures you control have haste and '{T}: This creature deals damage equal to its power to any target.'\"",
+      "mana_cost": "{2}{R}{G}",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Arlinn",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Werewolf Matters",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Pump Effect",
+        "Direct Damage"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Pack Guardian",
+      "oracle_text": "Flash\nWhen this creature enters, you may discard a land card. If you do, create a 2/2 green Wolf creature token.",
+      "mana_cost": "{2}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Wolf Spirit",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Tokens",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Cards: Extra-Cost"
+      ],
+      "qty": 2,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Smoldering Werewolf // Erupting Dreadwolf",
+      "oracle_text": "When this creature enters, it deals 1 damage to each of up to two target creatures.\n{4}{R}{R}: Transform this creature.\n//\nWhenever this creature attacks, it deals 2 damage to any target.",
+      "mana_cost": "{2}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Werewolf Horror",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wooded Ridgeline",
+      "oracle_text": "({T}: Add {R} or {G}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Mountain Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 6,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Lightning Axe",
+      "oracle_text": "As an additional cost to cast this spell, discard a card or pay {5}.\nLightning Axe deals 5 damage to target creature.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cards: Extra-Cost"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against a creature too large for the maindeck suite - Abrade caps at 3 damage and Clear Shot is capped by your own creature's power. 5 damage for {R} is the cheapest hard answer in the colours."
+    },
+    {
+      "name": "Fiery Temper",
+      "oracle_text": "Fiery Temper deals 3 damage to any target.\nMadness {R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{1}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Madness"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against fliers and planeswalkers - 58 evasion cards in the cube (20.9%) and, verified at Phase 9, ZERO of the seven mainboard removal spells can target a planeswalker. 'deals 3 damage to any target' is the only answer to either. Its Madness {R} is also live off Lightning Axe's 'discard a card' additional cost when both are boarded in."
+    },
+    {
+      "name": "Ambush Viper",
+      "oracle_text": "Flash\nDeathtouch",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Snake",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against big-creature midrange and reanimator - flash deathtouch trades with any body in the cube regardless of size."
+    },
+    {
+      "name": "Duel for Dominance",
+      "oracle_text": "Coven — Choose target creature you control and target creature you don't control. If you control three or more creatures with different powers, put a +1/+1 counter on the chosen creature you control. Then the chosen creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against fast aggro - the cheapest removal green offers here, and the Coven clause is live on a board with 12 differently-sized bodies."
+    },
+    {
+      "name": "Hanweir Watchkeep // Bane of Hanweir",
+      "oracle_text": "Defender\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nThis creature attacks each combat if able.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Warrior Werewolf",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "5",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against fast aggro - a 1/5 Defender that blanks two-power attackers, and it is a Werewolf so it still feeds Moonlight Hunt's count."
+    }
+  ],
+  "pitch": "A red-green midrange deck that plays Werewolves for their front faces and pays for the privilege in removal. It is the only one of the three Werewolf builds that expects never to transform, and it says so: seven mainboard removal cards mean a spell is cast almost every turn, and the upkeep clause 'if no spells were cast last turn' is therefore off by the deck's own choice. What it buys instead is seven double-duty permanents - Huntmaster of the Fells, Garruk Relentless, Arlinn Kord, Tireless Tracker, Duskwatch Recruiter x2 and Pack Guardian x2 - every one of which leaves behind more than one thing, plus Mayor of Avabruck, whose transform-free front face raises the power of the board AND of the four removal spells that read creature power. It wins by having a better board and more cards from turn four onward, and any flip that happens is a bonus rather than a step in the plan.",
+  "strategy_es": "midrange de Hombres lobo con el paquete completo de eliminación RG (Ravager Midrange)",
+  "identity_es": "Un midrange rojo-verde que juega Hombres lobo por sus caras frontales y paga el privilegio en eliminación. Es la única de las tres construcciones de Hombres lobo que espera no transformarse nunca, y lo dice abiertamente: siete cartas de eliminación en el principal significan que se lanza un hechizo casi cada turno, así que la cláusula de mantenimiento 'si no se lanzaron hechizos el turno pasado' está apagada por elección propia del mazo. Lo que compra a cambio son siete permanentes de doble función — Huntmaster of the Fells, Garruk Relentless, Arlinn Kord, Tireless Tracker, Duskwatch Recruiter x2 y Pack Guardian x2 — cada uno de los cuales deja atrás más de una cosa, más Mayor of Avabruck, cuya cara frontal sin transformar sube la fuerza del tablero Y la de los cuatro hechizos de eliminación que leen fuerza de criatura. Gana teniendo mejor tablero y más cartas desde el turno cuatro en adelante, y cualquier transformación que ocurra es una propina y no un paso del plan.",
+  "pitch_es": "Un midrange rojo-verde que juega Hombres lobo por sus caras frontales y paga el privilegio en eliminación. Es la única de las tres construcciones de Hombres lobo que espera no transformarse nunca, y lo dice abiertamente: siete cartas de eliminación en el principal significan que se lanza un hechizo casi cada turno, así que la cláusula de mantenimiento 'si no se lanzaron hechizos el turno pasado' está apagada por elección propia del mazo. Lo que compra a cambio son siete permanentes de doble función — Huntmaster of the Fells, Garruk Relentless, Arlinn Kord, Tireless Tracker, Duskwatch Recruiter x2 y Pack Guardian x2 — cada uno de los cuales deja atrás más de una cosa, más Mayor of Avabruck, cuya cara frontal sin transformar sube la fuerza del tablero Y la de los cuatro hechizos de eliminación que leen fuerza de criatura. Gana teniendo mejor tablero y más cartas desde el turno cuatro en adelante, y cualquier transformación que ocurra es una propina y no un paso del plan."
+}

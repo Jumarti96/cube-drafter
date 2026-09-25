@@ -1,0 +1,1134 @@
+{
+  "deck_name": "g-kamahl-big-mana",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-08-02T17:39:50Z",
+  "format": "40-card",
+  "strategy": "combo",
+  "colors": "G",
+  "identity": "Mono-green big mana whose threats are its lands. Thirteen accelerants build a Forest board, then Kamahl, Fist of Krosa turns it into an army - '{G}: Target land becomes a 1/1 creature until end of turn. It's still a land' followed by '{2}{G}{G}{G}: Creatures you control get +3/+3 and gain trample until end of turn'. The crucial constraint, which the self-grill caught and which shapes the whole list: animating a land does NOT untap it, so every land tapped to pay for the sequence is a land that cannot attack. What the kill turn is short of is untapped bodies, not mana - which is why Call of the Herd x2 is in the deck, supplying four attackers across two cards that cost nothing on the turn that matters. Stonewood Invoker's repeatable '{7}{G}: +5/+5' is a backup clock. Gauntlet of Power naming green doubles all 16 basic Forests; its anthem is irrelevant to the animated lands, which are colourless.",
+  "restrictions": {
+    "base": "cube_mainboard only - every card verified by exact name against working_pool.json",
+    "commons_uncommons_max_2": "PASS - highest count is 2; Break Asunder is 1 mainboard + 1 sideboard = 2 total, exactly at the common cap",
+    "rares_mythics_max_1_each": "PASS",
+    "rares_mythics_max_5_total_MB_plus_SB": "PASS at exactly 5/5 - all five are mainboard: Gauntlet of Power (mythic), Kamahl Fist of Krosa (mythic), Sylvan Library (mythic), Birds of Paradise (rare), Worldly Tutor (rare). The sideboard is entirely commons and uncommons by design, which is what freed all five slots for the mainboard.",
+    "basics": "Forest x16 - format-supplied, exempt from copy limits",
+    "colour": "core_colors ['G'], splash_colors [] - every nonland card returns a non-null effective_cost.best_mode(card, ['G'], []) in normal cast mode"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 15,
+    "land_count_status": "PASS",
+    "ramp_count": 14,
+    "cantrip_count": 0,
+    "accel_count": 14,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.96,
+      "reference_avg_mv": 2.5,
+      "accel": 14,
+      "adjustment": -1.72,
+      "raw_target": 15.28,
+      "clamped": false,
+      "recommended_land_count": 15,
+      "p_window_at_recommended": 0.7763
+    },
+    "avg_cmc": 2.96,
+    "pip_demand": {
+      "G": 23
+    },
+    "land_color_production": {
+      "G": 16
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Birds of Paradise",
+      "cmc": 1,
+      "type_line": "Creature — Bird",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\n{T}: Add one mana of any color.",
+      "power": "0",
+      "toughness": "1",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "role": "Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wild Growth",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional {G}.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "role": "Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wild Growth",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional {G}.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "role": "Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Werebear",
+      "cmc": 2,
+      "type_line": "Creature — Human Bear Druid",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{T}: Add {G}.\nThreshold — This creature gets +3/+3 as long as there are seven or more cards in your graveyard.",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Standalone Threat",
+        "Mana Dork"
+      ],
+      "role": "Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Werebear",
+      "cmc": 2,
+      "type_line": "Creature — Human Bear Druid",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{T}: Add {G}.\nThreshold — This creature gets +3/+3 as long as there are seven or more cards in your graveyard.",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Standalone Threat",
+        "Mana Dork"
+      ],
+      "role": "Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nature's Lore",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Search your library for a Forest card, put that card onto the battlefield, then shuffle.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Landfall",
+        "Infrastructure/Consistency",
+        "Mana Ramp",
+        "Land Fetch",
+        "Mana: Self-Replacing"
+      ],
+      "role": "Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nature's Lore",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Search your library for a Forest card, put that card onto the battlefield, then shuffle.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Landfall",
+        "Infrastructure/Consistency",
+        "Mana Ramp",
+        "Land Fetch",
+        "Mana: Self-Replacing"
+      ],
+      "role": "Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Krosan Restorer",
+      "cmc": 3,
+      "type_line": "Creature — Human Druid",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{T}: Untap target land.\nThreshold — {T}: Untap up to three target lands. Activate only if there are seven or more cards in your graveyard.",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Lands-Matter",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Mana Ramp",
+        "Land Untap"
+      ],
+      "role": "Ramp / kill-turn insurance",
+      "board": "mainboard"
+    },
+    {
+      "name": "Krosan Restorer",
+      "cmc": 3,
+      "type_line": "Creature — Human Druid",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{T}: Untap target land.\nThreshold — {T}: Untap up to three target lands. Activate only if there are seven or more cards in your graveyard.",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Lands-Matter",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Mana Ramp",
+        "Land Untap"
+      ],
+      "role": "Ramp / kill-turn insurance",
+      "board": "mainboard"
+    },
+    {
+      "name": "Elvish Spirit Guide",
+      "cmc": 3,
+      "type_line": "Creature — Elf Spirit",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Exile this creature from your hand: Add {G}.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "role": "Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Elvish Spirit Guide",
+      "cmc": 3,
+      "type_line": "Creature — Elf Spirit",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Exile this creature from your hand: Add {G}.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "role": "Ramp",
+      "board": "mainboard"
+    },
+    {
+      "name": "Elvish Aberration",
+      "cmc": 6,
+      "type_line": "Creature — Elf Mutant",
+      "mana_cost": "{5}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{T}: Add {G}{G}{G}.\nForestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, put it into your hand, then shuffle.)",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Tribal/Kindred",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Mana Dork",
+        "Land Fetch",
+        "Cycling",
+        "Mana: Net-Positive"
+      ],
+      "role": "Ramp / Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Elvish Aberration",
+      "cmc": 6,
+      "type_line": "Creature — Elf Mutant",
+      "mana_cost": "{5}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{T}: Add {G}{G}{G}.\nForestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, put it into your hand, then shuffle.)",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Tribal/Kindred",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Mana Dork",
+        "Land Fetch",
+        "Cycling",
+        "Mana: Net-Positive"
+      ],
+      "role": "Ramp / Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sylvan Library",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "At the beginning of your draw step, you may draw two additional cards. If you do, choose two cards in your hand drawn this turn. For each of those cards, pay 4 life or put the card on top of your library.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Life: Cost"
+      ],
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Worldly Tutor",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Search your library for a creature card, reveal it, then shuffle and put the card on top.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Tutor"
+      ],
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gauntlet of Power",
+      "cmc": 5,
+      "type_line": "Artifact",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "mythic",
+      "oracle_text": "As this artifact enters, choose a color.\nCreatures of the chosen color get +1/+1.\nWhenever a basic land is tapped for mana of the chosen color, its controller adds an additional one mana of that color.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Anthem",
+        "Mana Ramp"
+      ],
+      "role": "Engine (pipeline anchor)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kamahl, Fist of Krosa",
+      "cmc": 6,
+      "type_line": "Legendary Creature — Human Druid",
+      "mana_cost": "{4}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "{G}: Target land becomes a 1/1 creature until end of turn. It's still a land.\n{2}{G}{G}{G}: Creatures you control get +3/+3 and gain trample until end of turn.",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Lands-Matter",
+        "Tokens",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Token Generation",
+        "Anthem Effect"
+      ],
+      "role": "Payoff (kill mechanism)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Stonewood Invoker",
+      "cmc": 2,
+      "type_line": "Creature — Elf Mutant",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{7}{G}: This creature gets +5/+5 until end of turn.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Standalone Threat",
+        "Pump"
+      ],
+      "role": "Payoff (mana sink / backup clock)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Stonewood Invoker",
+      "cmc": 2,
+      "type_line": "Creature — Elf Mutant",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "{7}{G}: This creature gets +5/+5 until end of turn.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Standalone Threat",
+        "Pump"
+      ],
+      "role": "Payoff (mana sink / backup clock)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Call of the Herd",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create a 3/3 green Elephant creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "role": "Payoff (kill-turn bodies)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Call of the Herd",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Create a 3/3 green Elephant creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "role": "Payoff (kill-turn bodies)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Icy Manipulator",
+      "cmc": 4,
+      "type_line": "Artifact",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Tap Effect"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Icy Manipulator",
+      "cmc": 4,
+      "type_line": "Artifact",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Tap Effect"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Break Asunder",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or enchantment.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cycling"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "cmc": 0,
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "role": "Hate - graveyard",
+      "board": "sideboard"
+    },
+    {
+      "name": "Tormod's Crypt",
+      "cmc": 0,
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "role": "Hate - graveyard",
+      "board": "sideboard"
+    },
+    {
+      "name": "Break Asunder",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or enchantment.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cycling"
+      ],
+      "role": "Hate - noncreature permanents",
+      "board": "sideboard"
+    },
+    {
+      "name": "Sandstorm",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Sandstorm deals 1 damage to each attacking creature.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage"
+      ],
+      "role": "Hate - wide boards",
+      "board": "sideboard"
+    },
+    {
+      "name": "Sandstorm",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Sandstorm deals 1 damage to each attacking creature.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage"
+      ],
+      "role": "Hate - wide boards",
+      "board": "sideboard"
+    },
+    {
+      "name": "Giant Spider",
+      "cmc": 4,
+      "type_line": "Creature — Spider",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "role": "Flex - blocker vs evasion",
+      "board": "sideboard"
+    },
+    {
+      "name": "Giant Spider",
+      "cmc": 4,
+      "type_line": "Creature — Spider",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "role": "Flex - blocker vs evasion",
+      "board": "sideboard"
+    },
+    {
+      "name": "Emerald Charm",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Untap target permanent.\n• Destroy target non-Aura enchantment.\n• Target creature loses flying until end of turn.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Untap"
+      ],
+      "role": "Flex - modal answer",
+      "board": "sideboard"
+    },
+    {
+      "name": "Emerald Charm",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Untap target permanent.\n• Destroy target non-Aura enchantment.\n• Target creature loses flying until end of turn.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Untap"
+      ],
+      "role": "Flex - modal answer",
+      "board": "sideboard"
+    },
+    {
+      "name": "Wall of Junk",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Wall",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "Defender (This creature can't attack.)\nWhen this creature blocks, return it to its owner's hand at end of combat. (Return it only if it's on the battlefield.)",
+      "power": "0",
+      "toughness": "7",
+      "tags": [
+        "Artifacts",
+        "Defender Matters",
+        "Interaction/Disruption"
+      ],
+      "role": "Flex - anti-aggro blocker",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "Mono-green big mana whose threats are its lands. Thirteen accelerants build a Forest board, then Kamahl, Fist of Krosa turns it into an army - '{G}: Target land becomes a 1/1 creature until end of turn. It's still a land' followed by '{2}{G}{G}{G}: Creatures you control get +3/+3 and gain trample until end of turn'. The crucial constraint, which the self-grill caught and which shapes the whole list: animating a land does NOT untap it, so every land tapped to pay for the sequence is a land that cannot attack. What the kill turn is short of is untapped bodies, not mana - which is why Call of the Herd x2 is in the deck, supplying four attackers across two cards that cost nothing on the turn that matters. Stonewood Invoker's repeatable '{7}{G}: +5/+5' is a backup clock. Gauntlet of Power naming green doubles all 16 basic Forests; its anthem is irrelevant to the animated lands, which are colourless.",
+  "strategy_es": "combo",
+  "identity_es": "Mono verde de maná grande cuyas amenazas son sus tierras. Trece acelerantes construyen un tablero de Forests, y luego Kamahl, Fist of Krosa lo convierte en un ejército: '{G}: Target land becomes a 1/1 creature until end of turn. It's still a land' seguido de '{2}{G}{G}{G}: Creatures you control get +3/+3 and gain trample until end of turn'. La restricción crucial, que da forma a toda la lista: animar una tierra NO la desgira, así que cada tierra girada para pagar la secuencia es una tierra que no puede atacar. Lo que le falta al turno de matar son cuerpos desgirados, no maná, que es por lo que Call of the Herd x2 está en el mazo, aportando cuatro atacantes repartidos en dos cartas que no cuestan nada el turno que importa. El repetible '{7}{G}: +5/+5' de Stonewood Invoker es un reloj de reserva. Gauntlet of Power nombrando verde duplica los 16 Forests básicos; su anthem es irrelevante para las tierras animadas, que son incoloras.",
+  "pitch_es": "Mono verde de maná grande cuyas amenazas son sus tierras. Trece acelerantes construyen un tablero de Forests, y luego Kamahl, Fist of Krosa lo convierte en un ejército: '{G}: Target land becomes a 1/1 creature until end of turn. It's still a land' seguido de '{2}{G}{G}{G}: Creatures you control get +3/+3 and gain trample until end of turn'. La restricción crucial, que da forma a toda la lista: animar una tierra NO la desgira, así que cada tierra girada para pagar la secuencia es una tierra que no puede atacar. Lo que le falta al turno de matar son cuerpos desgirados, no maná, que es por lo que Call of the Herd x2 está en el mazo, aportando cuatro atacantes repartidos en dos cartas que no cuestan nada el turno que importa. El repetible '{7}{G}: +5/+5' de Stonewood Invoker es un reloj de reserva. Gauntlet of Power nombrando verde duplica los 16 Forests básicos; su anthem es irrelevante para las tierras animadas, que son incoloras."
+}

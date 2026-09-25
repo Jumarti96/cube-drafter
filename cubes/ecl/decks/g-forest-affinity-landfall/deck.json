@@ -1,0 +1,898 @@
+{
+  "deck_name": "g-forest-affinity-landfall",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-12T02:31:05Z",
+  "format": "40-card",
+  "strategy": "midrange",
+  "colors": "G",
+  "identity": "Mono-green Forest-affinity landfall midrange. Sapling Nursery is the cube's only true landfall trigger, and every green dual in this cube is Forest-typed, so a 16-Forest manabase lands an {6}{G}{G} enchantment for four mana on turn 4; from there each land drop, Evolving Wilds crack, Tend the Sprigs fetch and Mutable Explorer Mutavault token is a 3/4 reach Treefolk. The honest frequency is stated rather than hidden: Sapling Nursery is 1 of 40 cards, so P(seen by turn 8 on the play, 14 cards) = 35.0%. In the roughly 65% of games it is not drawn, the deck is a normal green midrange clock - Bristlebane Outrider x2 as a 5/5 that creatures with power 2 or less cannot block, Moon-Vigil Adherents x2 scaling with the board, Crossroads Watcher x2, and the Tend the Sprigs x2 Treefolk - and Dundoolin Weaver x2 rebuys the Nursery from the graveyard when it is answered.",
+  "restrictions": {
+    "base": "cube_mainboard only - every name verified by exact string match against the working pool cache",
+    "commons_uncommons_max_2": "PASS - no common or uncommon exceeds 2 copies across mainboard + sideboard (Virulent Emissary is at exactly 2: 1 main, 1 board)",
+    "rares_mythics_max_1": "PASS - Sapling Nursery, Mutable Explorer, Bristlebane Battler each at 1",
+    "rare_mythic_total_max_5": "PASS - 3 of 5 used, all mainboard. Two slots deliberately unspent: the pool's remaining green rares either do not advance this pipeline (Champions of the Perfect's 'behold an Elf and exile it' is up-front card disadvantage payable by only 5 of 22 nonland cards) or print off-colour identities.",
+    "basics_unlimited": "16 Forest - basics are format-supplied and exempt",
+    "colour_legality": "PASS - all 18 distinct nonland names return a usable mode under effective_cost.best_mode(card, ['G'], [])"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 4,
+    "cantrip_count": 0,
+    "accel_count": 4,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.09,
+      "reference_avg_mv": 2.5,
+      "accel": 4,
+      "adjustment": 0.12,
+      "raw_target": 17.12,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 3.09,
+    "pip_demand": {
+      "G": 25
+    },
+    "land_color_production": {
+      "G": 16
+    },
+    "color_balance_status": "WARN",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 100,
+        "prod_pct": 88.9,
+        "gap": 11.1,
+        "status": "WARN"
+      }
+    },
+    "overall_status": "WARN"
+  },
+  "mainboard": [
+    {
+      "name": "Sapling Nursery",
+      "oracle_text": "Affinity for Forests (This spell costs {1} less to cast for each Forest you control.)\nLandfall — Whenever a land you control enters, create a 3/4 green Treefolk creature token with reach.\n{1}{G}, Exile this enchantment: Treefolk and Forests you control gain indestructible until end of turn.",
+      "mana_cost": "{6}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Landfall",
+        "Tokens",
+        "Lands-Matter",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation",
+        "Protection",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Landfall",
+          "Tokens",
+          "Lands-Matter",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Protection"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 8,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Prismatic Undercurrents",
+      "oracle_text": "Vivid — When this enchantment enters, search your library for up to X basic land cards, where X is the number of colors among permanents you control. Reveal those cards, put them into your hand, then shuffle.\nYou may play an additional land on each of your turns.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Domain",
+        "Lands-Matter",
+        "Landfall",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Card Draw",
+        "Extra Land Drop",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Domain",
+          "Lands-Matter",
+          "Landfall"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Fetch",
+          "Card Draw",
+          "Extra Land Drop"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Tend the Sprigs",
+      "oracle_text": "Search your library for a basic land card, put it onto the battlefield tapped, then shuffle. Then if you control seven or more lands and/or Treefolk, create a 3/4 green Treefolk creature token with reach. (It can block creatures with flying.)",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Tokens",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Land Fetch",
+        "Mana Ramp",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Land Fetch",
+          "Mana Ramp",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Mutable Explorer",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, create a tapped Mutavault token. (It's a land with \"{T}: Add {C}\" and \"{1}: This token becomes a 2/2 creature with all creature types until end of turn. It's still a land.\")",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Tokens",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Dundoolin Weaver",
+      "oracle_text": "When this creature enters, if you control three or more creatures, return target permanent card from your graveyard to your hand.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Graveyard Recursion"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Creature — Kithkin Druid",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Virulent Emissary",
+      "oracle_text": "Deathtouch\nWhenever another creature you control enters, you gain 1 life.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Elf Assassin",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Crossroads Watcher",
+      "oracle_text": "Trample\nWhenever another creature you control enters, this creature gets +1/+0 until end of turn.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tokens",
+        "Payload/Payoff",
+        "Pump"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Pump"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Kithkin Ranger",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Moon-Vigil Adherents",
+      "oracle_text": "Trample\nThis creature gets +1/+1 for each creature you control and each creature card in your graveyard.",
+      "mana_cost": "{2}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Graveyard",
+        "Tokens",
+        "Payload/Payoff",
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elf Druid",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "0",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Bristlebane Battler",
+      "oracle_text": "Trample, ward {2}\nThis creature enters with five -1/-1 counters on it.\nWhenever another creature you control enters while this creature has a -1/-1 counter on it, remove a -1/-1 counter from this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Standalone Threat",
+        "Counter Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Counter Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Kithkin Soldier",
+      "rarity": "rare",
+      "power": "6",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Bristlebane Outrider",
+      "oracle_text": "This creature can't be blocked by creatures with power 2 or less.\nAs long as another creature entered the battlefield under your control this turn, this creature gets +2/+0.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Payload/Payoff",
+        "Evasion",
+        "Combat Modification"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Evasion",
+          "Combat Modification"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Kithkin Knight",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Unforgiving Aim",
+      "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Assert Perfection",
+      "oracle_text": "Target creature you control gets +1/+0 until end of turn. It deals damage equal to its power to up to one target creature an opponent controls.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Thoughtweft Charge",
+      "oracle_text": "Target creature gets +3/+3 until end of turn. If a creature entered the battlefield under your control this turn, draw a card.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Combat Trick",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Fetch",
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 16
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Dawn's Light Archer",
+      "oracle_text": "Flash\nReach",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Elf Archer",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Chomping Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, destroy up to one target artifact or enchantment.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Blossoming Defense",
+      "oracle_text": "Target creature you control gets +2/+2 and gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Protection",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Great Forest Druid",
+      "oracle_text": "{T}: Add one mana of any color.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Dork"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Treefolk Druid",
+      "rarity": "common",
+      "power": "0",
+      "toughness": "4",
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Virulent Emissary",
+      "oracle_text": "Deathtouch\nWhenever another creature you control enters, you gain 1 life.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Elf Assassin",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "sideboard",
+      "qty": 1
+    }
+  ],
+  "pitch": "Sapling Nursery costs {6}{G}{G} with \"Affinity for Forests (This spell costs {1} less to cast for each Forest you control.)\" With N Forests, the cost is 8-N and the available mana is N, so the cast turn is the smallest N where N >= 8-N: N = 4, turn 4.",
+  "strategy_es": "midrange",
+  "identity_es": "Midrange de landfall mono verde con afinidad por Forests. Sapling Nursery es el único disparo de landfall auténtico del cubo, y cada dual verde de este cubo tiene el tipo Forest, así que una base de 16 Forests aterriza un encantamiento de {6}{G}{G} por cuatro manás en el turno 4; a partir de ahí cada tierra jugada, cada rotura de Evolving Wilds, cada búsqueda de Tend the Sprigs y cada ficha de Mutavault de Mutable Explorer es un Treefolk 3/4 con alcance. La frecuencia honesta se enuncia en vez de esconderse: Sapling Nursery es 1 de 40 cartas, así que P(verla para el turno 8 jugando primero, 14 cartas) = 35,0%. En aproximadamente el 65% de partidas en que no se roba, el mazo es un reloj verde midrange normal — Bristlebane Outrider x2 como un 5/5 al que no pueden bloquear criaturas de fuerza 2 o menos, Moon-Vigil Adherents x2 escalando con el tablero, Crossroads Watcher x2 y los Treefolk de Tend the Sprigs x2 — y Dundoolin Weaver x2 recompra la Nursery del cementerio cuando responden a ella.",
+  "pitch_es": "Sapling Nursery cuesta {6}{G}{G} con \"Affinity for Forests (This spell costs {1} less to cast for each Forest you control.)\" Con N Forests, el coste es 8-N y el maná disponible es N, así que el turno de lanzamiento es la N más pequeña donde N >= 8-N: N = 4, turno 4."
+}

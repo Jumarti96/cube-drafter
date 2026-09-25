@@ -1,0 +1,1074 @@
+{
+  "deck_name": "gu-warden-toughness-beatdown",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-06T02:15:00Z",
+  "format": "40-card",
+  "strategy": "aggro — aggro",
+  "colors": "GU",
+  "identity": "Simic Toughness Beatdown. 12 of this deck's 14 creature copies have toughness greater than power, and two Tapestry Wardens let every one of them assign combat damage equal to that back number - the qualifying board totals 44 toughness against 22 power, so the payoff exactly doubles its damage. Because that clause exists on only one card in the cube, the deck carries a second route to the same place: +1/+1 counters raise power and toughness equally, and Meltstrider's Resolve raises toughness alone, so the bodies get lethal whether or not a Warden ever arrives. Drix Fatemaker gives every countered creature trample and Meltstrider's Resolve stops gang-blocking, which is how the damage survives a chump block; Terrasymbiosis turns the counter package into cards.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_deck_constraint": "max 6 rare/mythic cards total across mainboard + sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.78,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.04,
+      "raw_target": 17.04,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.78,
+    "pip_demand": {
+      "G": 16,
+      "U": 10
+    },
+    "land_color_production": {
+      "U": 9,
+      "G": 11
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 61.5,
+        "prod_pct": 64.7,
+        "gap": -3.2,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 38.5,
+        "prod_pct": 52.9,
+        "gap": -14.4,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Gene Pollinator",
+      "oracle_text": "{T}, Tap an untapped permanent you control: Add one mana of any color.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Insect",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Dork"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 1,
+      "role": "Threat/fixer — 1/2 billing 2 under Warden; '{T}, Tap an untapped permanent you control: Add one mana of any color' covers the GG and UU casts",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eumidian Terrabotanist",
+      "oracle_text": "Landfall — Whenever a land you control enters, you gain 1 life.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Insect Druid",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Landfall",
+        "Lifegain",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Landfall",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 1,
+      "role": "Threat — {1}{G} 2/3, the turn-2 body; bills 3",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cloudsculpt Technician",
+      "oracle_text": "Flying\nAs long as you control an artifact, this creature gets +1/+0.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Jellyfish Artificer",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "4",
+      "tags": [
+        "Artifacts",
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "Threat — 1/4 FLIER billing 4 in the air from turn 3; under Warden it bills 4 whether or not its +1/+0 is live, so the artifact clause is upside, not a requirement",
+      "board": "mainboard"
+    },
+    {
+      "name": "Uthros Psionicist",
+      "oracle_text": "The second spell you cast each turn costs {2} less to cast.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Jellyfish Scientist",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Spellslinger",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Cost Reduction"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Cost Reduction"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "Threat — 2/4 billing 4; 'The second spell you cast each turn costs {2} less to cast' pays for the double-spell turns",
+      "board": "mainboard"
+    },
+    {
+      "name": "Illvoi Infiltrator",
+      "oracle_text": "This creature can't be blocked if you've cast two or more spells this turn.\nWhenever this creature deals combat damage to a player, draw a card.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Jellyfish Rogue",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Spellslinger",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "Threat — 1/3 billing 3, and 'can't be blocked if you've cast two or more spells this turn' is unconditional evasion that beats gang-blocking; 'whenever this creature deals combat damage to a player, draw a card'. The payoff Uthros Psionicist's discount was missing",
+      "board": "mainboard"
+    },
+    {
+      "name": "Quantum Riddler",
+      "oracle_text": "Flying\nWhen this creature enters, draw a card.\nAs long as you have one or fewer cards in hand, if you would draw one or more cards, you draw that many cards plus one instead.\nWarp {1}{U}",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Sphinx",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "6",
+      "tags": [
+        "Kicker/Scaling",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "qty": 1,
+      "role": "Threat — 4/6 FLIER billing 6, the largest Warden target in the pool; ETB draws, and 'as long as you have one or fewer cards in hand ... you draw that many cards plus one' answers this deck's empty-hand turns; Warp {1}{U}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ouroboroid",
+      "oracle_text": "At the beginning of combat on your turn, put X +1/+1 counters on each creature you control, where X is this creature's power.",
+      "mana_cost": "{2}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Plant Wurm",
+      "rarity": "mythic",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Engine/Outlet"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "qty": 1,
+      "role": "Threat/amplifier — 'put X +1/+1 counters on each creature you control, where X is this creature's power' every combat, and it grows itself so X compounds; needs no cards from hand",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tapestry Warden",
+      "oracle_text": "Vigilance\nEach creature you control with toughness greater than its power assigns combat damage equal to its toughness rather than its power.\nEach creature you control with toughness greater than its power stations permanents using its toughness rather than its power.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Artifact Creature — Robot Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Artifacts",
+        "Payload/Payoff",
+        "Combat Modification"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Modification"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "PAYOFF — 'assigns combat damage equal to its toughness rather than its power'. The only card in the 271-card cube with this clause; its own 3/4 body bills 4",
+      "board": "mainboard"
+    },
+    {
+      "name": "Drix Fatemaker",
+      "oracle_text": "When this creature enters, put a +1/+1 counter on target creature.\nEach creature you control with a +1/+1 counter on it has trample.\nWarp {1}{G} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Drix Wizard",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Counters (+1/+1)",
+        "Kicker/Scaling",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "Delivery — 'Each creature you control with a +1/+1 counter on it has trample'; ETB places the counter. Without trample a 4-toughness attacker is chump-blocked for zero regardless of Warden. Warp {1}{G}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Biosynthic Burst",
+      "oracle_text": "Put a +1/+1 counter on target creature you control. It gains reach, trample, and indestructible until end of turn. Untap it. (Damage and effects that say \"destroy\" don't destroy it.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Protection",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Protection",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "Delivery/protection — '+1/+1 counter ... gains reach, trample, and indestructible until end of turn. Untap it': grants trample itself, so it delivers with zero Drix in play, and indestructible answers the cube's 5 sweepers at instant speed",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bioengineered Future",
+      "oracle_text": "When this enchantment enters, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")\nEach creature you control enters with an additional +1/+1 counter on it for each land that entered the battlefield under your control this turn.",
+      "mana_cost": "{1}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Landfall",
+        "Tokens",
+        "Lands-Matter",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Land Fetch",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Landfall",
+          "Tokens",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Land Fetch",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 1,
+      "role": "Engine — 'Each creature you control enters with an additional +1/+1 counter on it FOR EACH LAND THAT ENTERED the battlefield under your control this turn'. Conditional: it places nothing on a turn no land enters, which is why it is weighted below a full copy",
+      "board": "mainboard"
+    },
+    {
+      "name": "Loading Zone",
+      "oracle_text": "If one or more counters would be put on a creature, Spacecraft, or Planet you control, twice that many of each of those kinds of counters are put on it instead.\nWarp {G} (You may cast this card from your hand for its warp cost. Exile this enchantment at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Counter Doubling"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Counter Doubling"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 1,
+      "role": "Engine — doubles every counter placed on a creature; Warp {G} deploys it for one mana on a full turn",
+      "board": "mainboard"
+    },
+    {
+      "name": "Terrasymbiosis",
+      "oracle_text": "Whenever you put one or more +1/+1 counters on a creature you control, you may draw that many cards. Do this only once each turn.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Enchantress",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Enchantress"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 1,
+      "role": "Engine — 'Whenever you put one or more +1/+1 counters on a creature you control, you may draw that many cards' against 6 counter-placing copies in this list, doubled by Loading Zone; the answer to the flood and gas-out modes",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cryoshatter",
+      "oracle_text": "Enchant creature\nEnchanted creature gets -5/-0.\nWhen enchanted creature becomes tapped or is dealt damage, destroy it.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Debuff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Debuff"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "Interaction — {U} aura; '-5/-0' blanks the biggest blocker immediately, and 'when enchanted creature becomes tapped or is dealt damage, destroy it' kills any creature that attacks or blocks",
+      "board": "mainboard"
+    },
+    {
+      "name": "Meltstrider's Resolve",
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, enchanted creature fights up to one target creature an opponent controls. (Each deals damage equal to its power to the other.)\nEnchanted creature gets +0/+2 and can't be blocked by more than one creature.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Fight/Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Fight/Removal"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "Interaction/amplifier — the ONLY card in the pool whose pump raises toughness without raising power: '+0/+2' WIDENS the gap Warden reads, adding 2 damage. 'Can't be blocked by more than one creature' stops gang-chumping. Its ETB fight deals damage equal to POWER, so with these low-power bodies the fight is a bonus, not removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Breeding Pool",
+      "oracle_text": "({T}: Add {G} or {U}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Island",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "qty": 1,
+      "role": "Land — G/U, untapped for 2 life; the only untapped-capable dual for this pair",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tangled Islet",
+      "oracle_text": "({T}: Add {G} or {U}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "Land — G/U dual, enters tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "qty": 8,
+      "role": "Land — green source (61.5% of pips)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "qty": 6,
+      "role": "Land — blue source",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Illvoi Light Jammer",
+      "oracle_text": "Flash\nWhen this Equipment enters, attach it to target creature you control. That creature gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)\nEquipped creature gets +1/+2.\nEquip {3}",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Artifact — Equipment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "Protects Tapestry Warden from targeted removal — 'Flash ... That creature gains hexproof until end of turn', and its +1/+2 widens toughness over power rather than closing it. Board in vs removal-heavy decks",
+      "board": "sideboard"
+    },
+    {
+      "name": "Shattered Wings",
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying. Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Self-Mill",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Self-Mill"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "Artifact/enchantment/flier removal — 74 artifacts (29.7% density) + 16 enchantments cube-wide, and this deck's only answer to a crewed opposing Spacecraft",
+      "board": "sideboard"
+    },
+    {
+      "name": "Seedship Impact",
+      "oracle_text": "Destroy target artifact or enchantment. If its mana value was 2 or less, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Tokens",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "Instant-speed artifact/enchantment removal for turns the deck cannot tap out",
+      "board": "sideboard"
+    },
+    {
+      "name": "Unravel",
+      "oracle_text": "Counter target spell. If the amount of mana spent to cast that spell was less than its mana value, you draw a card.",
+      "mana_cost": "{1}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 2,
+      "role": "Counter target spell — vs the cube's 5 sweepers and its expensive single-large-threat top ends",
+      "board": "sideboard"
+    },
+    {
+      "name": "Survey Mechan",
+      "oracle_text": "Flying\nHexproof (This creature can't be the target of spells or abilities your opponents control.)\n{10}, Sacrifice this creature: It deals 3 damage to any target. Target player draws three cards and gains 3 life. This ability costs {X} less to activate, where X is the number of differently named lands you control.",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4,
+      "type_line": "Artifact Creature — Robot",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Card Draw",
+        "Sacrifice Outlet"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Card Draw",
+          "Sacrifice Outlet"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 1,
+      "role": "'Flying / Hexproof' 1/3 billing 3 in the air and untargetable — the clock a removal deck cannot answer",
+      "board": "sideboard"
+    },
+    {
+      "name": "Desculpting Blast",
+      "oracle_text": "Return target nonland permanent to its owner's hand. If it was attacking, create a 1/1 colorless Drone artifact creature token with flying and \"This token can block only creatures with flying.\"",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Bounce",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "qty": 1,
+      "role": "Bounce any nonland permanent — the only sideboard answer that reaches the cube's 22 Spacecraft and 6 Planets, which Cryoshatter (Enchant creature) cannot touch",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "Simic Toughness Beatdown. 12 of this deck's 14 creature copies have toughness greater than power, and two Tapestry Wardens let every one of them assign combat damage equal to that back number - the qualifying board totals 44 toughness against 22 power, so the payoff exactly doubles its damage. Because that clause exists on only one card in the cube, the deck carries a second route to the same place: +1/+1 counters raise power and toughness equally, and Meltstrider's Resolve raises toughness alone, so the bodies get lethal whether or not a Warden ever arrives. Drix Fatemaker gives every countered creature trample and Meltstrider's Resolve stops gang-blocking, which is how the damage survives a chump block; Terrasymbiosis turns the counter package into cards.",
+  "strategy_es": "agro — agro",
+  "identity_es": "Beatdown de resistencia Simic. 12 de las 14 copias de criatura de este mazo tienen más resistencia que fuerza, y dos Tapestry Warden permiten que todas ellas asignen daño de combate igual a ese número de atrás; el tablero que cumple suma 44 de resistencia frente a 22 de fuerza, así que la recompensa duplica exactamente su daño. Como esa cláusula existe en una sola carta del cubo, el mazo lleva una segunda ruta al mismo sitio: los contadores +1/+1 suben fuerza y resistencia por igual, y Meltstrider's Resolve sube solo la resistencia, así que los cuerpos se vuelven letales haya llegado o no una Warden. Drix Fatemaker da arrollar a cada criatura con contadores y Meltstrider's Resolve impide el bloqueo múltiple, que es como el daño sobrevive a un bloqueo con carnaza; Terrasymbiosis convierte el paquete de contadores en cartas.",
+  "pitch_es": "Beatdown de resistencia Simic. 12 de las 14 copias de criatura de este mazo tienen más resistencia que fuerza, y dos Tapestry Warden permiten que todas ellas asignen daño de combate igual a ese número de atrás; el tablero que cumple suma 44 de resistencia frente a 22 de fuerza, así que la recompensa duplica exactamente su daño. Como esa cláusula existe en una sola carta del cubo, el mazo lleva una segunda ruta al mismo sitio: los contadores +1/+1 suben fuerza y resistencia por igual, y Meltstrider's Resolve sube solo la resistencia, así que los cuerpos se vuelven letales haya llegado o no una Warden. Drix Fatemaker da arrollar a cada criatura con contadores y Meltstrider's Resolve impide el bloqueo múltiple, que es como el daño sobrevive a un bloqueo con carnaza; Terrasymbiosis convierte el paquete de contadores en cartas."
+}

@@ -1,0 +1,713 @@
+{
+  "deck_name": "br-goblin-aristocrats",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-18T22:37:21Z",
+  "format": "40-card",
+  "strategy": "Goblin aristocrats aggro",
+  "colors": "BR",
+  "identity": "A Rakdos aggro deck that treats its own Goblins as ammunition. Rundvelt Hordemaster lords the seven other Goblin bodies (+1/+1) while Lagomos, Hand of Hatred manufactures a free creature and a guaranteed death every combat; Bone Splinters and Braids, Arisen Nightmare convert those bodies into removal and cards. Garna, Bloodfist of Keld is the payoff that makes every death matter - a card when we are attacking, damage to the opponent when we are not - and Sheoldred turns that card flow into a life swing. The build was chosen for resilience: a sweeper resets the opponent's board but converts ours into fuel, because Cult Conscript, Squee, Phoenix Chick and Balduvian Atrocity all rebuild from the graveyard.",
+  "restrictions": {
+    "base": "cube_mainboard, dominaria-united---main-set",
+    "commons_uncommons_max_2": "PASS - no name exceeds 2 copies across mainboard + sideboard; Extinguish the Light is 1 MB + 1 SB = 2.",
+    "rares_mythics_max_1_each": "PASS - each at 1 copy.",
+    "rares_mythics_max_5_total": "PASS - 5 of 5 used (Rundvelt Hordemaster, Squee Dubious Monarch, Braids Arisen Nightmare, Sheoldred the Apocalypse, Sulfurous Springs).",
+    "basics_unlimited": "Mountain 7, Swamp 7 - format-supplied, rarity-exempt.",
+    "colour_legality": "All 19 distinct nonland cards return a usable mode within core_colors [B,R] via effective_cost.best_mode; 0 off-identity inclusions."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.35,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.533,
+      "raw_target": 16.467,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.35,
+    "pip_demand": {
+      "R": 15,
+      "B": 17
+    },
+    "land_color_production": {
+      "R": 10,
+      "B": 10
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 53.1,
+        "prod_pct": 58.8,
+        "gap": -5.7,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 46.9,
+        "prod_pct": 58.8,
+        "gap": -11.9,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Rundvelt Hordemaster",
+      "oracle_text": "Other Goblins you control get +1/+1.\nWhenever this creature or another Goblin you control dies, exile the top card of your library. If it's a Goblin creature card, you may cast that card until the end of your next turn.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Goblin Warrior",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Card Advantage"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Squee, Dubious Monarch",
+      "oracle_text": "Haste\nWhenever Squee attacks, create a 1/1 red Goblin creature token that's tapped and attacking.\nYou may cast this card from your graveyard by paying {3}{R} and exiling four other cards from your graveyard rather than paying its mana cost.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Goblin Noble",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tokens",
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Splatter Goblin",
+      "oracle_text": "When this creature dies, target creature an opponent controls gets -1/-1 until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian Goblin",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Goblin Picker",
+      "oracle_text": "{R}, {T}, Discard a card: Draw a card.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Goblin",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting"
+      ],
+      "qty": 2,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sprouting Goblin",
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nWhen this creature enters, if it was kicked, search your library for a land card with a basic land type, reveal it, put it into your hand, then shuffle.\n{R}, {T}, Sacrifice a land: Draw a card.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Goblin Druid",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Kicker/Scaling",
+        "Lands-Matter",
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Land Fetch",
+        "Card Draw",
+        "Sacrifice Outlet",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Phoenix Chick",
+      "oracle_text": "Flying, haste\nThis creature can't block.\nWhenever you attack with three or more creatures, you may pay {R}{R}. If you do, return this card from your graveyard to the battlefield tapped and attacking with a +1/+1 counter on it.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Phoenix",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Standalone Threat",
+        "Recursion"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cult Conscript",
+      "oracle_text": "This creature enters tapped.\n{1}{B}: Return this card from your graveyard to the battlefield. Activate only if a non-Skeleton creature died under your control this turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Skeleton Warrior",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Standalone Threat",
+        "Recursion"
+      ],
+      "qty": 2,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lagomos, Hand of Hatred",
+      "oracle_text": "At the beginning of combat on your turn, create a 2/1 red Elemental creature token with trample and haste. Sacrifice it at the beginning of the next end step.\n{T}: Search your library for a card, put it into your hand, then shuffle. Activate only if five or more creatures died this turn.",
+      "mana_cost": "{1}{B}{R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Shaman",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Tutor"
+      ],
+      "qty": 2,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Balduvian Atrocity",
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nMenace\nWhen this creature enters, if it was kicked, return target creature card with mana value 3 or less from your graveyard to the battlefield. It gains haste. Sacrifice it at the beginning of the next end step.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Phyrexian Berserker",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Kicker/Scaling",
+        "Reanimator",
+        "Graveyard",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Reanimation",
+        "Kicker"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Braids, Arisen Nightmare",
+      "oracle_text": "At the beginning of your end step, you may sacrifice an artifact, creature, enchantment, land, or planeswalker. If you do, each opponent may sacrifice a permanent of their choice that shares a card type with it. For each opponent who doesn't, that player loses 2 life and you draw a card.",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Nightmare",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Sacrifice Outlet",
+        "Card Draw",
+        "Life Drain"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Garna, Bloodfist of Keld",
+      "oracle_text": "Whenever another creature you control dies, draw a card if it was attacking. Otherwise, Garna deals 1 damage to each opponent.",
+      "mana_cost": "{1}{B}{R}{R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Berserker",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Card Draw",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Lifegain",
+        "Life Drain",
+        "Standalone Threat",
+        "Payload/Payoff"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bone Splinters",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Strike",
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Extinguish the Light",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geothermal Bog",
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sulfurous Springs",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {B} or {R}. This land deals 1 damage to you.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Knight of Dusk's Shadow",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nYour opponents can't gain life.\n{1}{B}: This creature gets +1/+1 until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Lifegain Hate"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against the 22-card lifegain class (Archangel of Wrath, Mesa Cavalier, Prayer of Binding, Sol'Kanar) - 'Your opponents can't gain life' switches all of them off, printed on a 2/2 menace attacker so the slot never costs tempo."
+    },
+    {
+      "name": "Smash to Dust",
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target creature with defender.\n• Smash to Dust deals 1 damage to each creature your opponents control.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against the 15-card artifact class (Vanquisher's Axe, Hero's Heirloom, Golden Argosy, Karn's Sylex) and against go-wide token decks - mode 3 is 'deals 1 damage to each creature your opponents control'."
+    },
+    {
+      "name": "Pilfer",
+      "oracle_text": "Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Discard"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against control and against the cube's 6 sweepers - 'Target opponent reveals their hand. You choose a nonland card from it' strips the wrath before we commit the board, which is the only answer B/R has to a class it cannot counter."
+    },
+    {
+      "name": "Battlefly Swarm",
+      "oracle_text": "Flying\n{B}: This creature gains deathtouch until end of turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Phyrexian Insect",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against the 51-card evasion class (20.7% of the cube) - a {B} flier whose '{B}: This creature gains deathtouch until end of turn' trades up with any flier, and it is still a one-drop body to sacrifice afterwards."
+    },
+    {
+      "name": "Extinguish the Light",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "The second copy comes in against decks whose threats exceed total power+toughness 5 or that play planeswalkers - 'Destroy target creature or planeswalker' is unconditional."
+    },
+    {
+      "name": "Hurloon Battle Hymn",
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nHurloon Battle Hymn deals 4 damage to target creature or planeswalker. If this spell was kicked, you gain 4 life.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage",
+        "Kicker"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "sideboard",
+      "when_to_board": "Against 4-toughness midrange bodies that Lightning Strike misses (Coalition Warbrute, Linebreaker Baloth, Magnigoth Sentry) and against planeswalkers - 'deals 4 damage to target creature or planeswalker' at instant speed."
+    }
+  ],
+  "pitch": "A Rakdos aggro deck that treats its own Goblins as ammunition. Rundvelt Hordemaster lords the seven other Goblin bodies (+1/+1) while Lagomos, Hand of Hatred manufactures a free creature and a guaranteed death every combat; Bone Splinters and Braids, Arisen Nightmare convert those bodies into removal and cards. Garna, Bloodfist of Keld is the payoff that makes every death matter - a card when we are attacking, damage to the opponent when we are not - and Sheoldred turns that card flow into a life swing. The build was chosen for resilience: a sweeper resets the opponent's board but converts ours into fuel, because Cult Conscript, Squee, Phoenix Chick and Balduvian Atrocity all rebuild from the graveyard.",
+  "strategy_es": "agro de aristócratas Goblin",
+  "identity_es": "Un agro Rakdos que trata a sus propios Goblins como munición. Rundvelt Hordemaster hace de señor de los otros siete cuerpos Goblin (+1/+1) mientras Lagomos, Hand of Hatred fabrica una criatura gratis y una muerte garantizada en cada combate; Bone Splinters y Braids, Arisen Nightmare convierten esos cuerpos en eliminación y cartas. Garna, Bloodfist of Keld es la recompensa que hace que cada muerte importe — una carta cuando atacamos, daño al rival cuando no — y Sheoldred convierte ese flujo de cartas en un vaivén de vidas. La construcción se eligió por resistencia: un barrido reinicia el tablero del rival pero convierte el nuestro en combustible, porque Cult Conscript, Squee, Phoenix Chick y Balduvian Atrocity reconstruyen todos desde el cementerio.",
+  "pitch_es": "Un agro Rakdos que trata a sus propios Goblins como munición. Rundvelt Hordemaster hace de señor de los otros siete cuerpos Goblin (+1/+1) mientras Lagomos, Hand of Hatred fabrica una criatura gratis y una muerte garantizada en cada combate; Bone Splinters y Braids, Arisen Nightmare convierten esos cuerpos en eliminación y cartas. Garna, Bloodfist of Keld es la recompensa que hace que cada muerte importe — una carta cuando atacamos, daño al rival cuando no — y Sheoldred convierte ese flujo de cartas en un vaivén de vidas. La construcción se eligió por resistencia: un barrido reinicia el tablero del rival pero convierte el nuestro en combustible, porque Cult Conscript, Squee, Phoenix Chick y Balduvian Atrocity reconstruyen todos desde el cementerio."
+}

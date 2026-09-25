@@ -1,0 +1,1139 @@
+{
+  "deck_name": "ub-blight-tempo",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-09T00:00:00Z",
+  "format": "40-card",
+  "strategy": "blight attrition / -1/-1 counter midrange",
+  "colors": "UB",
+  "identity": "A UB attrition deck built on the pool's blight mechanic. Several of its answers have an additional cost that puts -1/-1 counters on one of YOUR creatures — Bogslither's Embrace exiles any creature for {1}{B} instead of {4}{B}, Wild Unraveling counters a spell for {U}{U} instead of {1}{U}{U}. The deck supplies bodies that make that cost free: Bitterbloom Bearer manufactures a disposable 1/1 token every upkeep, Gutsplitter Gang is a 6/6 that can absorb two blight-2s, and Glen Elendra Guardian converts every counter it receives into a counterspell. The same -1/-1 mechanic is aimed at the opponent through Blight Rot and Nightmare Sower's repeating trigger until their board is gone, and two or three surviving fliers close the game.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "max 5 rare+mythic cards total across mainboard + sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 1,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.78,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": 0.207,
+      "raw_target": 17.207,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.78,
+    "pip_demand": {
+      "U": 9,
+      "B": 14
+    },
+    "land_color_production": {
+      "U": 8,
+      "B": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 60.9,
+        "prod_pct": 52.9,
+        "gap": 8,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 39.1,
+        "prod_pct": 47.1,
+        "gap": -8,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Flitterwing Nuisance",
+      "oracle_text": "Flying\nThis creature enters with a -1/-1 counter on it.\n{2}{U}, Remove a counter from this creature: Whenever a creature you control deals combat damage to a player or planeswalker this turn, draw a card.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Faerie Rogue",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Bitterbloom Bearer",
+      "oracle_text": "Flash\nFlying\nAt the beginning of your upkeep, you lose 1 life and create a 1/1 blue and black Faerie creature token with flying.",
+      "mana_cost": "{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Creature — Faerie Rogue",
+      "rarity": "mythic",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Loch Mare",
+      "oracle_text": "This creature enters with three -1/-1 counters on it.\n{1}{U}, Remove a counter from this creature: Draw a card.\n{2}{U}, Remove two counters from this creature: Tap target creature. Put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Stun Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Stun Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Horse Serpent",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Unwelcome Sprite",
+      "oracle_text": "Flying\nWhenever you cast a spell during an opponent's turn, surveil 2. (Look at the top two cards of your library. You may put any number of them into your graveyard and the rest on top of your library in any order.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Self-Mill",
+        "Graveyard",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Self-Mill",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Faerie Rogue",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Glamermite",
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, choose one —\n• Tap target creature.\n• Untap target creature.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Tap/Untap"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Tap/Untap"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Faerie Rogue",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Voracious Tome-Skimmer",
+      "oracle_text": "Flying\nWhenever you cast a spell during an opponent's turn, you may pay 1 life. If you do, draw a card.",
+      "mana_cost": "{U/B}{U/B}{U/B}",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Card Draw",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Creature — Faerie Rogue",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Heirloom Auntie",
+      "oracle_text": "This creature enters with two -1/-1 counters on it.\nWhenever another creature you control dies, surveil 1, then remove a -1/-1 counter from this creature. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Self-Mill",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)",
+          "Self-Mill",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Goblin Warlock",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Glen Elendra Guardian",
+      "oracle_text": "Flash\nFlying\nThis creature enters with a -1/-1 counter on it.\n{1}{U}, Remove a counter from this creature: Counter target noncreature spell. Its controller draws a card.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Faerie Wizard",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Nightmare Sower",
+      "oracle_text": "Flying, lifelink\nWhenever you cast a spell during an opponent's turn, put a -1/-1 counter on up to one target creature.",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Faerie Assassin",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Gutsplitter Gang",
+      "oracle_text": "At the beginning of your first main phase, you may blight 2. If you don't, you lose 3 life. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Creature — Goblin Berserker",
+      "rarity": "uncommon",
+      "power": "6",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Requiting Hex",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nDestroy target creature with mana value 2 or less. If this spell's additional cost was paid, you gain 2 life.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Nameless Inversion",
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Wild Unraveling",
+      "oracle_text": "As an additional cost to cast this spell, blight 2 or pay {1}. (To blight 2, put two -1/-1 counters on a creature you control.)\nCounter target spell.",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Blight Rot",
+      "oracle_text": "Put four -1/-1 counters on target creature.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Swat Away",
+      "oracle_text": "This spell costs {2} less to cast if a creature is attacking you.\nThe owner of target spell or creature puts it on their choice of the top or bottom of their library.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Deceit",
+      "oracle_text": "When this creature enters, if {U}{U} was spent to cast it, return up to one other target nonland permanent to its owner's hand.\nWhen this creature enters, if {B}{B} was spent to cast it, target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\nEvoke {U/B}{U/B}",
+      "mana_cost": "{4}{U/B}{U/B}",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Targeted Discard",
+        "Evoke",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Targeted Discard",
+          "Evoke"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 6,
+      "type_line": "Creature — Elemental Incarnation",
+      "rarity": "mythic",
+      "power": "5",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Fetch",
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 7
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 6
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Temporal Cleansing",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nThe owner of target nonland permanent puts it into their library second from the top or on the bottom.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Spell Snare",
+      "oracle_text": "Counter target spell with mana value 2.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Blossombind",
+      "oracle_text": "Enchant creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature can't become untapped and can't have counters put on it.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Tap Down"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Tap Down"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Blighted Blackthorn",
+      "oracle_text": "Whenever this creature enters or attacks, you may blight 2. If you do, you draw a card and lose 1 life. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Counter Placement",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Counter Placement"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Creature — Treefolk Warlock",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "7",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Dream Seizer",
+      "oracle_text": "Flying\nWhen this creature enters, you may blight 1. If you do, each opponent discards a card. (To blight 1, put a -1/-1 counter on a creature you control.)",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Discard"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Discard"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Faerie Rogue",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 1
+    }
+  ],
+  "pitch": "A UB attrition deck built on the pool's blight mechanic. Several of its answers have an additional cost that puts -1/-1 counters on one of YOUR creatures — Bogslither's Embrace exiles any creature for {1}{B} instead of {4}{B}, Wild Unraveling counters a spell for {U}{U} instead of {1}{U}{U}. The deck supplies bodies that make that cost free: Bitterbloom Bearer manufactures a disposable 1/1 token every upkeep, Gutsplitter Gang is a 6/6 that can absorb two blight-2s, and Glen Elendra Guardian converts every counter it receives into a counterspell. The same -1/-1 mechanic is aimed at the opponent through Blight Rot and Nightmare Sower's repeating trigger until their board is gone, and two or three surviving fliers close the game.",
+  "strategy_es": "midrange de desgaste con blight / contadores -1/-1",
+  "identity_es": "Un mazo de desgaste UB construido sobre la mecánica de blight del pool. Varias de sus respuestas tienen un coste adicional que pone contadores -1/-1 en una de TUS criaturas: Bogslither's Embrace exilia cualquier criatura por {1}{B} en vez de {4}{B}, Wild Unraveling contrarresta un hechizo por {U}{U} en vez de {1}{U}{U}. El mazo aporta cuerpos que hacen gratuito ese coste: Bitterbloom Bearer fabrica una ficha 1/1 prescindible en cada mantenimiento, Gutsplitter Gang es un 6/6 que puede absorber dos blight-2, y Glen Elendra Guardian convierte cada contador que recibe en un contrahechizo. Esa misma mecánica de -1/-1 se apunta al rival mediante Blight Rot y el disparo repetido de Nightmare Sower hasta que su tablero desaparece, y dos o tres voladores supervivientes cierran la partida.",
+  "pitch_es": "Un mazo de desgaste UB construido sobre la mecánica de blight del pool. Varias de sus respuestas tienen un coste adicional que pone contadores -1/-1 en una de TUS criaturas: Bogslither's Embrace exilia cualquier criatura por {1}{B} en vez de {4}{B}, Wild Unraveling contrarresta un hechizo por {U}{U} en vez de {1}{U}{U}. El mazo aporta cuerpos que hacen gratuito ese coste: Bitterbloom Bearer fabrica una ficha 1/1 prescindible en cada mantenimiento, Gutsplitter Gang es un 6/6 que puede absorber dos blight-2, y Glen Elendra Guardian convierte cada contador que recibe en un contrahechizo. Esa misma mecánica de -1/-1 se apunta al rival mediante Blight Rot y el disparo repetido de Nightmare Sower hasta que su tablero desaparece, y dos o tres voladores supervivientes cierran la partida."
+}

@@ -1,0 +1,702 @@
+{
+  "deck_name": "rw-hanweir-humans",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-26T20:29:32Z",
+  "format": "40-card",
+  "strategy": "aggro -- Hanweir attack-trigger aggro (Humans)",
+  "colors": "RW",
+  "identity": "An RW attack-trigger aggro deck. Hanweir Garrison is the engine: 'Whenever this creature attacks, create two 1/1 red Human creature tokens that are tapped and attacking' manufactures two extra attackers every single combat, and because the tokens arrive already attacking they contribute damage the turn they are made. Everything else exists to make the attack happen earlier and hit harder -- Village Messenger and Geier Reach Bandit attack the turn they land, Hanweir Battlements grants haste to anything else, Avacynian Priest and Thalia keep blockers off the table, and the damage is converted by two independent double-strike sources (Uncaged Fury, and Blood Mist which repeats every combat) plus Rally the Peasants, whose {2}{R} flashback is fully on-colour here. Odric, Lunarch Marshal is the multiplier that ties it together: with Blood Mist he grants double strike to the ENTIRE attacking board every turn. The Hanweir Battlements meld into Hanweir, the Writhing Township is real upside but is deliberately not the plan.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2,
+        "rare": 1,
+        "mythic": 1
+      },
+      "only_from": {},
+      "excluded": [],
+      "user_deck_constraint": "MAXIMUM 5 rares/mythics total across mainboard + sideboard"
+    },
+    "checklist": {
+      "commons_uncommons_max_2": "PASS -- Phase 5C check 3 against cube_search.get_max_copies with per_rarity {common:2, uncommon:2, rare:1, mythic:1}. Max copy count of any nonbasic is 2.",
+      "rares_mythics_max_1_each": "PASS -- all five appear once.",
+      "rares_mythics_max_5_total": "PASS -- exactly 5 across mainboard + sideboard: Hanweir Garrison, Hanweir Battlements (a LAND, and it still counts against the cap), Odric Lunarch Marshal, Angelfire Ignition, Thalia Heretic Cathar. The sideboard is entirely commons and uncommons.",
+      "all_cards_from_cube": "PASS -- Phase 5C check 2, exact-name match against the working pool cache.",
+      "basics_unlimited": "Plains x7 and Mountain x7 are exempt from the copy caps.",
+      "meld_card_excluded": "Hanweir, the Writhing Township is deliberately NOT in the 40. It is the meld result of Hanweir Garrison + Hanweir Battlements and arrives from outside the game; including it would be illegal and would spend a sixth rare slot on a card that is never drawn."
+    }
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 2,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.57,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.24,
+      "raw_target": 16.76,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.57,
+    "pip_demand": {
+      "R": 13,
+      "W": 13
+    },
+    "land_color_production": {
+      "W": 9,
+      "R": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 50,
+        "prod_pct": 52.9,
+        "gap": -2.9,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 50,
+        "prod_pct": 52.9,
+        "gap": -2.9,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Village Messenger // Moonrise Intruder",
+      "oracle_text": "Haste\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nMenace (This creature can't be blocked except by two or more creatures.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Werewolf",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Werewolf Matters",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Thraben Inspector",
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 2,
+      "role": "threat/infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Avacynian Priest",
+      "oracle_text": "{1}, {T}: Tap target non-Human creature.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Engine/Outlet",
+        "Tap Effect"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gather the Townsfolk",
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "qty": 2,
+      "role": "enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Abrade",
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hanweir Garrison",
+      "oracle_text": "Whenever this creature attacks, create two 1/1 red Human creature tokens that are tapped and attacking.\n(Melds with Hanweir Battlements.)",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Tokens",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "payoff/engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Thalia, Heretic Cathar",
+      "oracle_text": "First strike\nCreatures and nonbasic lands your opponents control enter tapped.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Tax Effect"
+      ],
+      "qty": 1,
+      "role": "threat/interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geier Reach Bandit // Vildin-Pack Alpha",
+      "oracle_text": "Haste\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nWhenever a Werewolf you control enters, you may transform it.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Rogue Werewolf",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rally the Peasants",
+      "oracle_text": "Creatures you control get +2/+0 until end of turn.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Payload/Payoff",
+        "Pump Effect",
+        "Flashback"
+      ],
+      "qty": 2,
+      "role": "payoff/finisher",
+      "board": "mainboard"
+    },
+    {
+      "name": "Uncaged Fury",
+      "oracle_text": "Target creature gets +1/+1 and gains double strike until end of turn.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "payoff/finisher",
+      "board": "mainboard"
+    },
+    {
+      "name": "Angelfire Ignition",
+      "oracle_text": "Put two +1/+1 counters on target creature. It gains vigilance, trample, lifelink, indestructible, and haste until end of turn.\nFlashback {2}{R}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{R}{W}",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Flashback/GY-Cast",
+        "Payload/Payoff",
+        "Protection",
+        "Counter Placement",
+        "Combat Trick",
+        "Flashback"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Odric, Lunarch Marshal",
+      "oracle_text": "At the beginning of each combat, creatures you control gain first strike until end of turn if a creature you control has first strike. The same is true for flying, deathtouch, double strike, haste, hexproof, indestructible, lifelink, menace, reach, skulk, trample, and vigilance.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Keyword Matters",
+        "Payload/Payoff",
+        "Keyword Granting"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Markov Waltzer",
+      "oracle_text": "Flying, haste\nAt the beginning of combat on your turn, up to two target creatures you control each get +1/+0 until end of turn.",
+      "mana_cost": "{2}{R}{W}",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Vampire",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Pump Effect"
+      ],
+      "qty": 2,
+      "role": "threat/payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Blood Mist",
+      "oracle_text": "At the beginning of combat on your turn, target creature you control gains double strike until end of turn.",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "qty": 1,
+      "role": "payoff/engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hanweir Battlements",
+      "oracle_text": "{T}: Add {C}.\n{R}, {T}: Target creature gains haste until end of turn.\n{3}{R}{R}, {T}: If you both own and control this land and a creature named Hanweir Garrison, exile them, then meld them into Hanweir, the Writhing Township.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Haste Granting"
+      ],
+      "qty": 1,
+      "role": "land/engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sacred Peaks",
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Cathar Commando",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs the cube's 24 artifacts / 25 enchantments: '{1}, Sacrifice this creature: Destroy target artifact or enchantment' at flash speed, on a Human body"
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs Vampire/Werewolf/Zombie decks: 51 of the cube's creatures carry one of those three types"
+    },
+    {
+      "name": "Fiery Temper",
+      "oracle_text": "Fiery Temper deals 3 damage to any target.\nMadness {R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{1}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Madness"
+      ],
+      "qty": 2,
+      "role": "interaction/reach",
+      "board": "sideboard",
+      "when_to_board": "vs decks that stabilise the ground: 'deals 3 damage to any target' can go to the face, closing the last points when the attack is walled"
+    },
+    {
+      "name": "Alchemist's Greeting",
+      "oracle_text": "Alchemist's Greeting deals 4 damage to target creature.\nMadness {1}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage",
+        "Madness"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs a single large blocker: 'deals 4 damage to target creature' unconditionally, above Abrade's 3-damage ceiling"
+    },
+    {
+      "name": "Savage Alliance",
+      "oracle_text": "Escalate {1} (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Creatures target player controls gain trample until end of turn.\n• Savage Alliance deals 2 damage to target creature.\n• Savage Alliance deals 1 damage to each creature target opponent controls.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Combat Trick"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs opposing go-wide token decks: escalate mode '1 damage to each creature target opponent controls' sweeps the 1/1s that would otherwise block every attacker"
+    },
+    {
+      "name": "Bound by Moonsilver",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack, block, or transform.\nSacrifice another permanent: Attach this Aura to target creature. Activate only as a sorcery and only once each turn.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs a large blocker and vs the cube's many transform creatures: 'Enchanted creature can't attack, block, or transform'"
+    },
+    {
+      "name": "Soul-Guide Gryff",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "mana_cost": "{4}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs graveyard decks (75 cards, 27.1% density -- the cube's largest threat class): 'exile up to one target card from a graveyard' on a flying body"
+    }
+  ],
+  "pitch": "An RW attack-trigger aggro deck. Hanweir Garrison is the engine: 'Whenever this creature attacks, create two 1/1 red Human creature tokens that are tapped and attacking' manufactures two extra attackers every single combat, and because the tokens arrive already attacking they contribute damage the turn they are made. Everything else exists to make the attack happen earlier and hit harder -- Village Messenger and Geier Reach Bandit attack the turn they land, Hanweir Battlements grants haste to anything else, Avacynian Priest and Thalia keep blockers off the table, and the damage is converted by two independent double-strike sources (Uncaged Fury, and Blood Mist which repeats every combat) plus Rally the Peasants, whose {2}{R} flashback is fully on-colour here. Odric, Lunarch Marshal is the multiplier that ties it together: with Blood Mist he grants double strike to the ENTIRE attacking board every turn. The Hanweir Battlements meld into Hanweir, the Writhing Township is real upside but is deliberately not the plan.",
+  "strategy_es": "agro — agro de disparos por ataque con Hanweir (Humanos)",
+  "identity_es": "Un agro RW de disparos por ataque. Hanweir Garrison es el motor: 'Whenever this creature attacks, create two 1/1 red Human creature tokens that are tapped and attacking' fabrica dos atacantes extra en cada combate, y como las fichas llegan ya atacando aportan daño el mismo turno en que se crean. Todo lo demás existe para que el ataque ocurra antes y golpee más fuerte: Village Messenger y Geier Reach Bandit atacan el turno que aterrizan, Hanweir Battlements da prisa a cualquier otra cosa, Avacynian Priest y Thalia mantienen los bloqueadores fuera de la mesa, y el daño lo convierten dos fuentes independientes de doble golpe (Uncaged Fury, y Blood Mist que se repite en cada combate) más Rally the Peasants, cuyo flashback de {2}{R} está totalmente en color aquí. Odric, Lunarch Marshal es el multiplicador que lo ata todo: con Blood Mist otorga doble golpe a TODO el tablero atacante cada turno. Que Hanweir Battlements se fusione en Hanweir, the Writhing Township es una ganancia real pero deliberadamente no es el plan.",
+  "pitch_es": "Un agro RW de disparos por ataque. Hanweir Garrison es el motor: 'Whenever this creature attacks, create two 1/1 red Human creature tokens that are tapped and attacking' fabrica dos atacantes extra en cada combate, y como las fichas llegan ya atacando aportan daño el mismo turno en que se crean. Todo lo demás existe para que el ataque ocurra antes y golpee más fuerte: Village Messenger y Geier Reach Bandit atacan el turno que aterrizan, Hanweir Battlements da prisa a cualquier otra cosa, Avacynian Priest y Thalia mantienen los bloqueadores fuera de la mesa, y el daño lo convierten dos fuentes independientes de doble golpe (Uncaged Fury, y Blood Mist que se repite en cada combate) más Rally the Peasants, cuyo flashback de {2}{R} está totalmente en color aquí. Odric, Lunarch Marshal es el multiplicador que lo ata todo: con Blood Mist otorga doble golpe a TODO el tablero atacante cada turno. Que Hanweir Battlements se fusione en Hanweir, the Writhing Township es una ganancia real pero deliberadamente no es el plan."
+}

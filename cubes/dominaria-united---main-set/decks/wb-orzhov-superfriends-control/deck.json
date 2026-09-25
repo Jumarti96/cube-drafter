@@ -1,0 +1,1120 @@
+{
+  "deck_name": "wb-orzhov-superfriends-control",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-20T16:19:27Z",
+  "format": "40-card",
+  "strategy": "Control Superfriends",
+  "colors": "WB",
+  "identity": "A two-colour Orzhov control deck that solves the Superfriends problem sideways. The 5-rare/mythic cap allows only two planeswalkers here, so instead of chasing a third the deck buys REDUNDANCY: Serra Paragon rebuys Liliana of the Veil from the graveyard ('cast a permanent spell with mana value 3 or less from your graveyard'), which is the only way in this pool to have a walker answered and get it back. It stabilises behind the deepest removal suite the cube offers in two colours, then wins without ever attacking: nine creatures with defender wall off the ground while Blight Pile drains for X equal to that defender count, Wingmantle Chaplain converts the same wall into a flying board, and Sheoldred, the Apocalypse turns every opposing draw step into 2 life. Urza Assembles the Titans digs for, free-deploys and double-activates the walkers on top of that plan.",
+  "restrictions": {
+    "base_pool": "cube_mainboard of dominaria-united---main-set only; every card verified by exact-name match against the working pool cache.",
+    "common_uncommon_max_2": "PASS - no common or uncommon exceeds 2 copies across mainboard + sideboard combined, verified programmatically via cube_search.get_max_copies with a per_rarity policy.",
+    "rare_mythic_max_1_each": "PASS - Urza Assembles the Titans, Liliana of the Veil, Karn Living Legacy, Serra Paragon, Sheoldred the Apocalypse are 1 copy each.",
+    "rare_mythic_total_max_5": "PASS - exactly 5: Urza Assembles the Titans (rare) plus four mythics (Liliana, Karn, Serra Paragon, Sheoldred). Zero rare/mythic cards in the sideboard. Plaza of Heroes and Temporary Lockdown were both available and were both deliberately declined - see count_dependent_verdicts.",
+    "basics": "Plains x7, Swamp x7 - format-supplied, exempt from copy limits.",
+    "colour_legality": "PASS - every nonland card returns a usable mode from effective_cost.best_mode(card, ['W','B'], []). Two sideboard cards print off-colour identities that come only from unpayable kickers: Runic Shot (UW, Kicker {U}) and Tribute to Urborg (BU, Kicker {1}{U}). Both are played in their mono-W and mono-B base modes respectively; neither kicker is counted on anywhere in this build."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 1,
+    "cantrip_count": 0,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.86,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": 0.313,
+      "raw_target": 17.313,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.86,
+    "pip_demand": {
+      "W": 14,
+      "B": 12
+    },
+    "land_color_production": {
+      "W": 11,
+      "B": 11,
+      "R": 2,
+      "U": 2,
+      "G": 2
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 46.2,
+        "prod_pct": 61.1,
+        "gap": -14.9,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 53.8,
+        "prod_pct": 61.1,
+        "gap": -7.3,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Urza Assembles the Titans",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — Scry 4, then you may reveal the top card of your library. If a planeswalker card is revealed this way, put it into your hand.\nII — You may put a planeswalker card with mana value 6 or less from your hand onto the battlefield.\nIII — You may activate the loyalty abilities of planeswalkers you control twice this turn rather than only once.",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Sagas",
+        "Superfriends",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Card Selection",
+        "Cheat Into Play"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Sagas",
+          "Superfriends"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Cheat Into Play"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Enchantment — Saga",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "engine"
+    },
+    {
+      "name": "Liliana of the Veil",
+      "oracle_text": "+1: Each player discards a card.\n−2: Target player sacrifices a creature.\n−6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Discard",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Discard",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Planeswalker — Liliana",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "payoff"
+    },
+    {
+      "name": "Karn, Living Legacy",
+      "oracle_text": "+1: Create a tapped Powerstone token. (It's an artifact with \"{T}: Add {C}. This mana can't be spent to cast a nonartifact spell.\")\n−1: Pay any amount of mana. Look at that many cards from the top of your library, then put one of those cards into your hand and the rest on the bottom of your library in a random order.\n−7: You get an emblem with \"Tap an untapped artifact you control: This emblem deals 1 damage to any target.\"",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Mana Rock",
+        "Card Selection",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Mana Rock",
+          "Card Selection",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Karn",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "payoff"
+    },
+    {
+      "name": "Serra Paragon",
+      "oracle_text": "Flying\nOnce during each of your turns, you may play a land from your graveyard or cast a permanent spell with mana value 3 or less from your graveyard. If you do, it gains \"When this permanent is put into a graveyard from the battlefield, exile it and you gain 2 life.\"",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Graveyard",
+        "Lands-Matter",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Recursion",
+        "Life Gain",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Lands-Matter",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Recursion",
+          "Life Gain"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "rarity": "mythic",
+      "power": "3",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "engine"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Lifegain",
+        "Life Drain",
+        "Standalone Threat",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain",
+          "Life Drain"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "payoff"
+    },
+    {
+      "name": "Cut Down",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "interaction"
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "interaction"
+    },
+    {
+      "name": "Citizen's Arrest",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "interaction"
+    },
+    {
+      "name": "Extinguish the Light",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "interaction"
+    },
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "interaction"
+    },
+    {
+      "name": "Blight Pile",
+      "oracle_text": "Defender\n{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Defender Matters",
+        "Life Drain",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Defender Matters",
+          "Life Drain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "payoff"
+    },
+    {
+      "name": "Wingmantle Chaplain",
+      "oracle_text": "Defender\nWhen this creature enters, create a 1/1 white Bird creature token with flying for each creature with defender you control.\nWhenever another creature you control with defender enters, create a 1/1 white Bird creature token with flying.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Defender Matters",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "threat"
+    },
+    {
+      "name": "Walking Bulwark",
+      "oracle_text": "Defender\n{2}: Until end of turn, target creature with defender gains haste, can attack as though it didn't have defender, and assigns combat damage equal to its toughness rather than its power. Activate only as a sorcery.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Defender Matters",
+        "Artifacts",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Combat Enabler"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Defender Matters",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Enabler"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact Creature — Golem",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "threat"
+    },
+    {
+      "name": "Gibbering Barricade",
+      "oracle_text": "Defender\n{2}{B}, Sacrifice a creature: You gain 1 life and draw a card.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Defender Matters",
+        "Lifegain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Defender Matters",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Sacrifice Outlet",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Nightmare Wall",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "threat"
+    },
+    {
+      "name": "Clockwork Drawbridge",
+      "oracle_text": "Defender\n{2}{W}, {T}: Tap target creature.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Artifacts",
+        "Defender Matters",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Tap Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Tap Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact Creature — Wall",
+      "rarity": "common",
+      "power": "0",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "engine"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "land"
+    },
+    {
+      "name": "Crystal Grotto",
+      "oracle_text": "When this land enters, scry 1.\n{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing",
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "land"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 7,
+      "role": "land"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 7,
+      "role": "land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Battlefly Swarm",
+      "oracle_text": "Flying\n{B}: This creature gains deathtouch until end of turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Phyrexian Insect",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "hate",
+      "when_to_board": "In against any deck with fliers. This is the deck's most important sideboard slot: its 8 mainboard defenders are ALL ground blockers and cannot block a flier at all. A 1-mana flier with '{B}: This creature gains deathtouch until end of turn' trades with any evasive creature in the cube.",
+      "answers": "evasion (51 cards, 20.6% - the cube's largest threat class)"
+    },
+    {
+      "name": "Knight of Dusk's Shadow",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nYour opponents can't gain life.\n{1}{B}: This creature gets +1/+1 until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Lifegain Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Lifegain Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "hate",
+      "when_to_board": "In against lifegain decks. 'Your opponents can't gain life' shuts off the whole class; note it does NOT hurt this deck's own lifegain (Extinguish the Light, Prayer of Binding, Sheoldred, Serra Paragon) because the clause reads 'Your opponents'.",
+      "answers": "lifegain (22 cards, 8.9%)"
+    },
+    {
+      "name": "Griffin Protector",
+      "oracle_text": "Flying\nWhenever another creature you control enters, this creature gets +1/+1 until end of turn.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Griffin",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "hate",
+      "when_to_board": "In against fliers, alongside Battlefly Swarm. 'Flying / Whenever another creature you control enters, this creature gets +1/+1 until end of turn' - a 2/3 flying blocker that grows off every defender and every Bird token; a Wingmantle Chaplain entering into three defenders makes 4 Birds and turns this into a 6/7 for the turn.",
+      "answers": "evasion (51 cards, 20.6%)"
+    },
+    {
+      "name": "Runic Shot",
+      "oracle_text": "Kicker {U} (You may pay an additional {U} as you cast this spell.)\nDestroy target tapped creature. If this spell was kicked, scry 2.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Card Selection",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Card Selection",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "flex",
+      "when_to_board": "Reduced to a single copy after the Phase 9 grill. 'Destroy target tapped creature' is a SORCERY, so against a wall the opponent's correct line is simply to stop attacking; the only on-demand tap enabler is Clockwork Drawbridge, 1 of 22 mainboard cards. Kept as a 1-of for decks that must keep attacking. Kicker {U} is never payable here.",
+      "answers": "creatures that must attack"
+    },
+    {
+      "name": "Phyrexian Missionary",
+      "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nLifelink\nWhen this creature enters, if it was kicked, return target creature card from your graveyard to your hand.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Graveyard",
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Regrowth",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Graveyard",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Regrowth",
+          "Lifegain",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian Human Cleric",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "flex",
+      "when_to_board": "In against removal-heavy decks. 'Kicker {1}{B}... return target creature card from your graveyard to your hand' - both pips are core, so the kicked mode is always live, and it recovers Sheoldred and Wingmantle Chaplain, which at MV 4 sit outside Serra Paragon's 'mana value 3 or less' window. A 2/3 lifelink body at MV 2 in the meantime.",
+      "answers": "decapitation / gas-out on the MV-4 creatures Serra Paragon cannot reach"
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "hate",
+      "when_to_board": "Second copy in against enchantment-leaning decks and against opposing Sagas; also answers an opposing Citizen's Arrest or Prayer of Binding holding one of this deck's own permanents.",
+      "answers": "enchantments (18 cards, 7.3%)"
+    },
+    {
+      "name": "Tribute to Urborg",
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nTarget creature gets -2/-2 until end of turn. If this spell was kicked, that creature gets an additional -1/-1 until end of turn for each instant and sorcery card in your graveyard.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Spellslinger",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Spellslinger",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "flex",
+      "when_to_board": "In against aggro. A {1}{B} instant granting -2/-2 kills most one- and two-drops before the defender wall is assembled. Kicker {1}{U} is never payable here.",
+      "answers": "fast aggressive starts"
+    }
+  ],
+  "pitch": "A two-colour Orzhov control deck that solves the Superfriends problem sideways. The 5-rare/mythic cap allows only two planeswalkers here, so instead of chasing a third the deck buys REDUNDANCY: Serra Paragon rebuys Liliana of the Veil from the graveyard ('cast a permanent spell with mana value 3 or less from your graveyard'), which is the only way in this pool to have a walker answered and get it back. It stabilises behind the deepest removal suite the cube offers in two colours, then wins without ever attacking: nine creatures with defender wall off the ground while Blight Pile drains for X equal to that defender count, Wingmantle Chaplain converts the same wall into a flying board, and Sheoldred, the Apocalypse turns every opposing draw step into 2 life. Urza Assembles the Titans digs for, free-deploys and double-activates the walkers on top of that plan.",
+  "strategy_es": "Superfriends de control",
+  "identity_es": "Un control Orzhov bicolor que resuelve el problema de Superfriends de lado. El límite de 5 raras/míticas permite solo dos planeswalkers aquí, así que en lugar de perseguir un tercero el mazo compra REDUNDANCIA: Serra Paragon recompra Liliana of the Veil desde el cementerio ('cast a permanent spell with mana value 3 or less from your graveyard'), que es la única forma en este pool de que respondan a un caminante y recuperarlo. Se estabiliza tras el paquete de eliminación más profundo que ofrece el cubo en dos colores, y luego gana sin atacar jamás: nueve criaturas con defensor muran el suelo mientras Blight Pile drena por X igual a ese recuento de defensores, Wingmantle Chaplain convierte ese mismo muro en un tablero volador, y Sheoldred, the Apocalypse convierte cada paso de robar rival en 2 vidas. Urza Assembles the Titans cava, despliega gratis y activa dos veces a los caminantes encima de ese plan.",
+  "pitch_es": "Un control Orzhov bicolor que resuelve el problema de Superfriends de lado. El límite de 5 raras/míticas permite solo dos planeswalkers aquí, así que en lugar de perseguir un tercero el mazo compra REDUNDANCIA: Serra Paragon recompra Liliana of the Veil desde el cementerio ('cast a permanent spell with mana value 3 or less from your graveyard'), que es la única forma en este pool de que respondan a un caminante y recuperarlo. Se estabiliza tras el paquete de eliminación más profundo que ofrece el cubo en dos colores, y luego gana sin atacar jamás: nueve criaturas con defensor muran el suelo mientras Blight Pile drena por X igual a ese recuento de defensores, Wingmantle Chaplain convierte ese mismo muro en un tablero volador, y Sheoldred, the Apocalypse convierte cada paso de robar rival en 2 vidas. Urza Assembles the Titans cava, despliega gratis y activa dos veces a los caminantes encima de ese plan."
+}

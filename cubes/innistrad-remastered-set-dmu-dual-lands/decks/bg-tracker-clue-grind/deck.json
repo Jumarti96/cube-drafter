@@ -1,0 +1,512 @@
+{
+  "deck_name": "bg-tracker-clue-grind",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-28T05:20:00Z",
+  "format": "40-card",
+  "strategy": "attrition control (lands-matter Clue grind)",
+  "colors": "BG",
+  "identity": "BG Clue-grind attrition. Lands here are a card-advantage tax base, not a win condition: Tireless Tracker banks a Clue for every land that ENTERS, The Gitrog Monster supplies the only genuine extra land drop in BG, and both Evolving Wilds turn one land drop into two entries. Because the Tracker is a rarity-capped singleton, the deck deliberately runs two engines that read no land at all - Ulvenwald Mysteries, an enchantment that investigates on creature deaths and so survives the removal aimed at the Tracker, and Noose Constrictor, whose free discard outlet converts flooded lands into growth. Eight removal spells hold the board while the cards pile up, and the game ends on a hexproof Lumberknot that has collected a counter for every creature either player lost.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "rare_mythic_cap": "5 across mainboard + sideboard",
+    "excluded": []
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.45,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": -0.067,
+      "raw_target": 16.933,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.45,
+    "pip_demand": {
+      "G": 18,
+      "B": 9
+    },
+    "land_color_production": {
+      "G": 11,
+      "B": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 33.3,
+        "prod_pct": 38.9,
+        "gap": -5.6,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 66.7,
+        "prod_pct": 61.1,
+        "gap": 5.6,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Tireless Tracker",
+      "qty": 1,
+      "role": "Pipeline payoff - Clue per land entry",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Human Scout",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Landfall — Whenever a land you control enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on this creature."
+    },
+    {
+      "name": "The Gitrog Monster",
+      "qty": 1,
+      "role": "The only true extra land drop in BG",
+      "board": "mainboard",
+      "cmc": 5,
+      "mana_cost": "{3}{B}{G}",
+      "type_line": "Legendary Creature — Frog Horror",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Deathtouch\nAt the beginning of your upkeep, sacrifice The Gitrog Monster unless you sacrifice a land.\nYou may play an additional land on each of your turns.\nWhenever one or more land cards are put into your graveyard from anywhere, draw a card."
+    },
+    {
+      "name": "Wrenn and Seven",
+      "qty": 1,
+      "role": "Mass land entries + land-count body",
+      "board": "mainboard",
+      "cmc": 5,
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Legendary Planeswalker — Wrenn",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "+1: Reveal the top four cards of your library. Put all land cards revealed this way into your hand and the rest into your graveyard.\n0: Put any number of land cards from your hand onto the battlefield tapped.\n−3: Create a green Treefolk creature token with reach and \"This token's power and toughness are each equal to the number of lands you control.\"\n−8: Return all permanent cards from your graveyard to your hand. You get an emblem with \"You have no maximum hand size.\""
+    },
+    {
+      "name": "Groundskeeper",
+      "qty": 2,
+      "role": "Basic-land recursion / mana sink",
+      "board": "mainboard",
+      "cmc": 1,
+      "mana_cost": "{G}",
+      "type_line": "Creature — Human Druid",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "{1}{G}: Return target basic land card from your graveyard to your hand."
+    },
+    {
+      "name": "Ulvenwald Mysteries",
+      "qty": 2,
+      "role": "Clue engine that removal can't touch",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{2}{G}",
+      "type_line": "Enchantment",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever a nontoken creature you control dies, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, create a 1/1 white Human Soldier creature token."
+    },
+    {
+      "name": "Eccentric Farmer",
+      "qty": 2,
+      "role": "Mill 3 + land card to hand",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Human Peasant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, mill three cards, then you may return a land card from your graveyard to your hand. (To mill three cards, put the top three cards of your library into your graveyard.)"
+    },
+    {
+      "name": "Grapple with the Past",
+      "qty": 1,
+      "role": "Instant mill + rebuy a killed engine piece",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Mill three cards, then you may return a creature or land card from your graveyard to your hand. (To mill three cards, put the top three cards of your library into your graveyard.)"
+    },
+    {
+      "name": "Noose Constrictor",
+      "qty": 2,
+      "role": "Reach body + free discard outlet",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Snake",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Reach\nDiscard a card: This creature gets +1/+1 until end of turn."
+    },
+    {
+      "name": "Lumberknot",
+      "qty": 2,
+      "role": "Hexproof clock, grows on every death",
+      "board": "mainboard",
+      "cmc": 4,
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Creature — Treefolk",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)\nWhenever a creature dies, put a +1/+1 counter on this creature."
+    },
+    {
+      "name": "Infernal Grasp",
+      "qty": 2,
+      "role": "Unconditional removal",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{B}",
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target creature. You lose 2 life."
+    },
+    {
+      "name": "Tragic Slip",
+      "qty": 2,
+      "role": "One-mana removal, morbid live",
+      "board": "mainboard",
+      "cmc": 1,
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn."
+    },
+    {
+      "name": "Murderous Compulsion",
+      "qty": 1,
+      "role": "Removal; madness live off Noose Constrictor",
+      "board": "mainboard",
+      "cmc": 2,
+      "mana_cost": "{1}{B}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target tapped creature.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)"
+    },
+    {
+      "name": "Eaten Alive",
+      "qty": 1,
+      "role": "Exile - answers a creature OR a planeswalker",
+      "board": "mainboard",
+      "cmc": 1,
+      "mana_cost": "{B}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature or pay {3}{B}.\nExile target creature or planeswalker."
+    },
+    {
+      "name": "Maelstrom Pulse",
+      "qty": 1,
+      "role": "Catch-all noncreature answer",
+      "board": "mainboard",
+      "cmc": 3,
+      "mana_cost": "{1}{B}{G}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Destroy target nonland permanent and all other permanents with the same name as that permanent."
+    },
+    {
+      "name": "Killing Wave",
+      "qty": 1,
+      "role": "Scalable sweeper - the wide-board answer",
+      "board": "mainboard",
+      "cmc": 1,
+      "mana_cost": "{X}{B}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "For each creature, its controller sacrifices it unless they pay X life."
+    },
+    {
+      "name": "Evolving Wilds",
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard",
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle."
+    },
+    {
+      "name": "Haunted Mire",
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard",
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Land — Swamp Forest",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped."
+    },
+    {
+      "name": "Forest",
+      "qty": 9,
+      "role": "land",
+      "board": "mainboard",
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)"
+    },
+    {
+      "name": "Swamp",
+      "qty": 5,
+      "role": "land",
+      "board": "mainboard",
+      "cmc": 0,
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Ambush Viper",
+      "qty": 2,
+      "role": "vs. Vampire (23) / Werewolf (13) aggro - flash deathtouch",
+      "board": "sideboard",
+      "cmc": 2,
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Snake",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flash\nDeathtouch"
+    },
+    {
+      "name": "Clear Shot",
+      "qty": 2,
+      "role": "vs. large threats and fliers once Lumberknot has counters",
+      "board": "sideboard",
+      "cmc": 3,
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control."
+    },
+    {
+      "name": "Sever the Bloodline",
+      "qty": 2,
+      "role": "vs. recursive and DUPLICATED creatures - not graveyard hate",
+      "board": "sideboard",
+      "cmc": 4,
+      "mana_cost": "{3}{B}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Exile target creature and all other creatures with the same name as that creature.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+    },
+    {
+      "name": "Collective Brutality",
+      "qty": 1,
+      "role": "vs. combo/control - the only hand disruption BG has",
+      "board": "sideboard",
+      "cmc": 2,
+      "mana_cost": "{1}{B}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Escalate—Discard a card. (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Target opponent reveals their hand. You choose an instant or sorcery card from it. That player discards that card.\n• Target creature gets -2/-2 until end of turn.\n• Target opponent loses 2 life and you gain 2 life."
+    },
+    {
+      "name": "Murderous Compulsion",
+      "qty": 1,
+      "role": "vs. decks that must attack; 2nd copy",
+      "board": "sideboard",
+      "cmc": 2,
+      "mana_cost": "{1}{B}",
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target tapped creature.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)"
+    },
+    {
+      "name": "Wild-Field Scarecrow",
+      "qty": 1,
+      "role": "vs. colour screw and attrition - two basics to hand",
+      "board": "sideboard",
+      "cmc": 3,
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Scarecrow",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Defender\n{2}, Sacrifice this creature: Search your library for up to two basic land cards, reveal them, put them into your hand, then shuffle."
+    },
+    {
+      "name": "Morbid Opportunist",
+      "qty": 1,
+      "role": "vs. creature mirrors - draws on the raised death rate",
+      "board": "sideboard",
+      "cmc": 3,
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Human Rogue",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever one or more other creatures die, draw a card. This ability triggers only once each turn."
+    }
+  ],
+  "pitch": "BG Clue-grind attrition. Lands here are a card-advantage tax base, not a win condition: Tireless Tracker banks a Clue for every land that ENTERS, The Gitrog Monster supplies the only genuine extra land drop in BG, and both Evolving Wilds turn one land drop into two entries. Because the Tracker is a rarity-capped singleton, the deck deliberately runs two engines that read no land at all - Ulvenwald Mysteries, an enchantment that investigates on creature deaths and so survives the removal aimed at the Tracker, and Noose Constrictor, whose free discard outlet converts flooded lands into growth. Eight removal spells hold the board while the cards pile up, and the game ends on a hexproof Lumberknot that has collected a counter for every creature either player lost.",
+  "strategy_es": "control de desgaste (desgaste de Pistas con tierras importan)",
+  "identity_es": "Desgaste BG de Pistas. Aquí las tierras son una base imponible de ventaja de cartas, no una condición de victoria: Tireless Tracker guarda una Pista por cada tierra que ENTRA, The Gitrog Monster aporta la única tierra extra genuina de BG, y ambas Evolving Wilds convierten una tierra jugada en dos entradas. Como el Tracker es una copia única limitada por rareza, el mazo juega deliberadamente dos motores que no leen tierra alguna: Ulvenwald Mysteries, un encantamiento que investiga con las muertes de criaturas y por tanto sobrevive a la eliminación apuntada al Tracker, y Noose Constrictor, cuyo medio de descarte gratuito convierte las tierras sobrantes en crecimiento. Ocho hechizos de eliminación sostienen el tablero mientras las cartas se acumulan, y la partida termina con un Lumberknot con antimaleficio que ha recogido un contador por cada criatura que cualquiera de los dos jugadores perdió.",
+  "pitch_es": "Desgaste BG de Pistas. Aquí las tierras son una base imponible de ventaja de cartas, no una condición de victoria: Tireless Tracker guarda una Pista por cada tierra que ENTRA, The Gitrog Monster aporta la única tierra extra genuina de BG, y ambas Evolving Wilds convierten una tierra jugada en dos entradas. Como el Tracker es una copia única limitada por rareza, el mazo juega deliberadamente dos motores que no leen tierra alguna: Ulvenwald Mysteries, un encantamiento que investiga con las muertes de criaturas y por tanto sobrevive a la eliminación apuntada al Tracker, y Noose Constrictor, cuyo medio de descarte gratuito convierte las tierras sobrantes en crecimiento. Ocho hechizos de eliminación sostienen el tablero mientras las cartas se acumulan, y la partida termina con un Lumberknot con antimaleficio que ha recogido un contador por cada criatura que cualquiera de los dos jugadores perdió."
+}

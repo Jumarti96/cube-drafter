@@ -1,0 +1,1321 @@
+{
+  "deck_name": "bg-aristocrats-reanimator",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-03T15:30:05Z",
+  "format": "40-card",
+  "strategy": "aggro graveyard reanimator",
+  "colors": "BG",
+  "identity": "A black-green sacrifice deck whose creatures are cast in order to die. Umbral Collar Zealot's 'Sacrifice another creature or artifact: Surveil 1' is free and unlimited, and every activation fires three payoffs at once: Susurian Voidborn drains a life and gains one, Lightless Evangel grows a +1/+1 counter, and Sothera, the Supervoid forces each opponent to exile one of their own creatures. Scrounge for Eternity, Seedship Broodtender and Xu-Ifit refill the fodder pile from the graveyard so the loop never runs dry. The opponent is stripped of blockers while a menacing Insatiable Skittermaw and a growing Lightless Evangel finish the job around turn 7.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "verified": "All 40 mainboard + 10 sideboard cards exist by exact name in the working pool. No common/uncommon exceeds 2 combined copies; no rare/mythic exceeds 1. Rare+mythic total across mainboard and sideboard = 2 (Xu-Ifit Osteoharmonist, Sothera the Supervoid), inside the user's cap of 6. Basic lands are format-supplied and exempt."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.48,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.36,
+      "raw_target": 16.64,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.48,
+    "pip_demand": {
+      "G": 3,
+      "B": 24
+    },
+    "land_color_production": {
+      "G": 5,
+      "B": 14
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 88.9,
+        "prod_pct": 82.4,
+        "gap": 6.5,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 11.1,
+        "prod_pct": 29.4,
+        "gap": -18.3,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Edge Rover",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Scout",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{G}",
+      "oracle_text": "Reach\nWhen this creature dies, each player creates a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "179",
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "role": "Fodder (mana value 1, the deck's only 1-drop creature; Reach answers the evasion class)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Beamsaw Prospector",
+      "cmc": 2,
+      "type_line": "Creature — Human Artificer",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "oracle_text": "When this creature dies, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "89",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Lands-Matter",
+        "Artifacts",
+        "Tokens",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "role": "Fodder (mana value 2; asymmetric Lander on death)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightless Evangel",
+      "cmc": 2,
+      "type_line": "Creature — Vampire Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Whenever you sacrifice another creature or artifact, put a +1/+1 counter on this creature.",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "109",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Payload/Payoff"
+      ],
+      "role": "Death payoff (grows on every sacrifice)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightless Evangel",
+      "cmc": 2,
+      "type_line": "Creature — Vampire Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Whenever you sacrifice another creature or artifact, put a +1/+1 counter on this creature.",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "109",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Payload/Payoff"
+      ],
+      "role": "Death payoff (grows on every sacrifice)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Umbral Collar Zealot",
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Sacrifice another creature or artifact: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "123",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Self-Mill",
+        "Graveyard",
+        "Artifacts",
+        "Engine/Outlet",
+        "Sacrifice Outlet",
+        "Card Selection"
+      ],
+      "role": "Sacrifice outlet (free, unlimited, on demand)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Umbral Collar Zealot",
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Sacrifice another creature or artifact: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "123",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Self-Mill",
+        "Graveyard",
+        "Artifacts",
+        "Engine/Outlet",
+        "Sacrifice Outlet",
+        "Card Selection"
+      ],
+      "role": "Sacrifice outlet (free, unlimited, on demand)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Seedship Broodtender",
+      "cmc": 2,
+      "type_line": "Creature — Insect Citizen",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "mana_cost": "{B}{G}",
+      "oracle_text": "When this creature enters, mill three cards. (Put the top three cards of your library into your graveyard.)\n{3}{B}{G}, Sacrifice this creature: Return target creature or Spacecraft card from your graveyard to the battlefield. Activate only as a sorcery.",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "227",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Engine/Outlet",
+        "Reanimation"
+      ],
+      "role": "Recursion + graveyard enabler + fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Seedship Broodtender",
+      "cmc": 2,
+      "type_line": "Creature — Insect Citizen",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "mana_cost": "{B}{G}",
+      "oracle_text": "When this creature enters, mill three cards. (Put the top three cards of your library into your graveyard.)\n{3}{B}{G}, Sacrifice this creature: Return target creature or Spacecraft card from your graveyard to the battlefield. Activate only as a sorcery.",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "227",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Engine/Outlet",
+        "Reanimation"
+      ],
+      "role": "Recursion + graveyard enabler + fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Susurian Voidborn",
+      "cmc": 3,
+      "type_line": "Creature — Vampire Soldier",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "Whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life.\nWarp {B} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "118",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "role": "Death payoff (drain - the deck's clock)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Susurian Voidborn",
+      "cmc": 3,
+      "type_line": "Creature — Vampire Soldier",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "Whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life.\nWarp {B} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "118",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "role": "Death payoff (drain - the deck's clock)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Insatiable Skittermaw",
+      "cmc": 3,
+      "type_line": "Creature — Insect Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nVoid — At the beginning of your end step, if a nonland permanent left the battlefield this turn or a spell was warped this turn, put a +1/+1 counter on this creature.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "108",
+      "tags": [
+        "Counters (+1/+1)",
+        "Aristocrats/Sacrifice",
+        "Payload/Payoff"
+      ],
+      "role": "Evasive threat (menace; grows on Void)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Insatiable Skittermaw",
+      "cmc": 3,
+      "type_line": "Creature — Insect Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nVoid — At the beginning of your end step, if a nonland permanent left the battlefield this turn or a spell was warped this turn, put a +1/+1 counter on this creature.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "108",
+      "tags": [
+        "Counters (+1/+1)",
+        "Aristocrats/Sacrifice",
+        "Payload/Payoff"
+      ],
+      "role": "Evasive threat (menace; grows on Void)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gravpack Monoist",
+      "cmc": 3,
+      "type_line": "Creature — Human Scout",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "Flying\nWhen this creature dies, create a tapped 2/2 colorless Robot artifact creature token.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "104",
+      "tags": [
+        "Tokens",
+        "Artifacts",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Evasive fodder (flying; dies into a 2/2 token)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gravpack Monoist",
+      "cmc": 3,
+      "type_line": "Creature — Human Scout",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "Flying\nWhen this creature dies, create a tapped 2/2 colorless Robot artifact creature token.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "104",
+      "tags": [
+        "Tokens",
+        "Artifacts",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "role": "Evasive fodder (flying; dies into a 2/2 token)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Scrounge for Eternity",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nReturn target creature or Spacecraft card with mana value 5 or less from your graveyard to the battlefield. Then create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "114",
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Lands-Matter",
+        "Tokens",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Reanimation",
+        "Token Generation",
+        "Board: Sacrifice-Cost"
+      ],
+      "role": "Recursion (sacrifice cost is upside here)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Scrounge for Eternity",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nReturn target creature or Spacecraft card with mana value 5 or less from your graveyard to the battlefield. Then create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "114",
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Lands-Matter",
+        "Tokens",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Reanimation",
+        "Token Generation",
+        "Board: Sacrifice-Cost"
+      ],
+      "role": "Recursion (sacrifice cost is upside here)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Xu-Ifit, Osteoharmonist",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Wizard",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}{B}",
+      "oracle_text": "{T}: Return target creature card from your graveyard to the battlefield. It's a Skeleton in addition to its other types and has no abilities. Activate only as a sorcery.",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "127",
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Engine/Outlet",
+        "Reanimation"
+      ],
+      "role": "Recursion (free, repeatable)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sothera, the Supervoid",
+      "cmc": 4,
+      "type_line": "Legendary Enchantment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}{B}",
+      "oracle_text": "Whenever a creature you control dies, each opponent chooses a creature they control and exiles it.\nAt the beginning of your end step, if a player controls no creatures, sacrifice Sothera, then put a creature card exiled with it onto the battlefield under your control with two additional +1/+1 counters on it.",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "115",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Reanimator",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cheat Into Play"
+      ],
+      "role": "Death payoff (board strip; an enchantment, so sweeper-proof)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swarm Culler",
+      "cmc": 4,
+      "type_line": "Creature — Insect Warrior",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Flying\nWhenever this creature becomes tapped, you may sacrifice another creature or artifact. If you do, draw a card.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "set": "eoe",
+      "collector_number": "119",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "role": "Evasive body + conditional card draw when tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swarm Culler",
+      "cmc": 4,
+      "type_line": "Creature — Insect Warrior",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Flying\nWhenever this creature becomes tapped, you may sacrifice another creature or artifact. If you do, draw a card.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "set": "eoe",
+      "collector_number": "119",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "role": "Evasive body + conditional card draw when tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Embrace Oblivion",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{B}",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDestroy target creature or Spacecraft.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "98",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "role": "Interaction (sacrifice cost triggers death payoffs)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Embrace Oblivion",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{B}",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDestroy target creature or Spacecraft.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "98",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "role": "Interaction (sacrifice cost triggers death payoffs)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{B}",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "122",
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction (one mana, Void-scaling)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunted Mire",
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "mana_cost": null,
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "248",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunted Mire",
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "mana_cost": null,
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "248",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Seedship Impact",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{1}{G}",
+      "oracle_text": "Destroy target artifact or enchantment. If its mana value was 2 or less, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "205",
+      "tags": [
+        "Lands-Matter",
+        "Tokens",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Seedship Impact",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "mana_cost": "{1}{G}",
+      "oracle_text": "Destroy target artifact or enchantment. If its mana value was 2 or less, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "205",
+      "tags": [
+        "Lands-Matter",
+        "Tokens",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Dubious Delicacy",
+      "cmc": 3,
+      "type_line": "Artifact — Food",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "Flash\nWhen this artifact enters, up to one target creature gets -3/-3 until end of turn.\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\n{2}, {T}, Sacrifice this artifact: Target opponent loses 3 life.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "96",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Engine/Outlet",
+        "Targeted Removal",
+        "Life Drain"
+      ],
+      "role": "Hate / reach",
+      "board": "sideboard"
+    },
+    {
+      "name": "Dubious Delicacy",
+      "cmc": 3,
+      "type_line": "Artifact — Food",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "Flash\nWhen this artifact enters, up to one target creature gets -3/-3 until end of turn.\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\n{2}, {T}, Sacrifice this artifact: Target opponent loses 3 life.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "96",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Engine/Outlet",
+        "Targeted Removal",
+        "Life Drain"
+      ],
+      "role": "Hate / reach",
+      "board": "sideboard"
+    },
+    {
+      "name": "Gravkill",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "103",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Flex removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Gravkill",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "103",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Flex removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Timeline Culler",
+      "cmc": 2,
+      "type_line": "Creature — Drix Warlock",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{B}{B}",
+      "oracle_text": "Haste\nYou may cast this card from your graveyard using its warp ability.\nWarp—{B}, Pay 2 life. (You may cast this card from your hand or graveyard for its warp cost. If you do, exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "121",
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Standalone Threat",
+        "Life: Cost"
+      ],
+      "role": "Flex fodder",
+      "board": "sideboard"
+    },
+    {
+      "name": "Timeline Culler",
+      "cmc": 2,
+      "type_line": "Creature — Drix Warlock",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{B}{B}",
+      "oracle_text": "Haste\nYou may cast this card from your graveyard using its warp ability.\nWarp—{B}, Pay 2 life. (You may cast this card from your hand or graveyard for its warp cost. If you do, exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "121",
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Standalone Threat",
+        "Life: Cost"
+      ],
+      "role": "Flex fodder",
+      "board": "sideboard"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "colors": [],
+      "color_identity": [],
+      "mana_cost": "{3}",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "237",
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Nutrient Block",
+      "cmc": 1,
+      "type_line": "Artifact — Food",
+      "colors": [],
+      "color_identity": [],
+      "mana_cost": "{1}",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "243",
+      "tags": [
+        "Artifacts",
+        "Lifegain",
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Life Drain",
+        "Card Draw",
+        "Sacrifice Outlet"
+      ],
+      "role": "Flex fodder",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "A black-green sacrifice deck whose creatures are cast in order to die. Umbral Collar Zealot's 'Sacrifice another creature or artifact: Surveil 1' is free and unlimited, and every activation fires three payoffs at once: Susurian Voidborn drains a life and gains one, Lightless Evangel grows a +1/+1 counter, and Sothera, the Supervoid forces each opponent to exile one of their own creatures. Scrounge for Eternity, Seedship Broodtender and Xu-Ifit refill the fodder pile from the graveyard so the loop never runs dry. The opponent is stripped of blockers while a menacing Insatiable Skittermaw and a growing Lightless Evangel finish the job around turn 7.",
+  "strategy_es": "reanimador de cementerio agro",
+  "identity_es": "Un mazo de sacrificio negro-verde cuyas criaturas se lanzan para morir. El 'Sacrifice another creature or artifact: Surveil 1' de Umbral Collar Zealot es gratuito e ilimitado, y cada activación dispara tres recompensas a la vez: Susurian Voidborn drena una vida y gana una, Lightless Evangel gana un contador +1/+1, y Sothera, the Supervoid obliga a cada rival a exiliar una de sus propias criaturas. Scrounge for Eternity, Seedship Broodtender y Xu-Ifit rellenan el montón de forraje desde el cementerio para que el bucle nunca se seque. Al rival se le despoja de bloqueadores mientras una Insatiable Skittermaw con amenaza y un Lightless Evangel creciente rematan el trabajo hacia el turno 7.",
+  "pitch_es": "Un mazo de sacrificio negro-verde cuyas criaturas se lanzan para morir. El 'Sacrifice another creature or artifact: Surveil 1' de Umbral Collar Zealot es gratuito e ilimitado, y cada activación dispara tres recompensas a la vez: Susurian Voidborn drena una vida y gana una, Lightless Evangel gana un contador +1/+1, y Sothera, the Supervoid obliga a cada rival a exiliar una de sus propias criaturas. Scrounge for Eternity, Seedship Broodtender y Xu-Ifit rellenan el montón de forraje desde el cementerio para que el bucle nunca se seque. Al rival se le despoja de bloqueadores mientras una Insatiable Skittermaw con amenaza y un Lightless Evangel creciente rematan el trabajo hacia el turno 7."
+}

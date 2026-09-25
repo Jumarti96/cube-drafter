@@ -1,0 +1,1115 @@
+{
+  "deck_name": "wu-crusade-go-wide-blink",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-27T00:00:00Z",
+  "format": "40-card",
+  "strategy": "go-wide counters / ETB aggro",
+  "colors": "WU",
+  "identity": "A WU go-wide aggro deck whose payoff is an ETB trigger. Cathars' Crusade reads \"Whenever a creature you control enters, put a +1/+1 counter on EACH creature you control\", so a board that is already wide grows quadratically: Gather the Townsfolk and Lingering Souls each put two bodies down at once, and Cathar's Call adds one every end step. The deck's real floor is not the singleton rare - it is 8 guaranteed creature tokens under two Intangible Virtue anthems, with Odric, Lunarch Marshal handing the whole board flying and first strike every combat. Essence Flux and Restoration Angel are the Blink/ETB half of the constraint: they manufacture an extra creature entry, which in this shell is a free board-wide pump at instant speed. The counters connect because the deck removes blockers rather than creatures - Nebelgast Herald on each of 8 Spirit entries, Niblis of the Urn on attack, Thalia making fresh blockers arrive tapped, and Subjugator Angel tapping the whole opposing board.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "user_constraint": "Maximum 5 rare+mythic cards total across mainboard and sideboard",
+    "rares_used": 5
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 1,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.74,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": 0.153,
+      "raw_target": 17.153,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.74,
+    "pip_demand": {
+      "W": 21,
+      "U": 5
+    },
+    "land_color_production": {
+      "U": 6,
+      "W": 13
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 19.2,
+        "prod_pct": 35.3,
+        "gap": -16.1,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 80.8,
+        "prod_pct": 76.5,
+        "gap": 4.3,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Cathars' Crusade",
+      "oracle_text": "Whenever a creature you control enters, put a +1/+1 counter on each creature you control.",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Team Buff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Team Buff"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Angel's Tomb",
+      "oracle_text": "Whenever a creature you control enters, you may have this artifact become a 3/3 white Angel artifact creature with flying until end of turn.",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Standalone Threat",
+        "Animate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Animate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Intangible Virtue",
+      "oracle_text": "Creature tokens you control get +1/+1 and have vigilance.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Payload/Payoff",
+        "Anthem"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Anthem"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Odric, Lunarch Marshal",
+      "oracle_text": "At the beginning of each combat, creatures you control gain first strike until end of turn if a creature you control has first strike. The same is true for flying, deathtouch, double strike, haste, hexproof, indestructible, lifelink, menace, reach, skulk, trample, and vigilance.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Keyword Matters",
+        "Payload/Payoff",
+        "Keyword Granting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Keyword Matters"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Keyword Granting"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Thraben Inspector",
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Artifacts",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Gather the Townsfolk",
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Niblis of the Urn",
+      "oracle_text": "Flying\nWhenever this creature attacks, you may tap target creature.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Tap Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Tap Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Spirit",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Lingering Souls",
+      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Flashback/GY-Cast"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Flashback"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Nebelgast Herald",
+      "oracle_text": "Flash\nFlying\nWhenever this creature or another Spirit you control enters, tap target creature an opponent controls.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Tapper"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Tapper"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Spirit",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Spell Queller",
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, exile target spell with mana value 4 or less.\nWhen this creature leaves the battlefield, the exiled card's owner may cast that card without paying its mana cost.",
+      "mana_cost": "{1}{W}{U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Spirit",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Restoration Angel",
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, you may exile target non-Angel creature you control, then return that card to the battlefield under your control.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Blink"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Standalone Threat",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Blink"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Subjugator Angel",
+      "oracle_text": "Flying\nWhen this creature enters, tap all creatures your opponents control.",
+      "mana_cost": "{4}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Tapper"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Tapper"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Creature — Angel",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Essence Flux",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under its owner's control. If it's a Spirit, put a +1/+1 counter on it.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Blink"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB",
+          "Counters (+1/+1)",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Blink"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Cathar's Call",
+      "oracle_text": "Enchant creature\nEnchanted creature has vigilance and \"At the beginning of your end step, create a 1/1 white Human creature token.\"",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Voltron/Equipment",
+        "Engine/Outlet",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Voltron/Equipment"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Valorous Stance",
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Protection"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Fiend Hunter",
+      "oracle_text": "When this creature enters, you may exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Thalia, Heretic Cathar",
+      "oracle_text": "First strike\nCreatures and nonbasic lands your opponents control enter tapped.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Tax Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Stax/Taxing"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Tax Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 11
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 4
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Soul-Guide Gryff",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "mana_cost": "{4}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Cathar Commando",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Angelic Purge",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Bound by Moonsilver",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack, block, or transform.\nSacrifice another permanent: Attach this Aura to target creature. Activate only as a sorcery and only once each turn.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Imprisoned in the Moon",
+      "oracle_text": "Enchant creature, land, or planeswalker\nEnchanted permanent is a colorless land with \"{T}: Add {C}\" and loses all other card types and abilities.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Faith Unbroken",
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield.\nEnchanted creature gets +2/+2.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1
+    }
+  ],
+  "pitch": "A WU go-wide aggro deck whose payoff is an ETB trigger. Cathars' Crusade reads \"Whenever a creature you control enters, put a +1/+1 counter on EACH creature you control\", so a board that is already wide grows quadratically: Gather the Townsfolk and Lingering Souls each put two bodies down at once, and Cathar's Call adds one every end step. The deck's real floor is not the singleton rare - it is 8 guaranteed creature tokens under two Intangible Virtue anthems, with Odric, Lunarch Marshal handing the whole board flying and first strike every combat. Essence Flux and Restoration Angel are the Blink/ETB half of the constraint: they manufacture an extra creature entry, which in this shell is a free board-wide pump at instant speed. The counters connect because the deck removes blockers rather than creatures - Nebelgast Herald on each of 8 Spirit entries, Niblis of the Urn on attack, Thalia making fresh blockers arrive tapped, and Subjugator Angel tapping the whole opposing board.",
+  "strategy_es": "agro a lo ancho de contadores / entradas",
+  "identity_es": "Un agro WU a lo ancho cuya recompensa es un disparo de entrada. Cathars' Crusade dice \"Whenever a creature you control enters, put a +1/+1 counter on EACH creature you control\", así que un tablero que ya es ancho crece de forma cuadrática: Gather the Townsfolk y Lingering Souls ponen dos cuerpos de golpe cada una, y Cathar's Call añade uno en cada paso final. El suelo real del mazo no es la rara de copia única: son 8 fichas de criatura garantizadas bajo dos anthems de Intangible Virtue, con Odric, Lunarch Marshal repartiendo volar y dañar primero a todo el tablero en cada combate. Essence Flux y Restoration Angel son la mitad de Parpadeo/Entradas de la restricción: fabrican una entrada de criatura extra, que en este armazón es una pompa gratuita para todo el tablero a velocidad de instantáneo. Los contadores conectan porque el mazo elimina bloqueadores en vez de criaturas: Nebelgast Herald en cada una de las 8 entradas de Espíritu, Niblis of the Urn al atacar, Thalia haciendo que los bloqueadores nuevos lleguen girados, y Subjugator Angel girando todo el tablero rival.",
+  "pitch_es": "Un agro WU a lo ancho cuya recompensa es un disparo de entrada. Cathars' Crusade dice \"Whenever a creature you control enters, put a +1/+1 counter on EACH creature you control\", así que un tablero que ya es ancho crece de forma cuadrática: Gather the Townsfolk y Lingering Souls ponen dos cuerpos de golpe cada una, y Cathar's Call añade uno en cada paso final. El suelo real del mazo no es la rara de copia única: son 8 fichas de criatura garantizadas bajo dos anthems de Intangible Virtue, con Odric, Lunarch Marshal repartiendo volar y dañar primero a todo el tablero en cada combate. Essence Flux y Restoration Angel son la mitad de Parpadeo/Entradas de la restricción: fabrican una entrada de criatura extra, que en este armazón es una pompa gratuita para todo el tablero a velocidad de instantáneo. Los contadores conectan porque el mazo elimina bloqueadores en vez de criaturas: Nebelgast Herald en cada una de las 8 entradas de Espíritu, Niblis of the Urn al atacar, Thalia haciendo que los bloqueadores nuevos lleguen girados, y Subjugator Angel girando todo el tablero rival."
+}

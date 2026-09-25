@@ -1,0 +1,550 @@
+{
+  "deck_name": "ub-coral-mill",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T14:00:58Z",
+  "format": "40-card",
+  "strategy": "control — Coral Colony + Blight Pile defenders",
+  "colors": "UB",
+  "identity": "A UB Defenders control deck with no combat clock at all. Dropping white costs it Wingmantle Chaplain, so there are no Bird tokens and nothing that attacks by default - both win conditions are activated abilities that read the number of creatures with defender controlled. Blight Pile drains each opponent for X and Coral Colony mills them for X. Simulated on curve, the drain kills on turn 8 in the modal case and as early as turn 7 when a turn-1 defender is in the opener - which is 32.3% of hands, since Walking Bulwark is the only one-mana defender in these colours. Firing both kills costs 5 mana and they compete on turn 4 only; from turn 5 the mill is free alongside the drain. Twelve defender bodies - the colour pair's maximum - hold the ground behind nine interaction spells, and Choking Miasma is a genuinely one-sided sweeper here: 13 of the 14 creature copies survive it, the sole casualty being a flash creature whose timing the deck controls.",
+  "restrictions": {
+    "commons_uncommons_max_2": "PASS - no card exceeds 2 copies counting mainboard and sideboard jointly; verified by cube_search.get_max_copies against per_rarity {common:2, uncommon:2, rare:1, mythic:1}.",
+    "rares_mythics_max_1_copy": "PASS - Sheoldred x1, Ertai Resurrected x1.",
+    "rares_mythics_max_5_total_MB_plus_SB": "PASS - 2 total (Sheoldred mythic, Ertai Resurrected rare). Sideboard contains 0. Three slots unspent - the lowest rare usage of the four builds, because U/B's rares are mostly off-plan for a defender deck.",
+    "all_cards_from_cube_pool": "PASS - every name matched by exact string against the working pool cache.",
+    "basics_format_supplied": "Swamp x9 and Island x5 are format-supplied; the cube list contains no basics.",
+    "colour_usability": "PASS - every nonland card returns a non-None effective_cost.best_mode against core_colors [U,B] with an empty splash. Choking Miasma prints {B,G} because of an unpayable {G} kicker and is cast for {1}{B}{B}; Rona's Vortex and Tribute to Urborg both have kickers that ARE payable in these colours."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.43,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": -0.093,
+      "raw_target": 16.907,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.43,
+    "pip_demand": {
+      "B": 17,
+      "U": 7
+    },
+    "land_color_production": {
+      "B": 12,
+      "U": 8,
+      "G": 1,
+      "R": 1,
+      "W": 1
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 70.8,
+        "prod_pct": 70.6,
+        "gap": 0.2,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 29.2,
+        "prod_pct": 47.1,
+        "gap": -17.9,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Walking Bulwark",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Payoff/Engine - third line; defenders attack for toughness",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\n{2}: Until end of turn, target creature with defender gains haste, can attack as though it didn't have defender, and assigns combat damage equal to its toughness rather than its power. Activate only as a sorcery.",
+      "power": "0",
+      "toughness": "3",
+      "set": "tdc",
+      "collector_number": "334"
+    },
+    {
+      "name": "Cut Down",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Interaction - one-mana instant removal",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "89"
+    },
+    {
+      "name": "Rona's Vortex",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Interaction - kicked, bottoms a permanent rather than bouncing it",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nReturn target creature or planeswalker you don't control to its owner's hand. If this spell was kicked, put that permanent on the bottom of its owner's library instead.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "63"
+    },
+    {
+      "name": "Coral Colony",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Payoff - second clock; mill decks on turn 8, second priority for mana",
+      "cmc": 2,
+      "type_line": "Creature — Wall",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\n{1}{U}, {T}: Target player mills X cards, where X is the number of creatures you control with defender. (To mill a card, a player puts the top card of their library into their graveyard.)",
+      "power": "1",
+      "toughness": "4",
+      "set": "dmu",
+      "collector_number": "45"
+    },
+    {
+      "name": "Blight Pile",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Payoff - the primary clock; drain kills on turn 7",
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\n{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.",
+      "power": "3",
+      "toughness": "3",
+      "set": "tdc",
+      "collector_number": "174"
+    },
+    {
+      "name": "Tribute to Urborg",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Interaction - kicked, scales with the graveyard's instant/sorcery count",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nTarget creature gets -2/-2 until end of turn. If this spell was kicked, that creature gets an additional -1/-1 until end of turn for each instant and sorcery card in your graveyard.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "113"
+    },
+    {
+      "name": "Academy Wall",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Enabler/Engine - 0/5 wall plus a loot trigger on 9 of 23 cards",
+      "cmc": 3,
+      "type_line": "Creature — Wall",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Defender\nWhenever you cast an instant or sorcery spell, you may draw a card. If you do, discard a card. This ability triggers only once each turn.",
+      "power": "0",
+      "toughness": "5",
+      "set": "dmu",
+      "collector_number": "41"
+    },
+    {
+      "name": "Gibbering Barricade",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Enabler/Engine - 2/4 wall plus a sacrifice-for-cards outlet",
+      "cmc": 3,
+      "type_line": "Creature — Nightmare Wall",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Defender\n{2}{B}, Sacrifice a creature: You gain 1 life and draw a card.",
+      "power": "2",
+      "toughness": "4",
+      "set": "dmu",
+      "collector_number": "95"
+    },
+    {
+      "name": "Choking Miasma",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Interaction - one-sided sweeper; 14 of 15 creature cards survive",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nIf this spell was kicked, put a +1/+1 counter on a creature you control.\nAll creatures get -2/-2 until end of turn.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "86"
+    },
+    {
+      "name": "Shield-Wall Sentinel",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Enabler/Infrastructure - defender count plus a tutor for any of the three kills",
+      "cmc": 4,
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Defender\nWhen this creature enters, you may search your library for a creature card with defender, reveal it, put it into your hand, then shuffle.",
+      "power": "1",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "238"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Threat - independent 2-per-turn clock and the deck's largest blocker",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "power": "4",
+      "toughness": "5",
+      "set": "dmu",
+      "collector_number": "107"
+    },
+    {
+      "name": "Ertai Resurrected",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Threat/Interaction - flash; counters a spell OR an activated or triggered ability",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Human Wizard",
+      "mana_cost": "{2}{U}{B}",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flash\nWhen Ertai Resurrected enters, choose up to one —\n• Counter target spell, activated ability, or triggered ability. Its controller draws a card.\n• Destroy another target creature or planeswalker. Its controller draws a card.",
+      "power": "3",
+      "toughness": "2",
+      "set": "dmu",
+      "collector_number": "199"
+    },
+    {
+      "name": "Extinguish the Light",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Interaction - unconditional instant kill",
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "94"
+    },
+    {
+      "name": "Swamp",
+      "qty": 9,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "set": "DMU",
+      "collector_number": ""
+    },
+    {
+      "name": "Island",
+      "qty": 5,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "set": "DMU",
+      "collector_number": ""
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "tdc",
+      "collector_number": "353"
+    },
+    {
+      "name": "Crystal Grotto",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Land",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "When this land enters, scry 1.\n{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
+      "power": null,
+      "toughness": null,
+      "set": "woe",
+      "collector_number": "254"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Negate",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard interaction - counters a noncreature spell",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target noncreature spell.",
+      "power": null,
+      "toughness": null,
+      "set": "tmt",
+      "collector_number": "47"
+    },
+    {
+      "name": "Essence Scatter",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard interaction - counters a creature spell",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target creature spell.",
+      "power": null,
+      "toughness": null,
+      "set": "sos",
+      "collector_number": "47"
+    },
+    {
+      "name": "Tattered Apparition",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard body - a flier castable off the deck's primary colour",
+      "cmc": 4,
+      "type_line": "Creature — Shade",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\n{1}{B}: This creature gets +1/+1 until end of turn.",
+      "power": "2",
+      "toughness": "2",
+      "set": "dmu",
+      "collector_number": "111"
+    },
+    {
+      "name": "Impulse",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard selection - digs for the missing colour or the missing payoff",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "power": null,
+      "toughness": null,
+      "set": "dmr",
+      "collector_number": "56"
+    },
+    {
+      "name": "Impede Momentum",
+      "qty": 1,
+      "board": "sideboard",
+      "role": "Sideboard interaction - tap plus three stun counters",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Tap target creature and put three stun counters on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nScry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "54"
+    },
+    {
+      "name": "Liliana of the Veil",
+      "qty": 1,
+      "board": "sideboard",
+      "role": "Sideboard threat - symmetric discard that is one-sided here",
+      "cmc": 3,
+      "type_line": "Legendary Planeswalker — Liliana",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "+1: Each player discards a card.\n−2: Target player sacrifices a creature.\n−6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+      "power": null,
+      "toughness": null,
+      "set": "inr",
+      "collector_number": "475"
+    }
+  ],
+  "pitch": "A UB Defenders control deck with no combat clock at all. Dropping white costs it Wingmantle Chaplain, so there are no Bird tokens and nothing that attacks by default - both win conditions are activated abilities that read the number of creatures with defender controlled. Blight Pile drains each opponent for X and Coral Colony mills them for X. Simulated on curve, the drain kills on turn 8 in the modal case and as early as turn 7 when a turn-1 defender is in the opener - which is 32.3% of hands, since Walking Bulwark is the only one-mana defender in these colours. Firing both kills costs 5 mana and they compete on turn 4 only; from turn 5 the mill is free alongside the drain. Twelve defender bodies - the colour pair's maximum - hold the ground behind nine interaction spells, and Choking Miasma is a genuinely one-sided sweeper here: 13 of the 14 creature copies survive it, the sole casualty being a flash creature whose timing the deck controls.",
+  "strategy_es": "control — Coral Colony + defensores con Blight Pile",
+  "identity_es": "Un control de Defensores UB sin reloj de combate alguno. Renunciar al blanco le cuesta Wingmantle Chaplain, así que no hay fichas de Pájaro ni nada que ataque por defecto: ambas condiciones de victoria son habilidades activadas que leen el número de criaturas con defensor que controlas. Blight Pile drena X a cada rival y Coral Colony les muele X. Simulado en curva, el drenaje mata en el turno 8 en el caso modal y tan pronto como el turno 7 cuando hay un defensor de turno 1 en la mano inicial, que es el 32,3% de las manos, ya que Walking Bulwark es el único defensor de un maná de estos colores. Disparar ambas victorias cuesta 5 manás y solo compiten en el turno 4; desde el turno 5 la molienda es gratuita junto al drenaje. Doce cuerpos con defensor — el máximo de la pareja de colores — sostienen el suelo tras nueve hechizos de interacción, y Choking Miasma es aquí un barredor genuinamente unilateral: 13 de las 14 copias de criatura lo sobreviven, siendo la única baja una criatura con flash cuyo momento controla el mazo.",
+  "pitch_es": "Un control de Defensores UB sin reloj de combate alguno. Renunciar al blanco le cuesta Wingmantle Chaplain, así que no hay fichas de Pájaro ni nada que ataque por defecto: ambas condiciones de victoria son habilidades activadas que leen el número de criaturas con defensor que controlas. Blight Pile drena X a cada rival y Coral Colony les muele X. Simulado en curva, el drenaje mata en el turno 8 en el caso modal y tan pronto como el turno 7 cuando hay un defensor de turno 1 en la mano inicial, que es el 32,3% de las manos, ya que Walking Bulwark es el único defensor de un maná de estos colores. Disparar ambas victorias cuesta 5 manás y solo compiten en el turno 4; desde el turno 5 la molienda es gratuita junto al drenaje. Doce cuerpos con defensor — el máximo de la pareja de colores — sostienen el suelo tras nueve hechizos de interacción, y Choking Miasma es aquí un barredor genuinamente unilateral: 13 de las 14 copias de criatura lo sobreviven, siendo la única baja una criatura con flash cuyo momento controla el mazo."
+}

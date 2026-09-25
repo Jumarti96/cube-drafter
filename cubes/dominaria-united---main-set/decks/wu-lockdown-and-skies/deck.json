@@ -1,0 +1,965 @@
+{
+  "deck_name": "wu-lockdown-and-skies",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-17T00:00:00Z",
+  "format": "40-card",
+  "strategy": "control — most proactive finisher",
+  "colors": "UW",
+  "identity": "A UW draw-go control deck that answers permanently rather than temporarily. Twelve of its twenty-two nonland cards interact, and every mass answer is asymmetric by construction: Temporary Lockdown exiles all nonland permanents of mana value 2 or less, and 0 of this list's 11 nonland permanents sit at or below that line. Once the board is stripped, five evasive fliers totalling 17 power in the air convert an empty battlefield into a two-to-three swing clock. It wins by making the opponent's board disappear into exile - where this cube's 32 graveyard-interaction cards cannot reach it - and then flying over the wreckage.",
+  "restrictions": {
+    "base": "cube_mainboard only - every card verified by exact name against the working pool cache",
+    "commons_uncommons_max_2": "PASS - no card exceeds 2 copies except basic lands",
+    "rares_mythics_max_1": "PASS - all five rare/mythic cards are singletons",
+    "rare_mythic_total_max_5": "PASS - exactly 5: Temporary Lockdown (R), The Phasing of Zhalfir (R), Silver Scrutiny (R), Adarkar Wastes (R), Sphinx of Clear Skies (M). Sideboard contains zero rares by design.",
+    "basics_unlimited": "PASS - 9 Island, 6 Plains, format-supplied and exempt",
+    "colour_identity": "PASS - every nonland card usable in UW via effective_cost.best_mode"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.14,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.853,
+      "raw_target": 17.853,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.14,
+    "pip_demand": {
+      "W": 12,
+      "U": 21
+    },
+    "land_color_production": {
+      "U": 12,
+      "W": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 63.6,
+        "prod_pct": 66.7,
+        "gap": -3.1,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 36.4,
+        "prod_pct": 50,
+        "gap": -13.6,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Artillery Blast",
+      "oracle_text": "Domain — Artillery Blast deals X damage to target tapped creature, where X is 1 plus the number of basic land types among lands you control.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Domain",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Domain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — instant-speed spot removal"
+    },
+    {
+      "name": "Essence Scatter",
+      "oracle_text": "Counter target creature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — counterspell"
+    },
+    {
+      "name": "Impulse",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Combo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — card selection"
+    },
+    {
+      "name": "Silver Scrutiny",
+      "oracle_text": "You may cast this spell as though it had flash if X is 3 or less.\nDraw X cards.",
+      "mana_cost": "{X}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine — scaling refuel"
+    },
+    {
+      "name": "Temporary Lockdown",
+      "oracle_text": "When this enchantment enters, exile each nonland permanent with mana value 2 or less until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — asymmetric sweeper"
+    },
+    {
+      "name": "Citizen's Arrest",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — exile removal"
+    },
+    {
+      "name": "Ertai's Scorn",
+      "oracle_text": "This spell costs {U} less to cast if an opponent cast two or more spells this turn.\nCounter target spell.",
+      "mana_cost": "{1}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — counterspell"
+    },
+    {
+      "name": "Stall for Time",
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nTap up to two target creatures. If this spell was kicked, put a stun counter on each of those creatures. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nDraw a card.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Tap",
+        "Card Draw",
+        "Kicker",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Tap",
+          "Card Draw",
+          "Kicker"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — tempo + draw"
+    },
+    {
+      "name": "Soaring Drake",
+      "oracle_text": "Flying",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Drake",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat — evasive clock"
+    },
+    {
+      "name": "The Phasing of Zhalfir",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI, II — Another target nonland permanent phases out. It can't phase in for as long as you control this Saga.\nIII — Destroy all creatures. For each creature destroyed this way, its controller creates a 2/2 black Phyrexian creature token.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Sagas",
+        "Tokens",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Sweeper/Board Wipe",
+        "Token Generation",
+        "Phase Out"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Sagas",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Token Generation",
+          "Phase Out"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Enchantment — Saga",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — repeatable answer + wrath"
+    },
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — flash exile catch-all"
+    },
+    {
+      "name": "Talas Lookout",
+      "oracle_text": "Flying\nWhen this creature dies, look at the top two cards of your library. Put one of them into your hand and the other into your graveyard.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Human Pirate",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat — evasive clock, self-replacing"
+    },
+    {
+      "name": "Sphinx of Clear Skies",
+      "oracle_text": "Flying, ward {2}\nDomain — Whenever this creature deals combat damage to a player, reveal the top X cards of your library, where X is the number of basic land types among lands you control. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard. (Piles can be empty.)",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Domain",
+        "Lands-Matter",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Card Advantage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Domain",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Advantage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Sphinx",
+      "rarity": "mythic",
+      "power": "5",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat — primary finisher"
+    },
+    {
+      "name": "Djinn of the Fountain",
+      "oracle_text": "Flying\nWhenever you cast an instant or sorcery spell, choose one —\n• This creature gets +1/+1 until end of turn.\n• Exile this creature. Return it to the battlefield under its owner's control at the beginning of the next end step.\n• Scry 1.",
+      "mana_cost": "{4}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Blink/ETB",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Creature — Djinn",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat — resilient finisher"
+    },
+    {
+      "name": "Adarkar Wastes",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {W} or {U}. This land deals 1 damage to you.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land — untapped WU dual"
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — WU dual (Plains Island)"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 9,
+      "role": "Land — basic"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 6,
+      "role": "Land — basic"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Negate",
+      "oracle_text": "Counter target noncreature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Interaction — counterspell",
+      "when_to_board": "Against the cube's 18 enchantments and 6 sweepers; in vs any deck whose key cards are Sagas, Temporary Lockdown, or the enchantment removal aimed at my exile suite."
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Interaction — enchantment/large-creature removal",
+      "when_to_board": "In vs enchantment decks (18 in cube; only 3 enchantment answers exist cube-wide and this is the only one in U or W) and vs fatties: 'Destroy target creature with toughness 4 or greater.'"
+    },
+    {
+      "name": "Runic Shot",
+      "oracle_text": "Kicker {U} (You may pay an additional {U} as you cast this spell.)\nDestroy target tapped creature. If this spell was kicked, scry 2.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Card Selection",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Card Selection",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Interaction — unconditional removal of a tapped creature",
+      "when_to_board": "In vs decks with large evasive threats: Artillery Blast caps at 3 damage, so this covers the 19 of 51 evasion cards in the cube with toughness 4 or greater. Destroys outright regardless of size for {W}."
+    },
+    {
+      "name": "Tolarian Geyser",
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nReturn target creature to its owner's hand. Draw a card. If this spell was kicked, you gain 3 life.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Bounce",
+        "Card Draw",
+        "Kicker",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Card Draw",
+          "Kicker"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Interaction — bounce + draw",
+      "when_to_board": "In vs Auras and Equipment (Voltron/Equipment cluster) and vs enter-the-battlefield value creatures; resets an equipped or enchanted threat and replaces itself."
+    },
+    {
+      "name": "Impede Momentum",
+      "oracle_text": "Tap target creature and put three stun counters on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nScry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Tap Effect",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Tap Effect",
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Interaction — tap + stun",
+      "when_to_board": "In vs a single large threat I cannot destroy (Tyrannical Pitlord 6/6, Writhing Necromass 5/5): three stun counters take it off the table for three untap steps, and it supplies the tapped-creature condition Artillery Blast and Runic Shot both require."
+    }
+  ],
+  "pitch": "A UW draw-go control deck that answers permanently rather than temporarily. Twelve of its twenty-two nonland cards interact, and every mass answer is asymmetric by construction: Temporary Lockdown exiles all nonland permanents of mana value 2 or less, and 0 of this list's 11 nonland permanents sit at or below that line. Once the board is stripped, five evasive fliers totalling 17 power in the air convert an empty battlefield into a two-to-three swing clock. It wins by making the opponent's board disappear into exile - where this cube's 32 graveyard-interaction cards cannot reach it - and then flying over the wreckage.",
+  "strategy_es": "control — el finalizador más proactivo",
+  "identity_es": "Un control draw-go UW que responde de forma permanente y no temporal. Doce de sus veintidós cartas no-tierra interactúan, y cada respuesta masiva es asimétrica por construcción: Temporary Lockdown exilia todos los permanentes que no sean tierra de valor de maná 2 o menos, y 0 de los 11 permanentes no-tierra de esta lista están en esa línea o por debajo. Una vez despojado el tablero, cinco voladores evasivos que suman 17 de fuerza en el aire convierten un campo de batalla vacío en un reloj de dos o tres golpes. Gana haciendo que el tablero del rival desaparezca en el exilio — donde las 32 cartas de interacción con el cementerio de este cubo no pueden alcanzarlo — y luego volando por encima de los restos.",
+  "pitch_es": "Un control draw-go UW que responde de forma permanente y no temporal. Doce de sus veintidós cartas no-tierra interactúan, y cada respuesta masiva es asimétrica por construcción: Temporary Lockdown exilia todos los permanentes que no sean tierra de valor de maná 2 o menos, y 0 de los 11 permanentes no-tierra de esta lista están en esa línea o por debajo. Una vez despojado el tablero, cinco voladores evasivos que suman 17 de fuerza en el aire convierten un campo de batalla vacío en un reloj de dos o tres golpes. Gana haciendo que el tablero del rival desaparezca en el exilio — donde las 32 cartas de interacción con el cementerio de este cubo no pueden alcanzarlo — y luego volando por encima de los restos."
+}

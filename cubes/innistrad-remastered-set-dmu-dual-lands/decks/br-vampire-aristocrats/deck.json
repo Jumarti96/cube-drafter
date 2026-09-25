@@ -1,0 +1,1145 @@
+{
+  "deck_name": "br-vampire-aristocrats",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-26T02:45:00Z",
+  "format": "40-card",
+  "strategy": "P2 — BR Vampire Aristocrats",
+  "colors": "BR",
+  "identity": "A black-heavy Vampire aristocrats deck that wins without ever needing a clean attack step. Thirteen nontoken creatures feed eight sacrifice outlets, and every death is converted into life loss by Blood Artist x2 ('Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life') and The Meathook Massacre ('Whenever a creature you control dies, each opponent loses 1 life'). Falkenrath Torturer x2 is the load-bearing piece: 'Sacrifice a creature:' with no mana cost and no per-turn cap is the only free unlimited outlet in the 305-card pool, so the deck chooses when its creatures die. Ghoulish Procession x2 converts each death back into a decayed Zombie whose own 'sacrifice it at end of combat' is another death, and Village Rites x2 plus Morbid Opportunist x2 keep the hand full while the loop runs. Voldaren Bloodcaster turns every nontoken death into Blood — a resource this build, unlike the madness build, genuinely reaches five of.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "only_from": {},
+    "excluded": [],
+    "max_rare_mythic_cards": 5,
+    "rare_mythic_cards_used": [
+      "The Meathook Massacre",
+      "Sorin, Imperious Bloodlord",
+      "Voldaren Bloodcaster // Bloodbat Summoner",
+      "Invasion of Innistrad // Deluge of the Dead",
+      "Collective Brutality"
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 2,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 1.96,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -1.053,
+      "raw_target": 15.947,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 1.96,
+    "pip_demand": {
+      "B": 23,
+      "R": 4
+    },
+    "land_color_production": {
+      "B": 13,
+      "R": 5
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 85.2,
+        "prod_pct": 81.2,
+        "gap": 4,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 14.8,
+        "prod_pct": 31.2,
+        "gap": -16.4,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Tragic Slip",
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "interaction",
+      "qty": 2
+    },
+    {
+      "name": "Village Rites",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Card Draw",
+        "Sacrifice Outlet",
+        "Cards: Net-Positive",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Sacrifice Outlet"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive",
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "engine",
+      "qty": 2
+    },
+    {
+      "name": "Blood Artist",
+      "oracle_text": "Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tribal/Kindred",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Vampire",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "payoff",
+      "qty": 2
+    },
+    {
+      "name": "Indulgent Aristocrat",
+      "oracle_text": "Lifelink\n{2}, Sacrifice a creature: Put a +1/+1 counter on each Vampire you control.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Sacrifice Outlet"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tribal/Kindred",
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Sacrifice Outlet"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Vampire Noble",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "engine",
+      "qty": 2
+    },
+    {
+      "name": "Butcher Ghoul",
+      "oracle_text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Enabler/Fodder"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Zombie",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "engine",
+      "qty": 1
+    },
+    {
+      "name": "Blood Petal Celebrant",
+      "oracle_text": "This creature has first strike as long as it's attacking.\nWhen this creature dies, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Vampire",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "engine",
+      "qty": 1
+    },
+    {
+      "name": "Voldaren Bloodcaster // Bloodbat Summoner",
+      "oracle_text": "Flying\nWhenever this creature or another nontoken creature you control dies, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\nWhenever you create a Blood token, if you control five or more Blood tokens, transform this creature.\n//\nFlying\nAt the beginning of combat on your turn, up to one target Blood token you control becomes a 2/2 black Bat creature with flying and haste in addition to its other types.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation",
+        "Animate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tribal/Kindred",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Animate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Vampire Wizard",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "payoff",
+      "qty": 1
+    },
+    {
+      "name": "Ghoulish Procession",
+      "oracle_text": "Whenever one or more nontoken creatures die, create a 2/2 black Zombie creature token with decayed. This ability triggers only once each turn. (A creature with decayed can't block. When it attacks, sacrifice it at end of combat.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "engine",
+      "qty": 2
+    },
+    {
+      "name": "Morbid Opportunist",
+      "oracle_text": "Whenever one or more other creatures die, draw a card. This ability triggers only once each turn.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Rogue",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "board": "mainboard",
+      "role": "engine",
+      "qty": 2
+    },
+    {
+      "name": "Falkenrath Torturer",
+      "oracle_text": "Sacrifice a creature: This creature gains flying until end of turn. If the sacrificed creature was a Human, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Sacrifice Outlet"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Sacrifice Outlet"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Vampire",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "role": "engine",
+      "qty": 2
+    },
+    {
+      "name": "Infernal Grasp",
+      "oracle_text": "Destroy target creature. You lose 2 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "interaction",
+      "qty": 2
+    },
+    {
+      "name": "Abrade",
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "interaction",
+      "qty": 1
+    },
+    {
+      "name": "Bloodtithe Harvester",
+      "oracle_text": "When this creature enters, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\n{T}, Sacrifice this creature: Target creature gets -X/-X until end of turn, where X is twice the number of Blood tokens you control. Activate only as a sorcery.",
+      "mana_cost": "{B}{R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Vampire",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "role": "threat",
+      "qty": 2
+    },
+    {
+      "name": "The Meathook Massacre",
+      "oracle_text": "When The Meathook Massacre enters, each creature gets -X/-X until end of turn.\nWhenever a creature you control dies, each opponent loses 1 life.\nWhenever a creature an opponent controls dies, you gain 1 life.",
+      "mana_cost": "{X}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Sweeper/Board Wipe",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Legendary Enchantment",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "payoff",
+      "qty": 1
+    },
+    {
+      "name": "Sorin, Imperious Bloodlord",
+      "oracle_text": "+1: Target creature you control gains deathtouch and lifelink until end of turn. If it's a Vampire, put a +1/+1 counter on it.\n+1: You may sacrifice a Vampire. When you do, Sorin deals 3 damage to any target and you gain 3 life.\n−3: You may put a Vampire creature card from your hand onto the battlefield.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Lifegain",
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Direct Damage",
+        "Life Drain",
+        "Reanimation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Aristocrats/Sacrifice",
+          "Lifegain",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Life Drain",
+          "Reanimation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Planeswalker — Sorin",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "payoff",
+      "qty": 1
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "land",
+      "qty": 11
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "land",
+      "qty": 3
+    },
+    {
+      "name": "Geothermal Bog",
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "role": "land",
+      "qty": 2
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Invasion of Innistrad // Deluge of the Dead",
+      "oracle_text": "(As a Siege enters, choose an opponent to protect it. You and others can attack it. When it's defeated, exile it, then cast it transformed.)\nFlash\nWhen this Siege enters, target creature an opponent controls gets -13/-13 until end of turn.\n//\nWhen this enchantment enters, create two 2/2 black Zombie creature tokens.\n{2}{B}: Exile target card from a graveyard. If it was a creature card, create a 2/2 black Zombie creature token.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Targeted Removal",
+        "Token Generation",
+        "Graveyard Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation",
+          "Graveyard Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Battle — Siege",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "hate",
+      "qty": 1
+    },
+    {
+      "name": "Sever the Bloodline",
+      "oracle_text": "Exile target creature and all other creatures with the same name as that creature.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Flashback"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Flashback/GY-Cast"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Flashback"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "hate",
+      "qty": 2
+    },
+    {
+      "name": "Collective Brutality",
+      "oracle_text": "Escalate—Discard a card. (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Target opponent reveals their hand. You choose an instant or sorcery card from it. That player discards that card.\n• Target creature gets -2/-2 until end of turn.\n• Target opponent loses 2 life and you gain 2 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Graveyard",
+        "Kicker/Scaling",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Discard",
+        "Life Drain",
+        "Cards: Extra-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Kicker/Scaling",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Discard",
+          "Life Drain"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "flex",
+      "qty": 1
+    },
+    {
+      "name": "Eaten Alive",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature or pay {3}{B}.\nExile target creature or planeswalker.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "flex",
+      "qty": 2
+    },
+    {
+      "name": "Gluttonous Guest",
+      "oracle_text": "When this creature enters, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Blood token, you gain 1 life.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Lifegain",
+        "Artifacts",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Lifegain",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Vampire",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "4",
+      "board": "sideboard",
+      "role": "flex",
+      "qty": 2
+    },
+    {
+      "name": "Abrade",
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "hate",
+      "qty": 1
+    },
+    {
+      "name": "Lightning Axe",
+      "oracle_text": "As an additional cost to cast this spell, discard a card or pay {5}.\nLightning Axe deals 5 damage to target creature.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cards: Extra-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "role": "hate",
+      "qty": 1
+    }
+  ],
+  "pitch": "A black-heavy Vampire aristocrats deck that wins without ever needing a clean attack step. Thirteen nontoken creatures feed eight sacrifice outlets, and every death is converted into life loss by Blood Artist x2 ('Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life') and The Meathook Massacre ('Whenever a creature you control dies, each opponent loses 1 life'). Falkenrath Torturer x2 is the load-bearing piece: 'Sacrifice a creature:' with no mana cost and no per-turn cap is the only free unlimited outlet in the 305-card pool, so the deck chooses when its creatures die. Ghoulish Procession x2 converts each death back into a decayed Zombie whose own 'sacrifice it at end of combat' is another death, and Village Rites x2 plus Morbid Opportunist x2 keep the hand full while the loop runs. Voldaren Bloodcaster turns every nontoken death into Blood — a resource this build, unlike the madness build, genuinely reaches five of.",
+  "strategy_es": "P2 — Aristócratas Vampiros BR",
+  "identity_es": "Un mazo de aristócratas Vampiros cargado de negro que gana sin necesitar nunca un paso de ataque limpio. Trece criaturas no-ficha alimentan ocho medios de sacrificio, y cada muerte se convierte en pérdida de vida gracias a Blood Artist x2 ('Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life') y The Meathook Massacre ('Whenever a creature you control dies, each opponent loses 1 life'). Falkenrath Torturer x2 es la pieza que sostiene la estructura: 'Sacrifice a creature:' sin coste de maná y sin límite por turno es el único medio gratuito e ilimitado del pool de 305 cartas, así que el mazo elige cuándo mueren sus criaturas. Ghoulish Procession x2 convierte cada muerte de vuelta en un Zombie con decayed cuyo propio 'sacrifícalo al final del combate' es otra muerte, y Village Rites x2 más Morbid Opportunist x2 mantienen la mano llena mientras el bucle corre. Voldaren Bloodcaster convierte cada muerte no-ficha en Blood, un recurso del que esta construcción, a diferencia de la de madness, sí llega a tener cinco.",
+  "pitch_es": "Un mazo de aristócratas Vampiros cargado de negro que gana sin necesitar nunca un paso de ataque limpio. Trece criaturas no-ficha alimentan ocho medios de sacrificio, y cada muerte se convierte en pérdida de vida gracias a Blood Artist x2 ('Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life') y The Meathook Massacre ('Whenever a creature you control dies, each opponent loses 1 life'). Falkenrath Torturer x2 es la pieza que sostiene la estructura: 'Sacrifice a creature:' sin coste de maná y sin límite por turno es el único medio gratuito e ilimitado del pool de 305 cartas, así que el mazo elige cuándo mueren sus criaturas. Ghoulish Procession x2 convierte cada muerte de vuelta en un Zombie con decayed cuyo propio 'sacrifícalo al final del combate' es otra muerte, y Village Rites x2 más Morbid Opportunist x2 mantienen la mano llena mientras el bucle corre. Voldaren Bloodcaster convierte cada muerte no-ficha en Blood, un recurso del que esta construcción, a diferencia de la de madness, sí llega a tener cinco."
+}

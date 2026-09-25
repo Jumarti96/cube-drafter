@@ -1,0 +1,1152 @@
+{
+  "deck_name": "ur-jhoira-artifact-cheat",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-17T00:00:00Z",
+  "format": "40-card",
+  "strategy": "artifact-deployment control",
+  "colors": "UR",
+  "identity": "A U/R control deck that uses Jhoira, Ageless Innovator as a mana-free deployment engine on top of a shell that stands on its own. Her ability puts an artifact CARD from hand onto the battlefield at mana value up to her ingenuity counters, so the deck's eight artifact cards are all priced at MV 1-3: her first activation (X=2) can deploy four of the eight, and her second (X=4) can deploy all eight — one activation earlier than a ladder that reaches for MV 5. Each deployment is free, so the deck's real mana holds up Essence Scatter, Ertai's Scorn and Lightning Strike the same turn. Jhoira is a singleton and is seen by turn 8 in roughly 37.5% of games; in the other 62.5% this is a straightforward U/R control deck with three counterspells, a wrath, and two finishers that both get cheaper and larger as the interaction suite fills the graveyard.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "at most 5 rare+mythic cards total across mainboard and sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 4,
+    "cantrip_count": 2,
+    "accel_count": 6,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.5,
+      "reference_avg_mv": 2.5,
+      "accel": 6,
+      "adjustment": -1,
+      "raw_target": 16,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.5,
+    "pip_demand": {
+      "U": 14,
+      "R": 7
+    },
+    "land_color_production": {
+      "U": 10,
+      "R": 8
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 33.3,
+        "prod_pct": 50,
+        "gap": -16.7,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 66.7,
+        "prod_pct": 62.5,
+        "gap": 4.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Jhoira, Ageless Innovator",
+      "oracle_text": "{T}: Put two ingenuity counters on Jhoira, then you may put an artifact card with mana value X or less from your hand onto the battlefield, where X is the number of ingenuity counters on Jhoira.",
+      "mana_cost": "{U}{R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Legendary Creature — Human Artificer",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Engine/Outlet",
+        "Cheat Into Play"
+      ],
+      "role": "Engine/Outlet — deployment anchor",
+      "board": "mainboard"
+    },
+    {
+      "name": "Inscribed Tablet",
+      "oracle_text": "{1}, {T}, Sacrifice this artifact: Reveal the top five cards of your library. Put a land card from among them into your hand and the rest on the bottom of your library in a random order. If you didn't put a card into your hand this way, draw a card.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Infrastructure — land finder / Jhoira ammo MV1",
+      "board": "mainboard"
+    },
+    {
+      "name": "Inscribed Tablet",
+      "oracle_text": "{1}, {T}, Sacrifice this artifact: Reveal the top five cards of your library. Put a land card from among them into your hand and the rest on the bottom of your library in a random order. If you didn't put a card into your hand this way, draw a card.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Infrastructure — land finder / Jhoira ammo MV1",
+      "board": "mainboard"
+    },
+    {
+      "name": "Salvaged Manaworker",
+      "oracle_text": "{1}: Add one mana of any color. Activate only once each turn.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Mana Dork",
+        "Mana Rock"
+      ],
+      "role": "Infrastructure — fixing / Jhoira ammo MV2",
+      "board": "mainboard"
+    },
+    {
+      "name": "Salvaged Manaworker",
+      "oracle_text": "{1}: Add one mana of any color. Activate only once each turn.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Mana Dork",
+        "Mana Rock"
+      ],
+      "role": "Infrastructure — fixing / Jhoira ammo MV2",
+      "board": "mainboard"
+    },
+    {
+      "name": "Automatic Librarian",
+      "oracle_text": "When this creature enters, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "role": "Infrastructure — selection / Jhoira ammo MV3",
+      "board": "mainboard"
+    },
+    {
+      "name": "Automatic Librarian",
+      "oracle_text": "When this creature enters, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "role": "Infrastructure — selection / Jhoira ammo MV3",
+      "board": "mainboard"
+    },
+    {
+      "name": "Relic of Legends",
+      "oracle_text": "{T}: Add one mana of any color.\nTap an untapped legendary creature you control: Add one mana of any color.",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Legendary Matters",
+        "Infrastructure/Consistency",
+        "Mana Rock"
+      ],
+      "role": "Infrastructure — acceleration / Jhoira ammo MV3",
+      "board": "mainboard"
+    },
+    {
+      "name": "Relic of Legends",
+      "oracle_text": "{T}: Add one mana of any color.\nTap an untapped legendary creature you control: Add one mana of any color.",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Legendary Matters",
+        "Infrastructure/Consistency",
+        "Mana Rock"
+      ],
+      "role": "Infrastructure — acceleration / Jhoira ammo MV3",
+      "board": "mainboard"
+    },
+    {
+      "name": "Academy Wall",
+      "oracle_text": "Defender\nWhenever you cast an instant or sorcery spell, you may draw a card. If you do, discard a card. This ability triggers only once each turn.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Wall",
+      "rarity": "common",
+      "power": "0",
+      "toughness": "5",
+      "tags": [
+        "Spellslinger",
+        "Defender Matters",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Looting"
+      ],
+      "role": "Payload/Payoff — loot engine + 0/5 wall",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haughty Djinn",
+      "oracle_text": "Flying\nHaughty Djinn's power is equal to the number of instant and sorcery cards in your graveyard.\nInstant and sorcery spells you cast cost {1} less to cast.",
+      "mana_cost": "{1}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Djinn",
+      "rarity": "rare",
+      "power": "*",
+      "toughness": "4",
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Cost Reduction"
+      ],
+      "role": "Payload/Payoff — evasive clock + spell discount",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tolarian Terror",
+      "oracle_text": "This spell costs {1} less to cast for each instant and sorcery card in your graveyard.\nWard {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)",
+      "mana_cost": "{6}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 7,
+      "type_line": "Creature — Serpent",
+      "rarity": "common",
+      "power": "5",
+      "toughness": "5",
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Standalone Threat",
+        "Cost Reduction"
+      ],
+      "role": "Payload/Payoff — graveyard-scaled finisher",
+      "board": "mainboard"
+    },
+    {
+      "name": "Silver Scrutiny",
+      "oracle_text": "You may cast this spell as though it had flash if X is 3 or less.\nDraw X cards.",
+      "mana_cost": "{X}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Net-Positive"
+      ],
+      "role": "Payload/Payoff — instant-speed refuel",
+      "board": "mainboard"
+    },
+    {
+      "name": "Impulse",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Infrastructure — selection",
+      "board": "mainboard"
+    },
+    {
+      "name": "Thrill of Possibility",
+      "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Extra-Cost"
+      ],
+      "role": "Interaction/Disruption — instant-speed filtering",
+      "board": "mainboard"
+    },
+    {
+      "name": "Fires of Victory",
+      "oracle_text": "Kicker {2}{U} (You may pay an additional {2}{U} as you cast this spell.)\nIf this spell was kicked, draw a card. Fires of Victory deals damage to target creature or planeswalker equal to the number of cards in your hand.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Spellslinger",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage",
+        "Card Draw",
+        "Kicker"
+      ],
+      "role": "Interaction/Disruption — scaling removal, draws when kicked",
+      "board": "mainboard"
+    },
+    {
+      "name": "Yotia Declares War",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — Create a 0/2 colorless Thopter artifact creature token with flying named Ornithopter.\nII — Tap any number of untapped artifacts you control. When you do, this Saga deals that much damage to target creature or planeswalker.\nIII — Up to one target artifact you control becomes an artifact creature with base power and toughness 4/4 until end of turn.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Enchantment — Saga",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Sagas",
+        "Artifacts",
+        "Tokens",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Direct Damage"
+      ],
+      "role": "Interaction/Disruption — artifact-count removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Yotia Declares War",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — Create a 0/2 colorless Thopter artifact creature token with flying named Ornithopter.\nII — Tap any number of untapped artifacts you control. When you do, this Saga deals that much damage to target creature or planeswalker.\nIII — Up to one target artifact you control becomes an artifact creature with base power and toughness 4/4 until end of turn.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Enchantment — Saga",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Sagas",
+        "Artifacts",
+        "Tokens",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Direct Damage"
+      ],
+      "role": "Interaction/Disruption — artifact-count removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Strike",
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Strike",
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Essence Scatter",
+      "oracle_text": "Counter target creature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Interaction/Disruption — stack",
+      "board": "mainboard"
+    },
+    {
+      "name": "Essence Scatter",
+      "oracle_text": "Counter target creature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Interaction/Disruption — stack",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ertai's Scorn",
+      "oracle_text": "This spell costs {U} less to cast if an opponent cast two or more spells this turn.\nCounter target spell.",
+      "mana_cost": "{1}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Interaction/Disruption — stack",
+      "board": "mainboard"
+    },
+    {
+      "name": "The Phasing of Zhalfir",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI, II — Another target nonland permanent phases out. It can't phase in for as long as you control this Saga.\nIII — Destroy all creatures. For each creature destroyed this way, its controller creates a 2/2 black Phyrexian creature token.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Enchantment — Saga",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Sagas",
+        "Tokens",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Sweeper/Board Wipe",
+        "Token Generation",
+        "Phase Out"
+      ],
+      "role": "Interaction/Disruption — mass answer",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shivan Reef",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {U} or {R}. This land deals 1 damage to you.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "role": "Land — untapped dual",
+      "board": "mainboard"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land — dual",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land — basic",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Negate",
+      "oracle_text": "Counter target noncreature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Hate — noncreature spells; the only answer to enchantments in these colours",
+      "board": "sideboard"
+    },
+    {
+      "name": "Negate",
+      "oracle_text": "Counter target noncreature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Hate — noncreature spells; the only answer to enchantments in these colours",
+      "board": "sideboard"
+    },
+    {
+      "name": "Smash to Dust",
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target creature with defender.\n• Smash to Dust deals 1 damage to each creature your opponents control.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "role": "Hate — artifact + anti-token sweep",
+      "board": "sideboard"
+    },
+    {
+      "name": "Jaya's Firenado",
+      "oracle_text": "Jaya's Firenado deals 5 damage to target creature or planeswalker. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal",
+        "Card Selection"
+      ],
+      "role": "Flex — 5 damage removal vs large threats",
+      "board": "sideboard"
+    },
+    {
+      "name": "Jaya's Firenado",
+      "oracle_text": "Jaya's Firenado deals 5 damage to target creature or planeswalker. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal",
+        "Card Selection"
+      ],
+      "role": "Flex — 5 damage removal vs large threats",
+      "board": "sideboard"
+    },
+    {
+      "name": "Fires of Victory",
+      "oracle_text": "Kicker {2}{U} (You may pay an additional {2}{U} as you cast this spell.)\nIf this spell was kicked, draw a card. Fires of Victory deals damage to target creature or planeswalker equal to the number of cards in your hand.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Spellslinger",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage",
+        "Card Draw",
+        "Kicker"
+      ],
+      "role": "Flex — scaling removal vs evasion",
+      "board": "sideboard"
+    },
+    {
+      "name": "Impede Momentum",
+      "oracle_text": "Tap target creature and put three stun counters on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nScry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Tap Effect",
+        "Card Selection"
+      ],
+      "role": "Flex — tempo answer to ward/hexproof threats",
+      "board": "sideboard"
+    },
+    {
+      "name": "Impede Momentum",
+      "oracle_text": "Tap target creature and put three stun counters on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nScry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Tap Effect",
+        "Card Selection"
+      ],
+      "role": "Flex — tempo answer to ward/hexproof threats",
+      "board": "sideboard"
+    },
+    {
+      "name": "Frostfist Strider",
+      "oracle_text": "Ward {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)\nWhen this creature enters, tap target creature an opponent controls and put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Elemental Giant",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Interaction/Disruption",
+        "Tap Effect",
+        "Stun"
+      ],
+      "role": "Flex — 4/4 ward 2, stun on ETB vs removal-heavy decks",
+      "board": "sideboard"
+    },
+    {
+      "name": "Thrill of Possibility",
+      "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Extra-Cost"
+      ],
+      "role": "Flex — instant-speed filtering vs flood",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "A U/R control deck that uses Jhoira, Ageless Innovator as a mana-free deployment engine on top of a shell that stands on its own. Her ability puts an artifact CARD from hand onto the battlefield at mana value up to her ingenuity counters, so the deck's eight artifact cards are all priced at MV 1-3: her first activation (X=2) can deploy four of the eight, and her second (X=4) can deploy all eight — one activation earlier than a ladder that reaches for MV 5. Each deployment is free, so the deck's real mana holds up Essence Scatter, Ertai's Scorn and Lightning Strike the same turn. Jhoira is a singleton and is seen by turn 8 in roughly 37.5% of games; in the other 62.5% this is a straightforward U/R control deck with three counterspells, a wrath, and two finishers that both get cheaper and larger as the interaction suite fills the graveyard.",
+  "strategy_es": "control de despliegue de artefactos",
+  "identity_es": "Un control U/R que usa Jhoira, Ageless Innovator como motor de despliegue sin maná sobre un armazón que se sostiene solo. Su habilidad pone una CARTA de artefacto de la mano en el campo de batalla con valor de maná hasta sus contadores de ingenio, así que las ocho cartas de artefacto del mazo están todas tarifadas a MV 1-3: su primera activación (X=2) puede desplegar cuatro de las ocho, y la segunda (X=4) puede desplegarlas todas, un turno antes que una escalera que aspire a MV 5. Cada despliegue es gratuito, así que el maná real del mazo reserva Essence Scatter, Ertai's Scorn y Lightning Strike ese mismo turno. Jhoira es de copia única y se ve para el turno 8 en aproximadamente el 37,5% de las partidas; en el otro 62,5% esto es un control U/R directo con tres contrahechizos, un barrido y dos finalizadores que se vuelven más baratos y más grandes a medida que el paquete de interacción llena el cementerio.",
+  "pitch_es": "Un control U/R que usa Jhoira, Ageless Innovator como motor de despliegue sin maná sobre un armazón que se sostiene solo. Su habilidad pone una CARTA de artefacto de la mano en el campo de batalla con valor de maná hasta sus contadores de ingenio, así que las ocho cartas de artefacto del mazo están todas tarifadas a MV 1-3: su primera activación (X=2) puede desplegar cuatro de las ocho, y la segunda (X=4) puede desplegarlas todas, un turno antes que una escalera que aspire a MV 5. Cada despliegue es gratuito, así que el maná real del mazo reserva Essence Scatter, Ertai's Scorn y Lightning Strike ese mismo turno. Jhoira es de copia única y se ve para el turno 8 en aproximadamente el 37,5% de las partidas; en el otro 62,5% esto es un control U/R directo con tres contrahechizos, un barrido y dos finalizadores que se vuelven más baratos y más grandes a medida que el paquete de interacción llena el cementerio."
+}

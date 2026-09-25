@@ -7,7 +7,13 @@ import {
   StyleSheet,
   pdf,
 } from '@react-pdf/renderer'
-import { isLandCard, resolveImageUrl } from './cubeData.js'
+import {
+  getMainboardCards,
+  getSideboardCards,
+  groupCardsAcrossBoards,
+  isLandCard,
+  resolveImageUrl,
+} from './cubeData.js'
 
 const RARITY_ORDER = { common: 0, uncommon: 1, rare: 2, mythic: 3 }
 const RARITY_SECTIONS = ['common', 'uncommon', 'rare', 'mythic']
@@ -79,6 +85,33 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
     borderRadius: 3,
   },
+  // Amber, so "which board" reads as a different axis from the copy count.
+  sideboardBadge: {
+    position: 'absolute',
+    top: 2,
+    left: 2,
+    backgroundColor: '#b8860b',
+    color: '#fff',
+    fontSize: 8,
+    fontFamily: 'Helvetica-Bold',
+    paddingHorizontal: 4,
+    paddingVertical: 2,
+    borderRadius: 3,
+  },
+  cardCellSideboard: {
+    borderColor: '#b8860b',
+    backgroundColor: '#fdf8ec',
+  },
+  cardMetaSideboard: {
+    color: '#8a6508',
+    fontFamily: 'Helvetica-Bold',
+  },
+  legend: {
+    fontSize: 8,
+    color: '#8a6508',
+    marginTop: -12,
+    marginBottom: 16,
+  },
   cardName: {
     fontSize: 7,
     textAlign: 'center',
@@ -140,30 +173,16 @@ function compareSearchCards(a, b) {
   return (a.name || '').localeCompare(b.name || '')
 }
 
-function countGroupedCards(cards) {
-  const map = new Map()
-  for (const card of cards) {
-    const name = card.name || ''
-    if (!name) continue
-    if (map.has(name)) {
-      map.get(name).count += 1
-    } else {
-      map.set(name, { ...card, count: 1 })
-    }
-  }
-  return [...map.values()]
-}
-
 export function buildSearchList(deckData) {
-  const mainboard = deckData.mainboard || []
-  const allCards = [
-    ...mainboard.filter(c => !c.board || c.board === 'mainboard'),
-    ...mainboard.filter(c => c.board === 'sideboard'),
-    ...(deckData.sideboard || []),
-  ]
-
-  const grouped = countGroupedCards(allCards).map(card => ({
+  // One entry per card so the deck is pulled from the cube in a single pass,
+  // but keeping the per-board split so the pile can be separated afterwards.
+  const grouped = groupCardsAcrossBoards({
+    mainboard: getMainboardCards(deckData),
+    sideboard: getSideboardCards(deckData),
+  }).map(card => ({
     ...card,
+    mainCount: card.counts.mainboard || 0,
+    sideCount: card.counts.sideboard || 0,
     imageSmallUrl: resolveSmallImageUrl(card),
     colorBucket: colorBucket(card),
   }))
@@ -205,8 +224,20 @@ function CardCell({ card, t }) {
     : t('pdf.copy_other', { count })
   const meta = t('pdf.meta', { cmc: card.cmc ?? 0, color: colorLabel, copies })
 
+  const main = card.mainCount ?? 0
+  const side = card.sideCount ?? 0
+  const sideboardOnly = side > 0 && main === 0
+  const boardNote = side === 0
+    ? ''
+    : sideboardOnly
+      ? t('pdf.boardSideboardOnly')
+      : t('pdf.boardSplit', { main, side })
+  const badgeText = sideboardOnly
+    ? t('pdf.badgeSideboardAll')
+    : t('pdf.badgeSideboardSome', { side })
+
   return (
-    <View style={styles.cardCell} wrap={false}>
+    <View style={[styles.cardCell, sideboardOnly && styles.cardCellSideboard]} wrap={false}>
       <View style={styles.imageWrapper}>
         {imageUrl ? (
           <Image src={imageUrl} style={styles.cardImage} />
@@ -215,10 +246,14 @@ function CardCell({ card, t }) {
             <Text style={styles.noImageText}>{card.name}</Text>
           </View>
         )}
+        {side > 0 && <Text style={styles.sideboardBadge}>{badgeText}</Text>}
         <Text style={styles.countBadge}>{count}x</Text>
       </View>
       <Text style={styles.cardName}>{card.name}</Text>
       <Text style={styles.cardMeta}>{meta}</Text>
+      {boardNote !== '' && (
+        <Text style={[styles.cardMeta, styles.cardMetaSideboard]}>{boardNote}</Text>
+      )}
     </View>
   )
 }
@@ -226,14 +261,17 @@ function CardCell({ card, t }) {
 function SearchPdfDocument({ deckName, cards, t }) {
   const byRarity = groupByRarity(cards)
   const totalCopies = cards.reduce((sum, c) => sum + c.count, 0)
+  const mainCopies = cards.reduce((sum, c) => sum + (c.mainCount ?? 0), 0)
+  const sideCopies = cards.reduce((sum, c) => sum + (c.sideCount ?? 0), 0)
 
   return (
     <Document title={t('pdf.docTitle', { deck: deckName })}>
       <Page size="A4" style={styles.page}>
         <Text style={styles.title}>{deckName}</Text>
         <Text style={styles.subtitle}>
-          {t('pdf.subtitle', { count: totalCopies })}
+          {t('pdf.subtitle', { count: totalCopies, main: mainCopies, side: sideCopies })}
         </Text>
+        {sideCopies > 0 && <Text style={styles.legend}>{t('pdf.legend')}</Text>}
 
         {RARITY_SECTIONS.map(rarity => {
           const sectionCards = byRarity[rarity]

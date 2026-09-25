@@ -1,0 +1,612 @@
+{
+  "deck_name": "wu-wingmantle-mill",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T14:00:57Z",
+  "format": "40-card",
+  "strategy": "control — Wingmantle Chaplain + Coral Colony defenders",
+  "colors": "WU",
+  "identity": "A WU Defenders control deck built on twelve defender bodies - every defender the two colours can cast, each at its maximum two copies. Two payoffs read that count and convert it two different ways: Wingmantle Chaplain, which has Defender and counts itself, turning each subsequent defender ETB into a 1/1 flying Bird; and Coral Colony, whose {1}{U},{T} mills the opponent for the number of defenders controlled. At 40 cards that second line is not a consolation prize - on a normal one-defender-per-turn curve a single Coral Colony decks the opponent on turn 8 and two deck them on turn 6. Nine interaction spells and a counterspell buy the turns, Academy Wall's 0/5 body is the largest blocker the archetype has in any colour, and Shield-Wall Sentinel fetches whichever payoff the game is missing.",
+  "restrictions": {
+    "commons_uncommons_max_2": "PASS - no card exceeds 2 copies counting mainboard and sideboard jointly (Runic Shot 1+1=2, Essence Scatter 1+1=2); verified by cube_search.get_max_copies against per_rarity {common:2, uncommon:2, rare:1, mythic:1}.",
+    "rares_mythics_max_1_copy": "PASS - Serra Paragon x1, Serra Redeemer x1, Adarkar Wastes x1.",
+    "rares_mythics_max_5_total_MB_plus_SB": "PASS - 3 total (Serra Paragon mythic, Serra Redeemer rare, Adarkar Wastes rare). Sideboard contains 0 rares or mythics. Two slots unspent.",
+    "all_cards_from_cube_pool": "PASS - every name matched by exact string against the working pool cache.",
+    "basics_format_supplied": "Plains x9 and Island x5 are format-supplied; the cube list contains no basics.",
+    "colour_usability": "PASS - every nonland card returns a non-None effective_cost.best_mode against core_colors [W,U] with an empty splash. Two cards print off the core axis and are legal by mode: Runic Shot ({U,W}, its {U} kicker IS payable here, unlike in the WB list, so it may scry 2) and Rona's Vortex ({B,U}, cast for {U} with the {2}{B} kicker declined)."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.57,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.093,
+      "raw_target": 17.093,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.57,
+    "pip_demand": {
+      "W": 16,
+      "U": 7
+    },
+    "land_color_production": {
+      "W": 12,
+      "U": 8
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 30.4,
+        "prod_pct": 47.1,
+        "gap": -16.7,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 69.6,
+        "prod_pct": 70.6,
+        "gap": -1,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Clockwork Drawbridge",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Enabler - defender count plus repeatable tapper",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Wall",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Defender\n{2}{W}, {T}: Tap target creature.",
+      "power": "0",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "13"
+    },
+    {
+      "name": "Walking Bulwark",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Payoff/Engine - converts defenders into attackers by toughness",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\n{2}: Until end of turn, target creature with defender gains haste, can attack as though it didn't have defender, and assigns combat damage equal to its toughness rather than its power. Activate only as a sorcery.",
+      "power": "0",
+      "toughness": "3",
+      "set": "tdc",
+      "collector_number": "334"
+    },
+    {
+      "name": "Shore Up",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Interaction - hexproof protection; also untaps Coral Colony for a 2nd mill",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature you control gets +1/+1 and gains hexproof until end of turn. Untap it. (It can't be the target of spells or abilities your opponents control.)",
+      "power": null,
+      "toughness": null,
+      "set": "blb",
+      "collector_number": "69"
+    },
+    {
+      "name": "Coral Colony",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Payoff - non-combat mill kill",
+      "cmc": 2,
+      "type_line": "Creature — Wall",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\n{1}{U}, {T}: Target player mills X cards, where X is the number of creatures you control with defender. (To mill a card, a player puts the top card of their library into their graveyard.)",
+      "power": "1",
+      "toughness": "4",
+      "set": "dmu",
+      "collector_number": "45"
+    },
+    {
+      "name": "Impede Momentum",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Interaction - tap plus three stun counters, and makes a tapped target",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Tap target creature and put three stun counters on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nScry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "54"
+    },
+    {
+      "name": "Artillery Blast",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Interaction - Domain X=3 damage to a tapped creature",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Domain — Artillery Blast deals X damage to target tapped creature, where X is 1 plus the number of basic land types among lands you control.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "6"
+    },
+    {
+      "name": "Destroy Evil",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Interaction - large-creature or enchantment removal",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "17"
+    },
+    {
+      "name": "Essence Scatter",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Interaction - counters a creature spell; the mainboard stack answer",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target creature spell.",
+      "power": null,
+      "toughness": null,
+      "set": "sos",
+      "collector_number": "47"
+    },
+    {
+      "name": "Academy Wall",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Enabler/Engine - 0/5 wall, largest in the archetype, plus loot trigger",
+      "cmc": 3,
+      "type_line": "Creature — Wall",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Defender\nWhenever you cast an instant or sorcery spell, you may draw a card. If you do, discard a card. This ability triggers only once each turn.",
+      "power": "0",
+      "toughness": "5",
+      "set": "dmu",
+      "collector_number": "41"
+    },
+    {
+      "name": "Citizen's Arrest",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Interaction - exile creature or planeswalker",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "11"
+    },
+    {
+      "name": "Stall for Time",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Interaction - taps two at instant speed, cantrips, makes tapped targets",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nTap up to two target creatures. If this spell was kicked, put a stun counter on each of those creatures. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nDraw a card.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "34"
+    },
+    {
+      "name": "Wingmantle Chaplain",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Payoff - primary clock generator",
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\nWhen this creature enters, create a 1/1 white Bird creature token with flying for each creature with defender you control.\nWhenever another creature you control with defender enters, create a 1/1 white Bird creature token with flying.",
+      "power": "0",
+      "toughness": "3",
+      "set": "tdc",
+      "collector_number": "141"
+    },
+    {
+      "name": "Shield-Wall Sentinel",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Enabler/Infrastructure - defender count plus defender tutor",
+      "cmc": 4,
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Defender\nWhen this creature enters, you may search your library for a creature card with defender, reveal it, put it into your hand, then shuffle.",
+      "power": "1",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "238"
+    },
+    {
+      "name": "Serra Paragon",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Threat/Engine - flying body plus per-turn permanent recursion",
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Flying\nOnce during each of your turns, you may play a land from your graveyard or cast a permanent spell with mana value 3 or less from your graveyard. If you do, it gains \"When this permanent is put into a graveyard from the battlefield, exile it and you gain 2 life.\"",
+      "power": "3",
+      "toughness": "4",
+      "set": "soc",
+      "collector_number": "169"
+    },
+    {
+      "name": "Serra Redeemer",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Threat - flying blocker and Bird multiplier",
+      "cmc": 5,
+      "type_line": "Creature — Angel Soldier",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\nWhenever another creature you control with power 2 or less enters, put two +1/+1 counters on that creature.",
+      "power": "2",
+      "toughness": "4",
+      "set": "blb",
+      "collector_number": "387"
+    },
+    {
+      "name": "Plains",
+      "qty": 9,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "set": "DMU",
+      "collector_number": ""
+    },
+    {
+      "name": "Island",
+      "qty": 5,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "set": "DMU",
+      "collector_number": ""
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "249"
+    },
+    {
+      "name": "Adarkar Wastes",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Land",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {W} or {U}. This land deals 1 damage to you.",
+      "power": null,
+      "toughness": null,
+      "set": "eoc",
+      "collector_number": "147"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Negate",
+      "qty": 1,
+      "board": "sideboard",
+      "role": "Sideboard interaction - counters a noncreature spell",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target noncreature spell.",
+      "power": null,
+      "toughness": null,
+      "set": "tmt",
+      "collector_number": "47"
+    },
+    {
+      "name": "Soaring Drake",
+      "qty": 1,
+      "board": "sideboard",
+      "role": "Sideboard body - 2/3 flier, the structural answer to evasion",
+      "cmc": 3,
+      "type_line": "Creature — Drake",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying",
+      "power": "2",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "66"
+    },
+    {
+      "name": "Prayer of Binding",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard interaction - flash exile any nonland permanent",
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "power": null,
+      "toughness": null,
+      "set": "fdn",
+      "collector_number": "739"
+    },
+    {
+      "name": "Rona's Vortex",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard interaction - 1-mana instant bounce",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nReturn target creature or planeswalker you don't control to its owner's hand. If this spell was kicked, put that permanent on the bottom of its owner's library instead.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "63"
+    },
+    {
+      "name": "Protect the Negotiators",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard interaction - board-scaling counterspell",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nIf this spell was kicked, create a 1/1 white Soldier creature token.\nCounter target spell unless its controller pays {1} for each creature you control.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "62"
+    },
+    {
+      "name": "Essence Scatter",
+      "qty": 1,
+      "board": "sideboard",
+      "role": "Interaction - counters a creature spell; the mainboard stack answer",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target creature spell.",
+      "power": null,
+      "toughness": null,
+      "set": "sos",
+      "collector_number": "47"
+    },
+    {
+      "name": "Runic Shot",
+      "qty": 1,
+      "board": "sideboard",
+      "role": "Sideboard interaction - destroys a tapped creature; kicker {U} scries 2",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {U} (You may pay an additional {U} as you cast this spell.)\nDestroy target tapped creature. If this spell was kicked, scry 2.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "30"
+    }
+  ],
+  "pitch": "A WU Defenders control deck built on twelve defender bodies - every defender the two colours can cast, each at its maximum two copies. Two payoffs read that count and convert it two different ways: Wingmantle Chaplain, which has Defender and counts itself, turning each subsequent defender ETB into a 1/1 flying Bird; and Coral Colony, whose {1}{U},{T} mills the opponent for the number of defenders controlled. At 40 cards that second line is not a consolation prize - on a normal one-defender-per-turn curve a single Coral Colony decks the opponent on turn 8 and two deck them on turn 6. Nine interaction spells and a counterspell buy the turns, Academy Wall's 0/5 body is the largest blocker the archetype has in any colour, and Shield-Wall Sentinel fetches whichever payoff the game is missing.",
+  "strategy_es": "control — Wingmantle Chaplain + defensores con Coral Colony",
+  "identity_es": "Un control de Defensores WU construido sobre doce cuerpos con defensor: todos los defensores que pueden lanzar los dos colores, cada uno a su máximo de dos copias. Dos recompensas leen ese recuento y lo convierten de dos formas distintas: Wingmantle Chaplain, que tiene Defensor y se cuenta a sí misma, convirtiendo cada entrada posterior de defensor en un Pájaro volador 1/1; y Coral Colony, cuyo {1}{U},{T} muele al rival por el número de defensores controlados. Con 40 cartas esa segunda línea no es un premio de consolación: con una curva normal de un defensor por turno una sola Coral Colony deckea al rival en el turno 8 y dos lo hacen en el turno 6. Nueve hechizos de interacción y un contrahechizo compran los turnos, el cuerpo 0/5 de Academy Wall es el mayor bloqueador que tiene el arquetipo en cualquier color, y Shield-Wall Sentinel busca la recompensa que le falte a la partida.",
+  "pitch_es": "Un control de Defensores WU construido sobre doce cuerpos con defensor: todos los defensores que pueden lanzar los dos colores, cada uno a su máximo de dos copias. Dos recompensas leen ese recuento y lo convierten de dos formas distintas: Wingmantle Chaplain, que tiene Defensor y se cuenta a sí misma, convirtiendo cada entrada posterior de defensor en un Pájaro volador 1/1; y Coral Colony, cuyo {1}{U},{T} muele al rival por el número de defensores controlados. Con 40 cartas esa segunda línea no es un premio de consolación: con una curva normal de un defensor por turno una sola Coral Colony deckea al rival en el turno 8 y dos lo hacen en el turno 6. Nueve hechizos de interacción y un contrahechizo compran los turnos, el cuerpo 0/5 de Academy Wall es el mayor bloqueador que tiene el arquetipo en cualquier color, y Shield-Wall Sentinel busca la recompensa que le falte a la partida."
+}

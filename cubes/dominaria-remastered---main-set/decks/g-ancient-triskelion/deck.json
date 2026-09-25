@@ -1,0 +1,1028 @@
+{
+  "deck_name": "g-ancient-triskelion",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-31T16:28:20Z",
+  "format": "40-card",
+  "strategy": "combo",
+  "colors": "G",
+  "identity": "A mono-green combo-midrange deck built on a two-card engine. Forgotten Ancient reads 'Whenever a player casts a spell, you may put a +1/+1 counter on this creature' - it grows off both players' spells - and at each of your upkeeps it may 'move any number of +1/+1 counters from this creature onto other creatures'. Moved onto Triskelion, every counter becomes 'Remove a +1/+1 counter from this creature: It deals 1 damage to any target', an instant-speed drain with no tap symbol and no timing restriction. Because both halves are single-copy rares, redundancy is built rather than assumed: Worldly Tutor finds either half (both are creature cards), and Gamekeeper turns that top-of-library placement into a free deploy - 'reveal cards from the top of your library until you reveal a creature card. Put that card onto the battlefield' - which is how a {6} kill piece arrives without paying {6}. Dragon Blood keeps feeding Triskelion if the Ancient is answered, Sylvan Library keeps the hand full, and Kamahl, Fist of Krosa ends games on bodies when the engine never assembles. Mono-green buys perfect mana and deep ramp at the cost of having no removal at all, so Wall of Junk, Icy Manipulator and Lull buy turns rather than trading.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "deck_level_cap": "max 5 rare+mythic total across mainboard + sideboard",
+    "basics": "unlimited, format-supplied"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 6,
+    "cantrip_count": 0,
+    "accel_count": 6,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.96,
+      "reference_avg_mv": 2.5,
+      "accel": 6,
+      "adjustment": -0.387,
+      "raw_target": 16.613,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.96,
+    "pip_demand": {
+      "G": 18
+    },
+    "land_color_production": {
+      "G": 17
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Forgotten Ancient",
+      "oracle_text": "Whenever a player casts a spell, you may put a +1/+1 counter on this creature.\nAt the beginning of your upkeep, you may move any number of +1/+1 counters from this creature onto other creatures.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Spellslinger",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Counter Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elemental",
+      "rarity": "rare",
+      "power": "0",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine (counter accumulator)"
+    },
+    {
+      "name": "Triskelion",
+      "oracle_text": "This creature enters with three +1/+1 counters on it.\nRemove a +1/+1 counter from this creature: It deals 1 damage to any target.",
+      "mana_cost": "{6}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine (kill outlet)"
+    },
+    {
+      "name": "Dragon Blood",
+      "oracle_text": "{3}, {T}: Put a +1/+1 counter on target creature.",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Engine/Outlet",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine (counter source)"
+    },
+    {
+      "name": "Invigorating Boon",
+      "oracle_text": "Whenever a player cycles a card, you may put a +1/+1 counter on target creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine (counter source)"
+    },
+    {
+      "name": "Worldly Tutor",
+      "oracle_text": "Search your library for a creature card, reveal it, then shuffle and put the card on top.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Tutor"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Tutor"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine (finds either piece)"
+    },
+    {
+      "name": "Gamekeeper",
+      "oracle_text": "When this creature dies, you may exile it. If you do, reveal cards from the top of your library until you reveal a creature card. Put that card onto the battlefield and put all other cards revealed this way into your graveyard.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Self-Mill",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Engine/Outlet",
+        "Reanimation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Reanimator",
+          "Self-Mill",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Reanimation",
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elf",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine (deploys the kill piece)"
+    },
+    {
+      "name": "Sylvan Library",
+      "oracle_text": "At the beginning of your draw step, you may draw two additional cards. If you do, choose two cards in your hand drawn this turn. For each of those cards, pay 4 life or put the card on top of your library.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Card Selection"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Infrastructure (card draw)"
+    },
+    {
+      "name": "Wild Growth",
+      "oracle_text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional {G}.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp"
+        ],
+        "resource_exchange": [
+          "Mana: Net-Positive"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Infrastructure (ramp)"
+    },
+    {
+      "name": "Nature's Lore",
+      "oracle_text": "Search your library for a Forest card, put that card onto the battlefield, then shuffle.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Landfall",
+        "Infrastructure/Consistency",
+        "Mana Ramp",
+        "Land Fetch",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Landfall"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Land Fetch"
+        ],
+        "resource_exchange": [
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Infrastructure (ramp)"
+    },
+    {
+      "name": "Elvish Spirit Guide",
+      "oracle_text": "Exile this creature from your hand: Add {G}.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp"
+        ],
+        "resource_exchange": [
+          "Mana: Net-Positive"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Creature — Elf Spirit",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Infrastructure (burst mana)"
+    },
+    {
+      "name": "Kamahl, Fist of Krosa",
+      "oracle_text": "{G}: Target land becomes a 1/1 creature until end of turn. It's still a land.\n{2}{G}{G}{G}: Creatures you control get +3/+3 and gain trample until end of turn.",
+      "mana_cost": "{4}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Tokens",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Token Generation",
+        "Anthem Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Anthem Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Legendary Creature — Human Druid",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat (backup wincon)"
+    },
+    {
+      "name": "Kavu Primarch",
+      "oracle_text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nIf this creature was kicked, it enters with four +1/+1 counters on it.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Kicker/Scaling",
+        "Standalone Threat",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Kavu",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat (body / convoke fodder / counter destination)"
+    },
+    {
+      "name": "Call of the Herd",
+      "oracle_text": "Create a 3/3 green Elephant creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Flashback/GY-Cast",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Flashback"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat (two bodies per card)"
+    },
+    {
+      "name": "Wall of Junk",
+      "oracle_text": "Defender (This creature can't attack.)\nWhen this creature blocks, return it to its owner's hand at end of combat. (Return it only if it's on the battlefield.)",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Defender Matters",
+        "Interaction/Disruption"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact Creature — Wall",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "7",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction (recurring blocker)"
+    },
+    {
+      "name": "Lull",
+      "oracle_text": "Prevent all combat damage that would be dealt this turn.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Fog",
+        "Card Draw",
+        "Cycling"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Fog",
+          "Card Draw",
+          "Cycling"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction (fog)"
+    },
+    {
+      "name": "Icy Manipulator",
+      "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Tap Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Tap Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 15,
+      "role": "Land"
+    },
+    {
+      "name": "Slippery Karst",
+      "oracle_text": "This land enters tapped.\n{T}: Add {G}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Cycling Matters",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cycling"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Cycling Matters",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Cycling"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate: graveyard",
+      "when_to_board": "Against the cube's 45 graveyard-interaction cards - the largest threat class. The cube's only graveyard hate."
+    },
+    {
+      "name": "Break Asunder",
+      "oracle_text": "Destroy target artifact or enchantment.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "{2}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cycling"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Cycling"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate: artifacts/enchantments",
+      "when_to_board": "Against the cube's 24 artifacts / 33 enchantments. Both copies board in; this is the cube's only mono-green artifact answer, so 2 is the pool-imposed ceiling, not a choice."
+    },
+    {
+      "name": "Emerald Charm",
+      "oracle_text": "Choose one —\n• Untap target permanent.\n• Destroy target non-Aura enchantment.\n• Target creature loses flying until end of turn.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Untap"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Untap"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate: non-Aura enchantments / flex",
+      "when_to_board": "Modal - destroys a NON-AURA enchantment (18 of the cube's 33 enchantments qualify), untaps a permanent, or strips flying from a blocker."
+    },
+    {
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Spider",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Flex: anti-evasion",
+      "when_to_board": "Against the cube's 42 evasion cards - mono-green's only Reach body, and the mainboard answers fliers only via Triskelion and Icy Manipulator."
+    },
+    {
+      "name": "Sandstorm",
+      "oracle_text": "Sandstorm deals 1 damage to each attacking creature.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Flex: anti-swarm",
+      "when_to_board": "Against token/weenie swarms. Note: the dossier does not quantify a token/swarm class, so this slot is sized by inspection of the cube's token makers rather than by a measured density."
+    },
+    {
+      "name": "Lull",
+      "oracle_text": "Prevent all combat damage that would be dealt this turn.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Fog",
+        "Card Draw",
+        "Cycling"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Fog",
+          "Card Draw",
+          "Cycling"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Flex: fog",
+      "when_to_board": "Second copy against fast aggro while the engine assembles."
+    }
+  ],
+  "pitch": "A mono-green combo-midrange deck built on a two-card engine. Forgotten Ancient reads 'Whenever a player casts a spell, you may put a +1/+1 counter on this creature' - it grows off both players' spells - and at each of your upkeeps it may 'move any number of +1/+1 counters from this creature onto other creatures'. Moved onto Triskelion, every counter becomes 'Remove a +1/+1 counter from this creature: It deals 1 damage to any target', an instant-speed drain with no tap symbol and no timing restriction. Because both halves are single-copy rares, redundancy is built rather than assumed: Worldly Tutor finds either half (both are creature cards), and Gamekeeper turns that top-of-library placement into a free deploy - 'reveal cards from the top of your library until you reveal a creature card. Put that card onto the battlefield' - which is how a {6} kill piece arrives without paying {6}. Dragon Blood keeps feeding Triskelion if the Ancient is answered, Sylvan Library keeps the hand full, and Kamahl, Fist of Krosa ends games on bodies when the engine never assembles. Mono-green buys perfect mana and deep ramp at the cost of having no removal at all, so Wall of Junk, Icy Manipulator and Lull buy turns rather than trading.",
+  "strategy_es": "combo",
+  "identity_es": "Un mazo mono verde de combo-midrange construido sobre un motor de dos cartas. Forgotten Ancient dice 'Whenever a player casts a spell, you may put a +1/+1 counter on this creature' — crece con los hechizos de ambos jugadores — y en cada uno de tus mantenimientos puede 'move any number of +1/+1 counters from this creature onto other creatures'. Movido a Triskelion, cada contador se convierte en 'Remove a +1/+1 counter from this creature: It deals 1 damage to any target', un drenaje a velocidad de instantáneo sin símbolo de giro ni restricción de tiempo. Como ambas mitades son raras de una sola copia, la redundancia se construye en vez de darse por supuesta: Worldly Tutor encuentra cualquiera de las dos (ambas son cartas de criatura), y Gamekeeper convierte esa colocación en lo alto de la biblioteca en un despliegue gratis — 'reveal cards from the top of your library until you reveal a creature card. Put that card onto the battlefield' — que es como llega una pieza de {6} sin pagar {6}. Dragon Blood sigue alimentando a Triskelion si responden al Ancient, Sylvan Library mantiene la mano llena, y Kamahl, Fist of Krosa termina partidas a base de cuerpos cuando el motor nunca se ensambla. El mono verde compra maná perfecto y aceleración profunda a cambio de no tener eliminación alguna, así que Wall of Junk, Icy Manipulator y Lull compran turnos en lugar de intercambiar.",
+  "pitch_es": "Un mazo mono verde de combo-midrange construido sobre un motor de dos cartas. Forgotten Ancient dice 'Whenever a player casts a spell, you may put a +1/+1 counter on this creature' — crece con los hechizos de ambos jugadores — y en cada uno de tus mantenimientos puede 'move any number of +1/+1 counters from this creature onto other creatures'. Movido a Triskelion, cada contador se convierte en 'Remove a +1/+1 counter from this creature: It deals 1 damage to any target', un drenaje a velocidad de instantáneo sin símbolo de giro ni restricción de tiempo. Como ambas mitades son raras de una sola copia, la redundancia se construye en vez de darse por supuesta: Worldly Tutor encuentra cualquiera de las dos (ambas son cartas de criatura), y Gamekeeper convierte esa colocación en lo alto de la biblioteca en un despliegue gratis — 'reveal cards from the top of your library until you reveal a creature card. Put that card onto the battlefield' — que es como llega una pieza de {6} sin pagar {6}. Dragon Blood sigue alimentando a Triskelion si responden al Ancient, Sylvan Library mantiene la mano llena, y Kamahl, Fist of Krosa termina partidas a base de cuerpos cuando el motor nunca se ensambla. El mono verde compra maná perfecto y aceleración profunda a cambio de no tener eliminación alguna, así que Wall of Junk, Icy Manipulator y Lull compran turnos en lugar de intercambiar."
+}

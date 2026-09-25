@@ -1,0 +1,1117 @@
+{
+  "deck_name": "wb-shed-and-beat",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-10T04:09:51Z",
+  "format": "40-card",
+  "strategy": "blight aggro / above-rate bodies that shed their own counters",
+  "colors": "WB",
+  "identity": "A W/B aggro deck that buys above-rate bodies with -1/-1 counters and then takes the counters back. Stated at true sizes, because the counters are real: Encumbered Reejerey costs {1}{W} and enters as a 2/1, then removes a counter every time it becomes tapped — which is every attack — so it swings as a 3/2, then 4/3, then 5/4 while it is already killing you. Burdened Stoneback enters as a 2/2 and converts each counter into indestructibility for an attacker; Creakwood Safewright enters as a 2/2 and becomes a 5/5 one counter per end step once any Elf card reaches the graveyard; Reluctant Dounguard sheds every time another creature enters. Rhys, the Evermore clears a whole creature's counters in one activation. The removal suite runs the same trick in reverse: Requiting Hex and Bogslither's Embrace discount themselves by placing a counter, and Crib Swap and Nameless Inversion are changelings, so casting them buries an Elf card and switches Creakwood Safewright on for the rest of the game.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2,
+        "rare": 1,
+        "mythic": 1
+      },
+      "only_from": {},
+      "excluded": []
+    },
+    "extra_build_constraint": "at most 5 rare+mythic cards total across mainboard and sideboard",
+    "status": "PASS",
+    "rare_mythic_used": "5 rare/mythic across MB+SB: ['Abigale, Eloquent First-Year', 'Adept Watershaper', 'Kinscaer Sentry', 'Moonshadow', 'Rhys, the Evermore']"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.21,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": -0.387,
+      "raw_target": 16.613,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.21,
+    "pip_demand": {
+      "B": 11,
+      "W": 12
+    },
+    "land_color_production": {
+      "W": 9,
+      "B": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 47.8,
+        "prod_pct": 56.2,
+        "gap": -8.4,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 52.2,
+        "prod_pct": 56.2,
+        "gap": -4,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Moonshadow",
+      "oracle_text": "Menace\nThis creature enters with six -1/-1 counters on it.\nWhenever one or more permanent cards are put into your graveyard from anywhere while this creature has a -1/-1 counter on it, remove a -1/-1 counter from this creature.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Self-Mill",
+        "Graveyard",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Self-Mill",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Elemental",
+      "rarity": "mythic",
+      "power": "7",
+      "toughness": "7",
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Bile-Vial Boggart",
+      "oracle_text": "When this creature dies, put a -1/-1 counter on up to one target creature.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Goblin Assassin",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "Enabler/Fodder"
+    },
+    {
+      "name": "Encumbered Reejerey",
+      "oracle_text": "This creature enters with three -1/-1 counters on it.\nWhenever this creature becomes tapped while it has a -1/-1 counter on it, remove a -1/-1 counter from it.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Enabler/Fodder",
+        "Counter Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "uncommon",
+      "power": "5",
+      "toughness": "4",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Burdened Stoneback",
+      "oracle_text": "This creature enters with two -1/-1 counters on it.\n{1}{W}, Remove a counter from this creature: Target creature gains indestructible until end of turn. Activate only as a sorcery. (Damage and effects that say \"destroy\" don't destroy it. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Giant Warrior",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Creakwood Safewright",
+      "oracle_text": "This creature enters with three -1/-1 counters on it.\nAt the beginning of your end step, if there is an Elf card in your graveyard and this creature has a -1/-1 counter on it, remove a -1/-1 counter from this creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Enabler/Fodder",
+        "Counter Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Graveyard",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Elf Warrior",
+      "rarity": "uncommon",
+      "power": "5",
+      "toughness": "5",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Kinscaer Sentry",
+      "oracle_text": "First strike, lifelink\nWhenever this creature attacks, you may put a creature card with mana value X or less from your hand onto the battlefield tapped and attacking, where X is the number of attacking creatures you control.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Cheat Into Play"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Cheat Into Play"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Kithkin Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Abigale, Eloquent First-Year",
+      "oracle_text": "Flying, first strike, lifelink\nWhen Abigale enters, up to one other target creature loses all abilities. Put a flying counter, a first strike counter, and a lifelink counter on that creature.",
+      "mana_cost": "{W/B}{W/B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Ability Removal",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Ability Removal",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Legendary Creature — Bird Bard",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Reluctant Dounguard",
+      "oracle_text": "This creature enters with two -1/-1 counters on it.\nWhenever another creature you control enters while this creature has a -1/-1 counter on it, remove a -1/-1 counter from this creature.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Kithkin Soldier",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Retched Wretch",
+      "oracle_text": "When this creature dies, if it had a -1/-1 counter on it, return it to the battlefield under its owner's control and it loses all abilities.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Enabler/Fodder",
+        "Self-Recursion"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Aristocrats/Sacrifice",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Self-Recursion"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Goblin",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Heirloom Auntie",
+      "oracle_text": "This creature enters with two -1/-1 counters on it.\nWhenever another creature you control dies, surveil 1, then remove a -1/-1 counter from this creature. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Self-Mill",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)",
+          "Self-Mill",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Goblin Warlock",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Adept Watershaper",
+      "oracle_text": "Other tapped creatures you control have indestructible.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tapped Matters",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tapped Matters"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Merfolk Cleric",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Payload/Payoff"
+    },
+    {
+      "name": "Rhys, the Evermore",
+      "oracle_text": "Flash\nWhen Rhys enters, another target creature you control gains persist until end of turn. (When it dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)\n{W}, {T}: Remove any number of counters from target creature you control. Activate only as a sorcery.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Counter Removal",
+        "Recursion"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Counters (+1/+1)",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Counter Removal",
+          "Recursion"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Legendary Creature — Elf Warrior",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Moonlit Lamenter",
+      "oracle_text": "This creature enters with a -1/-1 counter on it.\n{1}{W}, Remove a counter from this creature: Draw a card. Activate only as a sorcery.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Treefolk Cleric",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "5",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "Engine/Outlet"
+    },
+    {
+      "name": "Requiting Hex",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nDestroy target creature with mana value 2 or less. If this spell's additional cost was paid, you gain 2 life.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption"
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "Interaction/Disruption"
+    },
+    {
+      "name": "Nameless Inversion",
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "Interaction/Disruption"
+    },
+    {
+      "name": "Crib Swap",
+      "oracle_text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Land"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 99,
+      "qty": 7,
+      "role": "Land"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 99,
+      "qty": 7,
+      "role": "Land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Pyrrhic Strike",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 2. (You may put two -1/-1 counters on a creature you control.)\nChoose one. If this spell's additional cost was paid, choose both instead.\n• Destroy target artifact or enchantment.\n• Destroy target creature with mana value 3 or greater.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "when_to_board": "vs artifacts and enchantments (11 artifacts + 21 enchantments in the cube) — 'you may blight 2 ... choose one, or BOTH if the additional cost was paid: destroy target artifact or enchantment; destroy target creature with mana value 3 or greater', and the blight lands on a shedder"
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "when_to_board": "vs graveyard decks (39 cards, 15.0% density) — 'exile up to two target cards from graveyards. You gain 3 life'; colourless so always castable, and changeling makes it an Elf card for Creakwood Safewright when it dies"
+    },
+    {
+      "name": "Protective Response",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target attacking or blocking creature.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "when_to_board": "vs wide boards and vs decks that attack into us — 'Convoke. Destroy target attacking or blocking creature'; convoke makes it near-free once the board is wide"
+    },
+    {
+      "name": "Darkness Descends",
+      "oracle_text": "Put two -1/-1 counters on each creature.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "when_to_board": "vs token swarms ONLY — 'Put two -1/-1 counters on each creature' also shrinks our own blighted bodies, so it comes in only when the opponent's board is x/1 and x/2 tokens"
+    },
+    {
+      "name": "Blight Rot",
+      "oracle_text": "Put four -1/-1 counters on target creature.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "when_to_board": "vs anything that races us and vs the cube's evasion cluster (41 cards, 15.8% density — the largest measured threat class). 'Put four -1/-1 counters on target creature' is instant-speed and answers 129 of the cube's 168 creatures; it can also be aimed at our own Retched Wretch to arm its return trigger"
+    }
+  ],
+  "pitch": "A W/B aggro deck that buys above-rate bodies with -1/-1 counters and then takes the counters back. Stated at true sizes, because the counters are real: Encumbered Reejerey costs {1}{W} and enters as a 2/1, then removes a counter every time it becomes tapped — which is every attack — so it swings as a 3/2, then 4/3, then 5/4 while it is already killing you. Burdened Stoneback enters as a 2/2 and converts each counter into indestructibility for an attacker; Creakwood Safewright enters as a 2/2 and becomes a 5/5 one counter per end step once any Elf card reaches the graveyard; Reluctant Dounguard sheds every time another creature enters. Rhys, the Evermore clears a whole creature's counters in one activation. The removal suite runs the same trick in reverse: Requiting Hex and Bogslither's Embrace discount themselves by placing a counter, and Crib Swap and Nameless Inversion are changelings, so casting them buries an Elf card and switches Creakwood Safewright on for the rest of the game.",
+  "strategy_es": "agro de blight / cuerpos por encima de tasa que sueltan sus propios contadores",
+  "identity_es": "Un agro W/B que compra cuerpos por encima de tasa con contadores -1/-1 y luego se queda los contadores de vuelta. Enunciado a tamaños reales, porque los contadores son reales: Encumbered Reejerey cuesta {1}{W} y entra como 2/1, luego retira un contador cada vez que se gira — que es cada ataque — así que golpea como 3/2, luego 4/3, luego 5/4 mientras ya te está matando. Burdened Stoneback entra como 2/2 y convierte cada contador en indestructibilidad para un atacante; Creakwood Safewright entra como 2/2 y se convierte en 5/5 a un contador por paso final en cuanto cualquier carta de Elfo llega al cementerio; Reluctant Dounguard suelta cada vez que otra criatura entra. Rhys, the Evermore limpia todos los contadores de una criatura en una sola activación. El paquete de eliminación hace el mismo truco a la inversa: Requiting Hex y Bogslither's Embrace se abaratan solas colocando un contador, y Crib Swap y Nameless Inversion son changelings, así que lanzarlas entierra una carta de Elfo y activa a Creakwood Safewright para el resto de la partida.",
+  "pitch_es": "Un agro W/B que compra cuerpos por encima de tasa con contadores -1/-1 y luego se queda los contadores de vuelta. Enunciado a tamaños reales, porque los contadores son reales: Encumbered Reejerey cuesta {1}{W} y entra como 2/1, luego retira un contador cada vez que se gira — que es cada ataque — así que golpea como 3/2, luego 4/3, luego 5/4 mientras ya te está matando. Burdened Stoneback entra como 2/2 y convierte cada contador en indestructibilidad para un atacante; Creakwood Safewright entra como 2/2 y se convierte en 5/5 a un contador por paso final en cuanto cualquier carta de Elfo llega al cementerio; Reluctant Dounguard suelta cada vez que otra criatura entra. Rhys, the Evermore limpia todos los contadores de una criatura en una sola activación. El paquete de eliminación hace el mismo truco a la inversa: Requiting Hex y Bogslither's Embrace se abaratan solas colocando un contador, y Crib Swap y Nameless Inversion son changelings, así que lanzarlas entierra una carta de Elfo y activa a Creakwood Safewright para el resto de la partida."
+}

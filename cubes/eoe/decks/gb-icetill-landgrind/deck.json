@@ -1,0 +1,642 @@
+{
+  "deck_name": "gb-icetill-landgrind",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-07T18:30:00Z",
+  "format": "40-card",
+  "strategy": "midrange - most grindy value",
+  "colors": "GB",
+  "identity": "GB Icetill Land-Grind. Icetill Explorer is the engine: 'You may play an additional land on each of your turns. You may play lands from your graveyard. Landfall - Whenever a land you control enters, mill a card.' Each extra land drop mills a card, each milled land becomes a future land drop, and each of those mills again, so self-mill and land accumulation compound into one another instead of trading off. The land count IS the win condition. Harmonious Grovestrider's 'power and toughness are each equal to the number of lands you control' is a Ward-2 clock that grows with no further investment; Eusocial Engineering turns EVERY landfall trigger into a 2/2 Robot artifact creature token, which is simultaneously board width, convoke fuel for Vote Out, a target for Glacier Godmaw's team-wide '+1/+1 and gain vigilance and haste', and the deck's only free sacrifice fodder. Larval Scoutlander puts two basics onto the battlefield off one card, and because it is a Spacecraft it makes the 'or Spacecraft card' clause on Scrounge for Eternity and Seedship Broodtender live rather than dead text.",
+  "restrictions": {
+    "commons_uncommons_max_2": "PASS - no card exceeds 2 copies across both boards",
+    "rares_mythics_max_1": "PASS - Icetill Explorer x1",
+    "rare_mythic_total_max_6": "PASS - 1 used, 5 slots left unspent. The grill correctly notes that unspent rare slots convert to nothing; the reason they went unspent is that all five BLOCKING repairs resolved to uncommons and commons (Eusocial Engineering, Larval Scoutlander, Hymn of the Faller, Tragic Trajectory, Skystinger).",
+    "basics_unlimited": "11 Forest + 4 Swamp, format-supplied",
+    "colours": "PASS - all cards within GB core identity; no splash"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 7,
+    "cantrip_count": 0,
+    "accel_count": 7,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.17,
+      "reference_avg_mv": 2.5,
+      "accel": 7,
+      "adjustment": -0.273,
+      "raw_target": 16.727,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 3.17,
+    "pip_demand": {
+      "G": 23,
+      "B": 9
+    },
+    "land_color_production": {
+      "B": 6,
+      "G": 13
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 28.1,
+        "prod_pct": 35.3,
+        "gap": -7.2,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 71.9,
+        "prod_pct": 76.5,
+        "gap": -4.6,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Icetill Explorer",
+      "mana_cost": "{2}{G}{G}",
+      "cmc": 4,
+      "type_line": "Creature — Insect Scout",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "rare",
+      "oracle_text": "You may play an additional land on each of your turns.\nYou may play lands from your graveyard.\nLandfall — Whenever a land you control enters, mill a card.",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Landfall",
+        "Lands-Matter",
+        "Self-Mill",
+        "Graveyard",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Extra Land Drop"
+      ],
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Larval Scoutlander",
+      "mana_cost": "{2}{G}",
+      "cmc": 3,
+      "type_line": "Artifact — Spacecraft",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this Spacecraft enters, you may sacrifice a land or Lander. If you do, search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 7+.)\n7+ | Flying",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Lands-Matter",
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Ramp",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Galactic Wayfarer",
+      "mana_cost": "{2}{G}",
+      "cmc": 3,
+      "type_line": "Creature — Human Scout",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Lands-Matter",
+        "Artifacts",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "qty": 2,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sami's Curiosity",
+      "mana_cost": "{G}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "You gain 2 life. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Lands-Matter",
+        "Tokens",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "qty": 2,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Harmonious Grovestrider",
+      "mana_cost": "{3}{G}{G}",
+      "cmc": 5,
+      "type_line": "Creature — Beast",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Ward {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)\nHarmonious Grovestrider's power and toughness are each equal to the number of lands you control.",
+      "power": "*",
+      "toughness": "*",
+      "tags": [
+        "Lands-Matter",
+        "Standalone Threat",
+        "Protection"
+      ],
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eusocial Engineering",
+      "mana_cost": "{3}{G}{G}",
+      "cmc": 5,
+      "type_line": "Enchantment",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Landfall — Whenever a land you control enters, create a 2/2 colorless Robot artifact creature token.\nWarp {1}{G} (You may cast this card from your hand for its warp cost. Exile this enchantment at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Landfall",
+        "Tokens",
+        "Kicker/Scaling",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Glacier Godmaw",
+      "mana_cost": "{5}{G}{G}",
+      "cmc": 7,
+      "type_line": "Creature — Leviathan",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Trample\nWhen this creature enters, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")\nLandfall — Whenever a land you control enters, creatures you control get +1/+1 and gain vigilance and haste until end of turn.",
+      "power": "6",
+      "toughness": "6",
+      "tags": [
+        "Landfall",
+        "Lands-Matter",
+        "Artifacts",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Land Fetch",
+        "Team Pump"
+      ],
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Seedship Broodtender",
+      "mana_cost": "{B}{G}",
+      "cmc": 2,
+      "type_line": "Creature — Insect Citizen",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, mill three cards. (Put the top three cards of your library into your graveyard.)\n{3}{B}{G}, Sacrifice this creature: Return target creature or Spacecraft card from your graveyard to the battlefield. Activate only as a sorcery.",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Engine/Outlet",
+        "Reanimation"
+      ],
+      "qty": 2,
+      "role": "Infrastructure/Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Pull Through the Weft",
+      "mana_cost": "{3}{G}{G}",
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Return up to two target nonland permanent cards from your graveyard to your hand, then return up to two target land cards from your graveyard to the battlefield tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Card Advantage",
+        "Land Fetch",
+        "Cards: Net-Positive"
+      ],
+      "qty": 1,
+      "role": "Infrastructure/Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Scrounge for Eternity",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nReturn target creature or Spacecraft card with mana value 5 or less from your graveyard to the battlefield. Then create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Lands-Matter",
+        "Tokens",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Reanimation",
+        "Token Generation",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 2,
+      "role": "Infrastructure/Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hymn of the Faller",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Surveil 1, then you draw a card and lose 1 life. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)\nVoid — If a nonland permanent left the battlefield this turn or a spell was warped this turn, draw another card.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "qty": 2,
+      "role": "Infrastructure/Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shattered Wings",
+      "mana_cost": "{2}{G}",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying. Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Self-Mill",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Vote Out",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target creature.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Convoke"
+      ],
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunted Mire",
+      "mana_cost": null,
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 11,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 4,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Seedship Impact",
+      "mana_cost": "{1}{G}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target artifact or enchantment. If its mana value was 2 or less, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Tokens",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs artifacts and enchantments - the pool's only enchantment answer, at instant speed, and it leaves a Lander on MV<=2 targets"
+    },
+    {
+      "name": "Gravkill",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs death-trigger or recursive threats and stationed Spacecraft; the only exile removal in these colours"
+    },
+    {
+      "name": "Skystinger",
+      "mana_cost": "{2}{G}",
+      "cmc": 3,
+      "type_line": "Creature — Insect Warrior",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Reach\nWhenever this creature blocks a creature with flying, this creature gets +5/+0 until end of turn.",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs fliers - evasion is 22.5% of the cube (56 cards) and this is the deck's only dedicated answer; reach plus +5/+0 when it blocks a flier"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "mana_cost": "{3}",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs graveyard decks - exiles each opponent's graveyard and still leaves a Lander for landfall"
+    },
+    {
+      "name": "Embrace Oblivion",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDestroy target creature or Spacecraft.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs decks whose key permanent must die on turn one or two - one-mana removal, but only once Eusocial Engineering's Robot tokens are on the battlefield to pay the sacrifice"
+    }
+  ],
+  "pitch": "GB Icetill Land-Grind. Icetill Explorer is the engine: 'You may play an additional land on each of your turns. You may play lands from your graveyard. Landfall - Whenever a land you control enters, mill a card.' Each extra land drop mills a card, each milled land becomes a future land drop, and each of those mills again, so self-mill and land accumulation compound into one another instead of trading off. The land count IS the win condition. Harmonious Grovestrider's 'power and toughness are each equal to the number of lands you control' is a Ward-2 clock that grows with no further investment; Eusocial Engineering turns EVERY landfall trigger into a 2/2 Robot artifact creature token, which is simultaneously board width, convoke fuel for Vote Out, a target for Glacier Godmaw's team-wide '+1/+1 and gain vigilance and haste', and the deck's only free sacrifice fodder. Larval Scoutlander puts two basics onto the battlefield off one card, and because it is a Spacecraft it makes the 'or Spacecraft card' clause on Scrounge for Eternity and Seedship Broodtender live rather than dead text.",
+  "strategy_es": "midrange — el de más valor machacón",
+  "identity_es": "Desgaste de tierras con Icetill GB. Icetill Explorer es el motor: 'You may play an additional land on each of your turns. You may play lands from your graveyard. Landfall - Whenever a land you control enters, mill a card.' Cada tierra extra jugada muele una carta, cada tierra molida se convierte en una futura tierra jugada, y cada una de esas vuelve a moler, así que el automill y la acumulación de tierras se potencian mutuamente en lugar de estorbarse. El recuento de tierras ES la condición de victoria. El 'power and toughness are each equal to the number of lands you control' de Harmonious Grovestrider es un reloj con Ward-2 que crece sin más inversión; Eusocial Engineering convierte CADA disparo de landfall en una ficha de criatura-artefacto Robot 2/2, que es a la vez anchura de tablero, combustible de convoke para Vote Out, objetivo para el '+1/+1 y ganan vigilancia y prisa' de Glacier Godmaw, y el único forraje de sacrificio gratuito del mazo. Larval Scoutlander pone dos básicas en el campo de batalla con una sola carta, y como es una Spacecraft hace que la cláusula 'or Spacecraft card' de Scrounge for Eternity y Seedship Broodtender sea texto vivo y no muerto.",
+  "pitch_es": "Desgaste de tierras con Icetill GB. Icetill Explorer es el motor: 'You may play an additional land on each of your turns. You may play lands from your graveyard. Landfall - Whenever a land you control enters, mill a card.' Cada tierra extra jugada muele una carta, cada tierra molida se convierte en una futura tierra jugada, y cada una de esas vuelve a moler, así que el automill y la acumulación de tierras se potencian mutuamente en lugar de estorbarse. El recuento de tierras ES la condición de victoria. El 'power and toughness are each equal to the number of lands you control' de Harmonious Grovestrider es un reloj con Ward-2 que crece sin más inversión; Eusocial Engineering convierte CADA disparo de landfall en una ficha de criatura-artefacto Robot 2/2, que es a la vez anchura de tablero, combustible de convoke para Vote Out, objetivo para el '+1/+1 y ganan vigilancia y prisa' de Glacier Godmaw, y el único forraje de sacrificio gratuito del mazo. Larval Scoutlander pone dos básicas en el campo de batalla con una sola carta, y como es una Spacecraft hace que la cláusula 'or Spacecraft card' de Scrounge for Eternity y Seedship Broodtender sea texto vivo y no muerto."
+}

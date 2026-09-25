@@ -1,0 +1,668 @@
+{
+  "deck_name": "wb-vondam-exile-aristocrats",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-03T16:50:00Z",
+  "format": "40-card",
+  "strategy": "exile-aristocrats aggressor",
+  "colors": "WB",
+  "identity": "White-black exile-aristocrats. Syr Vondam, Sunstar Exemplar turns every death AND every warp self-exile into a +1/+1 counter on a vigilance-menace body, so warp creatures, a free sacrifice outlet and the deck's own removal all feed one clock. Because only 1 copy of Vondam exists in the pool the build is the resilient one: Xu-Ifit, Osteoharmonist plus the mana-free Umbral Collar Zealot outlet manufacture a death every turn, Lightless Evangel x2 grow on the sacrifice half, Susurian Voidborn x2 convert the same deaths into drain with no Vondam on board, and Insatiable Skittermaw is a second growing menace body. Decode Transmissions x2 are the deck's only net-positive draw. Six pieces of interaction (four at one mana, two of which sacrifice a body as an additional cost) clear blockers while advancing the counter engine.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2,
+        "rare": 1,
+        "mythic": 1
+      },
+      "only_from": {},
+      "excluded": []
+    },
+    "hard_extra_constraint": "MAX 6 rare+mythic cards TOTAL across mainboard AND sideboard combined. Basic lands unlimited and exempt.",
+    "deck_size": 40,
+    "sideboard_size": 10,
+    "checklist": {
+      "deck_size_40": "PASS (40 mainboard, 17 lands)",
+      "sideboard_10": "PASS",
+      "copy_limits_main_plus_side": "PASS - every non-basic name at or under min(rarity multiplier, pool copies); basics exempt",
+      "rare_mythic_cap_6": "PASS - 4 used: Syr Vondam, Sunstar Exemplar (rare), Elegy Acolyte (rare), Godless Shrine (rare), Xu-Ifit, Osteoharmonist (rare). 2 unspent; the sideboard is entirely common/uncommon.",
+      "colour_usability": "PASS - effective_cost.best_mode returned non-None for every nonland card against core_colors [W,B]; no off-identity inclusion, so no usable_as caveat applies",
+      "splash_cap": "PASS - splash_colors is empty and no card in main or side has a colour identity outside {W,B} (Dauntless Scrapbot is colourless)",
+      "pool_base": "cube_mainboard, no only_from and no exclusions in force"
+    }
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.35,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": -0.2,
+      "raw_target": 16.8,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.35,
+    "pip_demand": {
+      "W": 7,
+      "B": 20
+    },
+    "land_color_production": {
+      "B": 11,
+      "W": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 74.1,
+        "prod_pct": 64.7,
+        "gap": 9.4,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 25.9,
+        "prod_pct": 52.9,
+        "gap": -27,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Syr Vondam, Sunstar Exemplar",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Legendary Creature — Human Knight",
+      "mana_cost": "{W}{B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Vigilance, menace\nWhenever another creature you control dies or is put into exile, put a +1/+1 counter on Syr Vondam and you gain 1 life.\nWhen Syr Vondam dies or is put into exile while its power is 4 or greater, destroy up to one target nonland permanent.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Counter Placement",
+        "Targeted Removal"
+      ],
+      "role": "Payoff — locked pipeline payoff",
+      "set": "eoe",
+      "collector_number": "231",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rayblade Trooper",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, put a +1/+1 counter on target creature you control.\nWhenever a nontoken creature you control with a +1/+1 counter on it dies, create a 1/1 white Human Soldier creature token.\nWarp {1}{W} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "tags": [
+        "Counters (+1/+1)",
+        "Tokens",
+        "Kicker/Scaling",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Token Generation"
+      ],
+      "role": "Payoff — counter-to-fodder recycler",
+      "set": "eoe",
+      "collector_number": "30",
+      "board": "mainboard"
+    },
+    {
+      "name": "Susurian Voidborn",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Creature — Vampire Soldier",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life.\nWarp {B} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "role": "Payoff — redundant aristocrats drain",
+      "set": "eoe",
+      "collector_number": "118",
+      "board": "mainboard"
+    },
+    {
+      "name": "Insatiable Skittermaw",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Creature — Insect Horror",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nVoid — At the beginning of your end step, if a nonland permanent left the battlefield this turn or a spell was warped this turn, put a +1/+1 counter on this creature.",
+      "tags": [
+        "Counters (+1/+1)",
+        "Aristocrats/Sacrifice",
+        "Payload/Payoff"
+      ],
+      "role": "Threat — redundant growing menace clock",
+      "set": "eoe",
+      "collector_number": "108",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightless Evangel",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Creature — Vampire Cleric",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever you sacrifice another creature or artifact, put a +1/+1 counter on this creature.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Payload/Payoff"
+      ],
+      "role": "Payoff — redundant counter accumulator",
+      "set": "eoe",
+      "collector_number": "109",
+      "board": "mainboard"
+    },
+    {
+      "name": "Elegy Acolyte",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Lifelink\nWhenever one or more creatures you control deal combat damage to a player, you draw a card and lose 1 life.\nVoid — At the beginning of your end step, if a nonland permanent left the battlefield this turn or a spell was warped this turn, create a 2/2 colorless Robot artifact creature token.",
+      "tags": [
+        "Lifegain",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Card Draw",
+        "Token Generation"
+      ],
+      "role": "Payoff/Engine — renewable fodder + card draw",
+      "set": "eoe",
+      "collector_number": "97",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dockworker Drone",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Artifact Creature — Robot",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "This creature enters with a +1/+1 counter on it.\nWhen this creature dies, put its counters on target creature you control.",
+      "tags": [
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Enabler/Fodder",
+        "Counter Relocation"
+      ],
+      "role": "Threat/Fodder — guaranteed nontoken counter-bearer",
+      "set": "eoe",
+      "collector_number": "11",
+      "board": "mainboard"
+    },
+    {
+      "name": "Umbral Collar Zealot",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Sacrifice another creature or artifact: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Self-Mill",
+        "Graveyard",
+        "Artifacts",
+        "Engine/Outlet",
+        "Sacrifice Outlet",
+        "Card Selection"
+      ],
+      "role": "Engine — free unlimited sacrifice outlet",
+      "set": "eoe",
+      "collector_number": "123",
+      "board": "mainboard"
+    },
+    {
+      "name": "Timeline Culler",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Creature — Drix Warlock",
+      "mana_cost": "{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Haste\nYou may cast this card from your graveyard using its warp ability.\nWarp—{B}, Pay 2 life. (You may cast this card from your hand or graveyard for its warp cost. If you do, exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Standalone Threat",
+        "Life: Cost"
+      ],
+      "role": "Engine — cheap warp/exile trigger, one {B} warp per graveyard visit",
+      "set": "eoe",
+      "collector_number": "121",
+      "board": "mainboard"
+    },
+    {
+      "name": "Xu-Ifit, Osteoharmonist",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Wizard",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "{T}: Return target creature card from your graveyard to the battlefield. It's a Skeleton in addition to its other types and has no abilities. Activate only as a sorcery.",
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Engine/Outlet",
+        "Reanimation"
+      ],
+      "role": "Engine — mana-free recurring death loop with the free sac outlet",
+      "set": "eoe",
+      "collector_number": "127",
+      "board": "mainboard"
+    },
+    {
+      "name": "Decode Transmissions",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "You draw two cards and lose 2 life.\nVoid — If a nonland permanent left the battlefield this turn or a spell was warped this turn, instead you draw two cards and each opponent loses 2 life.",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Life Drain",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "role": "Engine — the deck's only net-positive card draw / Void reach",
+      "set": "eoe",
+      "collector_number": "94",
+      "board": "mainboard"
+    },
+    {
+      "name": "Embrace Oblivion",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDestroy target creature or Spacecraft.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "role": "Interaction — removal stapled to a sacrifice",
+      "set": "eoe",
+      "collector_number": "98",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction — one-mana Void removal",
+      "set": "eoe",
+      "collector_number": "122",
+      "board": "mainboard"
+    },
+    {
+      "name": "Banishing Light",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction — noncreature-permanent coverage",
+      "set": "eoe",
+      "collector_number": "6",
+      "board": "mainboard"
+    },
+    {
+      "name": "Godless Shrine",
+      "qty": 1,
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "({T}: Add {W} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "role": "Land — untapped WB dual",
+      "set": "eoe",
+      "collector_number": "254",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land — WB dual (tapped)",
+      "set": "dmu",
+      "collector_number": "257",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "qty": 6,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "tags": [],
+      "role": "Land — untapped W source",
+      "set": "",
+      "collector_number": "",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "qty": 8,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "tags": [],
+      "role": "Land — untapped B source",
+      "set": "",
+      "collector_number": "",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Radiant Strike",
+      "qty": 2,
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Sideboard — artifact / tapped-attacker answer",
+      "set": "eoe",
+      "collector_number": "29",
+      "board": "sideboard"
+    },
+    {
+      "name": "Gravkill",
+      "qty": 2,
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Sideboard — unconditional exile",
+      "set": "eoe",
+      "collector_number": "103",
+      "board": "sideboard"
+    },
+    {
+      "name": "Seam Rip",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Enchantment",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls with mana value 2 or less until this enchantment leaves the battlefield.",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Sideboard — cheap (MV<=2) noncreature-permanent answer",
+      "set": "eoe",
+      "collector_number": "34",
+      "board": "sideboard"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "role": "Sideboard — graveyard hate on a body",
+      "set": "eoe",
+      "collector_number": "237",
+      "board": "sideboard"
+    },
+    {
+      "name": "Hymn of the Faller",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Surveil 1, then you draw a card and lose 1 life. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)\nVoid — If a nonland permanent left the battlefield this turn or a spell was warped this turn, draw another card.",
+      "tags": [
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "role": "Sideboard — refuel after attrition and sweepers",
+      "set": "eoe",
+      "collector_number": "107",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "White-black exile-aristocrats. Syr Vondam, Sunstar Exemplar turns every death AND every warp self-exile into a +1/+1 counter on a vigilance-menace body, so warp creatures, a free sacrifice outlet and the deck's own removal all feed one clock. Because only 1 copy of Vondam exists in the pool the build is the resilient one: Xu-Ifit, Osteoharmonist plus the mana-free Umbral Collar Zealot outlet manufacture a death every turn, Lightless Evangel x2 grow on the sacrifice half, Susurian Voidborn x2 convert the same deaths into drain with no Vondam on board, and Insatiable Skittermaw is a second growing menace body. Decode Transmissions x2 are the deck's only net-positive draw. Six pieces of interaction (four at one mana, two of which sacrifice a body as an additional cost) clear blockers while advancing the counter engine.",
+  "strategy_es": "agresor de aristócratas por exilio",
+  "identity_es": "Aristócratas por exilio blanco-negro. Syr Vondam, Sunstar Exemplar convierte cada muerte Y cada autoexilio por warp en un contador +1/+1 sobre un cuerpo con vigilancia y amenaza, así que las criaturas con warp, un medio de sacrificio gratuito y la propia eliminación del mazo alimentan todos un mismo reloj. Como solo existe 1 copia de Vondam en el pool, la construcción es la resistente: Xu-Ifit, Osteoharmonist más el medio sin coste de maná de Umbral Collar Zealot fabrican una muerte cada turno, Lightless Evangel x2 crecen con la mitad de sacrificio, Susurian Voidborn x2 convierten esas mismas muertes en drenaje sin Vondam en el tablero, e Insatiable Skittermaw es un segundo cuerpo creciente con amenaza. Decode Transmissions x2 es el único robo de saldo positivo del mazo. Seis piezas de interacción (cuatro a un maná, dos de las cuales sacrifican un cuerpo como coste adicional) despejan bloqueadores mientras avanzan el motor de contadores.",
+  "pitch_es": "Aristócratas por exilio blanco-negro. Syr Vondam, Sunstar Exemplar convierte cada muerte Y cada autoexilio por warp en un contador +1/+1 sobre un cuerpo con vigilancia y amenaza, así que las criaturas con warp, un medio de sacrificio gratuito y la propia eliminación del mazo alimentan todos un mismo reloj. Como solo existe 1 copia de Vondam en el pool, la construcción es la resistente: Xu-Ifit, Osteoharmonist más el medio sin coste de maná de Umbral Collar Zealot fabrican una muerte cada turno, Lightless Evangel x2 crecen con la mitad de sacrificio, Susurian Voidborn x2 convierten esas mismas muertes en drenaje sin Vondam en el tablero, e Insatiable Skittermaw es un segundo cuerpo creciente con amenaza. Decode Transmissions x2 es el único robo de saldo positivo del mazo. Seis piezas de interacción (cuatro a un maná, dos de las cuales sacrifican un cuerpo como coste adicional) despejan bloqueadores mientras avanzan el motor de contadores."
+}

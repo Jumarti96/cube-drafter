@@ -1,0 +1,635 @@
+{
+  "deck_name": "b-void-aristocrats",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-07T17:55:00Z",
+  "format": "40-card",
+  "strategy": "midrange - most grindy value",
+  "colors": "B",
+  "identity": "Mono-Black Void Aristocrats. Every permanent here is disposable and every death is paid for twice. Umbral Collar Zealot's 'Sacrifice another creature or artifact: Surveil 1' is free and unlimited, so a permanent can become a death trigger at any time for zero mana - which drains through Susurian Voidborn ('target opponent loses 1 life and you gain 1 life'), grows Lightless Evangel, forces an edict through Sothera, and satisfies the Void condition that upgrades Tragic Trajectory from -2/-2 to -10/-10 and switches on Insatiable Skittermaw, Elegy Acolyte's end-step Robot and Alpharael's halve-their-life attack trigger. Xu-Ifit, Osteoharmonist closes the loop: '{T}: Return target creature card from your graveyard to the battlefield' costs nothing, so from turn four the deck manufactures a fresh body every turn purely to eat it, and Timeline Culler recasts itself out of the graveyard for {B} forever. PLAY-PATTERN WARNING: Sothera's end-step clause reads 'if A PLAYER controls no creatures' - that includes us. A line that sacrifices our own last creature to turn on Tragic Trajectory or Alpharael will sacrifice Sothera at our own end step, and returns nothing if Sothera has not exiled anything yet.",
+  "restrictions": {
+    "commons_uncommons_max_2": "PASS - no card exceeds 2 copies",
+    "rares_mythics_max_1": "PASS - Xu-Ifit x1, Elegy Acolyte x1, Sothera x1, Alpharael x1, Zero Point Ballad x1",
+    "rare_mythic_total_max_6": "PASS - 5 used (Xu-Ifit, Elegy Acolyte, Sothera, Alpharael mainboard; Zero Point Ballad sideboard)",
+    "basics_unlimited": "17 Swamp, format-supplied",
+    "colours": "PASS - mono-black; every card's colour identity is B or colourless"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.61,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.147,
+      "raw_target": 17.147,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.61,
+    "pip_demand": {
+      "B": 29
+    },
+    "land_color_production": {
+      "B": 17
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Susurian Voidborn",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Creature — Vampire Soldier",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life.\nWarp {B} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightless Evangel",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Vampire Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever you sacrifice another creature or artifact, put a +1/+1 counter on this creature.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Payload/Payoff"
+      ],
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Insatiable Skittermaw",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Creature — Insect Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nVoid — At the beginning of your end step, if a nonland permanent left the battlefield this turn or a spell was warped this turn, put a +1/+1 counter on this creature.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Counters (+1/+1)",
+        "Aristocrats/Sacrifice",
+        "Payload/Payoff"
+      ],
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Elegy Acolyte",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Lifelink\nWhenever one or more creatures you control deal combat damage to a player, you draw a card and lose 1 life.\nVoid — At the beginning of your end step, if a nonland permanent left the battlefield this turn or a spell was warped this turn, create a 2/2 colorless Robot artifact creature token.",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Lifegain",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Card Draw",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sothera, the Supervoid",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Legendary Enchantment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Whenever a creature you control dies, each opponent chooses a creature they control and exiles it.\nAt the beginning of your end step, if a player controls no creatures, sacrifice Sothera, then put a creature card exiled with it onto the battlefield under your control with two additional +1/+1 counters on it.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Reanimator",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cheat Into Play"
+      ],
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Alpharael, Stonechosen",
+      "mana_cost": "{3}{B}{B}",
+      "cmc": 5,
+      "type_line": "Legendary Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Ward—Discard a card at random.\nVoid — Whenever Alpharael attacks, if a nonland permanent left the battlefield this turn or a spell was warped this turn, defending player loses half their life, rounded up.",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Kicker/Scaling",
+        "Payload/Payoff",
+        "Life Drain",
+        "Protection"
+      ],
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Umbral Collar Zealot",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Sacrifice another creature or artifact: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Self-Mill",
+        "Graveyard",
+        "Artifacts",
+        "Engine/Outlet",
+        "Sacrifice Outlet",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Xu-Ifit, Osteoharmonist",
+      "mana_cost": "{1}{B}{B}",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Wizard",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "{T}: Return target creature card from your graveyard to the battlefield. It's a Skeleton in addition to its other types and has no abilities. Activate only as a sorcery.",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Engine/Outlet",
+        "Reanimation"
+      ],
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swarm Culler",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Creature — Insect Warrior",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nWhenever this creature becomes tapped, you may sacrifice another creature or artifact. If you do, draw a card.",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "qty": 2,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Scrounge for Eternity",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nReturn target creature or Spacecraft card with mana value 5 or less from your graveyard to the battlefield. Then create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Lands-Matter",
+        "Tokens",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Reanimation",
+        "Token Generation",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 2,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Timeline Culler",
+      "mana_cost": "{B}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Drix Warlock",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Haste\nYou may cast this card from your graveyard using its warp ability.\nWarp—{B}, Pay 2 life. (You may cast this card from your hand or graveyard for its warp cost. If you do, exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Standalone Threat",
+        "Life: Cost"
+      ],
+      "qty": 2,
+      "role": "Enabler/Fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hymn of the Faller",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Surveil 1, then you draw a card and lose 1 life. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)\nVoid — If a nonland permanent left the battlefield this turn or a spell was warped this turn, draw another card.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "qty": 2,
+      "role": "Infrastructure/Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Embrace Oblivion",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDestroy target creature or Spacecraft.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dubious Delicacy",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Artifact — Food",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flash\nWhen this artifact enters, up to one target creature gets -3/-3 until end of turn.\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\n{2}, {T}, Sacrifice this artifact: Target opponent loses 3 life.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Engine/Outlet",
+        "Targeted Removal",
+        "Life Drain"
+      ],
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 17,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Zero Point Ballad",
+      "mana_cost": "{X}{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Destroy all creatures with toughness X or less. You lose X life. If X is 6 or more, return a creature card put into a graveyard this way to the battlefield under your control.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Sweeper/Board Wipe",
+        "Reanimation",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs wide creature boards; X is chosen and the dead bodies feed Susurian Voidborn and Sothera"
+    },
+    {
+      "name": "Gravkill",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs recursive or death-trigger threats and stationed Spacecraft; exile sidesteps dies-triggers"
+    },
+    {
+      "name": "Temporal Intervention",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Void — This spell costs {2} less to cast if a nonland permanent left the battlefield this turn or a spell was warped this turn.\nTarget opponent reveals their hand. You choose a nonland card from it. That player discards that card.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Discard",
+        "Cost Reduction"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs combo and control - a ONE-mana targeted discard here, since Umbral Collar Zealot turns Void on for free"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "mana_cost": "{3}",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs graveyard decks - one-shot exile of each opponent's graveyard; the Lander is also fodder"
+    },
+    {
+      "name": "Virus Beetle",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Insect",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, each opponent discards a card.",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Artifacts",
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Discard"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs combo and control when a BODY is wanted as well - a 1/1 artifact that strips a card and is itself fodder"
+    },
+    {
+      "name": "Vote Out",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target creature.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Convoke"
+      ],
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs a single large or high-toughness threat Tragic Trajectory misses; convoke off a wide board makes it {B} or {1}{B}"
+    }
+  ],
+  "pitch": "Mono-Black Void Aristocrats. Every permanent here is disposable and every death is paid for twice. Umbral Collar Zealot's 'Sacrifice another creature or artifact: Surveil 1' is free and unlimited, so a permanent can become a death trigger at any time for zero mana - which drains through Susurian Voidborn ('target opponent loses 1 life and you gain 1 life'), grows Lightless Evangel, forces an edict through Sothera, and satisfies the Void condition that upgrades Tragic Trajectory from -2/-2 to -10/-10 and switches on Insatiable Skittermaw, Elegy Acolyte's end-step Robot and Alpharael's halve-their-life attack trigger. Xu-Ifit, Osteoharmonist closes the loop: '{T}: Return target creature card from your graveyard to the battlefield' costs nothing, so from turn four the deck manufactures a fresh body every turn purely to eat it, and Timeline Culler recasts itself out of the graveyard for {B} forever. PLAY-PATTERN WARNING: Sothera's end-step clause reads 'if A PLAYER controls no creatures' - that includes us. A line that sacrifices our own last creature to turn on Tragic Trajectory or Alpharael will sacrifice Sothera at our own end step, and returns nothing if Sothera has not exiled anything yet.",
+  "strategy_es": "midrange — el de más valor machacón",
+  "identity_es": "Aristócratas Void mono negro. Aquí cada permanente es prescindible y cada muerte se cobra dos veces. El 'Sacrifice another creature or artifact: Surveil 1' de Umbral Collar Zealot es gratuito e ilimitado, así que un permanente puede convertirse en un disparo de muerte en cualquier momento por cero manás, lo que drena con Susurian Voidborn ('target opponent loses 1 life and you gain 1 life'), hace crecer a Lightless Evangel, fuerza un edicto vía Sothera, y satisface la condición de Void que mejora Tragic Trajectory de -2/-2 a -10/-10 y activa a Insatiable Skittermaw, al Robot de paso final de Elegy Acolyte y al disparo de ataque de Alpharael que reduce a la mitad su vida. Xu-Ifit, Osteoharmonist cierra el bucle: '{T}: Return target creature card from your graveyard to the battlefield' no cuesta nada, así que desde el turno cuatro el mazo fabrica un cuerpo nuevo cada turno puramente para comérselo, y Timeline Culler se relanza desde el cementerio por {B} eternamente. AVISO DE PATRÓN DE JUEGO: la cláusula de paso final de Sothera dice 'if A PLAYER controls no creatures', y eso nos incluye. Una línea que sacrifique nuestra propia última criatura para activar Tragic Trajectory o Alpharael sacrificará a Sothera en nuestro propio paso final, y no devuelve nada si Sothera aún no ha exiliado nada.",
+  "pitch_es": "Aristócratas Void mono negro. Aquí cada permanente es prescindible y cada muerte se cobra dos veces. El 'Sacrifice another creature or artifact: Surveil 1' de Umbral Collar Zealot es gratuito e ilimitado, así que un permanente puede convertirse en un disparo de muerte en cualquier momento por cero manás, lo que drena con Susurian Voidborn ('target opponent loses 1 life and you gain 1 life'), hace crecer a Lightless Evangel, fuerza un edicto vía Sothera, y satisface la condición de Void que mejora Tragic Trajectory de -2/-2 a -10/-10 y activa a Insatiable Skittermaw, al Robot de paso final de Elegy Acolyte y al disparo de ataque de Alpharael que reduce a la mitad su vida. Xu-Ifit, Osteoharmonist cierra el bucle: '{T}: Return target creature card from your graveyard to the battlefield' no cuesta nada, así que desde el turno cuatro el mazo fabrica un cuerpo nuevo cada turno puramente para comérselo, y Timeline Culler se relanza desde el cementerio por {B} eternamente. AVISO DE PATRÓN DE JUEGO: la cláusula de paso final de Sothera dice 'if A PLAYER controls no creatures', y eso nos incluye. Una línea que sacrifique nuestra propia última criatura para activar Tragic Trajectory o Alpharael sacrificará a Sothera en nuestro propio paso final, y no devuelve nada si Sothera aún no ha exiliado nada."
+}

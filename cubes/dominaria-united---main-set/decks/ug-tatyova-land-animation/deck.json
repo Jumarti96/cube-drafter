@@ -1,0 +1,830 @@
+{
+  "deck_name": "ug-tatyova-land-animation",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T15:11:06Z",
+  "format": "40-card",
+  "strategy": "midrange - Simic Domain ramp with Tatyova land-animation",
+  "colors": "UG",
+  "identity": "A Simic ramp-midrange deck that wins in the air behind a Domain manabase. Tatyova, Steward of Tides is the named payoff - 'Land creatures you control have flying', and from seven lands onward every land drop permanently animates a land into a 3/3 hasty flier that still taps for mana - with Llanowar Loamspeaker supplying the same animation from turn 3 without the seven-land clause. The pool caps that engine at three copies, giving it P(seen by turn 8) = 0.62, below the engine-assembly threshold, so the deck is deliberately built to win without it: six evasive bodies (Pixie Illusionist x2, Nael x2, Sphinx of Clear Skies, Ivy) carry the clock at p = 0.97. The manabase is the deck's real innovation: three common dual lands that cost no rare budget - Haunted Mire (Swamp Forest), Molten Tributary (Island Mountain) and Radiant Grove (Forest Plains) - put all five basic land types in a two-colour deck, taking Domain from X = 2 to a ceiling of X = 5 for the cost of one coloured source shifting from green to blue (G 11/U 9 becomes G 10/U 10) and five extra tapped lands. At 7 Merfolk of 23 nonland cards, Vodalian Hexcatcher's anthem reaches 6 bodies.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "rare_mythic_cap": 5,
+    "rares_used": [
+      "Vodalian Hexcatcher (main, rare)",
+      "Llanowar Loamspeaker (main, rare)",
+      "Ivy, Gleeful Spellthief (main, rare)",
+      "Sphinx of Clear Skies (main, mythic)",
+      "Yavimaya Coast (main land, rare)"
+    ],
+    "rares_used_count": 5
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 5,
+    "cantrip_count": 0,
+    "accel_count": 5,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.43,
+      "reference_avg_mv": 2.5,
+      "accel": 5,
+      "adjustment": -0.927,
+      "raw_target": 16.073,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.43,
+    "pip_demand": {
+      "U": 18,
+      "G": 13
+    },
+    "land_color_production": {
+      "G": 10,
+      "U": 10,
+      "B": 2,
+      "R": 2,
+      "W": 1
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 41.9,
+        "prod_pct": 58.8,
+        "gap": -16.9,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 58.1,
+        "prod_pct": 58.8,
+        "gap": -0.7,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Pixie Illusionist",
+      "oracle_text": "Kicker {3}{G} (You may pay an additional {3}{G} as you cast this spell.)\nFlying\nIf this creature was kicked, it enters with two +1/+1 counters on it.\n{T}: Target land you control becomes the basic land type of your choice until end of turn.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Faerie Wizard",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Kicker/Scaling",
+        "Counters (+1/+1)",
+        "Lands-Matter",
+        "Domain",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Land Type Change",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "evasive one-drop",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rona's Vortex",
+      "oracle_text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nReturn target creature or planeswalker you don't control to its owner's hand. If this spell was kicked, put that permanent on the bottom of its owner's library instead.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Bounce",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Volshe Tideturner",
+      "oracle_text": "{T}: Add {U}. Spend this mana only to cast an instant or sorcery spell or a kicked spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Wizard",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Spellslinger",
+        "Kicker/Scaling",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "qty": 2,
+      "role": "restricted ramp (Merfolk body)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Vodalian Hexcatcher",
+      "oracle_text": "Flash\nOther Merfolk you control get +1/+1.\nSacrifice a Merfolk: Counter target noncreature spell unless its controller pays {1}.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Wizard",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Sacrifice Outlet"
+      ],
+      "qty": 1,
+      "role": "payoff (Merfolk anthem)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Llanowar Loamspeaker",
+      "oracle_text": "{T}: Add one mana of any color.\n{T}: Target land you control becomes a 3/3 Elemental creature with haste until end of turn. It's still a land. Activate only as a sorcery.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Elf Druid",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Lands-Matter",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Mana Dork",
+        "Manland Animation"
+      ],
+      "qty": 1,
+      "role": "ramp/fixing + animation",
+      "board": "mainboard"
+    },
+    {
+      "name": "Joint Exploration",
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nScry 2, then draw a card. If this spell was kicked, you may put a land card from your hand onto the battlefield.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Card Draw",
+        "Mana Ramp",
+        "Kicker",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 1,
+      "role": "ramp/selection (kicked land drop)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bite Down",
+      "oracle_text": "Target creature you control deals damage equal to its power to target creature or planeswalker you don't control.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Essence Scatter",
+      "oracle_text": "Counter target creature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Deathbloom Gardener",
+      "oracle_text": "Deathtouch\n{T}: Add one mana of any color.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Elf Druid",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "qty": 1,
+      "role": "ramp/fixing",
+      "board": "mainboard"
+    },
+    {
+      "name": "Voda Sea Scavenger",
+      "oracle_text": "Domain — When this creature enters, look at the top X cards of your library, where X is the number of basic land types among lands you control. You may put one of those cards on top of your library. Put the rest on the bottom of your library in a random order.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Merfolk Rogue",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Domain",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "selection (Merfolk body)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tatyova, Steward of Tides",
+      "oracle_text": "Land creatures you control have flying.\nWhenever a land you control enters, if you control seven or more lands, up to one target land you control becomes a 3/3 Elemental creature with haste. It's still a land.",
+      "mana_cost": "{G}{G}{U}",
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Merfolk Druid",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Landfall",
+        "Lands-Matter",
+        "Payload/Payoff",
+        "Manland Animation",
+        "Evasion Grant"
+      ],
+      "qty": 2,
+      "role": "payoff (land animation)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Broken Wings",
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nael, Avizoa Aeronaut",
+      "oracle_text": "Flying\nDomain — Whenever Nael deals combat damage to a player, look at the top X cards of your library, where X is the number of basic land types among lands you control. Put up to one of them on top of your library and the rest on the bottom in a random order. Then if there are five basic land types among lands you control, draw a card.",
+      "mana_cost": "{2}{G}{U}",
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Creature — Elf Scout",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Domain",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Card Selection",
+        "Card Draw"
+      ],
+      "qty": 2,
+      "role": "threat (evasive, Domain draw)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sphinx of Clear Skies",
+      "oracle_text": "Flying, ward {2}\nDomain — Whenever this creature deals combat damage to a player, reveal the top X cards of your library, where X is the number of basic land types among lands you control. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard. (Piles can be empty.)",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Sphinx",
+      "rarity": "mythic",
+      "power": "5",
+      "toughness": "5",
+      "tags": [
+        "Domain",
+        "Lands-Matter",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Card Advantage"
+      ],
+      "qty": 1,
+      "role": "threat (evasive, Domain card advantage)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 4,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 5,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tangled Islet",
+      "oracle_text": "({T}: Add {G} or {U}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Yavimaya Coast",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {G} or {U}. This land deals 1 damage to you.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunted Mire",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 1,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nishoba Brawler",
+      "oracle_text": "Trample\nDomain — Nishoba Brawler's power is equal to the number of basic land types among lands you control.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Cat Warrior",
+      "rarity": "uncommon",
+      "power": "*",
+      "toughness": "3",
+      "tags": [
+        "Domain",
+        "Standalone Threat"
+      ],
+      "qty": 1,
+      "role": "threat (Domain scaling)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ivy, Gleeful Spellthief",
+      "oracle_text": "Flying\nWhenever a player casts a spell that targets only a single creature other than Ivy, you may copy that spell. The copy targets Ivy. (A copy of an Aura spell becomes a token.)",
+      "mana_cost": "{G}{U}",
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Legendary Creature — Faerie Rogue",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Spellslinger",
+        "Engine/Outlet",
+        "Copy Spell"
+      ],
+      "qty": 1,
+      "role": "threat (evasive)",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tear Asunder",
+      "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nExile target artifact or enchantment. If this spell was kicked, exile target nonland permanent instead.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "hate: artifacts + enchantments",
+      "board": "sideboard",
+      "when_to_board": "vs. the cube's 15 artifacts and 18 enchantments; exile for {1}{G} beats Broken Wings' destroy against anything recursive"
+    },
+    {
+      "name": "Negate",
+      "oracle_text": "Counter target noncreature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 2,
+      "role": "hate: sweepers",
+      "board": "sideboard",
+      "when_to_board": "vs. any of the cube's 6 sweepers - all 6 are noncreature spells, and a board of animated lands dies to a wrath like any other"
+    },
+    {
+      "name": "Snarespinner",
+      "oracle_text": "Reach\nWhenever this creature blocks a creature with flying, this creature gets +2/+0 until end of turn.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Spider",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Interaction/Disruption",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "hate: evasion",
+      "board": "sideboard",
+      "when_to_board": "vs. flier decks - a 1/3 reach blocker that becomes 3/3 when it blocks a flier, against the cube's 51 evasion cards"
+    },
+    {
+      "name": "Magnigoth Sentry",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Treefolk",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "qty": 1,
+      "role": "hate: evasion (large reach)",
+      "board": "sideboard",
+      "when_to_board": "vs. flier decks where a 4/4 reach body walls the top of their curve"
+    },
+    {
+      "name": "Essence Scatter",
+      "oracle_text": "Counter target creature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 1,
+      "role": "flex: creature counter",
+      "board": "sideboard",
+      "when_to_board": "vs. decks built on one or two large creatures rather than a wide board"
+    },
+    {
+      "name": "Bite Down",
+      "oracle_text": "Target creature you control deals damage equal to its power to target creature or planeswalker you don't control.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight"
+      ],
+      "qty": 1,
+      "role": "flex: removal",
+      "board": "sideboard",
+      "when_to_board": "vs. creature decks, once the board has a power-3+ body to point it with"
+    },
+    {
+      "name": "Slimefoot's Survey",
+      "oracle_text": "Domain — Search your library for up to two land cards that each have a basic land type, put them onto the battlefield tapped, then shuffle. Look at the top X cards of your library, where X is the number of basic land types among lands you control. Put up to one of them on top of your library and the rest on the bottom of your library in a random order.",
+      "mana_cost": "{4}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Domain",
+        "Lands-Matter",
+        "Landfall",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Ramp",
+        "Card Selection"
+      ],
+      "qty": 1,
+      "role": "flex: double ramp + Domain",
+      "board": "sideboard",
+      "when_to_board": "vs. slow decks - one card is two land drops, two Tatyova triggers post-seven, and it searches any land with a basic land type, which is 15 of this deck's 17"
+    }
+  ],
+  "pitch": "A Simic ramp-midrange deck that wins in the air behind a Domain manabase. Tatyova, Steward of Tides is the named payoff - 'Land creatures you control have flying', and from seven lands onward every land drop permanently animates a land into a 3/3 hasty flier that still taps for mana - with Llanowar Loamspeaker supplying the same animation from turn 3 without the seven-land clause. The pool caps that engine at three copies, giving it P(seen by turn 8) = 0.62, below the engine-assembly threshold, so the deck is deliberately built to win without it: six evasive bodies (Pixie Illusionist x2, Nael x2, Sphinx of Clear Skies, Ivy) carry the clock at p = 0.97. The manabase is the deck's real innovation: three common dual lands that cost no rare budget - Haunted Mire (Swamp Forest), Molten Tributary (Island Mountain) and Radiant Grove (Forest Plains) - put all five basic land types in a two-colour deck, taking Domain from X = 2 to a ceiling of X = 5 for the cost of one coloured source shifting from green to blue (G 11/U 9 becomes G 10/U 10) and five extra tapped lands. At 7 Merfolk of 23 nonland cards, Vodalian Hexcatcher's anthem reaches 6 bodies.",
+  "strategy_es": "midrange — aceleración Domain Simic con animación de tierras por Tatyova",
+  "identity_es": "Un midrange de aceleración Simic que gana por el aire tras una base de maná Domain. Tatyova, Steward of Tides es la recompensa nombrada — 'Land creatures you control have flying', y desde siete tierras en adelante cada tierra jugada anima permanentemente una tierra en un volador 3/3 con prisa que sigue girando por maná — con Llanowar Loamspeaker aportando esa misma animación desde el turno 3 sin la cláusula de siete tierras. El pool limita ese motor a tres copias, dándole P(vista para el turno 8) = 0,62, por debajo del umbral de ensamblaje de motor, así que el mazo está construido deliberadamente para ganar sin él: seis cuerpos evasivos (Pixie Illusionist x2, Nael x2, Sphinx of Clear Skies, Ivy) llevan el reloj con p = 0,97. La base de maná es la innovación real del mazo: tres tierras duales comunes que no cuestan presupuesto de raras — Haunted Mire (Swamp Forest), Molten Tributary (Island Mountain) y Radiant Grove (Forest Plains) — ponen los cinco tipos de tierra básica en un mazo bicolor, llevando Domain de X = 2 a un techo de X = 5 a cambio de que una fuente coloreada pase de verde a azul (G 11/U 9 se vuelve G 10/U 10) y cinco tierras giradas extra. Con 7 Tritones de 23 cartas no-tierra, el anthem de Vodalian Hexcatcher alcanza a 6 cuerpos.",
+  "pitch_es": "Un midrange de aceleración Simic que gana por el aire tras una base de maná Domain. Tatyova, Steward of Tides es la recompensa nombrada — 'Land creatures you control have flying', y desde siete tierras en adelante cada tierra jugada anima permanentemente una tierra en un volador 3/3 con prisa que sigue girando por maná — con Llanowar Loamspeaker aportando esa misma animación desde el turno 3 sin la cláusula de siete tierras. El pool limita ese motor a tres copias, dándole P(vista para el turno 8) = 0,62, por debajo del umbral de ensamblaje de motor, así que el mazo está construido deliberadamente para ganar sin él: seis cuerpos evasivos (Pixie Illusionist x2, Nael x2, Sphinx of Clear Skies, Ivy) llevan el reloj con p = 0,97. La base de maná es la innovación real del mazo: tres tierras duales comunes que no cuestan presupuesto de raras — Haunted Mire (Swamp Forest), Molten Tributary (Island Mountain) y Radiant Grove (Forest Plains) — ponen los cinco tipos de tierra básica en un mazo bicolor, llevando Domain de X = 2 a un techo de X = 5 a cambio de que una fuente coloreada pase de verde a azul (G 11/U 9 se vuelve G 10/U 10) y cinco tierras giradas extra. Con 7 Tritones de 23 cartas no-tierra, el anthem de Vodalian Hexcatcher alcanza a 6 cuerpos."
+}

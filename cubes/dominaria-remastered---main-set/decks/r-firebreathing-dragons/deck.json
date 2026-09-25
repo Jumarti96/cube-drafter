@@ -1,0 +1,1105 @@
+{
+  "deck_name": "r-firebreathing-dragons",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-08-02T17:39:50Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "R",
+  "identity": "Mono-red aggro that attacks in the air and finishes with burn. Shivan Dragon is the thesis in one card - 'Flying // {R}: This creature gets +1/+0 until end of turn' is the only unbounded per-mana pump in mono-red, and it is already evasive, so surplus mana converts directly into unblocked damage. Dragon Whelp doubles the flying pump on a cheaper body and Dragon Engine supplies a colourless, genuinely unbounded sink; Fireblast, Chain Lightning, Siege-Gang Commander and Sulfuric Vortex supply damage that does not need a creature to attack. Gauntlet of Power naming red doubles all 18 Mountains and anthems 12 of the 14 creature copies, but it is a 1-of mythic that is only 26.2% to be seen by turn 5, so the deck is built to function on basics alone and Gamble exists to find it.",
+  "restrictions": {
+    "base": "cube_mainboard only - every card verified by exact name against working_pool.json",
+    "commons_uncommons_max_2": "PASS - highest count is 2",
+    "rares_mythics_max_1_each": "PASS",
+    "rares_mythics_max_5_total_MB_plus_SB": "PASS at exactly 5/5 - all five are mainboard after the Phase 9 repair: Gauntlet of Power (mythic), Shivan Dragon (rare), Siege-Gang Commander (rare), Sulfuric Vortex (rare), Gamble (rare). The sideboard is entirely commons and uncommons. No headroom.",
+    "basics": "Mountain x18 - format-supplied, exempt from copy limits",
+    "colour": "core_colors ['R'], splash_colors [] - every nonland card returns a non-null effective_cost.best_mode(card, ['R'], []) in normal cast mode"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 1,
+    "cantrip_count": 1,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.36,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.813,
+      "raw_target": 17.813,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.36,
+    "pip_demand": {
+      "R": 28
+    },
+    "land_color_production": {
+      "R": 18
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Siege-Gang Commander",
+      "cmc": 5,
+      "type_line": "Creature — Goblin",
+      "mana_cost": "{3}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "When this creature enters, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: This creature deals 2 damage to any target.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Sacrifice Outlet",
+        "Direct Damage"
+      ],
+      "role": "Payoff (board-independent reach)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mogg War Marshal",
+      "cmc": 2,
+      "type_line": "Creature — Goblin Warrior",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Echo {1}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters or dies, create a 1/1 red Goblin creature token.",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Mana: Ongoing-Cost"
+      ],
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mogg War Marshal",
+      "cmc": 2,
+      "type_line": "Creature — Goblin Warrior",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Echo {1}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters or dies, create a 1/1 red Goblin creature token.",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Mana: Ongoing-Cost"
+      ],
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Subterranean Scout",
+      "cmc": 2,
+      "type_line": "Creature — Goblin Scout",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, target creature with power 2 or less can't be blocked this turn.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Enabler/Fodder",
+        "Evasion Granting"
+      ],
+      "role": "Threat (evasion enabler)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Subterranean Scout",
+      "cmc": 2,
+      "type_line": "Creature — Goblin Scout",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, target creature with power 2 or less can't be blocked this turn.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Enabler/Fodder",
+        "Evasion Granting"
+      ],
+      "role": "Threat (evasion enabler)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Suq'Ata Lancer",
+      "cmc": 3,
+      "type_line": "Creature — Human Knight",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Haste\nFlanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Standalone Threat"
+      ],
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dragon Engine",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Construct",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "{2}: This creature gets +1/+0 until end of turn.",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Standalone Threat",
+        "Pump"
+      ],
+      "role": "Payoff (mana sink)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dragon Engine",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Construct",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "{2}: This creature gets +1/+0 until end of turn.",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Standalone Threat",
+        "Pump"
+      ],
+      "role": "Payoff (mana sink)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dragon Whelp",
+      "cmc": 4,
+      "type_line": "Creature — Dragon",
+      "mana_cost": "{2}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step.",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Standalone Threat",
+        "Pump"
+      ],
+      "role": "Payoff (evasive sink)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dragon Whelp",
+      "cmc": 4,
+      "type_line": "Creature — Dragon",
+      "mana_cost": "{2}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step.",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Standalone Threat",
+        "Pump"
+      ],
+      "role": "Payoff (evasive sink)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Flametongue Kavu",
+      "cmc": 4,
+      "type_line": "Creature — Kavu",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, it deals 4 damage to target creature.",
+      "power": "4",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Avarax",
+      "cmc": 5,
+      "type_line": "Creature — Beast",
+      "mana_cost": "{3}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Haste\nWhen this creature enters, you may search your library for a card named Avarax, reveal it, put it into your hand, then shuffle.\n{1}{R}: This creature gets +1/+0 until end of turn.",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Tutor",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Payoff (half-rate sink)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Avarax",
+      "cmc": 5,
+      "type_line": "Creature — Beast",
+      "mana_cost": "{3}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Haste\nWhen this creature enters, you may search your library for a card named Avarax, reveal it, put it into your hand, then shuffle.\n{1}{R}: This creature gets +1/+0 until end of turn.",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Tutor",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Payoff (half-rate sink)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shivan Dragon",
+      "cmc": 6,
+      "type_line": "Creature — Dragon",
+      "mana_cost": "{4}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+      "power": "5",
+      "toughness": "5",
+      "tags": [
+        "Standalone Threat"
+      ],
+      "role": "Payoff (kill mechanism)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gamble",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Search your library for a card, put that card into your hand, discard a card at random, then shuffle.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Tutor",
+        "Cards: Extra-Cost",
+        "Risk: Random-Discard"
+      ],
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Chain Lightning",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Chain Lightning deals 3 damage to any target. Then that player or that permanent's controller may pay {R}{R}. If the player does, they may copy this spell and may choose a new target for that copy.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Spellslinger",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Direct Damage"
+      ],
+      "role": "Interaction / reach",
+      "board": "mainboard"
+    },
+    {
+      "name": "Chain Lightning",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Chain Lightning deals 3 damage to any target. Then that player or that permanent's controller may pay {R}{R}. If the player does, they may copy this spell and may choose a new target for that copy.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Spellslinger",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Direct Damage"
+      ],
+      "role": "Interaction / reach",
+      "board": "mainboard"
+    },
+    {
+      "name": "Spark Spray",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Spark Spray deals 1 damage to any target.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Direct Damage",
+        "Card Draw",
+        "Cycling"
+      ],
+      "role": "Interaction / reach",
+      "board": "mainboard"
+    },
+    {
+      "name": "Fireblast",
+      "cmc": 6,
+      "type_line": "Instant",
+      "mana_cost": "{4}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "You may sacrifice two Mountains rather than pay this spell's mana cost.\nFireblast deals 4 damage to any target.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Board: Sacrifice-Cost"
+      ],
+      "role": "Reach",
+      "board": "mainboard"
+    },
+    {
+      "name": "Fireblast",
+      "cmc": 6,
+      "type_line": "Instant",
+      "mana_cost": "{4}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "You may sacrifice two Mountains rather than pay this spell's mana cost.\nFireblast deals 4 damage to any target.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Board: Sacrifice-Cost"
+      ],
+      "role": "Reach",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gauntlet of Power",
+      "cmc": 5,
+      "type_line": "Artifact",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "mythic",
+      "oracle_text": "As this artifact enters, choose a color.\nCreatures of the chosen color get +1/+1.\nWhenever a basic land is tapped for mana of the chosen color, its controller adds an additional one mana of that color.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Anthem",
+        "Mana Ramp"
+      ],
+      "role": "Engine (pipeline anchor)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sulfuric Vortex",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "At the beginning of each player's upkeep, this enchantment deals 2 damage to that player.\nIf a player would gain life, that player gains no life instead.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Lifegain Prevention"
+      ],
+      "role": "Engine (board-independent clock)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "cmc": 0,
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "role": "Hate - graveyard",
+      "board": "sideboard"
+    },
+    {
+      "name": "Tormod's Crypt",
+      "cmc": 0,
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "role": "Hate - graveyard",
+      "board": "sideboard"
+    },
+    {
+      "name": "Slice and Dice",
+      "cmc": 6,
+      "type_line": "Sorcery",
+      "mana_cost": "{4}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Slice and Dice deals 4 damage to each creature.\nCycling {2}{R} ({2}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have it deal 1 damage to each creature.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Cycling Matters",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Cycling"
+      ],
+      "role": "Hate - wide boards",
+      "board": "sideboard"
+    },
+    {
+      "name": "Slice and Dice",
+      "cmc": 6,
+      "type_line": "Sorcery",
+      "mana_cost": "{4}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Slice and Dice deals 4 damage to each creature.\nCycling {2}{R} ({2}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have it deal 1 damage to each creature.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Cycling Matters",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Cycling"
+      ],
+      "role": "Hate - wide boards",
+      "board": "sideboard"
+    },
+    {
+      "name": "Icy Manipulator",
+      "cmc": 4,
+      "type_line": "Artifact",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Tap Effect"
+      ],
+      "role": "Flex - repeatable interaction",
+      "board": "sideboard"
+    },
+    {
+      "name": "Icy Manipulator",
+      "cmc": 4,
+      "type_line": "Artifact",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Tap Effect"
+      ],
+      "role": "Flex - repeatable interaction",
+      "board": "sideboard"
+    },
+    {
+      "name": "Solar Blast",
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Solar Blast deals 3 damage to any target.\nCycling {1}{R}{R} ({1}{R}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have it deal 1 damage to any target.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Card Draw",
+        "Cycling"
+      ],
+      "role": "Flex - removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Solar Blast",
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Solar Blast deals 3 damage to any target.\nCycling {1}{R}{R} ({1}{R}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have it deal 1 damage to any target.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Card Draw",
+        "Cycling"
+      ],
+      "role": "Flex - removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Macetail Hystrodon",
+      "cmc": 7,
+      "type_line": "Creature — Beast",
+      "mana_cost": "{6}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "First strike, haste\nCycling {3} ({3}, Discard this card: Draw a card.)",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cycling",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Flex - grindy threat",
+      "board": "sideboard"
+    },
+    {
+      "name": "Wall of Junk",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Wall",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "Defender (This creature can't attack.)\nWhen this creature blocks, return it to its owner's hand at end of combat. (Return it only if it's on the battlefield.)",
+      "power": "0",
+      "toughness": "7",
+      "tags": [
+        "Artifacts",
+        "Defender Matters",
+        "Interaction/Disruption"
+      ],
+      "role": "Hate - being raced",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "Mono-red aggro that attacks in the air and finishes with burn. Shivan Dragon is the thesis in one card - 'Flying // {R}: This creature gets +1/+0 until end of turn' is the only unbounded per-mana pump in mono-red, and it is already evasive, so surplus mana converts directly into unblocked damage. Dragon Whelp doubles the flying pump on a cheaper body and Dragon Engine supplies a colourless, genuinely unbounded sink; Fireblast, Chain Lightning, Siege-Gang Commander and Sulfuric Vortex supply damage that does not need a creature to attack. Gauntlet of Power naming red doubles all 18 Mountains and anthems 12 of the 14 creature copies, but it is a 1-of mythic that is only 26.2% to be seen by turn 5, so the deck is built to function on basics alone and Gamble exists to find it.",
+  "strategy_es": "agro",
+  "identity_es": "Agro mono rojo que ataca por el aire y remata quemando. Shivan Dragon es la tesis en una carta: 'Flying // {R}: This creature gets +1/+0 until end of turn' es la única pompa por maná sin límite del mono rojo, y ya es evasiva, así que el maná sobrante se convierte directamente en daño sin bloquear. Dragon Whelp duplica la pompa voladora en un cuerpo más barato y Dragon Engine aporta un sumidero incoloro genuinamente ilimitado; Fireblast, Chain Lightning, Siege-Gang Commander y Sulfuric Vortex aportan daño que no necesita que una criatura ataque. Gauntlet of Power nombrando rojo duplica las 18 Mountains y da anthem a 12 de las 14 copias de criatura, pero es una mítica de una sola copia que solo se ve el 26,2% de las veces para el turno 5, así que el mazo está construido para funcionar solo con básicas y Gamble existe para encontrarla.",
+  "pitch_es": "Agro mono rojo que ataca por el aire y remata quemando. Shivan Dragon es la tesis en una carta: 'Flying // {R}: This creature gets +1/+0 until end of turn' es la única pompa por maná sin límite del mono rojo, y ya es evasiva, así que el maná sobrante se convierte directamente en daño sin bloquear. Dragon Whelp duplica la pompa voladora en un cuerpo más barato y Dragon Engine aporta un sumidero incoloro genuinamente ilimitado; Fireblast, Chain Lightning, Siege-Gang Commander y Sulfuric Vortex aportan daño que no necesita que una criatura ataque. Gauntlet of Power nombrando rojo duplica las 18 Mountains y da anthem a 12 de las 14 copias de criatura, pero es una mítica de una sola copia que solo se ve el 26,2% de las veces para el turno 5, así que el mazo está construido para funcionar solo con básicas y Gamble existe para encontrarla."
+}

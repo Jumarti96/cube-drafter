@@ -1,0 +1,599 @@
+{
+  "deck_name": "u-warp-tide-control",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-04T05:04:55Z",
+  "format": "40-card",
+  "strategy": "mono-blue warp control",
+  "colors": "U",
+  "identity": "Mono-blue warp control. Warp reads 'cast this card from your hand for its warp cost, exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn' — so 9 of the 21 nonland copies buy a body 1-3 mana below printed cost for exactly one turn cycle, block or fire an ETB, and then wait in exile to be re-cast at full price later. That discount is the whole point: it lets a control deck field a 5/5 on turn 3 and a 3/5 flier on turn 2 while still holding up answers. Anticausal Vestige is a standalone value card on the same axis — warp it for {4} and its own end-step exile draws a card and free-drops a permanent from hand. Cryogen Relic pays on both entering and leaving. Eight dedicated answers hold the ground and Quantum Riddler, Starwinder and a hard-cast Mechanozoa close it. 19 Islands: zero tapped lands, zero colour screw.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2,
+        "rare": 1,
+        "mythic": 1
+      },
+      "only_from": {},
+      "excluded": [],
+      "extra_constraint": "at most 6 rare-or-mythic cards across mainboard+sideboard"
+    },
+    "checklist": [
+      {
+        "rule": "Commons and uncommons max 2 copies",
+        "status": "PASS",
+        "detail": "No card exceeds its rarity multiplier; verified by cube_search.get_max_copies"
+      },
+      {
+        "rule": "Rares and mythics max 1 copy",
+        "status": "PASS",
+        "detail": "All four rare/mythic cards are singletons"
+      },
+      {
+        "rule": "Max 6 rare/mythic cards across mainboard + sideboard",
+        "status": "PASS",
+        "detail": "5 used: Anticausal Vestige (R), Starfield Vocalist (R), Starwinder (R), Consult the Star Charts (R), Quantum Riddler (M). Sideboard uses zero; 1 slot left unused."
+      },
+      {
+        "rule": "All cards from the eoe cube mainboard",
+        "status": "PASS",
+        "detail": "Exact-name match against the working pool; Islands are format-supplied"
+      },
+      {
+        "rule": "40-card mainboard, 10-card sideboard",
+        "status": "PASS",
+        "detail": "40 / 10"
+      }
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 19,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.43,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.907,
+      "raw_target": 17.907,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.43,
+    "pip_demand": {
+      "U": 24
+    },
+    "land_color_production": {
+      "U": 19
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Anticausal Vestige",
+      "oracle_text": "When this creature leaves the battlefield, draw a card, then you may put a permanent card with mana value less than or equal to the number of lands you control from your hand onto the battlefield tapped.\nWarp {4} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "mana_cost": "{6}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 6,
+      "type_line": "Creature — Eldrazi",
+      "rarity": "rare",
+      "power": "7",
+      "toughness": "5",
+      "tags": [
+        "Blink/ETB",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Card Draw",
+        "Cheat into Play",
+        "Cards: Net-Positive"
+      ],
+      "qty": 1,
+      "role": "Engine — warp {4}: 7/5 for a turn, then its OWN exile draws + free-drops",
+      "board": "mainboard"
+    },
+    {
+      "name": "Quantum Riddler",
+      "oracle_text": "Flying\nWhen this creature enters, draw a card.\nAs long as you have one or fewer cards in hand, if you would draw one or more cards, you draw that many cards plus one instead.\nWarp {1}{U}",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Sphinx",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "6",
+      "tags": [
+        "Kicker/Scaling",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 1,
+      "role": "Payoff — evasive finisher + draw upgrade",
+      "board": "mainboard"
+    },
+    {
+      "name": "Starwinder",
+      "oracle_text": "Whenever a creature you control deals combat damage to a player, you may draw that many cards.\nWarp {2}{U}{U} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "mana_cost": "{5}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 7,
+      "type_line": "Creature — Leviathan",
+      "rarity": "rare",
+      "power": "7",
+      "toughness": "7",
+      "tags": [
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Card Draw",
+        "Cards: Net-Positive"
+      ],
+      "qty": 1,
+      "role": "Payoff — 7/7, draws on combat damage",
+      "board": "mainboard"
+    },
+    {
+      "name": "Starfield Vocalist",
+      "oracle_text": "If a permanent entering the battlefield causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.\nWarp {1}{U} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Bard",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Blink/ETB",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Trigger Doubling"
+      ],
+      "qty": 1,
+      "role": "Engine — doubles ETB triggers only",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cryogen Relic",
+      "oracle_text": "When this artifact enters or leaves the battlefield, draw a card.\n{1}{U}, Sacrifice this artifact: Put a stun counter on up to one target tapped creature. (If a permanent with a stun counter would become untapped, remove one from it instead.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Artifact",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Interaction/Disruption",
+        "Card Draw",
+        "Sacrifice Outlet",
+        "Tap/Stun",
+        "Cards: Net-Positive"
+      ],
+      "qty": 2,
+      "role": "Engine — draws on enter and on leave",
+      "board": "mainboard"
+    },
+    {
+      "name": "Consult the Star Charts",
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nLook at the top X cards of your library, where X is the number of lands you control. Put one of those cards into your hand. If this spell was kicked, put two of those cards into your hand instead. Put the rest on the bottom of your library in a random order.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Kicker/Scaling",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Card Draw",
+        "Kicker",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 1,
+      "role": "Engine — land-scaled instant selection",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mechanozoa",
+      "oracle_text": "When this creature enters, tap target artifact or creature an opponent controls and put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nWarp {2}{U} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "mana_cost": "{4}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 6,
+      "type_line": "Artifact Creature — Robot Jellyfish",
+      "rarity": "common",
+      "power": "5",
+      "toughness": "5",
+      "tags": [
+        "Artifacts",
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Tap Down",
+        "Stun Counter"
+      ],
+      "qty": 2,
+      "role": "Warp body — 5/5, ETB tap+stun",
+      "board": "mainboard"
+    },
+    {
+      "name": "Starbreach Whale",
+      "oracle_text": "Flying\nWhen this creature enters, surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)\nWarp {1}{U} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "mana_cost": "{4}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Whale",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "5",
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Standalone Threat",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "Warp body — flying 3/5, warp {1}{U}",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sinister Cryologist",
+      "oracle_text": "When this creature enters, target creature an opponent controls gets -3/-0 until end of turn.\nWarp {U} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Jellyfish Wizard",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Interaction/Disruption",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "Warp body — warp {U}, ETB -3/-0",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cryoshatter",
+      "oracle_text": "Enchant creature\nEnchanted creature gets -5/-0.\nWhen enchanted creature becomes tapped or is dealt damage, destroy it.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Debuff"
+      ],
+      "qty": 2,
+      "role": "Interaction — 1-mana removal (needs the creature to tap or take damage)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mental Modulation",
+      "oracle_text": "This spell costs {1} less to cast during your turn.\nTap target artifact or creature.\nDraw a card.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Tap Down",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 2,
+      "role": "Interaction — tap (turns on Cryoshatter) + cantrip",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lost in Space",
+      "oracle_text": "Target artifact or creature's owner puts it on their choice of the top or bottom of their library. Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Self-Mill",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Bounce",
+        "Card Selection"
+      ],
+      "qty": 1,
+      "role": "Interaction — tuck artifact or creature",
+      "board": "mainboard"
+    },
+    {
+      "name": "Desculpting Blast",
+      "oracle_text": "Return target nonland permanent to its owner's hand. If it was attacking, create a 1/1 colorless Drone artifact creature token with flying and \"This token can block only creatures with flying.\"",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Bounce",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "Interaction — bounce any nonland permanent",
+      "board": "mainboard"
+    },
+    {
+      "name": "Divert Disaster",
+      "oracle_text": "Counter target spell unless its controller pays {2}. If they do, you create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "qty": 2,
+      "role": "Interaction — soft counter + Lander",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 19,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Annul",
+      "oracle_text": "Counter target artifact or enchantment spell.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 2,
+      "role": "SB — artifact/enchantment counter",
+      "board": "sideboard"
+    },
+    {
+      "name": "Unravel",
+      "oracle_text": "Counter target spell. If the amount of mana spent to cast that spell was less than its mana value, you draw a card.",
+      "mana_cost": "{1}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell",
+        "Card Draw"
+      ],
+      "qty": 2,
+      "role": "SB — hard counter",
+      "board": "sideboard"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "qty": 2,
+      "role": "SB — graveyard exile",
+      "board": "sideboard"
+    },
+    {
+      "name": "Specimen Freighter",
+      "oracle_text": "When this Spacecraft enters, return up to two target non-Spacecraft creatures to their owners' hands.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 9+.)\n9+ | Flying\nWhenever this Spacecraft attacks, defending player mills four cards.",
+      "mana_cost": "{5}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 6,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "7",
+      "tags": [
+        "Artifacts",
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Bounce",
+        "Mill"
+      ],
+      "qty": 2,
+      "role": "SB — double bounce vs go-wide",
+      "board": "sideboard"
+    },
+    {
+      "name": "Mouth of the Storm",
+      "oracle_text": "Flying\nWard {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)\nWhen this creature enters, creatures your opponents control get -3/-0 until your next turn.",
+      "mana_cost": "{6}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 7,
+      "type_line": "Creature — Elemental",
+      "rarity": "uncommon",
+      "power": "6",
+      "toughness": "6",
+      "tags": [
+        "Standalone Threat",
+        "Interaction/Disruption"
+      ],
+      "qty": 2,
+      "role": "SB — anti-wide 6/6 flier",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "Mono-blue warp control. Warp reads 'cast this card from your hand for its warp cost, exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn' — so 9 of the 21 nonland copies buy a body 1-3 mana below printed cost for exactly one turn cycle, block or fire an ETB, and then wait in exile to be re-cast at full price later. That discount is the whole point: it lets a control deck field a 5/5 on turn 3 and a 3/5 flier on turn 2 while still holding up answers. Anticausal Vestige is a standalone value card on the same axis — warp it for {4} and its own end-step exile draws a card and free-drops a permanent from hand. Cryogen Relic pays on both entering and leaving. Eight dedicated answers hold the ground and Quantum Riddler, Starwinder and a hard-cast Mechanozoa close it. 19 Islands: zero tapped lands, zero colour screw.",
+  "strategy_es": "control de warp mono azul",
+  "identity_es": "Control de warp mono azul. El warp dice 'cast this card from your hand for its warp cost, exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn', así que 9 de las 21 copias no-tierra compran un cuerpo de 1 a 3 manás por debajo del coste impreso durante exactamente un ciclo de turno, bloquean o disparan una entrada, y luego esperan en el exilio para ser relanzadas a precio completo más tarde. Ese descuento es todo el asunto: permite a un mazo de control desplegar un 5/5 en el turno 3 y un volador 3/5 en el turno 2 mientras sigue reservando respuestas. Anticausal Vestige es una carta de valor independiente en el mismo eje: aplícale warp por {4} y su propio exilio de paso final roba una carta y suelta gratis un permanente desde la mano. Cryogen Relic paga tanto al entrar como al salir. Ocho respuestas dedicadas sostienen el suelo y Quantum Riddler, Starwinder y una Mechanozoa lanzada a coste normal lo cierran. 19 Islands: cero tierras giradas, cero problemas de color.",
+  "pitch_es": "Control de warp mono azul. El warp dice 'cast this card from your hand for its warp cost, exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn', así que 9 de las 21 copias no-tierra compran un cuerpo de 1 a 3 manás por debajo del coste impreso durante exactamente un ciclo de turno, bloquean o disparan una entrada, y luego esperan en el exilio para ser relanzadas a precio completo más tarde. Ese descuento es todo el asunto: permite a un mazo de control desplegar un 5/5 en el turno 3 y un volador 3/5 en el turno 2 mientras sigue reservando respuestas. Anticausal Vestige es una carta de valor independiente en el mismo eje: aplícale warp por {4} y su propio exilio de paso final roba una carta y suelta gratis un permanente desde la mano. Cryogen Relic paga tanto al entrar como al salir. Ocho respuestas dedicadas sostienen el suelo y Quantum Riddler, Starwinder y una Mechanozoa lanzada a coste normal lo cierran. 19 Islands: cero tierras giradas, cero problemas de color."
+}

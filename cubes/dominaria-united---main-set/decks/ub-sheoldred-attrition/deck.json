@@ -1,0 +1,1027 @@
+{
+  "deck_name": "ub-sheoldred-attrition",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-17T00:00:00Z",
+  "format": "40-card",
+  "strategy": "control — most reactive attrition",
+  "colors": "UB",
+  "identity": "A UB reactive-attrition control deck. Twelve of its twenty-three nonland cards are removal or counterspells across seven distinct names, stripping the board one-for-one until Drag to the Bottom resets it - and because the mana base runs Geothermal Bog for a third basic land type, that reset is -4/-4, killing 133 of the cube's 157 creatures. The graveyard those spells leave behind is fuel rather than waste: Founding the Third Path mills four at a time, discounting Tolarian Terror toward a three-mana 5/5 with ward 2 and setting Haughty Djinn's power. Sheoldred, the Apocalypse closes from the other side, turning the opponent's own draw step into 2 damage a turn behind a 4/5 deathtouch wall.",
+  "restrictions": {
+    "base": "cube_mainboard only - every card verified by exact name against the working pool cache",
+    "commons_uncommons_max_2": "PASS - no card exceeds 2 copies except basic lands",
+    "rares_mythics_max_1": "PASS - all five rare/mythic cards are singletons",
+    "rare_mythic_total_max_5": "PASS - exactly 5: Sheoldred, the Apocalypse (M), Haughty Djinn (R), Drag to the Bottom (R), Ertai Resurrected (R), Silver Scrutiny (R). All five are mainboard spells; the mana base costs zero rare slots because every land in it is a common. Sideboard contains zero rares.",
+    "basics_unlimited": "PASS - 8 Island, 5 Swamp, format-supplied and exempt",
+    "colour_identity": "PASS - every nonland card usable in UB via effective_cost.best_mode. Geothermal Bog's printed identity includes R, which this deck never spends; it is in the list as a Swamp that also carries a Mountain type."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.78,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.373,
+      "raw_target": 17.373,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.78,
+    "pip_demand": {
+      "B": 15,
+      "U": 16
+    },
+    "land_color_production": {
+      "B": 9,
+      "U": 10,
+      "R": 2
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 48.4,
+        "prod_pct": 52.9,
+        "gap": -4.5,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 51.6,
+        "prod_pct": 58.8,
+        "gap": -7.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Cut Down",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — one-mana removal"
+    },
+    {
+      "name": "Rona's Vortex",
+      "oracle_text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nReturn target creature or planeswalker you don't control to its owner's hand. If this spell was kicked, put that permanent on the bottom of its owner's library instead.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Bounce",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — bounce, kicked to library bottom"
+    },
+    {
+      "name": "Tribute to Urborg",
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nTarget creature gets -2/-2 until end of turn. If this spell was kicked, that creature gets an additional -1/-1 until end of turn for each instant and sorcery card in your graveyard.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Spellslinger",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Spellslinger",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — scaling -X/-X removal"
+    },
+    {
+      "name": "Essence Scatter",
+      "oracle_text": "Counter target creature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — counterspell"
+    },
+    {
+      "name": "Extinguish the Light",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — unconditional removal"
+    },
+    {
+      "name": "Drag to the Bottom",
+      "oracle_text": "Domain — Each creature gets -X/-X until end of turn, where X is 1 plus the number of basic land types among lands you control.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Domain",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Domain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — scaling sweeper"
+    },
+    {
+      "name": "Ertai Resurrected",
+      "oracle_text": "Flash\nWhen Ertai Resurrected enters, choose up to one —\n• Counter target spell, activated ability, or triggered ability. Its controller draws a card.\n• Destroy another target creature or planeswalker. Its controller draws a card.",
+      "mana_cost": "{2}{U}{B}",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Human Wizard",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — flash catch-all + body"
+    },
+    {
+      "name": "Impulse",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Combo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — card selection"
+    },
+    {
+      "name": "Shadow Prophecy",
+      "oracle_text": "Domain — Look at the top X cards of your library, where X is the number of basic land types among lands you control. Put up to two of them into your hand and the rest into your graveyard. You lose 2 life.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Domain",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Card Draw",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Domain"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive",
+          "Life: Cost"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine — instant-speed double dig"
+    },
+    {
+      "name": "Silver Scrutiny",
+      "oracle_text": "You may cast this spell as though it had flash if X is 3 or less.\nDraw X cards.",
+      "mana_cost": "{X}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine — scaling refuel"
+    },
+    {
+      "name": "Vohar, Vodalian Desecrator",
+      "oracle_text": "{T}: Draw a card, then discard a card. If you discarded an instant or sorcery card this way, each opponent loses 1 life and you gain 1 life.\n{2}, Sacrifice Vohar: You may cast target instant or sorcery card from your graveyard this turn. If that spell would be put into your graveyard, exile it instead. Activate only as a sorcery.",
+      "mana_cost": "{U}{B}",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Life Drain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting",
+        "Graveyard Recursion"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Spellslinger"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Graveyard",
+          "Flashback/GY-Cast",
+          "Life Drain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Looting",
+          "Life Drain",
+          "Graveyard Recursion"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Legendary Creature — Phyrexian Merfolk Wizard",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine — repeatable filtering + graveyard rebuy"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Lifegain",
+        "Life Drain",
+        "Standalone Threat",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain",
+          "Life Drain"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat — primary inevitability engine"
+    },
+    {
+      "name": "Haughty Djinn",
+      "oracle_text": "Flying\nHaughty Djinn's power is equal to the number of instant and sorcery cards in your graveyard.\nInstant and sorcery spells you cast cost {1} less to cast.",
+      "mana_cost": "{1}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Cost Reduction"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Cost Reduction"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Djinn",
+      "rarity": "rare",
+      "power": "*",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat — evasive clock + cost reducer"
+    },
+    {
+      "name": "Tolarian Terror",
+      "oracle_text": "This spell costs {1} less to cast for each instant and sorcery card in your graveyard.\nWard {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)",
+      "mana_cost": "{6}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Standalone Threat",
+        "Cost Reduction"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Cost Reduction"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 7,
+      "type_line": "Creature — Serpent",
+      "rarity": "common",
+      "power": "5",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat — self-discounting finisher"
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — UB dual (Island Swamp)"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 8,
+      "role": "Land — basic"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 5,
+      "role": "Land — basic"
+    },
+    {
+      "name": "Founding the Third Path",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — You may cast an instant or sorcery spell with mana value 1 or 2 from your hand without paying its mana cost.\nII — Target player mills four cards.\nIII — Exile target instant or sorcery card from your graveyard. Copy it. You may cast the copy.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Sagas",
+        "Self-Mill",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Free Cast"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Graveyard",
+          "Flashback/GY-Cast",
+          "Sagas",
+          "Self-Mill"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Self-Mill",
+          "Free Cast"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Enchantment — Saga",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine - free spells + graveyard fuel"
+    },
+    {
+      "name": "Geothermal Bog",
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land - Swamp Mountain, adds a third basic type"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Negate",
+      "oracle_text": "Counter target noncreature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Interaction — counterspell",
+      "when_to_board": "Against the cube's 18 enchantments and 6 sweepers; in vs any deck whose key cards are Sagas or noncreature permanents that my creature removal cannot touch."
+    },
+    {
+      "name": "Ertai's Scorn",
+      "oracle_text": "This spell costs {U} less to cast if an opponent cast two or more spells this turn.\nCounter target spell.",
+      "mana_cost": "{1}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Interaction — unconditional counterspell",
+      "when_to_board": "In vs control mirrors and vs decks whose threats are noncreature; 'costs {U} less if an opponent cast two or more spells this turn' makes it cheapest exactly against the decks that try to go over the top."
+    },
+    {
+      "name": "Academy Wall",
+      "oracle_text": "Defender\nWhenever you cast an instant or sorcery spell, you may draw a card. If you do, discard a card. This ability triggers only once each turn.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Defender Matters",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Looting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Looting"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Wall",
+      "rarity": "common",
+      "power": "0",
+      "toughness": "5",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Defence — ground blocker + filtering",
+      "when_to_board": "In vs ground aggro. My mainboard removal is all black and does not care about flying, so this only has to cover the ground, which a 0/5 defender does."
+    },
+    {
+      "name": "Talas Lookout",
+      "oracle_text": "Flying\nWhen this creature dies, look at the top two cards of your library. Put one of them into your hand and the other into your graveyard.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Human Pirate",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Threat — evasive clock, self-replacing",
+      "when_to_board": "In vs control mirrors and grindy midrange where spot removal is dead: a 3/2 flier that replaces itself when it trades adds a clock without adding a dead card."
+    },
+    {
+      "name": "Battlefly Swarm",
+      "oracle_text": "Flying\n{B}: This creature gains deathtouch until end of turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Phyrexian Insect",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Defence - one-mana flying deathtouch blocker",
+      "when_to_board": "In vs the cube 30 flying creatures. For {B} it blocks any flier and {B}: gains deathtouch kills it regardless of size."
+    }
+  ],
+  "pitch": "A UB reactive-attrition control deck. Twelve of its twenty-three nonland cards are removal or counterspells across seven distinct names, stripping the board one-for-one until Drag to the Bottom resets it - and because the mana base runs Geothermal Bog for a third basic land type, that reset is -4/-4, killing 133 of the cube's 157 creatures. The graveyard those spells leave behind is fuel rather than waste: Founding the Third Path mills four at a time, discounting Tolarian Terror toward a three-mana 5/5 with ward 2 and setting Haughty Djinn's power. Sheoldred, the Apocalypse closes from the other side, turning the opponent's own draw step into 2 damage a turn behind a 4/5 deathtouch wall.",
+  "strategy_es": "control — el desgaste más reactivo",
+  "identity_es": "Un control UB de desgaste reactivo. Doce de sus veintitrés cartas no-tierra son eliminación o contrahechizos repartidos en siete nombres distintos, despojando el tablero uno a uno hasta que Drag to the Bottom lo reinicia; y como la base de maná juega Geothermal Bog para un tercer tipo de tierra básica, ese reinicio es -4/-4, matando 133 de las 157 criaturas del cubo. El cementerio que dejan esos hechizos es combustible y no desperdicio: Founding the Third Path muele cuatro de golpe, abaratando Tolarian Terror hacia un 5/5 de tres manás con ward 2 y fijando la fuerza de Haughty Djinn. Sheoldred, the Apocalypse cierra desde el otro lado, convirtiendo el propio paso de robar del rival en 2 de daño por turno tras un muro 4/5 con toque mortal.",
+  "pitch_es": "Un control UB de desgaste reactivo. Doce de sus veintitrés cartas no-tierra son eliminación o contrahechizos repartidos en siete nombres distintos, despojando el tablero uno a uno hasta que Drag to the Bottom lo reinicia; y como la base de maná juega Geothermal Bog para un tercer tipo de tierra básica, ese reinicio es -4/-4, matando 133 de las 157 criaturas del cubo. El cementerio que dejan esos hechizos es combustible y no desperdicio: Founding the Third Path muele cuatro de golpe, abaratando Tolarian Terror hacia un 5/5 de tres manás con ward 2 y fijando la fuerza de Haughty Djinn. Sheoldred, the Apocalypse cierra desde el otro lado, convirtiendo el propio paso de robar del rival en 2 de daño por turno tras un muro 4/5 con toque mortal."
+}

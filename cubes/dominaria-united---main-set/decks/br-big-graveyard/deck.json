@@ -1,0 +1,587 @@
+{
+  "deck_name": "br-big-graveyard",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-18T21:09:14Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "BR",
+  "identity": "Rakdos grave-scaled beatdown. This is the fourth reading of 'the bin' in this cube and the only one where the payoffs count cards rather than lands: Writhing Necromass costs {1} less for each creature card in your graveyard, and Monstrous War-Leech's power and toughness are each the greatest mana value among cards there. The two pull in opposite directions - one wants many cheap creatures binned, the other wants one expensive card - and the deck resolves that with two commons that are both, because they are creature cards with enormous printed costs it never intends to pay: Writhing Necromass at mana value 7 and Molten Monstrosity at mana value 8. Discard either one to Thrill of Possibility and War-Leech becomes a 7/7 or 8/8 for four mana while the Necromass in hand gets a discount. Goblin Picker, Thrill of Possibility, Bone Splinters, Hurler Cyclops and The Elder Dragon War choose which fatty goes to the yard; The Cruelty of Gix brings one back from ANY graveyard; and Phoenix Chick and Cult Conscript return themselves for free, which is why a sweeper against this deck is closer to a favour than an answer.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "max 5 rare+mythic cards total across mainboard and sideboard",
+    "basics": "unlimited, rarity-exempt"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.13,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.84,
+      "raw_target": 17.84,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.13,
+    "pip_demand": {
+      "B": 16,
+      "R": 12
+    },
+    "land_color_production": {
+      "B": 11,
+      "R": 8
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 57.1,
+        "prod_pct": 64.7,
+        "gap": -7.6,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 42.9,
+        "prod_pct": 47.1,
+        "gap": -4.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Cut Down",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "89",
+      "role": "Interaction — 1-mana instant removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Strike",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "tla",
+      "collector_number": "146",
+      "role": "Interaction — 3 damage any target, including the face",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bone Splinters",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "83",
+      "role": "Engine/Removal — sacrifice a creature (bin fodder) to destroy any creature",
+      "board": "mainboard"
+    },
+    {
+      "name": "Goblin Picker",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Creature — Goblin",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "{R}, {T}, Discard a card: Draw a card.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "set": "dmu",
+      "collector_number": "128",
+      "role": "Engine — {R},{T}, Discard a card: Draw a card; the deck's repeatable outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Thrill of Possibility",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "fdn",
+      "collector_number": "210",
+      "role": "Engine — discard a fatty, draw two, at instant speed",
+      "board": "mainboard"
+    },
+    {
+      "name": "Phoenix Chick",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Creature — Phoenix",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Flying, haste\nThis creature can't block.\nWhenever you attack with three or more creatures, you may pay {R}{R}. If you do, return this card from your graveyard to the battlefield tapped and attacking with a +1/+1 counter on it.",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "set": "dmu",
+      "collector_number": "140",
+      "role": "Threat — 1/1 flying haste that returns from the graveyard for free",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cult Conscript",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Creature — Skeleton Warrior",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "This creature enters tapped.\n{1}{B}: Return this card from your graveyard to the battlefield. Activate only if a non-Skeleton creature died under your control this turn.",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "set": "dmu",
+      "collector_number": "88",
+      "role": "Threat — 2/1 that returns from the graveyard for {1}{B} whenever anything died",
+      "board": "mainboard"
+    },
+    {
+      "name": "Monstrous War-Leech",
+      "qty": 2,
+      "cmc": 4,
+      "type_line": "Creature — Leech Horror",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "oracle_text": "Kicker {U} (You may pay an additional {U} as you cast this spell.)\nAs this creature enters, if it was kicked, mill four cards. (To mill a card, put the top card of your library into your graveyard.)\nMonstrous War-Leech's power and toughness are each equal to the greatest mana value among cards in your graveyard.",
+      "rarity": "uncommon",
+      "power": "*",
+      "toughness": "*",
+      "set": "dmu",
+      "collector_number": "98",
+      "role": "Payoff — P/T each equal to the greatest mana value in your graveyard",
+      "board": "mainboard"
+    },
+    {
+      "name": "Writhing Necromass",
+      "qty": 2,
+      "cmc": 7,
+      "type_line": "Creature — Zombie Giant",
+      "mana_cost": "{6}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "This spell costs {1} less to cast for each creature card in your graveyard.\nDeathtouch",
+      "rarity": "common",
+      "power": "5",
+      "toughness": "5",
+      "set": "dmu",
+      "collector_number": "115",
+      "role": "Payoff — 5/5 deathtouch costing {1} less per creature card in the bin; mana value 7 when discarded",
+      "board": "mainboard"
+    },
+    {
+      "name": "Defiler of Flesh",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Creature — Phyrexian Horror",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Menace\nAs an additional cost to cast black permanent spells, you may pay 2 life. Those spells cost {B} less to cast if you paid life this way. This effect reduces only the amount of black mana you pay.\nWhenever you cast a black permanent spell, target creature you control gets +1/+1 and gains menace until end of turn.",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "4",
+      "set": "dmu",
+      "collector_number": "90",
+      "role": "Threat — 4/4 menace; black permanent spells cost {B} less for 2 life; pumps and grants menace",
+      "board": "mainboard"
+    },
+    {
+      "name": "The Elder Dragon War",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Enchantment — Saga",
+      "mana_cost": "{2}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — This Saga deals 2 damage to each creature and each opponent.\nII — Discard any number of cards, then draw that many cards.\nIII — Create a 4/4 red Dragon creature token with flying.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "121",
+      "role": "Engine/Sweeper — read ahead to II for a mass discard-and-redraw, or start at I to sweep",
+      "board": "mainboard"
+    },
+    {
+      "name": "The Cruelty of Gix",
+      "qty": 1,
+      "cmc": 5,
+      "type_line": "Enchantment — Saga",
+      "mana_cost": "{3}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — Target opponent reveals their hand. You choose a creature or planeswalker card from it. That player discards that card.\nII — Search your library for a card, put that card into your hand, then shuffle. You lose 3 life.\nIII — Put target creature card from a graveyard onto the battlefield under your control.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "87",
+      "role": "Payoff — chapter III returns a creature card from ANY graveyard to the battlefield under your control",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tyrannical Pitlord",
+      "qty": 1,
+      "cmc": 6,
+      "type_line": "Creature — Demon",
+      "mana_cost": "{4}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Flying, trample\nAs this creature enters, choose another creature you control.\nThe chosen creature gets +3/+3 and has flying.\nWhen this creature leaves the battlefield, sacrifice the chosen creature.",
+      "rarity": "rare",
+      "power": "6",
+      "toughness": "6",
+      "set": "dmu",
+      "collector_number": "284",
+      "role": "Threat — 6/6 flying trample; mana value 6 as War-Leech fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Molten Monstrosity",
+      "qty": 1,
+      "cmc": 8,
+      "type_line": "Creature — Hellion",
+      "mana_cost": "{7}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "This spell costs {X} less to cast, where X is the greatest power among creatures you control.\nTrample",
+      "rarity": "common",
+      "power": "5",
+      "toughness": "5",
+      "set": "dmu",
+      "collector_number": "139",
+      "role": "Payoff — mana value 8, the deck's best War-Leech fodder; costs {X} less for our greatest power",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hurler Cyclops",
+      "qty": 1,
+      "cmc": 5,
+      "type_line": "Creature — Cyclops",
+      "mana_cost": "{3}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "{1}, Sacrifice another creature: This creature deals 1 damage to any target.",
+      "rarity": "uncommon",
+      "power": "5",
+      "toughness": "4",
+      "set": "dmu",
+      "collector_number": "130",
+      "role": "Engine — the deck's only repeatable sacrifice outlet; also reach and mana value 5 fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "qty": 9,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "",
+      "role": "Land — B",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "qty": 6,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "({T}: Add {R}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "",
+      "role": "Land — R",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geothermal Bog",
+      "qty": 1,
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dsc",
+      "collector_number": "278",
+      "role": "Land — BR dual (Swamp Mountain), enters tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sulfurous Springs",
+      "qty": 1,
+      "cmc": 0,
+      "type_line": "Land",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {B} or {R}. This land deals 1 damage to you.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "set": "eoc",
+      "collector_number": "185",
+      "role": "Land — BR painland, enters untapped",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Smash to Dust",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target creature with defender.\n• Smash to Dust deals 1 damage to each creature your opponents control.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "144",
+      "role": "Answer — modal: destroy artifact / destroy defender / 1 damage to each opposing creature",
+      "board": "sideboard",
+      "when_to_board": "vs artifacts (15 cards / 6.1% of the cube) and x/1 token swarms"
+    },
+    {
+      "name": "Extinguish the Light",
+      "qty": 2,
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "94",
+      "role": "Removal — unconditional destroy creature or planeswalker",
+      "board": "sideboard",
+      "when_to_board": "vs threats above Cut Down's 'total power and toughness 5 or less' cap, and vs planeswalkers"
+    },
+    {
+      "name": "Flowstone Infusion",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_text": "Target creature gets +2/-2 until end of turn.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "124",
+      "role": "Removal — {R} instant, target creature gets +2/-2",
+      "board": "sideboard",
+      "when_to_board": "vs x/1 and x/2 aggro and token decks; also a one-mana pump on our own attacker"
+    },
+    {
+      "name": "In Thrall to the Pit",
+      "qty": 2,
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "oracle_text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nGain control of target creature until end of turn. Untap that creature. It gains haste until end of turn. If this spell was kicked, sacrifice that creature at the beginning of the next end step.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "132",
+      "role": "Removal/Reach — gain control and untap; kicked, sacrifice it at end of turn",
+      "board": "sideboard",
+      "when_to_board": "vs single-large-threat decks; steals the blocker and kills it in one card"
+    },
+    {
+      "name": "Hurloon Battle Hymn",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nHurloon Battle Hymn deals 4 damage to target creature or planeswalker. If this spell was kicked, you gain 4 life.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "131",
+      "role": "Removal — {2}{R} INSTANT, 4 damage to a creature or planeswalker",
+      "board": "sideboard",
+      "when_to_board": "vs flier-based decks (evasion is 51 cards / 21% of the cube); two mana cheaper and instant-speed against the same targets"
+    }
+  ],
+  "pitch": "Rakdos grave-scaled beatdown. This is the fourth reading of 'the bin' in this cube and the only one where the payoffs count cards rather than lands: Writhing Necromass costs {1} less for each creature card in your graveyard, and Monstrous War-Leech's power and toughness are each the greatest mana value among cards there. The two pull in opposite directions - one wants many cheap creatures binned, the other wants one expensive card - and the deck resolves that with two commons that are both, because they are creature cards with enormous printed costs it never intends to pay: Writhing Necromass at mana value 7 and Molten Monstrosity at mana value 8. Discard either one to Thrill of Possibility and War-Leech becomes a 7/7 or 8/8 for four mana while the Necromass in hand gets a discount. Goblin Picker, Thrill of Possibility, Bone Splinters, Hurler Cyclops and The Elder Dragon War choose which fatty goes to the yard; The Cruelty of Gix brings one back from ANY graveyard; and Phoenix Chick and Cult Conscript return themselves for free, which is why a sweeper against this deck is closer to a favour than an answer.",
+  "strategy_es": "agro",
+  "identity_es": "Beatdown Rakdos escalado por cementerio. Esta es la cuarta lectura del 'cementerio' en este cubo y la única donde las recompensas cuentan cartas en lugar de tierras: Writhing Necromass cuesta {1} menos por cada carta de criatura de tu cementerio, y la fuerza y resistencia de Monstrous War-Leech equivalen cada una al mayor valor de maná entre las cartas de allí. Las dos tiran en direcciones opuestas — una quiere muchas criaturas baratas enterradas, la otra quiere una carta cara — y el mazo lo resuelve con dos comunes que son ambas cosas, porque son cartas de criatura con costes impresos enormes que nunca pretende pagar: Writhing Necromass con valor de maná 7 y Molten Monstrosity con 8. Descarta cualquiera de las dos a Thrill of Possibility y War-Leech se convierte en un 7/7 u 8/8 por cuatro manás mientras la Necromass de la mano recibe un descuento. Goblin Picker, Thrill of Possibility, Bone Splinters, Hurler Cyclops y The Elder Dragon War eligen qué gordo va al cementerio; The Cruelty of Gix trae uno de vuelta desde CUALQUIER cementerio; y Phoenix Chick y Cult Conscript se devuelven solos gratis, que es por lo que un barrido contra este mazo se parece más a un favor que a una respuesta.",
+  "pitch_es": "Beatdown Rakdos escalado por cementerio. Esta es la cuarta lectura del 'cementerio' en este cubo y la única donde las recompensas cuentan cartas en lugar de tierras: Writhing Necromass cuesta {1} menos por cada carta de criatura de tu cementerio, y la fuerza y resistencia de Monstrous War-Leech equivalen cada una al mayor valor de maná entre las cartas de allí. Las dos tiran en direcciones opuestas — una quiere muchas criaturas baratas enterradas, la otra quiere una carta cara — y el mazo lo resuelve con dos comunes que son ambas cosas, porque son cartas de criatura con costes impresos enormes que nunca pretende pagar: Writhing Necromass con valor de maná 7 y Molten Monstrosity con 8. Descarta cualquiera de las dos a Thrill of Possibility y War-Leech se convierte en un 7/7 u 8/8 por cuatro manás mientras la Necromass de la mano recibe un descuento. Goblin Picker, Thrill of Possibility, Bone Splinters, Hurler Cyclops y The Elder Dragon War eligen qué gordo va al cementerio; The Cruelty of Gix trae uno de vuelta desde CUALQUIER cementerio; y Phoenix Chick y Cult Conscript se devuelven solos gratis, que es por lo que un barrido contra este mazo se parece más a un favor que a una respuesta."
+}

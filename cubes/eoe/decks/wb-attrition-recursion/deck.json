@@ -1,0 +1,1198 @@
+{
+  "deck_name": "wb-attrition-recursion",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-04T19:10:00Z",
+  "format": "40-card",
+  "strategy": "graveyard reanimator (aristocrats attrition)",
+  "colors": "WB",
+  "identity": "W/B Attrition-Recursion. This is the aristocrats reading of the reanimator archetype: the graveyard matters because creatures keep going there, not because one enormous body is waiting in it. Umbral Collar Zealot is a free, repeatable sacrifice outlet, and every body it eats triggers Sothera, the Supervoid - 'Whenever a creature you control dies, each opponent chooses a creature they control and exiles it' - so your own creature deaths are one-sided removal. Gravpack Monoist and Elegy Acolyte replace the corpse with a fresh creature token, Susurian Voidborn drains a life per death, Syr Vondam grows on every one, and Xu-Ifit, Osteoharmonist recurs the fuel from the yard for zero mana every turn. Scout for Survivors rebuilds up to three one-drops at once. The kill is incremental: a board Sothera has exiled down to nothing, against a drain clock that never stops.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "at most 6 rare+mythic cards total across mainboard + sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 1,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.25,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": -0.5,
+      "raw_target": 16.5,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.25,
+    "pip_demand": {
+      "B": 22,
+      "W": 5
+    },
+    "land_color_production": {
+      "B": 14,
+      "W": 5
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 81.5,
+        "prod_pct": 87.5,
+        "gap": -6,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 18.5,
+        "prod_pct": 31.2,
+        "gap": -12.7,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Sothera, the Supervoid",
+      "oracle_text": "Whenever a creature you control dies, each opponent chooses a creature they control and exiles it.\nAt the beginning of your end step, if a player controls no creatures, sacrifice Sothera, then put a creature card exiled with it onto the battlefield under your control with two additional +1/+1 counters on it.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Reanimator",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cheat Into Play"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Reanimator"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Cheat Into Play"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Enchantment",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Death-trigger exile engine"
+    },
+    {
+      "name": "Susurian Voidborn",
+      "oracle_text": "Whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life.\nWarp {B} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Artifacts",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Vampire Soldier",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Drain on every death"
+    },
+    {
+      "name": "Syr Vondam, Sunstar Exemplar",
+      "oracle_text": "Vigilance, menace\nWhenever another creature you control dies or is put into exile, put a +1/+1 counter on Syr Vondam and you gain 1 life.\nWhen Syr Vondam dies or is put into exile while its power is 4 or greater, destroy up to one target nonland permanent.",
+      "mana_cost": "{W}{B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Counter Placement",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counter Placement",
+          "Targeted Removal",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Legendary Creature — Human Knight",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Grows on every death/exile"
+    },
+    {
+      "name": "Elegy Acolyte",
+      "oracle_text": "Lifelink\nWhenever one or more creatures you control deal combat damage to a player, you draw a card and lose 1 life.\nVoid — At the beginning of your end step, if a nonland permanent left the battlefield this turn or a spell was warped this turn, create a 2/2 colorless Robot artifact creature token.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Lifegain",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Card Draw",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Token Generation",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Closer + card draw + creature tokens"
+    },
+    {
+      "name": "Umbral Collar Zealot",
+      "oracle_text": "Sacrifice another creature or artifact: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Self-Mill",
+        "Graveyard",
+        "Artifacts",
+        "Engine/Outlet",
+        "Sacrifice Outlet",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Self-Mill",
+          "Graveyard",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Sacrifice Outlet",
+          "Self-Mill",
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Free repeatable sac outlet"
+    },
+    {
+      "name": "Gravpack Monoist",
+      "oracle_text": "Flying\nWhen this creature dies, create a tapped 2/2 colorless Robot artifact creature token.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tokens",
+        "Artifacts",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Artifacts",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Scout",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Death-token fodder (flying)"
+    },
+    {
+      "name": "Hullcarver",
+      "oracle_text": "Deathtouch",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Assassin",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "MV-1 deathtouch blocker / Scout fodder"
+    },
+    {
+      "name": "Monoist Sentry",
+      "oracle_text": "Defender",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Artifacts",
+        "Defender Matters",
+        "Infrastructure/Consistency"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Artifacts",
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "MV-1 creature / 4-power blocker"
+    },
+    {
+      "name": "Xu-Ifit, Osteoharmonist",
+      "oracle_text": "{T}: Return target creature card from your graveyard to the battlefield. It's a Skeleton in addition to its other types and has no abilities. Activate only as a sorcery.",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Engine/Outlet",
+        "Reanimation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Reanimator",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Reanimation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Wizard",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Uncapped repeatable rebuild"
+    },
+    {
+      "name": "Scout for Survivors",
+      "oracle_text": "Return up to three target creature cards with total mana value 3 or less from your graveyard to the battlefield. Put a +1/+1 counter on each of them.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Counters (+1/+1)",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Reanimation",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Reanimator",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Reanimation"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Mass rebuild (up to three 1-drops)"
+    },
+    {
+      "name": "Rescue Skiff",
+      "oracle_text": "When this Spacecraft enters, return target creature or enchantment card from your graveyard to the battlefield.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 10+.)\n10+ | Flying",
+      "mana_cost": "{5}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Reanimator",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Reanimation",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Graveyard",
+          "Reanimator"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Reanimation"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 6,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "uncommon",
+      "power": "5",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Rebuys Sothera itself"
+    },
+    {
+      "name": "Nutrient Block",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Lifegain",
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Life Drain",
+        "Card Draw",
+        "Sacrifice Outlet"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Lifegain",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Life Drain",
+          "Card Draw",
+          "Sacrifice Outlet"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact — Food",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Free fodder that replaces itself"
+    },
+    {
+      "name": "Embrace Oblivion",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDestroy target creature or Spacecraft.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "1-mana removal (sac is upside)"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "1-mana removal (Void)"
+    },
+    {
+      "name": "Zero Point Ballad",
+      "oracle_text": "Destroy all creatures with toughness X or less. You lose X life. If X is 6 or more, return a creature card put into a graveyard this way to the battlefield under your control.",
+      "mana_cost": "{X}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Sweeper/Board Wipe",
+        "Reanimation",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Reanimator",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Reanimation"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Sweeper (symmetry is upside)"
+    },
+    {
+      "name": "Banishing Light",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Nonland-permanent answer"
+    },
+    {
+      "name": "Godless Shrine",
+      "oracle_text": "({T}: Add {W} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "WB dual (untapped-capable)"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "WB dual (tapped)"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 11,
+      "role": "Basic"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Basic"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Chrome Companion",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life.\n{2}, {T}: Put target card from a graveyard on the bottom of its owner's library.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Lifegain",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Interaction/Disruption",
+        "Life Drain",
+        "Graveyard Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Life Drain",
+          "Graveyard Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact Creature — Dog",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Graveyard hate / artifact fodder"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "1",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "One-shot graveyard exile"
+    },
+    {
+      "name": "Emergency Eject",
+      "oracle_text": "Destroy target nonland permanent. Its controller creates a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Destroy any nonland permanent"
+    },
+    {
+      "name": "Seam Rip",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls with mana value 2 or less until this enchantment leaves the battlefield.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Exile a cheap permanent"
+    },
+    {
+      "name": "Radiant Strike",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Artifact / tapped-creature removal + life"
+    },
+    {
+      "name": "Dubious Delicacy",
+      "oracle_text": "Flash\nWhen this artifact enters, up to one target creature gets -3/-3 until end of turn.\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\n{2}, {T}, Sacrifice this artifact: Target opponent loses 3 life.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Engine/Outlet",
+        "Targeted Removal",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Artifacts",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Lifegain",
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Artifact — Food",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Flash removal + lifegain"
+    },
+    {
+      "name": "Swarm Culler",
+      "oracle_text": "Flying\nWhenever this creature becomes tapped, you may sacrifice another creature or artifact. If you do, draw a card.",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Sacrifice Outlet",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Insect Warrior",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Flying blocker / sac-to-draw"
+    }
+  ],
+  "pitch": "W/B Attrition-Recursion. This is the aristocrats reading of the reanimator archetype: the graveyard matters because creatures keep going there, not because one enormous body is waiting in it. Umbral Collar Zealot is a free, repeatable sacrifice outlet, and every body it eats triggers Sothera, the Supervoid - 'Whenever a creature you control dies, each opponent chooses a creature they control and exiles it' - so your own creature deaths are one-sided removal. Gravpack Monoist and Elegy Acolyte replace the corpse with a fresh creature token, Susurian Voidborn drains a life per death, Syr Vondam grows on every one, and Xu-Ifit, Osteoharmonist recurs the fuel from the yard for zero mana every turn. Scout for Survivors rebuilds up to three one-drops at once. The kill is incremental: a board Sothera has exiled down to nothing, against a drain clock that never stops.",
+  "strategy_es": "reanimador de cementerio (desgaste de aristócratas)",
+  "identity_es": "Desgaste y recursión W/B. Esta es la lectura de aristócratas del arquetipo reanimador: el cementerio importa porque las criaturas no paran de ir allí, no porque haya un cuerpo enorme esperando en él. Umbral Collar Zealot es un medio de sacrificio gratuito y repetible, y cada cuerpo que se come dispara a Sothera, the Supervoid — 'Whenever a creature you control dies, each opponent chooses a creature they control and exiles it' — así que las muertes de tus propias criaturas son eliminación unilateral. Gravpack Monoist y Elegy Acolyte reemplazan el cadáver por una ficha de criatura nueva, Susurian Voidborn drena una vida por muerte, Syr Vondam crece con cada una, y Xu-Ifit, Osteoharmonist recupera el combustible del cementerio por cero manás cada turno. Scout for Survivors reconstruye hasta tres cartas de un maná a la vez. La victoria es incremental: un tablero que Sothera ha exiliado hasta dejarlo en nada, contra un reloj de drenaje que no para nunca.",
+  "pitch_es": "Desgaste y recursión W/B. Esta es la lectura de aristócratas del arquetipo reanimador: el cementerio importa porque las criaturas no paran de ir allí, no porque haya un cuerpo enorme esperando en él. Umbral Collar Zealot es un medio de sacrificio gratuito y repetible, y cada cuerpo que se come dispara a Sothera, the Supervoid — 'Whenever a creature you control dies, each opponent chooses a creature they control and exiles it' — así que las muertes de tus propias criaturas son eliminación unilateral. Gravpack Monoist y Elegy Acolyte reemplazan el cadáver por una ficha de criatura nueva, Susurian Voidborn drena una vida por muerte, Syr Vondam crece con cada una, y Xu-Ifit, Osteoharmonist recupera el combustible del cementerio por cero manás cada turno. Scout for Survivors reconstruye hasta tres cartas de un maná a la vez. La victoria es incremental: un tablero que Sothera ha exiliado hasta dejarlo en nada, contra un reloj de drenaje que no para nunca."
+}

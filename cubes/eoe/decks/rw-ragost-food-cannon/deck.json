@@ -1,0 +1,1131 @@
+{
+  "deck_name": "rw-ragost-food-cannon",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-04T05:10:35Z",
+  "format": "40-card",
+  "strategy": "artifact sacrifice burn",
+  "colors": "RW",
+  "identity": "An R/W deck that turns artifacts into face damage rather than into a board. Weftstalker Ardent pings for 1 every time any creature or artifact enters; Weapons Manufacturing mints a Munitions token off every nontoken artifact that deals 2 more when it leaves the battlefield; Rust Harvester eats artifact cards out of the graveyard for a growing direct shot; and Ragost grants the Food type to every artifact on board, converting one per activation into 3 damage to each opponent and untapping at each end step on any life gained. Three dedicated sacrifice outlets - Slagdrill Scrapper x2 and Memorial Vault - are what make Munitions fire without Ragost. Honest statement of the two modes: with Ragost the kill is non-combat and arrives around turn 8; without it the deck is a slower artifact-value deck whose damage accumulates across pings, bullets, Rust Harvester shots and Ruinous Rampage, with combat from 11 creature copies making up the difference. Lifegain is not a side theme - it is Ragost's untap condition.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2
+      },
+      "only_from": {},
+      "excluded": []
+    },
+    "user_constraint": "max 6 rare+mythic across mainboard and sideboard",
+    "checklist": {
+      "base": "cube_mainboard only - every card verified by exact name against the working pool",
+      "copy_limits": "commons/uncommons <=2, rares/mythics <=1 - verified via cube_search.get_max_copies",
+      "rare_mythic_cap": "6 of 6 used, all mainboard: Ragost, Weapons Manufacturing, Rust Harvester, Haliya, Memorial Vault, Sacred Foundry. Sideboard is 100% common/uncommon.",
+      "basics": "Mountain x9 + Plains x4 - format-supplied, exempt from copy limits",
+      "colour": "core R/W, no splash; every nonland card returns non-None from effective_cost.best_mode(card, ['R','W'], [])"
+    }
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 4,
+    "accel_count": 6,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.17,
+      "reference_avg_mv": 2.5,
+      "accel": 6,
+      "adjustment": -1.44,
+      "raw_target": 15.56,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.17,
+    "pip_demand": {
+      "R": 16,
+      "W": 5
+    },
+    "land_color_production": {
+      "W": 7,
+      "R": 12
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 76.2,
+        "prod_pct": 75,
+        "gap": 1.2,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 23.8,
+        "prod_pct": 43.8,
+        "gap": -20,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Rust Harvester",
+      "oracle_text": "Menace\n{2}, {T}, Exile an artifact card from your graveyard: Put a +1/+1 counter on this creature, then it deals damage equal to its power to any target.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Graveyard",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "engine - graveyard-fed repeatable damage"
+    },
+    {
+      "name": "Ragost, Deft Gastronaut",
+      "oracle_text": "Artifacts you control are Foods in addition to their other types and have \"{2}, {T}, Sacrifice this artifact: You gain 3 life.\"\n{1}, {T}, Sacrifice a Food: Ragost deals 3 damage to each opponent.\nAt the beginning of each end step, if you gained life this turn, untap Ragost.",
+      "mana_cost": "{R}{W}",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Artifacts",
+        "Aristocrats/Sacrifice",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Life Drain",
+        "Sacrifice Outlet",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Aristocrats/Sacrifice",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain",
+          "Sacrifice Outlet",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Legendary Creature — Lobster Citizen",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "PAYOFF - all artifacts become Food, 3 dmg per sac"
+    },
+    {
+      "name": "Weapons Manufacturing",
+      "oracle_text": "Whenever a nontoken artifact you control enters, create a colorless artifact token named Munitions with \"When this token leaves the battlefield, it deals 2 damage to any target.\"",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Tokens",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "engine - a Munitions bullet per nontoken artifact"
+    },
+    {
+      "name": "Weftstalker Ardent",
+      "oracle_text": "Whenever another creature or artifact you control enters, this creature deals 1 damage to each opponent.\nWarp {R} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Tokens",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Warp"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Tokens",
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Warp"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Drix Artificer",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "PAYOFF - 1 dmg to each opponent per ETB"
+    },
+    {
+      "name": "Slagdrill Scrapper",
+      "oracle_text": "{2}, {T}, Sacrifice another artifact or land: Draw a card.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Sacrifice Outlet"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Sacrifice Outlet"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Scout",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "OUTLET - sac another artifact or land, draw"
+    },
+    {
+      "name": "Memorial Vault",
+      "oracle_text": "{T}, Sacrifice another artifact: Exile the top X cards of your library, where X is one plus the mana value of the sacrificed artifact. You may play those cards this turn.",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Advantage",
+        "Sacrifice Outlet"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Advantage",
+          "Sacrifice Outlet"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Artifact",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "OUTLET - free repeatable sac, exile-and-play X"
+    },
+    {
+      "name": "Nutrient Block",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Lifegain",
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Life Drain",
+        "Card Draw",
+        "Sacrifice Outlet"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Lifegain",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Life Drain",
+          "Card Draw",
+          "Sacrifice Outlet"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact — Food",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Food - 3 life on demand, fodder, cantrip"
+    },
+    {
+      "name": "Chrome Companion",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life.\n{2}, {T}: Put target card from a graveyard on the bottom of its owner's library.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Lifegain",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Interaction/Disruption",
+        "Life Drain",
+        "Graveyard Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Life Drain",
+          "Graveyard Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact Creature — Dog",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "lifegain artifact - 1 life whenever tapped"
+    },
+    {
+      "name": "Haliya, Guided by Light",
+      "oracle_text": "Whenever Haliya or another creature or artifact you control enters, you gain 1 life.\nAt the beginning of your end step, draw a card if you've gained 3 or more life this turn.\nWarp {W} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Artifacts",
+        "Blink/ETB",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain",
+          "Artifacts",
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "engine - life per ETB (Ragost untap) + cards"
+    },
+    {
+      "name": "Kavaron Harrier",
+      "oracle_text": "Whenever this creature attacks, you may pay {2}. If you do, create a 2/2 colorless Robot artifact creature token that's tapped and attacking. Sacrifice that token at end of combat.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Tokens",
+        "Artifacts",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Mana: Ongoing-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": [
+          "Mana: Ongoing-Cost"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Soldier",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "fuel - free artifact ETB and death each combat"
+    },
+    {
+      "name": "Melded Moxite",
+      "oracle_text": "When this artifact enters, you may discard a card. If you do, draw two cards.\n{3}, Sacrifice this artifact: Create a tapped 2/2 colorless Robot artifact creature token.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Tokens",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Card Draw",
+        "Looting",
+        "Token Generation",
+        "Cards: Extra-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Looting",
+          "Token Generation"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Artifact",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "fuel - two artifact ETBs off one card, plus a dig"
+    },
+    {
+      "name": "Wurmwall Sweeper",
+      "oracle_text": "When this Spacecraft enters, surveil 2.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 4+.)\n4+ | Flying",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Surveil",
+        "Card Selection",
+        "Station"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Self-Mill",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Surveil",
+          "Card Selection",
+          "Station"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "fuel - artifact ETB, surveil 2 feeds Rust Harvester"
+    },
+    {
+      "name": "Ruinous Rampage",
+      "oracle_text": "Choose one —\n• Ruinous Rampage deals 3 damage to each opponent.\n• Exile all artifacts with mana value 3 or less.",
+      "mana_cost": "{1}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Sweeper/Board Wipe"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Sweeper/Board Wipe"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "reach - 3 dmg to each opponent, engine-free"
+    },
+    {
+      "name": "Emergency Eject",
+      "oracle_text": "Destroy target nonland permanent. Its controller creates a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "removal - instant catch-all, any nonland permanent"
+    },
+    {
+      "name": "Radiant Strike",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "removal + 3 life (Ragost untap, Haliya threshold)"
+    },
+    {
+      "name": "Sacred Foundry",
+      "oracle_text": "({T}: Add {R} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "land - untapped-capable RW dual"
+    },
+    {
+      "name": "Sacred Peaks",
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "land - RW dual, enters tapped"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 99,
+      "qty": 9,
+      "role": "land"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 99,
+      "qty": 4,
+      "role": "land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Dauntless Scrapbot",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "1",
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "graveyard hate on two artifact ETBs; vs the 31-card graveyard class"
+    },
+    {
+      "name": "Drill Too Deep",
+      "oracle_text": "Choose one —\n• Put five charge counters on target Spacecraft or Planet you control.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Charge Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Charge Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "destroy target artifact; vs the 74-card artifact class"
+    },
+    {
+      "name": "Lithobraking",
+      "oracle_text": "Create a Lander token. Then you may sacrifice an artifact. When you do, Lithobraking deals 2 damage to each creature. (A Lander token is an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Tokens",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Sweeper/Board Wipe",
+        "Token Generation",
+        "Land Fetch",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Aristocrats/Sacrifice",
+          "Artifacts",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "the only R/W sweeper; vs go-wide, at the cost of my own small bodies"
+    },
+    {
+      "name": "Invasive Maneuvers",
+      "oracle_text": "Invasive Maneuvers deals 3 damage to target creature. It deals 5 damage instead if you control a Spacecraft.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "3 dmg to a creature, 5 with a Spacecraft; vs creature decks"
+    },
+    {
+      "name": "Bombard",
+      "oracle_text": "Bombard deals 4 damage to target creature.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "4 dmg to a creature at instant speed; vs fast starts"
+    }
+  ],
+  "pitch": "An R/W deck that turns artifacts into face damage rather than into a board. Weftstalker Ardent pings for 1 every time any creature or artifact enters; Weapons Manufacturing mints a Munitions token off every nontoken artifact that deals 2 more when it leaves the battlefield; Rust Harvester eats artifact cards out of the graveyard for a growing direct shot; and Ragost grants the Food type to every artifact on board, converting one per activation into 3 damage to each opponent and untapping at each end step on any life gained. Three dedicated sacrifice outlets - Slagdrill Scrapper x2 and Memorial Vault - are what make Munitions fire without Ragost. Honest statement of the two modes: with Ragost the kill is non-combat and arrives around turn 8; without it the deck is a slower artifact-value deck whose damage accumulates across pings, bullets, Rust Harvester shots and Ruinous Rampage, with combat from 11 creature copies making up the difference. Lifegain is not a side theme - it is Ragost's untap condition.",
+  "strategy_es": "quemar por sacrificio de artefactos",
+  "identity_es": "Un mazo R/W que convierte artefactos en daño a la cara en lugar de en tablero. Weftstalker Ardent pincha 1 cada vez que entra cualquier criatura o artefacto; Weapons Manufacturing acuña una ficha de Munitions con cada artefacto no-ficha que hace 2 más al dejar el campo de batalla; Rust Harvester se come cartas de artefacto del cementerio para un disparo directo creciente; y Ragost otorga el tipo Comida a cada artefacto del tablero, convirtiendo uno por activación en 3 de daño a cada rival y desgirándose en cada paso final con cualquier vida ganada. Tres medios de sacrificio dedicados — Slagdrill Scrapper x2 y Memorial Vault — son los que hacen que Munitions dispare sin Ragost. Enunciado honesto de los dos modos: con Ragost la victoria es fuera de combate y llega hacia el turno 8; sin él, el mazo es un mazo de valor de artefactos más lento cuyo daño se acumula entre pinchazos, balas, disparos de Rust Harvester y Ruinous Rampage, con el combate de 11 copias de criatura cubriendo la diferencia. La ganancia de vida no es un tema secundario: es la condición de desgiro de Ragost.",
+  "pitch_es": "Un mazo R/W que convierte artefactos en daño a la cara en lugar de en tablero. Weftstalker Ardent pincha 1 cada vez que entra cualquier criatura o artefacto; Weapons Manufacturing acuña una ficha de Munitions con cada artefacto no-ficha que hace 2 más al dejar el campo de batalla; Rust Harvester se come cartas de artefacto del cementerio para un disparo directo creciente; y Ragost otorga el tipo Comida a cada artefacto del tablero, convirtiendo uno por activación en 3 de daño a cada rival y desgirándose en cada paso final con cualquier vida ganada. Tres medios de sacrificio dedicados — Slagdrill Scrapper x2 y Memorial Vault — son los que hacen que Munitions dispare sin Ragost. Enunciado honesto de los dos modos: con Ragost la victoria es fuera de combate y llega hacia el turno 8; sin él, el mazo es un mazo de valor de artefactos más lento cuyo daño se acumula entre pinchazos, balas, disparos de Rust Harvester y Ruinous Rampage, con el combate de 11 copias de criatura cubriendo la diferencia. La ganancia de vida no es un tema secundario: es la condición de desgiro de Ragost."
+}

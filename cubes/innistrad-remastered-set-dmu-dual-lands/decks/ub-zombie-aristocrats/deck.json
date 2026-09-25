@@ -1,0 +1,543 @@
+{
+  "deck_name": "ub-zombie-aristocrats",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-26T03:34:47Z",
+  "format": "40-card",
+  "strategy": "zombie aristocrats sacrifice-drain",
+  "colors": "UB",
+  "identity": "UB Zombie Aristocrats -- recursive Zombie fodder converted into life loss by free sacrifice outlets and death-trigger drain",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_construction_constraint": "at most 5 rare/mythic cards across mainboard + sideboard",
+    "rare_mythic_used": [
+      "Gravecrawler",
+      "Grimgrin, Corpse-Born",
+      "Invasion of Innistrad // Deluge of the Dead",
+      "Shipwreck Marsh",
+      "The Meathook Massacre"
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.08,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": -0.56,
+      "raw_target": 16.44,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.08,
+    "pip_demand": {
+      "B": 25,
+      "U": 1
+    },
+    "land_color_production": {
+      "B": 15,
+      "U": 4
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 96.2,
+        "prod_pct": 93.8,
+        "gap": 2.4,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 3.8,
+        "prod_pct": 25,
+        "gap": -21.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Gravecrawler",
+      "oracle_text": "This creature can't block.\nYou may cast this card from your graveyard as long as you control a Zombie.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Zombie",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "qty": 1,
+      "role": "Recursive fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Butcher Ghoul",
+      "oracle_text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Zombie",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "qty": 2,
+      "role": "Undying fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Siege Zombie",
+      "oracle_text": "Tap three untapped creatures you control: Each opponent loses 1 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Zombie",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "qty": 2,
+      "role": "Non-combat drain",
+      "board": "mainboard"
+    },
+    {
+      "name": "Indulgent Aristocrat",
+      "oracle_text": "Lifelink\n{2}, Sacrifice a creature: Put a +1/+1 counter on each Vampire you control.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Vampire Noble",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "qty": 2,
+      "role": "Sacrifice outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Blood Artist",
+      "oracle_text": "Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Vampire",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "1",
+      "qty": 2,
+      "role": "Death-to-damage",
+      "board": "mainboard"
+    },
+    {
+      "name": "Falkenrath Torturer",
+      "oracle_text": "Sacrifice a creature: This creature gains flying until end of turn. If the sacrificed creature was a Human, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Vampire",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "qty": 2,
+      "role": "Free sac outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Morbid Opportunist",
+      "oracle_text": "Whenever one or more other creatures die, draw a card. This ability triggers only once each turn.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Rogue",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "qty": 2,
+      "role": "Refuel on deaths",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ghoulish Procession",
+      "oracle_text": "Whenever one or more nontoken creatures die, create a 2/2 black Zombie creature token with decayed. This ability triggers only once each turn. (A creature with decayed can't block. When it attacks, sacrifice it at end of combat.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "qty": 2,
+      "role": "Token engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Slip",
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "qty": 2,
+      "role": "Removal (morbid)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eaten Alive",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature or pay {3}{B}.\nExile target creature or planeswalker.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "qty": 2,
+      "role": "Exile removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Infernal Grasp",
+      "oracle_text": "Destroy target creature. You lose 2 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "qty": 2,
+      "role": "Removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "Grimgrin, Corpse-Born",
+      "oracle_text": "Grimgrin enters tapped and doesn't untap during your untap step.\nSacrifice another creature: Untap Grimgrin and put a +1/+1 counter on it.\nWhenever Grimgrin attacks, destroy target creature defending player controls, then put a +1/+1 counter on Grimgrin.",
+      "mana_cost": "{3}{U}{B}",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Legendary Creature — Zombie Warrior",
+      "rarity": "mythic",
+      "power": "5",
+      "toughness": "5",
+      "qty": 1,
+      "role": "Free outlet + removal",
+      "board": "mainboard"
+    },
+    {
+      "name": "The Meathook Massacre",
+      "oracle_text": "When The Meathook Massacre enters, each creature gets -X/-X until end of turn.\nWhenever a creature you control dies, each opponent loses 1 life.\nWhenever a creature an opponent controls dies, you gain 1 life.",
+      "mana_cost": "{X}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Legendary Enchantment",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "qty": 1,
+      "role": "Drain + sweeper",
+      "board": "mainboard"
+    },
+    {
+      "name": "Invasion of Innistrad // Deluge of the Dead",
+      "oracle_text": "(As a Siege enters, choose an opponent to protect it. You and others can attack it. When it's defeated, exile it, then cast it transformed.)\nFlash\nWhen this Siege enters, target creature an opponent controls gets -13/-13 until end of turn.\n//\nWhen this enchantment enters, create two 2/2 black Zombie creature tokens.\n{2}{B}: Exile target card from a graveyard. If it was a creature card, create a 2/2 black Zombie creature token.",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Battle — Siege",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "qty": 1,
+      "role": "Removal + token engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shipwreck Marsh",
+      "oracle_text": "This land enters tapped unless you control two or more other lands.\n{T}: Add {U} or {B}.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "qty": 1,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "qty": 1,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "qty": 12,
+      "role": "land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Sever the Bloodline",
+      "oracle_text": "Exile target creature and all other creatures with the same name as that creature.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs go-wide/token decks -- 'Exile target creature and all other creatures with the same name' is a one-card sweeper, and exile beats this cube's 27.1% graveyard density"
+    },
+    {
+      "name": "Compelling Deterrence",
+      "oracle_text": "Return target nonland permanent to its owner's hand. Then that player discards a card if you control a Zombie.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs a resolved artifact or enchantment -- the only answer in U/B to a noncreature permanent (dossier probe: 0 destroy-artifact/enchantment matches in mono-B or mono-U); cube holds 24 artifacts + 25 enchantments"
+    },
+    {
+      "name": "Murderous Compulsion",
+      "oracle_text": "Destroy target tapped creature.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs decks that must tap out to attack -- 'Destroy target tapped creature' at {1}{B}"
+    },
+    {
+      "name": "Demonic Taskmaster",
+      "oracle_text": "Flying\nAt the beginning of your upkeep, sacrifice a creature other than this creature.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Demon",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "3",
+      "qty": 2,
+      "role": "engine",
+      "board": "sideboard",
+      "when_to_board": "vs ground stalls -- a 4/3 flier for {2}{B} whose 'At the beginning of your upkeep, sacrifice a creature other than this creature' is a free recurring death trigger paid by Gravecrawler and Procession tokens"
+    },
+    {
+      "name": "Morkrut Banshee",
+      "oracle_text": "Morbid — When this creature enters, if a creature died this turn, target creature gets -4/-4 until end of turn.",
+      "mana_cost": "{3}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Spirit",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "4",
+      "qty": 1,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs creature decks -- 'Morbid -- When this creature enters, if a creature died this turn, target creature gets -4/-4' is a body plus removal the sacrifice engine turns on for free"
+    },
+    {
+      "name": "Killing Wave",
+      "oracle_text": "For each creature, its controller sacrifices it unless they pay X life.",
+      "mana_cost": "{X}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "qty": 1,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs boards wider or larger than ours -- symmetry inverts because Gravecrawler recasts from the yard and Butcher Ghoul's undying returns it"
+    }
+  ],
+  "pitch": "UB Zombie Aristocrats. Gravecrawler recurs from the graveyard for a single black mana as long as any Zombie is on board, and five sacrifice outlets -- Falkenrath Torturer x2 and Grimgrin free, Indulgent Aristocrat x2 for two mana -- convert each recursion into a death trigger. Blood Artist x2 and The Meathook Massacre turn every death into one to two damage that no blocker interacts with, and Morbid Opportunist x2 draws a card off the same deaths. The loop regenerates its own gate: sacrificing Gravecrawler is a nontoken death, which triggers Ghoulish Procession to create a 2/2 black Zombie token, and that token satisfies Gravecrawler's Zombie condition for the next recast.",
+  "strategy_es": "aristócratas Zombis de sacrificio y drenaje",
+  "identity_es": "Aristócratas Zombis UB — forraje Zombi recursivo convertido en pérdida de vida por medios de sacrificio gratuitos y drenaje por disparos de muerte",
+  "pitch_es": "Aristócratas Zombis UB. Gravecrawler vuelve del cementerio por un solo maná negro mientras haya cualquier Zombi en el tablero, y cinco medios de sacrificio — Falkenrath Torturer x2 y Grimgrin gratis, Indulgent Aristocrat x2 por dos manás — convierten cada retorno en un disparo de muerte. Blood Artist x2 y The Meathook Massacre convierten cada muerte en uno o dos puntos de daño con los que ningún bloqueador interactúa, y Morbid Opportunist x2 roba una carta con esas mismas muertes. El bucle regenera su propia puerta: sacrificar a Gravecrawler es una muerte no-ficha, lo que dispara a Ghoulish Procession para crear una ficha de Zombi negro 2/2, y esa ficha satisface la condición de Zombi de Gravecrawler para el siguiente relanzamiento."
+}

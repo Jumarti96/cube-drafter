@@ -1,0 +1,712 @@
+{
+  "deck_name": "gw-human-clue-midrange",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-26T20:50:06Z",
+  "format": "40-card",
+  "strategy": "midrange -- Humans Clue-engine midrange",
+  "colors": "GW",
+  "identity": "A GW Humans deck that wins by drawing more cards than its opponent and then attacking with what the drawing built. Four separate Clue sources -- Thraben Inspector's ETB, Tireless Tracker's landfall, Ulvenwald Mysteries' death trigger, and Evolving Wilds giving Tracker two landfall triggers from one land slot -- feed a hand that Mentor of the Meek x2 then refills off every small body that enters. Ulvenwald Mysteries closes the loop by converting sacrificed Clues into Human Soldier tokens, so a Clue is never a dead artifact. The kill is not a combo: it is Crusader of Odric, whose power equals the creature count, plus Torens tokens and Wedding Festivity's anthem, attacking into an opponent who has run out of cards.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2,
+        "rare": 1,
+        "mythic": 1
+      },
+      "only_from": {},
+      "excluded": [],
+      "user_deck_constraint": "MAXIMUM 5 rares/mythics total across mainboard + sideboard"
+    },
+    "checklist": {
+      "commons_uncommons_max_2": "PASS -- Phase 5C check 3 against cube_search.get_max_copies with per_rarity {common:2, uncommon:2, rare:1, mythic:1}. Max copy count of any nonbasic is 2.",
+      "rares_mythics_max_1_each": "PASS -- all five appear once.",
+      "rares_mythics_max_5_total": "PASS -- exactly 5 across mainboard + sideboard: Tireless Tracker, Wedding Announcement, Torens Fist of the Angels, Metallic Mimic, Restoration Angel. The sideboard is entirely commons and uncommons.",
+      "all_cards_from_cube": "PASS -- Phase 5C check 2, exact-name match against the working pool cache.",
+      "basics_unlimited": "Plains x9 and Forest x5 are exempt from the copy caps."
+    }
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 2,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.48,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.36,
+      "raw_target": 16.64,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.48,
+    "pip_demand": {
+      "W": 17,
+      "G": 8
+    },
+    "land_color_production": {
+      "W": 11,
+      "G": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 32,
+        "prod_pct": 41.2,
+        "gap": -9.2,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 68,
+        "prod_pct": 64.7,
+        "gap": 3.3,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Thraben Inspector",
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 2,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Avacynian Priest",
+      "oracle_text": "{1}, {T}: Tap target non-Human creature.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Engine/Outlet",
+        "Tap Effect"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Metallic Mimic",
+      "oracle_text": "As this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nEach other creature you control of the chosen type enters with an additional +1/+1 counter on it.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact Creature — Shapeshifter",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gather the Townsfolk",
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "qty": 2,
+      "role": "enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Join the Dance",
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFlashback {3}{G}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{G}{W}",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "qty": 2,
+      "role": "enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Valorous Stance",
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mentor of the Meek",
+      "oracle_text": "Whenever another creature you control with power 2 or less enters, you may pay {1}. If you do, draw a card.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tokens",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Mana: Ongoing-Cost"
+      ],
+      "qty": 2,
+      "role": "payoff/engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tireless Tracker",
+      "oracle_text": "Landfall — Whenever a land you control enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Scout",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Landfall",
+        "Lands-Matter",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ulvenwald Mysteries",
+      "oracle_text": "Whenever a nontoken creature you control dies, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, create a 1/1 white Human Soldier creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Artifacts",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Card Draw"
+      ],
+      "qty": 2,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Torens, Fist of the Angels",
+      "oracle_text": "Training (Whenever this creature attacks with another creature with greater power, put a +1/+1 counter on this creature.)\nWhenever you cast a creature spell, create a 1/1 green and white Human Soldier creature token with training.",
+      "mana_cost": "{1}{G}{W}",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Cleric",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Counters (+1/+1)",
+        "Tokens",
+        "Training Matters",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "payoff/engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wedding Announcement // Wedding Festivity",
+      "oracle_text": "At the beginning of your end step, put an invitation counter on this enchantment. If you attacked with two or more creatures this turn, draw a card. Otherwise, create a 1/1 white Human creature token. Then if this enchantment has three or more invitation counters on it, transform it.\n//\nCreatures you control get +1/+1.",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Card Draw"
+      ],
+      "qty": 1,
+      "role": "engine/payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Crusader of Odric",
+      "oracle_text": "Crusader of Odric's power and toughness are each equal to the number of creatures you control.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "*",
+      "toughness": "*",
+      "tags": [
+        "Tokens",
+        "Payload/Payoff"
+      ],
+      "qty": 2,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Clear Shot",
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Restoration Angel",
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, you may exile target non-Angel creature you control, then return that card to the battlefield under your control.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Blink/ETB",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Blink"
+      ],
+      "qty": 1,
+      "role": "threat/engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "qty": 1,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 9,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 5,
+      "role": "land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Soul-Guide Gryff",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "mana_cost": "{4}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs graveyard decks: at 75 cards / 27.1% density this is the cube's largest threat class, and a grind deck has the time to spend {4}{W} on a flier that answers it"
+    },
+    {
+      "name": "Cathar Commando",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs the cube's 24 artifacts / 25 enchantments: '{1}, Sacrifice this creature: Destroy target artifact or enchantment' -- and sacrificing it feeds Ulvenwald Mysteries a nontoken creature death"
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs Vampire/Werewolf/Zombie decks: 51 of the cube's creatures carry one of those three types, on a Human body"
+    },
+    {
+      "name": "Angelic Purge",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs any problem permanent: 'Exile target artifact, creature, or enchantment'; the sacrifice cost is paid by a spent Clue, which costs this deck nothing"
+    },
+    {
+      "name": "Fiend Hunter",
+      "oracle_text": "When this creature enters, you may exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Blink/ETB",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs a single dominant creature: exile on a Human body that Mentor of the Meek also draws off"
+    },
+    {
+      "name": "Bound by Moonsilver",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack, block, or transform.\nSacrifice another permanent: Attach this Aura to target creature. Activate only as a sorcery and only once each turn.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs a large blocker and the cube's transform creatures: 'can't attack, block, or transform'; a spent Clue can be sacrificed to move it"
+    },
+    {
+      "name": "Faith Unbroken",
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield.\nEnchanted creature gets +2/+2.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "vs a creature too big for Clear Shot: exiles it while the Aura remains, and gives +2/+2"
+    }
+  ],
+  "pitch": "A GW Humans deck that wins by drawing more cards than its opponent and then attacking with what the drawing built. Four separate Clue sources -- Thraben Inspector's ETB, Tireless Tracker's landfall, Ulvenwald Mysteries' death trigger, and Evolving Wilds giving Tracker two landfall triggers from one land slot -- feed a hand that Mentor of the Meek x2 then refills off every small body that enters. Ulvenwald Mysteries closes the loop by converting sacrificed Clues into Human Soldier tokens, so a Clue is never a dead artifact. The kill is not a combo: it is Crusader of Odric, whose power equals the creature count, plus Torens tokens and Wedding Festivity's anthem, attacking into an opponent who has run out of cards.",
+  "strategy_es": "midrange — midrange de Humanos con motor de Pistas",
+  "identity_es": "Un mazo de Humanos GW que gana robando más cartas que su rival y luego atacando con lo que ese robo ha construido. Cuatro fuentes distintas de Pistas — la entrada de Thraben Inspector, el landfall de Tireless Tracker, el disparo por muerte de Ulvenwald Mysteries, y Evolving Wilds dando al Tracker dos disparos de landfall desde un solo hueco de tierra — alimentan una mano que Mentor of the Meek x2 rellena luego con cada cuerpo pequeño que entra. Ulvenwald Mysteries cierra el bucle convirtiendo las Pistas sacrificadas en fichas de Soldado Humano, así que una Pista nunca es un artefacto muerto. La victoria no es un combo: es Crusader of Odric, cuya fuerza equivale al número de criaturas, más las fichas de Torens y el anthem de Wedding Festivity, atacando contra un rival que se ha quedado sin cartas.",
+  "pitch_es": "Un mazo de Humanos GW que gana robando más cartas que su rival y luego atacando con lo que ese robo ha construido. Cuatro fuentes distintas de Pistas — la entrada de Thraben Inspector, el landfall de Tireless Tracker, el disparo por muerte de Ulvenwald Mysteries, y Evolving Wilds dando al Tracker dos disparos de landfall desde un solo hueco de tierra — alimentan una mano que Mentor of the Meek x2 rellena luego con cada cuerpo pequeño que entra. Ulvenwald Mysteries cierra el bucle convirtiendo las Pistas sacrificadas en fichas de Soldado Humano, así que una Pista nunca es un artefacto muerto. La victoria no es un combo: es Crusader of Odric, cuya fuerza equivale al número de criaturas, más las fichas de Torens y el anthem de Wedding Festivity, atacando contra un rival que se ha quedado sin cartas."
+}

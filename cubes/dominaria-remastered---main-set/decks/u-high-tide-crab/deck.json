@@ -1,0 +1,1132 @@
+{
+  "deck_name": "u-high-tide-crab",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-08-02T17:39:50Z",
+  "format": "40-card",
+  "strategy": "combo",
+  "colors": "U",
+  "identity": "Mono-blue combo that multiplies Islands and cashes them in for damage. High Tide and Gauntlet of Power are both per-Island mana multipliers and they STACK - with both resolved, one basic Island taps for three blue - and Helm of Awakening is a third, different route to the same place, discounting every untap effect until it is net-positive on its own. Turnabout, Frantic Search, Snap, Peregrine Drake and Cloud of Faeries then untap those Islands so the same lands are tapped several times in one turn. The mana is spent on Horseshoe Crab wearing Hermetic Study - '{U}: Untap this creature' plus '{T}: This creature deals 1 damage to any target' is one damage per blue mana with no ceiling - with Glintwing Invoker and Stroke of Genius as structurally different backups. Blue is also the only colour in this cube with real permission, so the combo turn is protected by Counterspell x2 and a free Force of Will.",
+  "restrictions": {
+    "base": "cube_mainboard only - every card verified by exact name against working_pool.json",
+    "commons_uncommons_max_2": "PASS - highest count is 2",
+    "rares_mythics_max_1_each": "PASS",
+    "rares_mythics_max_5_total_MB_plus_SB": "PASS at 4/5 - MB: Gauntlet of Power (mythic), Force of Will (mythic), Stroke of Genius (rare), Helm of Awakening (rare). The sideboard is entirely commons and uncommons. This is the only one of the four decks with UNSPENT rarity headroom, and it is unspent deliberately: Mystical Tutor and Mystic Remora were both cut during the Phase 9 repair, and no remaining rare in the pool improves this list more than the commons and uncommons already in it. Spending a slot for its own sake is not a reason.",
+    "basics": "Island x17 - format-supplied, exempt from copy limits",
+    "colour": "core_colors ['U'], splash_colors [] - every nonland card returns a non-null effective_cost.best_mode(card, ['U'], []) in normal cast mode"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 6,
+    "cantrip_count": 0,
+    "accel_count": 6,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.83,
+      "reference_avg_mv": 2.5,
+      "accel": 6,
+      "adjustment": -0.56,
+      "raw_target": 16.44,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.83,
+    "pip_demand": {
+      "U": 26
+    },
+    "land_color_production": {
+      "U": 17
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "High Tide",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Until end of turn, whenever a player taps an Island for mana, that player adds an additional {U}.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Storm",
+        "Spellslinger",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "role": "Engine (mana multiplier)",
+      "board": "mainboard"
+    },
+    {
+      "name": "High Tide",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Until end of turn, whenever a player taps an Island for mana, that player adds an additional {U}.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Storm",
+        "Spellslinger",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "role": "Engine (mana multiplier)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gauntlet of Power",
+      "cmc": 5,
+      "type_line": "Artifact",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "mythic",
+      "oracle_text": "As this artifact enters, choose a color.\nCreatures of the chosen color get +1/+1.\nWhenever a basic land is tapped for mana of the chosen color, its controller adds an additional one mana of that color.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Anthem",
+        "Mana Ramp"
+      ],
+      "role": "Engine (pipeline anchor)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Helm of Awakening",
+      "cmc": 2,
+      "type_line": "Artifact",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "rare",
+      "oracle_text": "Spells cost {1} less to cast.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Storm",
+        "Spellslinger",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Cost Reduction"
+      ],
+      "role": "Engine (third multiplier route)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Turnabout",
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Choose artifact, creature, or land. Tap all untapped permanents of the chosen type target player controls, or untap all tapped permanents of that type that player controls.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Mana Ramp",
+        "Tap Effect",
+        "Land Untap"
+      ],
+      "role": "Engine (untap)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Turnabout",
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Choose artifact, creature, or land. Tap all untapped permanents of the chosen type target player controls, or untap all tapped permanents of that type that player controls.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Mana Ramp",
+        "Tap Effect",
+        "Land Untap"
+      ],
+      "role": "Engine (untap)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Peregrine Drake",
+      "cmc": 5,
+      "type_line": "Creature — Drake",
+      "mana_cost": "{4}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nWhen this creature enters, untap up to five lands.",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Blink/ETB",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "role": "Engine (untap)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cloud of Faeries",
+      "cmc": 2,
+      "type_line": "Creature — Faerie",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nWhen this creature enters, untap up to two lands.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Blink/ETB",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Land Untap",
+        "Card Draw",
+        "Cycling",
+        "Cards: Self-Replacing",
+        "Mana: Self-Replacing"
+      ],
+      "role": "Engine (untap)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Frantic Search",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Draw two cards, then discard two cards. Untap up to three lands.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Looting",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "role": "Engine (untap + selection)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Frantic Search",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Draw two cards, then discard two cards. Untap up to three lands.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Looting",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "role": "Engine (untap + selection)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Impulse",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Infrastructure (multiplier access)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Impulse",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cards: Self-Replacing"
+      ],
+      "role": "Infrastructure (multiplier access)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Horseshoe Crab",
+      "cmc": 3,
+      "type_line": "Creature — Crab",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "{U}: Untap this creature.",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Engine/Outlet",
+        "Self-Untap"
+      ],
+      "role": "Payoff (primary sink)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Horseshoe Crab",
+      "cmc": 3,
+      "type_line": "Creature — Crab",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "{U}: Untap this creature.",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Engine/Outlet",
+        "Self-Untap"
+      ],
+      "role": "Payoff (primary sink)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hermetic Study",
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Engine/Outlet",
+        "Direct Damage"
+      ],
+      "role": "Payoff (primary sink)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hermetic Study",
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Engine/Outlet",
+        "Direct Damage"
+      ],
+      "role": "Payoff (primary sink)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Glintwing Invoker",
+      "cmc": 5,
+      "type_line": "Creature — Human Wizard Mutant",
+      "mana_cost": "{4}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "{7}{U}: This creature gets +3/+3 and gains flying until end of turn.",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Standalone Threat",
+        "Pump"
+      ],
+      "role": "Payoff (one-card sink)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Stroke of Genius",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{X}{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Target player draws X cards.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Card Draw",
+        "Cards: Net-Positive"
+      ],
+      "role": "Payoff (third route)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Counterspell",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target spell.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Counterspell",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target spell.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Force of Will",
+      "cmc": 5,
+      "type_line": "Instant",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "You may pay 1 life and exile a blue card from your hand rather than pay this spell's mana cost.\nCounter target spell.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell",
+        "Cards: Extra-Cost",
+        "Life: Cost"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Snap",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Return target creature to its owner's hand. Untap up to two lands.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Bounce",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Snap",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Return target creature to its owner's hand. Untap up to two lands.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Bounce",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "cmc": 0,
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "role": "Hate - graveyard",
+      "board": "sideboard"
+    },
+    {
+      "name": "Tormod's Crypt",
+      "cmc": 0,
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "role": "Hate - graveyard",
+      "board": "sideboard"
+    },
+    {
+      "name": "Confiscate",
+      "cmc": 6,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{4}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant permanent\nYou control enchanted permanent.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Control Magic"
+      ],
+      "role": "Hate - noncreature permanents",
+      "board": "sideboard"
+    },
+    {
+      "name": "Confiscate",
+      "cmc": 6,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{4}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Enchant permanent\nYou control enchanted permanent.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Control Magic"
+      ],
+      "role": "Hate - noncreature permanents",
+      "board": "sideboard"
+    },
+    {
+      "name": "Circular Logic",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Counter target spell unless its controller pays {1} for each card in your graveyard.\nMadness {U} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Madness",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Flex - permission 4 and 5",
+      "board": "sideboard"
+    },
+    {
+      "name": "Circular Logic",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Counter target spell unless its controller pays {1} for each card in your graveyard.\nMadness {U} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Madness",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Flex - permission 4 and 5",
+      "board": "sideboard"
+    },
+    {
+      "name": "Man-o'-War",
+      "cmc": 3,
+      "type_line": "Creature — Jellyfish",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, return target creature to its owner's hand.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Bounce"
+      ],
+      "role": "Flex - tempo blocker",
+      "board": "sideboard"
+    },
+    {
+      "name": "Man-o'-War",
+      "cmc": 3,
+      "type_line": "Creature — Jellyfish",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, return target creature to its owner's hand.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Bounce"
+      ],
+      "role": "Flex - tempo blocker",
+      "board": "sideboard"
+    },
+    {
+      "name": "Floodgate",
+      "cmc": 4,
+      "type_line": "Creature — Wall",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\nWhen this creature has flying, sacrifice it.\nWhen this creature leaves the battlefield, it deals damage to each nonblue creature without flying equal to half the number of Islands you control, rounded down.",
+      "power": "0",
+      "toughness": "5",
+      "tags": [
+        "Lands-Matter",
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Direct Damage"
+      ],
+      "role": "Hate - wide boards",
+      "board": "sideboard"
+    },
+    {
+      "name": "Floodgate",
+      "cmc": 4,
+      "type_line": "Creature — Wall",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\nWhen this creature has flying, sacrifice it.\nWhen this creature leaves the battlefield, it deals damage to each nonblue creature without flying equal to half the number of Islands you control, rounded down.",
+      "power": "0",
+      "toughness": "5",
+      "tags": [
+        "Lands-Matter",
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Direct Damage"
+      ],
+      "role": "Hate - wide boards",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "Mono-blue combo that multiplies Islands and cashes them in for damage. High Tide and Gauntlet of Power are both per-Island mana multipliers and they STACK - with both resolved, one basic Island taps for three blue - and Helm of Awakening is a third, different route to the same place, discounting every untap effect until it is net-positive on its own. Turnabout, Frantic Search, Snap, Peregrine Drake and Cloud of Faeries then untap those Islands so the same lands are tapped several times in one turn. The mana is spent on Horseshoe Crab wearing Hermetic Study - '{U}: Untap this creature' plus '{T}: This creature deals 1 damage to any target' is one damage per blue mana with no ceiling - with Glintwing Invoker and Stroke of Genius as structurally different backups. Blue is also the only colour in this cube with real permission, so the combo turn is protected by Counterspell x2 and a free Force of Will.",
+  "strategy_es": "combo",
+  "identity_es": "Combo mono azul que multiplica Islands y las cobra en daño. High Tide y Gauntlet of Power son ambos multiplicadores de maná por Island y SE ACUMULAN — con las dos resueltas, una Island básica gira por tres azules — y Helm of Awakening es una tercera ruta distinta al mismo sitio, abaratando cada efecto de desgiro hasta volverlo positivo por sí solo. Turnabout, Frantic Search, Snap, Peregrine Drake y Cloud of Faeries desgiran entonces esas Islands para que las mismas tierras se giren varias veces en un turno. El maná se gasta en Horseshoe Crab llevando Hermetic Study — '{U}: Untap this creature' más '{T}: This creature deals 1 damage to any target' es un daño por cada maná azul sin techo — con Glintwing Invoker y Stroke of Genius como reservas estructuralmente distintas. El azul es además el único color de este cubo con permisión real, así que el turno de combo va protegido por Counterspell x2 y un Force of Will gratuito.",
+  "pitch_es": "Combo mono azul que multiplica Islands y las cobra en daño. High Tide y Gauntlet of Power son ambos multiplicadores de maná por Island y SE ACUMULAN — con las dos resueltas, una Island básica gira por tres azules — y Helm of Awakening es una tercera ruta distinta al mismo sitio, abaratando cada efecto de desgiro hasta volverlo positivo por sí solo. Turnabout, Frantic Search, Snap, Peregrine Drake y Cloud of Faeries desgiran entonces esas Islands para que las mismas tierras se giren varias veces en un turno. El maná se gasta en Horseshoe Crab llevando Hermetic Study — '{U}: Untap this creature' más '{T}: This creature deals 1 damage to any target' es un daño por cada maná azul sin techo — con Glintwing Invoker y Stroke of Genius como reservas estructuralmente distintas. El azul es además el único color de este cubo con permisión real, así que el turno de combo va protegido por Counterspell x2 y un Force of Will gratuito."
+}

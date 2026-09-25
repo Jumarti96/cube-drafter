@@ -1,0 +1,1289 @@
+{
+  "deck_name": "ub-graveyard-theft",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-04T14:12:59Z",
+  "format": "40-card",
+  "strategy": "midrange graveyard reanimator",
+  "colors": "UB",
+  "identity": "A U/B deck that wins with the opponent's own creatures. Every removal spell in the maindeck puts its target into a graveyard rather than exiling it, because the plan needs their creatures in their graveyard: Chorale of the Void reads 'Whenever enchanted creature attacks, put target creature card from defending player's graveyard onto the battlefield under your control tapped and attacking', and Singularity Rupture is pointed at THEM to bury half their library. Tractor Beam takes a permanent outright with no combat step required, and Zero Point Ballad at X of 6 or more hands back a creature it just killed. The creature base exists only to carry the Aura and survive combat - two four-toughness fliers and a deathtouch body - not to win on its own.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "verified": "All 40 mainboard + 10 sideboard cards exist by exact name in the working pool. No common/uncommon exceeds 2 combined copies; no rare/mythic exceeds 1. Rare+mythic total across mainboard and sideboard = 5 (Chorale of the Void, Zero Point Ballad, Singularity Rupture, Sothera the Supervoid, Watery Grave), inside the user's cap of 6. Basic lands are format-supplied and exempt."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 2,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.333,
+      "raw_target": 17.333,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 3,
+    "pip_demand": {
+      "B": 18,
+      "U": 12
+    },
+    "land_color_production": {
+      "B": 11,
+      "U": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 60,
+        "prod_pct": 64.7,
+        "gap": -4.7,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 40,
+        "prod_pct": 52.9,
+        "gap": -12.9,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Chorale of the Void",
+      "cmc": 4,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Enchant creature you control\nWhenever enchanted creature attacks, put target creature card from defending player's graveyard onto the battlefield under your control tapped and attacking.\nVoid — At the beginning of your end step, sacrifice this Aura unless a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "91",
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Voltron/Equipment",
+        "Payload/Payoff",
+        "Reanimation"
+      ],
+      "role": "Primary theft engine (mines the DEFENDING player's graveyard each combat)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Zero Point Ballad",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{X}{B}",
+      "oracle_text": "Destroy all creatures with toughness X or less. You lose X life. If X is 6 or more, return a creature card put into a graveyard this way to the battlefield under your control.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "128",
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Sweeper/Board Wipe",
+        "Reanimation",
+        "Life: Cost"
+      ],
+      "role": "Sweeper + theft at X>=6",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tractor Beam",
+      "cmc": 4,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{2}{U}{U}",
+      "oracle_text": "Enchant creature or Spacecraft\nWhen this Aura enters, tap enchanted permanent.\nYou control enchanted permanent.\nEnchanted permanent doesn't untap during its controller's untap step.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "82",
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Mind Control",
+        "Tap Effect"
+      ],
+      "role": "Unconditional theft (You control enchanted permanent)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tractor Beam",
+      "cmc": 4,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{2}{U}{U}",
+      "oracle_text": "Enchant creature or Spacecraft\nWhen this Aura enters, tap enchanted permanent.\nYou control enchanted permanent.\nEnchanted permanent doesn't untap during its controller's untap step.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "82",
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Mind Control",
+        "Tap Effect"
+      ],
+      "role": "Unconditional theft (You control enchanted permanent)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Singularity Rupture",
+      "cmc": 6,
+      "type_line": "Sorcery",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "mana_cost": "{3}{U}{B}{B}",
+      "oracle_text": "Destroy all creatures, then any number of target players each mill half their library, rounded down.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "228",
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Sweeper/Board Wipe",
+        "Mill"
+      ],
+      "role": "Sweeper + fills the OPPONENT's graveyard",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sothera, the Supervoid",
+      "cmc": 4,
+      "type_line": "Legendary Enchantment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}{B}",
+      "oracle_text": "Whenever a creature you control dies, each opponent chooses a creature they control and exiles it.\nAt the beginning of your end step, if a player controls no creatures, sacrifice Sothera, then put a creature card exiled with it onto the battlefield under your control with two additional +1/+1 counters on it.",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "115",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Reanimator",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cheat Into Play"
+      ],
+      "role": "Competing theft route (exiles rather than binning - see verdicts)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Susurian Dirgecraft",
+      "cmc": 5,
+      "type_line": "Artifact — Spacecraft",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{4}{B}",
+      "oracle_text": "When this Spacecraft enters, each opponent sacrifices a nontoken creature of their choice.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 7+.)\n7+ | Flying",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "117",
+      "tags": [
+        "Artifacts",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Edict"
+      ],
+      "role": "Edict - puts a creature in THEIR graveyard; answers hexproof and ward",
+      "board": "mainboard"
+    },
+    {
+      "name": "Susurian Dirgecraft",
+      "cmc": 5,
+      "type_line": "Artifact — Spacecraft",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{4}{B}",
+      "oracle_text": "When this Spacecraft enters, each opponent sacrifices a nontoken creature of their choice.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 7+.)\n7+ | Flying",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "117",
+      "tags": [
+        "Artifacts",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Edict"
+      ],
+      "role": "Edict - puts a creature in THEIR graveyard; answers hexproof and ward",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{B}",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "122",
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction (DESTROYS via -X/-X; feeds their yard)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{B}",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "122",
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction (DESTROYS via -X/-X; feeds their yard)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Depressurize",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Target creature gets -3/-0 until end of turn. Then if that creature's power is 0 or less, destroy it.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "95",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "role": "Interaction (explicit destroy)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Depressurize",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Target creature gets -3/-0 until end of turn. Then if that creature's power is 0 or less, destroy it.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "95",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "role": "Interaction (explicit destroy)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Vote Out",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target creature.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "126",
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Convoke"
+      ],
+      "role": "Interaction (unconditional destroy; Convoke paid by Chorale carriers)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Unravel",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{1}{U}{U}",
+      "oracle_text": "Counter target spell. If the amount of mana spent to cast that spell was less than its mana value, you draw a card.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "83",
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell",
+        "Card Draw"
+      ],
+      "role": "Interaction (hard counter; protects the Chorale turn)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swarm Culler",
+      "cmc": 4,
+      "type_line": "Creature — Insect Warrior",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Flying\nWhenever this creature becomes tapped, you may sacrifice another creature or artifact. If you do, draw a card.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "set": "eoe",
+      "collector_number": "119",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "role": "Chorale carrier (2/4 flier) + card flow when tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swarm Culler",
+      "cmc": 4,
+      "type_line": "Creature — Insect Warrior",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Flying\nWhenever this creature becomes tapped, you may sacrifice another creature or artifact. If you do, draw a card.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "set": "eoe",
+      "collector_number": "119",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "role": "Chorale carrier (2/4 flier) + card flow when tapped",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cloudsculpt Technician",
+      "cmc": 3,
+      "type_line": "Creature — Jellyfish Artificer",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{2}{U}",
+      "oracle_text": "Flying\nAs long as you control an artifact, this creature gets +1/+0.",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "4",
+      "set": "eoe",
+      "collector_number": "49",
+      "tags": [
+        "Artifacts",
+        "Standalone Threat"
+      ],
+      "role": "Chorale carrier (1/4 flier - survives combat)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cloudsculpt Technician",
+      "cmc": 3,
+      "type_line": "Creature — Jellyfish Artificer",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{2}{U}",
+      "oracle_text": "Flying\nAs long as you control an artifact, this creature gets +1/+0.",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "4",
+      "set": "eoe",
+      "collector_number": "49",
+      "tags": [
+        "Artifacts",
+        "Standalone Threat"
+      ],
+      "role": "Chorale carrier (1/4 flier - survives combat)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Illvoi Galeblade",
+      "cmc": 1,
+      "type_line": "Creature — Jellyfish Warrior",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{U}",
+      "oracle_text": "Flash\nFlying\n{2}, Sacrifice this creature: Draw a card.",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "58",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Card Draw",
+        "Sacrifice Outlet"
+      ],
+      "role": "Cheap evasive Chorale carrier; sacrifices for a card if the Aura plan is dead",
+      "board": "mainboard"
+    },
+    {
+      "name": "Illvoi Galeblade",
+      "cmc": 1,
+      "type_line": "Creature — Jellyfish Warrior",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{U}",
+      "oracle_text": "Flash\nFlying\n{2}, Sacrifice this creature: Draw a card.",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "58",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Card Draw",
+        "Sacrifice Outlet"
+      ],
+      "role": "Cheap evasive Chorale carrier; sacrifices for a card if the Aura plan is dead",
+      "board": "mainboard"
+    },
+    {
+      "name": "Alpharael, Dreaming Acolyte",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Cleric",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "mana_cost": "{1}{U}{B}",
+      "oracle_text": "When Alpharael enters, draw two cards. Then discard two cards unless you discard an artifact card.\nDuring your turn, Alpharael has deathtouch.",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "212",
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Looting",
+        "Cards: Net-Positive",
+        "Cards: Extra-Cost"
+      ],
+      "role": "Chorale carrier (deathtouch on your turn makes attacking profitable)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hymn of the Faller",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Surveil 1, then you draw a card and lose 1 life. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)\nVoid — If a nonland permanent left the battlefield this turn or a spell was warped this turn, draw another card.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "107",
+      "tags": [
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "role": "Card flow",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hymn of the Faller",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Surveil 1, then you draw a card and lose 1 life. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)\nVoid — If a nonland permanent left the battlefield this turn or a spell was warped this turn, draw another card.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "107",
+      "tags": [
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "role": "Card flow",
+      "board": "mainboard"
+    },
+    {
+      "name": "Watery Grave",
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "261",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "mana_cost": null,
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "245",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "mana_cost": null,
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "245",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": "",
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Unravel",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{1}{U}{U}",
+      "oracle_text": "Counter target spell. If the amount of mana spent to cast that spell was less than its mana value, you draw a card.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "83",
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell",
+        "Card Draw"
+      ],
+      "role": "Interaction (hard counter; protects the Chorale turn)",
+      "board": "sideboard"
+    },
+    {
+      "name": "Divert Disaster",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{1}{U}",
+      "oracle_text": "Counter target spell unless its controller pays {2}. If they do, you create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "55",
+      "tags": [
+        "Lands-Matter",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "role": "Protection",
+      "board": "sideboard"
+    },
+    {
+      "name": "Divert Disaster",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{1}{U}",
+      "oracle_text": "Counter target spell unless its controller pays {2}. If they do, you create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "55",
+      "tags": [
+        "Lands-Matter",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "role": "Protection",
+      "board": "sideboard"
+    },
+    {
+      "name": "Annul",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{U}",
+      "oracle_text": "Counter target artifact or enchantment spell.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "46",
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Annul",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{U}",
+      "oracle_text": "Counter target artifact or enchantment spell.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "46",
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cryoshatter",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{U}",
+      "oracle_text": "Enchant creature\nEnchanted creature gets -5/-0.\nWhen enchanted creature becomes tapped or is dealt damage, destroy it.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "53",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Debuff"
+      ],
+      "role": "Flex removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cryoshatter",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "mana_cost": "{U}",
+      "oracle_text": "Enchant creature\nEnchanted creature gets -5/-0.\nWhen enchanted creature becomes tapped or is dealt damage, destroy it.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "53",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Debuff"
+      ],
+      "role": "Flex removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Gravkill",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "103",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Anti-synergy hedge",
+      "board": "sideboard"
+    },
+    {
+      "name": "Gravkill",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{3}{B}",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "103",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Anti-synergy hedge",
+      "board": "sideboard"
+    },
+    {
+      "name": "Decode Transmissions",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "mana_cost": "{2}{B}",
+      "oracle_text": "You draw two cards and lose 2 life.\nVoid — If a nonland permanent left the battlefield this turn or a spell was warped this turn, instead you draw two cards and each opponent loses 2 life.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "94",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Life Drain",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "role": "Flex card flow",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "A U/B deck that wins with the opponent's own creatures. Every removal spell in the maindeck puts its target into a graveyard rather than exiling it, because the plan needs their creatures in their graveyard: Chorale of the Void reads 'Whenever enchanted creature attacks, put target creature card from defending player's graveyard onto the battlefield under your control tapped and attacking', and Singularity Rupture is pointed at THEM to bury half their library. Tractor Beam takes a permanent outright with no combat step required, and Zero Point Ballad at X of 6 or more hands back a creature it just killed. The creature base exists only to carry the Aura and survive combat - two four-toughness fliers and a deathtouch body - not to win on its own.",
+  "strategy_es": "reanimador de cementerio midrange",
+  "identity_es": "Un mazo U/B que gana con las propias criaturas del rival. Cada hechizo de eliminación del principal pone su objetivo en un cementerio en lugar de exiliarlo, porque el plan necesita sus criaturas en su cementerio: Chorale of the Void dice 'Whenever enchanted creature attacks, put target creature card from defending player's graveyard onto the battlefield under your control tapped and attacking', y Singularity Rupture se apunta hacia ELLOS para enterrar media biblioteca suya. Tractor Beam se lleva un permanente directamente sin necesitar paso de combate, y Zero Point Ballad con X de 6 o más devuelve una criatura que acaba de matar. La base de criaturas existe solo para llevar el aura y sobrevivir al combate — dos voladoras de cuatro de resistencia y un cuerpo con toque mortal — no para ganar por sí sola.",
+  "pitch_es": "Un mazo U/B que gana con las propias criaturas del rival. Cada hechizo de eliminación del principal pone su objetivo en un cementerio en lugar de exiliarlo, porque el plan necesita sus criaturas en su cementerio: Chorale of the Void dice 'Whenever enchanted creature attacks, put target creature card from defending player's graveyard onto the battlefield under your control tapped and attacking', y Singularity Rupture se apunta hacia ELLOS para enterrar media biblioteca suya. Tractor Beam se lleva un permanente directamente sin necesitar paso de combate, y Zero Point Ballad con X de 6 o más devuelve una criatura que acaba de matar. La base de criaturas existe solo para llevar el aura y sobrevivir al combate — dos voladoras de cuatro de resistencia y un cuerpo con toque mortal — no para ganar por sí sola."
+}

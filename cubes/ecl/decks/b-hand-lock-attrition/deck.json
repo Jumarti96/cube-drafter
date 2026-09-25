@@ -1,0 +1,994 @@
+{
+  "deck_name": "b-hand-lock-attrition",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-12T04:18:51Z",
+  "format": "40-card",
+  "strategy": "Path 2 - Hand-Lock Attrition (Draw-Denial Stax)",
+  "colors": "B",
+  "identity": "Mono-black discard-and-attrition control, and the deck is labelled honestly rather than aspirationally. The brief called this archetype 'Draw-Denial Stax'; the Phase 9 grill established that Mornsong Aria does not deny draws in any meaningful sense - 'searches their library for a card, puts it into their hand' REPLACES a random draw with an unrestricted tutor at unchanged rate, so it is card-quality POSITIVE for the opponent, and its only true denial is against the cube's bulk-draw text (29 of 282 pool cards) and its lifegain (13 of 277). What the deck actually does: 5 copies of hand attack plus 5 removal spells trade one-for-one against a resource base the opponent refills at exactly one card per turn while Aria is out, 5 refuel copies that all function under the lock, and a 6-copy evasive clock closes. Two limits are stated rather than hidden. First, all 5 hand-attack copies are SORCERY-speed while Aria hands the opponent its tutored card at their own draw step - so the tutored card is reachable only after they have had a full main phase to use it, and only 3 of the 5 copies let the pilot choose what is taken. Second, Aria is a rare capped at one copy with no enchantment tutor in the pool, so under the assembly gate's own model it is seen 33% of the time by turn 9; the deck is therefore built to win WITHOUT it and Aria is recorded as an accelerant, not an engine.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2,
+        "rare": 1,
+        "mythic": 1
+      },
+      "only_from": {},
+      "excluded": [],
+      "extra_constraint": "max 5 rare+mythic total across mainboard and sideboard"
+    },
+    "checklist": {
+      "base": "cube_mainboard - every card verified present in the working pool by exact name.",
+      "copy_limits": "Commons and uncommons capped at 2, rares and mythics at 1; the Phase 5C validator cross-checked every combined mainboard+sideboard count against cube_search.get_max_copies and returned PASS.",
+      "rare_mythic_budget": "5 of the maximum 5, fully spent: Mornsong Aria (rare, MB), Shadow Urchin (rare, MB), Deceit (mythic, MB), Emptiness (mythic, MB), Dawnhand Dissident (rare, SB). The Phase 9 repair swapped Taster of Wares (rare) for Emptiness (mythic), keeping the total unchanged.",
+      "basics": "18 Swamp - format-supplied and exempt from copy limits.",
+      "colour": "All 19 distinct nonland cards return a usable 'cast' mode from effective_cost.best_mode against core_colors ['B']; the five hybrid cards (Shadow Urchin {2}{B/R}, Deceit {4}{U/B}{U/B} with Evoke {U/B}{U/B}, Emptiness {4}{W/B}{W/B} with Evoke {W/B}{W/B}, Reaping Willow {1}{W/B}{W/B}{W/B}, Mischievous Sneakling {1}{U/B}) are cast entirely off Swamps, so splash_colors is empty. Both Incarnations' 'if {B}{B} was spent to cast it' clauses are satisfied by paying their hybrid pips with black mana."
+    }
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.05,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.733,
+      "raw_target": 17.733,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.05,
+    "pip_demand": {
+      "B": 20
+    },
+    "land_color_production": {
+      "B": 18
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Bile-Vial Boggart",
+      "oracle_text": "When this creature dies, put a -1/-1 counter on up to one target creature.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Goblin Assassin",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "threat"
+    },
+    {
+      "name": "Unbury",
+      "oracle_text": "Choose one —\n• Return target creature card from your graveyard to your hand.\n• Return two target creature cards that share a creature type from your graveyard to your hand.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Graveyard",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Graveyard Recursion"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "refuel"
+    },
+    {
+      "name": "Nameless Inversion",
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "interaction"
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "interaction"
+    },
+    {
+      "name": "Auntie's Sentence",
+      "oracle_text": "Choose one —\n• Target opponent reveals their hand. You choose a nonland permanent card from it. That player discards that card.\n• Target creature gets -2/-2 until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Discard",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Discard",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "hand attack"
+    },
+    {
+      "name": "Heirloom Auntie",
+      "oracle_text": "This creature enters with two -1/-1 counters on it.\nWhenever another creature you control dies, surveil 1, then remove a -1/-1 counter from this creature. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Self-Mill",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)",
+          "Self-Mill",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Goblin Warlock",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "refuel"
+    },
+    {
+      "name": "Graveshifter",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, you may return target creature card from your graveyard to your hand.",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Graveyard",
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Blink/ETB",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Graveyard Recursion"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "refuel"
+    },
+    {
+      "name": "Shadow Urchin",
+      "oracle_text": "Whenever this creature attacks, blight 1. (Put a -1/-1 counter on a creature you control.)\nWhenever a creature you control with one or more counters on it dies, exile that many cards from the top of your library. Until your next end step, you may play those cards.",
+      "mana_cost": "{2}{B/R}",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Impulse Draw",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Aristocrats/Sacrifice",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Impulse Draw",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Ouphe",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "refuel"
+    },
+    {
+      "name": "Mornsong Aria",
+      "oracle_text": "Players can't draw cards or gain life.\nAt the beginning of each player's draw step, that player loses 3 life, searches their library for a card, puts it into their hand, then shuffles.",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Tax Effect",
+        "Tutor",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Stax/Taxing"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Tax Effect",
+          "Tutor",
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Legendary Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "accelerant"
+    },
+    {
+      "name": "Perfect Intimidation",
+      "oracle_text": "Choose one or both —\n• Target opponent exiles two cards from their hand.\n• Remove all counters from target creature.",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Discard",
+        "Counter Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Discard",
+          "Counter Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "hand attack"
+    },
+    {
+      "name": "Dream Seizer",
+      "oracle_text": "Flying\nWhen this creature enters, you may blight 1. If you do, each opponent discards a card. (To blight 1, put a -1/-1 counter on a creature you control.)",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Discard"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Discard"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Faerie Rogue",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "threat"
+    },
+    {
+      "name": "Dawnhand Eulogist",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nWhen this creature enters, mill three cards. Then if there is an Elf card in your graveyard, each opponent loses 2 life and you gain 2 life. (To mill three cards, put the top three cards of your library into your graveyard.)",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Graveyard",
+        "Self-Mill",
+        "Lifegain",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Life Drain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Graveyard",
+          "Self-Mill",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Self-Mill",
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elf Warlock",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "threat"
+    },
+    {
+      "name": "Deceit",
+      "oracle_text": "When this creature enters, if {U}{U} was spent to cast it, return up to one other target nonland permanent to its owner's hand.\nWhen this creature enters, if {B}{B} was spent to cast it, target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\nEvoke {U/B}{U/B}",
+      "mana_cost": "{4}{U/B}{U/B}",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Bounce",
+        "Targeted Discard",
+        "Evoke",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Targeted Discard",
+          "Evoke"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 6,
+      "type_line": "Creature — Elemental Incarnation",
+      "rarity": "mythic",
+      "power": "5",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "hand attack"
+    },
+    {
+      "name": "Emptiness",
+      "oracle_text": "When this creature enters, if {W}{W} was spent to cast it, return target creature card with mana value 3 or less from your graveyard to the battlefield.\nWhen this creature enters, if {B}{B} was spent to cast it, put three -1/-1 counters on up to one target creature.\nEvoke {W/B}{W/B}",
+      "mana_cost": "{4}{W/B}{W/B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Reanimation",
+        "Targeted Removal",
+        "Counter Placement",
+        "Evoke",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Reanimator",
+          "Graveyard",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Reanimation",
+          "Targeted Removal",
+          "Counter Placement",
+          "Evoke"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 6,
+      "type_line": "Creature — Elemental Incarnation",
+      "rarity": "mythic",
+      "power": "3",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "interaction"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 18,
+      "role": "land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Dawnhand Dissident",
+      "oracle_text": "{T}, Blight 1: Surveil 1.\n{T}, Blight 2: Exile target card from a graveyard.\nDuring your turn, you may cast creature spells from among cards you own exiled with this creature by removing three counters from among creatures you control in addition to paying their other costs.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Graveyard",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Card Selection",
+        "Graveyard Hate",
+        "Self-Mill"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Graveyard Hate",
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Elf Warlock",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "graveyard hate",
+      "when_to_board": "Vs the cube's 39 graveyard-interaction cards. '{T}, Blight 2: Exile target card from a graveyard' is repeatable only while other bodies exist to absorb counters - Dissident is a 1/2 and two counters kill it - so realistic throughput is one exile per turn at the cost of shrinking your own board. '{T}, Blight 1: Surveil 1' at half the cost is the mode you will use more often."
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "graveyard hate",
+      "when_to_board": "Vs reanimator and flashback decks; 'exile up to two target cards from graveyards' on a 3/3 flier that also joins the clock. The 'gain 3 life' rider is dead whenever your own Aria is out."
+    },
+    {
+      "name": "Darkness Descends",
+      "oracle_text": "Put two -1/-1 counters on each creature.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "sweeper",
+      "when_to_board": "Vs token and go-wide decks ONLY. 'Put two -1/-1 counters on each creature' is the only mass creature effect in the pool castable off Swamps, but it is not one-sided: of this deck's 7 distinct creature names it kills Bile-Vial Boggart, Heirloom Auntie and Dream Seizer outright, leaving Shadow Urchin (3/4 to 1/2), Dawnhand Eulogist (3/3 to 1/1) and a hard-cast Deceit (5/5 to 3/3). Hold your own creatures in hand and cast them after it resolves."
+    },
+    {
+      "name": "Blight Rot",
+      "oracle_text": "Put four -1/-1 counters on target creature.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "removal",
+      "when_to_board": "Vs 4-toughness threats. 'Put four -1/-1 counters on target creature' at instant speed outranges everything in the maindeck: Nameless Inversion caps at -3 toughness and evoked Emptiness at three counters. Run the full 2 copies - a 1-of is only found 33% of the time by turn 9."
+    },
+    {
+      "name": "Reaping Willow",
+      "oracle_text": "Lifelink\nThis creature enters with two -1/-1 counters on it.\n{1}{W/B}, Remove two counters from this creature: Return target creature card with mana value 3 or less from your graveyard to the battlefield. Activate only as a sorcery.",
+      "mana_cost": "{1}{W/B}{W/B}{W/B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Reanimator",
+        "Graveyard",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Reanimation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Reanimator",
+          "Graveyard",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Reanimation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Treefolk Cleric",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "6",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "blocker / recursion",
+      "when_to_board": "Vs aggro, which is this deck's worst matchup. {1}{W/B}{W/B}{W/B} is cast as {1}{B}{B}{B} off Swamps; a 3/6 body walls almost every ground attacker in the cube, and '{1}{W/B}, Remove two counters from this creature: Return target creature card with mana value 3 or less from your graveyard to the battlefield' rebuys Bile-Vial Boggart, Heirloom Auntie or Shadow Urchin. Its lifelink is dead under Aria; the toughness is what you are buying."
+    },
+    {
+      "name": "Mischievous Sneakling",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlash",
+      "mana_cost": "{1}{U/B}",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Enabler/Fodder"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "ambush blocker",
+      "when_to_board": "Vs faster aggro; Flash lets a 2/2 ambush an attacker without spending a sorcery-speed turn. A vanilla body - it is here for the instant-speed blocking, nothing else."
+    }
+  ],
+  "pitch": "Mono-black discard-and-attrition control, and the deck is labelled honestly rather than aspirationally. The brief called this archetype 'Draw-Denial Stax'; the Phase 9 grill established that Mornsong Aria does not deny draws in any meaningful sense - 'searches their library for a card, puts it into their hand' REPLACES a random draw with an unrestricted tutor at unchanged rate, so it is card-quality POSITIVE for the opponent, and its only true denial is against the cube's bulk-draw text (29 of 282 pool cards) and its lifegain (13 of 277). What the deck actually does: 5 copies of hand attack plus 5 removal spells trade one-for-one against a resource base the opponent refills at exactly one card per turn while Aria is out, 5 refuel copies that all function under the lock, and a 6-copy evasive clock closes. Two limits are stated rather than hidden. First, all 5 hand-attack copies are SORCERY-speed while Aria hands the opponent its tutored card at their own draw step - so the tutored card is reachable only after they have had a full main phase to use it, and only 3 of the 5 copies let the pilot choose what is taken. Second, Aria is a rare capped at one copy with no enchantment tutor in the pool, so under the assembly gate's own model it is seen 33% of the time by turn 9; the deck is therefore built to win WITHOUT it and Aria is recorded as an accelerant, not an engine.",
+  "strategy_es": "Ruta 2 — Desgaste con bloqueo de mano (Stax de negación de robo)",
+  "identity_es": "Control mono negro de descarte y desgaste, y el mazo está etiquetado con honestidad y no con aspiración. El encargo llamó a este arquetipo 'Draw-Denial Stax'; se estableció que Mornsong Aria no niega robos en ningún sentido significativo: 'searches their library for a card, puts it into their hand' SUSTITUYE un robo aleatorio por un tutor sin restricciones al mismo ritmo, así que es POSITIVA en calidad de cartas para el rival, y su única negación real es contra el texto de robo masivo del cubo (29 de 282 cartas del pool) y su ganancia de vida (13 de 277). Lo que el mazo hace de verdad: 5 copias de ataque a la mano más 5 hechizos de eliminación intercambian uno a uno contra una base de recursos que el rival rellena a exactamente una carta por turno mientras Aria está fuera, 5 copias de reabastecimiento que funcionan todas bajo el bloqueo, y un reloj evasivo de 6 copias cierra. Dos límites se enuncian en vez de esconderse. Primero, las 5 copias de ataque a la mano son a velocidad de CONJURO mientras Aria entrega al rival su carta buscada en su propio paso de robar, así que la carta buscada solo es alcanzable después de que hayan tenido una fase principal completa para usarla, y solo 3 de las 5 copias dejan elegir al piloto qué se llevan. Segundo, Aria es una rara limitada a una copia sin tutor de encantamientos en el pool, así que bajo el propio modelo de la puerta de ensamblaje se ve el 33% de las veces para el turno 9; el mazo está construido por tanto para ganar SIN ella y Aria queda registrada como acelerante, no como motor.",
+  "pitch_es": "Control mono negro de descarte y desgaste, y el mazo está etiquetado con honestidad y no con aspiración. El encargo llamó a este arquetipo 'Draw-Denial Stax'; se estableció que Mornsong Aria no niega robos en ningún sentido significativo: 'searches their library for a card, puts it into their hand' SUSTITUYE un robo aleatorio por un tutor sin restricciones al mismo ritmo, así que es POSITIVA en calidad de cartas para el rival, y su única negación real es contra el texto de robo masivo del cubo (29 de 282 cartas del pool) y su ganancia de vida (13 de 277). Lo que el mazo hace de verdad: 5 copias de ataque a la mano más 5 hechizos de eliminación intercambian uno a uno contra una base de recursos que el rival rellena a exactamente una carta por turno mientras Aria está fuera, 5 copias de reabastecimiento que funcionan todas bajo el bloqueo, y un reloj evasivo de 6 copias cierra. Dos límites se enuncian en vez de esconderse. Primero, las 5 copias de ataque a la mano son a velocidad de CONJURO mientras Aria entrega al rival su carta buscada en su propio paso de robar, así que la carta buscada solo es alcanzable después de que hayan tenido una fase principal completa para usarla, y solo 3 de las 5 copias dejan elegir al piloto qué se llevan. Segundo, Aria es una rara limitada a una copia sin tutor de encantamientos en el pool, así que bajo el propio modelo de la puerta de ensamblaje se ve el 33% de las veces para el turno 9; el mazo está construido por tanto para ganar SIN ella y Aria queda registrada como acelerante, no como motor."
+}

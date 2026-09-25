@@ -1,0 +1,612 @@
+{
+  "deck_name": "b-mono-black-reanimator",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-30T21:15:00Z",
+  "format": "40-card",
+  "strategy": "mono-black grindy value reanimator",
+  "colors": "B",
+  "identity": "Mono-black graveyard value-reanimator built on recursion and inevitability.",
+  "restrictions": {
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "rare_mythic_cap": 5,
+    "base": "cube_mainboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.36,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.813,
+      "raw_target": 17.813,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.36,
+    "pip_demand": {
+      "B": 28
+    },
+    "land_color_production": {
+      "B": 17
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 100,
+        "prod_pct": 94.4,
+        "gap": 5.6,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Entomb",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Search your library for a card, put that card into your graveyard, then shuffle.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "GY-stocking tutor"
+    },
+    {
+      "name": "Chainer, Dementia Master",
+      "cmc": 5,
+      "type_line": "Legendary Creature — Human Minion",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "All Nightmares get +1/+1.\n{B}{B}{B}, Pay 3 life: Put target creature card from a graveyard onto the battlefield under your control. That creature is black and is a Nightmare in addition to its other creature types.\nWhen Chainer leaves the battlefield, exile all Nightmares.",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Repeatable reanimator"
+    },
+    {
+      "name": "Body Snatcher",
+      "cmc": 4,
+      "type_line": "Creature — Phyrexian Minion",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "When this creature enters, exile it unless you discard a creature card.\nWhen this creature dies, exile it and return target creature card from your graveyard to the battlefield.",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Reanimator + discard outlet"
+    },
+    {
+      "name": "Dread Return",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Return target creature card from your graveyard to the battlefield.\nFlashback—Sacrifice three creatures. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Reanimation spell"
+    },
+    {
+      "name": "Oversold Cemetery",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "At the beginning of your upkeep, if you have four or more creature cards in your graveyard, you may return target creature card from your graveyard to your hand.",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Recursion engine"
+    },
+    {
+      "name": "Yawgmoth, Thran Physician",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Protection from Humans\nPay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card.\n{B}{B}, Discard a card: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "rarity": "mythic",
+      "power": "2",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Sac-draw engine / reach"
+    },
+    {
+      "name": "Urborg Uprising",
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Return up to two target creature cards from your graveyard to your hand.\nDraw a card.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Bulk recursion + draw"
+    },
+    {
+      "name": "Necrosavant",
+      "cmc": 6,
+      "type_line": "Creature — Zombie Giant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "{3}{B}{B}, Sacrifice a creature: Return this card from your graveyard to the battlefield. Activate only during your upkeep.",
+      "rarity": "uncommon",
+      "power": "5",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Self-returning threat"
+    },
+    {
+      "name": "Juggernaut",
+      "cmc": 4,
+      "type_line": "Artifact Creature — Juggernaut",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "This creature attacks each combat if able.\nThis creature can't be blocked by Walls.",
+      "rarity": "common",
+      "power": "5",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Beater / reanimation target"
+    },
+    {
+      "name": "Faceless Butcher",
+      "cmc": 4,
+      "type_line": "Creature — Nightmare Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "When this creature enters, exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Removal on a body"
+    },
+    {
+      "name": "Phyrexian Rager",
+      "cmc": 3,
+      "type_line": "Creature — Phyrexian Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "When this creature enters, you draw a card and you lose 1 life.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Body + card"
+    },
+    {
+      "name": "Undead Gladiator",
+      "cmc": 3,
+      "type_line": "Creature — Zombie Barbarian",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "{1}{B}, Discard a card: Return this card from your graveyard to your hand. Activate only during your upkeep.\nCycling {1}{B} ({1}{B}, Discard this card: Draw a card.)",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Repeatable discard outlet"
+    },
+    {
+      "name": "Millikin",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Construct",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "{T}, Mill a card: Add {C}. (To mill a card, put the top card of your library into your graveyard.)",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Self-mill ramp"
+    },
+    {
+      "name": "Phyrexian Ghoul",
+      "cmc": 3,
+      "type_line": "Creature — Phyrexian Zombie",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Sacrifice a creature: This creature gets +2/+2 until end of turn.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Free sac outlet"
+    },
+    {
+      "name": "Street Wraith",
+      "cmc": 5,
+      "type_line": "Creature — Wraith",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nCycling—Pay 2 life. (Pay 2 life, Discard this card: Draw a card.)",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Free cantrip / target"
+    },
+    {
+      "name": "Zombie Infestation",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Discard two cards: Create a 2/2 black Zombie creature token.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Discard outlet"
+    },
+    {
+      "name": "Mind Stone",
+      "cmc": 2,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "{T}: Add {C}.\n{1}, {T}, Sacrifice this artifact: Draw a card.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Ramp / cantrip"
+    },
+    {
+      "name": "Terror",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Removal"
+    },
+    {
+      "name": "Chainer's Edict",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Target player sacrifices a creature of their choice.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Edict removal"
+    },
+    {
+      "name": "Ichor Slick",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Target creature gets -3/-3 until end of turn.\nCycling {2} ({2}, Discard this card: Draw a card.)\nMadness {3}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Removal / cycler"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 16,
+      "role": "Black source"
+    },
+    {
+      "name": "Polluted Mire",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "This land enters tapped.\n{T}: Add {B}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Black source, cycling land, ETB tapped"
+    },
+    {
+      "name": "Mishra's Factory",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "{T}: Add {C}.\n{1}: This land becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Colorless manland, flood insurance"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Duress",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Control/combo/GY-hate: strip a key noncreature card"
+    },
+    {
+      "name": "Tormod's Crypt",
+      "cmc": 0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Graveyard decks: exile their yard"
+    },
+    {
+      "name": "Damping Sphere",
+      "cmc": 2,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "If a land is tapped for two or more mana, it produces {C} instead of any other type and amount.\nEach spell a player casts costs {1} more to cast for each other spell that player has cast this turn.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Storm/ramp/untap combos: tax + {C} lock"
+    },
+    {
+      "name": "Terror",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Aggro: extra spot removal"
+    },
+    {
+      "name": "Ichor Slick",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Target creature gets -3/-3 until end of turn.\nCycling {2} ({2}, Discard this card: Draw a card.)\nMadness {3}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Aggro/midrange: flexible removal"
+    },
+    {
+      "name": "Chainer's Edict",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Target player sacrifices a creature of their choice.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Hexproof/single big threat: edict"
+    },
+    {
+      "name": "Faceless Butcher",
+      "cmc": 4,
+      "type_line": "Creature — Nightmare Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "When this creature enters, exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Midrange bombs: extra removal-body"
+    },
+    {
+      "name": "Phyrexian Debaser",
+      "cmc": 4,
+      "type_line": "Creature — Phyrexian Carrier",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Flying\n{T}, Sacrifice this creature: Target creature gets -2/-2 until end of turn.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Go-wide/aggro: flying blocker, sac for -2/-2"
+    },
+    {
+      "name": "Icy Manipulator",
+      "cmc": 4,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Control/big creatures: repeatable tap-down"
+    }
+  ],
+  "pitch": "Mono-black grindy value reanimator. Entomb and cheap discard/cycling outlets (Zombie Infestation, Undead Gladiator, Street Wraith, Millikin) stock the graveyard; Chainer, two Dread Returns and Body Snatcher cheat bodies into play ahead of curve, while Oversold Cemetery, Necrosavant's self-return and Yawgmoth's sac-draw refuel the grind. The pool offers no true bomb in mono-black — the largest reanimation target is a 5/5 (Necrosavant) or colorless Juggernaut 5/3 — so the deck wins on inevitability (repeated reanimated/hardcast threats plus reach from Yawgmoth's -1/-1 counters), not a fast clock. Mono-black buys flawless triple-black mana for Chainer's {B}{B}{B} activation with zero fixing tax.",
+  "strategy_es": "reanimador mono negro de valor y desgaste",
+  "identity_es": "Reanimador de valor de cementerio mono negro, construido sobre la recursión y la inevitabilidad.",
+  "pitch_es": "Reanimador mono negro de valor y desgaste. Entomb y los medios baratos de descarte/cycling (Zombie Infestation, Undead Gladiator, Street Wraith, Millikin) llenan el cementerio; Chainer, dos Dread Return y Body Snatcher hacen trampa con cuerpos por delante de la curva, mientras Oversold Cemetery, el autorretorno de Necrosavant y el robo por sacrificio de Yawgmoth reabastecen el desgaste. El pool no ofrece ninguna bomba real en mono negro — el mayor objetivo de reanimación es un 5/5 (Necrosavant) o un Juggernaut incoloro 5/3 — así que el mazo gana por inevitabilidad (amenazas reanimadas o lanzadas una y otra vez más el alcance de los contadores -1/-1 de Yawgmoth), no por un reloj rápido. El mono negro compra un maná triple negro impecable para la activación {B}{B}{B} de Chainer sin ningún impuesto de fijado."
+}

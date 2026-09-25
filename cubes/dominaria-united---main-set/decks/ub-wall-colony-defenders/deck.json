@@ -1,0 +1,1769 @@
+{
+  "deck_name": "ub-wall-colony-defenders",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-14T23:30:00Z",
+  "format": "40-card",
+  "strategy": "UB defenders mill-drain control",
+  "colors": "UB",
+  "identity": "A Dimir control deck whose board is its clock. Twelve creatures with Defender wall the ground while two outlets read that same number as X: Blight Pile's '{2}{B}, {T}: Each opponent loses X life' and Coral Colony's '{1}{U}, {T}: Target player mills X cards'. Neither needs to attack, so the deck never has to win a combat step it is built to refuse. Walking Bulwark is the third axis - it grants a defender haste and lets it attack assigning damage equal to its TOUGHNESS, turning 4- and 5-toughness walls into a lethal alpha strike when the drain math falls a turn short.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2,
+        "rare": 1,
+        "mythic": 1
+      },
+      "only_from": {},
+      "excluded": []
+    },
+    "extra_user_constraint": "At most 5 rare/mythic cards TOTAL across mainboard + sideboard.",
+    "checklist": {
+      "base": "cube_mainboard only - every card verified present in working_pool by exact name",
+      "commons_uncommons": "max 2 copies each - Blight Pile 2, Walking Bulwark 2, Coral Colony 2, Academy Wall 2, Gibbering Barricade 2, Shield-Wall Sentinel 2, Cut Down 2, Tribute to Urborg 2, Extinguish the Light 2, Shore Up 2, Contaminated Aquifer 2, Battlefly Swarm 2, Impede Momentum 2, Choking Miasma 2, Negate 2, Phyrexian Espionage 1, Essence Scatter 1 - all at or under the cap",
+      "rares_mythics": "max 1 copy each - Sheoldred, the Apocalypse 1 (mainboard); Liliana of the Veil 1, Aether Channeler 1 (sideboard)",
+      "rare_mythic_total_cap": "3 of 5 used (Sheoldred mainboard; Liliana of the Veil and Aether Channeler sideboard). REWRITTEN per Challenger finding 4, which correctly objected that the first version justified the unspent slots by naming only 3 rares and generalising. I ran the actual scan: there are 30 UB-castable rares/mythics in the pool (the Challenger's own estimate of 24 was itself low). Spending one of them on Liliana of the Veil is the direct result of that finding - her '-2: Target player sacrifices a creature' is NON-TARGETED, the only thing in these colours that answers a ward or hexproof creature, and a planeswalker behind twelve 3-to-5-toughness blockers is close to unassailable. Of the remaining 27: seven destroy or shrink this deck's own board (Drag to the Bottom -3/-3 kills 6 of 12 defenders, The Phasing of Zhalfir III destroys all creatures, Karn's Sylex at any useful X eats the same board, Braids and Shadow-Rite Priest and Golden Argosy and Tyrannical Pitlord all sacrifice or exile creatures); eleven are payoffs for archetypes this deck is not (Haughty Djinn, Cosmic Epiphany, Vodalian Hexcatcher, Vesuvan Duplimancy, Defiler of Dreams, Defiler of Flesh, Academy Loremaster, The Cruelty of Gix, The Raven Man, Evolved Sleeper, Sphinx of Clear Skies); three are lands or mana rocks this 17-land two-colour base does not want (Plaza of Heroes, Thran Portal, Timeless Lotus); and the genuinely arguable remainder is Ertai Resurrected, Silver Scrutiny, Karn Living Legacy, Weatherlight Compleated, Vodalian Mindsinger and Stronghold Arena - each a fine card that would have to displace a sideboard slot currently answering a named threat class (evasion 51 cards, noncreature permanents 33, sweepers 6). Two slots stay unspent because the cap is a maximum, not a target, and no remaining candidate beats the class-coverage card it would replace.",
+      "basics": "format-supplied, unlimited - 9 Swamp, 6 Island"
+    }
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.39,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": -0.147,
+      "raw_target": 16.853,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.39,
+    "pip_demand": {
+      "B": 14,
+      "U": 8
+    },
+    "land_color_production": {
+      "B": 11,
+      "U": 8
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 63.6,
+        "prod_pct": 64.7,
+        "gap": -1.1,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 36.4,
+        "prod_pct": 47.1,
+        "gap": -10.7,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Blight Pile",
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Defender\n{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Life Drain",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Defender Matters",
+          "Life Drain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Threat/Payoff (defender)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Blight Pile",
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Defender\n{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Life Drain",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Defender Matters",
+          "Life Drain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Threat/Payoff (defender)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Lifegain",
+        "Life Drain",
+        "Standalone Threat",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain",
+          "Life Drain"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Drain",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Walking Bulwark",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "Defender\n{2}: Until end of turn, target creature with defender gains haste, can attack as though it didn't have defender, and assigns combat damage equal to its toughness rather than its power. Activate only as a sorcery.",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Artifacts",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Combat Enabler"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Defender Matters",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Enabler"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Engine/Attack-unlock (defender)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Walking Bulwark",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "Defender\n{2}: Until end of turn, target creature with defender gains haste, can attack as though it didn't have defender, and assigns combat damage equal to its toughness rather than its power. Activate only as a sorcery.",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Artifacts",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Combat Enabler"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Defender Matters",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Enabler"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Engine/Attack-unlock (defender)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Coral Colony",
+      "cmc": 2,
+      "type_line": "Creature — Wall",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "Defender\n{1}{U}, {T}: Target player mills X cards, where X is the number of creatures you control with defender. (To mill a card, a player puts the top card of their library into their graveyard.)",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "4",
+      "tags": [
+        "Defender Matters",
+        "Self-Mill",
+        "Mill",
+        "Engine/Outlet"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Defender Matters",
+          "Self-Mill",
+          "Mill"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Mill"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Engine/Mill wincon (defender)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Coral Colony",
+      "cmc": 2,
+      "type_line": "Creature — Wall",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "Defender\n{1}{U}, {T}: Target player mills X cards, where X is the number of creatures you control with defender. (To mill a card, a player puts the top card of their library into their graveyard.)",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "4",
+      "tags": [
+        "Defender Matters",
+        "Self-Mill",
+        "Mill",
+        "Engine/Outlet"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Defender Matters",
+          "Self-Mill",
+          "Mill"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Mill"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Engine/Mill wincon (defender)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Academy Wall",
+      "cmc": 3,
+      "type_line": "Creature — Wall",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "Defender\nWhenever you cast an instant or sorcery spell, you may draw a card. If you do, discard a card. This ability triggers only once each turn.",
+      "rarity": "common",
+      "power": "0",
+      "toughness": "5",
+      "tags": [
+        "Spellslinger",
+        "Defender Matters",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Looting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Looting"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Engine/Card-flow (defender)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Academy Wall",
+      "cmc": 3,
+      "type_line": "Creature — Wall",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "Defender\nWhenever you cast an instant or sorcery spell, you may draw a card. If you do, discard a card. This ability triggers only once each turn.",
+      "rarity": "common",
+      "power": "0",
+      "toughness": "5",
+      "tags": [
+        "Spellslinger",
+        "Defender Matters",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Looting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Looting"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Engine/Card-flow (defender)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gibbering Barricade",
+      "cmc": 3,
+      "type_line": "Creature — Nightmare Wall",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Defender\n{2}{B}, Sacrifice a creature: You gain 1 life and draw a card.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Defender Matters",
+        "Lifegain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Defender Matters",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Sacrifice Outlet",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Engine/Defender body (defender)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gibbering Barricade",
+      "cmc": 3,
+      "type_line": "Creature — Nightmare Wall",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Defender\n{2}{B}, Sacrifice a creature: You gain 1 life and draw a card.",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Defender Matters",
+        "Lifegain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Defender Matters",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Sacrifice Outlet",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Engine/Defender body (defender)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shield-Wall Sentinel",
+      "cmc": 4,
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "Defender\nWhen this creature enters, you may search your library for a creature card with defender, reveal it, put it into your hand, then shuffle.",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Tutor",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Defender Matters",
+          "Artifacts",
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Tutor"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "role": "Engine/Defender tutor (defender)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shield-Wall Sentinel",
+      "cmc": 4,
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "Defender\nWhen this creature enters, you may search your library for a creature card with defender, reveal it, put it into your hand, then shuffle.",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Defender Matters",
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Tutor",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Defender Matters",
+          "Artifacts",
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Tutor"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "role": "Engine/Defender tutor (defender)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Phyrexian Espionage",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nDraw two cards. If this spell was kicked, each opponent discards a card.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Infrastructure/Consistency",
+        "Interaction/Disruption",
+        "Card Draw",
+        "Discard",
+        "Kicker",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Discard",
+          "Kicker"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "role": "Engine/Card draw",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cut Down",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cut Down",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tribute to Urborg",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nTarget creature gets -2/-2 until end of turn. If this spell was kicked, that creature gets an additional -1/-1 until end of turn for each instant and sorcery card in your graveyard.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Spellslinger",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Spellslinger",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tribute to Urborg",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nTarget creature gets -2/-2 until end of turn. If this spell was kicked, that creature gets an additional -1/-1 until end of turn for each instant and sorcery card in your graveyard.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Spellslinger",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Spellslinger",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Extinguish the Light",
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Extinguish the Light",
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shore Up",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "Target creature you control gets +1/+1 and gains hexproof until end of turn. Untap it. (It can't be the target of spells or abilities your opponents control.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Interaction/Protect + untap the drain",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shore Up",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "Target creature you control gets +1/+1 and gains hexproof until end of turn. Untap it. (It can't be the target of spells or abilities your opponents control.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Interaction/Protect + untap the drain",
+      "board": "mainboard"
+    },
+    {
+      "name": "Essence Scatter",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "Counter target creature spell.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "({T}: Add {B}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "({T}: Add {U}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "({T}: Add {U}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "({T}: Add {U}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "({T}: Add {U}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "({T}: Add {U}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "({T}: Add {U}.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "taxonomic_profile": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Battlefly Swarm",
+      "cmc": 1,
+      "type_line": "Creature — Phyrexian Insect",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Flying\n{B}: This creature gains deathtouch until end of turn.",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "role": "Sideboard/Anti-flier",
+      "board": "sideboard"
+    },
+    {
+      "name": "Battlefly Swarm",
+      "cmc": 1,
+      "type_line": "Creature — Phyrexian Insect",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "Flying\n{B}: This creature gains deathtouch until end of turn.",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "role": "Sideboard/Anti-flier",
+      "board": "sideboard"
+    },
+    {
+      "name": "Impede Momentum",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "Tap target creature and put three stun counters on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nScry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Tap Effect",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Tap Effect",
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Sideboard/Anti-evasive",
+      "board": "sideboard"
+    },
+    {
+      "name": "Impede Momentum",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "Tap target creature and put three stun counters on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nScry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Tap Effect",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Tap Effect",
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Sideboard/Anti-evasive",
+      "board": "sideboard"
+    },
+    {
+      "name": "Choking Miasma",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nIf this spell was kicked, put a +1/+1 counter on a creature you control.\nAll creatures get -2/-2 until end of turn.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Sideboard/Asymmetric sweeper",
+      "board": "sideboard"
+    },
+    {
+      "name": "Choking Miasma",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nIf this spell was kicked, put a +1/+1 counter on a creature you control.\nAll creatures get -2/-2 until end of turn.",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Sideboard/Asymmetric sweeper",
+      "board": "sideboard"
+    },
+    {
+      "name": "Negate",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "Counter target noncreature spell.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Sideboard/Stack",
+      "board": "sideboard"
+    },
+    {
+      "name": "Negate",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "Counter target noncreature spell.",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Sideboard/Stack",
+      "board": "sideboard"
+    },
+    {
+      "name": "Liliana of the Veil",
+      "cmc": 3,
+      "type_line": "Legendary Planeswalker — Liliana",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "oracle_text": "+1: Each player discards a card.\n−2: Target player sacrifices a creature.\n−6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Discard",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Discard",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Sideboard/Non-targeted removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Aether Channeler",
+      "cmc": 3,
+      "type_line": "Creature — Human Wizard",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_text": "When this creature enters, choose one —\n• Create a 1/1 white Bird creature token with flying.\n• Return another target nonland permanent to its owner's hand.\n• Draw a card.",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tokens",
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Bounce",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Bounce",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "role": "Sideboard/Permanent-answer",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "Both win conditions read the same variable. Blight Pile: *\"{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.\"* Coral Colony: *\"{1}{U}, {T}: Target player mills X cards, where X is the number of creatures you control with defender.\"* X is the deck.",
+  "strategy_es": "control UB de defensores con molienda y drenaje",
+  "identity_es": "Un control Dimir cuyo tablero es su reloj. Doce criaturas con Defensor muran el suelo mientras dos medios leen ese mismo número como X: el '{2}{B}, {T}: Each opponent loses X life' de Blight Pile y el '{1}{U}, {T}: Target player mills X cards' de Coral Colony. Ninguno necesita atacar, así que el mazo nunca tiene que ganar un paso de combate que está construido para rechazar. Walking Bulwark es el tercer eje: otorga prisa a un defensor y le deja atacar asignando daño igual a su RESISTENCIA, convirtiendo muros de 4 y 5 de resistencia en un golpe alfa letal cuando la aritmética del drenaje se queda un turno corta.",
+  "pitch_es": "Ambas condiciones de victoria leen la misma variable. Blight Pile: *\"{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.\"* Coral Colony: *\"{1}{U}, {T}: Target player mills X cards, where X is the number of creatures you control with defender.\"* X es el mazo."
+}

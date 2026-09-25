@@ -1,0 +1,1062 @@
+{
+  "deck_name": "wu-tap-trigger-convoke",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-11T04:13:03Z",
+  "format": "40-card",
+  "strategy": "W/U Merfolk convoke tap-trigger tempo",
+  "colors": "WU",
+  "identity": "A W/U Merfolk tempo deck that treats convoke's cost as its engine rather than its price. Convoke reads 'Each creature you tap while casting this spell pays for {1} or one mana of that creature's color', and 7 of this deck's 17 creature cards read 'Whenever this creature becomes tapped' — so paying for a spell also loots (Silvergill Peddler), manufactures a flying Faerie (Pestered Wellguard), strips 3 power off a blocker (Wanderwine Distracter), or removes a -1/-1 counter from a 5/4 body (Encumbered Reejerey). The tension is real and stated: a creature that attacked stays tapped through the opponent's turn, so the deck does NOT convert its attacking board on their turn — the instant-speed window belongs to the 2 vigilance creatures, whatever Deepchannel Duelist untapped at end step, and a flashed Deepway Navigator. The primary convoke window is my own main phases, and Meanders Guide's attack trigger ('you may tap another untapped Merfolk you control') is the one free tap-event that costs no card and no combat step.",
+  "restrictions": {
+    "base": "cube_mainboard only — every card verified by exact name against the working pool",
+    "commons_uncommons_max_2": "PASS — no common or uncommon exceeds 2 copies",
+    "rares_mythics_max_1_each": "PASS — all 5 rare cards are singletons",
+    "rares_mythics_max_5_total": "PASS — exactly 5/5: Deepway Navigator, Disruptor of Currents, Harmonized Crescendo (mainboard) + Champions of the Shoal, Sygg's Command (sideboard). Zero mythics used.",
+    "basics_unlimited": "PASS — Plains x5, Island x8 are format-supplied and exempt",
+    "colour_legality": "PASS — every nonland card usable in W/U via effective_cost.best_mode; zero off-identity modes needed",
+    "splash": "PASS — splash_colors empty; zero off-core nonland cards"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.09,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.453,
+      "raw_target": 17.453,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 3.09,
+    "pip_demand": {
+      "U": 15,
+      "W": 9
+    },
+    "land_color_production": {
+      "U": 10,
+      "W": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 62.5,
+        "prod_pct": 58.8,
+        "gap": 3.7,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 37.5,
+        "prod_pct": 41.2,
+        "gap": -3.7,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Springleaf Drum",
+      "oracle_text": "{T}, Tap an untapped creature you control: Add one mana of any color.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Mana Rock",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Rock",
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Ramp + fixing + free tap-trigger"
+    },
+    {
+      "name": "Silvergill Mentor",
+      "oracle_text": "As an additional cost to cast this spell, behold a Merfolk or pay {2}. (To behold a Merfolk, choose a Merfolk you control or reveal a Merfolk card from your hand.)\nWhen this creature enters, create a 1/1 white and blue Merfolk creature token.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Wizard",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Two bodies for two mana"
+    },
+    {
+      "name": "Encumbered Reejerey",
+      "oracle_text": "This creature enters with three -1/-1 counters on it.\nWhenever this creature becomes tapped while it has a -1/-1 counter on it, remove a -1/-1 counter from it.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Enabler/Fodder",
+        "Counter Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "uncommon",
+      "power": "5",
+      "toughness": "4",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Grows 2/1 to 5/4 by being tapped"
+    },
+    {
+      "name": "Deepchannel Duelist",
+      "oracle_text": "At the beginning of your end step, untap target Merfolk you control.\nOther Merfolk you control get +1/+1.",
+      "mana_cost": "{W}{U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Pump",
+        "Untap"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Pump",
+          "Untap"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Merfolk lord + end-step untap"
+    },
+    {
+      "name": "Deepway Navigator",
+      "oracle_text": "Flash\nWhen this creature enters, untap each other Merfolk you control.\nAs long as you attacked with three or more Merfolk this turn, Merfolk you control get +1/+0.",
+      "mana_cost": "{W}{U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Untap",
+        "Pump"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Untap",
+          "Pump"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Wizard",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Flash mass-untap; anthem on a wide attack"
+    },
+    {
+      "name": "Meanders Guide",
+      "oracle_text": "Whenever this creature attacks, you may tap another untapped Merfolk you control. When you do, return target creature card with mana value 3 or less from your graveyard to the battlefield.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Reanimator",
+        "Graveyard",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Reanimation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Reanimator",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Reanimation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Merfolk Scout",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Free tap-event on attack + MV<=3 recursion"
+    },
+    {
+      "name": "Silvergill Peddler",
+      "oracle_text": "Whenever this creature becomes tapped, draw a card, then discard a card.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Looting"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Merfolk Citizen",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "Loot on every tap"
+    },
+    {
+      "name": "Thirst for Identity",
+      "oracle_text": "Draw three cards. Then discard two cards unless you discard a creature card.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Looting",
+        "Cards: Extra-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Looting"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 1,
+      "role": "Net +2 draw; discount fed by 17/23 creatures"
+    },
+    {
+      "name": "Protective Response",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target attacking or blocking creature.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Convoke instant removal"
+    },
+    {
+      "name": "Pestered Wellguard",
+      "oracle_text": "Whenever this creature becomes tapped, create a 1/1 blue and black Faerie creature token with flying.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "A flying Faerie each time it taps"
+    },
+    {
+      "name": "Wanderwine Distracter",
+      "oracle_text": "Whenever this creature becomes tapped, target creature an opponent controls gets -3/-0 until end of turn.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Debuff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Debuff"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Merfolk Wizard",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "3",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "4/3; -3/-0 to a creature each time it taps"
+    },
+    {
+      "name": "Merrow Skyswimmer",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying, vigilance\nWhen this creature enters, create a 1/1 white and blue Merfolk creature token.",
+      "mana_cost": "{3}{W/U}{W/U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Convoke flier + token; vigilance"
+    },
+    {
+      "name": "Disruptor of Currents",
+      "oracle_text": "Flash\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nWhen this creature enters, return up to one other target nonland permanent to its owner's hand.",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Bounce"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Merfolk Wizard",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Flash convoke body; bounces any nonland permanent"
+    },
+    {
+      "name": "Harmonized Crescendo",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nChoose a creature type. Draw a card for each permanent you control of that type.",
+      "mana_cost": "{4}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Card Draw",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 6,
+      "type_line": "Instant",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Convoke refuel off the Merfolk board"
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "WU dual, enters tapped"
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Fetch",
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Fetches a basic tapped"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 99,
+      "qty": 5,
+      "role": "Basic"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "max_copies": 99,
+      "qty": 8,
+      "role": "Basic"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Pyrrhic Strike",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 2. (You may put two -1/-1 counters on a creature you control.)\nChoose one. If this spell's additional cost was paid, choose both instead.\n• Destroy target artifact or enchantment.\n• Destroy target creature with mana value 3 or greater.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Artifact/enchantment/MV3+ creature removal",
+      "when_to_board": "vs the cube's 11 artifacts + 21 enchantments, or a large single threat"
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Graveyard hate on a 3/3 changeling flier",
+      "when_to_board": "vs the cube's 39-card graveyard theme, its largest at 15% density"
+    },
+    {
+      "name": "Crib Swap",
+      "oracle_text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Unconditional exile; a Merfolk card via changeling",
+      "when_to_board": "vs recursive or indestructible threats the maindeck cannot answer"
+    },
+    {
+      "name": "Spell Snare",
+      "oracle_text": "Counter target spell with mana value 2.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 2,
+      "qty": 2,
+      "role": "Counters MV-2 spells",
+      "when_to_board": "vs decks whose key plays cost two; MV2 is the pool's largest bucket at 72/260"
+    },
+    {
+      "name": "Champions of the Shoal",
+      "oracle_text": "As an additional cost to cast this spell, behold a Merfolk and exile it. (Exile a Merfolk you control or a Merfolk card from your hand.)\nWhenever this creature enters or becomes tapped, tap up to one target creature and put a stun counter on it.\nWhen this creature leaves the battlefield, return the exiled card to its owner's hand.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Tap Down",
+        "Cards: Extra-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Tap Down"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Creature — Merfolk Soldier",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "6",
+      "board": "sideboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Repeatable tapper/stunner on a 4/6",
+      "when_to_board": "vs a single large ground threat; its behold-exile cost is worth paying deliberately"
+    },
+    {
+      "name": "Sygg's Command",
+      "oracle_text": "Choose two —\n• Create a token that's a copy of target Merfolk you control.\n• Creatures target player controls gain lifelink until end of turn.\n• Target player draws a card.\n• Tap target creature. Put a stun counter on it.",
+      "mana_cost": "{1}{W}{U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Card Draw",
+        "Tap/Stun"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Tokens",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Card Draw",
+          "Tap/Stun"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Kindred Sorcery — Merfolk",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "max_copies": 1,
+      "qty": 1,
+      "role": "Copies a Merfolk + a tempo or draw mode",
+      "when_to_board": "vs grindy decks where a second copy of a tap-trigger body wins the long game"
+    }
+  ],
+  "pitch": "A W/U Merfolk tempo deck that treats convoke's cost as its engine rather than its price. Convoke reads 'Each creature you tap while casting this spell pays for {1} or one mana of that creature's color', and 7 of this deck's 17 creature cards read 'Whenever this creature becomes tapped' — so paying for a spell also loots (Silvergill Peddler), manufactures a flying Faerie (Pestered Wellguard), strips 3 power off a blocker (Wanderwine Distracter), or removes a -1/-1 counter from a 5/4 body (Encumbered Reejerey). The tension is real and stated: a creature that attacked stays tapped through the opponent's turn, so the deck does NOT convert its attacking board on their turn — the instant-speed window belongs to the 2 vigilance creatures, whatever Deepchannel Duelist untapped at end step, and a flashed Deepway Navigator. The primary convoke window is my own main phases, and Meanders Guide's attack trigger ('you may tap another untapped Merfolk you control') is the one free tap-event that costs no card and no combat step.",
+  "strategy_es": "tempo de Tritones W/U con convoke y disparos por giro",
+  "identity_es": "Un tempo de Tritones W/U que trata el coste del convoke como su motor en lugar de como su precio. El convoke dice 'Each creature you tap while casting this spell pays for {1} or one mana of that creature's color', y 7 de las 17 cartas de criatura de este mazo dicen 'Whenever this creature becomes tapped', así que pagar un hechizo además descarta y roba (Silvergill Peddler), fabrica un Hada voladora (Pestered Wellguard), quita 3 de fuerza a un bloqueador (Wanderwine Distracter), o retira un contador -1/-1 de un cuerpo 5/4 (Encumbered Reejerey). La tensión es real y se enuncia: una criatura que atacó sigue girada durante el turno del rival, así que el mazo NO convierte su tablero atacante en el turno de ellos; la ventana a velocidad de instantáneo pertenece a las 2 criaturas con vigilancia, a lo que Deepchannel Duelist haya desgirado en el paso final, y a un Deepway Navigator entrado con flash. La ventana principal de convoke son mis propias fases principales, y el disparo de ataque de Meanders Guide ('you may tap another untapped Merfolk you control') es el único evento de giro gratuito que no cuesta carta ni paso de combate.",
+  "pitch_es": "Un tempo de Tritones W/U que trata el coste del convoke como su motor en lugar de como su precio. El convoke dice 'Each creature you tap while casting this spell pays for {1} or one mana of that creature's color', y 7 de las 17 cartas de criatura de este mazo dicen 'Whenever this creature becomes tapped', así que pagar un hechizo además descarta y roba (Silvergill Peddler), fabrica un Hada voladora (Pestered Wellguard), quita 3 de fuerza a un bloqueador (Wanderwine Distracter), o retira un contador -1/-1 de un cuerpo 5/4 (Encumbered Reejerey). La tensión es real y se enuncia: una criatura que atacó sigue girada durante el turno del rival, así que el mazo NO convierte su tablero atacante en el turno de ellos; la ventana a velocidad de instantáneo pertenece a las 2 criaturas con vigilancia, a lo que Deepchannel Duelist haya desgirado en el paso final, y a un Deepway Navigator entrado con flash. La ventana principal de convoke son mis propias fases principales, y el disparo de ataque de Meanders Guide ('you may tap another untapped Merfolk you control') es el único evento de giro gratuito que no cuesta carta ni paso de combate."
+}

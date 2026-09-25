@@ -1,0 +1,1140 @@
+{
+  "deck_name": "rw-argosy-vehicles-tempo",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T14:00:58Z",
+  "format": "40-card",
+  "strategy": "tempo",
+  "colors": "RW",
+  "identity": "RW Vehicles Tempo. The kill is a small number of artifact threats the pool's removal is badly shaped to answer, funded by a repeatable enter-the-battlefield engine. Golden Argosy attacks as a 3/6 and 'exile[s] each creature that crewed it this turn. Return them to the battlefield tapped' - so the crew must be REAL cards with re-triggerable ETBs, never tokens, because an exiled token ceases to exist. Argivian Cavalier, Resolute Reinforcements and Automatic Librarian are that crew: each pays crew 1 by itself and re-fires its ETB every attack, minting a Soldier or a scry 2 per turn for free. Samite Herbalist is the fourth crew slot and works on a different axis - 'Whenever this creature becomes tapped, you gain 1 life and scry 1' triggers on CREWING, so it pays off both Vehicles and every attack without needing the 1-of Argosy at all. Weatherlight Compleated is a {2} 5/5 flier that Astor's 'Vehicles you control have crew 1' switches on - it prints no crew ability of its own - and while uncrewed and below four phyresis counters it is not a creature, so the cube's sorcery-speed removal cannot touch it. Serra Paragon rebuys the crew fuel from the graveyard. Danitha, Benalia's Hope closes, arriving pre-equipped off her own ETB.",
+  "restrictions": {
+    "base": "cube_mainboard - every card verified present in working_pool.json by exact name",
+    "commons_uncommons_max_2": "PASS - no common or uncommon exceeds 2 copies across main+side (Destroy Evil 1+1, Take Up the Shield 1+1, Hurloon Battle Hymn 1+1, all at the cap)",
+    "rares_mythics_max_1": "PASS - all five are single copies",
+    "rare_mythic_card_cap_5": "PASS - exactly 5, all mainboard: Astor, Bearer of Blades / Danitha, Benalia's Hope / Golden Argosy / Serra Paragon / Weatherlight Compleated. Sideboard contains ZERO rares or mythics.",
+    "basics": "Plains x10, Mountain x4 - format-supplied, exempt",
+    "colour": "All 23 nonland cards return a usable mode from effective_cost.best_mode(card, ['R','W'], []); no splash"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.61,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.147,
+      "raw_target": 17.147,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.61,
+    "pip_demand": {
+      "W": 15,
+      "R": 4
+    },
+    "land_color_production": {
+      "W": 13,
+      "R": 7,
+      "U": 1,
+      "B": 1,
+      "G": 1
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 21.1,
+        "prod_pct": 41.2,
+        "gap": -20.1,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 78.9,
+        "prod_pct": 76.5,
+        "gap": 2.4,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Vanquisher's Axe",
+      "oracle_text": "Equipped creature gets +2/+0.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Voltron/Equipment",
+        "Artifacts",
+        "Payload/Payoff",
+        "Equipment Buff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Equipment Buff"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact — Equipment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine/Infrastructure - +2/+0 for {1}; Danitha's ETB target and Astor's equip-{1} payoff"
+    },
+    {
+      "name": "Hero's Heirloom",
+      "oracle_text": "Equipped creature gets +2/+1.\nAs long as equipped creature is legendary, it has trample and haste.\nEquip {2}",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Voltron/Equipment",
+        "Artifacts",
+        "Legendary Matters",
+        "Payload/Payoff",
+        "Equipment Buff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment",
+          "Artifacts",
+          "Legendary Matters"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Equipment Buff"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact — Equipment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine/Infrastructure - +2/+1. CORRECTED per Challenger F7: the legendary trample/haste rider is live on 4 LEGENDARY PERMANENTS, not 2 - Astor and Danitha are legendary creatures, and Golden Argosy and Weatherlight Compleated are both 'Legendary Artifact - Vehicle', which are legal Equipment targets once crewed. Hero's Heirloom on a crewed Golden Argosy is a 5/7 with trample, on a body whose entire job is connecting to fire its attack trigger; on a crewed Weatherlight Compleated it is a 7/6 flying trample. The pre-repair record said '4 of the 8 creature cards' and 'Astor and Danitha only' in the same sentence, and the correct creature-card denominator is 7, not 8."
+    },
+    {
+      "name": "Weatherlight Compleated",
+      "oracle_text": "Flying\nAs long as Weatherlight Compleated has four or more phyresis counters on it, it's a Phyrexian creature in addition to its other types.\nWhenever a creature you control dies, put a phyresis counter on Weatherlight Compleated. Then draw a card if it has seven or more phyresis counters on it. If it doesn't, scry 1.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Historic",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Card Draw",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)",
+          "Artifacts",
+          "Historic"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Legendary Artifact — Vehicle",
+      "rarity": "mythic",
+      "power": "5",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payload/Payoff - {2} 5/5 flier switched on by Astor's granted crew 1. Uncrewed AND below four phyresis counters it is not a creature and cannot be targeted by creature removal - a PHASE, not a permanent state: the fourth counter flips it into a creature permanently and turns removal back on."
+    },
+    {
+      "name": "Resolute Reinforcements",
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler - crew fuel #2; flash, and one card is two bodies per ETB"
+    },
+    {
+      "name": "Lightning Strike",
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction - 3 damage to any target; also reach"
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction - enchantment removal or kills a toughness-4-or-greater creature; the only mainboard enchantment answer"
+    },
+    {
+      "name": "Take Up the Shield",
+      "oracle_text": "Put a +1/+1 counter on target creature. It gains lifelink and indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction/Protection - MAINDECKED in Phase 9 as the fix for the disruption-fizzle finding. 'It gains lifelink and indestructible until end of turn' is the real answer to a removal spell cast in response to the Argosy attack trigger, and it is live against the 9 'destroy target' effects in the 271-card pool."
+    },
+    {
+      "name": "Samite Herbalist",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life and scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Enabler - crew fuel #4, on a different axis from the other three. 'Whenever this creature becomes tapped, you gain 1 life and scry 1' triggers on CREWING and on attacking, so unlike an ETB-based fuel card it pays off both Vehicles and needs no Argosy at all. Added in Phase 9 on the Challenger's absence finding."
+    },
+    {
+      "name": "Argivian Cavalier",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Enlist Matters",
+        "Tokens",
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Enlist Matters",
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Orc Knight",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler - crew fuel #1; pays crew 1 alone and remakes a 1/1 Soldier on every Argosy return. Its enlist is DEAD in the crewing line (a creature that crewed and was exiled is not an attacker) and no enlist role is claimed anywhere."
+    },
+    {
+      "name": "Automatic Librarian",
+      "oracle_text": "When this creature enters, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler - crew fuel #3; a colourless 3/2 whose 'scry 2' re-fires every Argosy attack. Selection, not card advantage."
+    },
+    {
+      "name": "Citizen's Arrest",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction - unconditional exile of any creature or planeswalker; also the best Serra Paragon rebuy in the list at MV 3"
+    },
+    {
+      "name": "Hurloon Battle Hymn",
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nHurloon Battle Hymn deals 4 damage to target creature or planeswalker. If this spell was kicked, you gain 4 life.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage",
+          "Lifegain",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction - 4 damage to a creature/planeswalker; kicked {W} gains 4 life"
+    },
+    {
+      "name": "Astor, Bearer of Blades",
+      "oracle_text": "When Astor enters, look at the top seven cards of your library. You may reveal an Equipment or Vehicle card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.\nEquipment you control have equip {1}.\nVehicles you control have crew 1.",
+      "mana_cost": "{2}{R}{W}",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Voltron/Equipment",
+        "Artifacts",
+        "Historic",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cost Reduction"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment",
+          "Artifacts",
+          "Historic"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Cost Reduction"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Warrior",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine - grants Weatherlight the crew ability it does not print, reduces equip to {1}, and digs 7 for the package (6 physical targets). The deck's only red permanent."
+    },
+    {
+      "name": "Golden Argosy",
+      "oracle_text": "Whenever Golden Argosy attacks, exile each creature that crewed it this turn. Return them to the battlefield tapped under their owner's control at the beginning of the next end step.\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Blink/ETB",
+        "Artifacts",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Blink"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Blink"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Artifact — Vehicle",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payload/Payoff + Engine - 3/6 attacker whose attack trigger re-fires the ETB of whatever crewed it, every turn. NEVER crew it with a token: 'exile each creature that crewed it this turn' removes a token permanently. Crewable at instant speed, so it also blocks as a 3/6."
+    },
+    {
+      "name": "Serra Paragon",
+      "oracle_text": "Flying\nOnce during each of your turns, you may play a land from your graveyard or cast a permanent spell with mana value 3 or less from your graveyard. If you do, it gains \"When this permanent is put into a graveyard from the battlefield, exile it and you gain 2 life.\"",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Graveyard",
+        "Lands-Matter",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Recursion",
+        "Life Gain",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Lands-Matter",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Recursion",
+          "Life Gain"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "rarity": "mythic",
+      "power": "3",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payload/Payoff + Engine - 3/4 flier; 'cast a permanent spell with mana value 3 or less from your graveyard' once per turn. This is ONE cast per turn at full mana cost, restricted to MV<=3 permanents and lands - NOT a second draw step. Legal targets: 8 of the 15 distinct nonland cards (Vanquisher's Axe, Hero's Heirloom, Weatherlight Compleated, Resolute Reinforcements, Take Up the Shield is an instant so NO - corrected list: Vanquisher's Axe, Hero's Heirloom, Weatherlight Compleated, Resolute Reinforcements, Samite Herbalist, Argivian Cavalier, Automatic Librarian, Citizen's Arrest) plus all 17 lands."
+    },
+    {
+      "name": "Danitha, Benalia's Hope",
+      "oracle_text": "First strike, vigilance, lifelink\nWhen Danitha enters, you may put an Aura or Equipment card from your hand or graveyard onto the battlefield attached to Danitha.",
+      "mana_cost": "{4}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Voltron/Equipment",
+        "Lifegain",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Reanimation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Reanimation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Legendary Creature — Human Knight",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payload/Payoff - 4/4 first strike / vigilance / lifelink that arrives already carrying an Equipment from hand OR graveyard (4 Equipment copies in the list)"
+    },
+    {
+      "name": "Sacred Peaks",
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "land"
+    },
+    {
+      "name": "Crystal Grotto",
+      "oracle_text": "When this land enters, scry 1.\n{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing",
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "land"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 10,
+      "role": "land"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 4,
+      "role": "land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Smash to Dust",
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target creature with defender.\n• Smash to Dust deals 1 damage to each creature your opponents control.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "SB - artifact removal; mode 3 is a one-sided 1-damage sweeper"
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Interaction - enchantment removal or kills a toughness-4-or-greater creature; the only mainboard enchantment answer"
+    },
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "SB - flash exile of any nonland permanent, +2 life"
+    },
+    {
+      "name": "Take Up the Shield",
+      "oracle_text": "Put a +1/+1 counter on target creature. It gains lifelink and indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Interaction/Protection - MAINDECKED in Phase 9 as the fix for the disruption-fizzle finding. 'It gains lifelink and indestructible until end of turn' is the real answer to a removal spell cast in response to the Argosy attack trigger, and it is live against the 9 'destroy target' effects in the 271-card pool."
+    },
+    {
+      "name": "Flowstone Infusion",
+      "oracle_text": "Target creature gets +2/-2 until end of turn.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "SB - {R} instant, 'Target creature gets +2/-2 until end of turn'. Swapped in for Jaya's Firenado per Challenger F8: a 1-mana instant answer to the cube's largest threat class (evasion, 51 cards / 20.6%, heavily x/1 and x/2 fliers) beats a 5-mana sorcery in a deck whose contested turn is 4."
+    },
+    {
+      "name": "Knight of Dawn's Light",
+      "oracle_text": "First strike\nIf you would gain life, you gain that much life plus 1 instead.\n{1}{W}: This creature gets +1/+1 until end of turn.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "SB - 2-drop 2/2 first strike blocker; 'you gain that much life plus 1 instead' amplifies Samite Herbalist, Hurloon's kicker, Danitha's lifelink, Prayer of Binding and Take Up the Shield's granted lifelink"
+    },
+    {
+      "name": "Hurloon Battle Hymn",
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nHurloon Battle Hymn deals 4 damage to target creature or planeswalker. If this spell was kicked, you gain 4 life.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage",
+          "Lifegain",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Interaction - 4 damage to a creature/planeswalker; kicked {W} gains 4 life"
+    }
+  ],
+  "pitch": "RW Vehicles Tempo. The kill is a small number of artifact threats the pool's removal is badly shaped to answer, funded by a repeatable enter-the-battlefield engine. Golden Argosy attacks as a 3/6 and 'exile[s] each creature that crewed it this turn. Return them to the battlefield tapped' - so the crew must be REAL cards with re-triggerable ETBs, never tokens, because an exiled token ceases to exist. Argivian Cavalier, Resolute Reinforcements and Automatic Librarian are that crew: each pays crew 1 by itself and re-fires its ETB every attack, minting a Soldier or a scry 2 per turn for free. Samite Herbalist is the fourth crew slot and works on a different axis - 'Whenever this creature becomes tapped, you gain 1 life and scry 1' triggers on CREWING, so it pays off both Vehicles and every attack without needing the 1-of Argosy at all. Weatherlight Compleated is a {2} 5/5 flier that Astor's 'Vehicles you control have crew 1' switches on - it prints no crew ability of its own - and while uncrewed and below four phyresis counters it is not a creature, so the cube's sorcery-speed removal cannot touch it. Serra Paragon rebuys the crew fuel from the graveyard. Danitha, Benalia's Hope closes, arriving pre-equipped off her own ETB.",
+  "strategy_es": "tempo",
+  "identity_es": "Tempo de Vehículos RW. La victoria es un número pequeño de amenazas de artefacto a las que la eliminación del pool está mal preparada para responder, financiadas por un motor repetible de entradas al campo de batalla. Golden Argosy ataca como un 3/6 y 'exile[s] each creature that crewed it this turn. Return them to the battlefield tapped', así que la tripulación deben ser cartas REALES con entradas redisparables, nunca fichas, porque una ficha exiliada deja de existir. Argivian Cavalier, Resolute Reinforcements y Automatic Librarian son esa tripulación: cada una paga tripular 1 por sí sola y vuelve a disparar su entrada en cada ataque, acuñando un Soldado o un scry 2 por turno gratis. Samite Herbalist es el cuarto hueco de tripulación y funciona en otro eje: 'Whenever this creature becomes tapped, you gain 1 life and scry 1' se dispara al TRIPULAR, así que paga tanto con los Vehículos como con cada ataque sin necesitar la Argosy de copia única. Weatherlight Compleated es un volador 5/5 por {2} que el 'Vehicles you control have crew 1' de Astor activa — no imprime habilidad de tripular propia — y mientras no esté tripulada y por debajo de cuatro contadores de phyresis no es una criatura, así que la eliminación a velocidad de conjuro del cubo no puede tocarla. Serra Paragon recompra el combustible de tripulación desde el cementerio. Danitha, Benalia's Hope cierra, llegando ya equipada gracias a su propia entrada.",
+  "pitch_es": "Tempo de Vehículos RW. La victoria es un número pequeño de amenazas de artefacto a las que la eliminación del pool está mal preparada para responder, financiadas por un motor repetible de entradas al campo de batalla. Golden Argosy ataca como un 3/6 y 'exile[s] each creature that crewed it this turn. Return them to the battlefield tapped', así que la tripulación deben ser cartas REALES con entradas redisparables, nunca fichas, porque una ficha exiliada deja de existir. Argivian Cavalier, Resolute Reinforcements y Automatic Librarian son esa tripulación: cada una paga tripular 1 por sí sola y vuelve a disparar su entrada en cada ataque, acuñando un Soldado o un scry 2 por turno gratis. Samite Herbalist es el cuarto hueco de tripulación y funciona en otro eje: 'Whenever this creature becomes tapped, you gain 1 life and scry 1' se dispara al TRIPULAR, así que paga tanto con los Vehículos como con cada ataque sin necesitar la Argosy de copia única. Weatherlight Compleated es un volador 5/5 por {2} que el 'Vehicles you control have crew 1' de Astor activa — no imprime habilidad de tripular propia — y mientras no esté tripulada y por debajo de cuatro contadores de phyresis no es una criatura, así que la eliminación a velocidad de conjuro del cubo no puede tocarla. Serra Paragon recompra el combustible de tripulación desde el cementerio. Danitha, Benalia's Hope cierra, llegando ya equipada gracias a su propia entrada."
+}

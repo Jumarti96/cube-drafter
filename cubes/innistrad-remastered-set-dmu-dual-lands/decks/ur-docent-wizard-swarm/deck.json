@@ -1,0 +1,1138 @@
+{
+  "deck_name": "ur-docent-wizard-swarm",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-26T00:26:46Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "UR",
+  "identity": "A UR spell-count token swarm. Cheap instants and sorceries are the ammunition, not the support: Docent of Perfection makes a 1/1 Wizard for every one of them and flips into a lord that gives Wizards +2/+1 and flying, Festival Crasher grows with each cast, Seize the Storm reads the same spells once they reach the graveyard, and Delver of Secrets flips off them on top of the library. Seven Human Wizard bodies -- Delver, Reckless Scholar, Deranged Assistant and a Metallic Mimic naming Wizard -- let Docent reach its three-Wizard transform without spending a single spell on it, and the Mimic makes every Wizard token enter as a 2/2. Fourteen of the 25 nonland cards are instants or sorceries (56%), and that one number drives every payoff in the list. Honest framing: with three cards at five mana this is the slow end of aggro -- aggro with a midrange top-end -- not the 'most explosive' build its lens name suggests. And in the roughly 65% of games that do not draw the single legal Docent, the deck is a Delver/Festival Crasher clock with Seize the Storm on top rather than a token swarm.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "max 5 rares+mythics total across mainboard and sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 15,
+    "recommended_land_count": 15,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 5,
+    "accel_count": 7,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.12,
+      "reference_avg_mv": 2.5,
+      "accel": 7,
+      "adjustment": -1.673,
+      "raw_target": 15.327,
+      "clamped": false,
+      "recommended_land_count": 15,
+      "p_window_at_recommended": 0.7763
+    },
+    "avg_cmc": 2.12,
+    "pip_demand": {
+      "U": 12,
+      "R": 13
+    },
+    "land_color_production": {
+      "U": 9,
+      "R": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 52,
+        "prod_pct": 60,
+        "gap": -8,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 48,
+        "prod_pct": 60,
+        "gap": -12,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Delver of Secrets // Insectile Aberration",
+      "oracle_text": "At the beginning of your upkeep, look at the top card of your library. You may reveal that card. If an instant or sorcery card is revealed this way, transform this creature.\n//\nFlying",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Standalone Threat",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Human Wizard",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "threat",
+      "set": "inr",
+      "collector_number": "60",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/6/9/6904ea20-e504-47da-95a0-08739fdde260.jpg?1736467707"
+    },
+    {
+      "name": "Festival Crasher",
+      "oracle_text": "Whenever you cast an instant or sorcery spell, this creature gets +2/+0 until end of turn.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Devil",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "threat",
+      "set": "inr",
+      "collector_number": "153",
+      "image_url": "https://cards.scryfall.io/normal/front/d/8/d8d050c1-ae0c-46c1-8aa7-7cde4606105b.jpg?1736468136",
+      "image_back_url": null
+    },
+    {
+      "name": "Seize the Storm",
+      "oracle_text": "Create a red Elemental creature token with trample and \"This token's power and toughness are each equal to the number of instant and sorcery cards in your graveyard plus the number of cards with flashback you own in exile.\"\nFlashback {6}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Tokens",
+        "Payload/Payoff",
+        "Token Generation",
+        "Flashback"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Flashback/GY-Cast",
+          "Graveyard",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Flashback"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "threat",
+      "set": "inr",
+      "collector_number": "170",
+      "image_url": "https://cards.scryfall.io/normal/front/4/5/45ec2af6-8397-429f-900f-846a5056f8e0.jpg?1737775512",
+      "image_back_url": null
+    },
+    {
+      "name": "Docent of Perfection // Final Iteration",
+      "oracle_text": "Flying\nWhenever you cast an instant or sorcery spell, create a 1/1 blue Human Wizard creature token. Then if you control three or more Wizards, transform this creature.\n//\nFlying\nWizards you control get +2/+1 and have flying.\nWhenever you cast an instant or sorcery spell, create a 1/1 blue Human Wizard creature token.",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Tokens",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Insect Horror",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "threat",
+      "set": "inr",
+      "collector_number": "62",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/9/6/96658239-3169-42ef-9983-cd4da24e0f4c.jpg?1736467721"
+    },
+    {
+      "name": "Hanweir Garrison",
+      "oracle_text": "Whenever this creature attacks, create two 1/1 red Human creature tokens that are tapped and attacking.\n(Melds with Hanweir Battlements.)",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Tokens",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "threat",
+      "set": "inr",
+      "collector_number": "157",
+      "image_url": "https://cards.scryfall.io/normal/front/1/8/1811b4fa-fed6-46ea-a6de-bb7624a5b1de.jpg?1777874484",
+      "image_back_url": null
+    },
+    {
+      "name": "Metallic Mimic",
+      "oracle_text": "As this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nEach other creature you control of the chosen type enters with an additional +1/+1 counter on it.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Counters (+1/+1)",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact Creature — Shapeshifter",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "wizard-body",
+      "set": "inr",
+      "collector_number": "268",
+      "image_url": "https://cards.scryfall.io/normal/front/9/a/9ad98263-9fe6-4766-a9fb-4776e570c250.jpg?1736468634",
+      "image_back_url": null
+    },
+    {
+      "name": "Reckless Scholar",
+      "oracle_text": "{T}: Target player draws a card, then discards a card.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Graveyard",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Looting"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Wizard",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "wizard-body",
+      "set": "inr",
+      "collector_number": "81",
+      "image_url": "https://cards.scryfall.io/normal/front/c/e/ceb85311-a7f7-44d5-9caa-50a24fd6d00a.jpg?1736467803",
+      "image_back_url": null
+    },
+    {
+      "name": "Deranged Assistant",
+      "oracle_text": "{T}, Mill a card: Add {C}. (To mill a card, put the top card of your library into your graveyard.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Mana Dork"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Self-Mill",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Mana Dork",
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Wizard",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "wizard-body",
+      "set": "inr",
+      "collector_number": "61",
+      "image_url": "https://cards.scryfall.io/normal/front/3/9/3960ed42-b3e7-4464-b345-1b9b22719efc.jpg?1736467714",
+      "image_back_url": null
+    },
+    {
+      "name": "Faithless Looting",
+      "oracle_text": "Draw two cards, then discard two cards.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Looting",
+        "Flashback"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Flashback/GY-Cast"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Looting",
+          "Flashback"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "engine",
+      "set": "soc",
+      "collector_number": "244",
+      "image_url": "https://cards.scryfall.io/normal/front/f/c/fc019ffa-4461-4f3d-ab8d-e4d20e77ca0c.jpg?1775941293",
+      "image_back_url": null
+    },
+    {
+      "name": "Ancestral Anger",
+      "oracle_text": "Target creature gains trample and gets +X/+0 until end of turn, where X is 1 plus the number of cards named Ancestral Anger in your graveyard.\nDraw a card.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Graveyard",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Combat Trick",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "engine",
+      "set": "sos",
+      "collector_number": "106",
+      "image_url": "https://cards.scryfall.io/normal/front/6/c/6c5a93d6-d4ab-4062-bb3c-1b5330bf15ad.jpg?1775937666",
+      "image_back_url": null
+    },
+    {
+      "name": "Think Twice",
+      "oracle_text": "Draw a card.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Flashback/GY-Cast"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Flashback"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "engine",
+      "set": "tdc",
+      "collector_number": "168",
+      "image_url": "https://cards.scryfall.io/normal/front/c/e/ce79538b-20a4-42f8-934f-bc4e2723133e.jpg?1743206417",
+      "image_back_url": null
+    },
+    {
+      "name": "Silent Departure",
+      "oracle_text": "Return target creature to its owner's hand.\nFlashback {4}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Flashback/GY-Cast",
+        "Interaction/Disruption",
+        "Bounce",
+        "Flashback"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Flashback/GY-Cast"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Flashback"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "engine",
+      "set": "inr",
+      "collector_number": "84",
+      "image_url": "https://cards.scryfall.io/normal/front/4/d/4d1552e7-20b2-42b0-af47-6618ab163115.jpg?1736467818",
+      "image_back_url": null
+    },
+    {
+      "name": "Galvanic Iteration",
+      "oracle_text": "When you next cast an instant or sorcery spell this turn, copy that spell. You may choose new targets for the copy.\nFlashback {1}{U}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{U}{R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Flashback/GY-Cast",
+        "Storm",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Copy Spell",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Spellslinger"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Flashback/GY-Cast",
+          "Storm"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Copy Spell",
+          "Flashback"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "engine",
+      "set": "inr",
+      "collector_number": "236",
+      "image_url": "https://cards.scryfall.io/normal/front/7/2/72531705-82f4-4254-82b2-c0b6098f4dbe.jpg?1736468499",
+      "image_back_url": null
+    },
+    {
+      "name": "Lightning Axe",
+      "oracle_text": "As an additional cost to cast this spell, discard a card or pay {5}.\nLightning Axe deals 5 damage to target creature.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cards: Extra-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "interaction",
+      "set": "inr",
+      "collector_number": "162",
+      "image_url": "https://cards.scryfall.io/normal/front/9/0/90911c79-24c3-4566-b72c-02ccde083f1b.jpg?1736473361",
+      "image_back_url": null
+    },
+    {
+      "name": "Abrade",
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "interaction",
+      "set": "soc",
+      "collector_number": "234",
+      "image_url": "https://cards.scryfall.io/normal/front/1/a/1add1757-c1f8-448a-b279-c6940fb7ad5f.jpg?1775941207",
+      "image_back_url": null
+    },
+    {
+      "name": "Stormcarved Coast",
+      "oracle_text": "This land enters tapped unless you control two or more other lands.\n{T}: Add {U} or {R}.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "land",
+      "set": "sos",
+      "collector_number": "263",
+      "image_url": "https://cards.scryfall.io/normal/front/b/d/bd3ae4fa-4c97-410a-8c0a-bd203342595d.jpg?1775938837",
+      "image_back_url": null
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "land",
+      "set": "soc",
+      "collector_number": "387",
+      "image_url": "https://cards.scryfall.io/normal/front/9/c/9c6d0f64-b8e1-41bc-ab86-bd6783daf72a.jpg?1775942297",
+      "image_back_url": null
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 6,
+      "role": "land",
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 6,
+      "role": "land",
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Savage Alliance",
+      "oracle_text": "Escalate {1} (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Creatures target player controls gain trample until end of turn.\n• Savage Alliance deals 2 damage to target creature.\n• Savage Alliance deals 1 damage to each creature target opponent controls.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "interaction",
+      "when_to_board": "vs go-wide token boards",
+      "set": "inr",
+      "collector_number": "169",
+      "image_url": "https://cards.scryfall.io/normal/front/5/4/54bebcf4-7697-4b2d-9160-243cd447c1d4.jpg?1736468208",
+      "image_back_url": null
+    },
+    {
+      "name": "Compelling Deterrence",
+      "oracle_text": "Return target nonland permanent to its owner's hand. Then that player discards a card if you control a Zombie.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Bounce",
+        "Discard"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Discard"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "interaction",
+      "when_to_board": "vs resolved enchantments (9% of cube)",
+      "set": "inr",
+      "collector_number": "57",
+      "image_url": "https://cards.scryfall.io/normal/front/6/2/62ffc952-b763-4b9e-acdf-164253bdfe72.jpg?1736467685",
+      "image_back_url": null
+    },
+    {
+      "name": "Imprisoned in the Moon",
+      "oracle_text": "Enchant creature, land, or planeswalker\nEnchanted permanent is a colorless land with \"{T}: Add {C}\" and loses all other card types and abilities.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "interaction",
+      "when_to_board": "vs planeswalkers and untouchable creatures",
+      "set": "inr",
+      "collector_number": "69",
+      "image_url": "https://cards.scryfall.io/normal/front/0/d/0d150547-09f5-45ce-a825-89944b066bd4.jpg?1737936193",
+      "image_back_url": null
+    },
+    {
+      "name": "Fiery Temper",
+      "oracle_text": "Fiery Temper deals 3 damage to any target.\nMadness {R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{1}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Madness"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Madness"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "interaction",
+      "when_to_board": "vs low-toughness aggro; reach to the face",
+      "set": "inr",
+      "collector_number": "154",
+      "image_url": "https://cards.scryfall.io/normal/front/1/d/1d3a3a1d-c393-4a57-8a0e-5907d1722331.jpg?1736468138",
+      "image_back_url": null
+    },
+    {
+      "name": "Syncopate",
+      "oracle_text": "Counter target spell unless its controller pays {X}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+      "mana_cost": "{X}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "interaction",
+      "when_to_board": "vs combo/big-mana; protects the Docent turn",
+      "set": "fin",
+      "collector_number": "80",
+      "image_url": "https://cards.scryfall.io/normal/front/8/3/83e1cd8d-5b97-427a-be75-2a1947f9c59b.jpg?1748706062",
+      "image_back_url": null
+    }
+  ],
+  "pitch": "A UR spell-count token swarm. Cheap instants and sorceries are the ammunition, not the support: Docent of Perfection makes a 1/1 Wizard for every one of them and flips into a lord that gives Wizards +2/+1 and flying, Festival Crasher grows with each cast, Seize the Storm reads the same spells once they reach the graveyard, and Delver of Secrets flips off them on top of the library. Seven Human Wizard bodies -- Delver, Reckless Scholar, Deranged Assistant and a Metallic Mimic naming Wizard -- let Docent reach its three-Wizard transform without spending a single spell on it, and the Mimic makes every Wizard token enter as a 2/2. Fourteen of the 25 nonland cards are instants or sorceries (56%), and that one number drives every payoff in the list. Honest framing: with three cards at five mana this is the slow end of aggro -- aggro with a midrange top-end -- not the 'most explosive' build its lens name suggests. And in the roughly 65% of games that do not draw the single legal Docent, the deck is a Delver/Festival Crasher clock with Seize the Storm on top rather than a token swarm.",
+  "strategy_es": "agro",
+  "identity_es": "Un enjambre de fichas UR por cuenta de hechizos. Los instantáneos y conjuros baratos son la munición, no el apoyo: Docent of Perfection crea un Mago 1/1 por cada uno de ellos y se transforma en un señor que da a los Magos +2/+1 y volar, Festival Crasher crece con cada lanzamiento, Seize the Storm lee esos mismos hechizos una vez llegan al cementerio, y Delver of Secrets se transforma con ellos desde lo alto de la biblioteca. Siete cuerpos de Mago Humano — Delver, Reckless Scholar, Deranged Assistant y un Metallic Mimic nombrando Mago — permiten a Docent alcanzar su transformación de tres Magos sin gastar un solo hechizo en ello, y el Mimic hace que cada ficha de Mago entre como un 2/2. Catorce de las 25 cartas no-tierra son instantáneos o conjuros (56%), y ese único número mueve todas las recompensas de la lista. Encuadre honesto: con tres cartas a cinco manás este es el extremo lento del agro — agro con gama alta de midrange — y no la construcción 'más explosiva' que sugiere el nombre de su lente. Y en aproximadamente el 65% de partidas en que no se roba la única Docent legal, el mazo es un reloj de Delver/Festival Crasher con Seize the Storm encima en lugar de un enjambre de fichas.",
+  "pitch_es": "Un enjambre de fichas UR por cuenta de hechizos. Los instantáneos y conjuros baratos son la munición, no el apoyo: Docent of Perfection crea un Mago 1/1 por cada uno de ellos y se transforma en un señor que da a los Magos +2/+1 y volar, Festival Crasher crece con cada lanzamiento, Seize the Storm lee esos mismos hechizos una vez llegan al cementerio, y Delver of Secrets se transforma con ellos desde lo alto de la biblioteca. Siete cuerpos de Mago Humano — Delver, Reckless Scholar, Deranged Assistant y un Metallic Mimic nombrando Mago — permiten a Docent alcanzar su transformación de tres Magos sin gastar un solo hechizo en ello, y el Mimic hace que cada ficha de Mago entre como un 2/2. Catorce de las 25 cartas no-tierra son instantáneos o conjuros (56%), y ese único número mueve todas las recompensas de la lista. Encuadre honesto: con tres cartas a cinco manás este es el extremo lento del agro — agro con gama alta de midrange — y no la construcción 'más explosiva' que sugiere el nombre de su lente. Y en aproximadamente el 65% de partidas en que no se roba la única Docent legal, el mazo es un reloj de Delver/Festival Crasher con Seize the Storm encima en lugar de un enjambre de fichas."
+}

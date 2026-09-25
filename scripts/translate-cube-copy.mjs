@@ -112,11 +112,19 @@ export function extractCubeEn(cube) {
       const data = JSON.parse(fs.readFileSync(dj, 'utf8'))
       const analysisPath = path.join(decksDir, name, 'analysis.md')
       const analysis = fs.existsSync(analysisPath) ? fs.readFileSync(analysisPath, 'utf8') : ''
+      const identity = data.identity || ''
+      const pitch = (data.pitch || '').trim() || extractPitch(analysis)
+
+      // Most decks repeat their identity verbatim as the analysis pitch. Emit it
+      // once so it is translated once; applyTranslations copies identity_es back
+      // into pitch_es for these.
+      const pitchRepeatsIdentity = Boolean(pitch) && pitch === identity.trim()
       out.decks.push({
         slug: name,
         strategy: data.strategy || '',
-        identity: data.identity || '',
-        pitch: extractPitch(analysis),
+        identity,
+        pitch: pitchRepeatsIdentity ? '' : pitch,
+        ...(pitchRepeatsIdentity ? { pitch_same_as_identity: true } : {}),
       })
     }
   }
@@ -179,7 +187,17 @@ export function applyTranslations(cube, translations) {
     const tr = deckBySlug[name] || {}
     if (tr.strategy_es) data.strategy_es = tr.strategy_es
     if (tr.identity_es) data.identity_es = tr.identity_es
-    if (tr.pitch_es) data.pitch_es = tr.pitch_es
+
+    if (tr.pitch_es) {
+      data.pitch_es = tr.pitch_es
+    } else if (
+      tr.identity_es
+      && (data.pitch || '').trim()
+      && (data.pitch || '').trim() === (data.identity || '').trim()
+    ) {
+      // Extraction left the pitch out because it repeats the identity verbatim.
+      data.pitch_es = tr.identity_es
+    }
     fs.writeFileSync(dj, `${JSON.stringify(data, null, 2)}\n`)
   }
 }
@@ -196,35 +214,75 @@ const mode = process.argv[2] || ''
 const isMain = process.argv[1]
   && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url))
 
+const I18N_DIR = 'scripts/i18n-source'
+
+// A cube can hold 120 decks; one file per cube is far too large to translate in
+// a single pass, so decks are split into chunks that each fit comfortably.
+const DECKS_PER_CHUNK = Number(process.env.I18N_CHUNK_SIZE) || 15
+
+const CHUNK_PATTERN = /\.decks-chunk-\d+\.en\.json$/
+
+export function writeExtraction(cube, out) {
+  fs.mkdirSync(I18N_DIR, { recursive: true })
+  const written = []
+
+  // Drop stale chunks first: a smaller deck count must not leave orphans behind.
+  for (const f of fs.readdirSync(I18N_DIR)) {
+    if (f.startsWith(`${cube}.`) && CHUNK_PATTERN.test(f)) {
+      fs.unlinkSync(path.join(I18N_DIR, f))
+    }
+  }
+
+  const archPath = path.join(I18N_DIR, `${cube}.archetypes.en.json`)
+  fs.writeFileSync(archPath, `${JSON.stringify({ cube, archetypes: out.archetypes }, null, 2)}\n`)
+  written.push(archPath)
+
+  for (let i = 0; i < out.decks.length; i += DECKS_PER_CHUNK) {
+    const n = Math.floor(i / DECKS_PER_CHUNK) + 1
+    const p = path.join(I18N_DIR, `${cube}.decks-chunk-${n}.en.json`)
+    const body = { cube, chunk: n, decks: out.decks.slice(i, i + DECKS_PER_CHUNK) }
+    fs.writeFileSync(p, `${JSON.stringify(body, null, 2)}\n`)
+    written.push(p)
+  }
+  return written
+}
+
+/** Merge every `<cube>.*.es.json` into a single translation bundle. */
+export function loadTranslations(cube) {
+  if (!fs.existsSync(I18N_DIR)) return null
+  const merged = { archetypes: [], decks: [] }
+  let found = false
+
+  for (const f of fs.readdirSync(I18N_DIR).sort()) {
+    if (!f.startsWith(`${cube}.`) || !f.endsWith('.es.json')) continue
+    const raw = fs.readFileSync(path.join(I18N_DIR, f), 'utf8')
+    const data = JSON.parse(raw.charCodeAt(0) === 0xFEFF ? raw.slice(1) : raw)
+    merged.archetypes.push(...(data.archetypes || []))
+    merged.decks.push(...(data.decks || []))
+    found = true
+  }
+  return found ? merged : null
+}
+
 if (isMain && mode === 'extract') {
-  fs.mkdirSync('scripts/i18n-source', { recursive: true })
   const only = process.argv[3]
   const targets = only ? [only] : CUBES
   for (const cube of targets) {
     const out = extractCubeEn(cube)
-    fs.writeFileSync(
-      path.join('scripts/i18n-source', `${cube}.en.json`),
-      `${JSON.stringify(out, null, 2)}\n`,
-    )
-    console.log(cube, 'archetypes', out.archetypes.length, 'decks', out.decks.length)
+    const files = writeExtraction(cube, out)
+    console.log(`${cube}: ${out.archetypes.length} archetypes, ${out.decks.length} decks -> ${files.length} file(s)`)
   }
 } else if (isMain && mode === 'apply') {
   const only = process.argv[3]
   const targets = only ? [only] : CUBES
   for (const cube of targets) {
-    const trPath = path.join('scripts/i18n-source', `${cube}.es.json`)
-    if (!fs.existsSync(trPath)) {
-      console.warn('missing', trPath)
+    const translations = loadTranslations(cube)
+    if (!translations) {
+      console.warn(`missing ${I18N_DIR}/${cube}.*.es.json`)
       continue
     }
-    const translations = JSON.parse(
-      (() => {
-        const raw = fs.readFileSync(trPath, 'utf8')
-        return raw.charCodeAt(0) === 0xFEFF ? raw.slice(1) : raw
-      })(),
-    )
     applyTranslations(cube, translations)
-    console.log('applied', cube)
+    console.log(`applied ${cube}: ${translations.archetypes.length} archetypes, ${translations.decks.length} decks`)
   }
 } else if (isMain && mode === 'list') {
   for (const cube of CUBES) console.log(cube)

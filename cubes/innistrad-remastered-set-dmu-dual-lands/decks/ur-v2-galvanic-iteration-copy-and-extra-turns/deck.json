@@ -1,0 +1,1400 @@
+{
+  "deck_name": "ur-v2-galvanic-iteration-copy-and-extra-turns",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-31T03:50:44Z",
+  "format": "40-card",
+  "strategy": "combo",
+  "colors": "UR",
+  "identity": "A UR deck built around one clause: Galvanic Iteration's 'When you next cast an instant or sorcery spell this turn, copy that spell'. The realistic kill is Seize the Storm - a 5-mana sorcery whose trampler is as big as the graveyard the deck has been filling, doubled either by Galvanic Iteration or by Cackling Counterpart x2, which copies the resolved TOKEN and inherits its characteristic-defining size. Temporal Mastery is the ceiling, and the honest reading of it is the {5}{U}{U} hard cast on turn 8-9, not the miracle line: combining 'Miracle {1}{U} ... if it's the first card you drew this turn' with Galvanic Iteration's 'when you NEXT cast ... this turn' requires casting Iteration in the upkeep, blind, before the draw is known. Delver of Secrets x2 is in the deck precisely because its 'look at the top card of your library' at upkeep is the only effect in the colour-usable pool that turns that blind commitment into an informed one.",
+  "restrictions": {
+    "Commons/uncommons capped at 2 copies": "PASS - Seize the Storm C, Cackling Counterpart U, Faithless Looting C, Think Twice C, Forbidden Alchemy C, Lightning Axe U, Abrade U, Syncopate C, Silent Departure C, Molten Tributary C; sideboard Imprisoned in the Moon C, Nebelgast Herald U, Savage Alliance U, Compelling Deterrence U.",
+    "Rares/mythics capped at 1 copy": "PASS - Galvanic Iteration, Temporal Mastery (mythic), Memory Deluge, Stormcarved Coast (mainboard); Overcharged Amalgam (sideboard).",
+    "At most 5 rare/mythic cards across mainboard + sideboard": "PASS - 5 used, 0 unspent. Verified by Phase 5C check 6.",
+    "Basic lands format-supplied and exempt": "PASS - 10 Island, 4 Mountain.",
+    "Forbidden Alchemy prints as U/B color identity because of its {6}{B} flashback. It is played on its base cast only ({2}{U}), which effective_cost.best_mode confirms is usable in [U,R]; the flashback is treated as unavailable throughout. Here that is an asset - it is the one dig spell that can never exile itself, so it is always a Mystic Retrieval target and always a card in the graveyard.": "PASS - Forbidden Alchemy prints as U/B color identity because of its {6}{B} flashback. It is played on its base cast only ({2}{U}), which effective_cost.best_mode confirms is usable in [U,R]; the flashback is treated as unavailable throughout. Here that is an asset - it is the one dig spell that can never exile itself, so it is always a Mystic Retrieval target and always a card in the graveyard.",
+    "Colour usability": "PASS - Forbidden Alchemy prints as U/B because of its {6}{B} flashback and is played on its base {2}{U} cast, which effective_cost.best_mode confirms is usable in [U,R]; the flashback is treated as unavailable throughout, which is why those two copies are excluded from Seize the Storm's flashback-exile count. NOTE: the Phase 8 bundle projects usable_as as null on every row, so a grill agent cannot re-verify this from the bundle alone; it is verifiable from mana_cost, and Phase 5C check 4 runs best_mode directly."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 1,
+    "cantrip_count": 4,
+    "accel_count": 5,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.57,
+      "reference_avg_mv": 2.5,
+      "accel": 5,
+      "adjustment": -0.74,
+      "raw_target": 16.26,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.57,
+    "pip_demand": {
+      "U": 19,
+      "R": 9
+    },
+    "land_color_production": {
+      "U": 13,
+      "R": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 32.1,
+        "prod_pct": 41.2,
+        "gap": -9.1,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 67.9,
+        "prod_pct": 76.5,
+        "gap": -8.6,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Galvanic Iteration",
+      "oracle_text": "When you next cast an instant or sorcery spell this turn, copy that spell. You may choose new targets for the copy.\nFlashback {1}{U}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{U}{R}",
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Spellslinger",
+        "Flashback/GY-Cast",
+        "Storm",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Copy Spell",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "inr",
+      "collector_number": "236",
+      "image_url": "https://cards.scryfall.io/normal/front/7/2/72531705-82f4-4254-82b2-c0b6098f4dbe.jpg?1736468499",
+      "image_back_url": null,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Temporal Mastery",
+      "oracle_text": "Take an extra turn after this one. Exile Temporal Mastery.\nMiracle {1}{U} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)",
+      "mana_cost": "{5}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 7,
+      "type_line": "Sorcery",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Payload/Payoff",
+        "Extra Turn"
+      ],
+      "set": "inr",
+      "collector_number": "90",
+      "image_url": "https://cards.scryfall.io/normal/front/0/f/0f46a800-b443-461d-87e0-5587249a42d8.jpg?1736467847",
+      "image_back_url": null,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Seize the Storm",
+      "oracle_text": "Create a red Elemental creature token with trample and \"This token's power and toughness are each equal to the number of instant and sorcery cards in your graveyard plus the number of cards with flashback you own in exile.\"\nFlashback {6}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Spellslinger",
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Tokens",
+        "Payload/Payoff",
+        "Token Generation",
+        "Flashback"
+      ],
+      "set": "inr",
+      "collector_number": "170",
+      "image_url": "https://cards.scryfall.io/normal/front/4/5/45ec2af6-8397-429f-900f-846a5056f8e0.jpg?1737775512",
+      "image_back_url": null,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Seize the Storm",
+      "oracle_text": "Create a red Elemental creature token with trample and \"This token's power and toughness are each equal to the number of instant and sorcery cards in your graveyard plus the number of cards with flashback you own in exile.\"\nFlashback {6}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Spellslinger",
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Tokens",
+        "Payload/Payoff",
+        "Token Generation",
+        "Flashback"
+      ],
+      "set": "inr",
+      "collector_number": "170",
+      "image_url": "https://cards.scryfall.io/normal/front/4/5/45ec2af6-8397-429f-900f-846a5056f8e0.jpg?1737775512",
+      "image_back_url": null,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cackling Counterpart",
+      "oracle_text": "Create a token that's a copy of target creature you control.\nFlashback {5}{U}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback"
+      ],
+      "set": "inr",
+      "collector_number": "55",
+      "image_url": "https://cards.scryfall.io/normal/front/a/8/a865fdc5-955a-4c4a-90c0-342c15fd7bbc.jpg?1736467672",
+      "image_back_url": null,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cackling Counterpart",
+      "oracle_text": "Create a token that's a copy of target creature you control.\nFlashback {5}{U}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback"
+      ],
+      "set": "inr",
+      "collector_number": "55",
+      "image_url": "https://cards.scryfall.io/normal/front/a/8/a865fdc5-955a-4c4a-90c0-342c15fd7bbc.jpg?1736467672",
+      "image_back_url": null,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Memory Deluge",
+      "oracle_text": "Look at the top X cards of your library, where X is the amount of mana spent to cast this spell. Put two of them into your hand and the rest on the bottom of your library in a random order.\nFlashback {5}{U}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Card Draw",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "inr",
+      "collector_number": "75",
+      "image_url": "https://cards.scryfall.io/normal/front/e/d/edcd3802-ddb3-4eb6-9b6e-a26d76557662.jpg?1736467777",
+      "image_back_url": null,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mystic Retrieval",
+      "oracle_text": "Return target instant or sorcery card from your graveyard to your hand.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Spellslinger",
+        "Infrastructure/Consistency",
+        "Regrowth",
+        "Flashback",
+        "Cards: Self-Replacing"
+      ],
+      "set": "inr",
+      "collector_number": "77",
+      "image_url": "https://cards.scryfall.io/normal/front/8/0/806e5536-103b-4d6c-83b4-8659a55b25b5.jpg?1736467785",
+      "image_back_url": null,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Faithless Looting",
+      "oracle_text": "Draw two cards, then discard two cards.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Looting",
+        "Flashback"
+      ],
+      "set": "soc",
+      "collector_number": "244",
+      "image_url": "https://cards.scryfall.io/normal/front/f/c/fc019ffa-4461-4f3d-ab8d-e4d20e77ca0c.jpg?1775941293",
+      "image_back_url": null,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Faithless Looting",
+      "oracle_text": "Draw two cards, then discard two cards.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Looting",
+        "Flashback"
+      ],
+      "set": "soc",
+      "collector_number": "244",
+      "image_url": "https://cards.scryfall.io/normal/front/f/c/fc019ffa-4461-4f3d-ab8d-e4d20e77ca0c.jpg?1775941293",
+      "image_back_url": null,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Think Twice",
+      "oracle_text": "Draw a card.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "tdc",
+      "collector_number": "168",
+      "image_url": "https://cards.scryfall.io/normal/front/c/e/ce79538b-20a4-42f8-934f-bc4e2723133e.jpg?1743206417",
+      "image_back_url": null,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Think Twice",
+      "oracle_text": "Draw a card.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "tdc",
+      "collector_number": "168",
+      "image_url": "https://cards.scryfall.io/normal/front/c/e/ce79538b-20a4-42f8-934f-bc4e2723133e.jpg?1743206417",
+      "image_back_url": null,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forbidden Alchemy",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest into your graveyard.\nFlashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Flashback/GY-Cast",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Card Selection",
+        "Flashback",
+        "Cards: Self-Replacing"
+      ],
+      "set": "tdc",
+      "collector_number": "152",
+      "image_url": "https://cards.scryfall.io/normal/front/0/4/04def7e3-10e4-4733-8c19-8fa6e4469086.jpg?1743206318",
+      "image_back_url": null,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forbidden Alchemy",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest into your graveyard.\nFlashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Flashback/GY-Cast",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Card Selection",
+        "Flashback",
+        "Cards: Self-Replacing"
+      ],
+      "set": "tdc",
+      "collector_number": "152",
+      "image_url": "https://cards.scryfall.io/normal/front/0/4/04def7e3-10e4-4733-8c19-8fa6e4469086.jpg?1743206318",
+      "image_back_url": null,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Deranged Assistant",
+      "oracle_text": "{T}, Mill a card: Add {C}. (To mill a card, put the top card of your library into your graveyard.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Wizard",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Mana Dork"
+      ],
+      "set": "inr",
+      "collector_number": "61",
+      "image_url": "https://cards.scryfall.io/normal/front/3/9/3960ed42-b3e7-4464-b345-1b9b22719efc.jpg?1736467714",
+      "image_back_url": null,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Delver of Secrets // Insectile Aberration",
+      "oracle_text": "At the beginning of your upkeep, look at the top card of your library. You may reveal that card. If an instant or sorcery card is revealed this way, transform this creature.\n//\nFlying",
+      "mana_cost": "{U}",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Wizard",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Spellslinger",
+        "Standalone Threat",
+        "Card Selection"
+      ],
+      "set": "inr",
+      "collector_number": "60",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/6/9/6904ea20-e504-47da-95a0-08739fdde260.jpg?1736467707",
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Delver of Secrets // Insectile Aberration",
+      "oracle_text": "At the beginning of your upkeep, look at the top card of your library. You may reveal that card. If an instant or sorcery card is revealed this way, transform this creature.\n//\nFlying",
+      "mana_cost": "{U}",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Wizard",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Spellslinger",
+        "Standalone Threat",
+        "Card Selection"
+      ],
+      "set": "inr",
+      "collector_number": "60",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/6/9/6904ea20-e504-47da-95a0-08739fdde260.jpg?1736467707",
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Biolume Egg // Biolume Serpent",
+      "oracle_text": "Defender\nWhen this creature enters, scry 2.\nWhen you sacrifice this creature, return it to the battlefield transformed under its owner's control at the beginning of the next end step.\n//\nSacrifice two Islands: This creature can't be blocked this turn.",
+      "mana_cost": "{2}{U}",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Serpent Egg",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "4",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Standalone Threat",
+        "Card Selection"
+      ],
+      "set": "inr",
+      "collector_number": "54",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/0/0/009c8a91-8c73-4e3f-9955-45344ae07832.jpg?1736467665",
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Axe",
+      "oracle_text": "As an additional cost to cast this spell, discard a card or pay {5}.\nLightning Axe deals 5 damage to target creature.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cards: Extra-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "162",
+      "image_url": "https://cards.scryfall.io/normal/front/9/0/90911c79-24c3-4566-b72c-02ccde083f1b.jpg?1736473361",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightning Axe",
+      "oracle_text": "As an additional cost to cast this spell, discard a card or pay {5}.\nLightning Axe deals 5 damage to target creature.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cards: Extra-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "162",
+      "image_url": "https://cards.scryfall.io/normal/front/9/0/90911c79-24c3-4566-b72c-02ccde083f1b.jpg?1736473361",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Abrade",
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "set": "soc",
+      "collector_number": "234",
+      "image_url": "https://cards.scryfall.io/normal/front/1/a/1add1757-c1f8-448a-b279-c6940fb7ad5f.jpg?1775941207",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Abrade",
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "set": "soc",
+      "collector_number": "234",
+      "image_url": "https://cards.scryfall.io/normal/front/1/a/1add1757-c1f8-448a-b279-c6940fb7ad5f.jpg?1775941207",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Syncopate",
+      "oracle_text": "Counter target spell unless its controller pays {X}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+      "mana_cost": "{X}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "set": "fin",
+      "collector_number": "80",
+      "image_url": "https://cards.scryfall.io/normal/front/8/3/83e1cd8d-5b97-427a-be75-2a1947f9c59b.jpg?1748706062",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "soc",
+      "collector_number": "387",
+      "image_url": "https://cards.scryfall.io/normal/front/9/c/9c6d0f64-b8e1-41bc-ab86-bd6783daf72a.jpg?1775942297",
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Molten Tributary",
+      "oracle_text": "({T}: Add {U} or {R}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Island Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "soc",
+      "collector_number": "387",
+      "image_url": "https://cards.scryfall.io/normal/front/9/c/9c6d0f64-b8e1-41bc-ab86-bd6783daf72a.jpg?1775942297",
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Stormcarved Coast",
+      "oracle_text": "This land enters tapped unless you control two or more other lands.\n{T}: Add {U} or {R}.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "sos",
+      "collector_number": "263",
+      "image_url": "https://cards.scryfall.io/normal/front/b/d/bd3ae4fa-4c97-410a-8c0a-bd203342595d.jpg?1775938837",
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Imprisoned in the Moon",
+      "oracle_text": "Enchant creature, land, or planeswalker\nEnchanted permanent is a colorless land with \"{T}: Add {C}\" and loses all other card types and abilities.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "69",
+      "image_url": "https://cards.scryfall.io/normal/front/0/d/0d150547-09f5-45ce-a825-89944b066bd4.jpg?1737936193",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "sideboard"
+    },
+    {
+      "name": "Imprisoned in the Moon",
+      "oracle_text": "Enchant creature, land, or planeswalker\nEnchanted permanent is a colorless land with \"{T}: Add {C}\" and loses all other card types and abilities.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "69",
+      "image_url": "https://cards.scryfall.io/normal/front/0/d/0d150547-09f5-45ce-a825-89944b066bd4.jpg?1737936193",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "sideboard"
+    },
+    {
+      "name": "Nebelgast Herald",
+      "oracle_text": "Flash\nFlying\nWhenever this creature or another Spirit you control enters, tap target creature an opponent controls.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Spirit",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Tapper"
+      ],
+      "set": "inr",
+      "collector_number": "78",
+      "image_url": "https://cards.scryfall.io/normal/front/5/1/51173564-cd0e-410f-82fc-3d071e6f4d17.jpg?1736467790",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "sideboard"
+    },
+    {
+      "name": "Nebelgast Herald",
+      "oracle_text": "Flash\nFlying\nWhenever this creature or another Spirit you control enters, tap target creature an opponent controls.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Spirit",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Tapper"
+      ],
+      "set": "inr",
+      "collector_number": "78",
+      "image_url": "https://cards.scryfall.io/normal/front/5/1/51173564-cd0e-410f-82fc-3d071e6f4d17.jpg?1736467790",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "sideboard"
+    },
+    {
+      "name": "Savage Alliance",
+      "oracle_text": "Escalate {1} (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Creatures target player controls gain trample until end of turn.\n• Savage Alliance deals 2 damage to target creature.\n• Savage Alliance deals 1 damage to each creature target opponent controls.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Combat Trick"
+      ],
+      "set": "inr",
+      "collector_number": "169",
+      "image_url": "https://cards.scryfall.io/normal/front/5/4/54bebcf4-7697-4b2d-9160-243cd447c1d4.jpg?1736468208",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "sideboard"
+    },
+    {
+      "name": "Savage Alliance",
+      "oracle_text": "Escalate {1} (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Creatures target player controls gain trample until end of turn.\n• Savage Alliance deals 2 damage to target creature.\n• Savage Alliance deals 1 damage to each creature target opponent controls.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Combat Trick"
+      ],
+      "set": "inr",
+      "collector_number": "169",
+      "image_url": "https://cards.scryfall.io/normal/front/5/4/54bebcf4-7697-4b2d-9160-243cd447c1d4.jpg?1736468208",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "sideboard"
+    },
+    {
+      "name": "Compelling Deterrence",
+      "oracle_text": "Return target nonland permanent to its owner's hand. Then that player discards a card if you control a Zombie.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Bounce",
+        "Discard"
+      ],
+      "set": "inr",
+      "collector_number": "57",
+      "image_url": "https://cards.scryfall.io/normal/front/6/2/62ffc952-b763-4b9e-acdf-164253bdfe72.jpg?1736467685",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "sideboard"
+    },
+    {
+      "name": "Compelling Deterrence",
+      "oracle_text": "Return target nonland permanent to its owner's hand. Then that player discards a card if you control a Zombie.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Bounce",
+        "Discard"
+      ],
+      "set": "inr",
+      "collector_number": "57",
+      "image_url": "https://cards.scryfall.io/normal/front/6/2/62ffc952-b763-4b9e-acdf-164253bdfe72.jpg?1736467685",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "sideboard"
+    },
+    {
+      "name": "Summary Dismissal",
+      "oracle_text": "Exile all other spells and counter all abilities.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "set": "inr",
+      "collector_number": "88",
+      "image_url": "https://cards.scryfall.io/normal/front/9/1/91b51351-d4ea-4bf8-aa43-29e71cd01819.jpg?1736467839",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "sideboard"
+    },
+    {
+      "name": "Overcharged Amalgam",
+      "oracle_text": "Flash\nFlying\nExploit (When this creature enters, you may sacrifice a creature.)\nWhen this creature exploits a creature, counter target spell, activated ability, or triggered ability.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Zombie Horror",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "80",
+      "image_url": "https://cards.scryfall.io/normal/front/2/f/2fae9b40-a1ee-425d-bbf6-fa4b0861cdc4.jpg?1736467799",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "A UR deck built around one clause: Galvanic Iteration's 'When you next cast an instant or sorcery spell this turn, copy that spell'. The realistic kill is Seize the Storm - a 5-mana sorcery whose trampler is as big as the graveyard the deck has been filling, doubled either by Galvanic Iteration or by Cackling Counterpart x2, which copies the resolved TOKEN and inherits its characteristic-defining size. Temporal Mastery is the ceiling, and the honest reading of it is the {5}{U}{U} hard cast on turn 8-9, not the miracle line: combining 'Miracle {1}{U} ... if it's the first card you drew this turn' with Galvanic Iteration's 'when you NEXT cast ... this turn' requires casting Iteration in the upkeep, blind, before the draw is known. Delver of Secrets x2 is in the deck precisely because its 'look at the top card of your library' at upkeep is the only effect in the colour-usable pool that turns that blind commitment into an informed one.",
+  "strategy_es": "combo",
+  "identity_es": "Un mazo UR construido alrededor de una cláusula: el 'When you next cast an instant or sorcery spell this turn, copy that spell' de Galvanic Iteration. La victoria realista es Seize the Storm — un conjuro de 5 manás cuyo arrollador es tan grande como el cementerio que el mazo lleva llenando — duplicado por Galvanic Iteration o por Cackling Counterpart x2, que copia la FICHA ya resuelta y hereda su tamaño definido por característica. Temporal Mastery es el techo, y su lectura honesta es el lanzamiento a coste normal de {5}{U}{U} en el turno 8-9, no la línea de milagro: combinar 'Miracle {1}{U} ... if it's the first card you drew this turn' con el 'when you NEXT cast ... this turn' de Galvanic Iteration exige lanzar la Iteration en el mantenimiento, a ciegas, antes de conocer el robo. Delver of Secrets x2 está en el mazo precisamente porque su 'look at the top card of your library' en el mantenimiento es el único efecto del pool utilizable en estos colores que convierte ese compromiso a ciegas en uno informado.",
+  "pitch_es": "Un mazo UR construido alrededor de una cláusula: el 'When you next cast an instant or sorcery spell this turn, copy that spell' de Galvanic Iteration. La victoria realista es Seize the Storm — un conjuro de 5 manás cuyo arrollador es tan grande como el cementerio que el mazo lleva llenando — duplicado por Galvanic Iteration o por Cackling Counterpart x2, que copia la FICHA ya resuelta y hereda su tamaño definido por característica. Temporal Mastery es el techo, y su lectura honesta es el lanzamiento a coste normal de {5}{U}{U} en el turno 8-9, no la línea de milagro: combinar 'Miracle {1}{U} ... if it's the first card you drew this turn' con el 'when you NEXT cast ... this turn' de Galvanic Iteration exige lanzar la Iteration en el mantenimiento, a ciegas, antes de conocer el robo. Delver of Secrets x2 está en el mazo precisamente porque su 'look at the top card of your library' en el mantenimiento es el único efecto del pool utilizable en estos colores que convierte ese compromiso a ciegas en uno informado."
+}

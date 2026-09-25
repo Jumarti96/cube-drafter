@@ -1,0 +1,641 @@
+{
+  "deck_name": "rg-silent-moon",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-26T19:00:00Z",
+  "format": "40-card",
+  "strategy": "Spell-light flip tempo (Silent Moon)",
+  "colors": "RG",
+  "identity": "A red-green Werewolf deck that commits to the transform clause instead of routing around it. Nineteen of its twenty-three nonland cards are Werewolf-typed - the highest flip density the pool allows - and there is not a single instant or sorcery in the mainboard, because casting a spell means no upkeep transform for the thirteen cards that carry the clause. Deploy on turns one to three, then go quiet: the upkeep flips 2/1s into 4/2 tramplers, Village Messenger into a menace threat, and Kruin Outlaw into Terror of Kruin Pass, which has double strike and hands menace to all nineteen Werewolves. Six more Werewolves ignore the clause entirely and transform themselves for mana - Conduit of Storms into a 5/4, Shrill Howler into a 3/5 token engine, Smoldering Werewolf into a 6/4 that pings 2 on every attack. Silent turns still spend mana, because everything the deck does after turn three is an activated ability rather than a spell.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "deck_construction_constraint": "Maximum 5 rare+mythic cards total across mainboard and sideboard.",
+    "basics": "unlimited, format-supplied"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 4,
+    "cantrip_count": 0,
+    "accel_count": 4,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.52,
+      "reference_avg_mv": 2.5,
+      "accel": 4,
+      "adjustment": -0.64,
+      "raw_target": 16.36,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.52,
+    "pip_demand": {
+      "R": 14,
+      "G": 12
+    },
+    "land_color_production": {
+      "R": 11,
+      "G": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 46.2,
+        "prod_pct": 52.9,
+        "gap": -6.7,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 53.8,
+        "prod_pct": 64.7,
+        "gap": -10.9,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Village Messenger // Moonrise Intruder",
+      "oracle_text": "Haste\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nMenace (This creature can't be blocked except by two or more creatures.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Werewolf",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Werewolf Matters",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Neglected Heirloom // Ashmouth Blade",
+      "oracle_text": "Equipped creature gets +1/+1.\nWhen equipped creature transforms, transform this Equipment.\nEquip {1}\n//\nEquipped creature gets +3/+3 and has first strike.\nEquip {3}",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1,
+      "type_line": "Artifact — Equipment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Payload/Payoff"
+      ],
+      "qty": 2,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Duskwatch Recruiter // Krallenhorde Howler",
+      "oracle_text": "{2}{G}: Look at the top three cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nCreature spells you cast cost {1} less to cast.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Warrior Werewolf",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Werewolf Matters",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cost Reduction"
+      ],
+      "qty": 2,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hinterland Logger // Timber Shredder",
+      "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nTrample\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Werewolf",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Scorned Villager // Moonscarred Werewolf",
+      "oracle_text": "{T}: Add {G}.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nVigilance\n{T}: Add {G}{G}.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Werewolf",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Werewolf Matters",
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "qty": 2,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mayor of Avabruck // Howlpack Alpha",
+      "oracle_text": "Other Human creatures you control get +1/+1.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nEach other creature you control that's a Werewolf or a Wolf gets +1/+1.\nAt the beginning of your end step, create a 2/2 green Wolf creature token.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Advisor Werewolf",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Kruin Outlaw // Terror of Kruin Pass",
+      "oracle_text": "First strike\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nDouble strike\nWerewolves you control have menace. (A creature with menace can't be blocked except by two or more creatures.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{1}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Rogue Werewolf",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Werewolf Matters",
+        "Standalone Threat",
+        "Payload/Payoff"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Geier Reach Bandit // Vildin-Pack Alpha",
+      "oracle_text": "Haste\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nWhenever a Werewolf you control enters, you may transform it.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Rogue Werewolf",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Conduit of Storms // Conduit of Emrakul",
+      "oracle_text": "Whenever this creature attacks, add {R} at the beginning of your next main phase this turn.\n{3}{R}{R}: Transform this creature.\n//\nWhenever this creature attacks, add {C}{C} at the beginning of your next main phase this turn.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Werewolf Horror",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Enabler/Fodder",
+        "Standalone Threat",
+        "Mana Ramp"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shrill Howler // Howling Chorus",
+      "oracle_text": "Creatures with power less than this creature's power can't block it.\n{5}{G}: Transform this creature.\n//\nCreatures with power less than this creature's power can't block it.\nWhenever this creature deals combat damage to a player, create a 3/2 colorless Eldrazi Horror creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Werewolf Horror",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Tokens",
+        "Standalone Threat",
+        "Engine/Outlet",
+        "Token Generation"
+      ],
+      "qty": 2,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Howlpack Resurgence",
+      "oracle_text": "Flash\nEach creature you control that's a Wolf or a Werewolf gets +1/+1 and has trample.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Team Buff"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Huntmaster of the Fells // Ravager of the Fells",
+      "oracle_text": "Whenever this creature enters or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.\n//\nTrample\nWhenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent or planeswalker and 2 damage to up to one target creature that player or that planeswalker's controller controls.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+      "mana_cost": "{2}{R}{G}",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Werewolf",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tokens",
+        "Lifegain",
+        "Werewolf Matters",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Life Drain",
+        "Direct Damage"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Arlinn Kord // Arlinn, Embraced by the Moon",
+      "oracle_text": "+1: Until end of turn, up to one target creature gets +2/+2 and gains vigilance and haste.\n0: Create a 2/2 green Wolf creature token. Transform Arlinn Kord.\n//\n+1: Creatures you control get +1/+1 and gain trample until end of turn.\n−1: Arlinn deals 3 damage to any target. Transform Arlinn.\n−6: You get an emblem with \"Creatures you control have haste and '{T}: This creature deals damage equal to its power to any target.'\"",
+      "mana_cost": "{2}{R}{G}",
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Planeswalker — Arlinn",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Werewolf Matters",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Token Generation",
+        "Pump Effect",
+        "Direct Damage"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Smoldering Werewolf // Erupting Dreadwolf",
+      "oracle_text": "When this creature enters, it deals 1 damage to each of up to two target creatures.\n{4}{R}{R}: Transform this creature.\n//\nWhenever this creature attacks, it deals 2 damage to any target.",
+      "mana_cost": "{2}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Werewolf Horror",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 8,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 6,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wooded Ridgeline",
+      "oracle_text": "({T}: Add {R} or {G}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Mountain Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rockfall Vale",
+      "oracle_text": "This land enters tapped unless you control two or more other lands.\n{T}: Add {R} or {G}.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 1,
+      "role": "land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Moonlight Hunt",
+      "oracle_text": "Choose target creature you don't control. Each creature you control that's a Wolf or a Werewolf deals damage equal to its power to that creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against decks that cast a spell every turn and therefore hold your team on its front face - the flip plan is already off, so the cost of casting spells is zero. Its damage is the whole Wolf/Werewolf board's power."
+    },
+    {
+      "name": "Savage Alliance",
+      "oracle_text": "Escalate {1} (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Creatures target player controls gain trample until end of turn.\n• Savage Alliance deals 2 damage to target creature.\n• Savage Alliance deals 1 damage to each creature target opponent controls.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against token and go-wide decks - 'deals 1 damage to each creature target opponent controls'. This is the mainboard's conceded wide_boards class, brought back for the matchup that needs it."
+    },
+    {
+      "name": "Abrade",
+      "oracle_text": "Choose one —\n• Abrade deals 3 damage to target creature.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against artifact decks - 24 artifacts in the cube and Abrade is the only card castable in R or G that answers one."
+    },
+    {
+      "name": "Lightning Axe",
+      "oracle_text": "As an additional cost to cast this spell, discard a card or pay {5}.\nLightning Axe deals 5 damage to target creature.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cards: Extra-Cost"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against toughness 4-5 blockers that stop the flipped board; 5 damage for {R} is the cheapest hard answer in the colours."
+    },
+    {
+      "name": "Clear Shot",
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "sideboard",
+      "when_to_board": "Against fliers and against a single blocker the ground board cannot pass. 'Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control' works off ONE body, unlike Moonlight Hunt, and reaches a flier, which nothing in the mainboard does."
+    }
+  ],
+  "pitch": "A red-green Werewolf deck that commits to the transform clause instead of routing around it. Nineteen of its twenty-three nonland cards are Werewolf-typed - the highest flip density the pool allows - and there is not a single instant or sorcery in the mainboard, because casting a spell means no upkeep transform for the thirteen cards that carry the clause. Deploy on turns one to three, then go quiet: the upkeep flips 2/1s into 4/2 tramplers, Village Messenger into a menace threat, and Kruin Outlaw into Terror of Kruin Pass, which has double strike and hands menace to all nineteen Werewolves. Six more Werewolves ignore the clause entirely and transform themselves for mana - Conduit of Storms into a 5/4, Shrill Howler into a 3/5 token engine, Smoldering Werewolf into a 6/4 that pings 2 on every attack. Silent turns still spend mana, because everything the deck does after turn three is an activated ability rather than a spell.",
+  "strategy_es": "tempo de transformación con pocos hechizos (Silent Moon)",
+  "identity_es": "Un mazo de Hombres lobo rojo-verde que se compromete con la cláusula de transformación en lugar de rodearla. Diecinueve de sus veintitrés cartas no-tierra son de tipo Hombre lobo — la mayor densidad de transformación que permite el pool — y no hay ni un solo instantáneo o conjuro en el principal, porque lanzar un hechizo significa que no hay transformación en el mantenimiento para las trece cartas que llevan la cláusula. Despliega en los turnos uno a tres y luego quédate callado: el mantenimiento convierte 2/1 en arrolladores 4/2, a Village Messenger en una amenaza con amenaza, y a Kruin Outlaw en Terror of Kruin Pass, que tiene doble golpe y reparte amenaza a los diecinueve Hombres lobo. Otros seis Hombres lobo ignoran la cláusula por completo y se transforman solos pagando maná: Conduit of Storms en un 5/4, Shrill Howler en un motor de fichas 3/5, Smoldering Werewolf en un 6/4 que pincha 2 en cada ataque. Los turnos silenciosos siguen gastando maná, porque todo lo que hace el mazo después del turno tres es una habilidad activada y no un hechizo.",
+  "pitch_es": "Un mazo de Hombres lobo rojo-verde que se compromete con la cláusula de transformación en lugar de rodearla. Diecinueve de sus veintitrés cartas no-tierra son de tipo Hombre lobo — la mayor densidad de transformación que permite el pool — y no hay ni un solo instantáneo o conjuro en el principal, porque lanzar un hechizo significa que no hay transformación en el mantenimiento para las trece cartas que llevan la cláusula. Despliega en los turnos uno a tres y luego quédate callado: el mantenimiento convierte 2/1 en arrolladores 4/2, a Village Messenger en una amenaza con amenaza, y a Kruin Outlaw en Terror of Kruin Pass, que tiene doble golpe y reparte amenaza a los diecinueve Hombres lobo. Otros seis Hombres lobo ignoran la cláusula por completo y se transforman solos pagando maná: Conduit of Storms en un 5/4, Shrill Howler en un motor de fichas 3/5, Smoldering Werewolf en un 6/4 que pincha 2 en cada ataque. Los turnos silenciosos siguen gastando maná, porque todo lo que hace el mazo después del turno tres es una habilidad activada y no un hechizo."
+}

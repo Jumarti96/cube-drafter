@@ -1,0 +1,814 @@
+{
+  "deck_name": "rw-ragost-kitchen",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-03T00:55:00Z",
+  "format": "40-card",
+  "strategy": "combo",
+  "colors": "RW",
+  "identity": "An R/W deck that kills without attacking. Ragost, Deft Gastronaut rewrites every artifact you control into a Food, then eats them one at a time for 3 damage to each opponent — and because its untap clause checks at EACH end step, yours and the opponent's, a resolved Ragost fires twice per turn cycle. Weapons Manufacturing supplies the ammunition, minting a Munitions token off every nontoken artifact that enters, and each Munitions is worth 5 damage when Ragost eats it because it deals 2 more on the way to the graveyard. Crucially, Ragost is a single legendary rare, so the deck is built to win without ever drawing it: Weftstalker Ardent, Rust Harvester and Ruinous Rampage each deal damage to the opponent with no reference to Ragost at all, and Slagdrill Scrapper is a second sacrifice outlet that keeps converting Munitions into damage when Ragost is answered.",
+  "restrictions": {
+    "Commons/uncommons: max 2 copies each": "PASS",
+    "Rares/mythics: max 1 copy each": "PASS",
+    "Max 7 rares/mythics total across mainboard + sideboard": "PASS (6 used: Ragost Deft Gastronaut, Weapons Manufacturing, Rust Harvester, Haliya Guided by Light, Hardlight Containment, Sacred Foundry)",
+    "All cards drawn from cube eoe mainboard": "PASS",
+    "Basic lands format-supplied, exempt from copy limits": "PASS (8 Mountain, 5 Plains)",
+    "Colour identity within core R/W, no splash": "PASS",
+    "Mainboard exactly 40 cards": "PASS",
+    "Sideboard exactly 10 cards": "PASS"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 15,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 4,
+    "accel_count": 4,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 1.79,
+      "reference_avg_mv": 2.5,
+      "accel": 4,
+      "adjustment": -1.613,
+      "raw_target": 15.387,
+      "clamped": false,
+      "recommended_land_count": 15,
+      "p_window_at_recommended": 0.7763
+    },
+    "avg_cmc": 1.79,
+    "pip_demand": {
+      "R": 16,
+      "W": 6
+    },
+    "land_color_production": {
+      "R": 11,
+      "W": 8
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 72.7,
+        "prod_pct": 68.8,
+        "gap": 3.9,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 27.3,
+        "prod_pct": 50,
+        "gap": -22.7,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "build_output": {
+    "macro_archetype": "combo",
+    "projected_avg_mv": 1.792,
+    "deck_identity": "An R/W deck that kills without attacking. Ragost, Deft Gastronaut rewrites every artifact you control into a Food, then eats them one at a time for 3 damage to each opponent — and because its untap clause checks at EACH end step, yours and the opponent's, a resolved Ragost fires twice per turn cycle. Weapons Manufacturing supplies the ammunition, minting a Munitions token off every nontoken artifact that enters, and each Munitions is worth 5 damage when Ragost eats it because it deals 2 more on the way to the graveyard. Crucially, Ragost is a single legendary rare, so the deck is built to win without ever drawing it: Weftstalker Ardent, Rust Harvester and Ruinous Rampage each deal damage to the opponent with no reference to Ragost at all, and Slagdrill Scrapper is a second sacrifice outlet that keeps converting Munitions into damage when Ragost is answered.",
+    "thesis_turn": 6,
+    "default_role": "combo",
+    "slot_allocation": {
+      "lands": {
+        "count": 16,
+        "pct_of_deck": "40.0%",
+        "rationale": "deck_audit.land_target(40, 1.792, 4) recommends 15; built to 16. Deviation grounds below."
+      },
+      "interaction": {
+        "count": 5,
+        "pct_of_nonland": "20.8%",
+        "rationale": "At the top of the 10-20% combo band, marginally over. Grounds: this combo does not protect itself with counterspells because R/W has none in this pool, so its interaction budget has to do the job of both removal and self-defence. Two of the five (Plasma Bolt x2) also double as reach that can be aimed at the opponent's face, so they are not pure subtraction from the clock."
+      },
+      "threats_payoffs": {
+        "count": 6,
+        "pct_of_nonland": "25.0%",
+        "rationale": "Above the 5-15% combo band, and this is the deviation the shape judge specifically credited. A normal combo deck runs few payoffs because it runs four copies of the one that matters. Here the payoff is LEGENDARY AND RARE — exactly one copy is legal in 40 cards — so the redundancy that a playset would normally provide has to be bought with different cards instead. Weftstalker Ardent x2, Rust Harvester, Ruinous Rampage and Oreplate Pangolin are not extra win conditions bolted on; they are the four functional substitutes for the three Ragost copies the format will not let this deck play."
+      },
+      "engine_infrastructure": {
+        "count": 13,
+        "pct_of_nonland": "54.2%",
+        "rationale": "Just above the 40-50% combo band. The engine here is literally the ammunition: 13 of the 24 nonland cards are artifact cards, and every one of them is simultaneously a Weapons Manufacturing trigger, a Ragost meal, a Weftstalker Ardent ping and a Haliya life point. Cutting engine slots does not make the deck faster, it makes every payoff smaller."
+      }
+    },
+    "land_math": {
+      "target": {
+        "base_lands": 17,
+        "base_window": [
+          2,
+          4
+        ],
+        "base_p_window": 0.7945,
+        "avg_mv": 1.7916666666666667,
+        "reference_avg_mv": 2.5,
+        "accel": 4,
+        "adjustment": -1.611,
+        "raw_target": 15.389,
+        "clamped": false,
+        "recommended_land_count": 15,
+        "p_window_at_recommended": 0.7763
+      },
+      "recount_after_fill": "Re-ran deck_audit.land_target on the actual mainboard after FILL: avg MV 1.792, accel 4, raw target 15.389, recommended 15.",
+      "deviation": "+1 (built to 16, recommended 15) — within the allowed 1. Grounds, stated so they hold in EVERY game rather than only the ones that draw the single Ragost: this is a two-colour deck whose turn-1 and turn-2 plays are split across both colours (Squire's Lightblade at {W}, Slagdrill Scrapper and Kavaron Harrier and Rust Harvester at {R}, Melded Moxite and Oreplate Pangolin at {1}{R}), and the pair has only three duals in the entire cube, so hitting the right colour on curve depends on drawing specific lands rather than any land. The raw target of 15.389 was already rounding down. The extra land carries no flood risk because four repeatable mana sinks convert it into action - Slagdrill Scrapper sacrifices a LAND for a card, and Ragost, Nutrient Block and Melded Moxite all consume spare mana. [REVISED in Phase 9: the pre-grill text grounded this on Ragost resolving on turn 2, which the Challenger correctly showed was inconsistent with the deck's own thesis that it does not depend on a one-of legendary rare.]",
+      "composition_notes": "Verified against oracle text: Sacred Foundry is the only untapped-capable dual in this colour identity ('As this land enters, you may pay 2 life. If you don't, it enters tapped'), and paying the 2 life is nearly free in a deck that turns 13 artifacts into '{2}, {T}, Sacrifice this artifact: You gain 3 life'. Sacred Peaks x2 enter tapped. Command Bridge was excluded because 'sacrifice it unless you tap an untapped permanent you control' competes for the untapped permanents Ragost and Slagdrill Scrapper both need to tap for their own abilities. Secluded Starforge taps for {C} only, which cannot cast a turn-2 {R}{W} Ragost, and is a rare against the 7-card cap.",
+      "property_census": "not required — no core card in this list scales with a property of lands controlled."
+    },
+    "pip_math": {
+      "R_pips": 16,
+      "W_pips": 6,
+      "total_pips": 22,
+      "shares": "R 72.7% / W 27.3%",
+      "sources": "R sources 11 of 16 (68.8%) = 8 Mountain + Sacred Foundry + 2 Sacred Peaks. W sources 8 of 16 (50.0%) = 5 Plains + Sacred Foundry + 2 Sacred Peaks. The three duals count for both colours, which is why the shares sum above 100%.",
+      "note": "White is deliberately over-supplied relative to its 27.3% pip share. The reason is not the pip count but WHICH pips they are: Ragost needs {W} on turn 2 alongside {R}, and Squire's Lightblade at {W} is the deck's turn-1 play. Red's 16 pips are spread across cards the deck is happy to cast on turns 3-5, so red can afford to be tighter."
+    },
+    "count_dependent_verdicts": [
+      "Ragost, Deft Gastronaut turns 'artifacts you control' into Foods: 13 of the 24 nonland cards are artifact cards (Nutrient Block x2, Squire's Lightblade x2, Melded Moxite x2, Slagdrill Scrapper x2, Chrome Companion x2, Kavaron Harrier, Oreplate Pangolin, Rust Harvester), PLUS every Munitions token from Weapons Manufacturing and every Robot token from Melded Moxite and Kavaron Harrier. INCLUDE — the payoff has ammunition.",
+      "Weapons Manufacturing triggers on 'a NONTOKEN artifact you control enters': all 13 of those artifact cards are nontoken, so 13 of 24 nonland cards mint a Munitions. INCLUDE.",
+      "Weftstalker Ardent triggers on 'another creature OR artifact you control enters': 17 of the 24 nonland cards are creatures or artifacts. The seven that are not: Weapons Manufacturing (enchantment), Hardlight Containment (aura), Banishing Light (enchantment), Ruinous Rampage, Plasma Bolt x2 and Bombard (instants/sorceries). INCLUDE.",
+      "Rust Harvester's '{2}, {T}, Exile an artifact card from your GRAVEYARD' takes CARDS, not tokens — Munitions, Robot and Lander tokens cease to exist and never reach the graveyard. The 13 nontoken artifact cards are its only fuel, and this deck deliberately sacrifices them, so the yard fills faster here than in any other build in this cube. Weighted at 0.85 for assembly because the graveyard is empty on turn one. INCLUDE.",
+      "Plasma Bolt's Void clause ('deals 3 damage instead if a nonland permanent left the battlefield this turn or a spell was warped this turn'): this deck controls whether Void is on. Seven of the 24 nonland cards can put a permanent in the graveyard at will — Ragost's granted Food ability on any of 13 artifacts, Slagdrill Scrapper x2, Nutrient Block x2's own sacrifice mode, Melded Moxite x2's own sacrifice mode. Plasma Bolt is a 1-mana 3-damage spell here, not a 2-damage one. INCLUDE.",
+      "Hardlight Containment 'Enchant artifact you control': 13 of the 24 nonland cards are legal hosts, and the deck plays one on turn 1 in the large majority of hands. INCLUDE.",
+      "Ragost's clock, computed: one activation is '{1}, {T}, Sacrifice a Food' for 3 damage to each opponent. If the sacrificed Food is a Munitions token, its own leave-the-battlefield trigger adds 2, for 5. The untap clause checks at EACH end step — the opponent's as well as yours — so with any lifegain that turn Ragost fires twice per turn cycle. Haliya, Guided by Light supplies that lifegain for free off any artifact entering, and Squire's Lightblade has FLASH, which is how the deck gains life during the OPPONENT'S turn to enable the second untap.",
+      "Oreplate Pangolin, by contrast, is the only payoff whose damage is combat damage: it must survive and connect on a 2/2 base. Weighted at 0.6 for assembly and cut to a single copy for exactly this reason — 5 of the deck's 6 payoff copies ignore blockers entirely, and it is the odd one out."
+    ],
+    "skeleton_selection": {
+      "archetype_family": "combo",
+      "archetype_family_grounds": "Locked thesis default_role = combo, which maps directly to the combo family with no tie to break. The deck's damage comes from a repeatable non-combat engine loop (sacrifice an artifact, deal damage) rather than from attacking; 5 of its 6 payoff copies cannot be blocked.",
+      "chosen": "Sketch C",
+      "chosen_lens": "most resilient to disruption",
+      "judge_grounds": "Weftstalker Ardent, Slagdrill Scrapper (as a sacrifice outlet for Weapons Manufacturing's own Munitions trigger) and Ruinous Rampage all deal real damage on their own oracle text with zero Ragost dependence, so the thesis kill mechanism survives the explicit single-legal-copy risk while still being amplified when Ragost is live. The judge ranked Sketch A last because every one of its support pieces produced only life, cards or tokens — if the single Ragost copy went missing, that build had no path to damage at all.",
+      "rejected_sketches": [
+        {
+          "lens": "fastest goldfish",
+          "macro_archetype": "combo",
+          "slot_table": "Interaction 10% = 2 | Threats/Payoffs 9% = 2 | Engine & Infra 48% = 11",
+          "keystones": [
+            "Ragost, Deft Gastronaut",
+            "Weapons Manufacturing",
+            "Haliya, Guided by Light",
+            "Melded Moxite",
+            "Nutrient Block"
+          ],
+          "why_rejected": "Judge: every support piece produced only life, cards or tokens, so Ragost's own ability was the ONLY damage output in the entire sketch. With exactly one legal copy in 40 cards, that is an unacceptable single point of failure."
+        },
+        {
+          "lens": "most redundant assembly",
+          "macro_archetype": "combo",
+          "slot_table": "Interaction 15% = 3 | Threats/Payoffs 13% = 3 | Engine & Infra 48% = 11",
+          "keystones": [
+            "Weapons Manufacturing",
+            "Nutrient Block",
+            "Chrome Companion",
+            "Weftstalker Ardent",
+            "Ragost, Deft Gastronaut",
+            "Haliya, Guided by Light"
+          ],
+          "why_rejected": "Judge: it had one genuine Ragost-independent damage source (Weftstalker Ardent), but its 'redundant loop' claim leaned on Nutrient Block and Chrome Companion, neither of which deals damage per its own quoted text — the redundancy was thinner than advertised."
+        }
+      ],
+      "weak_keystones": [],
+      "false_choice_note": "none — the judge found the builds materially distinct precisely on how much of the kill mechanism survives losing the single Ragost copy: Sketch A none, Sketch B partial via one card, Sketch C full via three independently-verified damage sources.",
+      "harvested_from_rejected": [
+        {
+          "card": "Haliya, Guided by Light",
+          "from_lens": "fastest goldfish",
+          "role": "Engine — filled an Engine slot role-for-role. Its lifegain per artifact ETB is what pays Ragost's untap clause without spending a Food, which is the difference between one and two activations per turn cycle."
+        },
+        {
+          "card": "Melded Moxite",
+          "from_lens": "fastest goldfish",
+          "role": "Engine — filled an Engine slot role-for-role at 2 copies; one card that becomes two artifact bodies across its life."
+        },
+        {
+          "card": "Chrome Companion",
+          "from_lens": "most redundant assembly",
+          "role": "Engine — filled an Engine slot role-for-role at 2 copies. The judge correctly ruled it does NOT provide damage redundancy, so it is recorded here as an engine card only; its graveyard ability is what earns the slot as the deck's sole mainboard answer to the cube's 31 graveyard cards."
+        },
+        {
+          "card": "Nutrient Block",
+          "from_lens": "fastest goldfish / most redundant assembly",
+          "role": "Engine — appeared in all three sketches; a 1-mana indestructible Food that draws a card when eaten."
+        },
+        {
+          "card": "Rust Harvester",
+          "from_lens": "pre-grill strengthening of the chosen lens",
+          "role": "Payoff — added before the grill, not harvested from a sketch. The structural gate put assembly at p=0.79 against a 0.75 floor on 5 payoff copies; Rust Harvester is a fifth Ragost-independent damage source fed by the deck's own artifact graveyard, and it raised assembly to p=0.85."
+        },
+        {
+          "card": "Scout for Survivors",
+          "from_lens": "phase-9 challenger sideboard-cohesion finding",
+          "role": "Sideboard — the Challenger noted the 10 sideboard slots were entirely removal and hate with no way to rebuild after a sweeper. \"Return up to three target creature cards with total mana value 3 or less from your graveyard to the battlefield\" rebuys Ragost plus a one-drop, or three one-drops, in a deck where 11 of 24 nonland cards cost one mana."
+        }
+      ]
+    },
+    "structural_responses": [],
+    "failure_modes": {
+      "flood": {
+        "mitigation": "Four repeatable mana sinks, all of which also advance the plan. Slagdrill Scrapper's '{2}, {T}, Sacrifice another artifact OR LAND: Draw a card' literally eats the surplus land. Ragost's granted '{2}, {T}, Sacrifice this artifact: You gain 3 life' is live on all 13 artifacts. Nutrient Block has that same ability natively without Ragost, and Melded Moxite's '{3}, Sacrifice this artifact: Create a tapped 2/2 colorless Robot artifact creature token' converts spare mana into a fresh Ragost meal."
+      },
+      "screw": {
+        "mitigation": "This is the lowest curve of the three builds: 11 of the 24 nonland cards cost one mana and 18 cost two or less, with nothing above three. The goldfish simulation plays something on turn 1 in 92% of hands and reaches three lands by turn 3 in 88%. A two-land hand operates the whole engine."
+      },
+      "decapitation": {
+        "mitigation": "This is the failure mode the entire build was selected to answer. Ragost is legendary and rare, so exactly one copy is legal - the deck therefore never depends on it. THREE non-combat damage sources across four copies work with Ragost nowhere in sight: Weftstalker Ardent x2 (\"Whenever another creature or artifact you control enters, this creature deals 1 damage to each opponent\"), Rust Harvester (\"it deals damage equal to its power to any target\") and Ruinous Rampage (\"deals 3 damage to each opponent\"). Oreplate Pangolin is a fourth payoff but its damage is combat damage only, so it is not counted among the three. Most importantly, Weapons Manufacturing's Munitions deal their 2 damage when the token LEAVES THE BATTLEFIELD - through any sacrifice outlet, not just Ragost - so Slagdrill Scrapper x2 keeps the ammunition converting into damage after Ragost is answered."
+      },
+      "gas-out": {
+        "mitigation": "Four of the 24 nonland cards replace themselves and the deck's accel_count is 4: Nutrient Block x2 ('When this artifact is put into a graveyard from the battlefield, draw a card' — it draws precisely when the engine consumes it), Melded Moxite x2 ('discard a card. If you do, draw two cards'). On top of that, Slagdrill Scrapper x2 converts any spare artifact or land into a card, and Haliya draws at end step whenever the deck gained 3 life — which Ragost's Food mode does in a single activation."
+      },
+      "raced": {
+        "accepted": "The deck's life total and its damage output are drawn from the same 13 artifacts, and that is an unavoidable tension rather than an oversight. Ragost's granted '{2}, {T}, Sacrifice this artifact: You gain 3 life' can stabilise against an aggressive start, but every Food eaten for 3 life is 3 damage not dealt, so surviving is paid for directly in clock. Mitigating properly would mean adding dedicated lifegain or blockers in place of artifacts, which shrinks the denominator every payoff in the deck multiplies against — Weapons Manufacturing's trigger count, Weftstalker Ardent's ping count and Ragost's ammunition all fall together. Cut Propulsion x2, Radiant Strike x2 and Focus Fire are in the sideboard for the matchups where racing is the actual problem."
+      },
+      "disruption-fizzle": {
+        "mitigation": "There is no critical turn to interact with. The damage is incremental and per-permanent rather than a single assembled chain: each artifact entering is independently a Weapons Manufacturing trigger, a Weftstalker Ardent ping and a future Ragost meal, and each Ragost activation is a separate 3 damage that has already resolved. A removal spell aimed at any one piece subtracts one increment rather than breaking a loop, and the deck has no turn on which it is all-in."
+      }
+    },
+    "analysis_body": "### THE ENGINE, WRITTEN OUT\n\nRagost, Deft Gastronaut does three separate things, and the third is the one people miss:\n\n1. *\"Artifacts you control are Foods in addition to their other types and have '{2}, {T}, Sacrifice this artifact: You gain 3 life.'\"* — **13 of the 24 nonland cards** become Foods, plus every Munitions, Robot and Lander token.\n2. *\"{1}, {T}, Sacrifice a Food: Ragost deals 3 damage to each opponent.\"* — one mana, one artifact, three damage that cannot be blocked.\n3. *\"At the beginning of **each** end step, if you gained life this turn, untap Ragost.\"* — **each** end step, not \"your end step.\" Yours and the opponent's. Two activations per turn cycle.\n\nThe third clause is why Haliya, Guided by Light is in the deck. Ragost's own gain-3 mode costs `{2}` and a whole artifact just to enable the untap — that is ammunition spent on logistics. Haliya's *\"Whenever Haliya or another creature or artifact you control enters, you gain 1 life\"* satisfies the same clause for free off any artifact the deck was casting anyway.\n\nAnd Squire's Lightblade is in the deck for a reason that looks trivial on the card: it has **flash**. It is the deck's only way to make an artifact enter during the *opponent's* turn, which is how you gain life on their turn and untap Ragost at *their* end step. That is the difference between one activation per cycle and two.\n\n### THE MUNITIONS ARE THE POINT\n\nWeapons Manufacturing mints a Munitions token off every nontoken artifact entering — **13 of 24 nonland cards**. Feed one to Ragost and you get:\n\n| Source | Damage |\n|---|---|\n| Ragost's ability | 3 to each opponent |\n| Munitions leaving the battlefield | 2 to any target |\n| **Total, one mana** | **5** |\n\nThe clause that makes this deck work rather than merely function is *\"When this token **leaves the battlefield**\"* — not \"when you sacrifice this to Ragost.\" **Any** outlet fires it. Slagdrill Scrapper's `{2}, {T}, Sacrifice another artifact or land: Draw a card` turns a Munitions into 2 damage *and* a card, with Ragost nowhere in sight.\n\n### BUILT AROUND A CARD IT DOESN'T NEED\n\nRagost is legendary **and** rare, so exactly one copy is legal in forty cards. It is drawn by turn six well under half the time. An independent shape judge reviewed three builds of this archetype and rejected the two that would have been dead without it — in both, every support card produced only life, cards or tokens, and Ragost's own ability was the *sole* damage output in the deck.\n\nThis list has three damage sources across four copies that never mention Ragost:\n\n| Card | Oracle | Copies |\n|---|---|---|\n| Weftstalker Ardent | \"Whenever another creature or artifact you control enters, this creature deals 1 damage to each opponent\" | 2 |\n| Rust Harvester | \"{2}, {T}, Exile an artifact card from your graveyard: ... it deals damage equal to its power to any target\" | 1 |\n| Ruinous Rampage | \"Ruinous Rampage deals 3 damage to each opponent\" | 1 |\n\nOreplate Pangolin is a fourth payoff, but its damage is combat damage on a 2/2 base — it is the one card here that a blocker can stop, which is why it is a single copy and weighted at 0.6 in the assembly check.\n\n### RUST HARVESTER EATS CARDS, NOT TOKENS\n\nWorth stating precisely because it is easy to get backwards: Rust Harvester exiles *\"an artifact **card** from your graveyard.\"* Munitions, Robot and Lander tokens cease to exist when they leave the battlefield and never reach the graveyard. Its fuel is only the **13 nontoken artifact cards** — which this deck is sacrificing every turn anyway, so its yard fills faster than any other build in this cube. That is also why it is weighted 0.85 rather than 1.0: on turn one the graveyard is empty.\n\n### PLASMA BOLT IS A THREE-DAMAGE SPELL HERE\n\n*\"Void — Plasma Bolt deals 3 damage instead if a nonland permanent left the battlefield this turn.\"* This deck decides whether that is true. Ragost's granted Food ability works on any of 13 artifacts, Slagdrill Scrapper ×2 sacrifice on demand, and Nutrient Block ×2 and Melded Moxite ×2 can each sacrifice themselves. Void is on whenever the engine has run, which is every turn from about turn three.\n\n### THE TENSION THE DECK CANNOT SOLVE\n\nLife and damage come from the same 13 artifacts. `{2}, {T}, Sacrifice this artifact: You gain 3 life` and `{1}, {T}, Sacrifice a Food: 3 damage` consume identical resources. Every Food eaten to stay alive is three damage not dealt. Against a fast clock the deck can stabilise, but it stabilises by spending its win condition — and that is stated in the failure modes as an accepted cost rather than papered over, because the alternative (adding blockers and lifegain in place of artifacts) shrinks the denominator that Weapons Manufacturing, Weftstalker Ardent and Ragost all multiply against."
+  },
+  "mainboard": [
+    {
+      "name": "Mountain",
+      "qty": 8,
+      "role": "Land",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": ""
+    },
+    {
+      "name": "Plains",
+      "qty": 5,
+      "role": "Land",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "set": "",
+      "collector_number": ""
+    },
+    {
+      "name": "Sacred Foundry",
+      "qty": 1,
+      "role": "Land — RW shock, only untapped-capable dual",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "({T}: Add {R} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "256"
+    },
+    {
+      "name": "Sacred Peaks",
+      "qty": 2,
+      "role": "Land — RW dual, enters tapped",
+      "board": "mainboard",
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "254"
+    },
+    {
+      "name": "Ragost, Deft Gastronaut",
+      "qty": 1,
+      "role": "Payoff — turns every artifact into 3 damage to each opponent",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Legendary Creature — Lobster Citizen",
+      "mana_cost": "{R}{W}",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Artifacts you control are Foods in addition to their other types and have \"{2}, {T}, Sacrifice this artifact: You gain 3 life.\"\n{1}, {T}, Sacrifice a Food: Ragost deals 3 damage to each opponent.\nAt the beginning of each end step, if you gained life this turn, untap Ragost.",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "224"
+    },
+    {
+      "name": "Weftstalker Ardent",
+      "qty": 2,
+      "role": "Payoff — Ragost-independent damage, 1 to each opponent per creature OR artifact ETB",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Creature — Drix Artificer",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever another creature or artifact you control enters, this creature deals 1 damage to each opponent.\nWarp {R} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "2",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "169"
+    },
+    {
+      "name": "Oreplate Pangolin",
+      "qty": 1,
+      "role": "Payoff — grows off the deck's constant token production",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Robot Pangolin",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Whenever another artifact you control enters, you may pay {1}. If you do, put a +1/+1 counter on this creature.",
+      "power": "2",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "150"
+    },
+    {
+      "name": "Rust Harvester",
+      "qty": 1,
+      "role": "Payoff — Ragost-independent repeatable reach fed by the deck own artifact graveyard",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Menace\n{2}, {T}, Exile an artifact card from your graveyard: Put a +1/+1 counter on this creature, then it deals damage equal to its power to any target.",
+      "power": "1",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "159"
+    },
+    {
+      "name": "Ruinous Rampage",
+      "qty": 1,
+      "role": "Payoff — Ragost-independent reach, 3 damage to each opponent",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Choose one —\n• Ruinous Rampage deals 3 damage to each opponent.\n• Exile all artifacts with mana value 3 or less.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "158"
+    },
+    {
+      "name": "Weapons Manufacturing",
+      "qty": 1,
+      "role": "Engine — Munitions token per nontoken artifact ETB; the ammunition",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever a nontoken artifact you control enters, create a colorless artifact token named Munitions with \"When this token leaves the battlefield, it deals 2 damage to any target.\"",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "168"
+    },
+    {
+      "name": "Slagdrill Scrapper",
+      "qty": 2,
+      "role": "Engine — Ragost-independent sacrifice outlet; converts Munitions into damage + a card",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Scout",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "{2}, {T}, Sacrifice another artifact or land: Draw a card.",
+      "power": "1",
+      "toughness": "2",
+      "set": "eoe",
+      "collector_number": "160"
+    },
+    {
+      "name": "Nutrient Block",
+      "qty": 2,
+      "role": "Engine — 1-mana indestructible Food; gain 3 satisfies Ragost's untap clause, draws when eaten",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Artifact — Food",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "243"
+    },
+    {
+      "name": "Squire's Lightblade",
+      "qty": 2,
+      "role": "Engine — 1-mana FLASH artifact; a Weapons Manufacturing trigger on the opponent's turn",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Artifact — Equipment",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flash\nWhen this Equipment enters, attach it to target creature you control. That creature gains first strike until end of turn.\nEquipped creature gets +1/+0.\nEquip {3}",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "36"
+    },
+    {
+      "name": "Melded Moxite",
+      "qty": 2,
+      "role": "Engine — artifact ETB, filters, then converts into a Robot token",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Artifact",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this artifact enters, you may discard a card. If you do, draw two cards.\n{3}, Sacrifice this artifact: Create a tapped 2/2 colorless Robot artifact creature token.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "143"
+    },
+    {
+      "name": "Chrome Companion",
+      "qty": 2,
+      "role": "Engine — colorless artifact body; lifegain on tap and mainboard graveyard interaction",
+      "board": "mainboard",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Dog",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life.\n{2}, {T}: Put target card from a graveyard on the bottom of its owner's library.",
+      "power": "2",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "236"
+    },
+    {
+      "name": "Kavaron Harrier",
+      "qty": 1,
+      "role": "Engine — 1-drop that manufactures a doomed Robot token every attack",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Soldier",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever this creature attacks, you may pay {2}. If you do, create a 2/2 colorless Robot artifact creature token that's tapped and attacking. Sacrifice that token at end of combat.",
+      "power": "2",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "139"
+    },
+    {
+      "name": "Haliya, Guided by Light",
+      "qty": 1,
+      "role": "Engine — free lifegain per artifact ETB; pays Ragost's untap clause without spending a Food",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Soldier",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever Haliya or another creature or artifact you control enters, you gain 1 life.\nAt the beginning of your end step, draw a card if you've gained 3 or more life this turn.\nWarp {W} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "3",
+      "toughness": "3",
+      "set": "eoe",
+      "collector_number": "19"
+    },
+    {
+      "name": "Hardlight Containment",
+      "qty": 1,
+      "role": "Interaction — 1-mana exile; always has an artifact host here",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Enchant artifact you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield.\nEnchanted permanent has ward {1}.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "20"
+    },
+    {
+      "name": "Plasma Bolt",
+      "qty": 2,
+      "role": "Interaction — Void is permanently on in a deck that sacrifices every turn",
+      "board": "mainboard",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Plasma Bolt deals 2 damage to any target.\nVoid — Plasma Bolt deals 3 damage instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "152"
+    },
+    {
+      "name": "Banishing Light",
+      "qty": 1,
+      "role": "Interaction — exile any nonland permanent",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "6"
+    },
+    {
+      "name": "Bombard",
+      "qty": 1,
+      "role": "Interaction — unconditional 4 damage to a creature",
+      "board": "mainboard",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Bombard deals 4 damage to target creature.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "129"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Radiant Strike",
+      "qty": 2,
+      "role": "Destroy artifact or tapped creature; the 3 life also untaps Ragost",
+      "board": "sideboard",
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "29"
+    },
+    {
+      "name": "Emergency Eject",
+      "qty": 2,
+      "role": "Instant-speed answer to any nonland permanent",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target nonland permanent. Its controller creates a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "14"
+    },
+    {
+      "name": "Cut Propulsion",
+      "qty": 2,
+      "role": "Double damage to fliers — vs the cube's 56 evasion cards",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature deals damage to itself equal to its power. If that creature has flying, it deals twice that much damage to itself instead.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "130"
+    },
+    {
+      "name": "Focus Fire",
+      "qty": 1,
+      "role": "1-mana scaling removal on a wide board",
+      "board": "sideboard",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Focus Fire deals X damage to target attacking or blocking creature, where X is 2 plus the number of creatures and/or Spacecraft you control.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "18"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "qty": 1,
+      "role": "Exile each opponent's graveyard — vs the cube's 31 graveyard cards",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": "3",
+      "toughness": "1",
+      "set": "eoe",
+      "collector_number": "237"
+    },
+    {
+      "name": "Ruinous Rampage",
+      "qty": 1,
+      "role": "Second reach spell vs lifegain/racing decks",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Choose one —\n• Ruinous Rampage deals 3 damage to each opponent.\n• Exile all artifacts with mana value 3 or less.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "158"
+    },
+    {
+      "name": "Scout for Survivors",
+      "qty": 1,
+      "role": "Post-sweeper rebuild — returns up to three 1-drops, or Ragost plus a one-drop",
+      "board": "sideboard",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Return up to three target creature cards with total mana value 3 or less from your graveyard to the battlefield. Put a +1/+1 counter on each of them.",
+      "power": null,
+      "toughness": null,
+      "set": "eoe",
+      "collector_number": "33"
+    }
+  ],
+  "pitch": "An R/W deck that kills without attacking. Ragost, Deft Gastronaut rewrites every artifact you control into a Food, then eats them one at a time for 3 damage to each opponent — and because its untap clause checks at EACH end step, yours and the opponent's, a resolved Ragost fires twice per turn cycle. Weapons Manufacturing supplies the ammunition, minting a Munitions token off every nontoken artifact that enters, and each Munitions is worth 5 damage when Ragost eats it because it deals 2 more on the way to the graveyard. Crucially, Ragost is a single legendary rare, so the deck is built to win without ever drawing it: Weftstalker Ardent, Rust Harvester and Ruinous Rampage each deal damage to the opponent with no reference to Ragost at all, and Slagdrill Scrapper is a second sacrifice outlet that keeps converting Munitions into damage when Ragost is answered.",
+  "strategy_es": "combo",
+  "identity_es": "Un mazo R/W que mata sin atacar. Ragost, Deft Gastronaut reescribe cada artefacto que controlas como una Comida y luego se los come de uno en uno por 3 de daño a cada rival; y como su cláusula de desgiro comprueba en CADA paso final, el tuyo y el del rival, un Ragost resuelto dispara dos veces por ciclo de turno. Weapons Manufacturing aporta la munición, acuñando una ficha de Munitions con cada artefacto no-ficha que entra, y cada Munitions vale 5 de daño cuando Ragost se la come porque hace 2 más camino del cementerio. Crucialmente, Ragost es una única rara legendaria, así que el mazo está construido para ganar sin robarla nunca: Weftstalker Ardent, Rust Harvester y Ruinous Rampage hacen daño al rival cada uno sin referencia alguna a Ragost, y Slagdrill Scrapper es un segundo medio de sacrificio que sigue convirtiendo Munitions en daño cuando responden a Ragost.",
+  "pitch_es": "Un mazo R/W que mata sin atacar. Ragost, Deft Gastronaut reescribe cada artefacto que controlas como una Comida y luego se los come de uno en uno por 3 de daño a cada rival; y como su cláusula de desgiro comprueba en CADA paso final, el tuyo y el del rival, un Ragost resuelto dispara dos veces por ciclo de turno. Weapons Manufacturing aporta la munición, acuñando una ficha de Munitions con cada artefacto no-ficha que entra, y cada Munitions vale 5 de daño cuando Ragost se la come porque hace 2 más camino del cementerio. Crucialmente, Ragost es una única rara legendaria, así que el mazo está construido para ganar sin robarla nunca: Weftstalker Ardent, Rust Harvester y Ruinous Rampage hacen daño al rival cada uno sin referencia alguna a Ragost, y Slagdrill Scrapper es un segundo medio de sacrificio que sigue convirtiendo Munitions en daño cuando responden a Ragost."
+}

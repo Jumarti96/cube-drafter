@@ -1,0 +1,658 @@
+{
+  "deck_name": "wub-anomaly-mill",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-07T21:39:51Z",
+  "format": "40-card",
+  "strategy": "control",
+  "colors": "WUB",
+  "identity": "A blue-based WUB control deck that wins by decking the opponent. Singularity Rupture is both a wrath and half the kill — 'Destroy all creatures, then any number of target players each mill half their library'. Space-Time Anomaly then mills a number equal to YOUR life total, so the Food and lifegain package is not defence, it is ammunition: every point of life is literally another card milled. Against a 40-card opponent whose library is 29 cards at your turn five, Rupture leaves 14 and Anomaly at 13 or more life mills past what remains. The deck holds counterspells up, answers what resolves, and digs with 6 selection effects because both halves of the kill are single-copy rares. CAST RUPTURE FIRST — see kill_arithmetic; the natural curve order is four turns worse.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_user_constraint": "Maximum 6 rare/mythic cards TOTAL across mainboard and sideboard; rare/mythic LANDS count toward this.",
+    "rare_mythic_total": 6,
+    "rare_mythic_list": [
+      [
+        "Space-Time Anomaly",
+        "rare"
+      ],
+      [
+        "Singularity Rupture",
+        "rare"
+      ],
+      [
+        "Quantum Riddler",
+        "mythic"
+      ],
+      [
+        "Consult the Star Charts",
+        "rare"
+      ],
+      [
+        "Watery Grave",
+        "rare"
+      ],
+      [
+        "Godless Shrine",
+        "rare"
+      ]
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 2,
+    "accel_count": 4,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.13,
+      "reference_avg_mv": 2.5,
+      "accel": 4,
+      "adjustment": 0.173,
+      "raw_target": 17.173,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 3.13,
+    "pip_demand": {
+      "W": 2,
+      "U": 16,
+      "B": 8
+    },
+    "land_color_production": {
+      "U": 13,
+      "B": 7,
+      "W": 6,
+      "G": 1,
+      "R": 1
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 30.8,
+        "prod_pct": 41.2,
+        "gap": -10.4,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 61.5,
+        "prod_pct": 76.5,
+        "gap": -15,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 7.7,
+        "prod_pct": 35.3,
+        "gap": -27.6,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Space-Time Anomaly",
+      "qty": 1,
+      "role": "Payoff — mills the opponent for your entire life total",
+      "board": "mainboard",
+      "mana_cost": "{2}{W}{U}",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Target player mills cards equal to your life total.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Singularity Rupture",
+      "qty": 1,
+      "role": "Payoff — a wrath that also mills half their library",
+      "board": "mainboard",
+      "mana_cost": "{3}{U}{B}{B}",
+      "cmc": 6,
+      "type_line": "Sorcery",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Destroy all creatures, then any number of target players each mill half their library, rounded down.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Quantum Riddler",
+      "qty": 1,
+      "role": "Finisher — 4/6 flier that draws, and draws extra on an empty hand",
+      "board": "mainboard",
+      "mana_cost": "{3}{U}{U}",
+      "cmc": 5,
+      "type_line": "Creature — Sphinx",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Flying\nWhen this creature enters, draw a card.\nAs long as you have one or fewer cards in hand, if you would draw one or more cards, you draw that many cards plus one instead.\nWarp {1}{U}",
+      "power": "4",
+      "toughness": "6"
+    },
+    {
+      "name": "Starbreach Whale",
+      "qty": 2,
+      "role": "Finisher/dig — 3/5 flier whose ETB surveil 2 also digs toward the kill; warp {1}{U} deploys it early",
+      "board": "mainboard",
+      "mana_cost": "{4}{U}",
+      "cmc": 5,
+      "type_line": "Creature — Whale",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nWhen this creature enters, surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)\nWarp {1}{U} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "3",
+      "toughness": "5"
+    },
+    {
+      "name": "Nutrient Block",
+      "qty": 2,
+      "role": "Lifegain — indestructible Food, 3 life and a card",
+      "board": "mainboard",
+      "mana_cost": "{1}",
+      "cmc": 1,
+      "type_line": "Artifact — Food",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Dubious Delicacy",
+      "qty": 2,
+      "role": "Lifegain/removal — flash -3/-3, then 3 life or 3 drain",
+      "board": "mainboard",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Artifact — Food",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flash\nWhen this artifact enters, up to one target creature gets -3/-3 until end of turn.\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\n{2}, {T}, Sacrifice this artifact: Target opponent loses 3 life.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Chrome Companion",
+      "qty": 1,
+      "role": "Lifegain — 1 life per tap, and the deck's graveyard answer",
+      "board": "mainboard",
+      "mana_cost": "{2}",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Dog",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life.\n{2}, {T}: Put target card from a graveyard on the bottom of its owner's library.",
+      "power": "2",
+      "toughness": "1"
+    },
+    {
+      "name": "Divert Disaster",
+      "qty": 2,
+      "role": "Interaction — soft counter whose Lander token comes to YOU, so it is also the deck's ramp toward the 6-mana Rupture",
+      "board": "mainboard",
+      "mana_cost": "{1}{U}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target spell unless its controller pays {2}. If they do, you create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Unravel",
+      "qty": 2,
+      "role": "Interaction — hard counter that replaces itself against a discounted spell",
+      "board": "mainboard",
+      "mana_cost": "{1}{U}{U}",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Counter target spell. If the amount of mana spent to cast that spell was less than its mana value, you draw a card.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Depressurize",
+      "qty": 2,
+      "role": "Interaction — 2-mana instant that kills any creature with power 3 or less",
+      "board": "mainboard",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets -3/-0 until end of turn. Then if that creature's power is 0 or less, destroy it.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Gravkill",
+      "qty": 2,
+      "role": "Interaction — instant-speed exile",
+      "board": "mainboard",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Radiant Strike",
+      "qty": 1,
+      "role": "Interaction/lifegain — destroy an artifact or tapped creature, gain 3",
+      "board": "mainboard",
+      "mana_cost": "{3}{W}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Consult the Star Charts",
+      "qty": 1,
+      "role": "Dig — looks at as many cards as you have lands, kicker doubles it",
+      "board": "mainboard",
+      "mana_cost": "{1}{U}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nLook at the top X cards of your library, where X is the number of lands you control. Put one of those cards into your hand. If this spell was kicked, put two of those cards into your hand instead. Put the rest on the bottom of your library in a random order.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Cerebral Download",
+      "qty": 1,
+      "role": "Dig — surveil X then draw three at instant speed",
+      "board": "mainboard",
+      "mana_cost": "{4}{U}",
+      "cmc": 5,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Surveil X, where X is the number of artifacts you control. Then draw three cards. (To surveil X, look at the top X cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Mental Modulation",
+      "qty": 2,
+      "role": "Dig — 1-mana cantrip on your turn that also taps a creature, turning on Radiant Strike",
+      "board": "mainboard",
+      "mana_cost": "{1}{U}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "This spell costs {1} less to cast during your turn.\nTap target artifact or creature.\nDraw a card.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Watery Grave",
+      "qty": 1,
+      "role": "Land — untapped-capable UB dual",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "({T}: Add {U} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Godless Shrine",
+      "qty": 1,
+      "role": "Land — untapped-capable WB dual",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "({T}: Add {W} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "qty": 2,
+      "role": "Land — WU dual (tapped)",
+      "board": "mainboard",
+      "mana_cost": null,
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "qty": 2,
+      "role": "Land — UB dual (tapped)",
+      "board": "mainboard",
+      "mana_cost": null,
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Sunlit Marsh",
+      "qty": 1,
+      "role": "Land — WB dual (tapped)",
+      "board": "mainboard",
+      "mana_cost": null,
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Command Bridge",
+      "qty": 1,
+      "role": "Land — any colour, tapped, sacrifices itself unless you tap a permanent",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "This land enters tapped.\nWhen this land enters, sacrifice it unless you tap an untapped permanent you control.\n{T}: Add one mana of any color.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Island",
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Swamp",
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Plains",
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Annul",
+      "qty": 2,
+      "role": "vs the 74-card artifact class and 16 enchantments — a 1-mana hard counter for both",
+      "board": "sideboard",
+      "mana_cost": "{U}",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Counter target artifact or enchantment spell.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Seam Rip",
+      "qty": 2,
+      "role": "vs fast MV<=2 starts",
+      "board": "sideboard",
+      "mana_cost": "{W}",
+      "cmc": 1,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls with mana value 2 or less until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Emergency Eject",
+      "qty": 2,
+      "role": "vs resolved noncreature permanents — INSTANT speed, so it does not fight the counterspell plan the way Banishing Light does",
+      "board": "sideboard",
+      "mana_cost": "{2}{W}",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target nonland permanent. Its controller creates a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Lost in Space",
+      "qty": 2,
+      "role": "vs recursive threats — library, not graveyard, and it surveils",
+      "board": "sideboard",
+      "mana_cost": "{3}{U}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target artifact or creature's owner puts it on their choice of the top or bottom of their library. Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "power": null,
+      "toughness": null
+    },
+    {
+      "name": "Sinister Cryologist",
+      "qty": 2,
+      "role": "vs aggro — a 2/3 blocker that shrinks an attacker on entry",
+      "board": "sideboard",
+      "mana_cost": "{2}{U}",
+      "cmc": 3,
+      "type_line": "Creature — Jellyfish Wizard",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, target creature an opponent controls gets -3/-0 until end of turn.\nWarp {U} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "2",
+      "toughness": "3"
+    }
+  ],
+  "pitch": "A blue-based WUB control deck that wins by decking the opponent. Singularity Rupture is both a wrath and half the kill — 'Destroy all creatures, then any number of target players each mill half their library'. Space-Time Anomaly then mills a number equal to YOUR life total, so the Food and lifegain package is not defence, it is ammunition: every point of life is literally another card milled. Against a 40-card opponent whose library is 29 cards at your turn five, Rupture leaves 14 and Anomaly at 13 or more life mills past what remains. The deck holds counterspells up, answers what resolves, and digs with 6 selection effects because both halves of the kill are single-copy rares. CAST RUPTURE FIRST — see kill_arithmetic; the natural curve order is four turns worse.",
+  "strategy_es": "control",
+  "identity_es": "Un control WUB con base azul que gana deckeando al rival. Singularity Rupture es a la vez un barrido y la mitad de la victoria: 'Destroy all creatures, then any number of target players each mill half their library'. Space-Time Anomaly muele entonces un número igual a TU total de vidas, así que el paquete de Comida y ganancia de vida no es defensa, es munición: cada punto de vida es literalmente otra carta molida. Contra un rival de 40 cartas cuya biblioteca son 29 cartas en tu turno cinco, Rupture le deja 14 y Anomaly con 13 vidas o más muele más de lo que queda. El mazo reserva contrahechizos, responde a lo que resuelve, y cava con 6 efectos de selección porque ambas mitades de la victoria son raras de copia única. LANZA RUPTURE PRIMERO: el orden natural de la curva es cuatro turnos peor.",
+  "pitch_es": "Un control WUB con base azul que gana deckeando al rival. Singularity Rupture es a la vez un barrido y la mitad de la victoria: 'Destroy all creatures, then any number of target players each mill half their library'. Space-Time Anomaly muele entonces un número igual a TU total de vidas, así que el paquete de Comida y ganancia de vida no es defensa, es munición: cada punto de vida es literalmente otra carta molida. Contra un rival de 40 cartas cuya biblioteca son 29 cartas en tu turno cinco, Rupture le deja 14 y Anomaly con 13 vidas o más muele más de lo que queda. El mazo reserva contrahechizos, responde a lo que resuelve, y cava con 6 efectos de selección porque ambas mitades de la victoria son raras de copia única. LANZA RUPTURE PRIMERO: el orden natural de la curva es cuatro turnos peor."
+}

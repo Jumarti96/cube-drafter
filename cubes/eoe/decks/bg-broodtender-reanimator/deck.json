@@ -1,0 +1,629 @@
+{
+  "deck_name": "bg-broodtender-reanimator",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-07T17:30:00Z",
+  "format": "40-card",
+  "strategy": "combo - fastest goldfish",
+  "colors": "BG",
+  "identity": "BG Broodtender Reanimator. The deck spends its early turns turning cheap permanents into graveyard cards, using Umbral Collar Zealot's free repeatable 'Sacrifice another creature or artifact: Surveil 1' alongside Seedship Broodtender's and Fell Gravship's 'mill three cards'. Once an oversized body is in the yard, Xu-Ifit, Osteoharmonist returns it for free every turn, Seedship Broodtender's uncapped {3}{B}{G} sacrifice ability returns anything, and Scrounge for Eternity returns the mana-value-5 bodies. The clock is a recurring 9/9 Bygone Colossus. The opponent's answers to a graveyard in this cube are Dauntless Scrapbot (one-shot) and Chrome Companion ('{2}, {T}: Put target card from a graveyard on the bottom of its owner's library', repeatable and colourless) - the latter is the real threat to this plan and is why the deck's own board runs two copies for the mirror.",
+  "restrictions": {
+    "commons_uncommons_max_2": "PASS - no card exceeds 2 copies",
+    "rares_mythics_max_1": "PASS - Xu-Ifit x1, Zero Point Ballad x1",
+    "rare_mythic_total_max_6": "PASS - 2 used (both mainboard); 0 mythics",
+    "basics_unlimited": "12 Swamp + 3 Forest, format-supplied",
+    "colours": "PASS - all cards within BG core identity; no splash"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.04,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.72,
+      "raw_target": 17.72,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.04,
+    "pip_demand": {
+      "B": 23,
+      "G": 2
+    },
+    "land_color_production": {
+      "B": 14,
+      "G": 5
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 92,
+        "prod_pct": 82.4,
+        "gap": 9.6,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 8,
+        "prod_pct": 29.4,
+        "gap": -21.4,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Bygone Colossus",
+      "mana_cost": "{9}",
+      "cmc": 9,
+      "type_line": "Artifact Creature — Robot Giant",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "Warp {3} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "9",
+      "toughness": "9",
+      "tags": [
+        "Artifacts",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Voidforged Titan",
+      "mana_cost": "{4}{B}",
+      "cmc": 5,
+      "type_line": "Artifact Creature — Robot Warrior",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Void — At the beginning of your end step, if a nonland permanent left the battlefield this turn or a spell was warped this turn, you draw a card and lose 1 life.",
+      "power": "5",
+      "toughness": "4",
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "qty": 2,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Monoist Circuit-Feeder",
+      "mana_cost": "{4}{B}{B}",
+      "cmc": 6,
+      "type_line": "Artifact Creature — Nautilus",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flying\nWhen this creature enters, until end of turn, target creature you control gets +X/+0 and target creature an opponent controls gets -0/-X, where X is the number of artifacts you control.",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Artifacts",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Combat Trick"
+      ],
+      "qty": 1,
+      "role": "Payload/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Seedship Broodtender",
+      "mana_cost": "{B}{G}",
+      "cmc": 2,
+      "type_line": "Creature — Insect Citizen",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, mill three cards. (Put the top three cards of your library into your graveyard.)\n{3}{B}{G}, Sacrifice this creature: Return target creature or Spacecraft card from your graveyard to the battlefield. Activate only as a sorcery.",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Engine/Outlet",
+        "Reanimation"
+      ],
+      "qty": 2,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Xu-Ifit, Osteoharmonist",
+      "mana_cost": "{1}{B}{B}",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Wizard",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "{T}: Return target creature card from your graveyard to the battlefield. It's a Skeleton in addition to its other types and has no abilities. Activate only as a sorcery.",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Engine/Outlet",
+        "Reanimation"
+      ],
+      "qty": 1,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Scrounge for Eternity",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nReturn target creature or Spacecraft card with mana value 5 or less from your graveyard to the battlefield. Then create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Lands-Matter",
+        "Tokens",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Reanimation",
+        "Token Generation",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 2,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Umbral Collar Zealot",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Sacrifice another creature or artifact: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Self-Mill",
+        "Graveyard",
+        "Artifacts",
+        "Engine/Outlet",
+        "Sacrifice Outlet",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Fell Gravship",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Artifact — Spacecraft",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this Spacecraft enters, mill three cards, then return a creature or Spacecraft card from your graveyard to your hand.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 8+.)\n8+ | Flying, lifelink",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 2,
+      "role": "Infrastructure/Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hymn of the Faller",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Surveil 1, then you draw a card and lose 1 life. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)\nVoid — If a nonland permanent left the battlefield this turn or a spell was warped this turn, draw another card.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "qty": 2,
+      "role": "Infrastructure/Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wurmwall Sweeper",
+      "mana_cost": "{2}",
+      "cmc": 2,
+      "type_line": "Artifact — Spacecraft",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "When this Spacecraft enters, surveil 2.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 4+.)\n4+ | Flying",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Artifacts",
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Surveil",
+        "Card Selection",
+        "Station"
+      ],
+      "qty": 1,
+      "role": "Infrastructure/Consistency",
+      "board": "mainboard"
+    },
+    {
+      "name": "Timeline Culler",
+      "mana_cost": "{B}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Drix Warlock",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Haste\nYou may cast this card from your graveyard using its warp ability.\nWarp—{B}, Pay 2 life. (You may cast this card from your hand or graveyard for its warp cost. If you do, exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Standalone Threat",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Enabler/Fodder",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Embrace Oblivion",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDestroy target creature or Spacecraft.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Zero Point Ballad",
+      "mana_cost": "{X}{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Destroy all creatures with toughness X or less. You lose X life. If X is 6 or more, return a creature card put into a graveyard this way to the battlefield under your control.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Sweeper/Board Wipe",
+        "Reanimation",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Interaction/Disruption",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunted Mire",
+      "mana_cost": null,
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 12,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {G}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 3,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Shattered Wings",
+      "mana_cost": "{2}{G}",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying. Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Self-Mill",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs artifacts, enchantments and fliers (artifacts 29.7% of cube, evasion 22.5%)"
+    },
+    {
+      "name": "Seedship Impact",
+      "mana_cost": "{1}{G}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target artifact or enchantment. If its mana value was 2 or less, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Tokens",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs cheap artifacts/enchantments and Spacecraft decks; leaves a Lander behind on MV<=2 targets"
+    },
+    {
+      "name": "Gravkill",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs recursive or death-trigger threats and stationed Spacecraft; exile sidesteps dies-triggers"
+    },
+    {
+      "name": "Chrome Companion",
+      "mana_cost": "{2}",
+      "cmc": 2,
+      "type_line": "Artifact Creature — Dog",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life.\n{2}, {T}: Put target card from a graveyard on the bottom of its owner's library.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Artifacts",
+        "Lifegain",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Interaction/Disruption",
+        "Life Drain",
+        "Graveyard Hate"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs graveyard decks and the mirror - repeatable, colourless graveyard removal every turn"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "mana_cost": "{3}",
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "qty": 2,
+      "role": "Interaction/Disruption",
+      "board": "sideboard",
+      "when_to_board": "vs graveyard decks - one-shot full exile of each opponent's graveyard, plus a Lander"
+    }
+  ],
+  "pitch": "BG Broodtender Reanimator. The deck spends its early turns turning cheap permanents into graveyard cards, using Umbral Collar Zealot's free repeatable 'Sacrifice another creature or artifact: Surveil 1' alongside Seedship Broodtender's and Fell Gravship's 'mill three cards'. Once an oversized body is in the yard, Xu-Ifit, Osteoharmonist returns it for free every turn, Seedship Broodtender's uncapped {3}{B}{G} sacrifice ability returns anything, and Scrounge for Eternity returns the mana-value-5 bodies. The clock is a recurring 9/9 Bygone Colossus. The opponent's answers to a graveyard in this cube are Dauntless Scrapbot (one-shot) and Chrome Companion ('{2}, {T}: Put target card from a graveyard on the bottom of its owner's library', repeatable and colourless) - the latter is the real threat to this plan and is why the deck's own board runs two copies for the mirror.",
+  "strategy_es": "combo — el pez dorado más rápido",
+  "identity_es": "Reanimador Broodtender BG. El mazo gasta sus turnos tempranos convirtiendo permanentes baratos en cartas de cementerio, usando el repetible y gratuito 'Sacrifice another creature or artifact: Surveil 1' de Umbral Collar Zealot junto al 'mill three cards' de Seedship Broodtender y Fell Gravship. Una vez hay un cuerpo descomunal en el cementerio, Xu-Ifit, Osteoharmonist lo devuelve gratis cada turno, la habilidad de sacrificio sin límite de {3}{B}{G} de Seedship Broodtender devuelve cualquier cosa, y Scrounge for Eternity devuelve los cuerpos de valor de maná 5. El reloj es un Bygone Colossus 9/9 recurrente. Las respuestas del rival a un cementerio en este cubo son Dauntless Scrapbot (un solo uso) y Chrome Companion ('{2}, {T}: Put target card from a graveyard on the bottom of its owner's library', repetible e incolora); esta última es la amenaza real a este plan y por eso el propio banquillo del mazo lleva dos copias para el espejo.",
+  "pitch_es": "Reanimador Broodtender BG. El mazo gasta sus turnos tempranos convirtiendo permanentes baratos en cartas de cementerio, usando el repetible y gratuito 'Sacrifice another creature or artifact: Surveil 1' de Umbral Collar Zealot junto al 'mill three cards' de Seedship Broodtender y Fell Gravship. Una vez hay un cuerpo descomunal en el cementerio, Xu-Ifit, Osteoharmonist lo devuelve gratis cada turno, la habilidad de sacrificio sin límite de {3}{B}{G} de Seedship Broodtender devuelve cualquier cosa, y Scrounge for Eternity devuelve los cuerpos de valor de maná 5. El reloj es un Bygone Colossus 9/9 recurrente. Las respuestas del rival a un cementerio en este cubo son Dauntless Scrapbot (un solo uso) y Chrome Companion ('{2}, {T}: Put target card from a graveyard on the bottom of its owner's library', repetible e incolora); esta última es la amenaza real a este plan y por eso el propio banquillo del mazo lleva dos copias para el espejo."
+}

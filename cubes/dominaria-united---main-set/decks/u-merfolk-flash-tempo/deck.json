@@ -1,0 +1,638 @@
+{
+  "deck_name": "u-merfolk-flash-tempo",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T14:37:40Z",
+  "format": "40-card",
+  "strategy": "tempo - mono-blue Merfolk flash tempo",
+  "colors": "U",
+  "identity": "A mono-blue flash-tempo deck that wins with cheap evasive bodies - 6 unconditional fliers plus 2 conditionally-unblockable creatures - while one-mana bounce, creature counterspells and instant-speed tricks keep the opponent from ever stabilizing. Vodalian Hexcatcher is the named tribal keystone: it anthems the other 4 Merfolk and converts a spent Merfolk into a flash-speed soft counter. Because Hexcatcher is a rare and the pool rules allow only 1 copy, the deck is deliberately built so the kill mechanism does NOT depend on drawing it - the lord is an upgrade layered on a blue tempo shell that functions without it. Mono-colour is a deliberate structural choice, not a fallback: every untapped dual in this cube is a rare, so any second colour would spend part of the 5-rare budget on lands rather than on spells.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "rare_mythic_cap": 5,
+    "rares_used": [
+      "Vodalian Hexcatcher (main, rare)",
+      "Haughty Djinn (main, rare)",
+      "Aether Channeler (main, rare)",
+      "Sphinx of Clear Skies (main, mythic)",
+      "Silver Scrutiny (side, rare)"
+    ],
+    "rares_used_count": 5
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 3,
+    "accel_count": 5,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.04,
+      "reference_avg_mv": 2.5,
+      "accel": 5,
+      "adjustment": -1.447,
+      "raw_target": 15.553,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.04,
+    "pip_demand": {
+      "U": 27
+    },
+    "land_color_production": {
+      "U": 16
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Pixie Illusionist",
+      "oracle_text": "Kicker {3}{G} (You may pay an additional {3}{G} as you cast this spell.)\nFlying\nIf this creature was kicked, it enters with two +1/+1 counters on it.\n{T}: Target land you control becomes the basic land type of your choice until end of turn.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Faerie Wizard",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Kicker/Scaling",
+        "Counters (+1/+1)",
+        "Lands-Matter",
+        "Domain",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Land Type Change",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "evasive body core",
+      "board": "mainboard"
+    },
+    {
+      "name": "Vodalian Hexcatcher",
+      "oracle_text": "Flash\nOther Merfolk you control get +1/+1.\nSacrifice a Merfolk: Counter target noncreature spell unless its controller pays {1}.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Wizard",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Sacrifice Outlet"
+      ],
+      "qty": 1,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haunting Figment",
+      "oracle_text": "Vigilance\nThis creature can't be blocked as long as you've cast an instant or sorcery spell this turn.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Illusion",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Spellslinger",
+        "Standalone Threat"
+      ],
+      "qty": 2,
+      "role": "evasive body core",
+      "board": "mainboard"
+    },
+    {
+      "name": "Volshe Tideturner",
+      "oracle_text": "{T}: Add {U}. Spend this mana only to cast an instant or sorcery spell or a kicked spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Wizard",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Spellslinger",
+        "Kicker/Scaling",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "qty": 2,
+      "role": "engine/infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Battlewing Mystic",
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nFlying\nWhen this creature enters, if it was kicked, discard your hand, then draw two cards.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Bird Wizard",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Kicker/Scaling",
+        "Wheels",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Looting",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "evasive body core",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haughty Djinn",
+      "oracle_text": "Flying\nHaughty Djinn's power is equal to the number of instant and sorcery cards in your graveyard.\nInstant and sorcery spells you cast cost {1} less to cast.",
+      "mana_cost": "{1}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Djinn",
+      "rarity": "rare",
+      "power": "*",
+      "toughness": "4",
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Cost Reduction"
+      ],
+      "qty": 1,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Voda Sea Scavenger",
+      "oracle_text": "Domain — When this creature enters, look at the top X cards of your library, where X is the number of basic land types among lands you control. You may put one of those cards on top of your library. Put the rest on the bottom of your library in a random order.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Merfolk Rogue",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Domain",
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "evasive body core (Merfolk fodder)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Aether Channeler",
+      "oracle_text": "When this creature enters, choose one —\n• Create a 1/1 white Bird creature token with flying.\n• Return another target nonland permanent to its owner's hand.\n• Draw a card.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Wizard",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tokens",
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Bounce",
+        "Card Draw"
+      ],
+      "qty": 1,
+      "role": "engine/infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Frostfist Strider",
+      "oracle_text": "Ward {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)\nWhen this creature enters, tap target creature an opponent controls and put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Elemental Giant",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Interaction/Disruption",
+        "Tap Effect",
+        "Stun"
+      ],
+      "qty": 1,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sphinx of Clear Skies",
+      "oracle_text": "Flying, ward {2}\nDomain — Whenever this creature deals combat damage to a player, reveal the top X cards of your library, where X is the number of basic land types among lands you control. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard. (Piles can be empty.)",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Sphinx",
+      "rarity": "mythic",
+      "power": "5",
+      "toughness": "5",
+      "tags": [
+        "Domain",
+        "Lands-Matter",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Card Advantage"
+      ],
+      "qty": 1,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rona's Vortex",
+      "oracle_text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nReturn target creature or planeswalker you don't control to its owner's hand. If this spell was kicked, put that permanent on the bottom of its owner's library instead.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Bounce",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Shore Up",
+      "oracle_text": "Target creature you control gets +1/+1 and gains hexproof until end of turn. Untap it. (It can't be the target of spells or abilities your opponents control.)",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Protection"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Timely Interference",
+      "oracle_text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nTarget creature gets -1/-0 until end of turn. If this spell was kicked, that creature blocks this turn if able.\nDraw a card.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Combat Trick",
+        "Card Draw",
+        "Kicker",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 2,
+      "role": "engine/infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Combat Research",
+      "oracle_text": "Enchant creature\nEnchanted creature has \"Whenever this creature deals combat damage to a player, draw a card.\"\nAs long as enchanted creature is legendary, it gets +1/+1 and has ward {1}. (Whenever enchanted creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {1}.)",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Protection"
+      ],
+      "qty": 1,
+      "role": "engine/infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Essence Scatter",
+      "oracle_text": "Counter target creature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 2,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 16,
+      "role": "land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Negate",
+      "oracle_text": "Counter target noncreature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 2,
+      "role": "hate: sweepers + enchantment removal",
+      "board": "sideboard",
+      "when_to_board": "vs. any deck holding one of the cube's 6 sweepers or an exile-enchantment (Temporary Lockdown, Citizen's Arrest, Leyline Binding, Prayer of Binding)"
+    },
+    {
+      "name": "Ertai's Scorn",
+      "oracle_text": "This spell costs {U} less to cast if an opponent cast two or more spells this turn.\nCounter target spell.",
+      "mana_cost": "{1}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 2,
+      "role": "hate: stack, catch-all counter",
+      "board": "sideboard",
+      "when_to_board": "vs. control and any deck that double-spells to untap, where the {U} discount is live"
+    },
+    {
+      "name": "Talas Lookout",
+      "oracle_text": "Flying\nWhen this creature dies, look at the top two cards of your library. Put one of them into your hand and the other into your graveyard.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Pirate",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "flex: evasion answer + card on death",
+      "board": "sideboard",
+      "when_to_board": "vs. the cube's 51 evasion cards, and vs. removal-heavy decks where a body that replaces itself beats a body that does not"
+    },
+    {
+      "name": "Impede Momentum",
+      "oracle_text": "Tap target creature and put three stun counters on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nScry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Tap Effect",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "hate: single large threat",
+      "board": "sideboard",
+      "when_to_board": "vs. decks whose plan is one oversized creature - three stun counters is three missed untap steps, and blue has no hard removal"
+    },
+    {
+      "name": "Impulse",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 1,
+      "role": "flex: consistency",
+      "board": "sideboard",
+      "when_to_board": "vs. grindy matchups where finding the one specific answer matters more than raw speed"
+    },
+    {
+      "name": "Silver Scrutiny",
+      "oracle_text": "You may cast this spell as though it had flash if X is 3 or less.\nDraw X cards.",
+      "mana_cost": "{X}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Net-Positive"
+      ],
+      "qty": 1,
+      "role": "flex: attrition refuel",
+      "board": "sideboard",
+      "when_to_board": "vs. decks that trade one-for-one and try to out-last the clock"
+    }
+  ],
+  "pitch": "A mono-blue flash-tempo deck that wins with cheap evasive bodies - 6 unconditional fliers plus 2 conditionally-unblockable creatures - while one-mana bounce, creature counterspells and instant-speed tricks keep the opponent from ever stabilizing. Vodalian Hexcatcher is the named tribal keystone: it anthems the other 4 Merfolk and converts a spent Merfolk into a flash-speed soft counter. Because Hexcatcher is a rare and the pool rules allow only 1 copy, the deck is deliberately built so the kill mechanism does NOT depend on drawing it - the lord is an upgrade layered on a blue tempo shell that functions without it. Mono-colour is a deliberate structural choice, not a fallback: every untapped dual in this cube is a rare, so any second colour would spend part of the 5-rare budget on lands rather than on spells.",
+  "strategy_es": "tempo — tempo de Tritones con flash mono azul",
+  "identity_es": "Un tempo de flash mono azul que gana con cuerpos evasivos y baratos — 6 voladores incondicionales más 2 criaturas condicionalmente imbloqueables — mientras el rebote de un maná, los contrahechizos de criaturas y los trucos a velocidad de instantáneo impiden que el rival se estabilice nunca. Vodalian Hexcatcher es la piedra angular tribal nombrada: da anthem a los otros 4 Tritones y convierte un Tritón gastado en un contrahechizo blando a velocidad de flash. Como Hexcatcher es una rara y las reglas del pool permiten solo 1 copia, el mazo está construido deliberadamente para que el mecanismo de victoria NO dependa de robarla: el señor es una mejora superpuesta a un armazón de tempo azul que funciona sin él. Ser monocolor es una elección estructural deliberada y no un recurso de última hora: cada dual desgirada de este cubo es una rara, así que cualquier segundo color gastaría parte del presupuesto de 5 raras en tierras en lugar de en hechizos.",
+  "pitch_es": "Un tempo de flash mono azul que gana con cuerpos evasivos y baratos — 6 voladores incondicionales más 2 criaturas condicionalmente imbloqueables — mientras el rebote de un maná, los contrahechizos de criaturas y los trucos a velocidad de instantáneo impiden que el rival se estabilice nunca. Vodalian Hexcatcher es la piedra angular tribal nombrada: da anthem a los otros 4 Tritones y convierte un Tritón gastado en un contrahechizo blando a velocidad de flash. Como Hexcatcher es una rara y las reglas del pool permiten solo 1 copia, el mazo está construido deliberadamente para que el mecanismo de victoria NO dependa de robarla: el señor es una mejora superpuesta a un armazón de tempo azul que funciona sin él. Ser monocolor es una elección estructural deliberada y no un recurso de última hora: cada dual desgirada de este cubo es una rara, así que cualquier segundo color gastaría parte del presupuesto de 5 raras en tierras en lugar de en hechizos."
+}

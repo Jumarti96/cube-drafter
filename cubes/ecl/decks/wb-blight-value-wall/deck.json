@@ -1,0 +1,996 @@
+{
+  "deck_name": "wb-blight-value-wall",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-11T18:41:39Z",
+  "format": "40-card",
+  "strategy": "toughness-matters control",
+  "colors": "WB",
+  "identity": "WB toughness-matters control. There is no Doran here — green was cut so the mana base could be two colours, and only 4 of 18 lands enter tapped as a result. The deck holds the ground behind large, lifelinking bodies and answers threats one for one with eight removal spells, then converts the stalled board into a kill with Bark of Doran, which makes an equipped creature assign combat damage equal to its toughness rather than its power: a Bark'd Blighted Blackthorn assigns 8. Because Bark is capped at two copies the deck carries two independent backups — Curious Colossus reduces the opposing board to abilityless 1/1s, and Sun-Dappled Celebrant is a 5/6 that attacks and still blocks on vigilance. Note that three of the carriers do NOT arrive at their printed size: Slumbering Walker enters as a 2/5, and Reaping Willow and Moonlit Lamenter each enter as a 1/4. That is by design — the -1/-1 counters they enter with are the fuel for Moonlit Lamenter's draw and Reaping Willow's and Slumbering Walker's recursion, and because -1/-1 counters reduce power and toughness equally, no creature ever loses its Bark eligibility.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "user_constraint": "max 5 rare/mythic cards total across mainboard + sideboard"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.59,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 1.453,
+      "raw_target": 18.453,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.59,
+    "pip_demand": {
+      "W": 15,
+      "B": 10
+    },
+    "land_color_production": {
+      "W": 11,
+      "B": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 40,
+        "prod_pct": 38.9,
+        "gap": 1.1,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 60,
+        "prod_pct": 61.1,
+        "gap": -1.1,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Bark of Doran",
+      "oracle_text": "Equipped creature gets +0/+1.\nAs long as equipped creature's toughness is greater than its power, it assigns combat damage equal to its toughness rather than its power.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Voltron/Equipment",
+        "Payload/Payoff",
+        "Combat Modification"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Modification"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact — Equipment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Payoff — converts toughness to damage"
+    },
+    {
+      "name": "Curious Colossus",
+      "oracle_text": "When this creature enters, each creature target opponent controls loses all abilities, becomes a Coward in addition to its other types, and has base power and toughness 1/1.",
+      "mana_cost": "{5}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Ability Removal",
+        "Base P/T Set"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Ability Removal",
+          "Base P/T Set"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 7,
+      "type_line": "Creature — Giant Warrior",
+      "rarity": "mythic",
+      "power": "7",
+      "toughness": "7",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payoff — Bark-independent finisher; neuters the opposing board"
+    },
+    {
+      "name": "Sun-Dappled Celebrant",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nVigilance",
+      "mana_cost": "{4}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Enabler/Fodder"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Creature — Treefolk Cleric",
+      "rarity": "common",
+      "power": "5",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Payoff — Bark-independent 5/6 clock; vigilance attacks and blocks"
+    },
+    {
+      "name": "Blighted Blackthorn",
+      "oracle_text": "Whenever this creature enters or attacks, you may blight 2. If you do, you draw a card and lose 1 life. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Counter Placement",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Counter Placement"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Creature — Treefolk Warlock",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "7",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Carrier — 3/7 assigns 8 under Bark; draws on enter/attack"
+    },
+    {
+      "name": "Slumbering Walker",
+      "oracle_text": "This creature enters with two -1/-1 counters on it.\nAt the beginning of your end step, you may remove a counter from this creature. When you do, return target creature card with power 2 or less from your graveyard to the battlefield.",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Reanimator",
+        "Graveyard",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Reanimation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Reanimator",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Reanimation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Giant Warrior",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "7",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Carrier — enters 2/5, grows to 4/7; end-step recursion"
+    },
+    {
+      "name": "Reaping Willow",
+      "oracle_text": "Lifelink\nThis creature enters with two -1/-1 counters on it.\n{1}{W/B}, Remove two counters from this creature: Return target creature card with mana value 3 or less from your graveyard to the battlefield. Activate only as a sorcery.",
+      "mana_cost": "{1}{W/B}{W/B}{W/B}",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Reanimator",
+        "Graveyard",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Reanimation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Reanimator",
+          "Graveyard",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Reanimation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Treefolk Cleric",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Carrier — enters 1/4 lifelink; counters convert to reanimation"
+    },
+    {
+      "name": "Nightmare Sower",
+      "oracle_text": "Flying, lifelink\nWhenever you cast a spell during an opponent's turn, put a -1/-1 counter on up to one target creature.",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Faerie Assassin",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Carrier — 2/3 flying lifelink; the mainboard's only evasion"
+    },
+    {
+      "name": "Moonlit Lamenter",
+      "oracle_text": "This creature enters with a -1/-1 counter on it.\n{1}{W}, Remove a counter from this creature: Draw a card. Activate only as a sorcery.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Treefolk Cleric",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — converts -1/-1 counters into cards"
+    },
+    {
+      "name": "Requiting Hex",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nDestroy target creature with mana value 2 or less. If this spell's additional cost was paid, you gain 2 life.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — 1-mana removal for mv<=2"
+    },
+    {
+      "name": "Bogslither's Embrace",
+      "oracle_text": "As an additional cost to cast this spell, blight 1 or pay {3}. (To blight 1, put a -1/-1 counter on a creature you control.)\nExile target creature.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — unconditional exile"
+    },
+    {
+      "name": "Crib Swap",
+      "oracle_text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — instant-speed unconditional exile"
+    },
+    {
+      "name": "Pyrrhic Strike",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 2. (You may put two -1/-1 counters on a creature you control.)\nChoose one. If this spell's additional cost was paid, choose both instead.\n• Destroy target artifact or enchantment.\n• Destroy target creature with mana value 3 or greater.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — modal artifact/enchantment + mv>=3 creature"
+    },
+    {
+      "name": "Darkness Descends",
+      "oracle_text": "Put two -1/-1 counters on each creature.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — asymmetric sweeper"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — WB dual, enters tapped"
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Fetch",
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — basic fetch"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 9,
+      "role": "Land — basic"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 5,
+      "role": "Land — basic"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs graveyard (39 cube cards); a 3/3 flier vs evasion (41)"
+    },
+    {
+      "name": "Keep Out",
+      "oracle_text": "Choose one —\n• Keep Out deals 4 damage to target tapped creature.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs fliers (they tap to attack) / enchantments (21)"
+    },
+    {
+      "name": "Liminal Hold",
+      "oracle_text": "When this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Lifegain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs artifacts+enchantments (32) — exiles any nonland permanent"
+    },
+    {
+      "name": "Nameless Inversion",
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs cheap evasive creatures — instant -3 toughness"
+    },
+    {
+      "name": "Bloodline Bidding",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nChoose a creature type. Return all creature cards of the chosen type from your graveyard to the battlefield.",
+      "mana_cost": "{6}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Reanimation",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Reanimator",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Reanimation"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 8,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "vs sweepers/grind — naming Treefolk rebuys 8 of 12 creature copies"
+    },
+    {
+      "name": "Dose of Dawnglow",
+      "oracle_text": "Return target creature card from your graveyard to the battlefield. Then if it isn't your main phase, blight 2. (Put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Reanimation",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Reanimator",
+          "Graveyard",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Reanimation"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "vs removal-heavy decks — unconditional reanimation, 12 of 12 copies"
+    }
+  ],
+  "pitch": "WB toughness-matters control. There is no Doran here — green was cut so the mana base could be two colours, and only 4 of 18 lands enter tapped as a result. The deck holds the ground behind large, lifelinking bodies and answers threats one for one with eight removal spells, then converts the stalled board into a kill with Bark of Doran, which makes an equipped creature assign combat damage equal to its toughness rather than its power: a Bark'd Blighted Blackthorn assigns 8. Because Bark is capped at two copies the deck carries two independent backups — Curious Colossus reduces the opposing board to abilityless 1/1s, and Sun-Dappled Celebrant is a 5/6 that attacks and still blocks on vigilance. Note that three of the carriers do NOT arrive at their printed size: Slumbering Walker enters as a 2/5, and Reaping Willow and Moonlit Lamenter each enter as a 1/4. That is by design — the -1/-1 counters they enter with are the fuel for Moonlit Lamenter's draw and Reaping Willow's and Slumbering Walker's recursion, and because -1/-1 counters reduce power and toughness equally, no creature ever loses its Bark eligibility.",
+  "strategy_es": "control de la resistencia importa",
+  "identity_es": "Control WB de la resistencia importa. Aquí no hay Doran: el verde se cortó para que la base de maná fuera bicolor, y como resultado solo 4 de 18 tierras entran giradas. El mazo sostiene el suelo tras cuerpos grandes con vínculo vital y responde a las amenazas uno a uno con ocho hechizos de eliminación, y luego convierte el tablero atascado en una victoria con Bark of Doran, que hace que una criatura equipada asigne daño de combate igual a su resistencia en lugar de a su fuerza: un Blighted Blackthorn con Bark asigna 8. Como Bark está limitada a dos copias, el mazo lleva dos respaldos independientes: Curious Colossus reduce el tablero rival a 1/1 sin habilidades, y Sun-Dappled Celebrant es un 5/6 que ataca y sigue bloqueando gracias a la vigilancia. Ojo: tres de los portadores NO llegan a su tamaño impreso. Slumbering Walker entra como 2/5, y Reaping Willow y Moonlit Lamenter entran cada uno como 1/4. Eso es por diseño: los contadores -1/-1 con los que entran son el combustible del robo de Moonlit Lamenter y de la recursión de Reaping Willow y Slumbering Walker, y como los contadores -1/-1 reducen fuerza y resistencia por igual, ninguna criatura pierde jamás su elegibilidad para Bark.",
+  "pitch_es": "Control WB de la resistencia importa. Aquí no hay Doran: el verde se cortó para que la base de maná fuera bicolor, y como resultado solo 4 de 18 tierras entran giradas. El mazo sostiene el suelo tras cuerpos grandes con vínculo vital y responde a las amenazas uno a uno con ocho hechizos de eliminación, y luego convierte el tablero atascado en una victoria con Bark of Doran, que hace que una criatura equipada asigne daño de combate igual a su resistencia en lugar de a su fuerza: un Blighted Blackthorn con Bark asigna 8. Como Bark está limitada a dos copias, el mazo lleva dos respaldos independientes: Curious Colossus reduce el tablero rival a 1/1 sin habilidades, y Sun-Dappled Celebrant es un 5/6 que ataca y sigue bloqueando gracias a la vigilancia. Ojo: tres de los portadores NO llegan a su tamaño impreso. Slumbering Walker entra como 2/5, y Reaping Willow y Moonlit Lamenter entran cada uno como 1/4. Eso es por diseño: los contadores -1/-1 con los que entran son el combustible del robo de Moonlit Lamenter y de la recursión de Reaping Willow y Slumbering Walker, y como los contadores -1/-1 reducen fuerza y resistencia por igual, ninguna criatura pierde jamás su elegibilidad para Bark."
+}

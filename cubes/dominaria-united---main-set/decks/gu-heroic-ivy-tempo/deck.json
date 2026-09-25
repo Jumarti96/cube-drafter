@@ -1,0 +1,1099 @@
+{
+  "deck_name": "gu-heroic-ivy-tempo",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-20T00:57:02Z",
+  "format": "40-card",
+  "strategy": "tempo",
+  "colors": "GU",
+  "identity": "Pure green-blue tempo on Ivy, Gleeful Spellthief. Ivy copies any spell targeting only a single creature other than herself and the copy targets Ivy, so 10 of the 24 nonland cards buff a ground body and a 2/1 flier at once. With no red splash there is no double-strike burst, so the kill is grindier: Combat Research's Aura copy lands on legendary Ivy for +1/+1, ward {1} and a card per connection, and the deck wins by flying over while refuelling. It is threat-dense by design -- 11 creatures -- because Ivy's trigger needs a second body on board before any trick can double.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2,
+        "rare": 1,
+        "mythic": 1
+      },
+      "only_from": {},
+      "excluded": []
+    },
+    "deck_construction_constraint": "max 5 rare/mythic total across mainboard + sideboard",
+    "checks": [
+      {
+        "check": "1a mainboard size",
+        "result": "PASS",
+        "detail": "40 == 40"
+      },
+      {
+        "check": "1b sideboard size",
+        "result": "PASS",
+        "detail": "10 == 10"
+      },
+      {
+        "check": "2 exact-name membership",
+        "result": "PASS",
+        "detail": "missing: []"
+      },
+      {
+        "check": "3 copy limits",
+        "result": "PASS",
+        "detail": "violations: []"
+      },
+      {
+        "check": "3b rare/mythic budget",
+        "result": "PASS",
+        "detail": "4 rare+mythic of max 5"
+      },
+      {
+        "check": "4 colour usability via best_mode",
+        "result": "PASS",
+        "detail": "unusable: [] ; non-normal modes: {}"
+      },
+      {
+        "check": "5a splash cards in candidate list",
+        "result": "PASS",
+        "detail": "off-list: []"
+      },
+      {
+        "check": "5b splash cap <=3 per colour",
+        "result": "PASS",
+        "detail": "0 splash cards: []"
+      }
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 15,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 4,
+    "accel_count": 4,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 1.54,
+      "reference_avg_mv": 2.5,
+      "accel": 4,
+      "adjustment": -1.947,
+      "raw_target": 15.053,
+      "clamped": false,
+      "recommended_land_count": 15,
+      "p_window_at_recommended": 0.7763
+    },
+    "avg_cmc": 1.54,
+    "pip_demand": {
+      "G": 8,
+      "U": 17
+    },
+    "land_color_production": {
+      "G": 8,
+      "U": 11,
+      "B": 2
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 32,
+        "prod_pct": 50,
+        "gap": -18,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 68,
+        "prod_pct": 68.8,
+        "gap": -0.8,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Ivy, Gleeful Spellthief",
+      "oracle_text": "Flying\nWhenever a player casts a spell that targets only a single creature other than Ivy, you may copy that spell. The copy targets Ivy. (A copy of an Aura spell becomes a token.)",
+      "mana_cost": "{G}{U}",
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Engine/Outlet",
+        "Copy Spell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Copy Spell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Legendary Creature — Faerie Rogue",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payoff — copy engine; every beneficial single-creature-target spell also buffs this 2/1 flier"
+    },
+    {
+      "name": "Pixie Illusionist",
+      "oracle_text": "Kicker {3}{G} (You may pay an additional {3}{G} as you cast this spell.)\nFlying\nIf this creature was kicked, it enters with two +1/+1 counters on it.\n{T}: Target land you control becomes the basic land type of your choice until end of turn.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Counters (+1/+1)",
+        "Lands-Matter",
+        "Domain",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Land Type Change",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Counters (+1/+1)",
+          "Lands-Matter",
+          "Domain"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Type Change",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Faerie Wizard",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat — {U} 1/1 flier; kicker {3}{G} for two +1/+1 counters is the flood outlet, and its {T} ability raises Domain"
+    },
+    {
+      "name": "Haunting Figment",
+      "oracle_text": "Vigilance\nThis creature can't be blocked as long as you've cast an instant or sorcery spell this turn.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Illusion",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat — 2/1 vigilance, unblockable on any turn an instant or sorcery was cast"
+    },
+    {
+      "name": "Battlewing Mystic",
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nFlying\nWhen this creature enters, if it was kicked, discard your hand, then draw two cards.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Wheels",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Looting",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Wheels"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Looting",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Bird Wizard",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat — 2/1 flier for two mana (kicker {R} is dead here); the cheapest evasive Combat Research carrier"
+    },
+    {
+      "name": "Yavimaya Iconoclast",
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nTrample\nWhen this creature enters, if it was kicked, it gets +1/+1 and gains haste until end of turn.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Standalone Threat",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Elf",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat — the best raw two-mana body available: 3/2 trample"
+    },
+    {
+      "name": "Quirion Beastcaller",
+      "oracle_text": "Whenever you cast a creature spell, put a +1/+1 counter on this creature.\nWhen this creature dies, distribute X +1/+1 counters among any number of target creatures you control, where X is the number of +1/+1 counters on this creature.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Dryad Warrior",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat — grows on each creature spell; on death redistributes its counters"
+    },
+    {
+      "name": "Aether Channeler",
+      "oracle_text": "When this creature enters, choose one —\n• Create a 1/1 white Bird creature token with flying.\n• Return another target nonland permanent to its owner's hand.\n• Draw a card.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Tokens",
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Bounce",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Bounce",
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Wizard",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — modal ETB: bird token, bounce a nonland permanent, or draw a card"
+    },
+    {
+      "name": "Gaea's Might",
+      "oracle_text": "Domain — Target creature gets +1/+1 until end of turn for each basic land type among lands you control.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Domain",
+        "Interaction/Disruption",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Domain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Payoff — {G} for a doubled pump; +3/+3 once a Haunted Mire is down (Domain 3)"
+    },
+    {
+      "name": "Colossal Growth",
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nTarget creature gets +3/+3 until end of turn. If this spell was kicked, instead that creature gets +4/+4 and gains trample and haste until end of turn.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Payload/Payoff",
+        "Combat Trick",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Payoff — {1}{G} base mode is +3/+3 with no colour or Domain dependency; only the kicker is red"
+    },
+    {
+      "name": "Combat Research",
+      "oracle_text": "Enchant creature\nEnchanted creature has \"Whenever this creature deals combat damage to a player, draw a card.\"\nAs long as enchanted creature is legendary, it gets +1/+1 and has ward {1}. (Whenever enchanted creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {1}.)",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Voltron/Equipment",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — the Aura copy lands on legendary Ivy: +1/+1, ward {1}, and a card per connection"
+    },
+    {
+      "name": "Shore Up",
+      "oracle_text": "Target creature you control gets +1/+1 and gains hexproof until end of turn. Untap it. (It can't be the target of spells or abilities your opponents control.)",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — instant-speed hexproof on Ivy that also doubles as a +1/+1"
+    },
+    {
+      "name": "Timely Interference",
+      "oracle_text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nTarget creature gets -1/-0 until end of turn. If this spell was kicked, that creature blocks this turn if able.\nDraw a card.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Combat Trick",
+        "Card Draw",
+        "Kicker",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Card Draw",
+          "Kicker"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — {U}: shrink a blocker and draw; the Ivy copy is a full copy and draws a second card, at the cost of -1/-0 on Ivy"
+    },
+    {
+      "name": "Rona's Vortex",
+      "oracle_text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nReturn target creature or planeswalker you don't control to its owner's hand. If this spell was kicked, put that permanent on the bottom of its owner's library instead.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Bounce",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — {U} base mode: return target creature or planeswalker you don't control to its owner's hand; the deck's only answer to a RESOLVED threat"
+    },
+    {
+      "name": "Essence Scatter",
+      "oracle_text": "Counter target creature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — counters the large body that would wall the ground half"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 3,
+      "role": "Land — G source and the Forest basic type"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 8,
+      "role": "Land — U source and the Island basic type"
+    },
+    {
+      "name": "Haunted Mire",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — Swamp Forest: a GREEN source that carries a THIRD basic land type, taking Domain to 3; enters tapped"
+    },
+    {
+      "name": "Tangled Islet",
+      "oracle_text": "({T}: Add {G} or {U}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Forest Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — the only GU dual carrying BOTH the Forest and Island types; enters tapped"
+    },
+    {
+      "name": "Yavimaya Coast",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {G} or {U}. This land deals 1 damage to you.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land — the pool's only untapped GU dual (rare); {T}: Add {G} or {U}, 1 damage"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Snarespinner",
+      "oracle_text": "Reach\nWhenever this creature blocks a creature with flying, this creature gets +2/+0 until end of turn.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Spider",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs evasion (51 cards, 20.7% of the cube) — reach, and +2/+0 whenever it blocks a flier"
+    },
+    {
+      "name": "Broken Wings",
+      "oracle_text": "Destroy target artifact, enchantment, or creature with flying.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs artifacts (15), enchantments (18) and fliers — destroy target artifact, enchantment, or creature with flying"
+    },
+    {
+      "name": "Tear Asunder",
+      "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nExile target artifact or enchantment. If this spell was kicked, exile target nonland permanent instead.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs noncreature permanents — exile target artifact or enchantment; answers an aura or Arrest pinning Ivy"
+    },
+    {
+      "name": "Negate",
+      "oracle_text": "Counter target noncreature spell.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "vs the cube's 6 sweepers and vs targeted removal — none of the 6 is a creature spell"
+    },
+    {
+      "name": "Bite Down",
+      "oracle_text": "Target creature you control deals damage equal to its power to target creature or planeswalker you don't control.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Fight"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Fight"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "vs resolved creatures — one-directional damage, so unlike Tail Swipe the attacking body takes none back"
+    },
+    {
+      "name": "Protect the Negotiators",
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nIf this spell was kicked, create a 1/1 white Soldier creature token.\nCounter target spell unless its controller pays {1} for each creature you control.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Tokens",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Token Generation",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell",
+          "Token Generation",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "vs any spell type — counter target spell unless its controller pays {1} for each creature you control; live on 10 non-Ivy bodies"
+    }
+  ],
+  "pitch": "Pure green-blue tempo on Ivy, Gleeful Spellthief. Ivy copies any spell targeting only a single creature other than herself and the copy targets Ivy, so 10 of the 24 nonland cards buff a ground body and a 2/1 flier at once. With no red splash there is no double-strike burst, so the kill is grindier: Combat Research's Aura copy lands on legendary Ivy for +1/+1, ward {1} and a card per connection, and the deck wins by flying over while refuelling. It is threat-dense by design -- 11 creatures -- because Ivy's trigger needs a second body on board before any trick can double.",
+  "strategy_es": "tempo",
+  "identity_es": "Tempo verde-azul puro sobre Ivy, Gleeful Spellthief. Ivy copia cualquier hechizo que apunte solo a una criatura que no sea ella misma y la copia apunta a Ivy, así que 10 de las 24 cartas no-tierra mejoran un cuerpo terrestre y una voladora 2/1 a la vez. Sin salpicadura roja no hay ráfaga de doble golpe, así que la victoria es más machacona: la copia del aura de Combat Research aterriza sobre la legendaria Ivy para +1/+1, ward {1} y una carta por conexión, y el mazo gana volando por encima mientras se reabastece. Es denso en amenazas por diseño — 11 criaturas — porque el disparo de Ivy necesita un segundo cuerpo en el tablero antes de que cualquier truco pueda duplicarse.",
+  "pitch_es": "Tempo verde-azul puro sobre Ivy, Gleeful Spellthief. Ivy copia cualquier hechizo que apunte solo a una criatura que no sea ella misma y la copia apunta a Ivy, así que 10 de las 24 cartas no-tierra mejoran un cuerpo terrestre y una voladora 2/1 a la vez. Sin salpicadura roja no hay ráfaga de doble golpe, así que la victoria es más machacona: la copia del aura de Combat Research aterriza sobre la legendaria Ivy para +1/+1, ward {1} y una carta por conexión, y el mazo gana volando por encima mientras se reabastece. Es denso en amenazas por diseño — 11 criaturas — porque el disparo de Ivy necesita un segundo cuerpo en el tablero antes de que cualquier truco pueda duplicarse."
+}

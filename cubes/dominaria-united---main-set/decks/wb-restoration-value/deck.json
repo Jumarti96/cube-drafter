@@ -1,0 +1,729 @@
+{
+  "deck_name": "wb-restoration-value",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T00:00:00Z",
+  "format": "40-card",
+  "strategy": "midrange — Sheoldred's Restoration reanimator",
+  "colors": "WB",
+  "identity": "A W/B graveyard-value midrange deck. It stocks its own graveyard on purpose (Eerie Soultender's ETB mill, Gibbering Barricade's repeatable sacrifice, Bone Splinters' additional cost, Liliana's symmetric discard) and then spends that yard three different ways: Sheoldred's Restoration and The Cruelty of Gix return a body to the battlefield, Serra Paragon rebuys the MV<=3 half every turn, and Monstrous War-Leech and Writhing Necromass read the yard directly off the cast side so no reanimation spell is needed at all. Elas il-Kor turns every creature that dies on the way there into direct damage, so filling the yard and building the clock are one action. It is deliberately built around LOW-mana-value reanimation targets, because Sheoldred's Restoration unkicked charges life equal to the returned card's mana value.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_user_constraint": "At most 5 rare-or-mythic cards total across mainboard + sideboard (rare LANDS count)."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.78,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.373,
+      "raw_target": 17.373,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.78,
+    "pip_demand": {
+      "B": 24,
+      "W": 5
+    },
+    "land_color_production": {
+      "B": 13,
+      "W": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 82.8,
+        "prod_pct": 76.5,
+        "gap": 6.3,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 17.2,
+        "prod_pct": 41.2,
+        "gap": -24,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Sheoldred's Restoration",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {2}{W} (You may pay an additional {2}{W} as you cast this spell.)\nReturn target creature card from your graveyard to the battlefield. If this spell was kicked, you gain life equal to that card's mana value. Otherwise, you lose that much life.\nExile Sheoldred's Restoration.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Kicker/Scaling",
+        "Lifegain",
+        "Payload/Payoff",
+        "Reanimation",
+        "Kicker",
+        "Life: Cost"
+      ],
+      "qty": 2,
+      "role": "Engine/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eerie Soultender",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Creature — Spirit Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, mill three cards. (Put the top three cards of your library into your graveyard.)\n{4}{B}, Exile this card from your graveyard: Return another target creature card from your graveyard to your hand.",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Reanimator",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Recursion"
+      ],
+      "qty": 2,
+      "role": "Engine/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Urborg Repossession",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "common",
+      "oracle_text": "Kicker {1}{G} (You may pay an additional {1}{G} as you cast this spell.)\nReturn target creature card from your graveyard to your hand. You gain 2 life. If this spell was kicked, return another target permanent card from your graveyard to your hand.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Kicker/Scaling",
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Regrowth",
+        "Kicker",
+        "Cards: Net-Positive"
+      ],
+      "qty": 1,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Serra Paragon",
+      "mana_cost": "{2}{W}{W}",
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Flying\nOnce during each of your turns, you may play a land from your graveyard or cast a permanent spell with mana value 3 or less from your graveyard. If you do, it gains \"When this permanent is put into a graveyard from the battlefield, exile it and you gain 2 life.\"",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Graveyard",
+        "Lands-Matter",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Recursion",
+        "Life Gain",
+        "Cards: Net-Positive"
+      ],
+      "qty": 1,
+      "role": "Engine/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "The Cruelty of Gix",
+      "mana_cost": "{3}{B}{B}",
+      "cmc": 5,
+      "type_line": "Enchantment — Saga",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — Target opponent reveals their hand. You choose a creature or planeswalker card from it. That player discards that card.\nII — Search your library for a card, put that card into your hand, then shuffle. You lose 3 life.\nIII — Put target creature card from a graveyard onto the battlefield under your control.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Sagas",
+        "Reanimator",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Discard",
+        "Tutor",
+        "Reanimation",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Engine/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Liliana of the Veil",
+      "mana_cost": "{1}{B}{B}",
+      "cmc": 3,
+      "type_line": "Legendary Planeswalker — Liliana",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "+1: Each player discards a card.\n−2: Target player sacrifices a creature.\n−6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Discard",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Engine/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gibbering Barricade",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Creature — Nightmare Wall",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Defender\n{2}{B}, Sacrifice a creature: You gain 1 life and draw a card.",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Defender Matters",
+        "Lifegain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "qty": 2,
+      "role": "Engine/Outlet",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Lifegain",
+        "Life Drain",
+        "Standalone Threat",
+        "Payload/Payoff"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Writhing Necromass",
+      "mana_cost": "{6}{B}",
+      "cmc": 7,
+      "type_line": "Creature — Zombie Giant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "This spell costs {1} less to cast for each creature card in your graveyard.\nDeathtouch",
+      "power": "5",
+      "toughness": "5",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Standalone Threat",
+        "Cost Reduction"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Monstrous War-Leech",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Creature — Leech Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {U} (You may pay an additional {U} as you cast this spell.)\nAs this creature enters, if it was kicked, mill four cards. (To mill a card, put the top card of your library into your graveyard.)\nMonstrous War-Leech's power and toughness are each equal to the greatest mana value among cards in your graveyard.",
+      "power": "*",
+      "toughness": "*",
+      "tags": [
+        "Kicker/Scaling",
+        "Graveyard",
+        "Self-Mill",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Elas il-Kor, Sadistic Pilgrim",
+      "mana_cost": "{W}{B}",
+      "cmc": 2,
+      "type_line": "Legendary Creature — Phyrexian Kor Cleric",
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Deathtouch\nWhenever another creature you control enters, you gain 1 life.\nWhenever another creature you control dies, each opponent loses 1 life.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tokens",
+        "Lifegain",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Life Drain"
+      ],
+      "qty": 2,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cult Conscript",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Creature — Skeleton Warrior",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "This creature enters tapped.\n{1}{B}: Return this card from your graveyard to the battlefield. Activate only if a non-Skeleton creature died under your control this turn.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Standalone Threat",
+        "Recursion"
+      ],
+      "qty": 2,
+      "role": "Threat/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cut Down",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bone Splinters",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 2,
+      "role": "Interaction/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Destroy Evil",
+      "mana_cost": "{1}{W}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 10,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 4,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Caves of Koilos",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {W} or {B}. This land deals 1 damage to you.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Prayer of Binding",
+      "mana_cost": "{3}{W}",
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against artifacts (15 in cube) and noncreature permanents — the only nonland catch-all W/B has; flash makes it live against Vehicles and planeswalkers."
+    },
+    {
+      "name": "Citizen's Arrest",
+      "mana_cost": "{1}{W}{W}",
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against single large threats and bombs the removal suite misses (Silverback Elder, Defiler of Vigor, Sphinx of Clear Skies)."
+    },
+    {
+      "name": "Destroy Evil",
+      "mana_cost": "{1}{W}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Second copy in against the cube's 18 enchantments (Sagas, Citizen's Arrest, Leyline Binding) and toughness-4+ green fat."
+    },
+    {
+      "name": "Knight of Dusk's Shadow",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nYour opponents can't gain life.\n{1}{B}: This creature gets +1/+1 until end of turn.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Lifegain Hate"
+      ],
+      "qty": 1,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against the 22 lifegain cards — 'Your opponents can't gain life' blanks Mossbeard Ancient, Silverback Elder, Prayer of Binding and mirror-match kicked Sheoldred's Restoration."
+    },
+    {
+      "name": "Choking Miasma",
+      "mana_cost": "{1}{B}{B}",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nIf this spell was kicked, put a +1/+1 counter on a creature you control.\nAll creatures get -2/-2 until end of turn.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against wide token boards (Tokens is the cube's 2nd-largest cluster at 38 cards); 'All creatures get -2/-2' — board out Cult Conscript and Elas il-Kor when bringing it in. Cast unkicked for {1}{B}{B}; the {G} kicker is declined, so it needs no green source."
+    },
+    {
+      "name": "Extinguish the Light",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Flex",
+      "board": "sideboard",
+      "when_to_board": "Against planeswalkers and against creatures the mainboard's conditional removal misses — 'Destroy target creature or planeswalker' is the deck's only unconditional answer that costs no creature."
+    }
+  ],
+  "pitch": "A W/B graveyard-value midrange deck. It stocks its own graveyard on purpose (Eerie Soultender's ETB mill, Gibbering Barricade's repeatable sacrifice, Bone Splinters' additional cost, Liliana's symmetric discard) and then spends that yard three different ways: Sheoldred's Restoration and The Cruelty of Gix return a body to the battlefield, Serra Paragon rebuys the MV<=3 half every turn, and Monstrous War-Leech and Writhing Necromass read the yard directly off the cast side so no reanimation spell is needed at all. Elas il-Kor turns every creature that dies on the way there into direct damage, so filling the yard and building the clock are one action. It is deliberately built around LOW-mana-value reanimation targets, because Sheoldred's Restoration unkicked charges life equal to the returned card's mana value.",
+  "strategy_es": "midrange — reanimador con Sheoldred's Restoration",
+  "identity_es": "Un midrange W/B de valor de cementerio. Abastece su propio cementerio a propósito (la molienda de entrada de Eerie Soultender, el sacrificio repetible de Gibbering Barricade, el coste adicional de Bone Splinters, el descarte simétrico de Liliana) y luego gasta ese cementerio de tres formas distintas: Sheoldred's Restoration y The Cruelty of Gix devuelven un cuerpo al campo de batalla, Serra Paragon recompra la mitad de MV<=3 cada turno, y Monstrous War-Leech y Writhing Necromass leen el cementerio directamente desde el lado del lanzamiento para que no haga falta hechizo de reanimación alguno. Elas il-Kor convierte cada criatura que muere por el camino en daño directo, así que llenar el cementerio y construir el reloj son una sola acción. Está deliberadamente construido alrededor de objetivos de reanimación de valor de maná BAJO, porque Sheoldred's Restoration sin kicker cobra vidas iguales al valor de maná de la carta devuelta.",
+  "pitch_es": "Un midrange W/B de valor de cementerio. Abastece su propio cementerio a propósito (la molienda de entrada de Eerie Soultender, el sacrificio repetible de Gibbering Barricade, el coste adicional de Bone Splinters, el descarte simétrico de Liliana) y luego gasta ese cementerio de tres formas distintas: Sheoldred's Restoration y The Cruelty of Gix devuelven un cuerpo al campo de batalla, Serra Paragon recompra la mitad de MV<=3 cada turno, y Monstrous War-Leech y Writhing Necromass leen el cementerio directamente desde el lado del lanzamiento para que no haga falta hechizo de reanimación alguno. Elas il-Kor convierte cada criatura que muere por el camino en daño directo, así que llenar el cementerio y construir el reloj son una sola acción. Está deliberadamente construido alrededor de objetivos de reanimación de valor de maná BAJO, porque Sheoldred's Restoration sin kicker cobra vidas iguales al valor de maná de la carta devuelta."
+}

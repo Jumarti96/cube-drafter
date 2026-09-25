@@ -1,0 +1,1040 @@
+{
+  "deck_name": "ug-marit-lage-rotation-ramp",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-31T16:20:00Z",
+  "format": "40-card",
+  "strategy": "combo — Dark Depths / Marit Lage",
+  "colors": "UG",
+  "identity": "A Simic ramp-combo whose only win condition is Dark Depths. The deck does not attempt a single explosive turn; because removed ice counters persist as board state, it pays the thirty mana of {3} activations in installments across turns six to eight. Crop Rotation x2 is the reason the plan is a plan rather than a draw-step lottery: it is the only card in these colours that searches the library for a land and puts it onto the battlefield, so it converts any spare land into the single mythic copy of Dark Depths. Everything else is either mana that becomes ice-counter activations (Krosan Restorer, Turnabout, High Tide, Peregrine Drake, Frantic Search, Snap, Wild Growth, Nature's Lore, Exploration) or the counter-magic that keeps the installment plan on schedule.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_user_rule": "At most 5 rare/mythic cards total across mainboard + sideboard; basic lands unlimited"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 15,
+    "land_count_status": "PASS",
+    "ramp_count": 14,
+    "cantrip_count": 0,
+    "accel_count": 14,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.38,
+      "reference_avg_mv": 2.5,
+      "accel": 14,
+      "adjustment": -2.493,
+      "raw_target": 14.507,
+      "clamped": false,
+      "recommended_land_count": 15,
+      "p_window_at_recommended": 0.7763
+    },
+    "avg_cmc": 2.38,
+    "pip_demand": {
+      "G": 9,
+      "U": 20
+    },
+    "land_color_production": {
+      "U": 10,
+      "G": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 31,
+        "prod_pct": 43.8,
+        "gap": -12.8,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 69,
+        "prod_pct": 62.5,
+        "gap": 6.5,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Dark Depths",
+      "oracle_text": "Dark Depths enters with ten ice counters on it.\n{3}: Remove an ice counter from Dark Depths.\nWhen Dark Depths has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tokens",
+        "Lands-Matter",
+        "Payload/Payoff",
+        "Token Generation",
+        "Mana: Ongoing-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": [
+          "Mana: Ongoing-Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Legendary Snow Land",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payoff — win condition"
+    },
+    {
+      "name": "Tangled Islet",
+      "oracle_text": "({T}: Add {G} or {U}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Forest Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — Forest Island dual"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 8,
+      "role": "Land — blue source / High Tide fuel"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 5,
+      "role": "Land — green source / Nature's Lore target"
+    },
+    {
+      "name": "Crop Rotation",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a land.\nSearch your library for a land card, put that card onto the battlefield, then shuffle.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Landfall",
+        "Infrastructure/Consistency",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Landfall"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Tutor — finds Dark Depths"
+    },
+    {
+      "name": "Mystical Tutor",
+      "oracle_text": "Search your library for an instant or sorcery card, reveal it, then shuffle and put that card on top.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Infrastructure/Consistency",
+        "Tutor"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Tutor"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Tutor — fetches Crop Rotation (a third virtual copy)"
+    },
+    {
+      "name": "Impulse",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Selection — digs for Dark Depths"
+    },
+    {
+      "name": "Frantic Search",
+      "oracle_text": "Draw two cards, then discard two cards. Untap up to three lands.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Looting",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Looting",
+          "Land Untap"
+        ],
+        "resource_exchange": [
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — free untap + dig + graveyard fill"
+    },
+    {
+      "name": "Nature's Lore",
+      "oracle_text": "Search your library for a Forest card, put that card onto the battlefield, then shuffle.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Landfall",
+        "Infrastructure/Consistency",
+        "Mana Ramp",
+        "Land Fetch",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Landfall"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Land Fetch"
+        ],
+        "resource_exchange": [
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Ramp — Forest onto battlefield"
+    },
+    {
+      "name": "Wild Growth",
+      "oracle_text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional {G}.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp"
+        ],
+        "resource_exchange": [
+          "Mana: Net-Positive"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Ramp — +1 mana from one enchanted land"
+    },
+    {
+      "name": "Exploration",
+      "oracle_text": "You may play an additional land on each of your turns.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Landfall",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Extra Land Drop"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Landfall"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Extra Land Drop"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Ramp — extra land drop each turn"
+    },
+    {
+      "name": "Krosan Restorer",
+      "oracle_text": "{T}: Untap target land.\nThreshold — {T}: Untap up to three target lands. Activate only if there are seven or more cards in your graveyard.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Graveyard",
+        "Lands-Matter",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Mana Ramp",
+        "Land Untap"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Land Untap"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Druid",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — repeatable land untap"
+    },
+    {
+      "name": "High Tide",
+      "oracle_text": "Until end of turn, whenever a player taps an Island for mana, that player adds an additional {U}.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Storm",
+        "Spellslinger",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Mana: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Storm",
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp"
+        ],
+        "resource_exchange": [
+          "Mana: Net-Positive"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — Island mana multiplier"
+    },
+    {
+      "name": "Turnabout",
+      "oracle_text": "Choose artifact, creature, or land. Tap all untapped permanents of the chosen type target player controls, or untap all tapped permanents of that type that player controls.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Mana Ramp",
+        "Tap Effect",
+        "Land Untap"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Tap Effect",
+          "Land Untap"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — untap all your lands"
+    },
+    {
+      "name": "Peregrine Drake",
+      "oracle_text": "Flying\nWhen this creature enters, untap up to five lands.",
+      "mana_cost": "{4}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Land Untap"
+        ],
+        "resource_exchange": [
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Creature — Drake",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine — untap five lands / flying blocker"
+    },
+    {
+      "name": "Snap",
+      "oracle_text": "Return target creature to its owner's hand. Untap up to two lands.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Bounce",
+        "Land Untap",
+        "Mana: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Bounce",
+          "Land Untap"
+        ],
+        "resource_exchange": [
+          "Mana: Self-Replacing"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — free bounce + untap two lands"
+    },
+    {
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — protect the assembly"
+    },
+    {
+      "name": "Force of Will",
+      "oracle_text": "You may pay 1 life and exile a blue card from your hand rather than pay this spell's mana cost.\nCounter target spell.",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell",
+        "Cards: Extra-Cost",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost",
+          "Life: Cost"
+        ]
+      },
+      "cmc": 5,
+      "type_line": "Instant",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — zero-mana protection"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Graveyard hate",
+      "when_to_board": "vs the cube's 45 graveyard cards — flashback, threshold, reanimator"
+    },
+    {
+      "name": "Break Asunder",
+      "oracle_text": "Destroy target artifact or enchantment.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "{2}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cycling"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Cycling"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Artifact/enchantment removal",
+      "when_to_board": "vs the cube's 24 artifacts and 33 enchantments"
+    },
+    {
+      "name": "Floodgate",
+      "oracle_text": "Defender\nWhen this creature has flying, sacrifice it.\nWhen this creature leaves the battlefield, it deals damage to each nonblue creature without flying equal to half the number of Islands you control, rounded down.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Wall",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "5",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Wall + delayed sweeper",
+      "when_to_board": "vs creature decks — a 0/5 Defender that, on leaving the battlefield, deals damage equal to half your Islands to each nonblue non-flying creature; Snap can bounce it to fire the trigger"
+    },
+    {
+      "name": "Circular Logic",
+      "oracle_text": "Counter target spell unless its controller pays {1} for each card in your graveyard.\nMadness {U} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Graveyard",
+        "Madness",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Madness"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counterspell",
+          "Madness"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Scaling counterspell",
+      "when_to_board": "vs control and combo — the deck's 17 of 24 self-binning instants and sorceries make the tax hard by turn 6"
+    },
+    {
+      "name": "Ovinize",
+      "oracle_text": "Until end of turn, target creature loses all abilities and has base power and toughness 0/1.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Ability Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Ability Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Single-large-threat answer",
+      "when_to_board": "vs a lone fatty, regenerator or protection-from-colour creature"
+    },
+    {
+      "name": "Maze of Ith",
+      "oracle_text": "{T}: Untap target attacking creature. Prevent all combat damage that would be dealt to and dealt by that creature this turn.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Interaction/Disruption",
+        "Damage Prevention",
+        "Land Untap"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Damage Prevention",
+          "Land Untap"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Recurring attacker blank (land)",
+      "when_to_board": "vs creature aggro — swap for a Forest, since green production already runs +12.8pp over its pip share"
+    }
+  ],
+  "pitch": "A Simic ramp-combo whose only win condition is Dark Depths. The deck does not attempt a single explosive turn; because removed ice counters persist as board state, it pays the thirty mana of {3} activations in installments across turns six to eight. Crop Rotation x2 is the reason the plan is a plan rather than a draw-step lottery: it is the only card in these colours that searches the library for a land and puts it onto the battlefield, so it converts any spare land into the single mythic copy of Dark Depths. Everything else is either mana that becomes ice-counter activations (Krosan Restorer, Turnabout, High Tide, Peregrine Drake, Frantic Search, Snap, Wild Growth, Nature's Lore, Exploration) or the counter-magic that keeps the installment plan on schedule.",
+  "strategy_es": "combo — Dark Depths / Marit Lage",
+  "identity_es": "Un combo-aceleración Simic cuya única condición de victoria es Dark Depths. El mazo no intenta un único turno explosivo; como los contadores de hielo retirados permanecen como estado de tablero, paga los treinta manás de activaciones de {3} a plazos entre los turnos seis y ocho. Crop Rotation x2 es la razón por la que el plan es un plan y no una lotería del paso de robar: es la única carta de estos colores que busca una tierra en la biblioteca y la pone en el campo de batalla, así que convierte cualquier tierra sobrante en la única copia mítica de Dark Depths. Todo lo demás es o bien maná que se convierte en activaciones de contadores de hielo (Krosan Restorer, Turnabout, High Tide, Peregrine Drake, Frantic Search, Snap, Wild Growth, Nature's Lore, Exploration) o bien los contrahechizos que mantienen el plan de pagos en calendario.",
+  "pitch_es": "Un combo-aceleración Simic cuya única condición de victoria es Dark Depths. El mazo no intenta un único turno explosivo; como los contadores de hielo retirados permanecen como estado de tablero, paga los treinta manás de activaciones de {3} a plazos entre los turnos seis y ocho. Crop Rotation x2 es la razón por la que el plan es un plan y no una lotería del paso de robar: es la única carta de estos colores que busca una tierra en la biblioteca y la pone en el campo de batalla, así que convierte cualquier tierra sobrante en la única copia mítica de Dark Depths. Todo lo demás es o bien maná que se convierte en activaciones de contadores de hielo (Krosan Restorer, Turnabout, High Tide, Peregrine Drake, Frantic Search, Snap, Wild Growth, Nature's Lore, Exploration) o bien los contrahechizos que mantienen el plan de pagos en calendario."
+}

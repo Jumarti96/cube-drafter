@@ -1,0 +1,711 @@
+{
+  "deck_name": "br-goblin-aristocrats",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-30T00:45:40Z",
+  "format": "40-card",
+  "strategy": "Rakdos Goblin sacrifice-aristocrats midrange",
+  "colors": "BR",
+  "identity": "Rakdos (B/R) Goblin sacrifice-aristocrats. Deploy a go-wide Goblin board (Skirk Prospector, Festering Goblin, Mogg War Marshal, Siege-Gang Commander) and feed it into a sacrifice engine that converts bodies into damage, removal, and cards: Pashalik Mons pings 1 per Goblin death, Siege-Gang and Deadapult fling Goblins at the face for 2 (Dralnu's Crusade x2 turns every Goblin into a Zombie so Deadapult eats any of them, and anthems the team), and Yawgmoth turns each sacrifice into a card plus a -1/-1 counter. A black removal suite (Terror, Chainer's Edict, Chain Lightning) clears the way while Oversold Cemetery and Pyre Zombie recur bodies to grind through removal. Win by combat plus sacrifice reach on turn 5, out-attriting the opponent in the long game.",
+  "restrictions": {
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "rares_mythics_max_each": 1,
+    "rares_mythics_max_total": 5
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.35,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.533,
+      "raw_target": 16.467,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.35,
+    "pip_demand": {
+      "R": 16,
+      "B": 12
+    },
+    "land_color_production": {
+      "R": 10,
+      "B": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 42.9,
+        "prod_pct": 52.9,
+        "gap": -10,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 57.1,
+        "prod_pct": 58.8,
+        "gap": -1.7,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Skirk Prospector",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Creature — Goblin",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Sacrifice a Goblin: Add {R}.",
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Sacrifice Outlet",
+        "Mana Ramp"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "137",
+      "role": "Enabler/Fodder (free sac outlet + mana)"
+    },
+    {
+      "name": "Festering Goblin",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Creature — Zombie Goblin",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature dies, target creature gets -1/-1 until end of turn.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "85",
+      "role": "Enabler/Fodder (native Zombie, death -1/-1)"
+    },
+    {
+      "name": "Mogg War Marshal",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Creature — Goblin Warrior",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Echo {1}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters or dies, create a 1/1 red Goblin creature token.",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Mana: Ongoing-Cost"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "131",
+      "role": "Enabler/Fodder (token generator)"
+    },
+    {
+      "name": "Goblin Matron",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Creature — Goblin",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, you may search your library for a Goblin card, reveal that card, put it into your hand, then shuffle.",
+      "tags": [
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Tutor",
+        "Cards: Self-Replacing"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "123",
+      "role": "Infrastructure/Consistency (tribal tutor)"
+    },
+    {
+      "name": "Flametongue Kavu",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Creature — Kavu",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, it deals 4 damage to target creature.",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "120",
+      "role": "Interaction (removal on a body)"
+    },
+    {
+      "name": "Dralnu's Crusade",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "All Goblins get +1/+1.\nAll Goblins are black and are Zombies in addition to their other creature types.",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Anthem"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "189",
+      "role": "Engine/anthem (Goblins→Zombies, +1/+1; enables Deadapult)"
+    },
+    {
+      "name": "Deadapult",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "{R}, Sacrifice a Zombie: This enchantment deals 2 damage to any target.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Sacrifice Outlet",
+        "Direct Damage"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "115",
+      "role": "Engine/Outlet (sac a Zombie → 2 dmg)"
+    },
+    {
+      "name": "Pashalik Mons",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Legendary Creature — Goblin Warrior",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Whenever Pashalik Mons or another Goblin you control dies, Pashalik Mons deals 1 damage to any target.\n{3}{R}, Sacrifice a Goblin: Create two 1/1 red Goblin creature tokens.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Tokens",
+        "Goblins",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Token Generation",
+        "Sacrifice Outlet"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "133",
+      "role": "Payload/Payoff (death-to-damage)"
+    },
+    {
+      "name": "Siege-Gang Commander",
+      "qty": 1,
+      "cmc": 5,
+      "type_line": "Creature — Goblin",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "When this creature enters, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: This creature deals 2 damage to any target.",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Sacrifice Outlet",
+        "Direct Damage"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "136",
+      "role": "Payload/Payoff (tokens + sac-to-face reach)"
+    },
+    {
+      "name": "Yawgmoth, Thran Physician",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Protection from Humans\nPay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card.\n{B}{B}, Discard a card: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Sacrifice Outlet",
+        "Card Draw",
+        "Targeted Removal",
+        "Proliferate",
+        "Life: Cost"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "110",
+      "role": "Engine/Outlet (sac → card + removal)"
+    },
+    {
+      "name": "Pyre Zombie",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Creature — Zombie",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "rarity": "rare",
+      "oracle_text": "At the beginning of your upkeep, if this card is in your graveyard, you may pay {1}{B}{B}. If you do, return it to your hand.\n{1}{R}{R}, Sacrifice this creature: It deals 2 damage to any target.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Reanimator",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Sacrifice Outlet",
+        "Mana: Ongoing-Cost"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "194",
+      "role": "Payload/recursion (recurring sac reach)"
+    },
+    {
+      "name": "Oversold Cemetery",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "At the beginning of your upkeep, if you have four or more creature cards in your graveyard, you may return target creature card from your graveyard to your hand.",
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "96",
+      "role": "Engine (graveyard recursion)"
+    },
+    {
+      "name": "Terror",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "103",
+      "role": "Interaction (spot removal)"
+    },
+    {
+      "name": "Chainer's Edict",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target player sacrifices a creature of their choice.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Flashback/GY-Cast",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Flashback"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "78",
+      "role": "Interaction (edict + flashback)"
+    },
+    {
+      "name": "Chain Lightning",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "Chain Lightning deals 3 damage to any target. Then that player or that permanent's controller may pay {R}{R}. If the player does, they may copy this spell and may choose a new target for that copy.",
+      "tags": [
+        "Spellslinger",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Direct Damage"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "113",
+      "role": "Interaction/reach (burn)"
+    },
+    {
+      "name": "Mountain",
+      "qty": 7,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {R}.)",
+      "tags": [],
+      "board": "mainboard",
+      "Set": "",
+      "Collector Number": "",
+      "role": "Land"
+    },
+    {
+      "name": "Swamp",
+      "qty": 6,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "tags": [],
+      "board": "mainboard",
+      "Set": "",
+      "Collector Number": "",
+      "role": "Land"
+    },
+    {
+      "name": "Geothermal Bog",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Land — Swamp Mountain",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B} or {R}.)\nThis land enters tapped.",
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "board": "mainboard",
+      "Set": "dmu",
+      "Collector Number": "247",
+      "role": "Land (B/R dual, enters tapped)"
+    },
+    {
+      "name": "Polluted Mire",
+      "qty": 1,
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "This land enters tapped.\n{T}: Add {B}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cycling"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "253",
+      "role": "Land (B, tapped, cycling)"
+    },
+    {
+      "name": "Smoldering Crater",
+      "qty": 1,
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "common",
+      "oracle_text": "This land enters tapped.\n{T}: Add {R}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cycling"
+      ],
+      "board": "mainboard",
+      "Set": "dmr",
+      "Collector Number": "257",
+      "role": "Land (R, tapped, cycling)"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "qty": 2,
+      "cmc": 0,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "235",
+      "role": "GY hate",
+      "when_to_board": "vs reanimator/recursion (Dread Return, Body Snatcher, Oversold Cemetery mirrors) — targets the OPPONENT's graveyard, so it never hits our own recursion."
+    },
+    {
+      "name": "Duress",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
+      "tags": [
+        "Interaction/Disruption",
+        "Discard"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "81",
+      "role": "proactive disruption",
+      "when_to_board": "vs control, combo, and removal/enchantment decks — strips No Mercy, Pacifism, counters, or a combo piece before it lands (our only lever on the stack/noncreature axes)."
+    },
+    {
+      "name": "Slice and Dice",
+      "qty": 2,
+      "cmc": 6,
+      "type_line": "Sorcery",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Slice and Dice deals 4 damage to each creature.\nCycling {2}{R} ({2}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have it deal 1 damage to each creature.",
+      "tags": [
+        "Cycling Matters",
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe",
+        "Cycling"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "138",
+      "role": "sweeper",
+      "when_to_board": "vs faster/wider aggro & token decks where we are the control; cycling {2}{R} gives a floor. Board OUT our own go-wide pieces when bringing it in."
+    },
+    {
+      "name": "Ichor Slick",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets -3/-3 until end of turn.\nCycling {2} ({2}, Discard this card: Draw a card.)\nMadness {3}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Targeted Removal",
+        "Card Draw",
+        "Cycling",
+        "Madness"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "90",
+      "role": "flexible removal",
+      "when_to_board": "vs creature decks — -3/-3 kills most threats; Cycling {2} / Madness {3}{B} keep it from being dead."
+    },
+    {
+      "name": "Gempalm Incinerator",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Creature — Goblin",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Cycling {1}{R} ({1}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have it deal X damage to target creature, where X is the number of Goblins on the battlefield.",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Direct Damage",
+        "Card Draw",
+        "Cycling",
+        "Cards: Self-Replacing"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "122",
+      "role": "tribal-scaled removal",
+      "when_to_board": "vs creature/go-wide decks — cycles to deal X = our Goblins to a creature, and is itself a Goblin body for the sac engine."
+    },
+    {
+      "name": "Damping Sphere",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "If a land is tapped for two or more mana, it produces {C} instead of any other type and amount.\nEach spell a player casts costs {1} more to cast for each other spell that player has cast this turn.",
+      "tags": [
+        "Stax/Taxing",
+        "Artifacts",
+        "Interaction/Disruption",
+        "Tax Effect"
+      ],
+      "board": "sideboard",
+      "Set": "dmr",
+      "Collector Number": "219",
+      "role": "combo/ramp tax",
+      "when_to_board": "vs High Tide storm, big-mana ramp, and Cryptic Gateway — taxes multi-spell turns and shuts off 2+-mana lands."
+    }
+  ],
+  "strategy_es": "midrange de Goblins Rakdos de sacrificio y aristócratas",
+  "identity_es": "Aristócratas de sacrificio con Goblins en Rakdos (B/R). Despliega un tablero ancho de Goblins (Skirk Prospector, Festering Goblin, Mogg War Marshal, Siege-Gang Commander) y aliméntalo a un motor de sacrificio que convierte cuerpos en daño, eliminación y cartas: Pashalik Mons pincha 1 por cada Goblin que muere, Siege-Gang y Deadapult lanzan Goblins a la cara por 2 (Dralnu's Crusade x2 convierte a todo Goblin en Zombie para que Deadapult pueda devorar cualquiera, y además da anthem al equipo), y Yawgmoth convierte cada sacrificio en una carta más un contador -1/-1. Un paquete negro de eliminación (Terror, Chainer's Edict, Chain Lightning) abre camino mientras Oversold Cemetery y Pyre Zombie recuperan cuerpos para aguantar la eliminación rival. Gana por combate más alcance de sacrificio en el turno 5, superando al rival por desgaste en la partida larga."
+}

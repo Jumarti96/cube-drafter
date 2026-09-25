@@ -1,0 +1,682 @@
+{
+  "deck_name": "b-sothera-denial",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-03T17:12:04Z",
+  "format": "40-card",
+  "strategy": "mono-black sacrifice-denial control",
+  "colors": "B",
+  "identity": "Mono-black sacrifice-denial control: convert your own recursive fodder into a one-sided exile sweeper via Sothera, grind the opponent to an empty board, then win with recurred threats and Void card advantage. Eight printed removal spells (8 of 23 nonland) plus 12 Sothera creature-death instances do the grinding; three Void draw engines (Hymn of the Faller x2, Decode Transmissions x2, Voidforged Titan x1) do the out-carding.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "hard_extra_constraint": "MAX 6 rare+mythic across mainboard AND sideboard combined; basic lands unlimited and exempt",
+    "deck_size": 40,
+    "sideboard_size": 10,
+    "format": "40-card",
+    "power_level": "competitive"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 1,
+    "cantrip_count": 0,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.65,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": 0.033,
+      "raw_target": 17.033,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.65,
+    "pip_demand": {
+      "B": 26
+    },
+    "land_color_production": {
+      "B": 17
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Sothera, the Supervoid",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Legendary Enchantment",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Whenever a creature you control dies, each opponent chooses a creature they control and exiles it.\nAt the beginning of your end step, if a player controls no creatures, sacrifice Sothera, then put a creature card exiled with it onto the battlefield under your control with two additional +1/+1 counters on it.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Reanimator",
+        "Payload/Payoff",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cheat Into Play"
+      ],
+      "set": "eoe",
+      "collector_number": "115",
+      "image_url": "https://cards.scryfall.io/normal/front/e/9/e99d6fc0-dcf2-4b25-81c2-02c230a36246.jpg?1782685507",
+      "image_back_url": null,
+      "role": "Payoff — denial engine (locked pipeline payoff)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Susurian Voidborn",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Creature — Vampire Soldier",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life.\nWarp {B} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "set": "eoe",
+      "collector_number": "118",
+      "image_url": "https://cards.scryfall.io/normal/front/b/e/beb97e7b-0ae7-4b08-9ceb-6a7f825bcd49.jpg?1782685504",
+      "image_back_url": null,
+      "role": "Payoff — drain clock / denial redundancy on the same deaths axis",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lightless Evangel",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Creature — Vampire Cleric",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever you sacrifice another creature or artifact, put a +1/+1 counter on this creature.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Payload/Payoff"
+      ],
+      "set": "eoe",
+      "collector_number": "109",
+      "image_url": "https://cards.scryfall.io/normal/front/6/8/6860556a-6c34-4c41-89ea-f0bc495a159c.jpg?1782685511",
+      "image_back_url": null,
+      "role": "Payoff — sacrifice-TRIGGERED grower (not a dies trigger); assembly-gate 4th payoff copy",
+      "board": "mainboard"
+    },
+    {
+      "name": "Umbral Collar Zealot",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Sacrifice another creature or artifact: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Self-Mill",
+        "Graveyard",
+        "Artifacts",
+        "Engine/Outlet",
+        "Sacrifice Outlet",
+        "Card Selection"
+      ],
+      "set": "eoe",
+      "collector_number": "123",
+      "image_url": "https://cards.scryfall.io/normal/front/b/b/bbcc1d84-9772-475d-924a-75bb54c9bc20.jpg?1782685500",
+      "image_back_url": null,
+      "role": "Engine — free repeatable sacrifice outlet (zero mana, any time)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swarm Culler",
+      "qty": 1,
+      "cmc": 4,
+      "type_line": "Creature — Insect Warrior",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nWhenever this creature becomes tapped, you may sacrifice another creature or artifact. If you do, draw a card.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "set": "eoe",
+      "collector_number": "119",
+      "image_url": "https://cards.scryfall.io/normal/front/2/a/2a8f583c-88b6-4797-b93e-3086845fc326.jpg?1782685504",
+      "image_back_url": null,
+      "role": "Engine — tap-triggered outlet + conditional draw; the only flying blocker",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hymn of the Faller",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Surveil 1, then you draw a card and lose 1 life. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)\nVoid — If a nonland permanent left the battlefield this turn or a spell was warped this turn, draw another card.",
+      "tags": [
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "set": "eoe",
+      "collector_number": "107",
+      "image_url": "https://cards.scryfall.io/normal/front/e/4/e468d528-6cf0-4563-9da2-e388ba56cb9d.jpg?1782685512",
+      "image_back_url": null,
+      "role": "Engine — Void draw",
+      "board": "mainboard"
+    },
+    {
+      "name": "Decode Transmissions",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "You draw two cards and lose 2 life.\nVoid — If a nonland permanent left the battlefield this turn or a spell was warped this turn, instead you draw two cards and each opponent loses 2 life.",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Life Drain",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "set": "eoe",
+      "collector_number": "94",
+      "image_url": "https://cards.scryfall.io/normal/front/c/e/cecb4936-14ca-49f9-b209-6519cab54b30.jpg?1782685521",
+      "image_back_url": null,
+      "role": "Engine — Void draw + reach",
+      "board": "mainboard"
+    },
+    {
+      "name": "Voidforged Titan",
+      "qty": 1,
+      "cmc": 5,
+      "type_line": "Artifact Creature — Robot Warrior",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Void — At the beginning of your end step, if a nonland permanent left the battlefield this turn or a spell was warped this turn, you draw a card and lose 1 life.",
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "set": "eoe",
+      "collector_number": "125",
+      "image_url": "https://cards.scryfall.io/normal/front/6/1/6119c016-01b2-44f3-9550-6988324c1d1f.jpg?1782685500",
+      "image_back_url": null,
+      "role": "Engine — Void repeating end-step draw (locked-thesis component restored)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Beamsaw Prospector",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Creature — Human Artificer",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature dies, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Lands-Matter",
+        "Artifacts",
+        "Tokens",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "set": "eoe",
+      "collector_number": "89",
+      "image_url": "https://cards.scryfall.io/normal/front/6/f/6f717a3f-c6db-4e8d-8b62-6361ab33d000.jpg?1782685524",
+      "image_back_url": null,
+      "role": "Enabler — self-replacing fodder + the deck's only land accel (Lander)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gravpack Monoist",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Creature — Human Scout",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\nWhen this creature dies, create a tapped 2/2 colorless Robot artifact creature token.",
+      "tags": [
+        "Tokens",
+        "Artifacts",
+        "Aristocrats/Sacrifice",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "eoe",
+      "collector_number": "104",
+      "image_url": "https://cards.scryfall.io/normal/front/2/a/2a968f01-36ef-4cf6-b1db-630c9cde2064.jpg?1782685515",
+      "image_back_url": null,
+      "role": "Enabler — two-deaths-per-card fodder, flying body",
+      "board": "mainboard"
+    },
+    {
+      "name": "Embrace Oblivion",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDestroy target creature or Spacecraft.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "eoe",
+      "collector_number": "98",
+      "image_url": "https://cards.scryfall.io/normal/front/3/7/3754fc20-7aaa-437d-97df-d6cf1c29586c.jpg?1782685518",
+      "image_back_url": null,
+      "role": "Interaction — {B} destroy + sacrifice outlet on cast",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Trajectory",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.\nVoid — That creature gets -10/-10 until end of turn instead if a nonland permanent left the battlefield this turn or a spell was warped this turn.",
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "eoe",
+      "collector_number": "122",
+      "image_url": "https://cards.scryfall.io/normal/front/7/8/78c8bc60-1378-4028-8ab1-3286e459bffb.jpg?1782685501",
+      "image_back_url": null,
+      "role": "Interaction — {B} -2/-2, Void -10/-10",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gravkill",
+      "qty": 2,
+      "cmc": 4,
+      "type_line": "Instant",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Exile target creature or Spacecraft.",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "eoe",
+      "collector_number": "103",
+      "image_url": "https://cards.scryfall.io/normal/front/c/f/cfa6c57f-a193-48cc-9764-d8348548a111.jpg?1782685515",
+      "image_back_url": null,
+      "role": "Interaction — instant exile",
+      "board": "mainboard"
+    },
+    {
+      "name": "Archenemy's Charm",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{B}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Choose one —\n• Exile target creature or planeswalker.\n• Return one or two target creature and/or planeswalker cards from your graveyard to your hand.\n• Put two +1/+1 counters on target creature you control. It gains lifelink until end of turn.",
+      "tags": [
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Targeted Removal",
+        "Card Draw",
+        "Combat Trick"
+      ],
+      "set": "eoe",
+      "collector_number": "88",
+      "image_url": "https://cards.scryfall.io/normal/front/d/c/dcde5f27-e2f0-4d2a-afa3-f300896ec4b1.jpg?1782685526",
+      "image_back_url": null,
+      "role": "Interaction — exile / graveyard regrowth",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dubious Delicacy",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Artifact — Food",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flash\nWhen this artifact enters, up to one target creature gets -3/-3 until end of turn.\n{2}, {T}, Sacrifice this artifact: You gain 3 life.\n{2}, {T}, Sacrifice this artifact: Target opponent loses 3 life.",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Engine/Outlet",
+        "Targeted Removal",
+        "Life Drain"
+      ],
+      "set": "eoe",
+      "collector_number": "96",
+      "image_url": "https://cards.scryfall.io/normal/front/1/5/153265b4-0ca4-4245-9226-dd1a083ec91c.jpg?1782685520",
+      "image_back_url": null,
+      "role": "Interaction — flash -3/-3 + sacrificeable Food artifact + 3-point reach",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "qty": 17,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Chrome Companion",
+      "qty": 1,
+      "cmc": 2,
+      "type_line": "Artifact Creature — Dog",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life.\n{2}, {T}: Put target card from a graveyard on the bottom of its owner's library.",
+      "tags": [
+        "Artifacts",
+        "Lifegain",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Interaction/Disruption",
+        "Life Drain",
+        "Graveyard Hate"
+      ],
+      "set": "eoe",
+      "collector_number": "236",
+      "image_url": "https://cards.scryfall.io/normal/front/8/e/8ef269a0-1cb9-4901-81e6-43db3ae3756c.jpg?1782685420",
+      "image_back_url": null,
+      "role": "Sideboard — instant-speed single-card graveyard answer",
+      "board": "sideboard"
+    },
+    {
+      "name": "Dauntless Scrapbot",
+      "qty": 1,
+      "cmc": 3,
+      "type_line": "Artifact Creature — Robot",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile each opponent's graveyard. Create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "tags": [
+        "Artifacts",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "set": "eoe",
+      "collector_number": "237",
+      "image_url": "https://cards.scryfall.io/normal/front/0/e/0efe5342-42b7-4f49-b4b4-d77055508c4d.jpg?1782685420",
+      "image_back_url": null,
+      "role": "Sideboard — mass graveyard exile + creature body + Lander",
+      "board": "sideboard"
+    },
+    {
+      "name": "Thaumaton Torpedo",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "{6}, {T}, Sacrifice this artifact: Destroy target nonland permanent. This ability costs {3} less to activate if you attacked with a Spacecraft this turn.",
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cost Reduction"
+      ],
+      "set": "eoe",
+      "collector_number": "246",
+      "image_url": "https://cards.scryfall.io/normal/front/1/8/1817f1b5-960a-435c-bdec-8cc8cbcb3358.jpg?1782685413",
+      "image_back_url": null,
+      "role": "Sideboard — only nonland-permanent answer available to mono-black (slow: {6})",
+      "board": "sideboard"
+    },
+    {
+      "name": "Depressurize",
+      "qty": 2,
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets -3/-0 until end of turn. Then if that creature's power is 0 or less, destroy it.",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "set": "eoe",
+      "collector_number": "95",
+      "image_url": "https://cards.scryfall.io/normal/front/2/5/25520d5a-1a83-42cc-8ace-8b1156019d64.jpg?1782685521",
+      "image_back_url": null,
+      "role": "Sideboard — cheap instant removal for power <= 3",
+      "board": "sideboard"
+    },
+    {
+      "name": "Monoist Sentry",
+      "qty": 2,
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender",
+      "tags": [
+        "Artifacts",
+        "Defender Matters",
+        "Infrastructure/Consistency"
+      ],
+      "set": "eoe",
+      "collector_number": "111",
+      "image_url": "https://cards.scryfall.io/normal/front/a/c/acc503e2-5c3a-4200-beb0-7d193d6c869e.jpg?1782685509",
+      "image_back_url": null,
+      "role": "Sideboard — anti-aggro 4/1 Defender + artifact fodder",
+      "board": "sideboard"
+    },
+    {
+      "name": "Temporal Intervention",
+      "qty": 2,
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Void — This spell costs {2} less to cast if a nonland permanent left the battlefield this turn or a spell was warped this turn.\nTarget opponent reveals their hand. You choose a nonland card from it. That player discards that card.",
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Targeted Discard",
+        "Cost Reduction"
+      ],
+      "set": "eoe",
+      "collector_number": "120",
+      "image_url": "https://cards.scryfall.io/normal/front/7/9/79f9525a-4cb7-411e-b7b5-2113e93bcbc3.jpg?1782685504",
+      "image_back_url": null,
+      "role": "Sideboard — targeted hand disruption; {B} with Void switched on",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "Mono-black sacrifice-denial control: convert your own recursive fodder into a one-sided exile sweeper via Sothera, grind the opponent to an empty board, then win with recurred threats and Void card advantage. Eight printed removal spells (8 of 23 nonland) plus 12 Sothera creature-death instances do the grinding; three Void draw engines (Hymn of the Faller x2, Decode Transmissions x2, Voidforged Titan x1) do the out-carding.",
+  "strategy_es": "control mono negro de negación por sacrificio",
+  "identity_es": "Control mono negro de negación por sacrificio: convierte tu propio forraje recursivo en un barredor unilateral de exilio vía Sothera, desgasta al rival hasta dejarle el tablero vacío, y luego gana con amenazas recuperadas y ventaja de cartas por Void. Ocho hechizos de eliminación impresos (8 de 23 no-tierra) más 12 instancias de muerte de criatura para Sothera hacen el desgaste; tres motores de robo por Void (Hymn of the Faller x2, Decode Transmissions x2, Voidforged Titan x1) hacen la superación en cartas.",
+  "pitch_es": "Control mono negro de negación por sacrificio: convierte tu propio forraje recursivo en un barredor unilateral de exilio vía Sothera, desgasta al rival hasta dejarle el tablero vacío, y luego gana con amenazas recuperadas y ventaja de cartas por Void. Ocho hechizos de eliminación impresos (8 de 23 no-tierra) más 12 instancias de muerte de criatura para Sothera hacen el desgaste; tres motores de robo por Void (Hymn of the Faller x2, Decode Transmissions x2, Voidforged Titan x1) hacen la superación en cartas."
+}

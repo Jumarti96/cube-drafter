@@ -1,0 +1,814 @@
+{
+  "deck_name": "wub-draw-go-permission",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-31T03:19:35Z",
+  "format": "40-card",
+  "strategy": "Draw-Go permission control",
+  "colors": "WUB",
+  "identity": "White-Blue draw-go permission control splashing black. Six counters (Counterspell, Circular Logic, Absorb, Force of Will) stop the opponent's threats on the stack while premium removal (Swords to Plowshares, Terror, Wrath of God) cleans up what resolves. A deep card-advantage engine (Mystic Remora, Fact or Fiction, Deep Analysis, Arcanis the Omnipotent, Mind Stone) buries the opponent in resources, and a small, entirely evasive finisher package (Thieving Magpie, Serra Angel, Voice of All, plus Arcanis's body) closes once they are out of gas.",
+  "restrictions": {
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2
+    },
+    "rares_mythics_total_max": 5
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 1,
+    "cantrip_count": 1,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.18,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": 0.573,
+      "raw_target": 17.573,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.18,
+    "pip_demand": {
+      "U": 22,
+      "W": 9
+    },
+    "land_color_production": {
+      "U": 11,
+      "W": 7,
+      "B": 3
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 71,
+        "prod_pct": 61.1,
+        "gap": 9.9,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 29,
+        "prod_pct": 38.9,
+        "gap": -9.9,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [
+      "B"
+    ],
+    "splash_check": {
+      "per_color": {
+        "B": {
+          "splash_card_count": 4,
+          "max_cmc": 2,
+          "required_sources": 3
+        }
+      },
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard",
+      "set": "",
+      "collector_number": "",
+      "qty": 8
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard",
+      "set": "",
+      "collector_number": "",
+      "qty": 5
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard",
+      "set": "",
+      "collector_number": "",
+      "qty": 2
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land — WU dual (tapped)",
+      "board": "mainboard",
+      "set": "dmu",
+      "collector_number": "249",
+      "qty": 2
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "role": "Land — UB dual (tapped; B splash source)",
+      "board": "mainboard",
+      "set": "dmu",
+      "collector_number": "245",
+      "qty": 1
+    },
+    {
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Interaction — hard counter, the permission backbone",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "45",
+      "qty": 2
+    },
+    {
+      "name": "Circular Logic",
+      "oracle_text": "Counter target spell unless its controller pays {1} for each card in your graveyard.\nMadness {U} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Madness",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Interaction — counter that scales with your graveyard (filled by Fact or Fiction / Deep Analysis); hard-cast at {2}{U}",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "42",
+      "qty": 2
+    },
+    {
+      "name": "Absorb",
+      "oracle_text": "Counter target spell. You gain 3 life.",
+      "mana_cost": "{W}{U}{U}",
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "role": "Interaction — counter + 3 life vs aggro/burn",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "186",
+      "qty": 1
+    },
+    {
+      "name": "Force of Will",
+      "oracle_text": "You may pay 1 life and exile a blue card from your hand rather than pay this spell's mana cost.\nCounter target spell.",
+      "mana_cost": "{3}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Instant",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell",
+        "Cards: Extra-Cost",
+        "Life: Cost"
+      ],
+      "role": "Interaction — free counter (pitch a blue card) that protects tapped-out turns",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "50",
+      "qty": 1
+    },
+    {
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction — premium 1-mana exile for what resolves",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "31",
+      "qty": 2
+    },
+    {
+      "name": "Terror",
+      "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction — cheap instant removal (B splash)",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "103",
+      "qty": 2
+    },
+    {
+      "name": "Wrath of God",
+      "oracle_text": "Destroy all creatures. They can't be regenerated.",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Sweeper/Board Wipe"
+      ],
+      "role": "Interaction — sweeper vs go-wide",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "37",
+      "qty": 1
+    },
+    {
+      "name": "Mystic Remora",
+      "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhenever an opponent casts a noncreature spell, you may draw a card unless that player pays {4}.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Stax/Taxing",
+        "Infrastructure/Consistency",
+        "Interaction/Disruption",
+        "Card Draw",
+        "Tax Effect",
+        "Mana: Ongoing-Cost",
+        "Cards: Net-Positive"
+      ],
+      "role": "Engine — turn-1 card-advantage/tax engine: draw off (or tax) the opponent's noncreature spells",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "59",
+      "qty": 1
+    },
+    {
+      "name": "Fact or Fiction",
+      "oracle_text": "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Card Selection",
+        "Cards: Net-Positive"
+      ],
+      "role": "Engine — instant-speed card advantage and graveyard fuel for Circular Logic",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "48",
+      "qty": 2
+    },
+    {
+      "name": "Deep Analysis",
+      "oracle_text": "Target player draws two cards.\nFlashback—{1}{U}, Pay 3 life. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{3}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Flashback",
+        "Cards: Net-Positive",
+        "Life: Cost"
+      ],
+      "role": "Engine — draw two now, two more via flashback",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "46",
+      "qty": 2
+    },
+    {
+      "name": "Mind Stone",
+      "oracle_text": "{T}: Add {C}.\n{1}, {T}, Sacrifice this artifact: Draw a card.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Mana Rock",
+        "Card Draw"
+      ],
+      "role": "Infrastructure — ramp to counters-up; cashes for a card late",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "232",
+      "qty": 1
+    },
+    {
+      "name": "Arcanis the Omnipotent",
+      "oracle_text": "{T}: Draw three cards.\n{2}{U}{U}: Return Arcanis to its owner's hand.",
+      "mana_cost": "{3}{U}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 6,
+      "type_line": "Legendary Creature — Wizard",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Card Draw",
+        "Bounce"
+      ],
+      "role": "Engine/Payoff — draw three per turn, self-bouncing; the inevitability engine and a 3/4 clock",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "39",
+      "qty": 1
+    },
+    {
+      "name": "Thieving Magpie",
+      "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever this creature deals damage to an opponent, draw a card.",
+      "mana_cost": "{2}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Bird",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Standalone Threat",
+        "Card Draw"
+      ],
+      "role": "Threat/Engine — evasive card-advantage clock",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "68",
+      "qty": 2
+    },
+    {
+      "name": "Serra Angel",
+      "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Angel",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Standalone Threat"
+      ],
+      "role": "Threat/Payoff — 4/4 flying vigilance finisher that blocks and attacks",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "25",
+      "qty": 1
+    },
+    {
+      "name": "Voice of All",
+      "oracle_text": "Flying\nAs this creature enters, choose a color.\nThis creature has protection from the chosen color.",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Standalone Threat",
+        "Protection"
+      ],
+      "role": "Threat/Payoff — evasive protected flier finisher",
+      "board": "mainboard",
+      "set": "dmr",
+      "collector_number": "34",
+      "qty": 1
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "role": "SB — graveyard hate",
+      "board": "sideboard",
+      "set": "dmr",
+      "collector_number": "235",
+      "qty": 2,
+      "when_to_board": "vs graveyard decks (18.75% of the cube)"
+    },
+    {
+      "name": "Radiant's Judgment",
+      "oracle_text": "Destroy target creature with power 4 or greater.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Targeted Removal",
+        "Card Draw",
+        "Cycling"
+      ],
+      "role": "SB — anti-fatty removal, cycles when dead",
+      "board": "sideboard",
+      "set": "dmr",
+      "collector_number": "21",
+      "qty": 2,
+      "when_to_board": "vs decks with power-4+ creatures; free-cycles otherwise"
+    },
+    {
+      "name": "Chainer's Edict",
+      "oracle_text": "Target player sacrifices a creature of their choice.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Flashback/GY-Cast",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Flashback"
+      ],
+      "role": "SB — edict vs hexproof/protection",
+      "board": "sideboard",
+      "set": "dmr",
+      "collector_number": "78",
+      "qty": 1,
+      "when_to_board": "vs hexproof/protection or must-answer single threats; flashback for a second edict"
+    },
+    {
+      "name": "Damping Sphere",
+      "oracle_text": "If a land is tapped for two or more mana, it produces {C} instead of any other type and amount.\nEach spell a player casts costs {1} more to cast for each other spell that player has cast this turn.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Stax/Taxing",
+        "Artifacts",
+        "Interaction/Disruption",
+        "Tax Effect"
+      ],
+      "role": "SB — anti big-mana / storm",
+      "board": "sideboard",
+      "set": "dmr",
+      "collector_number": "219",
+      "qty": 1,
+      "when_to_board": "vs ramp / big-mana / storm-ish chains"
+    },
+    {
+      "name": "Renewed Faith",
+      "oracle_text": "You gain 6 life.\nCycling {1}{W} ({1}{W}, Discard this card: Draw a card.)\nWhen you cycle this card, you may gain 2 life.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Cycling Matters",
+        "Infrastructure/Consistency",
+        "Life Gain",
+        "Card Draw",
+        "Cycling"
+      ],
+      "role": "SB — lifegain + cycle vs aggro/burn",
+      "board": "sideboard",
+      "set": "dmr",
+      "collector_number": "23",
+      "qty": 1,
+      "when_to_board": "vs aggro/burn — 6 life or 2 + a card on cycle"
+    },
+    {
+      "name": "Pacifism",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "SB — cheap creature lockdown vs aggro",
+      "board": "sideboard",
+      "set": "dmr",
+      "collector_number": "19",
+      "qty": 1,
+      "when_to_board": "vs creature-dense aggro — extra cheap lockdown"
+    },
+    {
+      "name": "Serra Angel",
+      "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Angel",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Standalone Threat"
+      ],
+      "role": "Threat/Payoff — 4/4 flying vigilance finisher that blocks and attacks",
+      "board": "sideboard",
+      "set": "dmr",
+      "collector_number": "25",
+      "qty": 1,
+      "when_to_board": null
+    },
+    {
+      "name": "Confiscate",
+      "oracle_text": "Enchant permanent\nYou control enchanted permanent.",
+      "mana_cost": "{4}{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 6,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Control Magic"
+      ],
+      "role": "SB — steal a resolved problem permanent (covers our artifact/enchantment gap)",
+      "board": "sideboard",
+      "set": "dmr",
+      "collector_number": "44",
+      "qty": 1,
+      "when_to_board": "vs a resolved artifact/enchantment/creature we cannot otherwise destroy (steal it)"
+    }
+  ],
+  "pitch": "White-Blue draw-go permission control splashing black. Six counters (Counterspell, Circular Logic, Absorb, Force of Will) stop the opponent's threats on the stack while premium removal (Swords to Plowshares, Terror, Wrath of God) cleans up what resolves. A deep card-advantage engine (Mystic Remora, Fact or Fiction, Deep Analysis, Arcanis the Omnipotent, Mind Stone) buries the opponent in resources, and a small, entirely evasive finisher package (Thieving Magpie, Serra Angel, Voice of All, plus Arcanis's body) closes once they are out of gas.",
+  "strategy_es": "control de permisión draw-go",
+  "identity_es": "Control de permisión draw-go blanco-azul salpicando negro. Seis contras (Counterspell, Circular Logic, Absorb, Force of Will) detienen las amenazas del rival en la pila mientras la eliminación de primera (Swords to Plowshares, Terror, Wrath of God) limpia lo que resuelve. Un motor profundo de ventaja de cartas (Mystic Remora, Fact or Fiction, Deep Analysis, Arcanis the Omnipotent, Mind Stone) entierra al rival en recursos, y un paquete pequeño y totalmente evasivo de finalizadores (Thieving Magpie, Serra Angel, Voice of All, más el cuerpo de Arcanis) cierra en cuanto se quedan sin gasolina.",
+  "pitch_es": "Control de permisión draw-go blanco-azul salpicando negro. Seis contras (Counterspell, Circular Logic, Absorb, Force of Will) detienen las amenazas del rival en la pila mientras la eliminación de primera (Swords to Plowshares, Terror, Wrath of God) limpia lo que resuelve. Un motor profundo de ventaja de cartas (Mystic Remora, Fact or Fiction, Deep Analysis, Arcanis the Omnipotent, Mind Stone) entierra al rival en recursos, y un paquete pequeño y totalmente evasivo de finalizadores (Thieving Magpie, Serra Angel, Voice of All, más el cuerpo de Arcanis) cierra en cuanto se quedan sin gasolina."
+}

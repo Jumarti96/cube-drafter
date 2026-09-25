@@ -1,0 +1,1046 @@
+{
+  "deck_name": "bg-yawgmoth-counters",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-07-31T16:44:53Z",
+  "format": "40-card",
+  "strategy": "midrange",
+  "colors": "BG",
+  "identity": "A black-green attrition deck whose engine runs counters in both directions at once. Yawgmoth, Thran Physician reads 'Pay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card' - every spare body becomes removal AND a card - and '{B}{B}, Discard a card: Proliferate', which gives 'each another counter of each kind already there'. A single proliferate therefore deepens the -1/-1 counters killing the opponent's creatures and simultaneously grows the +1/+1 counters on Spiritmonger, Phyrexian Scuta, Kavu Primarch and Forgotten Ancient. Two things the grill made me state plainly. First, the +1/+1 half is a GROWTH engine, not a kill: Triskelion converts counters to damage one at a time, which is reach and removal, not a clock - the actual kill is combat damage from bodies that proliferate has enlarged. Second, both halves of the engine have a per-activation cost, so the deck is built to pay them: proliferate costs a card, which Dark Withering's Madness {B} turns into a one-mana kill spell, and the sacrifice costs a body, which Squirrel Nest and Oversold Cemetery renew instead of merely spending.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "deck_level_cap": "max 5 rare+mythic total across mainboard + sideboard",
+    "basics": "unlimited, format-supplied"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 18,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.32,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 1.093,
+      "raw_target": 18.093,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.32,
+    "pip_demand": {
+      "B": 16,
+      "G": 9
+    },
+    "land_color_production": {
+      "B": 12,
+      "G": 9
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 64,
+        "prod_pct": 66.7,
+        "gap": -2.7,
+        "status": "OK"
+      },
+      "G": {
+        "pip_pct": 36,
+        "prod_pct": 50,
+        "gap": -14,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Yawgmoth, Thran Physician",
+      "oracle_text": "Protection from Humans\nPay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card.\n{B}{B}, Discard a card: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Sacrifice Outlet",
+        "Card Draw",
+        "Targeted Removal",
+        "Proliferate",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Sacrifice Outlet",
+          "Card Draw",
+          "Targeted Removal",
+          "Proliferate"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Cleric",
+      "rarity": "mythic",
+      "power": "2",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine (sac outlet + proliferate)"
+    },
+    {
+      "name": "Forgotten Ancient",
+      "oracle_text": "Whenever a player casts a spell, you may put a +1/+1 counter on this creature.\nAt the beginning of your upkeep, you may move any number of +1/+1 counters from this creature onto other creatures.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Spellslinger",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Counter Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Counter Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elemental",
+      "rarity": "rare",
+      "power": "0",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine (counter reservoir)"
+    },
+    {
+      "name": "Dragon Blood",
+      "oracle_text": "{3}, {T}: Put a +1/+1 counter on target creature.",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Engine/Outlet",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine (colourless counter seed)"
+    },
+    {
+      "name": "Triskelion",
+      "oracle_text": "This creature enters with three +1/+1 counters on it.\nRemove a +1/+1 counter from this creature: It deals 1 damage to any target.",
+      "mana_cost": "{6}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Artifact Creature — Construct",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine (counter sink / reach)"
+    },
+    {
+      "name": "Oversold Cemetery",
+      "oracle_text": "At the beginning of your upkeep, if you have four or more creature cards in your graveyard, you may return target creature card from your graveyard to your hand.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Graveyard",
+        "Reanimator",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Graveyard Recursion"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Reanimator",
+          "Aristocrats/Sacrifice"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Graveyard Recursion"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Enchantment",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine (renewable fodder from graveyard)"
+    },
+    {
+      "name": "Spiritmonger",
+      "oracle_text": "Whenever this creature deals damage to a creature, put a +1/+1 counter on this creature.\n{B}: Regenerate this creature.\n{G}: This creature becomes the color of your choice until end of turn.",
+      "mana_cost": "{3}{B}{G}",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Standalone Threat",
+        "Counter Placement",
+        "Regeneration",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Counter Placement",
+          "Regeneration",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Beast",
+      "rarity": "uncommon",
+      "power": "6",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat (self-growing counters)"
+    },
+    {
+      "name": "Phyrexian Scuta",
+      "oracle_text": "Kicker—Pay 3 life. (You may pay 3 life in addition to any other costs as you cast this spell.)\nIf this creature was kicked, it enters with two +1/+1 counters on it.",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Counters (+1/+1)",
+        "Standalone Threat",
+        "Kicker",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Kicker"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 4,
+      "type_line": "Creature — Phyrexian Zombie",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat (kicked counters body)"
+    },
+    {
+      "name": "Kavu Primarch",
+      "oracle_text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nIf this creature was kicked, it enters with four +1/+1 counters on it.",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Kicker/Scaling",
+        "Standalone Threat",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Kicker/Scaling"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Kavu",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat (kicked counters body / convoke)"
+    },
+    {
+      "name": "Call of the Herd",
+      "oracle_text": "Create a 3/3 green Elephant creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Graveyard",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Flashback/GY-Cast",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Flashback"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat (two bodies per card)"
+    },
+    {
+      "name": "Festering Goblin",
+      "oracle_text": "When this creature dies, target creature gets -1/-1 until end of turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Zombie Goblin",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Sac fodder (1-mana body, death debuff)"
+    },
+    {
+      "name": "Phyrexian Rager",
+      "oracle_text": "When this creature enters, you draw a card and you lose 1 life.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Self-Replacing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing",
+          "Life: Cost"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Creature — Phyrexian Horror",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Sac fodder (cantrip body)"
+    },
+    {
+      "name": "Squirrel Nest",
+      "oracle_text": "Enchant land\nEnchanted land has \"{T}: Create a 1/1 green Squirrel creature token.\"",
+      "mana_cost": "{1}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tokens",
+        "Lands-Matter",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Sac fodder (renewable body factory)"
+    },
+    {
+      "name": "Terror",
+      "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction"
+    },
+    {
+      "name": "Chainer's Edict",
+      "oracle_text": "Target player sacrifices a creature of their choice.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Flashback/GY-Cast",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Flashback"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Aristocrats/Sacrifice",
+          "Flashback/GY-Cast"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Flashback"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction (flashback edict)"
+    },
+    {
+      "name": "Dark Withering",
+      "oracle_text": "Destroy target nonblack creature.\nMadness {B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{4}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Graveyard",
+        "Madness",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Madness"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Madness"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction (madness off the proliferate discard)"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 9,
+      "role": "Land"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 6,
+      "role": "Land"
+    },
+    {
+      "name": "Haunted Mire",
+      "oracle_text": "({T}: Add {B} or {G}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Swamp Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land"
+    },
+    {
+      "name": "Woodland Cemetery",
+      "oracle_text": "This land enters tapped unless you control a Swamp or a Forest.\n{T}: Add {B} or {G}.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate: graveyard",
+      "when_to_board": "Against the cube's 45 graveyard-interaction cards - the largest answerable class. Board in knowing it fights this deck's own Chainer's Edict / Call of the Herd flashbacks and Oversold Cemetery."
+    },
+    {
+      "name": "Break Asunder",
+      "oracle_text": "Destroy target artifact or enchantment.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "{2}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Cycling"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Cycling"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate: artifacts/enchantments",
+      "when_to_board": "Against the cube's 24 artifacts + 33 enchantments. It is 1 of only 5 artifact answers and 1 of only 4 enchantment answers in the entire cube, and the only one in B/G."
+    },
+    {
+      "name": "Ichor Slick",
+      "oracle_text": "Target creature gets -3/-3 until end of turn.\nCycling {2} ({2}, Discard this card: Draw a card.)\nMadness {3}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Targeted Removal",
+        "Card Draw",
+        "Cycling",
+        "Madness"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Card Draw",
+          "Cycling",
+          "Madness"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Flex: removal for Terror's blind spot",
+      "when_to_board": "Against black or artifact creatures, which Terror cannot target - 36 of the pool's 120 unique creatures (30%). Its Madness cost is also live off Yawgmoth's proliferate discard."
+    },
+    {
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Spider",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "4",
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Flex: anti-evasion",
+      "when_to_board": "Against the cube's 42 evasion cards; 37 of those 42 are flying-based, so Reach covers 88% of the class."
+    },
+    {
+      "name": "Duress",
+      "oracle_text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Discard"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Discard"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Flex: proactive disruption",
+      "when_to_board": "Against control and combo. B/G has zero counterspells in this pool, so stripping the card beforehand is the only answer to the 4 sweepers and to noncreature bombs."
+    }
+  ],
+  "pitch": "A black-green attrition deck whose engine runs counters in both directions at once. Yawgmoth, Thran Physician reads 'Pay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card' - every spare body becomes removal AND a card - and '{B}{B}, Discard a card: Proliferate', which gives 'each another counter of each kind already there'. A single proliferate therefore deepens the -1/-1 counters killing the opponent's creatures and simultaneously grows the +1/+1 counters on Spiritmonger, Phyrexian Scuta, Kavu Primarch and Forgotten Ancient. Two things the grill made me state plainly. First, the +1/+1 half is a GROWTH engine, not a kill: Triskelion converts counters to damage one at a time, which is reach and removal, not a clock - the actual kill is combat damage from bodies that proliferate has enlarged. Second, both halves of the engine have a per-activation cost, so the deck is built to pay them: proliferate costs a card, which Dark Withering's Madness {B} turns into a one-mana kill spell, and the sacrifice costs a body, which Squirrel Nest and Oversold Cemetery renew instead of merely spending.",
+  "strategy_es": "midrange",
+  "identity_es": "Un mazo negro-verde de desgaste cuyo motor mueve contadores en ambas direcciones a la vez. Yawgmoth, Thran Physician dice 'Pay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card' — cada cuerpo sobrante se vuelve eliminación Y carta — y '{B}{B}, Discard a card: Proliferate', que da 'each another counter of each kind already there'. Un solo proliferar profundiza por tanto los contadores -1/-1 que matan a las criaturas del rival y a la vez hace crecer los contadores +1/+1 de Spiritmonger, Phyrexian Scuta, Kavu Primarch y Forgotten Ancient. Dos cosas que conviene decir con claridad. Primera: la mitad de +1/+1 es un motor de CRECIMIENTO, no una victoria: Triskelion convierte contadores en daño de uno en uno, lo que es alcance y eliminación, no un reloj; la victoria real es el daño de combate de cuerpos que proliferar ha agrandado. Segunda: ambas mitades del motor tienen un coste por activación, así que el mazo está construido para pagarlos: proliferar cuesta una carta, que el Madness {B} de Dark Withering convierte en un hechizo de matar de un maná, y el sacrificio cuesta un cuerpo, que Squirrel Nest y Oversold Cemetery renuevan en lugar de solo gastar.",
+  "pitch_es": "Un mazo negro-verde de desgaste cuyo motor mueve contadores en ambas direcciones a la vez. Yawgmoth, Thran Physician dice 'Pay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card' — cada cuerpo sobrante se vuelve eliminación Y carta — y '{B}{B}, Discard a card: Proliferate', que da 'each another counter of each kind already there'. Un solo proliferar profundiza por tanto los contadores -1/-1 que matan a las criaturas del rival y a la vez hace crecer los contadores +1/+1 de Spiritmonger, Phyrexian Scuta, Kavu Primarch y Forgotten Ancient. Dos cosas que conviene decir con claridad. Primera: la mitad de +1/+1 es un motor de CRECIMIENTO, no una victoria: Triskelion convierte contadores en daño de uno en uno, lo que es alcance y eliminación, no un reloj; la victoria real es el daño de combate de cuerpos que proliferar ha agrandado. Segunda: ambas mitades del motor tienen un coste por activación, así que el mazo está construido para pagarlos: proliferar cuesta una carta, que el Madness {B} de Dark Withering convierte en un hechizo de matar de un maná, y el sacrificio cuesta un cuerpo, que Squirrel Nest y Oversold Cemetery renuevan en lugar de solo gastar."
+}

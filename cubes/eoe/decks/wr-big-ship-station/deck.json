@@ -1,0 +1,1220 @@
+{
+  "deck_name": "w-r-big-ship-station",
+  "cube_id": "eoe",
+  "cube_slug": "eoe",
+  "built_at": "2026-08-02T23:45:33Z",
+  "format": "40-card",
+  "strategy": "midrange | WR Big-Ship Station midrange",
+  "colors": "WR",
+  "identity": "A WR Station midrange deck that converts expendable bodies into one large evasive Spacecraft. Station is a cost that taps a creature WITHOUT using that creature's {T} symbol, so summoning-sick bodies pay it the turn they arrive, and each activation banks charge counters equal to the tapped creature's POWER - which is why this list deliberately runs high-power fodder (Vaultguard Trooper 5, Terrapact Intimidator usually 4, Sunstar Chaplain 3) rather than cheap 1/1s. The Seriema is the primary ship: a {1}{W}{W} 5/5 that tutors Sami on entry and flies at 7 counters, which one Drill Too Deep ('Put five charge counters on target Spacecraft or Planet you control') plus a single 2-power Station reaches. Galvanizing Sawship is the alternate kill, lethal on arrival at 3 counters off one big Station. Six of the twenty-three nonland cards are Spacecraft and three of them are removal spells on entry, so the deck answers the board with the same cards that assemble the kill.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_constraint": "at most 7 rare+mythic total across mainboard and sideboard",
+    "rare_mythic_used": 6,
+    "rare_mythic_names": [
+      "Hardlight Containment",
+      "Lumen-Class Frigate",
+      "Sacred Foundry",
+      "Sunstar Chaplain",
+      "The Seriema",
+      "Warmaker Gunship"
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.65,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.133,
+      "raw_target": 16.867,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.65,
+    "pip_demand": {
+      "R": 13,
+      "W": 12
+    },
+    "land_color_production": {
+      "W": 10,
+      "R": 10
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 52,
+        "prod_pct": 58.8,
+        "gap": -6.8,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 48,
+        "prod_pct": 58.8,
+        "gap": -10.8,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Kavaron Harrier",
+      "oracle_text": "Whenever this creature attacks, you may pay {2}. If you do, create a 2/2 colorless Robot artifact creature token that's tapped and attacking. Sacrifice that token at end of combat.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Tokens",
+        "Artifacts",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Mana: Ongoing-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": [
+          "Mana: Ongoing-Cost"
+        ]
+      },
+      "cmc": 1,
+      "type_line": "Artifact Creature — Robot Soldier",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler/Fodder — 2 power of Station fuel on arrival; its attack token is sacrificed at end of combat and supplies none"
+    },
+    {
+      "name": "Hardlight Containment",
+      "oracle_text": "Enchant artifact you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield.\nEnchanted permanent has ward {1}.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — 1-mana exile that parks on a Spacecraft and grants it ward {1}"
+    },
+    {
+      "name": "Reroute Systems",
+      "oracle_text": "Choose one —\n• Target artifact or creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Reroute Systems deals 2 damage to target tapped creature.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Protection"
+        ],
+        "mechanical_functions": [
+          "Protection",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — modal: protect the ship, or 2 damage to a tapped creature"
+    },
+    {
+      "name": "Sunstar Chaplain",
+      "oracle_text": "At the beginning of your end step, if you control two or more tapped creatures, put a +1/+1 counter on target creature you control.\n{2}, Remove a +1/+1 counter from a creature you control: Tap target artifact or creature.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Counter Placement",
+        "Tap Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Counter Placement",
+          "Tap Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff — 3-power body and end-step tapped payoff; its tapper spends counters, never makes charge counters"
+    },
+    {
+      "name": "Lumen-Class Frigate",
+      "oracle_text": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 12+.)\n2+ | Other creatures you control get +1/+1.\n12+ | Flying, lifelink",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Artifacts",
+        "Payload/Payoff",
+        "Anthem Effect"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Anthem Effect"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff — 2+ anthem; +1/+1 means every later Station banks an extra counter"
+    },
+    {
+      "name": "Starfighter Pilot",
+      "oracle_text": "Whenever this creature becomes tapped, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Card Selection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Self-Mill",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Self-Mill"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Pilot",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler/Fodder — Station fodder that surveils whenever it becomes tapped"
+    },
+    {
+      "name": "Terrapact Intimidator",
+      "oracle_text": "When this creature enters, target opponent may have you create two Lander tokens. If they don't, put two +1/+1 counters on this creature. (A Lander token is an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Landfall",
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Standalone Threat",
+        "Token Generation",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Landfall",
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Kavu Scout",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Enabler/Fodder — usually a 4/3, i.e. a one-activation Galvanizing Sawship enabler"
+    },
+    {
+      "name": "Wurmwall Sweeper",
+      "oracle_text": "When this Spacecraft enters, surveil 2.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 4+.)\n4+ | Flying",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Self-Mill",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Surveil",
+        "Card Selection",
+        "Station"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Self-Mill",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Surveil",
+          "Card Selection",
+          "Station"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Enabler/Fodder — cheapest Station sink; ETB surveil 2"
+    },
+    {
+      "name": "Drill Too Deep",
+      "oracle_text": "Choose one —\n• Put five charge counters on target Spacecraft or Planet you control.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Charge Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Charge Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — modal: five charge counters, or destroy target artifact"
+    },
+    {
+      "name": "Invasive Maneuvers",
+      "oracle_text": "Invasive Maneuvers deals 3 damage to target creature. It deals 5 damage instead if you control a Spacecraft.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction — instant; 5 damage with any of the 6 Spacecraft out"
+    },
+    {
+      "name": "The Seriema",
+      "oracle_text": "When The Seriema enters, search your library for a legendary creature card, reveal it, put it into your hand, then shuffle.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 7+.)\n7+ | Flying\nOther tapped legendary creatures you control have indestructible.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Artifacts",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Tutor",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Tutor"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Legendary Artifact — Spacecraft",
+      "rarity": "rare",
+      "power": "5",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff — 3-mana 5/5 ship at 7+; tutors Sami and makes tapped legends indestructible"
+    },
+    {
+      "name": "Warmaker Gunship",
+      "oracle_text": "When this Spacecraft enters, it deals damage equal to the number of artifacts you control to target creature an opponent controls.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 6+.)\n6+ | Flying",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal",
+        "Station"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal",
+          "Station"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff — removal on entry that stays as a 4/3 Station target"
+    },
+    {
+      "name": "Emergency Eject",
+      "oracle_text": "Destroy target nonland permanent. Its controller creates a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation",
+        "Land Fetch"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction — instant, destroys any nonland permanent"
+    },
+    {
+      "name": "Frontline War-Rager",
+      "oracle_text": "At the beginning of your end step, if you control two or more tapped creatures, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Counter Placement"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Counter Placement"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Kavu Soldier",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Enabler/Fodder — accumulates +1/+1 counters, so its power (and its Station value) grows each end step"
+    },
+    {
+      "name": "Sami, Ship's Engineer",
+      "oracle_text": "At the beginning of your end step, if you control two or more tapped creatures, create a tapped 2/2 colorless Robot artifact creature token.",
+      "mana_cost": "{2}{R}{W}",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Artifacts",
+        "Tokens",
+        "Engine/Outlet",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Legendary Creature — Human Artificer",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat/Payoff — a tapped 2/2 every end step; fodder for the FOLLOWING turn, not the same turn"
+    },
+    {
+      "name": "Debris Field Crusher",
+      "oracle_text": "When this Spacecraft enters, it deals 3 damage to any target.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 8+.)\n8+ | Flying\n{1}{R}: This Spacecraft gets +2/+0 until end of turn.",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Interaction/Disruption",
+        "Standalone Threat",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff — ETB 3 damage; {1}{R} pump is the deck's repeatable mana sink"
+    },
+    {
+      "name": "Vaultguard Trooper",
+      "oracle_text": "At the beginning of your end step, if you control two or more tapped creatures, you may discard your hand. If you do, draw two cards.",
+      "mana_cost": "{4}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Draw"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Kavu Soldier",
+      "rarity": "uncommon",
+      "power": "5",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff — 5 power is the deck's best single Station, and its refuel keys off the tapped state Station creates"
+    },
+    {
+      "name": "Galvanizing Sawship",
+      "oracle_text": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 3+.)\n3+ | Flying, haste",
+      "mana_cost": "{5}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Artifacts",
+        "Standalone Threat"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Artifact — Spacecraft",
+      "rarity": "uncommon",
+      "power": "6",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Payoff — 3+ is a 6/5 flier with haste, lethal on arrival off one big Station"
+    },
+    {
+      "name": "Sacred Foundry",
+      "oracle_text": "({T}: Add {R} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Life: Cost"
+        ]
+      },
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Land — only untapped-capable WR dual"
+    },
+    {
+      "name": "Sacred Peaks",
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Land — WR dual (enters tapped)"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 7,
+      "role": "Land"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 7,
+      "role": "Land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Radiant Strike",
+      "oracle_text": "Destroy target artifact or tapped creature. You gain 3 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate — artifacts",
+      "when_to_board": "vs the 74-card artifact class; also kills a tapped creature and gains 3 life"
+    },
+    {
+      "name": "Cut Propulsion",
+      "oracle_text": "Target creature deals damage to itself equal to its power. If that creature has flying, it deals twice that much damage to itself instead.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate — evasion/fliers",
+      "when_to_board": "vs the 56-card evasion class; doubled damage vs flying"
+    },
+    {
+      "name": "Banishing Light",
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate — noncreature permanents",
+      "when_to_board": "vs the 16-card enchantment class, which this cube has exactly one other answer to"
+    },
+    {
+      "name": "Lithobraking",
+      "oracle_text": "Create a Lander token. Then you may sacrifice an artifact. When you do, Lithobraking deals 2 damage to each creature. (A Lander token is an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Aristocrats/Sacrifice",
+        "Artifacts",
+        "Tokens",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Sweeper/Board Wipe",
+        "Token Generation",
+        "Land Fetch",
+        "Board: Sacrifice-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Aristocrats/Sacrifice",
+          "Artifacts",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Sweeper/Board Wipe",
+          "Token Generation",
+          "Land Fetch"
+        ],
+        "resource_exchange": [
+          "Board: Sacrifice-Cost"
+        ]
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "Hate — wide boards",
+      "when_to_board": "vs go-wide decks only; it also kills this deck's own 1-2 toughness fodder"
+    },
+    {
+      "name": "Chrome Companion",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life.\n{2}, {T}: Put target card from a graveyard on the bottom of its owner's library.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Artifacts",
+        "Lifegain",
+        "Graveyard",
+        "Infrastructure/Consistency",
+        "Interaction/Disruption",
+        "Life Drain",
+        "Graveyard Hate"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Artifacts",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Life Drain",
+          "Graveyard Hate"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Artifact Creature — Dog",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Hate — graveyard",
+      "when_to_board": "vs the 31-card graveyard class; repeatable, which recursion requires"
+    },
+    {
+      "name": "Bombard",
+      "oracle_text": "Bombard deals 4 damage to target creature.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "Flex — removal",
+      "when_to_board": "unconditional instant 4 damage; answers more board states than a combat-only spell"
+    }
+  ],
+  "pitch": "A WR Station midrange deck that converts expendable bodies into one large evasive Spacecraft. Station is a cost that taps a creature WITHOUT using that creature's {T} symbol, so summoning-sick bodies pay it the turn they arrive, and each activation banks charge counters equal to the tapped creature's POWER - which is why this list deliberately runs high-power fodder (Vaultguard Trooper 5, Terrapact Intimidator usually 4, Sunstar Chaplain 3) rather than cheap 1/1s. The Seriema is the primary ship: a {1}{W}{W} 5/5 that tutors Sami on entry and flies at 7 counters, which one Drill Too Deep ('Put five charge counters on target Spacecraft or Planet you control') plus a single 2-power Station reaches. Galvanizing Sawship is the alternate kill, lethal on arrival at 3 counters off one big Station. Six of the twenty-three nonland cards are Spacecraft and three of them are removal spells on entry, so the deck answers the board with the same cards that assemble the kill.",
+  "strategy_es": "midrange | midrange WR de Station con nave grande",
+  "identity_es": "Un midrange de Station WR que convierte cuerpos prescindibles en una Spacecraft grande y evasiva. Station es un coste que gira una criatura SIN usar el símbolo de {T} de esa criatura, así que los cuerpos con mareo de invocación lo pagan el turno que llegan, y cada activación guarda contadores de carga iguales a la FUERZA de la criatura girada, que es por lo que esta lista juega deliberadamente forraje de fuerza alta (Vaultguard Trooper 5, Terrapact Intimidator normalmente 4, Sunstar Chaplain 3) en lugar de 1/1 baratos. The Seriema es la nave principal: un 5/5 de {1}{W}{W} que busca a Sami al entrar y vuela con 7 contadores, algo que alcanzan un Drill Too Deep ('Put five charge counters on target Spacecraft or Planet you control') más un solo Station de 2 de fuerza. Galvanizing Sawship es la victoria alternativa, letal al llegar con 3 contadores desde un solo Station grande. Seis de las veintitrés cartas no-tierra son Spacecraft y tres de ellas son hechizos de eliminación al entrar, así que el mazo responde al tablero con las mismas cartas que ensamblan la victoria.",
+  "pitch_es": "Un midrange de Station WR que convierte cuerpos prescindibles en una Spacecraft grande y evasiva. Station es un coste que gira una criatura SIN usar el símbolo de {T} de esa criatura, así que los cuerpos con mareo de invocación lo pagan el turno que llegan, y cada activación guarda contadores de carga iguales a la FUERZA de la criatura girada, que es por lo que esta lista juega deliberadamente forraje de fuerza alta (Vaultguard Trooper 5, Terrapact Intimidator normalmente 4, Sunstar Chaplain 3) en lugar de 1/1 baratos. The Seriema es la nave principal: un 5/5 de {1}{W}{W} que busca a Sami al entrar y vuela con 7 contadores, algo que alcanzan un Drill Too Deep ('Put five charge counters on target Spacecraft or Planet you control') más un solo Station de 2 de fuerza. Galvanizing Sawship es la victoria alternativa, letal al llegar con 3 contadores desde un solo Station grande. Seis de las veintitrés cartas no-tierra son Spacecraft y tres de ellas son hechizos de eliminación al entrar, así que el mazo responde al tablero con las mismas cartas que ensamblan la victoria."
+}

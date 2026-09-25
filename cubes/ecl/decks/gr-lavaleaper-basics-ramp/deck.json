@@ -1,0 +1,1010 @@
+{
+  "deck_name": "gr-lavaleaper-basics-ramp",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-12T04:42:21Z",
+  "format": "40-card",
+  "strategy": "midrange",
+  "colors": "GR",
+  "identity": "Green-red basics-only ramp midrange. Lavaleaper reads 'All creatures have haste. / Whenever a player taps a BASIC land for mana, that player adds one mana of any type that land produced' - so every basic taps for two, and the oversized threats that mana buys attack the turn they land. The manabase is therefore 17 of 17 BASIC: this is the one deck in the pool that is actively worse for playing a dual, because a nonbasic does not double. Shimmerwilds Growth stacks on top - an enchanted basic taps for three. The kill is a hasty 6/6 Prismabasher or 7/7 Aurora Awakener arriving two turns early, with Champion of the Path converting each Elemental that enters into direct damage and Enraged Flamecaster taxing two per four-drop cast.",
+  "restrictions": {
+    "base": "cube_mainboard only - every name verified by exact string match against the working pool cache",
+    "commons_uncommons_max_2": "PASS - no common or uncommon exceeds 2 copies across mainboard + sideboard",
+    "rares_mythics_max_1": "PASS - Lavaleaper, Spinerock Tyrant, Aurora Awakener, Champion of the Path each at 1",
+    "rare_mythic_total_max_5": "PASS - 5 of 5 used, the full budget: Lavaleaper, Spinerock Tyrant, Aurora Awakener, Champion of the Path and End-Blaze Epiphany, all mainboard. The pre-grill record left the fifth slot unspent on a rationale the Challenger showed was false on its own example - it dismissed Collective Inferno for requiring 'a single dominant creature type this list does not have', when this list has 7 Elemental copies among its 12 creature copies. The slot went to End-Blaze Epiphany instead of Collective Inferno because the deck's structural hole was a mana sink, not a damage doubler. The sideboard is entirely commons and uncommons.",
+    "basics_unlimited": "9 Forest, 8 Mountain - basics are format-supplied and exempt, and here they are also 100% of the manabase by design",
+    "colour_legality": "PASS - every distinct nonland name returns a usable mode under effective_cost.best_mode(card, ['G','R'], [])"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 8,
+    "cantrip_count": 0,
+    "accel_count": 8,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.57,
+      "reference_avg_mv": 2.5,
+      "accel": 8,
+      "adjustment": 0.093,
+      "raw_target": 17.093,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 3.57,
+    "pip_demand": {
+      "R": 12,
+      "G": 14
+    },
+    "land_color_production": {
+      "G": 9,
+      "R": 8
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 53.8,
+        "prod_pct": 52.9,
+        "gap": 0.9,
+        "status": "OK"
+      },
+      "R": {
+        "pip_pct": 46.2,
+        "prod_pct": 47.1,
+        "gap": -0.9,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Lavaleaper",
+      "oracle_text": "All creatures have haste.\nWhenever a player taps a basic land for mana, that player adds one mana of any type that land produced.",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Mana Ramp",
+        "Haste Granting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Haste Granting"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elemental",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Shimmerwilds Growth",
+      "oracle_text": "Enchant land\nAs this Aura enters, choose a color.\nEnchanted land is the chosen color.\nWhenever enchanted land is tapped for mana, its controller adds an additional one mana of the chosen color.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Mana Ramp",
+        "Mana Fixing",
+        "Mana: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Mana Ramp",
+          "Mana Fixing"
+        ],
+        "resource_exchange": [
+          "Mana: Net-Positive"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Great Forest Druid",
+      "oracle_text": "{T}: Add one mana of any color.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Dork"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Treefolk Druid",
+      "rarity": "common",
+      "power": "0",
+      "toughness": "4",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Tend the Sprigs",
+      "oracle_text": "Search your library for a basic land card, put it onto the battlefield tapped, then shuffle. Then if you control seven or more lands and/or Treefolk, create a 3/4 green Treefolk creature token with reach. (It can block creatures with flying.)",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Tokens",
+        "Tribal/Kindred",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Land Fetch",
+        "Mana Ramp",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter",
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Land Fetch",
+          "Mana Ramp",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Enraged Flamecaster",
+      "oracle_text": "Reach\nWhenever you cast a spell with mana value 4 or greater, this creature deals 2 damage to each opponent.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Payload/Payoff",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Spellslinger"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Kulrath Zealot",
+      "oracle_text": "When this creature enters, exile the top card of your library. Until the end of your next turn, you may play that card.\nBasic landcycling {1}{R} ({1}{R}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)",
+      "mana_cost": "{5}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Impulse Draw",
+        "Land Fetch",
+        "Cycling",
+        "Cards: Self-Replacing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lands-Matter"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Impulse Draw",
+          "Land Fetch",
+          "Cycling"
+        ],
+        "resource_exchange": [
+          "Cards: Self-Replacing"
+        ]
+      },
+      "cmc": 6,
+      "type_line": "Creature — Elemental Warrior",
+      "rarity": "common",
+      "power": "6",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Prismabasher",
+      "oracle_text": "Trample\nVivid — When this creature enters, up to X target creatures you control get +X/+X until end of turn, where X is the number of colors among permanents you control.",
+      "mana_cost": "{4}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Domain",
+        "Payload/Payoff",
+        "Standalone Threat",
+        "Combat Trick"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Domain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Combat Trick"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 6,
+      "type_line": "Creature — Elemental",
+      "rarity": "uncommon",
+      "power": "6",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Wildvine Pummeler",
+      "oracle_text": "Vivid — This spell costs {1} less to cast for each color among permanents you control.\nReach, trample",
+      "mana_cost": "{6}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Domain",
+        "Standalone Threat",
+        "Cost Reduction"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Domain"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Cost Reduction"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 7,
+      "type_line": "Creature — Giant Berserker",
+      "rarity": "common",
+      "power": "6",
+      "toughness": "5",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Spinerock Tyrant",
+      "oracle_text": "Flying\nWither (This deals damage to creatures in the form of -1/-1 counters.)\nWhenever you cast an instant or sorcery spell with a single target, you may copy it. If you do, those spells gain wither. You may choose new targets for the copy.",
+      "mana_cost": "{3}{R}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Spellslinger",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Spell Copy"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Spellslinger",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Spell Copy"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Dragon",
+      "rarity": "mythic",
+      "power": "6",
+      "toughness": "6",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Aurora Awakener",
+      "oracle_text": "Trample\nVivid — When this creature enters, reveal cards from the top of your library until you reveal X permanent cards, where X is the number of colors among permanents you control. Put any number of those permanent cards onto the battlefield, then put the rest of the revealed cards on the bottom of your library in a random order.",
+      "mana_cost": "{6}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Domain",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Card Advantage",
+        "Cheat Into Play",
+        "Cards: Net-Positive"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Domain"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Advantage",
+          "Cheat Into Play"
+        ],
+        "resource_exchange": [
+          "Cards: Net-Positive"
+        ]
+      },
+      "cmc": 7,
+      "type_line": "Creature — Giant Druid",
+      "rarity": "mythic",
+      "power": "7",
+      "toughness": "7",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Champion of the Path",
+      "oracle_text": "As an additional cost to cast this spell, behold an Elemental and exile it. (Exile an Elemental you control or an Elemental card from your hand.)\nWhenever another Elemental you control enters, it deals damage equal to its power to each opponent.\nWhen this creature leaves the battlefield, return the exiled card to its owner's hand.",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Combo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Blink/ETB"
+        ],
+        "structural_roles": [
+          "Payload/Payoff",
+          "Engine/Outlet"
+        ],
+        "mechanical_functions": [
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Creature — Elemental Sorcerer",
+      "rarity": "rare",
+      "power": "7",
+      "toughness": "3",
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Sear",
+      "oracle_text": "Sear deals 4 damage to target creature or planeswalker.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Feed the Flames",
+      "oracle_text": "Feed the Flames deals 5 damage to target creature. If that creature would die this turn, exile it instead.",
+      "mana_cost": "{3}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Unforgiving Aim",
+      "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2
+    },
+    {
+      "name": "Giantfall",
+      "oracle_text": "Choose one —\n• Target creature you control deals damage equal to its power to target creature an opponent controls.\n• Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 9
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 8
+    },
+    {
+      "name": "End-Blaze Epiphany",
+      "oracle_text": "End-Blaze Epiphany deals X damage to target creature. When that creature dies this turn, exile a number of cards from the top of your library equal to its power, then choose a card exiled this way. Until the end of your next turn, you may play that card.",
+      "mana_cost": "{X}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Targeted Removal",
+        "Direct Damage",
+        "Card Advantage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage",
+          "Card Advantage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Boulder Dash",
+      "oracle_text": "Boulder Dash deals 2 damage to any target and 1 damage to any other target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Cinder Strike",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nCinder Strike deals 2 damage to target creature. It deals 4 damage to that creature instead if this spell's additional cost was paid.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain",
+          "Graveyard"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Graveyard Hate",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Pummeler for Hire",
+      "oracle_text": "Vigilance, reach\nWard {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)\nWhen this creature enters, you gain X life, where X is the greatest power among Giants you control.",
+      "mana_cost": "{4}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Giant Mercenary",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "4",
+      "board": "sideboard",
+      "qty": 2
+    },
+    {
+      "name": "Tweeze",
+      "oracle_text": "Tweeze deals 3 damage to any target. You may discard a card. If you do, draw a card.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Looting"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Looting"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1
+    },
+    {
+      "name": "Chomping Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, destroy up to one target artifact or enchantment.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "2",
+      "board": "sideboard",
+      "qty": 1
+    }
+  ],
+  "pitch": "This is the one deck in this cube that is *actively worse* for playing a dual land, and the reason is a supertype-versus-type distinction that is very easy to get backwards.",
+  "strategy_es": "midrange",
+  "identity_es": "Midrange de aceleración verde-rojo solo con básicas. Lavaleaper dice 'All creatures have haste. / Whenever a player taps a BASIC land for mana, that player adds one mana of any type that land produced', así que cada básica gira por dos, y las amenazas descomunales que ese maná compra atacan el turno que aterrizan. La base de maná es por tanto 17 de 17 BÁSICAS: este es el único mazo del pool que es activamente peor por jugar una dual, porque una no básica no duplica. Shimmerwilds Growth se apila encima: una básica encantada gira por tres. La victoria es un Prismabasher 6/6 con prisa o un Aurora Awakener 7/7 llegando dos turnos antes, con Champion of the Path convirtiendo cada Elemental que entra en daño directo y Enraged Flamecaster cobrando dos por cada lanzamiento de cuatro manás.",
+  "pitch_es": "Este es el único mazo de este cubo que es *activamente peor* por jugar una tierra dual, y la razón es una distinción entre supertipo y tipo que es muy fácil de entender al revés."
+}

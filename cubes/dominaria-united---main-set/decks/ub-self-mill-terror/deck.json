@@ -1,0 +1,708 @@
+{
+  "deck_name": "ub-self-mill-terror",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T00:00:00Z",
+  "format": "40-card",
+  "strategy": "tempo — Monstrous War-Leech reanimator",
+  "colors": "UB",
+  "identity": "A U/B self-mill tempo deck, and the only one of these four builds where BOTH halves of the pool's kicker cards are live: Monstrous War-Leech's {U} kicker mills four AND makes it huge, Tribute to Urborg's {1}{U} kicker scales its -X/-X off the same graveyard, and Rona's Vortex's {2}{B} kicker upgrades a bounce into permanent removal. It fills its own graveyard on purpose - Vohar's '{T}: Draw a card, then discard a card' is the pool's ONLY repeatable rummage, Founding the Third Path chapter II mills four, Eerie Soultender mills three - and then cashes that graveyard out primarily from the CAST side rather than by reanimating: Tolarian Terror costs {1} less per instant and sorcery card in the yard, Haughty Djinn's power reads the same count, and Monstrous War-Leech's power and toughness equal the greatest mana value in it. Sheoldred's Restoration x2 and The Cruelty of Gix chapter III sit on top as the battlefield-reanimation routes - 3 of 23 nonland cards, which is the CEILING the pool allows a U/B deck (the only other graveyard-to-battlefield effects in these colours are Cult Conscript, which returns only itself, and Balduvian Atrocity, whose reanimation is behind an off-colour {R} kicker and sacrifices the creature at end of turn anyway). RETRACTED after the grill: an earlier version of this line claimed the deck 'delivers the Reanimator constraint literally as well as structurally'. Measured, there is no creature card in your own graveyard at all in 43.8% of games at turn 4 and 30.4% at turn 5, and the mean best target is mana value 2.3 at turn 4 - so the literal reanimation is real but small, and the deck's primary cash-out is and remains the cast side.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "extra_user_constraint": "At most 5 rare-or-mythic cards total across mainboard + sideboard (rare LANDS count)."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.87,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": 0.493,
+      "raw_target": 17.493,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.87,
+    "pip_demand": {
+      "B": 17,
+      "U": 12
+    },
+    "land_color_production": {
+      "B": 10,
+      "U": 10,
+      "W": 1,
+      "R": 1,
+      "G": 1
+    },
+    "color_balance_status": "PASS",
+    "color_balance_flags": [],
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 58.6,
+        "prod_pct": 58.8,
+        "gap": -0.2,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 41.4,
+        "prod_pct": 58.8,
+        "gap": -17.4,
+        "status": "OK"
+      }
+    },
+    "splash_colors": [],
+    "splash_check": {
+      "per_color": {},
+      "flags": [],
+      "overall": "PASS"
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Cut Down",
+      "mana_cost": "{B}",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Rona's Vortex",
+      "mana_cost": "{U}",
+      "cmc": 1,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nReturn target creature or planeswalker you don't control to its owner's hand. If this spell was kicked, put that permanent on the bottom of its owner's library instead.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Interaction/Disruption",
+        "Bounce",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tribute to Urborg",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nTarget creature gets -2/-2 until end of turn. If this spell was kicked, that creature gets an additional -1/-1 until end of turn for each instant and sorcery card in your graveyard.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Spellslinger",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Impulse",
+      "mana_cost": "{1}{U}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 1,
+      "role": "Interaction/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Aether Channeler",
+      "mana_cost": "{2}{U}",
+      "cmc": 3,
+      "type_line": "Creature — Human Wizard",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "When this creature enters, choose one —\n• Create a 1/1 white Bird creature token with flying.\n• Return another target nonland permanent to its owner's hand.\n• Draw a card.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tokens",
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Token Generation",
+        "Bounce",
+        "Card Draw"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ertai Resurrected",
+      "mana_cost": "{2}{U}{B}",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Human Wizard",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flash\nWhen Ertai Resurrected enters, choose up to one —\n• Counter target spell, activated ability, or triggered ability. Its controller draws a card.\n• Destroy another target creature or planeswalker. Its controller draws a card.",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Targeted Removal"
+      ],
+      "qty": 1,
+      "role": "Threat/Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Vohar, Vodalian Desecrator",
+      "mana_cost": "{U}{B}",
+      "cmc": 2,
+      "type_line": "Legendary Creature — Phyrexian Merfolk Wizard",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "{T}: Draw a card, then discard a card. If you discarded an instant or sorcery card this way, each opponent loses 1 life and you gain 1 life.\n{2}, Sacrifice Vohar: You may cast target instant or sorcery card from your graveyard this turn. If that spell would be put into your graveyard, exile it instead. Activate only as a sorcery.",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Life Drain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting",
+        "Graveyard Recursion"
+      ],
+      "qty": 2,
+      "role": "Engine/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Founding the Third Path",
+      "mana_cost": "{1}{U}",
+      "cmc": 2,
+      "type_line": "Enchantment — Saga",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — You may cast an instant or sorcery spell with mana value 1 or 2 from your hand without paying its mana cost.\nII — Target player mills four cards.\nIII — Exile target instant or sorcery card from your graveyard. Copy it. You may cast the copy.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Sagas",
+        "Self-Mill",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Free Cast"
+      ],
+      "qty": 2,
+      "role": "Engine/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Eerie Soultender",
+      "mana_cost": "{2}{B}",
+      "cmc": 3,
+      "type_line": "Creature — Spirit Cleric",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "When this creature enters, mill three cards. (Put the top three cards of your library into your graveyard.)\n{4}{B}, Exile this card from your graveyard: Return another target creature card from your graveyard to your hand.",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Self-Mill",
+        "Reanimator",
+        "Flashback/GY-Cast",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Recursion"
+      ],
+      "qty": 2,
+      "role": "Engine/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Monstrous War-Leech",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Creature — Leech Horror",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {U} (You may pay an additional {U} as you cast this spell.)\nAs this creature enters, if it was kicked, mill four cards. (To mill a card, put the top card of your library into your graveyard.)\nMonstrous War-Leech's power and toughness are each equal to the greatest mana value among cards in your graveyard.",
+      "power": "*",
+      "toughness": "*",
+      "tags": [
+        "Kicker/Scaling",
+        "Graveyard",
+        "Self-Mill",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Kicker"
+      ],
+      "qty": 2,
+      "role": "Threat/Enabler",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tolarian Terror",
+      "mana_cost": "{6}{U}",
+      "cmc": 7,
+      "type_line": "Creature — Serpent",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "This spell costs {1} less to cast for each instant and sorcery card in your graveyard.\nWard {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)",
+      "power": "5",
+      "toughness": "5",
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Standalone Threat",
+        "Cost Reduction"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Haughty Djinn",
+      "mana_cost": "{1}{U}{U}",
+      "cmc": 3,
+      "type_line": "Creature — Djinn",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\nHaughty Djinn's power is equal to the number of instant and sorcery cards in your graveyard.\nInstant and sorcery spells you cast cost {1} less to cast.",
+      "power": "*",
+      "toughness": "4",
+      "tags": [
+        "Spellslinger",
+        "Graveyard",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Cost Reduction"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sheoldred, the Apocalypse",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Legendary Creature — Phyrexian Praetor",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Lifegain",
+        "Life Drain",
+        "Standalone Threat",
+        "Payload/Payoff"
+      ],
+      "qty": 1,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sheoldred's Restoration",
+      "mana_cost": "{3}{B}",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {2}{W} (You may pay an additional {2}{W} as you cast this spell.)\nReturn target creature card from your graveyard to the battlefield. If this spell was kicked, you gain life equal to that card's mana value. Otherwise, you lose that much life.\nExile Sheoldred's Restoration.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Reanimator",
+        "Graveyard",
+        "Kicker/Scaling",
+        "Lifegain",
+        "Payload/Payoff",
+        "Reanimation",
+        "Kicker",
+        "Life: Cost"
+      ],
+      "qty": 2,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "The Cruelty of Gix",
+      "mana_cost": "{3}{B}{B}",
+      "cmc": 5,
+      "type_line": "Enchantment — Saga",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Read ahead (Choose a chapter and start with that many lore counters. Add one after your draw step. Skipped chapters don't trigger. Sacrifice after III.)\nI — Target opponent reveals their hand. You choose a creature or planeswalker card from it. That player discards that card.\nII — Search your library for a card, put that card into your hand, then shuffle. You lose 3 life.\nIII — Put target creature card from a graveyard onto the battlefield under your control.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Sagas",
+        "Reanimator",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Payload/Payoff",
+        "Discard",
+        "Tutor",
+        "Reanimation",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Crystal Grotto",
+      "mana_cost": "",
+      "cmc": 0,
+      "type_line": "Land",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "When this land enters, scry 1.\n{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Card Selection"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Negate",
+      "mana_cost": "{1}{U}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target noncreature spell.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "'Counter target noncreature spell' - together with Essence Scatter this is the only stack interaction in the cube, and it is U/B's primary answer to the 15 artifacts and 18 enchantments that black alone cannot touch once they resolve."
+    },
+    {
+      "name": "Essence Scatter",
+      "mana_cost": "{1}{U}",
+      "cmc": 2,
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target creature spell.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "'Counter target creature spell' - against decks whose plan is one large body (Mossbeard Ancient, Silverback Elder, Defiler of Vigor), answering it on the stack costs two mana and dodges ward and enters-the-battlefield triggers entirely."
+    },
+    {
+      "name": "Extinguish the Light",
+      "mana_cost": "{2}{B}{B}",
+      "cmc": 4,
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Flex",
+      "board": "sideboard",
+      "when_to_board": "'Destroy target creature or planeswalker' - the unconditional answer, and the only planeswalker removal in these colours; in against decks whose threats sit outside Cut Down's total-power-and-toughness-5 window."
+    },
+    {
+      "name": "Tolarian Geyser",
+      "mana_cost": "{2}{U}",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nReturn target creature to its owner's hand. Draw a card. If this spell was kicked, you gain 3 life.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Kicker/Scaling",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Bounce",
+        "Card Draw",
+        "Kicker",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against the cube's largest threat class - 51 evasion cards, of which 41 have flying. 'Return target creature to its owner's hand. Draw a card' answers a RESOLVED flier at instant-relevant cost, replaces itself, and is a sorcery that feeds the instant-and-sorcery count three cards in this deck read. It replaced Academy Wall, whose 0/5 body has neither flying nor reach and therefore blocks none of those 41."
+    },
+    {
+      "name": "Knight of Dusk's Shadow",
+      "mana_cost": "{1}{B}",
+      "cmc": 2,
+      "type_line": "Creature — Human Knight",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nYour opponents can't gain life.\n{1}{B}: This creature gets +1/+1 until end of turn.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Lifegain Hate"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against the cube's 22 lifegain cards - 'Your opponents can't gain life' blanks Mossbeard Ancient's ETB and Silverback Elder's third mode, on a 2/2 menace body that is never a dead draw."
+    }
+  ],
+  "pitch": "A U/B self-mill tempo deck, and the only one of these four builds where BOTH halves of the pool's kicker cards are live: Monstrous War-Leech's {U} kicker mills four AND makes it huge, Tribute to Urborg's {1}{U} kicker scales its -X/-X off the same graveyard, and Rona's Vortex's {2}{B} kicker upgrades a bounce into permanent removal. It fills its own graveyard on purpose - Vohar's '{T}: Draw a card, then discard a card' is the pool's ONLY repeatable rummage, Founding the Third Path chapter II mills four, Eerie Soultender mills three - and then cashes that graveyard out primarily from the CAST side rather than by reanimating: Tolarian Terror costs {1} less per instant and sorcery card in the yard, Haughty Djinn's power reads the same count, and Monstrous War-Leech's power and toughness equal the greatest mana value in it. Sheoldred's Restoration x2 and The Cruelty of Gix chapter III sit on top as the battlefield-reanimation routes - 3 of 23 nonland cards, which is the CEILING the pool allows a U/B deck (the only other graveyard-to-battlefield effects in these colours are Cult Conscript, which returns only itself, and Balduvian Atrocity, whose reanimation is behind an off-colour {R} kicker and sacrifices the creature at end of turn anyway). RETRACTED after the grill: an earlier version of this line claimed the deck 'delivers the Reanimator constraint literally as well as structurally'. Measured, there is no creature card in your own graveyard at all in 43.8% of games at turn 4 and 30.4% at turn 5, and the mean best target is mana value 2.3 at turn 4 - so the literal reanimation is real but small, and the deck's primary cash-out is and remains the cast side.",
+  "strategy_es": "tempo — reanimador con Monstrous War-Leech",
+  "identity_es": "Un tempo de automill U/B, y la única de estas cuatro construcciones donde AMBAS mitades de las cartas con kicker del pool están vivas: el kicker de {U} de Monstrous War-Leech muele cuatro Y lo vuelve enorme, el kicker de {1}{U} de Tribute to Urborg escala su -X/-X con ese mismo cementerio, y el kicker de {2}{B} de Rona's Vortex mejora un rebote a eliminación permanente. Llena su propio cementerio a propósito — el '{T}: Draw a card, then discard a card' de Vohar es el ÚNICO rummage repetible del pool, el capítulo II de Founding the Third Path muele cuatro, Eerie Soultender muele tres — y luego cobra ese cementerio principalmente desde el lado del LANZAMIENTO y no reanimando: Tolarian Terror cuesta {1} menos por cada carta de instantáneo y conjuro del cementerio, la fuerza de Haughty Djinn lee ese mismo recuento, y la fuerza y resistencia de Monstrous War-Leech equivalen al mayor valor de maná de allí. Sheoldred's Restoration x2 y el capítulo III de The Cruelty of Gix se sientan encima como rutas de reanimación al campo de batalla — 3 de 23 cartas no-tierra, que es el TECHO que el pool permite a un mazo U/B. RECTIFICADO: una versión anterior de esta línea afirmaba que el mazo 'entrega la restricción de Reanimador literal además de estructuralmente'. Medido, no hay carta de criatura alguna en tu propio cementerio en el 43,8% de las partidas en el turno 4 y en el 30,4% en el turno 5, y el mejor objetivo medio es de valor de maná 2,3 en el turno 4; así que la reanimación literal es real pero pequeña, y el cobro principal del mazo es y sigue siendo el lado del lanzamiento.",
+  "pitch_es": "Un tempo de automill U/B, y la única de estas cuatro construcciones donde AMBAS mitades de las cartas con kicker del pool están vivas: el kicker de {U} de Monstrous War-Leech muele cuatro Y lo vuelve enorme, el kicker de {1}{U} de Tribute to Urborg escala su -X/-X con ese mismo cementerio, y el kicker de {2}{B} de Rona's Vortex mejora un rebote a eliminación permanente. Llena su propio cementerio a propósito — el '{T}: Draw a card, then discard a card' de Vohar es el ÚNICO rummage repetible del pool, el capítulo II de Founding the Third Path muele cuatro, Eerie Soultender muele tres — y luego cobra ese cementerio principalmente desde el lado del LANZAMIENTO y no reanimando: Tolarian Terror cuesta {1} menos por cada carta de instantáneo y conjuro del cementerio, la fuerza de Haughty Djinn lee ese mismo recuento, y la fuerza y resistencia de Monstrous War-Leech equivalen al mayor valor de maná de allí. Sheoldred's Restoration x2 y el capítulo III de The Cruelty of Gix se sientan encima como rutas de reanimación al campo de batalla — 3 de 23 cartas no-tierra, que es el TECHO que el pool permite a un mazo U/B. RECTIFICADO: una versión anterior de esta línea afirmaba que el mazo 'entrega la restricción de Reanimador literal además de estructuralmente'. Medido, no hay carta de criatura alguna en tu propio cementerio en el 43,8% de las partidas en el turno 4 y en el 30,4% en el turno 5, y el mejor objetivo medio es de valor de maná 2,3 en el turno 4; así que la reanimación literal es real pero pequeña, y el cobro principal del mazo es y sigue siendo el lado del lanzamiento."
+}

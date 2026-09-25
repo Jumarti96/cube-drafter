@@ -31,16 +31,21 @@ export default function ArchetypeGrid({ archetypes, deckSummaries, onSelect, onC
           const colors = parseManaColors(archetype.colors)
           const accent = colors.length ? colorToHex(colors[0]) : '#d4a843'
 
-          const keyCards = deckCards.length <= 4
-            ? deckCards
-            : (() => {
-                const rares = deckCards.filter(c => c.rarity === 'rare' || c.rarity === 'mythic')
-                const others = deckCards.filter(c => c.rarity !== 'rare' && c.rarity !== 'mythic' && c.image_url)
-                const picks = []
-                for (const c of rares) { if (picks.length < 3 && c.image_url) picks.push(c) }
-                for (const c of others) { if (picks.length < 3 && c.image_url && !picks.includes(c)) picks.push(c) }
-                return picks
-              })()
+          // The archetype's own keystones when we have them; otherwise fall back
+          // to whatever its first deck runs.
+          const sampleCards = archetype.sample_cards || []
+          const keyCards = sampleCards.length > 0
+            ? sampleCards
+            : deckCards.length <= 4
+              ? deckCards
+              : (() => {
+                  const rares = deckCards.filter(c => c.rarity === 'rare' || c.rarity === 'mythic')
+                  const others = deckCards.filter(c => c.rarity !== 'rare' && c.rarity !== 'mythic' && c.image_url)
+                  const picks = []
+                  for (const c of rares) { if (picks.length < 3 && c.image_url) picks.push(c) }
+                  for (const c of others) { if (picks.length < 3 && c.image_url && !picks.includes(c)) picks.push(c) }
+                  return picks
+                })()
 
           return (
             <article

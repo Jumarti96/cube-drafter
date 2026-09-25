@@ -1,0 +1,1374 @@
+{
+  "deck_name": "gw-v2-lifegain-counters",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-31T04:47:49Z",
+  "format": "40-card",
+  "strategy": "midrange",
+  "colors": "GW",
+  "identity": "GW Spirit-token midrange that converts bodies into life and life into counters. Voice of the Blessed reads 'Whenever you gain life, put a +1/+1 counter on this creature' - one counter per lifegain EVENT, not per point of life - so the deck maximises the NUMBER of small triggers rather than the size of any one. Lunarch Veteran is the engine: two copies are two independent triggered abilities, so a single creature entering is two separate lifegain events and therefore two counters. Lingering Souls, Gather the Townsfolk and Dauntless Cathar supply the entering bodies, Guardian of Pilgrims and Apothecary Geist add Spirits, and Travel Preparations places counters that need no lifegain at all. The deck is deliberately built so that it does NOT require Voice: with Voice absent it is a flying-token list with six interaction spells and two top-end threats that win unaided - Gisela, the Broken Blade and an untargetable Sigarda, Host of Herons.",
+  "restrictions": {
+    "base": "cube_mainboard only - every name verified by exact string match against working_pool.json (Phase 5C check 2, PASS)",
+    "commons_uncommons_max_2": "PASS - highest count is 2",
+    "rares_mythics_max_1_each": "PASS - Voice of the Blessed 1, Hopeful Initiate 1 (rares); Gisela, the Broken Blade 1, Sigarda, Host of Herons 1 (mythics)",
+    "rares_mythics_max_5_total_MB_plus_SB": "PASS at 4 of 5. The fifth slot is deliberately unspent and the argument is stated rather than left implicit: after Second Harvest and Cryptolith Rite were cut at Phase 9, every remaining GW rare in the pool is either an anchor of one of the three companion decks (Torens, Cathars' Crusade, Metallic Mimic, Mayor of Avabruck, Tireless Tracker, Thalia, Odric, Restoration Angel, Wedding Announcement, Overgrown Farmland) or worse in this shell than the common or uncommon already occupying the slot - Archangel Avacyn is a self-sweeper against a board of 1/1 tokens, Wrenn and Seven and Cultivator Colossus read land counts, Eldritch Evolution eats a body the lifegain count wants, and Traverse the Ulvenwald needs a delirium this deck cannot reach. Spending the slot would mean playing a worse card.",
+    "basics": "Plains x11, Forest x4 - format-supplied, exempt from copy limits. Radiant Grove x2 is a COMMON nonbasic and legal at 2.",
+    "colour": "core_colors ['G','W'], splash_colors [] - every nonland card returns a non-null effective_cost.best_mode(card, ['G','W'], []) in normal cast mode. Lingering Souls prints a [B,W] colour identity but is cast for {2}{W}; its {1}{B} flashback is unavailable in GW and is never paid, so it is legal on its cast face and is not counted as a splash."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 0,
+    "accel_count": 2,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.48,
+      "reference_avg_mv": 2.5,
+      "accel": 2,
+      "adjustment": -0.36,
+      "raw_target": 16.64,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.48,
+    "pip_demand": {
+      "W": 21,
+      "G": 6
+    },
+    "land_color_production": {
+      "W": 13,
+      "G": 6
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 22.2,
+        "prod_pct": 35.3,
+        "gap": -13.1,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 77.8,
+        "prod_pct": 76.5,
+        "gap": 1.3,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Lunarch Veteran // Luminous Phantom",
+      "oracle_text": "Whenever another creature you control enters, you gain 1 life.\nDisturb {1}{W} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nFlying\nWhenever another creature you control leaves the battlefield, you gain 1 life.\nIf Luminous Phantom would be put into a graveyard from anywhere, exile it instead.",
+      "mana_cost": "{W}",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Lifegain",
+        "Flashback/GY-Cast",
+        "Aristocrats/Sacrifice",
+        "Blink/ETB",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "set": "inr",
+      "collector_number": "32",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/4/3/438e3302-daf9-436b-8b08-24b3f33295f6.jpg?1736467543",
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lunarch Veteran // Luminous Phantom",
+      "oracle_text": "Whenever another creature you control enters, you gain 1 life.\nDisturb {1}{W} (You may cast this card from your graveyard transformed for its disturb cost.)\n//\nFlying\nWhenever another creature you control leaves the battlefield, you gain 1 life.\nIf Luminous Phantom would be put into a graveyard from anywhere, exile it instead.",
+      "mana_cost": "{W}",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Lifegain",
+        "Flashback/GY-Cast",
+        "Aristocrats/Sacrifice",
+        "Blink/ETB",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "set": "inr",
+      "collector_number": "32",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/4/3/438e3302-daf9-436b-8b08-24b3f33295f6.jpg?1736467543",
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hopeful Initiate",
+      "oracle_text": "Training (Whenever this creature attacks with another creature with greater power, put a +1/+1 counter on this creature.)\n{2}{W}, Remove two +1/+1 counters from among creatures you control: Destroy target artifact or enchantment.",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Warlock",
+      "rarity": "rare",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Counters (+1/+1)",
+        "Training Matters",
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "27",
+      "image_url": "https://cards.scryfall.io/normal/front/c/6/c655f9e8-ff99-48d0-83a9-ea6a853f17c6.jpg?1736467517",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ambitious Farmhand // Seasoned Cathar",
+      "oracle_text": "When this creature enters, you may search your library for a basic Plains card, reveal it, put it into your hand, then shuffle.\nCoven — {1}{W}{W}: Transform this creature. Activate only if you control three or more creatures with different powers.\n//\nLifelink",
+      "mana_cost": "{1}{W}",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Peasant",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Lands-Matter",
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Standalone Threat",
+        "Land Fetch",
+        "Cards: Self-Replacing"
+      ],
+      "set": "inr",
+      "collector_number": "8",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/3/6/36cb9b12-98a3-4770-9ae0-a3b02f057c2e.jpg?1736467448",
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ambitious Farmhand // Seasoned Cathar",
+      "oracle_text": "When this creature enters, you may search your library for a basic Plains card, reveal it, put it into your hand, then shuffle.\nCoven — {1}{W}{W}: Transform this creature. Activate only if you control three or more creatures with different powers.\n//\nLifelink",
+      "mana_cost": "{1}{W}",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Peasant",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Lands-Matter",
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Standalone Threat",
+        "Land Fetch",
+        "Cards: Self-Replacing"
+      ],
+      "set": "inr",
+      "collector_number": "8",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/3/6/36cb9b12-98a3-4770-9ae0-a3b02f057c2e.jpg?1736467448",
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Voice of the Blessed",
+      "oracle_text": "Whenever you gain life, put a +1/+1 counter on this creature.\nAs long as this creature has four or more +1/+1 counters on it, it has flying and vigilance.\nAs long as this creature has ten or more +1/+1 counters on it, it has indestructible.",
+      "mana_cost": "{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Spirit Cleric",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Lifegain",
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Standalone Threat"
+      ],
+      "set": "inr",
+      "collector_number": "50",
+      "image_url": "https://cards.scryfall.io/normal/front/6/2/62534128-2a85-4a36-bc7b-e4f4c51fa1f6.jpg?1736467636",
+      "image_back_url": null,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Guardian of Pilgrims",
+      "oracle_text": "When this creature enters, target creature gets +1/+1 until end of turn.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Spirit Cleric",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Enabler/Fodder",
+        "Combat Trick"
+      ],
+      "set": "inr",
+      "collector_number": "26",
+      "image_url": "https://cards.scryfall.io/normal/front/f/8/f87b5e18-d1a9-424b-bec5-6a80f7699600.jpg?1736467516",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Travel Preparations",
+      "oracle_text": "Put a +1/+1 counter on each of up to two target creatures.\nFlashback {1}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Flashback/GY-Cast",
+        "Payload/Payoff",
+        "Counter Placement",
+        "Flashback"
+      ],
+      "set": "inr",
+      "collector_number": "220",
+      "image_url": "https://cards.scryfall.io/normal/front/4/1/41190fb8-f5d5-4a8b-bdc8-a4516e7075b5.jpg?1736468435",
+      "image_back_url": null,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Travel Preparations",
+      "oracle_text": "Put a +1/+1 counter on each of up to two target creatures.\nFlashback {1}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Flashback/GY-Cast",
+        "Payload/Payoff",
+        "Counter Placement",
+        "Flashback"
+      ],
+      "set": "inr",
+      "collector_number": "220",
+      "image_url": "https://cards.scryfall.io/normal/front/4/1/41190fb8-f5d5-4a8b-bdc8-a4516e7075b5.jpg?1736468435",
+      "image_back_url": null,
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Duel for Dominance",
+      "oracle_text": "Coven — Choose target creature you control and target creature you don't control. If you control three or more creatures with different powers, put a +1/+1 counter on the chosen creature you control. Then the chosen creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "192",
+      "image_url": "https://cards.scryfall.io/normal/front/c/8/c823ffae-4967-4a5d-a5d5-f00c25262e4f.jpg?1736468305",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Duel for Dominance",
+      "oracle_text": "Coven — Choose target creature you control and target creature you don't control. If you control three or more creatures with different powers, put a +1/+1 counter on the chosen creature you control. Then the chosen creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "192",
+      "image_url": "https://cards.scryfall.io/normal/front/c/8/c823ffae-4967-4a5d-a5d5-f00c25262e4f.jpg?1736468305",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Valorous Stance",
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "48",
+      "image_url": "https://cards.scryfall.io/normal/front/0/4/04762c85-d25d-4120-adec-8681adcf581a.jpg?1736467629",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Valorous Stance",
+      "oracle_text": "Choose one —\n• Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\n• Destroy target creature with toughness 4 or greater.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "48",
+      "image_url": "https://cards.scryfall.io/normal/front/0/4/04762c85-d25d-4120-adec-8681adcf581a.jpg?1736467629",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lingering Souls",
+      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "tdc",
+      "collector_number": "123",
+      "image_url": "https://cards.scryfall.io/normal/front/2/a/2a00c585-5bbc-4622-bf5b-4ec63b669f4c.jpg?1743206160",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Lingering Souls",
+      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Flashback/GY-Cast",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Token Generation",
+        "Flashback",
+        "Cards: Net-Positive"
+      ],
+      "set": "tdc",
+      "collector_number": "123",
+      "image_url": "https://cards.scryfall.io/normal/front/2/a/2a00c585-5bbc-4622-bf5b-4ec63b669f4c.jpg?1743206160",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dauntless Cathar",
+      "oracle_text": "{1}{W}, Exile this card from your graveyard: Create a 1/1 white Spirit creature token with flying. Activate only as a sorcery.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Tokens",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "19",
+      "image_url": "https://cards.scryfall.io/normal/front/b/6/b680d42c-8198-43b0-b934-2add08a02bbc.jpg?1736467496",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Dauntless Cathar",
+      "oracle_text": "{1}{W}, Exile this card from your graveyard: Create a 1/1 white Spirit creature token with flying. Activate only as a sorcery.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Tokens",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "19",
+      "image_url": "https://cards.scryfall.io/normal/front/b/6/b680d42c-8198-43b0-b934-2add08a02bbc.jpg?1736467496",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Apothecary Geist",
+      "oracle_text": "Flying\nWhen this creature enters, if you control another Spirit, you gain 3 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Spirit",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Lifegain",
+        "Tribal/Kindred",
+        "Blink/ETB",
+        "Payload/Payoff"
+      ],
+      "set": "inr",
+      "collector_number": "10",
+      "image_url": "https://cards.scryfall.io/normal/front/a/7/a79df1a1-6d60-4e5f-b4d8-668155836bb6.jpg?1736467457",
+      "image_back_url": null,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Apothecary Geist",
+      "oracle_text": "Flying\nWhen this creature enters, if you control another Spirit, you gain 3 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Spirit",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Lifegain",
+        "Tribal/Kindred",
+        "Blink/ETB",
+        "Payload/Payoff"
+      ],
+      "set": "inr",
+      "collector_number": "10",
+      "image_url": "https://cards.scryfall.io/normal/front/a/7/a79df1a1-6d60-4e5f-b4d8-668155836bb6.jpg?1736467457",
+      "image_back_url": null,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gisela, the Broken Blade",
+      "oracle_text": "Flying, first strike, lifelink\nAt the beginning of your end step, if you both own and control Gisela and a creature named Bruna, the Fading Light, exile them, then meld them into Brisela, Voice of Nightmares.",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Legendary Creature — Angel Horror",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Lifegain",
+        "Standalone Threat",
+        "Payload/Payoff",
+        "Meld"
+      ],
+      "set": "inr",
+      "collector_number": "24",
+      "image_url": "https://cards.scryfall.io/normal/front/0/4/04506bad-3856-4184-8dda-941ded60f41a.jpg?1738701214",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sigarda, Host of Herons",
+      "oracle_text": "Flying, hexproof\nSpells and abilities your opponents control can't cause you to sacrifice permanents.",
+      "mana_cost": "{2}{G}{W}{W}",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Legendary Creature — Angel",
+      "rarity": "mythic",
+      "power": "5",
+      "toughness": "5",
+      "tags": [
+        "Standalone Threat",
+        "Interaction/Disruption",
+        "Protection"
+      ],
+      "set": "inr",
+      "collector_number": "247",
+      "image_url": "https://cards.scryfall.io/normal/front/8/f/8f7a6f6d-dfe3-40d3-90dc-58baa8924baf.jpg?1736468546",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": null,
+      "collector_number": null,
+      "image_url": null,
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "tdc",
+      "collector_number": "385",
+      "image_url": "https://cards.scryfall.io/normal/front/4/6/466fd4e6-f1dd-40c9-92df-1da48ab729d6.jpg?1743207689",
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Radiant Grove",
+      "oracle_text": "({T}: Add {G} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "set": "tdc",
+      "collector_number": "385",
+      "image_url": "https://cards.scryfall.io/normal/front/4/6/466fd4e6-f1dd-40c9-92df-1da48ab729d6.jpg?1743207689",
+      "image_back_url": null,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Clear Shot",
+      "oracle_text": "Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "set": "inr",
+      "collector_number": "188",
+      "image_url": "https://cards.scryfall.io/normal/front/8/8/88b8905b-68d3-491b-b7fe-eed74841e9a0.jpg?1736468291",
+      "image_back_url": null,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gather the Townsfolk",
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "23",
+      "image_url": "https://cards.scryfall.io/normal/front/8/1/81bd1cd0-fa8c-4e93-aebe-dfde70ac002b.jpg?1736467509",
+      "image_back_url": null,
+      "role": "Threat",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Soul-Guide Gryff",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "mana_cost": "{4}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "set": "inr",
+      "collector_number": "40",
+      "image_url": "https://cards.scryfall.io/normal/front/3/9/39388258-cf07-4f29-a379-c743ecac680b.jpg?1736467581",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Soul-Guide Gryff",
+      "oracle_text": "Flying\nWhen this creature enters, exile up to one target card from a graveyard.",
+      "mana_cost": "{4}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Hippogriff Spirit",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "set": "inr",
+      "collector_number": "40",
+      "image_url": "https://cards.scryfall.io/normal/front/3/9/39388258-cf07-4f29-a379-c743ecac680b.jpg?1736467581",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "39",
+      "image_url": "https://cards.scryfall.io/normal/front/c/a/ca4537d3-c481-49ac-826c-b51c2e9b1fcf.jpg?1736467578",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Slayer of the Wicked",
+      "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "39",
+      "image_url": "https://cards.scryfall.io/normal/front/c/a/ca4537d3-c481-49ac-826c-b51c2e9b1fcf.jpg?1736467578",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cathar Commando",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "15",
+      "image_url": "https://cards.scryfall.io/normal/front/7/c/7cd21530-ca72-4986-a0f2-142b9f23c413.jpg?1736467482",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Cathar Commando",
+      "oracle_text": "Flash\n{1}, Sacrifice this creature: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "15",
+      "image_url": "https://cards.scryfall.io/normal/front/7/c/7cd21530-ca72-4986-a0f2-142b9f23c413.jpg?1736467482",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Fiend Hunter",
+      "oracle_text": "When this creature enters, you may exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Blink/ETB",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "22",
+      "image_url": "https://cards.scryfall.io/normal/front/f/6/f606cf4d-e29b-415a-956c-b148045c44e9.jpg?1736467504",
+      "image_back_url": null,
+      "role": "Flex",
+      "board": "sideboard"
+    },
+    {
+      "name": "Fiend Hunter",
+      "oracle_text": "When this creature enters, you may exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Blink/ETB",
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "22",
+      "image_url": "https://cards.scryfall.io/normal/front/f/6/f606cf4d-e29b-415a-956c-b148045c44e9.jpg?1736467504",
+      "image_back_url": null,
+      "role": "Flex",
+      "board": "sideboard"
+    },
+    {
+      "name": "Angelic Purge",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "9",
+      "image_url": "https://cards.scryfall.io/normal/front/e/d/ed2fe361-2885-4fc9-a10f-960cc1ac0fbf.jpg?1736467455",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Angelic Purge",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "9",
+      "image_url": "https://cards.scryfall.io/normal/front/e/d/ed2fe361-2885-4fc9-a10f-960cc1ac0fbf.jpg?1736467455",
+      "image_back_url": null,
+      "role": "Hate",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "GW Spirit-token midrange that converts bodies into life and life into counters. Voice of the Blessed reads 'Whenever you gain life, put a +1/+1 counter on this creature' - one counter per lifegain EVENT, not per point of life - so the deck maximises the NUMBER of small triggers rather than the size of any one. Lunarch Veteran is the engine: two copies are two independent triggered abilities, so a single creature entering is two separate lifegain events and therefore two counters. Lingering Souls, Gather the Townsfolk and Dauntless Cathar supply the entering bodies, Guardian of Pilgrims and Apothecary Geist add Spirits, and Travel Preparations places counters that need no lifegain at all. The deck is deliberately built so that it does NOT require Voice: with Voice absent it is a flying-token list with six interaction spells and two top-end threats that win unaided - Gisela, the Broken Blade and an untargetable Sigarda, Host of Herons.",
+  "strategy_es": "midrange",
+  "identity_es": "Midrange GW de fichas de Espíritu que convierte cuerpos en vida y vida en contadores. Voice of the Blessed dice 'Whenever you gain life, put a +1/+1 counter on this creature' — un contador por EVENTO de ganancia de vida, no por punto de vida — así que el mazo maximiza el NÚMERO de disparos pequeños en lugar del tamaño de cualquiera de ellos. Lunarch Veteran es el motor: dos copias son dos habilidades disparadas independientes, así que una sola criatura entrando son dos eventos de ganancia de vida separados y por tanto dos contadores. Lingering Souls, Gather the Townsfolk y Dauntless Cathar aportan los cuerpos que entran, Guardian of Pilgrims y Apothecary Geist añaden Espíritus, y Travel Preparations coloca contadores que no necesitan ganancia de vida alguna. El mazo está construido deliberadamente para NO requerir a Voice: sin ella es una lista de fichas voladoras con seis hechizos de interacción y dos amenazas de gama alta que ganan solas — Gisela, the Broken Blade y una Sigarda, Host of Herons que no puede ser objetivo.",
+  "pitch_es": "Midrange GW de fichas de Espíritu que convierte cuerpos en vida y vida en contadores. Voice of the Blessed dice 'Whenever you gain life, put a +1/+1 counter on this creature' — un contador por EVENTO de ganancia de vida, no por punto de vida — así que el mazo maximiza el NÚMERO de disparos pequeños en lugar del tamaño de cualquiera de ellos. Lunarch Veteran es el motor: dos copias son dos habilidades disparadas independientes, así que una sola criatura entrando son dos eventos de ganancia de vida separados y por tanto dos contadores. Lingering Souls, Gather the Townsfolk y Dauntless Cathar aportan los cuerpos que entran, Guardian of Pilgrims y Apothecary Geist añaden Espíritus, y Travel Preparations coloca contadores que no necesitan ganancia de vida alguna. El mazo está construido deliberadamente para NO requerir a Voice: sin ella es una lista de fichas voladoras con seis hechizos de interacción y dos amenazas de gama alta que ganan solas — Gisela, the Broken Blade y una Sigarda, Host of Herons que no puede ser objetivo."
+}

@@ -1,0 +1,1393 @@
+{
+  "deck_name": "b-vampire-lifelink-aggro",
+  "cube_id": "551c6382-d024-4039-8fce-1cf9c23135b3",
+  "cube_slug": "innistrad-remastered-set-dmu-dual-lands",
+  "built_at": "2026-08-30T20:58:54Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "B",
+  "identity": "A mono-black Vampire tribal aggro deck that wins with combat damage from a lord-pumped, LIFELINKING board. 17 of the 24 nonland cards are printed Vampires -- 18 counting Metallic Mimic naming Vampire -- and that density is the whole design, because three separate cards read it: Captivating Vampire ('Other Vampire creatures you control get +1/+1'), Bloodline Keeper's flip ('Activate only if you control five or more Vampires', whose back face gives 'Other Vampire creatures you control get +2/+2'), and Sorin's '-3: You may put a Vampire creature card from your hand onto the battlefield'. The lifegain is a race-winning tool rather than a value engine: Indulgent Aristocrat has lifelink on a one-drop, and Sorin's '+1: Target creature you control gains deathtouch and lifelink until end of turn. If it's a Vampire, put a +1/+1 counter on it' grants it to any attacker while growing it. Blood Artist closes the loop -- 'whenever this creature OR ANOTHER CREATURE dies, target player loses 1 life and you gain 1 life' -- so attacking into blockers is profitable rather than a cost, and their creatures dying to our removal drains them too.",
+  "restrictions": {
+    "card_pool_rules": {
+      "base": "cube_mainboard",
+      "multipliers": {
+        "common": 2,
+        "uncommon": 2,
+        "rare": 1,
+        "mythic": 1
+      },
+      "only_from": {},
+      "excluded": []
+    },
+    "commons_uncommons_max_2": "PASS -- verified by cube_search.get_max_copies for every name on both boards, including the cross-board Infernal Grasp (1 main + 1 side = 2, at the uncommon cap).",
+    "rares_mythics_max_1": "PASS -- every rare/mythic appears exactly once.",
+    "rares_mythics_max_5_total": "PASS -- exactly 5: Captivating Vampire (R), Metallic Mimic (R), Voldaren Bloodcaster (R), Bloodline Keeper (M), Sorin Imperious Bloodlord (M). Sideboard contains ZERO.",
+    "basics_unlimited": "PASS -- 16 Swamps are format-supplied and exempt.",
+    "all_cards_from_cube": "PASS -- exact-name match against the working pool for all 50 cards.",
+    "colour_legality": "PASS -- the deck is mono-black; every nonland card is black or colourless (Metallic Mimic). Zero splash cards played."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 1,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.12,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": -0.673,
+      "raw_target": 16.327,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.12,
+    "pip_demand": {
+      "B": 24
+    },
+    "land_color_production": {
+      "B": 16
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Indulgent Aristocrat",
+      "oracle_text": "Lifelink\n{2}, Sacrifice a creature: Put a +1/+1 counter on each Vampire you control.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Vampire Noble",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Sacrifice Outlet"
+      ],
+      "set": "inr",
+      "collector_number": "118",
+      "image_url": "https://cards.scryfall.io/normal/front/0/7/07015524-874f-4856-a5c1-3148bd126886.jpg?1736467987",
+      "image_back_url": null,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Indulgent Aristocrat",
+      "oracle_text": "Lifelink\n{2}, Sacrifice a creature: Put a +1/+1 counter on each Vampire you control.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Vampire Noble",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Sacrifice Outlet"
+      ],
+      "set": "inr",
+      "collector_number": "118",
+      "image_url": "https://cards.scryfall.io/normal/front/0/7/07015524-874f-4856-a5c1-3148bd126886.jpg?1736467987",
+      "image_back_url": null,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Ecstatic Awakener // Awoken Demon",
+      "oracle_text": "{2}{B}, Sacrifice another creature: Draw a card, then transform this creature. Activate only once each turn.\n//\n",
+      "mana_cost": "{B}",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Human Wizard",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Sacrifice Outlet",
+        "Card Draw"
+      ],
+      "set": "inr",
+      "collector_number": "107",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/a/b/abd587d8-2f71-4b3c-960a-d362133e967b.jpg?1736467944",
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Blood Artist",
+      "oracle_text": "Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Vampire",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "set": "soc",
+      "collector_number": "209",
+      "image_url": "https://cards.scryfall.io/normal/front/b/5/b5275d76-2947-4219-be21-614c7421614a.jpg?1775941049",
+      "image_back_url": null,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Blood Artist",
+      "oracle_text": "Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Vampire",
+      "rarity": "uncommon",
+      "power": "0",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Lifegain",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "set": "soc",
+      "collector_number": "209",
+      "image_url": "https://cards.scryfall.io/normal/front/b/5/b5275d76-2947-4219-be21-614c7421614a.jpg?1775941049",
+      "image_back_url": null,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Asylum Visitor",
+      "oracle_text": "At the beginning of each player's upkeep, if that player has no cards in hand, you draw a card and you lose 1 life.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Vampire Wizard",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Tribal/Kindred",
+        "Wheels",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Madness",
+        "Life: Cost"
+      ],
+      "set": "inr",
+      "collector_number": "96",
+      "image_url": "https://cards.scryfall.io/normal/front/0/2/02046824-6c48-40bb-9f0b-4fd280c6ed85.jpg?1736473224",
+      "image_back_url": null,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Asylum Visitor",
+      "oracle_text": "At the beginning of each player's upkeep, if that player has no cards in hand, you draw a card and you lose 1 life.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Vampire Wizard",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Tribal/Kindred",
+        "Wheels",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Madness",
+        "Life: Cost"
+      ],
+      "set": "inr",
+      "collector_number": "96",
+      "image_url": "https://cards.scryfall.io/normal/front/0/2/02046824-6c48-40bb-9f0b-4fd280c6ed85.jpg?1736473224",
+      "image_back_url": null,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Olivia's Dragoon",
+      "oracle_text": "Discard a card: This creature gains flying until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Vampire Berserker",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Evasion Granting"
+      ],
+      "set": "inr",
+      "collector_number": "127",
+      "image_url": "https://cards.scryfall.io/normal/front/5/7/571a9e92-6f34-4bf4-b7f4-15d12560efb6.jpg?1736468024",
+      "image_back_url": null,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Olivia's Dragoon",
+      "oracle_text": "Discard a card: This creature gains flying until end of turn.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Vampire Berserker",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Graveyard",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Evasion Granting"
+      ],
+      "set": "inr",
+      "collector_number": "127",
+      "image_url": "https://cards.scryfall.io/normal/front/5/7/571a9e92-6f34-4bf4-b7f4-15d12560efb6.jpg?1736468024",
+      "image_back_url": null,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Restless Bloodseeker // Bloodsoaked Reveler",
+      "oracle_text": "At the beginning of your end step, if you gained life this turn, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\nSacrifice two Blood tokens: Transform this creature. Activate only as a sorcery.\n//\nAt the beginning of your end step, if you gained life this turn, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\n{4}{B}: Each opponent loses 2 life and you gain 2 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Vampire",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Lifegain",
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation",
+        "Life Drain"
+      ],
+      "set": "inr",
+      "collector_number": "128",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/6/8/68f71dcf-b0eb-43c7-9ea5-5ff7a7f991be.jpg?1736468031",
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Restless Bloodseeker // Bloodsoaked Reveler",
+      "oracle_text": "At the beginning of your end step, if you gained life this turn, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\nSacrifice two Blood tokens: Transform this creature. Activate only as a sorcery.\n//\nAt the beginning of your end step, if you gained life this turn, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\n{4}{B}: Each opponent loses 2 life and you gain 2 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Vampire",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Lifegain",
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation",
+        "Life Drain"
+      ],
+      "set": "inr",
+      "collector_number": "128",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/6/8/68f71dcf-b0eb-43c7-9ea5-5ff7a7f991be.jpg?1736468031",
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Voldaren Bloodcaster // Bloodbat Summoner",
+      "oracle_text": "Flying\nWhenever this creature or another nontoken creature you control dies, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\nWhenever you create a Blood token, if you control five or more Blood tokens, transform this creature.\n//\nFlying\nAt the beginning of combat on your turn, up to one target Blood token you control becomes a 2/2 black Bat creature with flying and haste in addition to its other types.",
+      "mana_cost": "{1}{B}",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Vampire Wizard",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Tribal/Kindred",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation",
+        "Animate"
+      ],
+      "set": "inr",
+      "collector_number": "138",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/4/b/4b4390f4-451f-4575-96e0-dc4dcb45ad8f.jpg?1736468073",
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Metallic Mimic",
+      "oracle_text": "As this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nEach other creature you control of the chosen type enters with an additional +1/+1 counter on it.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact Creature — Shapeshifter",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Artifacts",
+        "Payload/Payoff",
+        "Enabler/Fodder",
+        "Counter Placement"
+      ],
+      "set": "inr",
+      "collector_number": "268",
+      "image_url": "https://cards.scryfall.io/normal/front/9/a/9ad98263-9fe6-4766-a9fb-4776e570c250.jpg?1736468634",
+      "image_back_url": null,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Captivating Vampire",
+      "oracle_text": "Other Vampire creatures you control get +1/+1.\nTap five untapped Vampires you control: Gain control of target creature. It becomes a Vampire in addition to its other types.",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Vampire",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "100",
+      "image_url": "https://cards.scryfall.io/normal/front/0/f/0f87aadf-7638-4691-b5a5-86f928e98462.jpg?1736467903",
+      "image_back_url": null,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sorin, Imperious Bloodlord",
+      "oracle_text": "+1: Target creature you control gains deathtouch and lifelink until end of turn. If it's a Vampire, put a +1/+1 counter on it.\n+1: You may sacrifice a Vampire. When you do, Sorin deals 3 damage to any target and you gain 3 life.\n−3: You may put a Vampire creature card from your hand onto the battlefield.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Legendary Planeswalker — Sorin",
+      "rarity": "mythic",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Aristocrats/Sacrifice",
+        "Lifegain",
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Engine/Outlet",
+        "Direct Damage",
+        "Life Drain",
+        "Reanimation"
+      ],
+      "set": "inr",
+      "collector_number": "133",
+      "image_url": "https://cards.scryfall.io/normal/front/2/1/219d3e48-e0b1-472d-ac45-11c14b292c9e.jpg?1736468052",
+      "image_back_url": null,
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gluttonous Guest",
+      "oracle_text": "When this creature enters, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Blood token, you gain 1 life.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Vampire",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "4",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Lifegain",
+        "Artifacts",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "112",
+      "image_url": "https://cards.scryfall.io/normal/front/2/5/25e98125-6c36-4571-afc5-2d018750eb57.jpg?1736467966",
+      "image_back_url": null,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gluttonous Guest",
+      "oracle_text": "When this creature enters, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Blood token, you gain 1 life.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Vampire",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "4",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Lifegain",
+        "Artifacts",
+        "Enabler/Fodder",
+        "Infrastructure/Consistency",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "112",
+      "image_url": "https://cards.scryfall.io/normal/front/2/5/25e98125-6c36-4571-afc5-2d018750eb57.jpg?1736467966",
+      "image_back_url": null,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Falkenrath Torturer",
+      "oracle_text": "Sacrifice a creature: This creature gains flying until end of turn. If the sacrificed creature was a Human, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Vampire",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Sacrifice Outlet"
+      ],
+      "set": "inr",
+      "collector_number": "109",
+      "image_url": "https://cards.scryfall.io/normal/front/e/0/e0e896a7-fd51-4c24-b374-c4eace9ed1a2.jpg?1736467951",
+      "image_back_url": null,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Falkenrath Torturer",
+      "oracle_text": "Sacrifice a creature: This creature gains flying until end of turn. If the sacrificed creature was a Human, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Vampire",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Counters (+1/+1)",
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Sacrifice Outlet"
+      ],
+      "set": "inr",
+      "collector_number": "109",
+      "image_url": "https://cards.scryfall.io/normal/front/e/0/e0e896a7-fd51-4c24-b374-c4eace9ed1a2.jpg?1736467951",
+      "image_back_url": null,
+      "role": "threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bloodline Keeper // Lord of Lineage",
+      "oracle_text": "Flying\n{T}: Create a 2/2 black Vampire creature token with flying.\n{B}: Transform this creature. Activate only if you control five or more Vampires.\n//\nFlying\nOther Vampire creatures you control get +2/+2.\n{T}: Create a 2/2 black Vampire creature token with flying.",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Vampire",
+      "rarity": "mythic",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Token Generation"
+      ],
+      "set": "inr",
+      "collector_number": "98",
+      "image_url": "",
+      "image_back_url": "https://cards.scryfall.io/normal/back/6/0/60658907-dd63-478d-a66a-123e4e9d2a00.jpg?1738800571",
+      "role": "payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Slip",
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "134",
+      "image_url": "https://cards.scryfall.io/normal/front/1/3/132ccc20-cb42-4474-b747-7e41a661060e.jpg?1736468053",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tragic Slip",
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "134",
+      "image_url": "https://cards.scryfall.io/normal/front/1/3/132ccc20-cb42-4474-b747-7e41a661060e.jpg?1736468053",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Infernal Grasp",
+      "oracle_text": "Destroy target creature. You lose 2 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life: Cost"
+      ],
+      "set": "soc",
+      "collector_number": "216",
+      "image_url": "https://cards.scryfall.io/normal/front/f/6/f67b323d-0dda-45f8-84b7-d883ce5045a8.jpg?1775941089",
+      "image_back_url": null,
+      "role": "interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Cobbled Wings",
+      "oracle_text": "Equipped creature has flying.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact — Equipment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Artifacts",
+        "Enabler/Fodder",
+        "Evasion Enabler"
+      ],
+      "set": "inr",
+      "collector_number": "258",
+      "image_url": "https://cards.scryfall.io/normal/front/e/8/e8bb16f6-71b2-4338-a546-27f37f50e811.jpg?1736468591",
+      "image_back_url": null,
+      "role": "engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "set": "",
+      "collector_number": "",
+      "image_url": "",
+      "image_back_url": "",
+      "role": "land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Eaten Alive",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature or pay {3}{B}.\nExile target creature or planeswalker.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "106",
+      "image_url": "https://cards.scryfall.io/normal/front/1/4/143d278d-d99b-42da-9fbd-9ab70526d53a.jpg?1736467937",
+      "image_back_url": null,
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Eaten Alive",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature or pay {3}{B}.\nExile target creature or planeswalker.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "106",
+      "image_url": "https://cards.scryfall.io/normal/front/1/4/143d278d-d99b-42da-9fbd-9ab70526d53a.jpg?1736467937",
+      "image_back_url": null,
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Village Rites",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Card Draw",
+        "Sacrifice Outlet",
+        "Cards: Net-Positive",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "137",
+      "image_url": "https://cards.scryfall.io/normal/front/4/2/42ed35e9-51cd-468a-86a9-9412553cf50d.jpg?1736468066",
+      "image_back_url": null,
+      "role": "flex",
+      "board": "sideboard"
+    },
+    {
+      "name": "Village Rites",
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Card Draw",
+        "Sacrifice Outlet",
+        "Cards: Net-Positive",
+        "Board: Sacrifice-Cost"
+      ],
+      "set": "inr",
+      "collector_number": "137",
+      "image_url": "https://cards.scryfall.io/normal/front/4/2/42ed35e9-51cd-468a-86a9-9412553cf50d.jpg?1736468066",
+      "image_back_url": null,
+      "role": "flex",
+      "board": "sideboard"
+    },
+    {
+      "name": "Infernal Grasp",
+      "oracle_text": "Destroy target creature. You lose 2 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life: Cost"
+      ],
+      "set": "soc",
+      "collector_number": "216",
+      "image_url": "https://cards.scryfall.io/normal/front/f/6/f67b323d-0dda-45f8-84b7-d883ce5045a8.jpg?1775941089",
+      "image_back_url": null,
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Sever the Bloodline",
+      "oracle_text": "Exile target creature and all other creatures with the same name as that creature.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Flashback"
+      ],
+      "set": "inr",
+      "collector_number": "130",
+      "image_url": "https://cards.scryfall.io/normal/front/a/2/a2d4152d-c128-453c-86f5-f2ebcfd48b98.jpg?1736473279",
+      "image_back_url": null,
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Morkrut Banshee",
+      "oracle_text": "Morbid — When this creature enters, if a creature died this turn, target creature gets -4/-4 until end of turn.",
+      "mana_cost": "{3}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Spirit",
+      "rarity": "uncommon",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "set": "inr",
+      "collector_number": "125",
+      "image_url": "https://cards.scryfall.io/normal/front/1/4/14ab7063-1704-4c56-a58d-4f4287299bd7.jpg?1736473391",
+      "image_back_url": null,
+      "role": "flex",
+      "board": "sideboard"
+    },
+    {
+      "name": "Murderous Compulsion",
+      "oracle_text": "Destroy target tapped creature.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Madness"
+      ],
+      "set": "inr",
+      "collector_number": "126",
+      "image_url": "https://cards.scryfall.io/normal/front/5/f/5fca1faf-bd47-45cd-a2d9-b2efbc75cbb5.jpg?1736468021",
+      "image_back_url": null,
+      "role": "hate",
+      "board": "sideboard"
+    },
+    {
+      "name": "Siege Zombie",
+      "oracle_text": "Tap three untapped creatures you control: Each opponent loses 1 life.",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Zombie",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Tokens",
+        "Engine/Outlet",
+        "Life Drain"
+      ],
+      "set": "inr",
+      "collector_number": "131",
+      "image_url": "https://cards.scryfall.io/normal/front/9/5/950e6466-dfd2-4ed6-83ba-be02fe612093.jpg?1736468044",
+      "image_back_url": null,
+      "role": "flex",
+      "board": "sideboard"
+    },
+    {
+      "name": "Morbid Opportunist",
+      "oracle_text": "Whenever one or more other creatures die, draw a card. This ability triggers only once each turn.",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Human Rogue",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Graveyard",
+        "Engine/Outlet",
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "set": "soc",
+      "collector_number": "219",
+      "image_url": "https://cards.scryfall.io/normal/front/0/8/08838865-a9b6-4323-96a2-0d3a7aba9d3d.jpg?1775941108",
+      "image_back_url": null,
+      "role": "flex",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "A mono-black Vampire tribal aggro deck that wins with combat damage from a lord-pumped, LIFELINKING board. 17 of the 24 nonland cards are printed Vampires -- 18 counting Metallic Mimic naming Vampire -- and that density is the whole design, because three separate cards read it: Captivating Vampire ('Other Vampire creatures you control get +1/+1'), Bloodline Keeper's flip ('Activate only if you control five or more Vampires', whose back face gives 'Other Vampire creatures you control get +2/+2'), and Sorin's '-3: You may put a Vampire creature card from your hand onto the battlefield'. The lifegain is a race-winning tool rather than a value engine: Indulgent Aristocrat has lifelink on a one-drop, and Sorin's '+1: Target creature you control gains deathtouch and lifelink until end of turn. If it's a Vampire, put a +1/+1 counter on it' grants it to any attacker while growing it. Blood Artist closes the loop -- 'whenever this creature OR ANOTHER CREATURE dies, target player loses 1 life and you gain 1 life' -- so attacking into blockers is profitable rather than a cost, and their creatures dying to our removal drains them too.",
+  "strategy_es": "agro",
+  "identity_es": "Un agro tribal de Vampiros mono negro que gana con daño de combate desde un tablero pompeado por señores y con VÍNCULO VITAL. 17 de las 24 cartas no-tierra son Vampiros impresos — 18 contando a Metallic Mimic nombrando Vampiro — y esa densidad es todo el diseño, porque tres cartas distintas la leen: Captivating Vampire ('Other Vampire creatures you control get +1/+1'), la cara transformada de Bloodline Keeper ('Activate only if you control five or more Vampires', cuya cara trasera da 'Other Vampire creatures you control get +2/+2') y el '-3: You may put a Vampire creature card from your hand onto the battlefield' de Sorin. La ganancia de vida es una herramienta para ganar carreras más que un motor de valor: Indulgent Aristocrat tiene vínculo vital en un uno de maná, y el '+1: Target creature you control gains deathtouch and lifelink until end of turn. If it's a Vampire, put a +1/+1 counter on it' de Sorin se lo otorga a cualquier atacante mientras lo hace crecer. Blood Artist cierra el círculo — 'whenever this creature OR ANOTHER CREATURE dies, target player loses 1 life and you gain 1 life' — así que atacar contra bloqueadores es rentable en lugar de un coste, y sus criaturas muriendo a nuestra eliminación también les drenan.",
+  "pitch_es": "Un agro tribal de Vampiros mono negro que gana con daño de combate desde un tablero pompeado por señores y con VÍNCULO VITAL. 17 de las 24 cartas no-tierra son Vampiros impresos — 18 contando a Metallic Mimic nombrando Vampiro — y esa densidad es todo el diseño, porque tres cartas distintas la leen: Captivating Vampire ('Other Vampire creatures you control get +1/+1'), la cara transformada de Bloodline Keeper ('Activate only if you control five or more Vampires', cuya cara trasera da 'Other Vampire creatures you control get +2/+2') y el '-3: You may put a Vampire creature card from your hand onto the battlefield' de Sorin. La ganancia de vida es una herramienta para ganar carreras más que un motor de valor: Indulgent Aristocrat tiene vínculo vital en un uno de maná, y el '+1: Target creature you control gains deathtouch and lifelink until end of turn. If it's a Vampire, put a +1/+1 counter on it' de Sorin se lo otorga a cualquier atacante mientras lo hace crecer. Blood Artist cierra el círculo — 'whenever this creature OR ANOTHER CREATURE dies, target player loses 1 life and you gain 1 life' — así que atacar contra bloqueadores es rentable en lugar de un coste, y sus criaturas muriendo a nuestra eliminación también les drenan."
+}

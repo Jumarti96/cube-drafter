@@ -1,0 +1,1390 @@
+{
+ "dossier_version": 4,
+ "cube_fingerprint": {
+  "card_count": 266,
+  "fetched_at": "2026-05-25T22:44:48Z"
+ },
+ "census_caveat": "Every census entry is a regex probe over oracle text. A probe that matched 0 cards proves nothing: no-match is not the same as does-not-exist. Only positive matches, with the oracle text they matched, are facts. Never treat a 0-match line as a hard constraint on what a deck can do — verify against the actual oracle text in your pool before relying on it.",
+ "environment": {
+  "total_cards": 266,
+  "nonland_cards": 247,
+  "color_distribution": {
+   "W": 30,
+   "U": 30,
+   "B": 30,
+   "R": 30,
+   "G": 30,
+   "C": 14,
+   "Multi": 83
+  },
+  "top_tags": {
+   "Infrastructure/Consistency": 89,
+   "Interaction/Disruption": 80,
+   "Payload/Payoff": 77,
+   "Standalone Threat": 59,
+   "Engine/Outlet": 58,
+   "Kicker/Scaling": 48,
+   "Kicker": 45,
+   "Tokens": 38,
+   "Card Draw": 36,
+   "Card Selection": 33,
+   "Lifegain": 33,
+   "Token Generation": 31
+  },
+  "multicolor_reward_signals": {
+   "domain": {
+    "count": 23,
+    "density": 0.0931
+   },
+   "kicker": {
+    "count": 45,
+    "density": 0.1822
+   },
+   "converge": {
+    "count": 0,
+    "density": 0.0
+   },
+   "sunburst": {
+    "count": 0,
+    "density": 0.0
+   },
+   "vivid": {
+    "count": 0,
+    "density": 0.0
+   }
+  }
+ },
+ "mana_infrastructure": {
+  "basics_in_pool": false,
+  "total_lands": 19,
+  "lands_by_identity": {
+   "BG": [
+    {
+     "name": "Haunted Mire",
+     "rarity": "common",
+     "type_line": "Land — Swamp Forest",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "B",
+      "G"
+     ]
+    }
+   ],
+   "BR": [
+    {
+     "name": "Geothermal Bog",
+     "rarity": "common",
+     "type_line": "Land — Swamp Mountain",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "B",
+      "R"
+     ]
+    },
+    {
+     "name": "Sulfurous Springs",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": false,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "B",
+      "R",
+      "C"
+     ]
+    }
+   ],
+   "C": [
+    {
+     "name": "Crystal Grotto",
+     "rarity": "common",
+     "type_line": "Land",
+     "enters_tapped": false,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "C"
+     ]
+    },
+    {
+     "name": "Plaza of Heroes",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": false,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "C"
+     ]
+    },
+    {
+     "name": "Thran Portal",
+     "rarity": "rare",
+     "type_line": "Land — Gate",
+     "enters_tapped": true,
+     "conditionally_tapped": true,
+     "self_bounce": false,
+     "produces": []
+    }
+   ],
+   "RG": [
+    {
+     "name": "Karplusan Forest",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": false,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "R",
+      "G",
+      "C"
+     ]
+    },
+    {
+     "name": "Wooded Ridgeline",
+     "rarity": "common",
+     "type_line": "Land — Mountain Forest",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "R",
+      "G"
+     ]
+    }
+   ],
+   "UB": [
+    {
+     "name": "Contaminated Aquifer",
+     "rarity": "common",
+     "type_line": "Land — Island Swamp",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "U",
+      "B"
+     ]
+    }
+   ],
+   "UG": [
+    {
+     "name": "Tangled Islet",
+     "rarity": "common",
+     "type_line": "Land — Forest Island",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "U",
+      "G"
+     ]
+    },
+    {
+     "name": "Yavimaya Coast",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": false,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "U",
+      "G",
+      "C"
+     ]
+    }
+   ],
+   "UR": [
+    {
+     "name": "Molten Tributary",
+     "rarity": "common",
+     "type_line": "Land — Island Mountain",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "U",
+      "R"
+     ]
+    },
+    {
+     "name": "Shivan Reef",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": false,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "U",
+      "R",
+      "C"
+     ]
+    }
+   ],
+   "WB": [
+    {
+     "name": "Caves of Koilos",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": false,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "B",
+      "C"
+     ]
+    },
+    {
+     "name": "Sunlit Marsh",
+     "rarity": "common",
+     "type_line": "Land — Plains Swamp",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "B"
+     ]
+    }
+   ],
+   "WG": [
+    {
+     "name": "Radiant Grove",
+     "rarity": "common",
+     "type_line": "Land — Forest Plains",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "G"
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "name": "Sacred Peaks",
+     "rarity": "common",
+     "type_line": "Land — Mountain Plains",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "R"
+     ]
+    }
+   ],
+   "WU": [
+    {
+     "name": "Adarkar Wastes",
+     "rarity": "rare",
+     "type_line": "Land",
+     "enters_tapped": false,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "U",
+      "C"
+     ]
+    },
+    {
+     "name": "Idyllic Beachfront",
+     "rarity": "common",
+     "type_line": "Land — Plains Island",
+     "enters_tapped": true,
+     "conditionally_tapped": false,
+     "self_bounce": false,
+     "produces": [
+      "W",
+      "U"
+     ]
+    }
+   ]
+  },
+  "duals_by_pair": {
+   "WU": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "rare": 1,
+     "common": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Adarkar Wastes",
+     "Idyllic Beachfront"
+    ],
+    "lair_names": []
+   },
+   "WB": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "rare": 1,
+     "common": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Caves of Koilos",
+     "Sunlit Marsh"
+    ],
+    "lair_names": []
+   },
+   "WR": {
+    "total": 1,
+    "free": 1,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1
+    },
+    "untapped_capable": 0,
+    "names": [
+     "Sacred Peaks"
+    ],
+    "lair_names": []
+   },
+   "WG": {
+    "total": 1,
+    "free": 1,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1
+    },
+    "untapped_capable": 0,
+    "names": [
+     "Radiant Grove"
+    ],
+    "lair_names": []
+   },
+   "UB": {
+    "total": 1,
+    "free": 1,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1
+    },
+    "untapped_capable": 0,
+    "names": [
+     "Contaminated Aquifer"
+    ],
+    "lair_names": []
+   },
+   "UR": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1,
+     "rare": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Molten Tributary",
+     "Shivan Reef"
+    ],
+    "lair_names": []
+   },
+   "UG": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1,
+     "rare": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Tangled Islet",
+     "Yavimaya Coast"
+    ],
+    "lair_names": []
+   },
+   "BR": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1,
+     "rare": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Geothermal Bog",
+     "Sulfurous Springs"
+    ],
+    "lair_names": []
+   },
+   "BG": {
+    "total": 1,
+    "free": 1,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "common": 1
+    },
+    "untapped_capable": 0,
+    "names": [
+     "Haunted Mire"
+    ],
+    "lair_names": []
+   },
+   "RG": {
+    "total": 2,
+    "free": 2,
+    "self_bouncing": 0,
+    "by_rarity": {
+     "rare": 1,
+     "common": 1
+    },
+    "untapped_capable": 1,
+    "names": [
+     "Karplusan Forest",
+     "Wooded Ridgeline"
+    ],
+    "lair_names": []
+   }
+  },
+  "three_plus_color_lands": []
+ },
+ "structural_census": {
+  "rituals": {
+   "count": 0,
+   "cards": []
+  },
+  "mana_producers": {
+   "count": 4,
+   "cards": [
+    {
+     "name": "Volshe Tideturner",
+     "cmc": 2.0,
+     "type_line": "Creature — Merfolk Wizard",
+     "mana_added": 1,
+     "repeatable": true,
+     "net_mana": -1.0
+    },
+    {
+     "name": "Karn, Living Legacy",
+     "cmc": 4.0,
+     "type_line": "Legendary Planeswalker — Karn",
+     "mana_added": 1,
+     "repeatable": true,
+     "net_mana": -3.0
+    },
+    {
+     "name": "Meria, Scholar of Antiquity",
+     "cmc": 3.0,
+     "type_line": "Legendary Creature — Elf Artificer",
+     "mana_added": 1,
+     "repeatable": false,
+     "net_mana": -2.0
+    },
+    {
+     "name": "Timeless Lotus",
+     "cmc": 5.0,
+     "type_line": "Legendary Artifact",
+     "mana_added": 5,
+     "repeatable": true,
+     "net_mana": 0.0
+    }
+   ]
+  },
+  "cost_reducers": {
+   "count": 7,
+   "cards": [
+    {
+     "name": "Defiler of Faith",
+     "cmc": 5.0,
+     "clause": "cost {W} less to cast",
+     "restricted": true
+    },
+    {
+     "name": "Haughty Djinn",
+     "cmc": 3.0,
+     "clause": "cost {1} less to cast",
+     "restricted": true
+    },
+    {
+     "name": "Defiler of Dreams",
+     "cmc": 5.0,
+     "clause": "cost {U} less to cast",
+     "restricted": true
+    },
+    {
+     "name": "Defiler of Flesh",
+     "cmc": 4.0,
+     "clause": "cost {B} less to cast",
+     "restricted": true
+    },
+    {
+     "name": "Defiler of Instinct",
+     "cmc": 4.0,
+     "clause": "cost {R} less to cast",
+     "restricted": true
+    },
+    {
+     "name": "Defiler of Vigor",
+     "cmc": 5.0,
+     "clause": "cost {G} less to cast",
+     "restricted": true
+    },
+    {
+     "name": "Stenn, Paranoid Partisan",
+     "cmc": 2.0,
+     "clause": "cost {1} less to cast",
+     "restricted": true
+    }
+   ]
+  },
+  "sacrifice_outlets": {
+   "count": 10,
+   "free_count": 1,
+   "cards": [
+    {
+     "name": "Vodalian Hexcatcher",
+     "cost": "Sacrifice a Merfolk",
+     "free": true
+    },
+    {
+     "name": "Shadow-Rite Priest",
+     "cost": "{3}{B}{B}, {T}, Sacrifice another Cleric",
+     "free": false
+    },
+    {
+     "name": "Gibbering Barricade",
+     "cost": "{2}{B}, Sacrifice a creature",
+     "free": false
+    },
+    {
+     "name": "Hurler Cyclops",
+     "cost": "{1}, Sacrifice another creature",
+     "free": false
+    },
+    {
+     "name": "Sprouting Goblin",
+     "cost": "{R}, {T}, Sacrifice a land",
+     "free": false
+    },
+    {
+     "name": "Aron, Benalia's Ruin",
+     "cost": "{W}{B}, {T}, Sacrifice another creature",
+     "free": false
+    },
+    {
+     "name": "Phyrexian Warhorse",
+     "cost": "{1}, Sacrifice another creature",
+     "free": false
+    },
+    {
+     "name": "Uurg, Spawn of Turg",
+     "cost": "{B}{G}, Sacrifice a land",
+     "free": false
+    },
+    {
+     "name": "Nemata, Primeval Warden",
+     "cost": "{G}, Sacrifice a Saproling",
+     "free": false
+    },
+    {
+     "name": "Nemata, Primeval Warden",
+     "cost": "{1}{B}, Sacrifice two Saprolings",
+     "free": false
+    }
+   ]
+  },
+  "tutors": [
+   "Herd Migration",
+   "Lagomos, Hand of Hatred",
+   "Micromancer",
+   "Scout the Wilderness",
+   "Shadow-Rite Priest",
+   "Shield-Wall Sentinel",
+   "Slimefoot's Survey",
+   "Sprouting Goblin",
+   "The Cruelty of Gix",
+   "The Weatherseed Treaty",
+   "Threats Undetected"
+  ],
+  "sweepers": [
+   "Choking Miasma",
+   "Karn's Sylex",
+   "Smash to Dust",
+   "Temporal Firestorm",
+   "The Elder Dragon War",
+   "The Phasing of Zhalfir"
+  ],
+  "haste_granters": [
+   "Balduvian Atrocity",
+   "Hammerhand",
+   "In Thrall to the Pit",
+   "Keldon Strike Team",
+   "Walking Bulwark",
+   "Yavimaya Iconoclast"
+  ],
+  "graveyard_hate": []
+ },
+ "tribal_rosters": {
+  "Human": {
+   "total": 45,
+   "by_color": {
+    "B": [
+     "Evolved Sleeper",
+     "Knight of Dusk's Shadow",
+     "Phyrexian Vivisector",
+     "Shadow-Rite Priest",
+     "The Raven Man"
+    ],
+    "BR": [
+     "Garna, Bloodfist of Keld",
+     "Lagomos, Hand of Hatred"
+    ],
+    "R": [
+     "Keldon Flamesage",
+     "Radha's Firebrand"
+    ],
+    "U": [
+     "Academy Loremaster",
+     "Aether Channeler",
+     "Micromancer",
+     "Talas Lookout"
+    ],
+    "UB": [
+     "Ertai Resurrected",
+     "Rona, Sheoldred's Faithful"
+    ],
+    "UR": [
+     "Ghitu Amplifier",
+     "Jhoira, Ageless Innovator"
+    ],
+    "W": [
+     "Anointed Peacekeeper",
+     "Argivian Phalanx",
+     "Benalish Faithbonder",
+     "Coalition Skyknight",
+     "Danitha, Benalia's Hope",
+     "Defiler of Faith",
+     "Guardian of New Benalia",
+     "Knight of Dawn's Light",
+     "Mesa Cavalier",
+     "Resolute Reinforcements",
+     "Samite Herbalist",
+     "Wingmantle Chaplain"
+    ],
+    "WB": [
+     "Aron, Benalia's Ruin",
+     "Benalish Sleeper",
+     "Phyrexian Missionary"
+    ],
+    "WG": [
+     "Juniper Order Rootweaver",
+     "King Darien XLVIII"
+    ],
+    "WR": [
+     "Astor, Bearer of Blades",
+     "Baird, Argivian Recruiter",
+     "Cleaving Skyrider",
+     "Keldon Strike Team",
+     "Tori D'Avenant, Fury Rider"
+    ],
+    "WU": [
+     "Raff, Weatherlight Stalwart",
+     "Stenn, Paranoid Partisan",
+     "Tura Kennerüd, Skyknight"
+    ],
+    "WUB": [
+     "Zur, Eternal Schemer"
+    ],
+    "WUBRG": [
+     "Jodah, the Unifier"
+    ],
+    "WUG": [
+     "Shanna, Purifying Blade"
+    ]
+   }
+  },
+  "Wizard": {
+   "total": 22,
+   "by_color": {
+    "B": [
+     "The Raven Man"
+    ],
+    "R": [
+     "Electrostatic Infantry"
+    ],
+    "U": [
+     "Academy Loremaster",
+     "Aether Channeler",
+     "Micromancer",
+     "Vodalian Hexcatcher",
+     "Volshe Tideturner"
+    ],
+    "UB": [
+     "Ertai Resurrected",
+     "Rona, Sheoldred's Faithful",
+     "Vohar, Vodalian Desecrator"
+    ],
+    "UG": [
+     "Elvish Hydromancer",
+     "Pixie Illusionist"
+    ],
+    "UR": [
+     "Balmor, Battlemage Captain",
+     "Battlewing Mystic",
+     "Ghitu Amplifier",
+     "Najal, the Storm Runner"
+    ],
+    "URG": [
+     "Vodalian Mindsinger"
+    ],
+    "WB": [
+     "Ratadrabik of Urborg"
+    ],
+    "WU": [
+     "Raff, Weatherlight Stalwart",
+     "Stenn, Paranoid Partisan"
+    ],
+    "WUB": [
+     "Zur, Eternal Schemer"
+    ],
+    "WUBRG": [
+     "Jodah, the Unifier"
+    ]
+   }
+  },
+  "Phyrexian": {
+   "total": 20,
+   "by_color": {
+    "B": [
+     "Battlefly Swarm",
+     "Blight Pile",
+     "Defiler of Flesh",
+     "Phyrexian Rager",
+     "Phyrexian Vivisector",
+     "Sheoldred, the Apocalypse",
+     "Splatter Goblin",
+     "Toxic Abomination"
+    ],
+    "BR": [
+     "Balduvian Atrocity"
+    ],
+    "G": [
+     "Defiler of Vigor"
+    ],
+    "R": [
+     "Defiler of Instinct"
+    ],
+    "U": [
+     "Defiler of Dreams"
+    ],
+    "UB": [
+     "Ertai Resurrected",
+     "Vohar, Vodalian Desecrator"
+    ],
+    "W": [
+     "Defiler of Faith"
+    ],
+    "WB": [
+     "Aron, Benalia's Ruin",
+     "Benalish Sleeper",
+     "Elas il-Kor, Sadistic Pilgrim",
+     "Phyrexian Missionary",
+     "Phyrexian Warhorse"
+    ]
+   }
+  },
+  "Warrior": {
+   "total": 15,
+   "by_color": {
+    "B": [
+     "Cult Conscript"
+    ],
+    "G": [
+     "Barkweave Crusher",
+     "Llanowar Stalker",
+     "Nishoba Brawler",
+     "Quirion Beastcaller"
+    ],
+    "R": [
+     "Radha's Firebrand",
+     "Rundvelt Hordemaster",
+     "Yavimaya Steelcrusher"
+    ],
+    "RG": [
+     "Radha, Coalition Warlord",
+     "Viashino Branchrider"
+    ],
+    "WG": [
+     "Zar Ojanen, Scion of Efrava"
+    ],
+    "WR": [
+     "Astor, Bearer of Blades",
+     "Cleaving Skyrider",
+     "Keldon Strike Team"
+    ],
+    "WUG": [
+     "Shanna, Purifying Blade"
+    ]
+   }
+  },
+  "Elf": {
+   "total": 12,
+   "by_color": {
+    "G": [
+     "Deathbloom Gardener",
+     "Leaf-Crowned Visionary",
+     "Llanowar Loamspeaker",
+     "Llanowar Stalker"
+    ],
+    "R": [
+     "Meria's Outrider"
+    ],
+    "RG": [
+     "Meria, Scholar of Antiquity",
+     "Radha, Coalition Warlord",
+     "Yavimaya Iconoclast"
+    ],
+    "UG": [
+     "Elvish Hydromancer",
+     "Nael, Avizoa Aeronaut",
+     "Vineshaper Prodigy"
+    ],
+    "WG": [
+     "Queen Allenal of Ruadach"
+    ]
+   }
+  },
+  "Soldier": {
+   "total": 9,
+   "by_color": {
+    "W": [
+     "Argivian Phalanx",
+     "Charismatic Vanguard",
+     "Guardian of New Benalia",
+     "Resolute Reinforcements",
+     "Serra Redeemer",
+     "Valiant Veteran"
+    ],
+    "WB": [
+     "Benalish Sleeper"
+    ],
+    "WG": [
+     "King Darien XLVIII"
+    ],
+    "WR": [
+     "Baird, Argivian Recruiter"
+    ]
+   }
+  },
+  "Cleric": {
+   "total": 8,
+   "by_color": {
+    "B": [
+     "Eerie Soultender",
+     "Shadow-Rite Priest"
+    ],
+    "W": [
+     "Anointed Peacekeeper",
+     "Benalish Faithbonder",
+     "Samite Herbalist",
+     "Wingmantle Chaplain"
+    ],
+    "WB": [
+     "Elas il-Kor, Sadistic Pilgrim",
+     "Phyrexian Missionary"
+    ]
+   }
+  },
+  "Knight": {
+   "total": 8,
+   "by_color": {
+    "B": [
+     "Knight of Dusk's Shadow"
+    ],
+    "W": [
+     "Argivian Cavalier",
+     "Coalition Skyknight",
+     "Danitha, Benalia's Hope",
+     "Knight of Dawn's Light",
+     "Mesa Cavalier"
+    ],
+    "WR": [
+     "Tori D'Avenant, Fury Rider"
+    ],
+    "WU": [
+     "Tura Kennerüd, Skyknight"
+    ]
+   }
+  },
+  "Druid": {
+   "total": 7,
+   "by_color": {
+    "G": [
+     "Deathbloom Gardener",
+     "Leaf-Crowned Visionary",
+     "Llanowar Loamspeaker"
+    ],
+    "RG": [
+     "Sprouting Goblin"
+    ],
+    "UG": [
+     "Tatyova, Steward of Tides",
+     "Vineshaper Prodigy"
+    ],
+    "WG": [
+     "Juniper Order Rootweaver"
+    ]
+   }
+  },
+  "Merfolk": {
+   "total": 6,
+   "by_color": {
+    "U": [
+     "Voda Sea Scavenger",
+     "Vodalian Hexcatcher",
+     "Volshe Tideturner"
+    ],
+    "UB": [
+     "Vohar, Vodalian Desecrator"
+    ],
+    "UG": [
+     "Tatyova, Steward of Tides"
+    ],
+    "URG": [
+     "Vodalian Mindsinger"
+    ]
+   }
+  },
+  "Goblin": {
+   "total": 6,
+   "by_color": {
+    "B": [
+     "Splatter Goblin"
+    ],
+    "R": [
+     "Goblin Picker",
+     "Rundvelt Hordemaster",
+     "Squee, Dubious Monarch"
+    ],
+    "RG": [
+     "Rulik Mons, Warren Chief",
+     "Sprouting Goblin"
+    ]
+   }
+  },
+  "Wall": {
+   "total": 5,
+   "by_color": {
+    "B": [
+     "Gibbering Barricade"
+    ],
+    "G": [
+     "Floriferous Vinewall"
+    ],
+    "U": [
+     "Academy Wall",
+     "Coral Colony"
+    ],
+    "W": [
+     "Clockwork Drawbridge"
+    ]
+   }
+  },
+  "Kor": {
+   "total": 4,
+   "by_color": {
+    "R": [
+     "Balduvian Berserker"
+    ],
+    "W": [
+     "Argivian Phalanx",
+     "Valiant Veteran"
+    ],
+    "WB": [
+     "Elas il-Kor, Sadistic Pilgrim"
+    ]
+   }
+  },
+  "Angel": {
+   "total": 4,
+   "by_color": {
+    "W": [
+     "Serra Paragon",
+     "Serra Redeemer"
+    ],
+    "WBR": [
+     "Archangel of Wrath"
+    ],
+    "WG": [
+     "Shalai's Acolyte"
+    ]
+   }
+  },
+  "Elemental": {
+   "total": 4,
+   "by_color": {
+    "G": [
+     "Barkweave Crusher",
+     "Territorial Maro"
+    ],
+    "U": [
+     "Frostfist Strider"
+    ],
+    "UBR": [
+     "Sol'Kanar the Tainted"
+    ]
+   }
+  },
+  "Dragon": {
+   "total": 4,
+   "by_color": {
+    "R": [
+     "Dragon Whelp",
+     "Ragefire Hellkite",
+     "Shivan Devastator"
+    ],
+    "WRG": [
+     "Rith, Liberated Primeval"
+    ]
+   }
+  },
+  "Berserker": {
+   "total": 4,
+   "by_color": {
+    "BR": [
+     "Balduvian Atrocity",
+     "Garna, Bloodfist of Keld"
+    ],
+    "R": [
+     "Balduvian Berserker",
+     "Coalition Warbrute"
+    ]
+   }
+  },
+  "Shaman": {
+   "total": 4,
+   "by_color": {
+    "BG": [
+     "Bortuk Bonerattle"
+    ],
+    "BR": [
+     "Lagomos, Hand of Hatred"
+    ],
+    "G": [
+     "Silverback Elder"
+    ],
+    "R": [
+     "Keldon Flamesage"
+    ]
+   }
+  },
+  "Treefolk": {
+   "total": 4,
+   "by_color": {
+    "BG": [
+     "Nemata, Primeval Warden"
+    ],
+    "G": [
+     "Magnigoth Sentry",
+     "Mossbeard Ancient",
+     "Yavimaya Sojourner"
+    ]
+   }
+  }
+ },
+ "threat_profile": {
+  "graveyard_interaction": {
+   "count": 32,
+   "density": 0.1296,
+   "by_color": {
+    "B": 6,
+    "BG": 3,
+    "BR": 2,
+    "BRG": 1,
+    "G": 1,
+    "R": 2,
+    "U": 7,
+    "UB": 4,
+    "UBG": 1,
+    "W": 3,
+    "WB": 2
+   },
+   "names": [
+    "Balduvian Atrocity",
+    "Bortuk Bonerattle",
+    "Braids's Frightful Return",
+    "Coral Colony",
+    "Cosmic Epiphany",
+    "Cult Conscript",
+    "Danitha, Benalia's Hope",
+    "Eerie Soultender",
+    "Founding the Third Path",
+    "Haughty Djinn",
+    "Llanowar Greenwidow",
+    "Monstrous War-Leech",
+    "Phoenix Chick",
+    "Phyrexian Missionary",
+    "Rivaz of the Claw",
+    "Rona, Sheoldred's Faithful",
+    "Serra Paragon",
+    "Shadow Prophecy",
+    "Sheoldred's Restoration",
+    "Soul of Windgrace",
+    "Sphinx of Clear Skies",
+    "Squee, Dubious Monarch",
+    "Talas Lookout",
+    "The Cruelty of Gix",
+    "Tolarian Terror",
+    "Tribute to Urborg",
+    "Urborg Lhurgoyf",
+    "Urborg Repossession",
+    "Uurg, Spawn of Turg",
+    "Valiant Veteran",
+    "Vohar, Vodalian Desecrator",
+    "Writhing Necromass"
+   ]
+  },
+  "artifacts": {
+   "count": 15,
+   "density": 0.0607,
+   "by_color": {
+    "C": 13,
+    "W": 1,
+    "WUBRG": 1
+   },
+   "names": [
+    "Automatic Librarian",
+    "Clockwork Drawbridge",
+    "Golden Argosy",
+    "Hero's Heirloom",
+    "Inscribed Tablet",
+    "Jodah's Codex",
+    "Karn's Sylex",
+    "Meteorite",
+    "Relic of Legends",
+    "Salvaged Manaworker",
+    "Shield-Wall Sentinel",
+    "Timeless Lotus",
+    "Vanquisher's Axe",
+    "Walking Bulwark",
+    "Weatherlight Compleated"
+   ]
+  },
+  "enchantments": {
+   "count": 18,
+   "density": 0.0729,
+   "by_color": {
+    "B": 2,
+    "G": 2,
+    "R": 3,
+    "U": 4,
+    "W": 6,
+    "WBG": 1
+   },
+   "names": [
+    "Braids's Frightful Return",
+    "Citizen's Arrest",
+    "Combat Research",
+    "Founding the Third Path",
+    "Hammerhand",
+    "Leyline Binding",
+    "Love Song of Night and Day",
+    "Prayer of Binding",
+    "Stronghold Arena",
+    "Temporary Lockdown",
+    "The Cruelty of Gix",
+    "The Elder Dragon War",
+    "The Phasing of Zhalfir",
+    "The Weatherseed Treaty",
+    "The World Spell",
+    "Urza Assembles the Titans",
+    "Vesuvan Duplimancy",
+    "Yotia Declares War"
+   ]
+  },
+  "sweepers": {
+   "count": 6,
+   "density": 0.0243,
+   "by_color": {
+    "BG": 1,
+    "C": 1,
+    "R": 2,
+    "U": 1,
+    "WUR": 1
+   },
+   "names": [
+    "Choking Miasma",
+    "Karn's Sylex",
+    "Smash to Dust",
+    "Temporal Firestorm",
+    "The Elder Dragon War",
+    "The Phasing of Zhalfir"
+   ]
+  },
+  "lifegain": {
+   "count": 22,
+   "density": 0.0891,
+   "by_color": {
+    "B": 4,
+    "BG": 2,
+    "BRG": 1,
+    "G": 3,
+    "UB": 1,
+    "UBR": 1,
+    "W": 5,
+    "WB": 2,
+    "WBG": 1,
+    "WR": 1,
+    "WU": 1
+   },
+   "names": [
+    "Elas il-Kor, Sadistic Pilgrim",
+    "Extinguish the Light",
+    "Gibbering Barricade",
+    "Herd Migration",
+    "Hurloon Battle Hymn",
+    "Knight of Dawn's Light",
+    "Knight of Dusk's Shadow",
+    "Mesa Cavalier",
+    "Mossbeard Ancient",
+    "Prayer of Binding",
+    "Samite Herbalist",
+    "Serra Paragon",
+    "Sheoldred's Restoration",
+    "Sheoldred, the Apocalypse",
+    "Silverback Elder",
+    "Sol'Kanar the Tainted",
+    "Soul of Windgrace",
+    "Stronghold Arena",
+    "Tolarian Geyser",
+    "Urborg Repossession",
+    "Uurg, Spawn of Turg",
+    "Vohar, Vodalian Desecrator"
+   ]
+  },
+  "evasion": {
+   "count": 51,
+   "density": 0.2065,
+   "by_color": {
+    "B": 7,
+    "BG": 1,
+    "BR": 2,
+    "C": 1,
+    "G": 4,
+    "R": 7,
+    "RG": 1,
+    "U": 8,
+    "UG": 4,
+    "UR": 2,
+    "W": 7,
+    "WB": 1,
+    "WBR": 1,
+    "WG": 1,
+    "WR": 1,
+    "WRG": 1,
+    "WU": 1,
+    "WUB": 1
+   },
+   "names": [
+    "Aether Channeler",
+    "Archangel of Wrath",
+    "Aron, Benalia's Ruin",
+    "Balduvian Atrocity",
+    "Balmor, Battlemage Captain",
+    "Battlefly Swarm",
+    "Battlewing Mystic",
+    "Bog Badger",
+    "Broken Wings",
+    "Cleaving Skyrider",
+    "Coalition Skyknight",
+    "Defiler of Dreams",
+    "Defiler of Flesh",
+    "Djinn of the Fountain",
+    "Dragon Whelp",
+    "Flowstone Kavu",
+    "Griffin Protector",
+    "Haughty Djinn",
+    "Haunting Figment",
+    "Ivy, Gleeful Spellthief",
+    "Knight of Dusk's Shadow",
+    "Linebreaker Baloth",
+    "Love Song of Night and Day",
+    "Magnigoth Sentry",
+    "Mesa Cavalier",
+    "Nael, Avizoa Aeronaut",
+    "Phoenix Chick",
+    "Pixie Illusionist",
+    "Ragefire Hellkite",
+    "Rith, Liberated Primeval",
+    "Rivaz of the Claw",
+    "Rulik Mons, Warren Chief",
+    "Sengir Connoisseur",
+    "Serra Paragon",
+    "Serra Redeemer",
+    "Shalai's Acolyte",
+    "Shivan Devastator",
+    "Snarespinner",
+    "Soaring Drake",
+    "Sphinx of Clear Skies",
+    "Talas Lookout",
+    "Tattered Apparition",
+    "Tatyova, Steward of Tides",
+    "The Elder Dragon War",
+    "The Raven Man",
+    "Tura Kennerüd, Skyknight",
+    "Tyrannical Pitlord",
+    "Weatherlight Compleated",
+    "Wingmantle Chaplain",
+    "Yotia Declares War",
+    "Zur, Eternal Schemer"
+   ]
+  },
+  "artifact_answers": {
+   "count": 5,
+   "density": 0.0202,
+   "by_color": {
+    "BG": 1,
+    "G": 2,
+    "R": 2
+   },
+   "names": [
+    "Broken Wings",
+    "Silverback Elder",
+    "Smash to Dust",
+    "Tear Asunder",
+    "Yavimaya Steelcrusher"
+   ]
+  },
+  "enchantment_answers": {
+   "count": 3,
+   "density": 0.0121,
+   "by_color": {
+    "BG": 1,
+    "G": 1,
+    "W": 1
+   },
+   "names": [
+    "Destroy Evil",
+    "Silverback Elder",
+    "Tear Asunder"
+   ]
+  }
+ },
+ "pool_limits": [
+  "Ritual probe (a nonland 'Add ...' clause producing more mana than the card's cost, non-repeatable) matched 0 cards. No-match is not does-not-exist: this probe cannot see untap-lands effects, mana multipliers, cost reducers, or free spells, which can accelerate mana just as well. Check the pool's oracle text before treating acceleration as unavailable.",
+  "The cube list contains no basic lands. Basics are format-supplied and exempt from copy limits; every nonbasic land in the pool is listed under lands_by_identity.",
+  "Artifact-removal probe ('destroy/exile target artifact...') matched 0 mono-colour cards in: U, W. No-match is not does-not-exist: sacrifice effects, bounce, theft, or -X/-X are invisible to this probe. Verify before concluding those colours cannot answer artifacts.",
+  "Enchantment-removal probe ('destroy/exile target enchantment...') matched 0 mono-colour cards in: R, U. No-match is not does-not-exist: sacrifice effects, bounce, theft, or -X/-X are invisible to this probe. Verify before concluding those colours cannot answer enchantments."
+ ],
+ "chains_caveat": "interaction_chains is an authored, known-incomplete list. Absence of a chain is not absence of an engine — the cube may contain engines no chain records. Derive card compositions from oracle text first; use chains as recorded evidence of engines that exist, never as the boundary of what exists.",
+ "interaction_chains": [],
+ "chains_seeded_at": null
+}

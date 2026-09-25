@@ -1,12 +1,16 @@
 import { useState, useEffect, useCallback } from 'react'
 import { listCubes } from '../lib/cubeData.js'
+import { DEFAULT_UNCOMMON_BUDGET } from '../lib/deckConflicts.js'
 import {
   pickDirectory,
   getDirectoryFromDrop,
   findCubesDir,
   loadDirectoryHandle,
 } from '../lib/fsAccess.js'
+import { loadSetupPrefs } from '../lib/draftPersistence.js'
 import { useI18n } from '../i18n/useT.js'
+
+const MAX_UNCOMMON_BUDGET = 4
 
 function clampCount(raw, fallback, min, max) {
   const n = parseInt(String(raw).trim(), 10)
@@ -72,7 +76,32 @@ function SetupNumberInput({ id, label, value, onChange, min, max, fallback }) {
   )
 }
 
-export default function SetupScreen({ onStart }) {
+function applyPrefsToCubes(found, prefs) {
+  if (!prefs?.cubeSlug) {
+    return { selectedCube: found[0]?.slug ?? '', playerCount: 2, archetypesPerPlayer: 4 }
+  }
+
+  const cubeExists = found.some(c => c.slug === prefs.cubeSlug)
+  return {
+    selectedCube: cubeExists ? prefs.cubeSlug : (found[0]?.slug ?? ''),
+    playerCount: prefs.playerCount ?? 2,
+    archetypesPerPlayer: prefs.archetypesPerPlayer ?? 4,
+  }
+}
+
+/**
+ * Conflict rules for a cube: a remembered per-cube override wins, otherwise the
+ * cube's own `uncommon_copies` from meta.json.
+ */
+function resolveCubeRules(cube, prefs) {
+  const saved = prefs?.cubeRules?.[cube?.slug]
+  return {
+    uncommonBudget: saved?.uncommonBudget ?? cube?.uncommonCopies ?? DEFAULT_UNCOMMON_BUDGET,
+    rareExclusive: saved?.rareExclusive ?? true,
+  }
+}
+
+export default function SetupScreen({ onStart, onOpenHistory }) {
   const { t, tp } = useI18n()
   const [folderLabel, setFolderLabel] = useState('')
   const [cubesDirHandle, setCubesDirHandle] = useState(null)
@@ -80,6 +109,9 @@ export default function SetupScreen({ onStart }) {
   const [selectedCube, setSelectedCube] = useState('')
   const [playerCount, setPlayerCount] = useState(2)
   const [archetypesPerPlayer, setArchetypesPerPlayer] = useState(4)
+  const [uncommonBudget, setUncommonBudget] = useState(DEFAULT_UNCOMMON_BUDGET)
+  const [rareExclusive, setRareExclusive] = useState(true)
+  const [prefs, setPrefs] = useState(null)
   const [loading, setLoading] = useState(false)
   const [errorKey, setErrorKey] = useState('')
   const [dragOver, setDragOver] = useState(false)
@@ -101,7 +133,20 @@ export default function SetupScreen({ onStart }) {
         return
       }
       setCubes(found)
-      setSelectedCube(found[0].slug)
+
+      const savedPrefs = await loadSetupPrefs()
+      const applied = applyPrefsToCubes(found, savedPrefs)
+      setPrefs(savedPrefs)
+      setSelectedCube(applied.selectedCube)
+      setPlayerCount(applied.playerCount)
+      setArchetypesPerPlayer(applied.archetypesPerPlayer)
+
+      const rules = resolveCubeRules(
+        found.find(c => c.slug === applied.selectedCube),
+        savedPrefs,
+      )
+      setUncommonBudget(rules.uncommonBudget)
+      setRareExclusive(rules.rareExclusive)
     } catch (e) {
       if (e.name === 'AbortError') return
       setErrorKey(e.i18nKey || 'setup.readFolderFailed')
@@ -147,6 +192,13 @@ export default function SetupScreen({ onStart }) {
     }
   }
 
+  function handleSelectCube(slug) {
+    setSelectedCube(slug)
+    const rules = resolveCubeRules(cubes.find(c => c.slug === slug), prefs)
+    setUncommonBudget(rules.uncommonBudget)
+    setRareExclusive(rules.rareExclusive)
+  }
+
   function handleStart() {
     if (!selectedCube || !cubesDirHandle || playerCount < 1 || archetypesPerPlayer < 1) return
     const cube = cubes.find(c => c.slug === selectedCube)
@@ -158,6 +210,8 @@ export default function SetupScreen({ onStart }) {
       cubeTitle: cube.title,
       playerCount: Math.max(1, Math.min(playerCount, 8)),
       archetypesPerPlayer: Math.max(1, Math.min(archetypesPerPlayer, 6)),
+      uncommonBudget: Math.max(1, Math.min(uncommonBudget, MAX_UNCOMMON_BUDGET)),
+      rareExclusive,
     })
   }
 
@@ -218,7 +272,7 @@ export default function SetupScreen({ onStart }) {
           <select
             className="setup-input"
             value={selectedCube}
-            onChange={e => setSelectedCube(e.target.value)}
+            onChange={e => handleSelectCube(e.target.value)}
             disabled={cubes.length === 0}
           >
             {cubes.length === 0 && <option value="">{t('setup.chooseFolderFirst')}</option>}
@@ -249,9 +303,37 @@ export default function SetupScreen({ onStart }) {
           />
         </div>
 
+        <div className="setup-row">
+          <SetupNumberInput
+            id="setup-uncommon-budget"
+            label={t('setup.uncommonCopies')}
+            value={uncommonBudget}
+            onChange={setUncommonBudget}
+            min={1}
+            max={MAX_UNCOMMON_BUDGET}
+            fallback={DEFAULT_UNCOMMON_BUDGET}
+          />
+          <label className="setup-checkbox" htmlFor="setup-rare-exclusive">
+            <input
+              id="setup-rare-exclusive"
+              type="checkbox"
+              checked={rareExclusive}
+              onChange={e => setRareExclusive(e.target.checked)}
+            />
+            <span>{t('setup.rareExclusive')}</span>
+          </label>
+        </div>
+        <p className="setup-hint">{t('setup.copiesHint')}</p>
+
         <button className="setup-btn-start" onClick={handleStart} disabled={!canStart || loading}>
           {t('setup.start')}
         </button>
+
+        {onOpenHistory && (
+          <button type="button" className="setup-btn-history" onClick={onOpenHistory}>
+            {t('session.history.open')}
+          </button>
+        )}
       </div>
     </div>
   )

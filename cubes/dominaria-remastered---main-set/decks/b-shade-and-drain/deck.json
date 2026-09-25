@@ -1,0 +1,1128 @@
+{
+  "deck_name": "b-shade-and-drain",
+  "cube_id": "5358735b-23d6-4935-9f75-5b41c210c388",
+  "cube_slug": "dominaria-remastered---main-set",
+  "built_at": "2026-08-02T17:39:50Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "B",
+  "identity": "Mono-black aggro that turns a mana surplus into combat damage. Nantuko Shade and Howl from Beyond convert every available black mana into power at a 1:1 rate with no ceiling, and Hyalopterous Lemure supplies the evasion those pumps need at a cost of {0}, so 100% of a turn's mana goes into the pump rather than into getting through. Gauntlet of Power is the accelerant, not the plan: naming black doubles all 17 Swamps and anthems all 16 of the deck's 16 creature copies, but it is a 1-of mythic, so the deck is built to function on basics alone and Vampiric Tutor exists to find it. Five cheap interaction spells clear the blockers the ground-based threats cannot go around, and Undead Gladiator plus Street Wraith keep the hand stocked in a colour with no card advantage.",
+  "restrictions": {
+    "base": "cube_mainboard only - every card verified by exact name against working_pool.json",
+    "commons_uncommons_max_2": "PASS - highest count is 2",
+    "rares_mythics_max_1_each": "PASS - Nantuko Shade 1, Vampiric Tutor 1, Gauntlet of Power 1, Crawlspace 1, Royal Assassin 1",
+    "rares_mythics_max_5_total_MB_plus_SB": "PASS at exactly 5/5 - MB: Gauntlet of Power (mythic), Nantuko Shade (rare), Vampiric Tutor (mythic) = 3. SB: Crawlspace (rare), Royal Assassin (rare) = 2. No headroom.",
+    "basics": "Swamp x17 - format-supplied, exempt from copy limits",
+    "colour": "core_colors ['B'], splash_colors [] - every nonland card returns a non-null effective_cost.best_mode(card, ['B'], []) in normal cast mode; no off-identity inclusions"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 18,
+    "land_count_status": "PASS",
+    "ramp_count": 1,
+    "cantrip_count": 0,
+    "accel_count": 1,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 3.04,
+      "reference_avg_mv": 2.5,
+      "accel": 1,
+      "adjustment": 0.553,
+      "raw_target": 17.553,
+      "clamped": false,
+      "recommended_land_count": 18,
+      "p_window_at_recommended": 0.789
+    },
+    "avg_cmc": 3.04,
+    "pip_demand": {
+      "B": 29
+    },
+    "land_color_production": {
+      "B": 17
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 100,
+        "prod_pct": 100,
+        "gap": 0,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Flesh Reaver",
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian Horror",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever this creature deals damage to a creature or opponent, this creature deals that much damage to you.",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Standalone Threat",
+        "Life: Cost"
+      ],
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Flesh Reaver",
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian Horror",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Whenever this creature deals damage to a creature or opponent, this creature deals that much damage to you.",
+      "power": "4",
+      "toughness": "4",
+      "tags": [
+        "Standalone Threat",
+        "Life: Cost"
+      ],
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Wretched Anurid",
+      "cmc": 2,
+      "type_line": "Creature — Zombie Frog Beast",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Whenever another creature enters, you lose 1 life.",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Standalone Threat",
+        "Life Loss"
+      ],
+      "role": "Threat",
+      "board": "mainboard"
+    },
+    {
+      "name": "Nantuko Shade",
+      "cmc": 2,
+      "type_line": "Creature — Insect Shade",
+      "mana_cost": "{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "{B}: This creature gets +1/+1 until end of turn.",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Standalone Threat"
+      ],
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Urborg Syphon-Mage",
+      "cmc": 3,
+      "type_line": "Creature — Human Spellshaper",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "{2}{B}, {T}, Discard a card: Each other player loses 2 life. You gain life equal to the life lost this way.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Lifegain",
+        "Engine/Outlet",
+        "Life Drain",
+        "Cards: Extra-Cost"
+      ],
+      "role": "Payoff (reach)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Urborg Syphon-Mage",
+      "cmc": 3,
+      "type_line": "Creature — Human Spellshaper",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "{2}{B}, {T}, Discard a card: Each other player loses 2 life. You gain life equal to the life lost this way.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Lifegain",
+        "Engine/Outlet",
+        "Life Drain",
+        "Cards: Extra-Cost"
+      ],
+      "role": "Payoff (reach)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Phyrexian Debaser",
+      "cmc": 4,
+      "type_line": "Creature — Phyrexian Carrier",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\n{T}, Sacrifice this creature: Target creature gets -2/-2 until end of turn.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "role": "Threat (evasive)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Phyrexian Debaser",
+      "cmc": 4,
+      "type_line": "Creature — Phyrexian Carrier",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Flying\n{T}, Sacrifice this creature: Target creature gets -2/-2 until end of turn.",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Board: Sacrifice-Cost"
+      ],
+      "role": "Threat (evasive)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hyalopterous Lemure",
+      "cmc": 5,
+      "type_line": "Creature — Spirit",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "{0}: This creature gets -1/-0 and gains flying until end of turn.",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Standalone Threat",
+        "Evasion Grant"
+      ],
+      "role": "Threat (evasion enabler)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hyalopterous Lemure",
+      "cmc": 5,
+      "type_line": "Creature — Spirit",
+      "mana_cost": "{4}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "{0}: This creature gets -1/-0 and gains flying until end of turn.",
+      "power": "4",
+      "toughness": "3",
+      "tags": [
+        "Standalone Threat",
+        "Evasion Grant"
+      ],
+      "role": "Threat (evasion enabler)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Howl from Beyond",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{X}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets +X/+0 until end of turn.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Howl from Beyond",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{X}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets +X/+0 until end of turn.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "role": "Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Terror",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Chainer's Edict",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target player sacrifices a creature of their choice.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Flashback/GY-Cast",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Flashback"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Chainer's Edict",
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Target player sacrifices a creature of their choice.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Aristocrats/Sacrifice",
+        "Flashback/GY-Cast",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Flashback"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Faceless Butcher",
+      "cmc": 4,
+      "type_line": "Creature — Nightmare Horror",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Faceless Butcher",
+      "cmc": 4,
+      "type_line": "Creature — Nightmare Horror",
+      "mana_cost": "{2}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "When this creature enters, exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gauntlet of Power",
+      "cmc": 5,
+      "type_line": "Artifact",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "mythic",
+      "oracle_text": "As this artifact enters, choose a color.\nCreatures of the chosen color get +1/+1.\nWhenever a basic land is tapped for mana of the chosen color, its controller adds an additional one mana of that color.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Payload/Payoff",
+        "Infrastructure/Consistency",
+        "Anthem",
+        "Mana Ramp"
+      ],
+      "role": "Engine (pipeline anchor)",
+      "board": "mainboard"
+    },
+    {
+      "name": "Vampiric Tutor",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Search your library for a card, then shuffle and put that card on top. You lose 2 life.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Infrastructure/Consistency",
+        "Tutor",
+        "Life: Cost"
+      ],
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Street Wraith",
+      "cmc": 5,
+      "type_line": "Creature — Wraith",
+      "mana_cost": "{3}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nCycling—Pay 2 life. (Pay 2 life, Discard this card: Draw a card.)",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Graveyard",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cycling",
+        "Cards: Self-Replacing",
+        "Life: Cost"
+      ],
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Street Wraith",
+      "cmc": 5,
+      "type_line": "Creature — Wraith",
+      "mana_cost": "{3}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nCycling—Pay 2 life. (Pay 2 life, Discard this card: Draw a card.)",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Graveyard",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cycling",
+        "Cards: Self-Replacing",
+        "Life: Cost"
+      ],
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Undead Gladiator",
+      "cmc": 3,
+      "type_line": "Creature — Zombie Barbarian",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "{1}{B}, Discard a card: Return this card from your graveyard to your hand. Activate only during your upkeep.\nCycling {1}{B} ({1}{B}, Discard this card: Draw a card.)",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Looting",
+        "Graveyard Recursion",
+        "Cycling",
+        "Cards: Extra-Cost"
+      ],
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Undead Gladiator",
+      "cmc": 3,
+      "type_line": "Creature — Zombie Barbarian",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "{1}{B}, Discard a card: Return this card from your graveyard to your hand. Activate only during your upkeep.\nCycling {1}{B} ({1}{B}, Discard this card: Draw a card.)",
+      "power": "3",
+      "toughness": "1",
+      "tags": [
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Looting",
+        "Graveyard Recursion",
+        "Cycling",
+        "Cards: Extra-Cost"
+      ],
+      "role": "Infrastructure",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Swamp",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Tormod's Crypt",
+      "cmc": 0,
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "role": "Hate - graveyard",
+      "board": "sideboard"
+    },
+    {
+      "name": "Tormod's Crypt",
+      "cmc": 0,
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate"
+      ],
+      "role": "Hate - graveyard",
+      "board": "sideboard"
+    },
+    {
+      "name": "Duress",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Discard"
+      ],
+      "role": "Hate - noncreature permanents / stack",
+      "board": "sideboard"
+    },
+    {
+      "name": "Duress",
+      "cmc": 1,
+      "type_line": "Sorcery",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Discard"
+      ],
+      "role": "Hate - noncreature permanents / stack",
+      "board": "sideboard"
+    },
+    {
+      "name": "Ichor Slick",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets -3/-3 until end of turn.\nCycling {2} ({2}, Discard this card: Draw a card.)\nMadness {3}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Targeted Removal",
+        "Card Draw",
+        "Cycling",
+        "Madness"
+      ],
+      "role": "Flex - removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Ichor Slick",
+      "cmc": 3,
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Target creature gets -3/-3 until end of turn.\nCycling {2} ({2}, Discard this card: Draw a card.)\nMadness {3}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Targeted Removal",
+        "Card Draw",
+        "Cycling",
+        "Madness"
+      ],
+      "role": "Flex - removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Dark Withering",
+      "cmc": 6,
+      "type_line": "Instant",
+      "mana_cost": "{4}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target nonblack creature.\nMadness {B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Madness",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Flex - removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Dark Withering",
+      "cmc": 6,
+      "type_line": "Instant",
+      "mana_cost": "{4}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target nonblack creature.\nMadness {B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Graveyard",
+        "Madness",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Flex - removal",
+      "board": "sideboard"
+    },
+    {
+      "name": "Crawlspace",
+      "cmc": 3,
+      "type_line": "Artifact",
+      "mana_cost": "{3}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "rare",
+      "oracle_text": "No more than two creatures can attack you each combat.",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Attack Restriction"
+      ],
+      "role": "Hate - wide boards",
+      "board": "sideboard"
+    },
+    {
+      "name": "Royal Assassin",
+      "cmc": 3,
+      "type_line": "Creature — Human Assassin",
+      "mana_cost": "{1}{B}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "rare",
+      "oracle_text": "{T}: Destroy target tapped creature.",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "role": "Flex - repeatable removal",
+      "board": "sideboard"
+    }
+  ],
+  "pitch": "Mono-black aggro that turns a mana surplus into combat damage. Nantuko Shade and Howl from Beyond convert every available black mana into power at a 1:1 rate with no ceiling, and Hyalopterous Lemure supplies the evasion those pumps need at a cost of {0}, so 100% of a turn's mana goes into the pump rather than into getting through. Gauntlet of Power is the accelerant, not the plan: naming black doubles all 17 Swamps and anthems all 16 of the deck's 16 creature copies, but it is a 1-of mythic, so the deck is built to function on basics alone and Vampiric Tutor exists to find it. Five cheap interaction spells clear the blockers the ground-based threats cannot go around, and Undead Gladiator plus Street Wraith keep the hand stocked in a colour with no card advantage.",
+  "strategy_es": "agro",
+  "identity_es": "Agro mono negro que convierte el excedente de maná en daño de combate. Nantuko Shade y Howl from Beyond convierten cada maná negro disponible en fuerza a razón de 1:1 y sin techo, y Hyalopterous Lemure aporta la evasión que esas pompas necesitan a coste {0}, así que el 100% del maná del turno va a la pompa y no a pasar. Gauntlet of Power es el acelerante, no el plan: nombrar negro duplica los 17 Swamps y da anthem a las 16 copias de criatura del mazo, pero es una mítica de una sola copia, así que el mazo está construido para funcionar solo con básicas y Vampiric Tutor existe para encontrarla. Cinco hechizos baratos de interacción limpian los bloqueadores que las amenazas terrestres no pueden rodear, y Undead Gladiator más Street Wraith mantienen la mano abastecida en un color sin ventaja de cartas.",
+  "pitch_es": "Agro mono negro que convierte el excedente de maná en daño de combate. Nantuko Shade y Howl from Beyond convierten cada maná negro disponible en fuerza a razón de 1:1 y sin techo, y Hyalopterous Lemure aporta la evasión que esas pompas necesitan a coste {0}, así que el 100% del maná del turno va a la pompa y no a pasar. Gauntlet of Power es el acelerante, no el plan: nombrar negro duplica los 17 Swamps y da anthem a las 16 copias de criatura del mazo, pero es una mítica de una sola copia, así que el mazo está construido para funcionar solo con básicas y Vampiric Tutor existe para encontrarla. Cinco hechizos baratos de interacción limpian los bloqueadores que las amenazas terrestres no pueden rodear, y Undead Gladiator más Street Wraith mantienen la mano abastecida en un color sin ventaja de cartas."
+}

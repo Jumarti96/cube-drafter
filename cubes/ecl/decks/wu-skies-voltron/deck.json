@@ -1,0 +1,692 @@
+{
+  "deck_name": "wu-skies-voltron",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-11T20:05:00Z",
+  "format": "40-card",
+  "strategy": "tempo",
+  "colors": "WU",
+  "identity": "A W/U skies-and-unblockable Voltron deck. It does not try to grant evasion — it starts with carriers that cannot be blocked in the first place: Sygg and Gravelgill Scoundrel say so in their own oracle text, and with the fliers that is 7 of 10 creature copies that ignore the opposing board entirely. Bark of Doran is the damage converter — it turns high-toughness bodies into their own clock, and Gravelgill Scoundrel 1/3 becomes a 1/4 that hits for 4 while unblockable. The investment is defended on the stack with Spell Snare and Glen Elendra Guardian and on the battlefield with Aquitect's Defenses, whose flash Aura protects and suits on the same card. CORRECTED AFTER THE GRILL: an earlier version of this deck claimed Bark of Doran was colourless and therefore survived Sygg's Shield-face 'protection from each color'. That is false — Bark of Doran is {1}{W} with colors ['W'] and is shed exactly like an Aura. Only Stalactite Dagger (mana cost {2}, colors []) survives it, which is why it now runs at 2 copies; Sygg's Shield trigger otherwise targets a different creature.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "user_constraint": "max 5 rare/mythic cards total across mainboard + sideboard",
+    "rare_mythic_used": [
+      "Flitterwing Nuisance",
+      "Glen Elendra Guardian",
+      "Hallowed Fountain",
+      "Loch Mare",
+      "Sygg, Wanderwine Wisdom // Sygg, Wanderbrine Shield"
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 2,
+    "cantrip_count": 1,
+    "accel_count": 3,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 1.88,
+      "reference_avg_mv": 2.5,
+      "accel": 3,
+      "adjustment": -1.327,
+      "raw_target": 15.673,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 1.88,
+    "pip_demand": {
+      "U": 13,
+      "W": 6
+    },
+    "land_color_production": {
+      "U": 10,
+      "W": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "U": {
+        "pip_pct": 68.4,
+        "prod_pct": 62.5,
+        "gap": 5.9,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 31.6,
+        "prod_pct": 43.8,
+        "gap": -12.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Flitterwing Nuisance",
+      "oracle_text": "Flying\nThis creature enters with a -1/-1 counter on it.\n{2}{U}, Remove a counter from this creature: Whenever a creature you control deals combat damage to a player or planeswalker this turn, draw a card.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Faerie Rogue",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Sygg, Wanderwine Wisdom // Sygg, Wanderbrine Shield",
+      "oracle_text": "Sygg can't be blocked.\nWhenever this creature enters or transforms into Sygg, Wanderwine Wisdom, target creature gains \"Whenever this creature deals combat damage to a player or planeswalker, draw a card\" until end of turn.\nAt the beginning of your first main phase, you may pay {W}. If you do, transform Sygg.\n//\nSygg can't be blocked.\nWhenever this creature transforms into Sygg, Wanderbrine Shield, target creature you control gains protection from each color until your next turn.\nAt the beginning of your first main phase, you may pay {U}. If you do, transform Sygg.",
+      "mana_cost": null,
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Legendary Creature — Merfolk Wizard",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Card Draw",
+        "Protection"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gravelgill Scoundrel",
+      "oracle_text": "Vigilance\nWhenever this creature attacks, you may tap another untapped creature you control. If you do, this creature can't be blocked this turn.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Rogue",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Standalone Threat",
+        "Evasion Enabler"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Unwelcome Sprite",
+      "oracle_text": "Flying\nWhenever you cast a spell during an opponent's turn, surveil 2. (Look at the top two cards of your library. You may put any number of them into your graveyard and the rest on top of your library in any order.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Faerie Rogue",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "1",
+      "tags": [
+        "Spellslinger",
+        "Self-Mill",
+        "Graveyard",
+        "Engine/Outlet",
+        "Standalone Threat",
+        "Card Selection"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evershrike's Gift",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +1/+0 and has flying.\n{1}{W}, Blight 2: Return this card from your graveyard to your hand. Activate only as a sorcery. (To blight 2, put two -1/-1 counters on a creature you control.)",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1,
+      "type_line": "Enchantment — Aura",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Graveyard",
+        "Flashback/GY-Cast",
+        "Counters (+1/+1)",
+        "Payload/Payoff",
+        "Pump",
+        "Evasion Grant",
+        "Graveyard Recursion"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Aquitect's Defenses",
+      "oracle_text": "Flash\nEnchant creature you control\nWhen this Aura enters, enchanted creature gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)\nEnchanted creature gets +1/+2.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Protection",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bark of Doran",
+      "oracle_text": "Equipped creature gets +0/+1.\nAs long as equipped creature's toughness is greater than its power, it assigns combat damage equal to its toughness rather than its power.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Artifact — Equipment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Payload/Payoff",
+        "Combat Modification"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Stalactite Dagger",
+      "oracle_text": "When this Equipment enters, create a 1/1 colorless Shapeshifter creature token with changeling. (It's every creature type.)\nEquipped creature gets +1/+1 and is all creature types.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact — Equipment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Pump"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Glen Elendra Guardian",
+      "oracle_text": "Flash\nFlying\nThis creature enters with a -1/-1 counter on it.\n{1}{U}, Remove a counter from this creature: Counter target noncreature spell. Its controller draws a card.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Faerie Wizard",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Card Draw"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Spell Snare",
+      "oracle_text": "Counter target spell with mana value 2.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Spiral into Solitude",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.\n{1}{W}, Blight 1, Sacrifice this Aura: Exile enchanted creature. (To blight 1, put a -1/-1 counter on a creature you control.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Pacifism Effect",
+        "Board: Sacrifice-Cost"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Crib Swap",
+      "oracle_text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Kindred Instant — Shapeshifter",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Silvergill Peddler",
+      "oracle_text": "Whenever this creature becomes tapped, draw a card, then discard a card.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Merfolk Citizen",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Looting"
+      ],
+      "qty": 2,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Loch Mare",
+      "oracle_text": "This creature enters with three -1/-1 counters on it.\n{1}{U}, Remove a counter from this creature: Draw a card.\n{2}{U}, Remove two counters from this creature: Tap target creature. Put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Horse Serpent",
+      "rarity": "mythic",
+      "power": "4",
+      "toughness": "5",
+      "tags": [
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Stun Effect"
+      ],
+      "qty": 1,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Springleaf Drum",
+      "oracle_text": "{T}, Tap an untapped creature you control: Add one mana of any color.",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Infrastructure/Consistency",
+        "Mana Rock",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 7,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 4,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Hallowed Fountain",
+      "oracle_text": "({T}: Add {W} or {U}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "rarity": "rare",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing",
+        "Life: Cost"
+      ],
+      "qty": 1,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Wild Unraveling",
+      "oracle_text": "As an additional cost to cast this spell, blight 2 or pay {1}. (To blight 2, put two -1/-1 counters on a creature you control.)\nCounter target spell.",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against decks whose key spell is not mana value 2 (where Spell Snare is blank) — 'Counter target spell' for {U}{U}. Pay the {1} alternative cost rather than blight 2: two -1/-1 counters kill 4 of this deck's 10 creature copies."
+    },
+    {
+      "name": "Rimekin Recluse",
+      "oracle_text": "When this creature enters, return up to one other target creature to its owner's hand.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Elemental Wizard",
+      "rarity": "uncommon",
+      "power": "3",
+      "toughness": "2",
+      "tags": [
+        "Blink/ETB",
+        "Interaction/Disruption",
+        "Bounce"
+      ],
+      "qty": 2,
+      "role": "Flex",
+      "board": "sideboard",
+      "when_to_board": "Against a resolved threat you cannot exile, and to reset an opposing Aura or Equipment — 'When this creature enters, return up to one OTHER target creature to its owner's hand.' The 'up to one other' wording means it never forces a self-bounce, and it leaves a 3/2 body behind."
+    },
+    {
+      "name": "Keep Out",
+      "oracle_text": "Choose one —\n• Keep Out deals 4 damage to target tapped creature.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against attacking decks ('deals 4 damage to target tapped creature' reaches anything that attacked) and against the cube's 21 enchantments via the second mode. Note it does NOT answer artifacts."
+    },
+    {
+      "name": "Pyrrhic Strike",
+      "oracle_text": "As an additional cost to cast this spell, you may blight 2. (You may put two -1/-1 counters on a creature you control.)\nChoose one. If this spell's additional cost was paid, choose both instead.\n• Destroy target artifact or enchantment.\n• Destroy target creature with mana value 3 or greater.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "The deck's only artifact answer — against the cube's 11 artifacts and 21 enchantments. Take one mode by default; the blight 2 that unlocks both kills 4 of 10 creature copies."
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against the cube's 39 graveyard cards — 'exile up to two target cards from graveyards'. Colourless, so it casts off any lands, but at mana value 5 it sits above a curve that tops at 3; board it in only when graveyard interaction is the matchup."
+    }
+  ],
+  "pitch": "A W/U skies-and-unblockable Voltron deck. It does not try to grant evasion — it starts with carriers that cannot be blocked in the first place: Sygg and Gravelgill Scoundrel say so in their own oracle text, and with the fliers that is 7 of 10 creature copies that ignore the opposing board entirely. Bark of Doran is the damage converter — it turns high-toughness bodies into their own clock, and Gravelgill Scoundrel 1/3 becomes a 1/4 that hits for 4 while unblockable. The investment is defended on the stack with Spell Snare and Glen Elendra Guardian and on the battlefield with Aquitect's Defenses, whose flash Aura protects and suits on the same card. CORRECTED AFTER THE GRILL: an earlier version of this deck claimed Bark of Doran was colourless and therefore survived Sygg's Shield-face 'protection from each color'. That is false — Bark of Doran is {1}{W} with colors ['W'] and is shed exactly like an Aura. Only Stalactite Dagger (mana cost {2}, colors []) survives it, which is why it now runs at 2 copies; Sygg's Shield trigger otherwise targets a different creature.",
+  "strategy_es": "tempo",
+  "identity_es": "Un Voltron W/U de cielos e imbloqueables. No intenta otorgar evasión: empieza con portadores a los que no se puede bloquear de entrada. Sygg y Gravelgill Scoundrel lo dicen en su propio texto de oracle, y con los voladores eso son 7 de 10 copias de criatura que ignoran por completo el tablero rival. Bark of Doran es el conversor de daño: convierte los cuerpos de mucha resistencia en su propio reloj, y Gravelgill Scoundrel 1/3 se vuelve un 1/4 que pega por 4 siendo imbloqueable. La inversión se defiende en la pila con Spell Snare y Glen Elendra Guardian y en el campo de batalla con Aquitect's Defenses, cuya aura con flash protege y equipa en la misma carta. CORREGIDO: una versión anterior de este mazo afirmaba que Bark of Doran era incolora y por tanto sobrevivía a la 'protección de cada color' de la cara Shield de Sygg. Eso es falso: Bark of Doran es {1}{W} con colores ['W'] y se suelta exactamente igual que un aura. Solo Stalactite Dagger (coste de maná {2}, colores []) la sobrevive, que es por lo que ahora va a 2 copias; el disparo de la cara Shield de Sygg apunta por lo demás a una criatura distinta.",
+  "pitch_es": "Un Voltron W/U de cielos e imbloqueables. No intenta otorgar evasión: empieza con portadores a los que no se puede bloquear de entrada. Sygg y Gravelgill Scoundrel lo dicen en su propio texto de oracle, y con los voladores eso son 7 de 10 copias de criatura que ignoran por completo el tablero rival. Bark of Doran es el conversor de daño: convierte los cuerpos de mucha resistencia en su propio reloj, y Gravelgill Scoundrel 1/3 se vuelve un 1/4 que pega por 4 siendo imbloqueable. La inversión se defiende en la pila con Spell Snare y Glen Elendra Guardian y en el campo de batalla con Aquitect's Defenses, cuya aura con flash protege y equipa en la misma carta. CORREGIDO: una versión anterior de este mazo afirmaba que Bark of Doran era incolora y por tanto sobrevivía a la 'protección de cada color' de la cara Shield de Sygg. Eso es falso: Bark of Doran es {1}{W} con colores ['W'] y se suelta exactamente igual que un aura. Solo Stalactite Dagger (coste de maná {2}, colores []) la sobrevive, que es por lo que ahora va a 2 copias; el disparo de la cara Shield de Sygg apunta por lo demás a una criatura distinta."
+}

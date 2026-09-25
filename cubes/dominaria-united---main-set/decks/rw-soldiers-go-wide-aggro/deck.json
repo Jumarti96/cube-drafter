@@ -1,0 +1,1022 @@
+{
+  "deck_name": "rw-soldiers-go-wide-aggro",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T14:00:58Z",
+  "format": "40-card",
+  "strategy": "aggro",
+  "colors": "RW",
+  "identity": "RW Go-Wide Soldiers. The deck converts card count into board count and board count into lethal. Resolute Reinforcements, Argivian Cavalier, Captain's Call and kicked Keldon Strike Team each turn one card into two or three bodies. Valiant Veteran's 'Other Soldiers you control get +1/+1' and Charismatic Vanguard's '{4}{W}: Creatures you control get +1/+1 until end of turn' raise that swarm, and Heroic Charge - an INSTANT, cast after blockers and after the opponent's removal - gives the team +2/+1 and, kicked for {1}{R}, trample. STATED PLAINLY, because both grill agents pressed on it: Valiant Veteran is a TOKEN anthem, not a creature anthem. Only 6 of the 14 nontoken creature copies are Soldiers; Phoenix Chick is a Phoenix, Argivian Cavalier an Orc Knight, Keldon Strike Team a Human Warrior. What it reliably buffs is the token stream, every member of which is a 1/1 white Soldier. Equipment is a two-card sub-theme and nothing more - see equipment_theme_disclosure.",
+  "restrictions": {
+    "base": "cube_mainboard - every card verified present in working_pool.json by exact name",
+    "commons_uncommons_max_2": "PASS - no common or uncommon exceeds 2 copies across main+side",
+    "rares_mythics_max_1": "PASS - all four are single copies",
+    "rare_mythic_card_cap_5": "PASS, and UNDER the cap: 4 of 5 used. Valiant Veteran and Guardian of New Benalia (mainboard) + Anointed Peacekeeper and Serra Redeemer (sideboard). The fifth slot is deliberately unspent: Defiler of Faith was cut per Challenger #5 (its payoff is 9 white permanent spells, which are exactly the cards you cut to board it in), Squee was cut per #4 (Goblin tokens take no anthem and its graveyard recast exiles the deck's own Phoenix Chick and Valiant Veteran refuel), and every remaining RW rare is either MV 5+ against a turn-5 thesis or anti-synergistic (Temporary Lockdown exiles this deck's own MV<=2 board).",
+    "basics": "Plains x10, Mountain x5 - format-supplied, exempt",
+    "colour": "All 23 nonland cards return a usable mode from effective_cost.best_mode(card, ['R','W'], []); no splash"
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.48,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": -0.027,
+      "raw_target": 16.973,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.48,
+    "pip_demand": {
+      "R": 7,
+      "W": 18
+    },
+    "land_color_production": {
+      "R": 7,
+      "W": 12
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "R": {
+        "pip_pct": 28,
+        "prod_pct": 41.2,
+        "gap": -13.2,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 72,
+        "prod_pct": 70.6,
+        "gap": 1.4,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Vanquisher's Axe",
+      "oracle_text": "Equipped creature gets +2/+0.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "tags": [
+        "Voltron/Equipment",
+        "Artifacts",
+        "Payload/Payoff",
+        "Equipment Buff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Voltron/Equipment",
+          "Artifacts"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Equipment Buff"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Artifact — Equipment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler/Equipment - the two-card Equipment sub-theme; turns a 1/1 Soldier token into a 3/1. CORRECTED per Challenger #9: the pre-repair text called it 'the cheapest permanent that satisfies Baird', which is false. Its real cost to switch Baird on is MV 1 plus Equip {2} = 3 mana; Valiant Veteran does it at MV 2 with no activation at all."
+    },
+    {
+      "name": "Phoenix Chick",
+      "oracle_text": "Flying, haste\nThis creature can't block.\nWhenever you attack with three or more creatures, you may pay {R}{R}. If you do, return this card from your graveyard to the battlefield tapped and attacking with a +1/+1 counter on it.",
+      "mana_cost": "{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Graveyard",
+        "Counters (+1/+1)",
+        "Standalone Threat",
+        "Recursion"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Graveyard",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Standalone Threat"
+        ],
+        "mechanical_functions": [
+          "Recursion"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 1,
+      "type_line": "Creature — Phoenix",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat - the deck's only evasion; turn-1 haste body, and 'whenever you attack with three or more creatures' is this board's default state from turn 3. Returns with a +1/+1 counter, so it is also a Baird switch. It is a Phoenix and takes no anthem, and it 'can't block'."
+    },
+    {
+      "name": "Baird, Argivian Recruiter",
+      "oracle_text": "At the beginning of your end step, if you control a creature with power greater than its base power, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{R}{W}",
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Counters (+1/+1)",
+        "Engine/Outlet",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Engine/Outlet",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Legendary Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Engine - 'At the beginning of your end step, if you control a creature with power greater than its base power, create a 1/1 white Soldier creature token'. CORRECTED per Challenger #3, which was valid and BLOCKING: the pre-repair text read as though the condition were ambient. The honest count against this 23-card list is that 9 of 23 copies can satisfy it, but exactly ONE does so for free and standing - Valiant Veteran, whose 'Other Soldiers you control get +1/+1' is a continuous effect. The other eight all cost something: Vanquisher's Axe x2 (MV 1 plus Equip {2} = 3 mana total), Charismatic Vanguard x2 (five mana, and it must be activated in main phase two to still be live at the end step), Argivian Cavalier x2 (requires attacking, and enlisting removes a body from the alpha strike), Heroic Charge x2 (the finisher - burning it to feed Baird is not a real line). Baird is also LEGENDARY, so the second copy is removal insurance, not doubled throughput."
+    },
+    {
+      "name": "Valiant Veteran",
+      "oracle_text": "Other Soldiers you control get +1/+1.\n{3}{W}{W}, Exile this card from your graveyard: Put a +1/+1 counter on each Soldier you control.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tribal/Kindred",
+        "Counters (+1/+1)",
+        "Flashback/GY-Cast",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tribal/Kindred",
+          "Counters (+1/+1)",
+          "Flashback/GY-Cast"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Kor Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Payload/Payoff - the anthem, and specifically a TOKEN anthem. Nontoken Soldiers it buffs: Baird x2, Resolute Reinforcements x2, Charismatic Vanguard x2 = 6 of the 14 nontoken creature copies (43%), and 'Other' excludes itself. Every Soldier TOKEN the deck makes does receive it. Also a standing Baird switch and a graveyard flood sink at {3}{W}{W}."
+    },
+    {
+      "name": "Guardian of New Benalia",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nWhenever this creature enlists a creature, scry 2.\nDiscard a card: This creature gains indestructible until end of turn. Tap it.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Enlist Matters",
+        "Standalone Threat",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Protection",
+        "Cards: Extra-Cost"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Enlist Matters"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Protection"
+        ],
+        "resource_exchange": [
+          "Cards: Extra-Cost"
+        ]
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Threat/Infrastructure - ADDED in Phase 9 as the rare-for-rare replacement for Squee. A Human SOLDIER (so it takes the anthem, which Squee never did) at {1}{W}, and 'Whenever this creature enlists a creature, scry 2' is repeatable card selection attached to a 2-mana body. 'Discard a card: This creature gains indestructible until end of turn' also answers the cube's 6-card sweeper class on the deck's most important body."
+    },
+    {
+      "name": "Samite Herbalist",
+      "oracle_text": "Whenever this creature becomes tapped, you gain 1 life and scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Card Selection",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Engine/Infrastructure - ADDED in Phase 9. 'Whenever this creature becomes tapped, you gain 1 life and scry 1' fires on every attack, and this deck attacks every turn from turn 3. Repeatable selection at MV 2 with no curve cost, which is precisely what the old screw entry claimed did not exist. It is a Human Cleric and takes no anthem."
+    },
+    {
+      "name": "Resolute Reinforcements",
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange",
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Creature — Human Soldier",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler - 'Flash / When this creature enters, create a 1/1 white Soldier creature token'. The best card in the deck for the thesis: two bodies for two mana and BOTH are Soldiers, so both take Valiant Veteran's anthem - unlike Argivian Cavalier, where only the token does."
+    },
+    {
+      "name": "Lightning Strike",
+      "oracle_text": "Lightning Strike deals 3 damage to any target.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Direct Damage",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Tempo"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Direct Damage",
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Interaction - 3 damage to any target, so it doubles as reach to close the clock"
+    },
+    {
+      "name": "Destroy Evil",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 1,
+      "role": "Interaction - the only mainboard answer to an enchantment or a toughness-4-or-greater creature; modal, so rarely dead"
+    },
+    {
+      "name": "Argivian Cavalier",
+      "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\nWhen this creature enters, create a 1/1 white Soldier creature token.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Enlist Matters",
+        "Tokens",
+        "Tribal/Kindred",
+        "Standalone Threat",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Enlist Matters",
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Standalone Threat",
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Orc Knight",
+      "rarity": "common",
+      "power": "2",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler - two bodies for three mana. The creature itself is an Orc Knight and receives NOTHING from Valiant Veteran; only its token does. Its enlist is a free Baird switch during combat."
+    },
+    {
+      "name": "Keldon Strike Team",
+      "oracle_text": "Kicker {1}{W} (You may pay an additional {1}{W} as you cast this spell.)\nWhen this creature enters, if it was kicked, create two 1/1 white Soldier creature tokens.\nAs long as this creature entered this turn, creatures you control have haste.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Tokens",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Haste Grant",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder",
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Token Generation",
+          "Haste Grant",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Warrior",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "1",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Threat/Enabler - kicked {1}{W} it is three bodies, two of them anthem-eligible Soldiers. CORRECTED per Challenger #7: the pre-repair text called its haste clause 'UNCONDITIONAL', which overstates it. The oracle reads 'As long as this creature entered this turn, creatures you control have haste' - a ONE-TURN window that benefits only creatures which entered the same turn as Keldon. It is independent of the kicker, not unconditional. Unkicked at {2}{R} on turn 3 it usually hastes only itself. It is a Human Warrior and takes no anthem."
+    },
+    {
+      "name": "Charismatic Vanguard",
+      "oracle_text": "{4}{W}: Creatures you control get +1/+1 until end of turn.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Dwarf Soldier",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "2",
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Payload/Payoff - a 3/2 Dwarf Soldier (anthem-eligible both ways) plus '{4}{W}: Creatures you control get +1/+1 until end of turn', with no once-per-turn clause, which is the deck's primary flood sink and a Baird switch. This is the card restored to 2 copies by the Phase 6b assembly repair."
+    },
+    {
+      "name": "Captain's Call",
+      "oracle_text": "Create three 1/1 white Soldier creature tokens.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Token Generation"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Tokens",
+          "Tribal/Kindred"
+        ],
+        "structural_roles": [
+          "Enabler/Fodder"
+        ],
+        "mechanical_functions": [
+          "Token Generation"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Enabler - 'Create three 1/1 white Soldier creature tokens'; the densest single-card Soldier producer in the colour pair, and 6 of the deck's one-shot Soldier tokens come from these two cards. Filed as Enabler to match its taxonomic_profile, not as a threat - see slot_allocation.deviation_grounds."
+    },
+    {
+      "name": "Heroic Charge",
+      "oracle_text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nCreatures you control get +2/+1 until end of turn. If this spell was kicked, those creatures also gain trample until end of turn.",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Tokens",
+        "Payload/Payoff",
+        "Combat Trick",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Aggro"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Tokens"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "Payload/Payoff - the finisher. INSTANT, which is load-bearing: it is cast after blockers are declared and after removal is spent. 'Creatures you control get +2/+1' has NO type restriction, so unlike the anthem it covers all 14 creature copies plus every token. Kicked {1}{R} for trample at six mana total, which is a turn-6 play against a turn-5 thesis."
+    },
+    {
+      "name": "Sacred Peaks",
+      "oracle_text": "({T}: Add {R} or {W}.)\nThis land enters tapped.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Infrastructure/Consistency"
+        ],
+        "mechanical_functions": [
+          "Mana Fixing"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 0,
+      "type_line": "Land — Mountain Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 2,
+      "role": "land"
+    },
+    {
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 10,
+      "role": "land"
+    },
+    {
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [],
+      "taxonomic_profile": null,
+      "cmc": 0,
+      "type_line": "Basic Land — Mountain",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "mainboard",
+      "qty": 5,
+      "role": "land"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Citizen's Arrest",
+      "oracle_text": "When this enchantment enters, exile target creature or planeswalker an opponent controls until this enchantment leaves the battlefield.",
+      "mana_cost": "{1}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange",
+          "Control"
+        ],
+        "synergy_clusters": [],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Enchantment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "SB - 'exile target creature or planeswalker an opponent controls'. Added in Phase 9 per Challenger #6/absence #1: unconditional exile at MV 3 for the single-large-threat class the mainboard concedes (47 of 157 pool creatures have toughness 4 or greater, above Lightning Strike's 3 damage)."
+    },
+    {
+      "name": "Prayer of Binding",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Life Gain"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Control",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Life Gain"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "SB - flash exile of any nonland permanent, +2 life. Sideboarded rather than maindecked because two more MV-4 cards would break the 1-4 curve the chosen lens depends on."
+    },
+    {
+      "name": "Take Up the Shield",
+      "oracle_text": "Put a +1/+1 counter on target creature. It gains lifelink and indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Combat Trick",
+        "Protection"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Combat Trick",
+          "Protection"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 2,
+      "role": "SB - protects Baird or Valiant Veteran through targeted removal; the +1/+1 counter is permanent so it is also a Baird switch, and lifelink is the concession card for the accepted 'raced' mode"
+    },
+    {
+      "name": "Smash to Dust",
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target creature with defender.\n• Smash to Dust deals 1 damage to each creature your opponents control.",
+      "mana_cost": "{1}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "tags": [
+        "Defender Matters",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Defender Matters"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "SB - the only artifact answer in either board (the cube contains 15 artifacts and only 5 artifact answers cube-wide); mode 3 is a one-sided 1-damage sweeper against a mirror token board. Reduced from 2 copies to 1 per Challenger #6, which correctly noted 20% of the sideboard was aimed at a 6.07% threat class."
+    },
+    {
+      "name": "Hurloon Battle Hymn",
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nHurloon Battle Hymn deals 4 damage to target creature or planeswalker. If this spell was kicked, you gain 4 life.",
+      "mana_cost": "{2}{R}",
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "tags": [
+        "Kicker/Scaling",
+        "Lifegain",
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Direct Damage",
+        "Kicker"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Kicker/Scaling",
+          "Lifegain"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Targeted Removal",
+          "Direct Damage",
+          "Lifegain",
+          "Kicker"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "board": "sideboard",
+      "qty": 1,
+      "role": "SB - ADDED per Challenger #10. 4 damage kills the toughness-4 blockers Lightning Strike's 3 cannot, at MV 3 INSIDE the curve, and kicked {W} it gains 4 life against the 51-card evasion class. The pre-repair 'raced' entry declined it on a curve ground that does not apply to an MV-3 card."
+    },
+    {
+      "name": "Anointed Peacekeeper",
+      "oracle_text": "Vigilance\nAs this creature enters, look at an opponent's hand, then choose any card name.\nSpells your opponents cast with the chosen name cost {2} more to cast.\nActivated abilities of sources with the chosen name cost {2} more to activate unless they're mana abilities.",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Stax/Taxing",
+        "Interaction/Disruption",
+        "Tax Effect",
+        "Hand Disruption"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Tempo",
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Stax/Taxing"
+        ],
+        "structural_roles": [
+          "Interaction/Disruption"
+        ],
+        "mechanical_functions": [
+          "Tax Effect",
+          "Hand Disruption"
+        ],
+        "resource_exchange": []
+      },
+      "cmc": 3,
+      "type_line": "Creature — Human Cleric",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "3",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "SB - the dedicated answer to this deck's worst card. Naming the opponent's sweeper taxes it {2}, against the cube's 6 sweepers plus Temporary Lockdown and Citizen's Arrest, and it arrives as a 3/3 vigilance body rather than a dead tax effect."
+    },
+    {
+      "name": "Serra Redeemer",
+      "oracle_text": "Flying\nWhenever another creature you control with power 2 or less enters, put two +1/+1 counters on that creature.",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "tags": [
+        "Counters (+1/+1)",
+        "Payload/Payoff"
+      ],
+      "taxonomic_profile": {
+        "macro_archetypes": [
+          "Midrange"
+        ],
+        "synergy_clusters": [
+          "Counters (+1/+1)"
+        ],
+        "structural_roles": [
+          "Payload/Payoff"
+        ],
+        "mechanical_functions": [],
+        "resource_exchange": []
+      },
+      "cmc": 5,
+      "type_line": "Creature — Angel Soldier",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "4",
+      "board": "sideboard",
+      "qty": 1,
+      "role": "SB - 'Whenever another creature you control with power 2 or less enters, put two +1/+1 counters on that creature'. EVERY Soldier token this deck makes has power 1, so each enters as a 3/3 permanently (4/4 with Valiant Veteran), and Serra Redeemer is itself an Angel Soldier that takes the anthem. MV 5, so it is a grindy-matchup board-in, not a maindeck card."
+    }
+  ],
+  "pitch": "RW Go-Wide Soldiers. The deck converts card count into board count and board count into lethal. Resolute Reinforcements, Argivian Cavalier, Captain's Call and kicked Keldon Strike Team each turn one card into two or three bodies. Valiant Veteran's 'Other Soldiers you control get +1/+1' and Charismatic Vanguard's '{4}{W}: Creatures you control get +1/+1 until end of turn' raise that swarm, and Heroic Charge - an INSTANT, cast after blockers and after the opponent's removal - gives the team +2/+1 and, kicked for {1}{R}, trample. STATED PLAINLY, because both grill agents pressed on it: Valiant Veteran is a TOKEN anthem, not a creature anthem. Only 6 of the 14 nontoken creature copies are Soldiers; Phoenix Chick is a Phoenix, Argivian Cavalier an Orc Knight, Keldon Strike Team a Human Warrior. What it reliably buffs is the token stream, every member of which is a 1/1 white Soldier. Equipment is a two-card sub-theme and nothing more - see equipment_theme_disclosure.",
+  "strategy_es": "agro",
+  "identity_es": "Soldados a lo ancho RW. El mazo convierte el recuento de cartas en recuento de tablero y el recuento de tablero en letal. Resolute Reinforcements, Argivian Cavalier, Captain's Call y Keldon Strike Team kickeado convierten cada uno una carta en dos o tres cuerpos. El 'Other Soldiers you control get +1/+1' de Valiant Veteran y el '{4}{W}: Creatures you control get +1/+1 until end of turn' de Charismatic Vanguard elevan ese enjambre, y Heroic Charge — un INSTANTÁNEO, lanzado tras los bloqueadores y tras la eliminación del rival — da al equipo +2/+1 y, kickeado por {1}{R}, arrollar. DICHO CON CLARIDAD: Valiant Veteran es un anthem de FICHAS, no de criaturas. Solo 6 de las 14 copias de criatura no-ficha son Soldados; Phoenix Chick es un Fénix, Argivian Cavalier un Caballero Orco, Keldon Strike Team un Guerrero Humano. Lo que sí mejora de forma fiable es el flujo de fichas, cada miembro del cual es un Soldado blanco 1/1. El Equipo es un subtema de dos cartas y nada más.",
+  "pitch_es": "Soldados a lo ancho RW. El mazo convierte el recuento de cartas en recuento de tablero y el recuento de tablero en letal. Resolute Reinforcements, Argivian Cavalier, Captain's Call y Keldon Strike Team kickeado convierten cada uno una carta en dos o tres cuerpos. El 'Other Soldiers you control get +1/+1' de Valiant Veteran y el '{4}{W}: Creatures you control get +1/+1 until end of turn' de Charismatic Vanguard elevan ese enjambre, y Heroic Charge — un INSTANTÁNEO, lanzado tras los bloqueadores y tras la eliminación del rival — da al equipo +2/+1 y, kickeado por {1}{R}, arrollar. DICHO CON CLARIDAD: Valiant Veteran es un anthem de FICHAS, no de criaturas. Solo 6 de las 14 copias de criatura no-ficha son Soldados; Phoenix Chick es un Fénix, Argivian Cavalier un Caballero Orco, Keldon Strike Team un Guerrero Humano. Lo que sí mejora de forma fiable es el flujo de fichas, cada miembro del cual es un Soldado blanco 1/1. El Equipo es un subtema de dos cartas y nada más."
+}

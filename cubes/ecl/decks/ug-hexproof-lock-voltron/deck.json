@@ -1,0 +1,783 @@
+{
+  "deck_name": "ug-hexproof-lock-voltron",
+  "cube_id": "ecl",
+  "cube_slug": "ecl",
+  "built_at": "2026-08-11T22:30:00Z",
+  "format": "40-card",
+  "strategy": "midrange",
+  "colors": "GU",
+  "identity": "A green-primary G/U Voltron deck whose protection is a lock rather than a spell. Tam, Mindful First-Year has two abilities that compose: 'Each other creature you control has hexproof from each of its colors' and '{T}: Target creature you control becomes all colors until end of turn'. A creature that is all five colours therefore has hexproof from all five, and no COLOURED spell or ability an opponent controls can target it. The second half of the engine is Glister Bairn, whose 'X is the number of colors among permanents you control' reads 2 in an ordinary two-colour deck but 5 the moment Tam has made a permanent all colours. THREE LIMITS, stated after the grill rather than glossed: (1) Tam gets ONE {T} per turn cycle, so the precombat activation that feeds Glister Bairn and the untapped Tam that answers removal on the opponent's turn compete for the same tap — Formidable Speaker's '{1}, {T}: Untap another target permanent' is the only card in the deck that resolves that contention, and it is in the list for that reason as much as for its tutor. (2) Tam's static says each OTHER creature, so Tam never protects itself; six mainboard copies (Blossoming Defense x2, Aquitect's Defenses x2, Gilt-Leaf's Embrace x2) can grant Tam a one-shot protection at instant speed, and Glen Elendra Guardian can counter the spell outright. (3) Hexproof is not evasion — an untargetable creature can still be chump-blocked, which is what the trample on Gilt-Leaf's Embrace and Crossroads Watcher is for.",
+  "restrictions": {
+    "base": "cube_mainboard",
+    "multipliers": {
+      "common": 2,
+      "uncommon": 2,
+      "rare": 1,
+      "mythic": 1
+    },
+    "only_from": {},
+    "excluded": [],
+    "user_constraint": "max 5 rare/mythic cards total across mainboard + sideboard",
+    "rare_mythic_used": [
+      "Bloom Tender",
+      "Formidable Speaker",
+      "Glen Elendra Guardian",
+      "Selfless Safewright",
+      "Tam, Mindful First-Year"
+    ]
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 16,
+    "recommended_land_count": 16,
+    "land_count_status": "PASS",
+    "ramp_count": 3,
+    "cantrip_count": 0,
+    "accel_count": 3,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.29,
+      "reference_avg_mv": 2.5,
+      "accel": 3,
+      "adjustment": -0.78,
+      "raw_target": 16.22,
+      "clamped": false,
+      "recommended_land_count": 16,
+      "p_window_at_recommended": 0.7903
+    },
+    "avg_cmc": 2.29,
+    "pip_demand": {
+      "G": 11,
+      "U": 6
+    },
+    "land_color_production": {
+      "G": 10,
+      "U": 6
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "G": {
+        "pip_pct": 64.7,
+        "prod_pct": 62.5,
+        "gap": 2.2,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 35.3,
+        "prod_pct": 37.5,
+        "gap": -2.2,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Tam, Mindful First-Year",
+      "oracle_text": "Each other creature you control has hexproof from each of its colors.\n{T}: Target creature you control becomes all colors until end of turn.",
+      "mana_cost": "{1}{G/U}",
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Legendary Creature — Gorgon Wizard",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "2",
+      "tags": [
+        "Interaction/Disruption",
+        "Infrastructure/Consistency",
+        "Protection"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Virulent Emissary",
+      "oracle_text": "Deathtouch\nWhenever another creature you control enters, you gain 1 life.",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1,
+      "type_line": "Creature — Elf Assassin",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Blink/ETB",
+        "Payload/Payoff",
+        "Life Drain"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gravelgill Scoundrel",
+      "oracle_text": "Vigilance\nWhenever this creature attacks, you may tap another untapped creature you control. If you do, this creature can't be blocked this turn.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Merfolk Rogue",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Standalone Threat",
+        "Evasion Enabler"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Crossroads Watcher",
+      "oracle_text": "Trample\nWhenever another creature you control enters, this creature gets +1/+0 until end of turn.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Kithkin Ranger",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tokens",
+        "Payload/Payoff",
+        "Pump"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Chitinous Graspling",
+      "oracle_text": "Changeling (This card is every creature type.)\nReach",
+      "mana_cost": "{3}{G/U}",
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 4,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Tribal/Kindred",
+        "Enabler/Fodder"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Glister Bairn",
+      "oracle_text": "Vivid — At the beginning of combat on your turn, another target creature you control gets +X/+X until end of turn, where X is the number of colors among permanents you control.",
+      "mana_cost": "{2}{G/U}{G/U}{G/U}",
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Ouphe",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "4",
+      "tags": [
+        "Payload/Payoff",
+        "Combat Trick"
+      ],
+      "qty": 1,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Glen Elendra Guardian",
+      "oracle_text": "Flash\nFlying\nThis creature enters with a -1/-1 counter on it.\n{1}{U}, Remove a counter from this creature: Counter target noncreature spell. Its controller draws a card.",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Faerie Wizard",
+      "rarity": "rare",
+      "power": "3",
+      "toughness": "4",
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Counterspell",
+        "Card Draw"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Great Forest Druid",
+      "oracle_text": "{T}: Add one mana of any color.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Treefolk Druid",
+      "rarity": "common",
+      "power": "0",
+      "toughness": "4",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Mana Dork"
+      ],
+      "qty": 1,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Bloom Tender",
+      "oracle_text": "Vivid — {T}: For each color among permanents you control, add one mana of that color.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Creature — Elf Druid",
+      "rarity": "mythic",
+      "power": "1",
+      "toughness": "1",
+      "tags": [
+        "Domain",
+        "Infrastructure/Consistency",
+        "Enabler/Fodder",
+        "Mana Dork"
+      ],
+      "qty": 1,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Foraging Wickermaw",
+      "oracle_text": "When this creature enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\n{1}: Add one mana of any color. This creature becomes that color until end of turn. Activate only once each turn.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact Creature — Scarecrow",
+      "rarity": "common",
+      "power": "1",
+      "toughness": "3",
+      "tags": [
+        "Artifacts",
+        "Self-Mill",
+        "Infrastructure/Consistency",
+        "Card Selection",
+        "Mana Ramp"
+      ],
+      "qty": 1,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Puca's Eye",
+      "oracle_text": "When this artifact enters, draw a card, then choose a color. This artifact becomes the chosen color.\n{3}, {T}: Draw a card. Activate only if there are five colors among permanents you control.",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Artifacts",
+        "Domain",
+        "Engine/Outlet",
+        "Infrastructure/Consistency",
+        "Card Draw",
+        "Cards: Self-Replacing"
+      ],
+      "qty": 1,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Formidable Speaker",
+      "oracle_text": "When this creature enters, you may discard a card. If you do, search your library for a creature card, reveal it, put it into your hand, then shuffle.\n{1}, {T}: Untap another target permanent.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Elf Druid",
+      "rarity": "rare",
+      "power": "2",
+      "toughness": "4",
+      "tags": [
+        "Infrastructure/Consistency",
+        "Engine/Outlet",
+        "Tutor"
+      ],
+      "qty": 1,
+      "role": "Engine",
+      "board": "mainboard"
+    },
+    {
+      "name": "Aquitect's Defenses",
+      "oracle_text": "Flash\nEnchant creature you control\nWhen this Aura enters, enchanted creature gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)\nEnchanted creature gets +1/+2.",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Protection",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Stalactite Dagger",
+      "oracle_text": "When this Equipment enters, create a 1/1 colorless Shapeshifter creature token with changeling. (It's every creature type.)\nEquipped creature gets +1/+1 and is all creature types.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{2}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2,
+      "type_line": "Artifact — Equipment",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Tokens",
+        "Tribal/Kindred",
+        "Enabler/Fodder",
+        "Payload/Payoff",
+        "Token Generation",
+        "Pump"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Gilt-Leaf's Embrace",
+      "oracle_text": "Flash\nEnchant creature\nWhen this Aura enters, enchanted creature gains trample and indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it. If its toughness is 0 or less, it still dies.)\nEnchanted creature gets +2/+0.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Enchantment — Aura",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Voltron/Equipment",
+        "Interaction/Disruption",
+        "Payload/Payoff",
+        "Combat Trick",
+        "Protection"
+      ],
+      "qty": 2,
+      "role": "Threat/Payoff",
+      "board": "mainboard"
+    },
+    {
+      "name": "Blossoming Defense",
+      "oracle_text": "Target creature you control gets +2/+2 and gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+      "mana_cost": "{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Protection",
+        "Combat Trick"
+      ],
+      "qty": 2,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Assert Perfection",
+      "oracle_text": "Target creature you control gets +1/+0 until end of turn. It deals damage equal to its power to up to one target creature an opponent controls.",
+      "mana_cost": "{1}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2,
+      "type_line": "Sorcery",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Targeted Removal",
+        "Combat Trick"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Unforgiving Aim",
+      "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Spell Snare",
+      "oracle_text": "Counter target spell with mana value 2.",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1,
+      "type_line": "Instant",
+      "rarity": "uncommon",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 1,
+      "role": "Interaction",
+      "board": "mainboard"
+    },
+    {
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Forest",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 8,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [],
+      "qty": 4,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Tangled Islet",
+      "oracle_text": "({T}: Add {G} or {U}.)\nThis land enters tapped.",
+      "mana_cost": null,
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 0,
+      "type_line": "Land — Forest Island",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    },
+    {
+      "name": "Evolving Wilds",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0,
+      "type_line": "Land",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Lands-Matter",
+        "Infrastructure/Consistency",
+        "Land Fetch",
+        "Mana Fixing"
+      ],
+      "qty": 2,
+      "role": "Land",
+      "board": "mainboard"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Selfless Safewright",
+      "oracle_text": "Flash\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nWhen this creature enters, choose a creature type. Other permanents you control of that type gain hexproof and indestructible until end of turn.",
+      "mana_cost": "{3}{G}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5,
+      "type_line": "Creature — Elf Warrior",
+      "rarity": "rare",
+      "power": "4",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Protection"
+      ],
+      "qty": 1,
+      "role": "Flex",
+      "board": "sideboard",
+      "when_to_board": "Against sweepers and edicts — the residual exposure the lock genuinely does not cover. Tam's type line is Legendary Creature - Gorgon Wizard, so naming Gorgon or Wizard reaches Tam, and Stalactite Dagger's 'is all creature types' makes an equipped Tam covered by any name. Do not convoke it by tapping Tam."
+    },
+    {
+      "name": "Chomping Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, destroy up to one target artifact or enchantment.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "uncommon",
+      "power": "1",
+      "toughness": "2",
+      "tags": [
+        "Tribal/Kindred",
+        "Interaction/Disruption",
+        "Targeted Removal"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "The deck's ONLY artifact answer — 'destroy up to one target artifact or enchantment' against the cube's 11 artifacts and 21 enchantments. 'Up to one' means it is castable with no target, so the 1/2 changeling body is never stranded."
+    },
+    {
+      "name": "Wild Unraveling",
+      "oracle_text": "As an additional cost to cast this spell, blight 2 or pay {1}. (To blight 2, put two -1/-1 counters on a creature you control.)\nCounter target spell.",
+      "mana_cost": "{U}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Counters (+1/+1)",
+        "Interaction/Disruption",
+        "Counterspell"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against removal aimed at Tam that Spell Snare cannot reach — Spell Snare is live against only 72 of 260 unique nonland cube cards (27.7%), and this counters a spell of any mana value. Pay the {1} alternative cost, not blight 2."
+    },
+    {
+      "name": "Unforgiving Aim",
+      "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Instant",
+      "rarity": "common",
+      "power": null,
+      "toughness": null,
+      "tags": [
+        "Tokens",
+        "Interaction/Disruption",
+        "Enabler/Fodder",
+        "Targeted Removal",
+        "Token Generation"
+      ],
+      "qty": 1,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Second copy, against the cube's 13 non-G/U fliers ('Destroy target creature with flying') and 21 enchantments. It has NO artifact mode."
+    },
+    {
+      "name": "Dawn's Light Archer",
+      "oracle_text": "Flash\nReach",
+      "mana_cost": "{2}{G}",
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3,
+      "type_line": "Creature — Elf Archer",
+      "rarity": "common",
+      "power": "4",
+      "toughness": "2",
+      "tags": [
+        "Interaction/Disruption"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against fliers — 'Flash / Reach' on a 4/2 ambushes 10 of the cube's 13 non-G/U fliers (those with toughness 4 or less) at instant speed."
+    },
+    {
+      "name": "Rooftop Percher",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying\nWhen this creature enters, exile up to two target cards from graveyards. You gain 3 life.",
+      "mana_cost": "{5}",
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5,
+      "type_line": "Creature — Shapeshifter",
+      "rarity": "common",
+      "power": "3",
+      "toughness": "3",
+      "tags": [
+        "Tribal/Kindred",
+        "Lifegain",
+        "Graveyard",
+        "Interaction/Disruption",
+        "Graveyard Hate",
+        "Life Gain"
+      ],
+      "qty": 2,
+      "role": "Hate",
+      "board": "sideboard",
+      "when_to_board": "Against the cube's 39 graveyard cards — 'exile up to two target cards from graveyards'; colourless, so it casts off any lands."
+    }
+  ],
+  "pitch": "A green-primary G/U Voltron deck whose protection is a lock rather than a spell. Tam, Mindful First-Year has two abilities that compose: 'Each other creature you control has hexproof from each of its colors' and '{T}: Target creature you control becomes all colors until end of turn'. A creature that is all five colours therefore has hexproof from all five, and no COLOURED spell or ability an opponent controls can target it. The second half of the engine is Glister Bairn, whose 'X is the number of colors among permanents you control' reads 2 in an ordinary two-colour deck but 5 the moment Tam has made a permanent all colours. THREE LIMITS, stated after the grill rather than glossed: (1) Tam gets ONE {T} per turn cycle, so the precombat activation that feeds Glister Bairn and the untapped Tam that answers removal on the opponent's turn compete for the same tap — Formidable Speaker's '{1}, {T}: Untap another target permanent' is the only card in the deck that resolves that contention, and it is in the list for that reason as much as for its tutor. (2) Tam's static says each OTHER creature, so Tam never protects itself; six mainboard copies (Blossoming Defense x2, Aquitect's Defenses x2, Gilt-Leaf's Embrace x2) can grant Tam a one-shot protection at instant speed, and Glen Elendra Guardian can counter the spell outright. (3) Hexproof is not evasion — an untargetable creature can still be chump-blocked, which is what the trample on Gilt-Leaf's Embrace and Crossroads Watcher is for.",
+  "strategy_es": "midrange",
+  "identity_es": "Un Voltron G/U con verde primario cuya protección es un bloqueo y no un hechizo. Tam, Mindful First-Year tiene dos habilidades que se componen: 'Each other creature you control has hexproof from each of its colors' y '{T}: Target creature you control becomes all colors until end of turn'. Una criatura que sea de los cinco colores tiene por tanto antimaleficio de los cinco, y ningún hechizo o habilidad COLOREADA que controle un rival puede apuntarla. La segunda mitad del motor es Glister Bairn, cuya 'X is the number of colors among permanents you control' lee 2 en un mazo bicolor normal pero 5 en el momento en que Tam ha vuelto un permanente de todos los colores. TRES LÍMITES, enunciados en vez de maquillados: (1) Tam recibe UN {T} por ciclo de turno, así que la activación precombate que alimenta a Glister Bairn y el Tam desgirado que responde a la eliminación en el turno del rival compiten por el mismo giro; el '{1}, {T}: Untap another target permanent' de Formidable Speaker es la única carta del mazo que resuelve esa disputa, y está en la lista tanto por eso como por su tutor. (2) La estática de Tam dice cada OTRA criatura, así que Tam nunca se protege a sí misma; seis copias del principal (Blossoming Defense x2, Aquitect's Defenses x2, Gilt-Leaf's Embrace x2) pueden darle a Tam una protección de un solo uso a velocidad de instantáneo, y Glen Elendra Guardian puede contrarrestar el hechizo directamente. (3) El antimaleficio no es evasión: a una criatura que no puede ser objetivo se le puede seguir bloqueando con carnaza, y para eso está el arrollar de Gilt-Leaf's Embrace y Crossroads Watcher.",
+  "pitch_es": "Un Voltron G/U con verde primario cuya protección es un bloqueo y no un hechizo. Tam, Mindful First-Year tiene dos habilidades que se componen: 'Each other creature you control has hexproof from each of its colors' y '{T}: Target creature you control becomes all colors until end of turn'. Una criatura que sea de los cinco colores tiene por tanto antimaleficio de los cinco, y ningún hechizo o habilidad COLOREADA que controle un rival puede apuntarla. La segunda mitad del motor es Glister Bairn, cuya 'X is the number of colors among permanents you control' lee 2 en un mazo bicolor normal pero 5 en el momento en que Tam ha vuelto un permanente de todos los colores. TRES LÍMITES, enunciados en vez de maquillados: (1) Tam recibe UN {T} por ciclo de turno, así que la activación precombate que alimenta a Glister Bairn y el Tam desgirado que responde a la eliminación en el turno del rival compiten por el mismo giro; el '{1}, {T}: Untap another target permanent' de Formidable Speaker es la única carta del mazo que resuelve esa disputa, y está en la lista tanto por eso como por su tutor. (2) La estática de Tam dice cada OTRA criatura, así que Tam nunca se protege a sí misma; seis copias del principal (Blossoming Defense x2, Aquitect's Defenses x2, Gilt-Leaf's Embrace x2) pueden darle a Tam una protección de un solo uso a velocidad de instantáneo, y Glen Elendra Guardian puede contrarrestar el hechizo directamente. (3) El antimaleficio no es evasión: a una criatura que no puede ser objetivo se le puede seguir bloqueando con carnaza, y para eso está el arrollar de Gilt-Leaf's Embrace y Crossroads Watcher."
+}

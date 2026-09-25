@@ -1,0 +1,616 @@
+{
+  "deck_name": "wub-defender-council",
+  "cube_id": "3d026208-ab69-4a10-8ebb-9788d2b1c925",
+  "cube_slug": "dominaria-united---main-set",
+  "built_at": "2026-08-19T14:12:38Z",
+  "format": "40-card",
+  "strategy": "control — Wingmantle Chaplain + Blight Pile + Coral Colony defenders",
+  "colors": "WUB",
+  "identity": "The three-colour Defenders build, and the reason to play it is a single number. WUB can cast 8 of the 9 defenders in this cube - every one except the green Floriferous Vinewall - and this list plays ALL EIGHT at two copies each for 16 defender bodies, where any two-colour build tops out at 12. That is the maximum any deck in this cube can field. All three payoffs read that number: Wingmantle Chaplain makes one 1/1 flying Bird per defender when it enters and one for every defender after, Blight Pile drains for it, and Coral Colony mills for it. The second reason is Domain: the three common duals each carry two basic land types, so all three types are online, which turns Leyline Binding into a {2}{W} flash catch-all. The price is six tapped lands out of seventeen, zero double-pip cards, and an interaction count of 7 of 23 - below the control floor, and the deliberate trade for the extra bodies.",
+  "restrictions": {
+    "commons_uncommons_max_2": "PASS - no card exceeds 2 copies counting mainboard and sideboard jointly; verified by cube_search.get_max_copies against per_rarity {common:2, uncommon:2, rare:1, mythic:1}.",
+    "rares_mythics_max_1_copy": "PASS - Leyline Binding x1, Serra Paragon x1, Serra Redeemer x1.",
+    "rares_mythics_max_5_total_MB_plus_SB": "PASS - 3 total (Leyline Binding rare mainboard; Serra Paragon mythic and Serra Redeemer rare in the sideboard). Two slots unspent. No rare land is run.",
+    "all_cards_from_cube_pool": "PASS - every name matched by exact string against the working pool cache.",
+    "basics_format_supplied": "Plains x5, Island x3 and Swamp x3 are format-supplied; the cube list contains no basics.",
+    "colour_usability": "PASS - every nonland card returns a non-None effective_cost.best_mode against core_colors [W,U,B] with an empty splash. Rona's Vortex prints {B,U} and both its cast mode and its {2}{B} kicker are payable here; Runic Shot and Stall for Time (sideboard) likewise have kickers payable in these colours."
+  },
+  "commander": null,
+  "mana_audit": {
+    "land_count": 17,
+    "recommended_land_count": 17,
+    "land_count_status": "PASS",
+    "ramp_count": 0,
+    "cantrip_count": 0,
+    "accel_count": 0,
+    "land_target_trace": {
+      "base_lands": 17,
+      "base_window": [
+        2,
+        4
+      ],
+      "base_p_window": 0.7945,
+      "avg_mv": 2.35,
+      "reference_avg_mv": 2.5,
+      "accel": 0,
+      "adjustment": -0.2,
+      "raw_target": 16.8,
+      "clamped": false,
+      "recommended_land_count": 17,
+      "p_window_at_recommended": 0.7945
+    },
+    "avg_cmc": 2.35,
+    "pip_demand": {
+      "W": 6,
+      "B": 6,
+      "U": 7
+    },
+    "land_color_production": {
+      "W": 8,
+      "U": 8,
+      "B": 7
+    },
+    "color_balance_status": "PASS",
+    "color_balance_per_color": {
+      "B": {
+        "pip_pct": 31.6,
+        "prod_pct": 41.2,
+        "gap": -9.6,
+        "status": "OK"
+      },
+      "U": {
+        "pip_pct": 36.8,
+        "prod_pct": 47.1,
+        "gap": -10.3,
+        "status": "OK"
+      },
+      "W": {
+        "pip_pct": 31.6,
+        "prod_pct": 47.1,
+        "gap": -15.5,
+        "status": "OK"
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "mainboard": [
+    {
+      "name": "Clockwork Drawbridge",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Engine - defender count plus a repeatable tapper",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Wall",
+      "mana_cost": "{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Defender\n{2}{W}, {T}: Tap target creature.",
+      "power": "0",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "13"
+    },
+    {
+      "name": "Walking Bulwark",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Engine - converts defenders into attackers by toughness",
+      "cmc": 1,
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{1}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\n{2}: Until end of turn, target creature with defender gains haste, can attack as though it didn't have defender, and assigns combat damage equal to its toughness rather than its power. Activate only as a sorcery.",
+      "power": "0",
+      "toughness": "3",
+      "set": "tdc",
+      "collector_number": "334"
+    },
+    {
+      "name": "Cut Down",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Interaction - one-mana instant removal",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Destroy target creature with total power and toughness 5 or less.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "89"
+    },
+    {
+      "name": "Rona's Vortex",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Interaction - kicked, bottoms a permanent rather than bouncing it",
+      "cmc": 1,
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nReturn target creature or planeswalker you don't control to its owner's hand. If this spell was kicked, put that permanent on the bottom of its owner's library instead.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "63"
+    },
+    {
+      "name": "Coral Colony",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Payoff - mill; the axis that lifegain cannot blunt",
+      "cmc": 2,
+      "type_line": "Creature — Wall",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\n{1}{U}, {T}: Target player mills X cards, where X is the number of creatures you control with defender. (To mill a card, a player puts the top card of their library into their graveyard.)",
+      "power": "1",
+      "toughness": "4",
+      "set": "dmu",
+      "collector_number": "45"
+    },
+    {
+      "name": "Blight Pile",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Payoff - non-combat drain that ignores blockers",
+      "cmc": 2,
+      "type_line": "Creature — Phyrexian",
+      "mana_cost": "{1}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\n{2}{B}, {T}: Each opponent loses X life, where X is the number of creatures with defender you control.",
+      "power": "3",
+      "toughness": "3",
+      "set": "tdc",
+      "collector_number": "174"
+    },
+    {
+      "name": "Destroy Evil",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Interaction - large-creature or enchantment removal",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Choose one —\n• Destroy target creature with toughness 4 or greater.\n• Destroy target enchantment.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "17"
+    },
+    {
+      "name": "Essence Scatter",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Interaction - the mainboard stack answer",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target creature spell.",
+      "power": null,
+      "toughness": null,
+      "set": "sos",
+      "collector_number": "47"
+    },
+    {
+      "name": "Academy Wall",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Engine - 0/5 wall, the largest blocker in the archetype, plus a loot trigger",
+      "cmc": 3,
+      "type_line": "Creature — Wall",
+      "mana_cost": "{2}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Defender\nWhenever you cast an instant or sorcery spell, you may draw a card. If you do, discard a card. This ability triggers only once each turn.",
+      "power": "0",
+      "toughness": "5",
+      "set": "dmu",
+      "collector_number": "41"
+    },
+    {
+      "name": "Gibbering Barricade",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Enabler/Engine - defender count plus the only repeatable card conversion (Birds into cards)",
+      "cmc": 3,
+      "type_line": "Creature — Nightmare Wall",
+      "mana_cost": "{2}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "Defender\n{2}{B}, Sacrifice a creature: You gain 1 life and draw a card.",
+      "power": "2",
+      "toughness": "4",
+      "set": "dmu",
+      "collector_number": "95"
+    },
+    {
+      "name": "Wingmantle Chaplain",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Payoff - primary clock; the only payoff that puts power on the battlefield",
+      "cmc": 4,
+      "type_line": "Creature — Human Cleric",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Defender\nWhen this creature enters, create a 1/1 white Bird creature token with flying for each creature with defender you control.\nWhenever another creature you control with defender enters, create a 1/1 white Bird creature token with flying.",
+      "power": "0",
+      "toughness": "3",
+      "set": "tdc",
+      "collector_number": "141"
+    },
+    {
+      "name": "Shield-Wall Sentinel",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "Infrastructure - defender count plus a tutor for any of the three payoffs",
+      "cmc": 4,
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{4}",
+      "colors": [],
+      "color_identity": [],
+      "rarity": "common",
+      "oracle_text": "Defender\nWhen this creature enters, you may search your library for a creature card with defender, reveal it, put it into your hand, then shuffle.",
+      "power": "1",
+      "toughness": "3",
+      "set": "dmu",
+      "collector_number": "238"
+    },
+    {
+      "name": "Leyline Binding",
+      "qty": 1,
+      "board": "mainboard",
+      "role": "Interaction - Domain-3 flash exile for {2}{W}; the deck's only rare",
+      "cmc": 6,
+      "type_line": "Enchantment",
+      "mana_cost": "{5}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flash\nDomain — This spell costs {1} less to cast for each basic land type among lands you control.\nWhen this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "24"
+    },
+    {
+      "name": "Plains",
+      "qty": 4,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Basic Land — Plains",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W}.)",
+      "power": null,
+      "toughness": null,
+      "set": "DMU",
+      "collector_number": ""
+    },
+    {
+      "name": "Island",
+      "qty": 4,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U}.)",
+      "power": null,
+      "toughness": null,
+      "set": "DMU",
+      "collector_number": ""
+    },
+    {
+      "name": "Swamp",
+      "qty": 3,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {B}.)",
+      "power": null,
+      "toughness": null,
+      "set": "DMU",
+      "collector_number": ""
+    },
+    {
+      "name": "Idyllic Beachfront",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Land — Plains Island",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {U}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "249"
+    },
+    {
+      "name": "Sunlit Marsh",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Land — Plains Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {W} or {B}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "soc",
+      "collector_number": "409"
+    },
+    {
+      "name": "Contaminated Aquifer",
+      "qty": 2,
+      "board": "mainboard",
+      "role": "land",
+      "cmc": 0,
+      "type_line": "Land — Island Swamp",
+      "mana_cost": "",
+      "colors": [],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "({T}: Add {U} or {B}.)\nThis land enters tapped.",
+      "power": null,
+      "toughness": null,
+      "set": "tdc",
+      "collector_number": "353"
+    }
+  ],
+  "sideboard": [
+    {
+      "name": "Artillery Blast",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard interaction - Domain X=4 damage to a tapped creature",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Domain — Artillery Blast deals X damage to target tapped creature, where X is 1 plus the number of basic land types among lands you control.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "6"
+    },
+    {
+      "name": "Negate",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard interaction - counters a noncreature spell",
+      "cmc": 2,
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "rarity": "common",
+      "oracle_text": "Counter target noncreature spell.",
+      "power": null,
+      "toughness": null,
+      "set": "tmt",
+      "collector_number": "47"
+    },
+    {
+      "name": "Sheoldred's Restoration",
+      "qty": 2,
+      "board": "sideboard",
+      "role": "Sideboard recursion - returns Chaplain to the battlefield",
+      "cmc": 4,
+      "type_line": "Sorcery",
+      "mana_cost": "{3}{B}",
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Kicker {2}{W} (You may pay an additional {2}{W} as you cast this spell.)\nReturn target creature card from your graveyard to the battlefield. If this spell was kicked, you gain life equal to that card's mana value. Otherwise, you lose that much life.\nExile Sheoldred's Restoration.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "108"
+    },
+    {
+      "name": "Stall for Time",
+      "qty": 1,
+      "board": "sideboard",
+      "role": "Sideboard interaction - taps two at instant speed, cantrips",
+      "cmc": 3,
+      "type_line": "Instant",
+      "mana_cost": "{2}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "rarity": "common",
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nTap up to two target creatures. If this spell was kicked, put a stun counter on each of those creatures. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nDraw a card.",
+      "power": null,
+      "toughness": null,
+      "set": "dmu",
+      "collector_number": "34"
+    },
+    {
+      "name": "Prayer of Binding",
+      "qty": 1,
+      "board": "sideboard",
+      "role": "Sideboard interaction - flash exile of any nonland permanent",
+      "cmc": 4,
+      "type_line": "Enchantment",
+      "mana_cost": "{3}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "uncommon",
+      "oracle_text": "Flash\nWhen this enchantment enters, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield. You gain 2 life.",
+      "power": null,
+      "toughness": null,
+      "set": "fdn",
+      "collector_number": "739"
+    },
+    {
+      "name": "Serra Paragon",
+      "qty": 1,
+      "board": "sideboard",
+      "role": "Sideboard threat - flying blocker plus per-turn permanent recursion",
+      "cmc": 4,
+      "type_line": "Creature — Angel",
+      "mana_cost": "{2}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "mythic",
+      "oracle_text": "Flying\nOnce during each of your turns, you may play a land from your graveyard or cast a permanent spell with mana value 3 or less from your graveyard. If you do, it gains \"When this permanent is put into a graveyard from the battlefield, exile it and you gain 2 life.\"",
+      "power": "3",
+      "toughness": "4",
+      "set": "soc",
+      "collector_number": "169"
+    },
+    {
+      "name": "Serra Redeemer",
+      "qty": 1,
+      "board": "sideboard",
+      "role": "Sideboard threat - turns each 1/1 Bird into a 3/3 flier",
+      "cmc": 5,
+      "type_line": "Creature — Angel Soldier",
+      "mana_cost": "{3}{W}{W}",
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "rarity": "rare",
+      "oracle_text": "Flying\nWhenever another creature you control with power 2 or less enters, put two +1/+1 counters on that creature.",
+      "power": "2",
+      "toughness": "4",
+      "set": "blb",
+      "collector_number": "387"
+    }
+  ],
+  "pitch": "The three-colour Defenders build, and the reason to play it is a single number. WUB can cast 8 of the 9 defenders in this cube - every one except the green Floriferous Vinewall - and this list plays ALL EIGHT at two copies each for 16 defender bodies, where any two-colour build tops out at 12. That is the maximum any deck in this cube can field. All three payoffs read that number: Wingmantle Chaplain makes one 1/1 flying Bird per defender when it enters and one for every defender after, Blight Pile drains for it, and Coral Colony mills for it. The second reason is Domain: the three common duals each carry two basic land types, so all three types are online, which turns Leyline Binding into a {2}{W} flash catch-all. The price is six tapped lands out of seventeen, zero double-pip cards, and an interaction count of 7 of 23 - below the control floor, and the deliberate trade for the extra bodies.",
+  "strategy_es": "control — Wingmantle Chaplain + Blight Pile + defensores con Coral Colony",
+  "identity_es": "La construcción de Defensores tricolor, y la razón para jugarla es un único número. WUB puede lanzar 8 de los 9 defensores de este cubo — todos salvo el verde Floriferous Vinewall — y esta lista juega LOS OCHO a dos copias cada uno, sumando 16 cuerpos con defensor, donde cualquier construcción bicolor se queda en 12. Ese es el máximo que puede desplegar cualquier mazo de este cubo. Las tres recompensas leen ese número: Wingmantle Chaplain crea un Pájaro volador 1/1 por defensor al entrar y uno por cada defensor posterior, Blight Pile drena por él, y Coral Colony muele por él. La segunda razón es el Domain: las tres duales comunes llevan cada una dos tipos de tierra básica, así que los tres tipos están activos, lo que convierte Leyline Binding en un comodín con flash de {2}{W}. El precio son seis tierras giradas de diecisiete, cero cartas de doble símbolo, y un recuento de interacción de 7 de 23 — por debajo del suelo de control, y el intercambio deliberado por los cuerpos extra.",
+  "pitch_es": "La construcción de Defensores tricolor, y la razón para jugarla es un único número. WUB puede lanzar 8 de los 9 defensores de este cubo — todos salvo el verde Floriferous Vinewall — y esta lista juega LOS OCHO a dos copias cada uno, sumando 16 cuerpos con defensor, donde cualquier construcción bicolor se queda en 12. Ese es el máximo que puede desplegar cualquier mazo de este cubo. Las tres recompensas leen ese número: Wingmantle Chaplain crea un Pájaro volador 1/1 por defensor al entrar y uno por cada defensor posterior, Blight Pile drena por él, y Coral Colony muele por él. La segunda razón es el Domain: las tres duales comunes llevan cada una dos tipos de tierra básica, así que los tres tipos están activos, lo que convierte Leyline Binding en un comodín con flash de {2}{W}. El precio son seis tierras giradas de diecisiete, cero cartas de doble símbolo, y un recuento de interacción de 7 de 23 — por debajo del suelo de control, y el intercambio deliberado por los cuerpos extra."
+}
