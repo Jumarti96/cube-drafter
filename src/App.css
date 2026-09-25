@@ -1635,6 +1635,29 @@
   gap: 16px;
 }
 
+.setup-checkbox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-end;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.setup-checkbox input {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
 .setup-field-half {
   flex: 1;
 }
@@ -2579,4 +2602,281 @@
 
 .setup-btn-pick {
   font-size: 1rem;
+}
+
+.setup-btn-history {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.setup-btn-history:hover {
+  color: var(--accent);
+  border-color: rgba(212, 168, 67, 0.35);
+}
+
+/* ===== Session modals ===== */
+.session-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(12px);
+}
+
+.session-modal {
+  position: relative;
+  max-width: 520px;
+  width: 100%;
+  background: linear-gradient(165deg, #1a1a20 0%, #121216 55%, #0f0f12 100%);
+  border: 1px solid rgba(212, 168, 67, 0.22);
+  border-radius: 16px;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+    0 0 60px rgba(212, 168, 67, 0.06);
+  overflow: hidden;
+  animation: modalSlideUp 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.session-history-modal {
+  max-width: 640px;
+}
+
+.session-modal-glow {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 160px;
+  background: radial-gradient(ellipse, rgba(212, 168, 67, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.session-modal-header {
+  padding: 28px 28px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  z-index: 1;
+}
+
+.session-modal-eyebrow {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.session-modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.session-modal-subtitle {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.session-modal-body {
+  padding: 20px 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.session-restore-details {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.session-restore-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.session-restore-row dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.session-restore-row dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.session-restore-error {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(180, 60, 60, 0.15);
+  border: 1px solid rgba(220, 80, 80, 0.35);
+  color: #f0a0a0;
+  font-size: 0.88rem;
+}
+
+.session-modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 28px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  z-index: 1;
+}
+
+.session-btn {
+  padding: 11px 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  border: 1px solid transparent;
+}
+
+.session-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.session-btn-primary {
+  color: #1a1408;
+  background: var(--gold-gradient);
+  border-color: rgba(212, 168, 67, 0.5);
+}
+
+.session-btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.session-btn-secondary {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.session-btn-secondary:hover:not(:disabled) {
+  border-color: rgba(212, 168, 67, 0.35);
+}
+
+.session-btn-ghost {
+  color: var(--text-muted);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.session-btn-ghost:hover:not(:disabled) {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.session-btn-sm {
+  padding: 8px 14px;
+  font-size: 0.8rem;
+}
+
+.session-history-body {
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.session-history-empty {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 24px 0;
+}
+
+.session-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.session-history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.session-history-item-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--text);
+}
+
+.session-history-item-meta {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.session-history-item-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.session-save-warning {
+  text-align: center;
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(180, 130, 40, 0.12);
+  border: 1px solid rgba(212, 168, 67, 0.25);
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 560px) {
+  .session-restore-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .session-history-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .session-history-item-actions {
+    justify-content: flex-end;
+  }
 }

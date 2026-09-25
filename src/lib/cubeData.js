@@ -1,6 +1,7 @@
 import { readTextFile, fileExists } from './fsAccess.js'
 import { resolveFaceImageUrl, setCardByNameLookup } from './cardFaces.js'
 import { enrichBasicLandImages, resetBasicLandImageCache } from './basicLandImages.js'
+import { DEFAULT_UNCOMMON_BUDGET } from './deckConflicts.js'
 
 let _cardImageLookup = {}
 let _enrichedCacheKey = null
@@ -125,22 +126,97 @@ export function isLandCard(card) {
   return BASIC_LAND_NAMES.has(name) || name.startsWith('Snow-Covered ')
 }
 
+/** Physical copies represented by a single card row. */
+export function cardQty(card) {
+  const qty = Number(card?.qty)
+  return Number.isFinite(qty) && qty > 0 ? Math.floor(qty) : 1
+}
+
+/**
+ * Group card rows by name, one entry per card with a physical `count`.
+ *
+ * Deck exports are inconsistent: some repeat a row per copy, some carry a single
+ * row with `qty`, and some do both — two rows that each say `qty: 2` still mean
+ * two copies, not four. Taking the larger of the two signals is right for all
+ * three shapes.
+ */
+export function groupCardsByName(cards) {
+  const map = new Map()
+  for (const card of cards || []) {
+    const name = card?.name || ''
+    if (!name) continue
+    const entry = map.get(name)
+    if (entry) {
+      entry.rows += 1
+      entry.maxQty = Math.max(entry.maxQty, cardQty(card))
+    } else {
+      map.set(name, { card, rows: 1, maxQty: cardQty(card) })
+    }
+  }
+  return [...map.values()].map(({ card, rows, maxQty }) => ({
+    ...card,
+    count: Math.max(rows, maxQty),
+  }))
+}
+
+/**
+ * Group several named boards into one list, keeping both the total copy count
+ * and where those copies came from.
+ *
+ * Boards are grouped independently first: the same card in the mainboard and
+ * the sideboard is two separate physical sets of copies, so a 2-of in the deck
+ * plus a 1-of in the sideboard is three cards to find, not two.
+ *
+ * @param {Record<string, Array>} boards board name -> card rows
+ * @returns {Array} one entry per name, with `count` and `counts[boardName]`
+ */
+export function groupCardsAcrossBoards(boards) {
+  const merged = new Map()
+  for (const [boardName, cards] of Object.entries(boards || {})) {
+    for (const card of groupCardsByName(cards)) {
+      let entry = merged.get(card.name)
+      if (!entry) {
+        entry = { ...card, count: 0, counts: {} }
+        merged.set(card.name, entry)
+      }
+      entry.count += card.count
+      entry.counts[boardName] = (entry.counts[boardName] || 0) + card.count
+    }
+  }
+  return [...merged.values()]
+}
+
+/** Total physical copies across the given rows. */
+export function countCards(cards) {
+  let total = 0
+  for (const card of groupCardsByName(cards)) total += card.count
+  return total
+}
+
+export function getMainboardCards(deckData) {
+  return (deckData?.mainboard || []).filter(c => !c.board || c.board === 'mainboard')
+}
+
+export function getSideboardCards(deckData) {
+  return [
+    ...(deckData?.mainboard || []).filter(c => c.board === 'sideboard'),
+    ...(deckData?.sideboard || []),
+  ]
+}
+
 export function getColorCardCounts(deckData) {
   const counts = { W: 0, U: 0, B: 0, R: 0, G: 0, C: 0 }
-  for (const card of deckData.mainboard || []) {
-    if (card.board === 'sideboard') continue
+  for (const card of groupCardsByName(getMainboardCards(deckData))) {
     if (isLandCard(card)) continue
     const colors = card.colors?.length ? card.colors : (card.color_identity || [])
-    if (!colors.length) counts.C += 1
-    else for (const c of colors) if (c in counts) counts[c] += 1
+    if (!colors.length) counts.C += card.count
+    else for (const c of colors) if (c in counts) counts[c] += card.count
   }
   return counts
 }
 
 export function getNonLandMainboardCount(deckData) {
-  return (deckData.mainboard || []).filter(
-    c => (!c.board || c.board === 'mainboard') && !isLandCard(c)
-  ).length
+  return countCards(getMainboardCards(deckData).filter(c => !isLandCard(c)))
 }
 
 export function enrichCard(card, lookup) {
@@ -245,73 +321,65 @@ async function buildDeckSummary(deckDirHandle, deckName, enriched) {
     return null
   }
 
-  const analysisText = await readTextFile(deckDirHandle, 'analysis.md')
-  const pitchEn = (deckData.pitch || '').trim() || extractPitchFromAnalysis(analysisText)
+  // Only fall back to analysis.md when deck.json carries no pitch. At ~120 decks
+  // per cube that read would otherwise cost a second file per deck on every load.
+  let pitchEn = (deckData.pitch || '').trim()
+  if (!pitchEn) {
+    pitchEn = extractPitchFromAnalysis(await readTextFile(deckDirHandle, 'analysis.md'))
+  }
   const pitchEs = (deckData.pitch_es || '').trim()
 
-  const mainboard = deckData.mainboard || []
-  const mainDeck = mainboard.filter(c => !c.board || c.board === 'mainboard')
+  // One pass over grouped rows: `count` is the physical copy count, so lands,
+  // the non-land tally and the conflict inventory all agree with the deck list.
+  const grouped = groupCardsByName(getMainboardCards(deckData))
+    .map(card => enrichCard(card, enriched))
+
   const nonLand = []
-  const seen = new Set()
-  let nonLandCount = 0
-
-  for (const raw of mainDeck) {
-    const card = enrichCard(raw, enriched)
-    const name = card.name || ''
-    if (!name || isLandCard(card)) continue
-
-    nonLandCount += 1
-    if (!seen.has(name)) {
-      seen.add(name)
-      nonLand.push({
-        name,
-        cmc: card.cmc ?? 0,
-        type_line: card.type_line || '',
-        mana_cost: card.mana_cost || '',
-        rarity: card.rarity || '',
-        image_url: resolveImageUrl(card),
-        colors: card.colors || [],
-        oracle_text: card.oracle_text || '',
-        scryfall_id: card.scryfall_id || '',
-        image_back_url: card.image_back_url || '',
-        layout: card.layout || '',
-        card_faces: card.card_faces || null,
-        power: card.power ?? null,
-        toughness: card.toughness ?? null,
-        set: card.set || '',
-      })
-    }
-  }
-
   const landCards = []
-  const seenLands = new Set()
-  for (const raw of mainDeck) {
-    const card = enrichCard(raw, enriched)
-    const name = card.name || ''
-    if (isLandCard(card) && !seenLands.has(name)) {
-      seenLands.add(name)
-      const count = mainDeck.filter(c => c.name === name).length
-      landCards.push({
-        name,
-        count,
-        type_line: card.type_line || '',
-        image_url: resolveImageUrl(card),
-      })
-    }
-  }
-
   const rareMythic = new Set()
   const uncommonCounts = {}
-  for (const raw of mainDeck) {
-    const card = enrichCard(raw, enriched)
+  let nonLandCount = 0
+
+  for (const card of grouped) {
     const name = card.name || ''
     if (!name) continue
+
     const rarity = (card.rarity || '').toLowerCase()
     if (rarity === 'rare' || rarity === 'mythic') {
       rareMythic.add(name)
     } else if (rarity === 'uncommon') {
-      uncommonCounts[name] = (uncommonCounts[name] || 0) + 1
+      uncommonCounts[name] = (uncommonCounts[name] || 0) + card.count
     }
+
+    if (isLandCard(card)) {
+      landCards.push({
+        name,
+        count: card.count,
+        type_line: card.type_line || '',
+        image_url: resolveImageUrl(card),
+      })
+      continue
+    }
+
+    nonLandCount += card.count
+    nonLand.push({
+      name,
+      count: card.count,
+      cmc: card.cmc ?? 0,
+      type_line: card.type_line || '',
+      mana_cost: card.mana_cost || '',
+      rarity: card.rarity || '',
+      image_url: resolveImageUrl(card),
+      colors: card.colors || [],
+      oracle_text: card.oracle_text || '',
+      scryfall_id: card.scryfall_id || '',
+      image_back_url: card.image_back_url || '',
+      layout: card.layout || '',
+      card_faces: card.card_faces || null,
+      power: card.power ?? null,
+      toughness: card.toughness ?? null,
+      set: card.set || '',
+    })
   }
 
   return {
@@ -376,6 +444,90 @@ export async function loadArchetypesCsv(cubeHandle) {
   return parseCSV(text)
 }
 
+/** A colour must appear in this share of an archetype's decks to be one of its colours. */
+const ARCHETYPE_COLOR_SHARE = 0.4
+
+/**
+ * The colours an archetype actually plays, rather than every colour any of its
+ * decks touches — one off-colour splash deck should not repaint the archetype.
+ * Always keeps the most common colour so the result is never empty.
+ */
+export function summarizeArchetypeColors(colorCounts, deckCount) {
+  if (!deckCount) return ''
+  const threshold = deckCount * ARCHETYPE_COLOR_SHARE
+  const kept = MANA_COLOR_ORDER.filter(c => (colorCounts[c] || 0) >= threshold)
+  if (kept.length) return kept.join('')
+
+  const best = MANA_COLOR_ORDER.reduce(
+    (a, c) => ((colorCounts[c] || 0) > (colorCounts[a] || 0) ? c : a),
+    MANA_COLOR_ORDER[0],
+  )
+  return (colorCounts[best] || 0) > 0 ? best : ''
+}
+
+/**
+ * Cards that identify an archetype, for the three images on its card.
+ *
+ * The CSV already names them: `keystones` are the defining cards and
+ * `core_cards` the supporting suite. Preferring those over "whatever the first
+ * deck happens to run" keeps the images on-theme and matches the "Key cards: …"
+ * text in the description, which is built from the same list.
+ */
+export function pickArchetypeSampleCards(row, deckNames, deckSummaries, limit = 3) {
+  const byName = new Map()
+  const deckHits = new Map()
+
+  for (const deckName of deckNames) {
+    for (const card of deckSummaries[deckName]?.non_land_cards || []) {
+      const name = card?.name
+      if (!name) continue
+      if (!byName.has(name)) byName.set(name, card)
+      deckHits.set(name, (deckHits.get(name) || 0) + 1)
+    }
+  }
+
+  const named = field => (row[field] || '')
+    .split(';')
+    .map(s => s.trim())
+    .filter(Boolean)
+
+  const picks = []
+  const seen = new Set()
+  const add = (name) => {
+    if (picks.length >= limit || seen.has(name)) return
+    const card = byName.get(name)
+    if (!card || !(card.image_url || '').trim()) return
+    seen.add(name)
+    picks.push(card)
+  }
+
+  // 1. Keystones, in the order the cube author listed them.
+  for (const name of named('keystones')) add(name)
+
+  // 2. Core cards, most widely shared across the archetype's decks first.
+  if (picks.length < limit) {
+    const core = named('core_cards')
+      .filter(n => byName.has(n))
+      .sort((a, b) => (deckHits.get(b) || 0) - (deckHits.get(a) || 0))
+    for (const name of core) add(name)
+  }
+
+  // 3. Whatever the decks most agree on, rares first — a floor, rarely reached.
+  if (picks.length < limit) {
+    const rest = [...byName.values()]
+      .filter(c => !seen.has(c.name))
+      .sort((a, b) => {
+        const hits = (deckHits.get(b.name) || 0) - (deckHits.get(a.name) || 0)
+        if (hits !== 0) return hits
+        const rank = c => (c.rarity === 'mythic' || c.rarity === 'rare' ? 1 : 0)
+        return rank(b) - rank(a)
+      })
+    for (const card of rest) add(card.name)
+  }
+
+  return picks
+}
+
 export function buildArchetypes(csvRows, deckSummaries) {
   if (!csvRows.length || !Object.keys(deckSummaries).length) return []
 
@@ -391,10 +543,10 @@ export function buildArchetypes(csvRows, deckSummaries) {
     const valid = explicit.filter(d => allDeckNames.has(d))
     if (!valid.length) continue
 
-    const colorSet = new Set()
+    const colorCounts = {}
     for (const deckName of valid) {
       for (const c of parseManaColors(deckSummaries[deckName]?.colors)) {
-        colorSet.add(c)
+        colorCounts[c] = (colorCounts[c] || 0) + 1
       }
     }
 
@@ -402,8 +554,8 @@ export function buildArchetypes(csvRows, deckSummaries) {
     const displayColors = colorsRaw.includes('(')
       ? colorsRaw.split('(')[0].trim()
       : colorsRaw.trim()
-    const resolvedColors = colorSet.size > 0
-      ? MANA_COLOR_ORDER.filter(c => colorSet.has(c)).join('')
+    const resolvedColors = Object.keys(colorCounts).length > 0
+      ? summarizeArchetypeColors(colorCounts, valid.length)
       : formatManaColors(displayColors)
 
     const pitchEn = (row.pitch || '').trim()
@@ -447,7 +599,7 @@ export function buildArchetypes(csvRows, deckSummaries) {
       },
       deck_count: valid.length,
       decks: [...valid].sort(),
-      sample_cards: [],
+      sample_cards: pickArchetypeSampleCards(row, valid, deckSummaries),
     })
   }
 
@@ -509,17 +661,20 @@ export async function listCubes(cubesDirHandle) {
     if (!hasMainboard) continue
 
     let title = name
+    let uncommonCopies = DEFAULT_UNCOMMON_BUDGET
     const metaText = await readTextFile(handle, 'meta.json')
     if (metaText) {
       try {
         const meta = JSON.parse(metaText)
         title = meta.title || name
+        const copies = Number(meta.uncommon_copies)
+        if (Number.isFinite(copies) && copies > 0) uncommonCopies = Math.floor(copies)
       } catch {
         // keep slug as title
       }
     }
 
-    cubes.push({ slug: name, title, handle })
+    cubes.push({ slug: name, title, uncommonCopies, handle })
   }
 
   cubes.sort((a, b) => a.slug.localeCompare(b.slug))

@@ -1,46 +1,19 @@
-const DB_NAME = 'cube-drafter'
-const DB_VERSION = 1
-const STORE = 'handles'
+import {
+  STORES,
+  idbGet,
+  idbPut,
+  openDB,
+  txDone,
+} from './idb.js'
+
 const KEY = 'cubes-root'
 
-function openDB() {
-  return new Promise((resolve, reject) => {
-    const req = indexedDB.open(DB_NAME, DB_VERSION)
-    req.onerror = () => reject(req.error)
-    req.onsuccess = () => resolve(req.result)
-    req.onupgradeneeded = (e) => {
-      const db = e.target.result
-      if (!db.objectStoreNames.contains(STORE)) {
-        db.createObjectStore(STORE)
-      }
-    }
-  })
-}
-
-function txDone(tx) {
-  return new Promise((resolve, reject) => {
-    tx.oncomplete = () => resolve()
-    tx.onerror = () => reject(tx.error)
-  })
-}
-
 export async function saveDirectoryHandle(handle) {
-  const db = await openDB()
-  const tx = db.transaction(STORE, 'readwrite')
-  tx.objectStore(STORE).put(handle, KEY)
-  await txDone(tx)
-  db.close()
+  await idbPut(STORES.handles, handle, KEY)
 }
 
 export async function loadDirectoryHandle() {
-  const db = await openDB()
-  const tx = db.transaction(STORE, 'readonly')
-  const handle = await new Promise((resolve, reject) => {
-    const req = tx.objectStore(STORE).get(KEY)
-    req.onsuccess = () => resolve(req.result ?? null)
-    req.onerror = () => reject(req.error)
-  })
-  db.close()
+  const handle = await idbGet(STORES.handles, KEY)
   if (!handle) return null
 
   let perm = await handle.queryPermission({ mode: 'read' })
@@ -120,3 +93,6 @@ export async function findCubesDir(rootHandle) {
 export async function getCubeHandle(cubesDirHandle, slug) {
   return cubesDirHandle.getDirectoryHandle(slug)
 }
+
+// Re-export for modules that need direct DB access
+export { openDB, txDone, STORES }
